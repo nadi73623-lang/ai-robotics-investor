@@ -1,17 +1,9 @@
-# AI Robotics Investor 4.1 — notowania EOD i ochrona danych
+# AI Robotics Investor 4.1.1 — naprawa notowań
 
-## Nowe
-- Opcjonalne, **opóźnione** ceny zamknięcia z publicznego CSV Stooq dla wybranych tickerów USA, do 12 na skan. Błędy dostawcy nie blokują skanera.
-- Odrzucanie cen starszych niż 7 dni, data i źródło przy każdym notowaniu.
-- Licznik pokrycia cenowego; brak notowania nie jest traktowany jak zero.
-- Eksport **wszystkich** notatek (nie tylko obserwowanych spółek).
-- Wersjonowanie pamięci offline PWA 4.1.
+Naprawiono wyjątek `KeyError: Close` przy niepoprawnym CSV Stooq. Skrypt waliduje nagłówki, wartości, walutę (Yahoo), datę (maksymalnie 7 dni) i przełącza się na drugi dostawca: publiczny endpoint Yahoo Finance Chart. Wyniki nie są notowaniami live. Źródła mogą ograniczać dostęp, zmieniać format lub zasady użycia. Dane nie są gwarantowane.
 
-## Ważne ograniczenia
-Ceny nie są notowaniami na żywo, Stooq może zmienić lub ograniczyć dostęp, ticker zagraniczny/ADR może nie pasować do kodu Stooq. Dane nie są gwarantowane; bez wiarygodnej kapitalizacji, rozwodnionej liczby akcji i cen nie wyliczamy P/E, P/S ani ceny docelowej. Wynik uwagi i filtr kondycji NIE są rankingiem zakupowym. Pokrycie SEC i odkrycia nadal nie obejmują całego rynku.
+`price_health` w `data/scan.json` pokazuje `status`, `attempted`, `updated` i diagnostykę tickerów. Log GitHub Actions pokazuje `PRICE_SUMMARY` i `QUOTE_FAIL` (bez danych uwierzytelniających). AVGO jest sprawdzane w każdym skanie. Brak wiarygodnej ceny nie jest zastępowany fikcyjną liczbą.
 
-## Wdrożenie
-Wgraj ZIP przez importer Colab 4.0, który pomija `.github/workflows/scan.yml`. Nie usuwaj aplikacji ani danych lokalnych. Przed aktualizacją wyeksportuj notatki. Uruchom workflow ręcznie; w danych JSON sprawdź `price_coverage`, a w aplikacji daty cen. Jeśli `price_coverage` = 0, nie traktuj tego jako sukcesu pobierania notowań.
+Zachowano istniejący `.github/workflows/scan.yml`, bez dodatkowych bibliotek i płatnych API. GitHub Actions nadal uruchamia `python scanner.py`.
 
-## Koszt
-Bez płatnych API; GitHub Actions i Pages zależą od limitów konta.
+Testy: `python -m unittest discover -p 'test_*.py'`. Po wdrożeniu uruchom ręcznie skan i sprawdź `PRICE_SUMMARY`, a następnie cenę AVGO. Zielony workflow nie oznacza sukcesu dostawcy.
