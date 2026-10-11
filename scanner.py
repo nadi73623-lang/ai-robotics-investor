@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Public news scanner; no credentials or paid API required."""
-import json, re, time, os, urllib.parse, urllib.request, xml.etree.ElementTree as ET
+import json, re, time, os, csv, io, urllib.parse, urllib.request, xml.etree.ElementTree as ET
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -105,6 +105,50 @@ def add_fundamentals(companies,prior):
         c['investment_score']=None
     return sum(bool(c['fundamentals']) for c in companies)
 
+
+# Best-effort delayed end-of-day prices. Source may block automated requests.
+# Never invent a quote; reject stale or malformed values.
+def stooq_quote(ticker):
+    from datetime import date
+    if not re.fullmatch(r'[A-Z]{1,5}',ticker):return None
+    url='https://stooq.com/q/d/l/?s='+ticker.lower()+'.us&i=d&d1='+(datetime.now(timezone.utc).strftime('%Y%m%d'))
+    # Request a recent window rather than a single day (weekends and holidays).
+    from datetime import timedelta
+    start=(datetime.now(timezone.utc)-timedelta(days=12)).strftime('%Y%m%d')
+    url='https://stooq.com/q/d/l/?s='+ticker.lower()+'.us&i=d&d1='+start+'&d2='+datetime.now(timezone.utc).strftime('%Y%m%d')
+    req=urllib.request.Request(url,headers={'User-Agent':'Mozilla/5.0 (compatible; AI-Robotics-Investor/4.1)'})
+    with urllib.request.urlopen(req,timeout=9) as response:
+        rows=list(csv.DictReader(io.StringIO(response.read(50000).decode('utf-8-sig'))))
+    if not rows:return None
+    row=rows[-1];price=float(row['Close']);stamp=datetime.fromisoformat(row['Date']).date()
+    age=(datetime.now(timezone.utc).date()-stamp).days
+    if price<=0 or age<0 or age>7:return None
+    return {'close_usd':round(price,4),'date':stamp.isoformat(),'age_days':age,'source':'Stooq, daily close (possibly delayed)','source_url':url,'is_live':False}
+
+def add_prices(companies,prior):
+    old={x.get('ticker'):x.get('price') for x in prior.get('companies',[]) if x.get('price')}
+    # Refresh up to 12 US-listed candidates per scan, rotate stale ones.
+    eligible=[c for c in companies if re.fullmatch(r'[A-Z]{1,5}',c['ticker'])]
+    eligible.sort(key=lambda c:(old.get(c['ticker'],{}).get('checked_at',''),c['ticker']))
+    for c in eligible[:12]:
+        try:
+            quote=stooq_quote(c['ticker'])
+            if quote:
+                quote['checked_at']=datetime.now(timezone.utc).isoformat()
+                old[c['ticker']]=quote
+            else:print('No valid Stooq quote:',c['ticker'])
+        except Exception as e:print('Price source unavailable',c['ticker'],str(e)[:100])
+        time.sleep(.1)
+    for c in companies:
+        q=old.get(c['ticker'])
+        if q:
+            try:
+                age=(datetime.now(timezone.utc).date()-datetime.fromisoformat(q['date']).date()).days
+                if not 0<=age<=7:q=None
+            except (ValueError,KeyError,TypeError):q=None
+        c['price']=q
+    return sum(bool(c['price']) for c in companies)
+
 def main():
     allnews=[]; seen=set()
     for q in QUERIES:
@@ -148,7 +192,8 @@ def main():
         prior=json.loads((ROOT/'data'/'scan.json').read_text(encoding='utf-8'))
     except Exception: prior={}
     covered=add_fundamentals(companies,prior)
-    payload={'generated_at':datetime.now(timezone.utc).isoformat(),'source':'Google News RSS','queries':QUERIES,'scan_status':'ok' if allnews else 'no_sources', 'articles_collected':len(allnews),'companies':companies,'discoveries':discoveries,'articles':allnews[:100],'version':'4.0','financial_coverage':covered,'financial_source':'SEC EDGAR XBRL, annual 10-K/20-F where available','financial_limitations':'Dane historyczne, możliwe opóźnienia; brak cen i pełnej wyceny; nie wszystkie spółki raportują do SEC','coverage_note':'Lista startowa plus kandydaci wykryci przez dopasowanie nazw do rejestru SEC; brak pełnego globalnego pokrycia','ranking_method':'attention_score = 100*(1-exp(-mentions/4)); wskaźnik uwagi, NIE ocena inwestycyjna','investment_ranking_available':False,'disclaimer':'Wskaźnik uwagi nie oznacza atrakcyjnej wyceny, potencjału wzrostu ani rekomendacji. Rejestr SEC obejmuje głównie emitentów raportujących w USA. Dane RSS mogą być niepełne.'}
+    price_coverage=add_prices(companies,prior)
+    payload={'generated_at':datetime.now(timezone.utc).isoformat(),'source':'Google News RSS','queries':QUERIES,'scan_status':'ok' if allnews else 'no_sources', 'articles_collected':len(allnews),'companies':companies,'discoveries':discoveries,'articles':allnews[:100],'version':'4.1','price_coverage':price_coverage,'price_note':'Opóźnione ceny zamknięcia Stooq, tylko zweryfikowane daty do 7 dni; brak cen oznacza brak danych, nie zero. Bez kapitalizacji i wiarygodnej wyceny.','financial_coverage':covered,'financial_source':'SEC EDGAR XBRL, annual 10-K/20-F where available','financial_limitations':'Dane historyczne, możliwe opóźnienia; brak cen i pełnej wyceny; nie wszystkie spółki raportują do SEC','coverage_note':'Lista startowa plus kandydaci wykryci przez dopasowanie nazw do rejestru SEC; brak pełnego globalnego pokrycia','ranking_method':'attention_score = 100*(1-exp(-mentions/4)); wskaźnik uwagi, NIE ocena inwestycyjna','investment_ranking_available':False,'disclaimer':'Wskaźnik uwagi nie oznacza atrakcyjnej wyceny, potencjału wzrostu ani rekomendacji. Rejestr SEC obejmuje głównie emitentów raportujących w USA. Dane RSS mogą być niepełne.'}
     (ROOT/'data').mkdir(exist_ok=True)
     (ROOT/'data'/'scan.json').write_text(json.dumps(payload,ensure_ascii=False,indent=2),encoding='utf-8')
     print('Scanned',len(companies),'companies,',len(allnews),'articles')
