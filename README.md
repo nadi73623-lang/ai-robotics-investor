@@ -1,16 +1,18 @@
-# AI Robotics Investor 3.0 — wersja eksperymentalna
+# AI Robotics Investor 4.0 — etap fundamentalny
 
-Aktualizacja istniejącej PWA z GitHub Pages. Uruchomienie: `python scanner.py`. GitHub Actions co 6 godzin uruchamia skaner i aktualizuje `data/scan.json`.
-
-## Co robi
-- Monitoruje 70+ spółek AI, robotyki, automatyki i infrastruktury.
-- Pobiera wiadomości Google News RSS z sześciu zapytań.
-- Próbuje odkrywać dodatkowych emitentów z rejestru tickerów SEC poprzez dopasowanie pełnej nazwy firmy do nagłówków.
-- Pokazuje dowody źródłowe i wskaźnik uwagi; **nie** oblicza potencjału wzrostu ani wyceny.
-- Nie wymaga płatnego API ani kluczy.
+## Co działa
+- Wersja 3.0: monitoring RSS, baza spółek, odkrycia SEC, obserwowane i notatki lokalne.
+- Nowe: pobieranie danych z oficjalnego SEC EDGAR XBRL dla maksymalnie 8 emitentów w każdym skanie.
+- Cache danych fundamentalnych w `data/scan.json`, kolejne skany rozszerzają pokrycie.
+- Przychody, wzrost r/r, marża netto, OCF, FCF, gotówka i dług (jeśli dostępne).
+- Prosty filtr kondycji finansowej 0-100 tylko przy kompletnych danych. To NIE ranking zakupu.
+- Service Worker network-first dla HTML i skanu oraz czyszczenie starszych cache.
 
 ## Ograniczenia
-Rejestr SEC nie zapewnia pełnego globalnego pokrycia. Dopasowanie nazw jest heurystyczne i może pomijać spółki lub dawać fałszywe trafienia. Nie należy traktować uwagi medialnej jako rankingu inwestycyjnego. Bez wiarygodnych cen, fundamentów, historii i walidacji nie ma jeszcze modelu oceny inwestycyjnej. Brak gwarancji ciągłości działania zewnętrznych źródeł.
+Brak aktualnych notowań, kapitalizacji, wskaźników P/E i EV/FCF; nie ma wiarygodnej oceny atrakcyjności ceny ani prognozy wzrostu. Dane SEC historyczne, mogą być opóźnione i nie obejmują wszystkich spółek zagranicznych. Nie ma pełnego skanowania światowych giełd. Zdarzają się błędy dopasowania taksonomii XBRL. SEC może ograniczyć dostęp; błędy nie blokują całego skanu.
 
 ## Instalacja
-Użyj dołączonego importera Colab, aby zaktualizować pliki w istniejącym repozytorium; nie nadpisuj `.github/workflows/scan.yml`. Następnie uruchom workflow ręcznie.
+Wgraj ZIP przez poprzedni importer Colab do istniejącego repozytorium. Importer pomija `.github/workflows/scan.yml`, który pozostaje niezmieniony i nadal uruchamia `python scanner.py`. Uruchom workflow ręcznie w Actions. Przed zmianami wyeksportuj obserwowane/notatki z aplikacji.
+
+## Koszt
+Kod bez płatnych API, GitHub Actions/Pages w ramach dostępnych limitów konta; brak gwarancji kosztu zerowego dla wszystkich konfiguracji.
