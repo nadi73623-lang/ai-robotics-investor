@@ -1,18 +1,17 @@
-# AI Robotics Investor 4.0 — etap fundamentalny
+# AI Robotics Investor 4.1 — notowania EOD i ochrona danych
 
-## Co działa
-- Wersja 3.0: monitoring RSS, baza spółek, odkrycia SEC, obserwowane i notatki lokalne.
-- Nowe: pobieranie danych z oficjalnego SEC EDGAR XBRL dla maksymalnie 8 emitentów w każdym skanie.
-- Cache danych fundamentalnych w `data/scan.json`, kolejne skany rozszerzają pokrycie.
-- Przychody, wzrost r/r, marża netto, OCF, FCF, gotówka i dług (jeśli dostępne).
-- Prosty filtr kondycji finansowej 0-100 tylko przy kompletnych danych. To NIE ranking zakupu.
-- Service Worker network-first dla HTML i skanu oraz czyszczenie starszych cache.
+## Nowe
+- Opcjonalne, **opóźnione** ceny zamknięcia z publicznego CSV Stooq dla wybranych tickerów USA, do 12 na skan. Błędy dostawcy nie blokują skanera.
+- Odrzucanie cen starszych niż 7 dni, data i źródło przy każdym notowaniu.
+- Licznik pokrycia cenowego; brak notowania nie jest traktowany jak zero.
+- Eksport **wszystkich** notatek (nie tylko obserwowanych spółek).
+- Wersjonowanie pamięci offline PWA 4.1.
 
-## Ograniczenia
-Brak aktualnych notowań, kapitalizacji, wskaźników P/E i EV/FCF; nie ma wiarygodnej oceny atrakcyjności ceny ani prognozy wzrostu. Dane SEC historyczne, mogą być opóźnione i nie obejmują wszystkich spółek zagranicznych. Nie ma pełnego skanowania światowych giełd. Zdarzają się błędy dopasowania taksonomii XBRL. SEC może ograniczyć dostęp; błędy nie blokują całego skanu.
+## Ważne ograniczenia
+Ceny nie są notowaniami na żywo, Stooq może zmienić lub ograniczyć dostęp, ticker zagraniczny/ADR może nie pasować do kodu Stooq. Dane nie są gwarantowane; bez wiarygodnej kapitalizacji, rozwodnionej liczby akcji i cen nie wyliczamy P/E, P/S ani ceny docelowej. Wynik uwagi i filtr kondycji NIE są rankingiem zakupowym. Pokrycie SEC i odkrycia nadal nie obejmują całego rynku.
 
-## Instalacja
-Wgraj ZIP przez poprzedni importer Colab do istniejącego repozytorium. Importer pomija `.github/workflows/scan.yml`, który pozostaje niezmieniony i nadal uruchamia `python scanner.py`. Uruchom workflow ręcznie w Actions. Przed zmianami wyeksportuj obserwowane/notatki z aplikacji.
+## Wdrożenie
+Wgraj ZIP przez importer Colab 4.0, który pomija `.github/workflows/scan.yml`. Nie usuwaj aplikacji ani danych lokalnych. Przed aktualizacją wyeksportuj notatki. Uruchom workflow ręcznie; w danych JSON sprawdź `price_coverage`, a w aplikacji daty cen. Jeśli `price_coverage` = 0, nie traktuj tego jako sukcesu pobierania notowań.
 
 ## Koszt
-Kod bez płatnych API, GitHub Actions/Pages w ramach dostępnych limitów konta; brak gwarancji kosztu zerowego dla wszystkich konfiguracji.
+Bez płatnych API; GitHub Actions i Pages zależą od limitów konta.
