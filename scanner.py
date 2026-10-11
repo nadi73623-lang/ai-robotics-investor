@@ -64,13 +64,16 @@ def fundamentals(ticker,cik):
     facts=data.get('facts',{}); metrics={}
     for key,tags in FACTS.items():
         metrics[key]=annual_values(facts,tags,'shares' if key=='shares' else 'USD',key in ('assets','liabilities','cash','debt_current','debt_long','shares'))
-    # SEC share counts are commonly tagged in the DEI namespace, not us-gaap.
-    if not metrics['shares']:
+    # Prefer the latest dated DEI share count, including quarterly filings.
+    # The older annual-only us-gaap path remains a fallback.
+    if True:
         rows=facts.get('dei',{}).get('EntityCommonStockSharesOutstanding',{}).get('units',{}).get('shares',[])
         rows=[r for r in rows if r.get('form') in ('10-K','10-Q','20-F') and r.get('end') and r.get('filed') and isinstance(r.get('val'),(int,float)) and r['val']>0]
         if rows:
             r=max(rows,key=lambda x:(x['end'],x['filed']))
-            metrics['shares']=[{'year':r['end'][:4],'end':r['end'],'value':r['val'],'filed':r['filed']}]
+            dei_share={'year':r['end'][:4],'end':r['end'],'value':r['val'],'filed':r['filed']}
+            if not metrics['shares'] or dei_share['end'] >= metrics['shares'][0]['end']:
+                metrics['shares']=[dei_share]
     latest=lambda key: metrics[key][0]['value'] if metrics[key] else None
     rev=latest('revenue'); net=latest('net_income'); ocf=latest('operating_cash_flow'); capex=latest('capex')
     margin=round(net/rev*100,1) if rev and net is not None else None
@@ -102,7 +105,9 @@ def add_fundamentals(companies,prior):
     pending=[c for c in companies if c['ticker'] in ciks and c['ticker'] not in previous]
     stale=[c for c in companies if c['ticker'] in ciks and c['ticker'] in previous]
     stale.sort(key=lambda c:previous[c['ticker']].get('as_of',''))
-    for c in (pending+stale)[:8]:
+    # Canary: refresh AVGO even when cached, then rotate remaining capacity.
+    ordered=sorted(pending+stale,key=lambda c:(c['ticker']!='AVGO',c['ticker'] in previous))
+    for c in ordered[:8]:
         try:
             previous[c['ticker']]=fundamentals(c['ticker'],ciks[c['ticker']]);time.sleep(.25)
         except Exception as e: print('SEC facts',c['ticker'],str(e)[:110])
@@ -241,7 +246,8 @@ def calculate_valuation(company, today=None):
             and isinstance(fcf,(int,float))):
             result['fcf_yield_pct']=round(100*fcf/cap,2)
         return result
-    except (ValueError,KeyError,TypeError,OverflowError):
+    except (ValueError,KeyError,TypeError,OverflowError) as exc:
+        result['reason']=str(exc) if str(exc) else 'Brak ceny lub liczby akcji'
         return result
 
 def main():
@@ -292,8 +298,21 @@ def main():
         c['valuation']=calculate_valuation(c)
         c['valuation_status']=('Orientacyjna kapitalizacja i mnożniki roczne — nie ranking zakupu' if c['valuation']['status']=='partial' else 'Brak wystarczających danych do wyceny')
     valuation_coverage=sum(c['valuation']['status']=='partial' for c in companies)
-    print('VALUATION_SUMMARY',json.dumps({'covered':valuation_coverage,'total':len(companies)}))
-    payload={'generated_at':datetime.now(timezone.utc).isoformat(),'source':'Google News RSS','queries':QUERIES,'scan_status':'ok' if allnews else 'no_sources', 'articles_collected':len(allnews),'companies':companies,'discoveries':discoveries,'articles':allnews[:100],'version':'4.2','valuation_coverage':valuation_coverage,'valuation_note':'Orientacyjna kapitalizacja = cena EOD × akcje z ostatniego dostępnego raportu SEC; nie uwzględnia późniejszego rozwodnienia, zmian liczby akcji ani ADR. P/S i P/E bazują na danych rocznych, nie TTM. Nie jest to ranking inwestycyjny.','price_health':price_health,'price_coverage':price_coverage,'price_note':'Opóźnione ceny dzienne z Stooq lub Yahoo Chart (źródła mogą blokować dostęp); daty do 7 dni. Brak ceny to brak danych, nie zero. Kapitalizacja i mnożniki wyłącznie orientacyjne, gdy dane są wystarczające.','financial_coverage':covered,'financial_source':'SEC EDGAR XBRL, annual 10-K/20-F where available','financial_limitations':'Dane historyczne, możliwe opóźnienia; brak cen i pełnej wyceny; nie wszystkie spółki raportują do SEC','coverage_note':'Lista startowa plus kandydaci wykryci przez dopasowanie nazw do rejestru SEC; brak pełnego globalnego pokrycia','ranking_method':'attention_score = 100*(1-exp(-mentions/4)); wskaźnik uwagi, NIE ocena inwestycyjna','investment_ranking_available':False,'disclaimer':'Wskaźnik uwagi nie oznacza atrakcyjnej wyceny, potencjału wzrostu ani rekomendacji. Rejestr SEC obejmuje głównie emitentów raportujących w USA. Dane RSS mogą być niepełne.'}
+    missing={}
+    for c in companies:
+        if c['valuation']['status']=='partial': continue
+        f=c.get('fundamentals') or {}
+        q=c.get('price') or {}
+        reasons=[]
+        if not q.get('close_usd'): reasons.append('price')
+        if not f: reasons.append('SEC_facts')
+        elif not f.get('shares_outstanding'): reasons.append('shares')
+        elif not f.get('shares_as_of'): reasons.append('shares_date')
+        if c['valuation'].get('reason') not in ('Brak ceny lub kompletnych danych SEC',None):reasons.append(c['valuation']['reason'])
+        for r in reasons:missing[r]=missing.get(r,0)+1
+        if c['ticker']=='AVGO': print('VALUATION_AVGO',json.dumps({'price':bool(q.get('close_usd')),'shares':bool(f.get('shares_outstanding')),'share_date':f.get('shares_as_of'),'reason':c['valuation']['reason'],'status':c['valuation']['status']}))
+    print('VALUATION_SUMMARY',json.dumps({'covered':valuation_coverage,'total':len(companies),'missing':missing}))
+    payload={'generated_at':datetime.now(timezone.utc).isoformat(),'source':'Google News RSS','queries':QUERIES,'scan_status':'ok' if allnews else 'no_sources', 'articles_collected':len(allnews),'companies':companies,'discoveries':discoveries,'articles':allnews[:100],'version':'4.2.1','valuation_coverage':valuation_coverage,'valuation_note':'Orientacyjna kapitalizacja = cena EOD × akcje z ostatniego dostępnego raportu SEC; nie uwzględnia późniejszego rozwodnienia, zmian liczby akcji ani ADR. P/S i P/E bazują na danych rocznych, nie TTM. Nie jest to ranking inwestycyjny.','price_health':price_health,'price_coverage':price_coverage,'price_note':'Opóźnione ceny dzienne z Stooq lub Yahoo Chart (źródła mogą blokować dostęp); daty do 7 dni. Brak ceny to brak danych, nie zero. Kapitalizacja i mnożniki wyłącznie orientacyjne, gdy dane są wystarczające.','financial_coverage':covered,'financial_source':'SEC EDGAR XBRL, annual 10-K/20-F where available','financial_limitations':'Dane historyczne, możliwe opóźnienia; brak cen i pełnej wyceny; nie wszystkie spółki raportują do SEC','coverage_note':'Lista startowa plus kandydaci wykryci przez dopasowanie nazw do rejestru SEC; brak pełnego globalnego pokrycia','ranking_method':'attention_score = 100*(1-exp(-mentions/4)); wskaźnik uwagi, NIE ocena inwestycyjna','investment_ranking_available':False,'disclaimer':'Wskaźnik uwagi nie oznacza atrakcyjnej wyceny, potencjału wzrostu ani rekomendacji. Rejestr SEC obejmuje głównie emitentów raportujących w USA. Dane RSS mogą być niepełne.'}
     (ROOT/'data').mkdir(exist_ok=True)
     (ROOT/'data'/'scan.json').write_text(json.dumps(payload,ensure_ascii=False,indent=2),encoding='utf-8')
     print('Scanned',len(companies),'companies,',len(allnews),'articles')
