@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-11T13:42:33.111979+00:00",
+  "generated_at": "2026-10-11T13:56:23.955529+00:00",
   "source": "Google News RSS",
   "queries": [
     "artificial intelligence robotics stocks companies contracts earnings",
@@ -10,7 +10,7 @@
     "AI infrastructure cooling energy grid power public company"
   ],
   "scan_status": "ok",
-  "articles_collected": 124,
+  "articles_collected": 125,
   "companies": [
     {
       "ticker": "AVGO",
@@ -63,7 +63,15 @@
         "as_of": "2026-10-11T13:41:07.565179+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1730168"
       },
-      "price": null
+      "price": {
+        "close_usd": 361.54,
+        "date": "2026-10-09",
+        "age_days": 2,
+        "source": "Yahoo Finance chart EOD",
+        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/AVGO?interval=1d&range=15d",
+        "is_live": false,
+        "checked_at": "2026-10-11T13:56:16.731878+00:00"
+      }
     },
     {
       "ticker": "NVDA",
@@ -235,7 +243,15 @@
         "as_of": "2026-10-11T13:41:10.057252+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1736297"
       },
-      "price": null
+      "price": {
+        "close_usd": 342.21,
+        "date": "2026-10-09",
+        "age_days": 2,
+        "source": "Yahoo Finance chart EOD",
+        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/ALAB?interval=1d&range=15d",
+        "is_live": false,
+        "checked_at": "2026-10-11T13:56:19.607479+00:00"
+      }
     },
     {
       "ticker": "ANET",
@@ -273,7 +289,15 @@
         "as_of": "2026-10-11T13:41:10.779013+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1596532"
       },
-      "price": null
+      "price": {
+        "close_usd": 216.74,
+        "date": "2026-10-09",
+        "age_days": 2,
+        "source": "Yahoo Finance chart EOD",
+        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/ANET?interval=1d&range=15d",
+        "is_live": false,
+        "checked_at": "2026-10-11T13:56:22.187612+00:00"
+      }
     },
     {
       "ticker": "BBAI",
@@ -403,7 +427,7 @@
         {
           "title": "Symbotic Has a $22.5 Billion Backlog. Here's Why It Could Be the Best Robotics Stock Nobody Talks About. - The Globe and Mail",
           "url": "https://news.google.com/rss/articles/CBMikgJBVV95cUxNbU5SU0dVX05qRWFfWDc1OGpZY0UtSWIxSE9zLTNXTWtnNjgya3VLR3F3V3lCd0R3UmZQU19xODBGNEhZZDVfbXk1SnlFcDNsMkQ2a0VIeEhsQmptWDlUMWpRMlU3YlZOLVNma1UyQ194R1BSSG5KOWpnVVg3eG9Fa2JhQ1ZFSmxfTXh2MHgyRnV0LWhiR2dMbV9OdHQyZDA5RHdBS1RqZFBHV1lldmhMeWg0cmF6aDdXWHlrRkpqZXdUel85ajB1ZUt4OHY0TktCUnUya2VBZEcta3JPUzlvZ0Z3MTllQV9FMGZPSkVaaExOTnM4TTVxQV8wc09HY082ajFWajg2bFJsdGRaZFotTURB?oc=5",
-          "date": "Sun, 11 Oct 2026 11:00:16 GMT"
+          "date": "Sun, 11 Oct 2026 10:35:00 GMT"
         }
       ],
       "status": "Do analizy",
@@ -458,7 +482,15 @@
         "as_of": "2026-10-11T13:42:24.225151+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1018724"
       },
-      "price": null
+      "price": {
+        "close_usd": 262.43,
+        "date": "2026-10-09",
+        "age_days": 2,
+        "source": "Yahoo Finance chart EOD",
+        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/AMZN?interval=1d&range=15d",
+        "is_live": false,
+        "checked_at": "2026-10-11T13:56:21.475569+00:00"
+      }
     },
     {
       "ticker": "CLS",
@@ -641,7 +673,21 @@
       "attention_score": 22,
       "valuation_status": "Brak zweryfikowanej bieżącej ceny i kapitalizacji; P/E i EV/FCF niedostępne",
       "investment_score": null,
-      "fundamentals": null,
+      "fundamentals": {
+        "source": "SEC EDGAR XBRL",
+        "fiscal_year": "2025",
+        "revenue_usd": 4475446000,
+        "revenue_growth_pct": 56.2,
+        "net_margin_pct": 36.3,
+        "operating_cash_flow_usd": 2134473000,
+        "free_cash_flow_usd": 2100591000,
+        "cash_usd": 1423796000,
+        "debt_usd": 0,
+        "financial_health_score": 100,
+        "score_label": "Prosty filtr 4 warunków, nie rekomendacja",
+        "as_of": "2026-10-11T13:56:12.243630+00:00",
+        "source_url": "https://www.sec.gov/edgar/browse/?CIK=1321655"
+      },
       "price": null
     },
     {
@@ -660,7 +706,21 @@
       "attention_score": 22,
       "valuation_status": "Brak zweryfikowanej bieżącej ceny i kapitalizacji; P/E i EV/FCF niedostępne",
       "investment_score": null,
-      "fundamentals": null,
+      "fundamentals": {
+        "source": "SEC EDGAR XBRL",
+        "fiscal_year": "2025",
+        "revenue_usd": 8342000000,
+        "revenue_growth_pct": 0.9,
+        "net_margin_pct": 10.4,
+        "operating_cash_flow_usd": 1544000000,
+        "free_cash_flow_usd": 1383500000,
+        "cash_usd": 468000000,
+        "debt_usd": 2616000000,
+        "financial_health_score": 75,
+        "score_label": "Prosty filtr 4 warunków, nie rekomendacja",
+        "as_of": "2026-10-11T13:56:12.883315+00:00",
+        "source_url": "https://www.sec.gov/edgar/browse/?CIK=1024478"
+      },
       "price": null
     },
     {
@@ -679,7 +739,21 @@
       "attention_score": 22,
       "valuation_status": "Brak zweryfikowanej bieżącej ceny i kapitalizacji; P/E i EV/FCF niedostępne",
       "investment_score": null,
-      "fundamentals": null,
+      "fundamentals": {
+        "source": "SEC EDGAR XBRL",
+        "fiscal_year": "2026",
+        "revenue_usd": 39063072000,
+        "revenue_growth_pct": 77.8,
+        "net_margin_pct": 5.7,
+        "operating_cash_flow_usd": -6809886000,
+        "free_cash_flow_usd": -6971885000,
+        "cash_usd": 7521474000,
+        "debt_usd": 162733000,
+        "financial_health_score": 25,
+        "score_label": "Prosty filtr 4 warunków, nie rekomendacja",
+        "as_of": "2026-10-11T13:56:13.274158+00:00",
+        "source_url": "https://www.sec.gov/edgar/browse/?CIK=1375365"
+      },
       "price": null
     },
     {
@@ -698,7 +772,21 @@
       "attention_score": 22,
       "valuation_status": "Brak zweryfikowanej bieżącej ceny i kapitalizacji; P/E i EV/FCF niedostępne",
       "investment_score": null,
-      "fundamentals": null,
+      "fundamentals": {
+        "source": "SEC EDGAR XBRL",
+        "fiscal_year": "2018",
+        "revenue_usd": 2100802000,
+        "revenue_growth_pct": -1.7,
+        "net_margin_pct": 26.4,
+        "operating_cash_flow_usd": 674415000,
+        "free_cash_flow_usd": 450406000,
+        "cash_usd": 293751000,
+        "debt_usd": 357722000,
+        "financial_health_score": 75,
+        "score_label": "Prosty filtr 4 warunków, nie rekomendacja",
+        "as_of": "2026-10-11T13:56:14.152950+00:00",
+        "source_url": "https://www.sec.gov/edgar/browse/?CIK=97210"
+      },
       "price": null
     },
     {
@@ -724,8 +812,30 @@
       "attention_score": 0,
       "valuation_status": "Brak zweryfikowanej bieżącej ceny i kapitalizacji; P/E i EV/FCF niedostępne",
       "investment_score": null,
-      "fundamentals": null,
-      "price": null
+      "fundamentals": {
+        "source": "SEC EDGAR XBRL",
+        "fiscal_year": "2025",
+        "revenue_usd": 300000,
+        "revenue_growth_pct": null,
+        "net_margin_pct": -206066.7,
+        "operating_cash_flow_usd": -432900000,
+        "free_cash_flow_usd": -511700000,
+        "cash_usd": 1021500000,
+        "debt_usd": 80300000,
+        "financial_health_score": null,
+        "score_label": "Prosty filtr 4 warunków, nie rekomendacja",
+        "as_of": "2026-10-11T13:56:14.470675+00:00",
+        "source_url": "https://www.sec.gov/edgar/browse/?CIK=1824502"
+      },
+      "price": {
+        "close_usd": 4.96,
+        "date": "2026-10-09",
+        "age_days": 2,
+        "source": "Yahoo Finance chart EOD",
+        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/ACHR?interval=1d&range=15d",
+        "is_live": false,
+        "checked_at": "2026-10-11T13:56:18.204506+00:00"
+      }
     },
     {
       "ticker": "AI",
@@ -737,8 +847,30 @@
       "attention_score": 0,
       "valuation_status": "Brak zweryfikowanej bieżącej ceny i kapitalizacji; P/E i EV/FCF niedostępne",
       "investment_score": null,
-      "fundamentals": null,
-      "price": null
+      "fundamentals": {
+        "source": "SEC EDGAR XBRL",
+        "fiscal_year": "2026",
+        "revenue_usd": 250268000,
+        "revenue_growth_pct": -35.7,
+        "net_margin_pct": -187.9,
+        "operating_cash_flow_usd": -190228000,
+        "free_cash_flow_usd": -192136000,
+        "cash_usd": 66197000,
+        "debt_usd": null,
+        "financial_health_score": 0,
+        "score_label": "Prosty filtr 4 warunków, nie rekomendacja",
+        "as_of": "2026-10-11T13:56:15.030228+00:00",
+        "source_url": "https://www.sec.gov/edgar/browse/?CIK=1577526"
+      },
+      "price": {
+        "close_usd": 11.53,
+        "date": "2026-10-09",
+        "age_days": 2,
+        "source": "Yahoo Finance chart EOD",
+        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/AI?interval=1d&range=15d",
+        "is_live": false,
+        "checked_at": "2026-10-11T13:56:18.940286+00:00"
+      }
     },
     {
       "ticker": "AMAT",
@@ -750,8 +882,30 @@
       "attention_score": 0,
       "valuation_status": "Brak zweryfikowanej bieżącej ceny i kapitalizacji; P/E i EV/FCF niedostępne",
       "investment_score": null,
-      "fundamentals": null,
-      "price": null
+      "fundamentals": {
+        "source": "SEC EDGAR XBRL",
+        "fiscal_year": "2025",
+        "revenue_usd": 28368000000,
+        "revenue_growth_pct": 4.4,
+        "net_margin_pct": 24.7,
+        "operating_cash_flow_usd": 7958000000,
+        "free_cash_flow_usd": 5698000000,
+        "cash_usd": 7241000000,
+        "debt_usd": 6455000000,
+        "financial_health_score": 75,
+        "score_label": "Prosty filtr 4 warunków, nie rekomendacja",
+        "as_of": "2026-10-11T13:56:15.457212+00:00",
+        "source_url": "https://www.sec.gov/edgar/browse/?CIK=6951"
+      },
+      "price": {
+        "close_usd": 507.03,
+        "date": "2026-10-09",
+        "age_days": 2,
+        "source": "Yahoo Finance chart EOD",
+        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/AMAT?interval=1d&range=15d",
+        "is_live": false,
+        "checked_at": "2026-10-11T13:56:20.239444+00:00"
+      }
     },
     {
       "ticker": "AMD",
@@ -763,8 +917,30 @@
       "attention_score": 0,
       "valuation_status": "Brak zweryfikowanej bieżącej ceny i kapitalizacji; P/E i EV/FCF niedostępne",
       "investment_score": null,
-      "fundamentals": null,
-      "price": null
+      "fundamentals": {
+        "source": "SEC EDGAR XBRL",
+        "fiscal_year": "2025",
+        "revenue_usd": 34639000000,
+        "revenue_growth_pct": 34.3,
+        "net_margin_pct": 12.5,
+        "operating_cash_flow_usd": 7709000000,
+        "free_cash_flow_usd": 6735000000,
+        "cash_usd": 5539000000,
+        "debt_usd": 3222000000,
+        "financial_health_score": 100,
+        "score_label": "Prosty filtr 4 warunków, nie rekomendacja",
+        "as_of": "2026-10-11T13:56:15.794773+00:00",
+        "source_url": "https://www.sec.gov/edgar/browse/?CIK=2488"
+      },
+      "price": {
+        "close_usd": 608.1,
+        "date": "2026-10-09",
+        "age_days": 2,
+        "source": "Yahoo Finance chart EOD",
+        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/AMD?interval=1d&range=15d",
+        "is_live": false,
+        "checked_at": "2026-10-11T13:56:20.985357+00:00"
+      }
     },
     {
       "ticker": "APH",
@@ -777,7 +953,15 @@
       "valuation_status": "Brak zweryfikowanej bieżącej ceny i kapitalizacji; P/E i EV/FCF niedostępne",
       "investment_score": null,
       "fundamentals": null,
-      "price": null
+      "price": {
+        "close_usd": 87.24,
+        "date": "2026-10-09",
+        "age_days": 2,
+        "source": "Yahoo Finance chart EOD",
+        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/APH?interval=1d&range=15d",
+        "is_live": false,
+        "checked_at": "2026-10-11T13:56:22.697384+00:00"
+      }
     },
     {
       "ticker": "ARM",
@@ -790,7 +974,15 @@
       "valuation_status": "Brak zweryfikowanej bieżącej ceny i kapitalizacji; P/E i EV/FCF niedostępne",
       "investment_score": null,
       "fundamentals": null,
-      "price": null
+      "price": {
+        "close_usd": 266.28,
+        "date": "2026-10-09",
+        "age_days": 2,
+        "source": "Yahoo Finance chart EOD",
+        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/ARM?interval=1d&range=15d",
+        "is_live": false,
+        "checked_at": "2026-10-11T13:56:23.212877+00:00"
+      }
     },
     {
       "ticker": "ASML",
@@ -803,7 +995,15 @@
       "valuation_status": "Brak zweryfikowanej bieżącej ceny i kapitalizacji; P/E i EV/FCF niedostępne",
       "investment_score": null,
       "fundamentals": null,
-      "price": null
+      "price": {
+        "close_usd": 1780.34,
+        "date": "2026-10-09",
+        "age_days": 2,
+        "source": "Yahoo Finance chart EOD",
+        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/ASML?interval=1d&range=15d",
+        "is_live": false,
+        "checked_at": "2026-10-11T13:56:23.855227+00:00"
+      }
     },
     {
       "ticker": "AZTA",
@@ -1676,7 +1876,7 @@
     {
       "title": "Symbotic Has a $22.5 Billion Backlog. Here's Why It Could Be the Best Robotics Stock Nobody Talks About. - The Globe and Mail",
       "url": "https://news.google.com/rss/articles/CBMikgJBVV95cUxNbU5SU0dVX05qRWFfWDc1OGpZY0UtSWIxSE9zLTNXTWtnNjgya3VLR3F3V3lCd0R3UmZQU19xODBGNEhZZDVfbXk1SnlFcDNsMkQ2a0VIeEhsQmptWDlUMWpRMlU3YlZOLVNma1UyQ194R1BSSG5KOWpnVVg3eG9Fa2JhQ1ZFSmxfTXh2MHgyRnV0LWhiR2dMbV9OdHQyZDA5RHdBS1RqZFBHV1lldmhMeWg0cmF6aDdXWHlrRkpqZXdUel85ajB1ZUt4OHY0TktCUnUya2VBZEcta3JPUzlvZ0Z3MTllQV9FMGZPSkVaaExOTnM4TTVxQV8wc09HY082ajFWajg2bFJsdGRaZFotTURB?oc=5",
-      "date": "Sun, 11 Oct 2026 11:00:16 GMT"
+      "date": "Sun, 11 Oct 2026 10:35:00 GMT"
     },
     {
       "title": "The UK Is Spending £40 Million to Solve Robotics’ Adoption Problem - A3 Association for Advancing Automation",
@@ -1702,6 +1902,11 @@
       "title": "AI roundup: New products from Oracle, athenahealth, Suki and others - Healthcare IT News",
       "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNTmZyX05UV0lIYWpLWnZ5ZnJ0U1NuYkpCYzB0RjM3UVdIaGRXeDA2dFozNmtWVndsVVFjWmxsY0hJbTdOR2txSlhJaVlLOWpuWG5PUEJfcmtMbk1IRGE3Sk81OGhoYjFjaTJvRnVOWFlrQWNXSVdsbFY0eXhUVGNtZ3JrREg4VjdTUFJVZkZFbm1CaEtUOWtJMU40azZWZw?oc=5",
       "date": "Fri, 09 Oct 2026 11:19:00 GMT"
+    },
+    {
+      "title": "SafeWorld emerges from stealth to build, deploy robot safety simulation technologies - The Robot Report",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNXzFxR3JrdnBCMzRoOG5rd1RES0h1RTVfMF9zeDBzMFM1NzFISUNBYlRVaWZxLXQtNXRtbXZ6TzZDeHE5VzMyRVpqR1RSbFg0VlRFWEViUml1amF3S0d6RUExVXFDM2VJTGNSTGxZSFc1dXR3U042YzR2ejlCYU1hLUprMkg3VTMyVG9Pa0QxemM5aWM5aEFuQlAzSWVodm05V0kyUkpzdTVXMTg?oc=5",
+      "date": "Thu, 08 Oct 2026 21:18:24 GMT"
     },
     {
       "title": "Aerospace Robotics Market for 2030: Articulated Robots to Hold 59% of $9 Billion Market at 11% CAGR - The National Law Review",
@@ -1819,20 +2024,85 @@
       "date": "Fri, 09 Oct 2026 16:12:00 GMT"
     },
     {
-      "title": "BUZZ HPC proposes 320MW AI campus in Oakville, Ontario - ET Datacenters",
-      "url": "https://news.google.com/rss/articles/CBMilgJBVV95cUxQM2Q0Vk9yV2gzekRVSThpeUJyNEtldkF3MUNKQ21XSl9lU1RRcktqbzlJLWlGdnVMNnVuOEVDRVZ0MnFCUVM0blZkbl9mb1R4NHNJemN3RUVaWUY2RDJzNjZSaVo0SC15S2VNdXQ0MVluNXVocXpoSVZ0UElwaFJwY2t6VWp2VHZUSlZQcldIMjZWMnQtZnViTE1wdGFnSU5oQjE3XzFNTWt1Q2stYnZIZVg2T0dpUzNMa2pIRGMxMkhlbDZFTUlraURZYkZ4ZnlPQXkyTG5EY3pxaHZtT1ZVM3BSbnEyOTI1TVFORmVlWlFTb2o2bl9aN3lRby1uSmpvbUJGLV9BbklKcDVESjd3VHdwRTlPZ9IB5AFBVV95cUxPR19qdkJxbTdra3k3QmcwM0lfMm15ZmFiLUladjAzWTJwaktDQ05KbWpUVUpWTjJ2cnJVajluSE1NVWxWcUVhRWpmTG1OVTF1dl9wdUdGWkVTQ0k1OXBfUjNpRzR2NWhBM1ZsQ3hPMlppbGVhTGlSNnpKVjMwWWl1YzdjbFdQUnA0S1VQVkhCQThrRXNqQ19MTVI0cWxVNnNaZVZCS29tSWFlamNEcVNqYUR5SFc2TmpGTDJBdXNqRGpaeVFpcGVuQ1VlVG56SmJwTGFEcXdQT2NZSjM0eHFYb0RUYWc?oc=5",
-      "date": "Sun, 11 Oct 2026 00:35:21 GMT"
-    },
-    {
       "title": "A proposed first U.S. data center would anchor Gorilla's broader AI expansion plan. - Stock Titan",
       "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQV3FlXzhva3o5M3JwX0lNY2l4aF9jbTlkSjE4bHZpd1kyazBISjNrWDBJR0tVamptaDRtZHdjWllDeE11ZUROLURKQ0xrLWhVUmFVYWo2dzVVeXdHX2YzM0FVMDVLM09MSmEwemlNVlQ0M1VCZ2M5VlJmdWpCb1owdDNhd3o2RlgxMjZNSF9la19LdTQ3RFduYlJqNk5xaDk3aS02SDVXN2lmNzFEU1MweWw0OGt4ZjZiVEhqNA?oc=5",
       "date": "Fri, 09 Oct 2026 12:00:00 GMT"
     }
   ],
-  "version": "4.1",
-  "price_coverage": 0,
-  "price_note": "Opóźnione ceny zamknięcia Stooq, tylko zweryfikowane daty do 7 dni; brak cen oznacza brak danych, nie zero. Bez kapitalizacji i wiarygodnej wyceny.",
-  "financial_coverage": 16,
+  "version": "4.1.1",
+  "price_health": {
+    "status": "partial",
+    "attempted": 12,
+    "updated": 11,
+    "coverage": 11,
+    "diagnostics": {
+      "AVGO": {
+        "status": "ok",
+        "provider": "Yahoo",
+        "date": "2026-10-09"
+      },
+      "ABB": {
+        "status": "failed",
+        "errors": [
+          "Stooq: Stooq CSV missing Date/Close; header=['<!DOCTYPE html><html><head><meta charset=\"utf-8\"><meta name=\"robots\" content=\"noindex', 'nofollow\"></head><body><noscript",
+          "Yahoo: HTTP Error 404: Not Found"
+        ]
+      },
+      "ACHR": {
+        "status": "ok",
+        "provider": "Yahoo",
+        "date": "2026-10-09"
+      },
+      "AI": {
+        "status": "ok",
+        "provider": "Yahoo",
+        "date": "2026-10-09"
+      },
+      "ALAB": {
+        "status": "ok",
+        "provider": "Yahoo",
+        "date": "2026-10-09"
+      },
+      "AMAT": {
+        "status": "ok",
+        "provider": "Yahoo",
+        "date": "2026-10-09"
+      },
+      "AMD": {
+        "status": "ok",
+        "provider": "Yahoo",
+        "date": "2026-10-09"
+      },
+      "AMZN": {
+        "status": "ok",
+        "provider": "Yahoo",
+        "date": "2026-10-09"
+      },
+      "ANET": {
+        "status": "ok",
+        "provider": "Yahoo",
+        "date": "2026-10-09"
+      },
+      "APH": {
+        "status": "ok",
+        "provider": "Yahoo",
+        "date": "2026-10-09"
+      },
+      "ARM": {
+        "status": "ok",
+        "provider": "Yahoo",
+        "date": "2026-10-09"
+      },
+      "ASML": {
+        "status": "ok",
+        "provider": "Yahoo",
+        "date": "2026-10-09"
+      }
+    }
+  },
+  "price_coverage": 11,
+  "price_note": "Opóźnione ceny dzienne z Stooq lub Yahoo Chart (źródła mogą blokować dostęp); daty do 7 dni. Brak ceny to brak danych, nie zero. Bez kapitalizacji i wiarygodnej wyceny.",
+  "financial_coverage": 24,
   "financial_source": "SEC EDGAR XBRL, annual 10-K/20-F where available",
   "financial_limitations": "Dane historyczne, możliwe opóźnienia; brak cen i pełnej wyceny; nie wszystkie spółki raportują do SEC",
   "coverage_note": "Lista startowa plus kandydaci wykryci przez dopasowanie nazw do rejestru SEC; brak pełnego globalnego pokrycia",
