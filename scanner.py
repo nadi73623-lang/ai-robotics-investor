@@ -93,6 +93,9 @@ def fundamentals(ticker,cik):
       'free_cash_flow_usd':fcf,'cash_usd':latest('cash'),'debt_usd':debt,
       'financial_health_score':score,'score_label':'Prosty filtr 4 warunków, nie rekomendacja',
       'shares_outstanding':latest('shares'),'shares_as_of':metrics['shares'][0]['end'] if metrics['shares'] else None,'revenue_period_end':metrics['revenue'][0]['end'] if metrics['revenue'] else None,'net_income_period_end':metrics['net_income'][0]['end'] if metrics['net_income'] else None,'cash_flow_period_end':metrics['operating_cash_flow'][0]['end'] if metrics['operating_cash_flow'] else None,'capex_period_end':metrics['capex'][0]['end'] if metrics['capex'] else None,'as_of':datetime.now(timezone.utc).isoformat(),'source_url':'https://www.sec.gov/edgar/browse/?CIK='+str(cik)}
+SEC_BATCH_SIZE=16  # max requests per six-hour scan; staggered, no paid API
+PRICE_BATCH_SIZE=24  # complete the 68-name rotation in about three successful scans
+
 def add_fundamentals(companies,prior):
     previous={x.get('ticker'):x.get('fundamentals') for x in prior.get('companies',[]) if x.get('fundamentals')}
     try:
@@ -102,15 +105,18 @@ def add_fundamentals(companies,prior):
         print('SEC issuer registry unavailable:',str(e)[:120]);ciks={}
     # Rotate coverage across scans; cache is retained in data/scan.json.
     # Prioritize uncovered tickers; cap to respect SEC fair-access policies.
-    pending=[c for c in companies if c['ticker'] in ciks and c['ticker'] not in previous]
-    stale=[c for c in companies if c['ticker'] in ciks and c['ticker'] in previous]
+    pending=[c for c in companies if c['ticker'] in ciks and (c['ticker'] not in previous or not (previous[c['ticker']] or {}).get('shares_outstanding'))]
+    stale=[c for c in companies if c['ticker'] in ciks and c['ticker'] in previous and c not in pending]
     stale.sort(key=lambda c:previous[c['ticker']].get('as_of',''))
     # Canary: refresh AVGO even when cached, then rotate remaining capacity.
-    ordered=sorted(pending+stale,key=lambda c:(c['ticker']!='AVGO',c['ticker'] in previous))
-    for c in ordered[:8]:
+    ordered=sorted(pending,key=lambda c:(c['ticker']!='AVGO',c['ticker']))+sorted(stale,key=lambda c:(c['ticker']!='AVGO',previous[c['ticker']].get('as_of','')))
+    attempted=0; succeeded=0
+    for c in ordered[:SEC_BATCH_SIZE]:
+        attempted+=1
         try:
-            previous[c['ticker']]=fundamentals(c['ticker'],ciks[c['ticker']]);time.sleep(.25)
+            previous[c['ticker']]=fundamentals(c['ticker'],ciks[c['ticker']]);succeeded+=1;time.sleep(.35)
         except Exception as e: print('SEC facts',c['ticker'],str(e)[:110])
+    print('SEC_BATCH_SUMMARY',json.dumps({'attempted':attempted,'updated':succeeded,'batch_limit':SEC_BATCH_SIZE,'registry_matches':sum(c['ticker'] in ciks for c in companies)}))
     for c in companies:
         c['fundamentals']=previous.get(c['ticker'])
         c['valuation_status']='Brak zweryfikowanej bieżącej ceny i kapitalizacji; P/E i EV/FCF niedostępne'
@@ -177,8 +183,8 @@ def add_prices(companies,prior):
     diagnostics={};attempted=0;success=0
     eligible=[c for c in companies if re.fullmatch(r'[A-Z]{1,5}',c['ticker'])]
     # Always check AVGO as a canary; rotate remaining slots across scans.
-    eligible.sort(key=lambda c:(c['ticker']!='AVGO',old.get(c['ticker'],{}).get('checked_at',''),c['ticker']))
-    for c in eligible[:12]:
+    eligible.sort(key=lambda c:(c['ticker']!='AVGO',bool(old.get(c['ticker'],{}).get('close_usd')),old.get(c['ticker'],{}).get('checked_at',''),c['ticker']))
+    for c in eligible[:PRICE_BATCH_SIZE]:
         ticker=c['ticker'];attempted+=1;errors=[]
         for name,provider in [('Stooq',stooq_quote),('Yahoo',yahoo_quote)]:
             try:
@@ -203,7 +209,7 @@ def add_prices(companies,prior):
         c['price']=q
     coverage=sum(bool(c['price']) for c in companies)
     status='ok' if success==attempted and attempted else ('partial' if success else 'unavailable')
-    print('PRICE_SUMMARY',json.dumps({'attempted':attempted,'updated':success,'coverage':coverage,'status':status}))
+    print('PRICE_SUMMARY',json.dumps({'attempted':attempted,'updated':success,'coverage':coverage,'status':status,'batch_limit':PRICE_BATCH_SIZE}))
     return coverage,{'status':status,'attempted':attempted,'updated':success,'coverage':coverage,'diagnostics':diagnostics}
 
 def calculate_valuation(company, today=None):
@@ -312,7 +318,7 @@ def main():
         for r in reasons:missing[r]=missing.get(r,0)+1
         if c['ticker']=='AVGO': print('VALUATION_AVGO',json.dumps({'price':bool(q.get('close_usd')),'shares':bool(f.get('shares_outstanding')),'share_date':f.get('shares_as_of'),'reason':c['valuation']['reason'],'status':c['valuation']['status']}))
     print('VALUATION_SUMMARY',json.dumps({'covered':valuation_coverage,'total':len(companies),'missing':missing}))
-    payload={'generated_at':datetime.now(timezone.utc).isoformat(),'source':'Google News RSS','queries':QUERIES,'scan_status':'ok' if allnews else 'no_sources', 'articles_collected':len(allnews),'companies':companies,'discoveries':discoveries,'articles':allnews[:100],'version':'4.2.1','valuation_coverage':valuation_coverage,'valuation_note':'Orientacyjna kapitalizacja = cena EOD × akcje z ostatniego dostępnego raportu SEC; nie uwzględnia późniejszego rozwodnienia, zmian liczby akcji ani ADR. P/S i P/E bazują na danych rocznych, nie TTM. Nie jest to ranking inwestycyjny.','price_health':price_health,'price_coverage':price_coverage,'price_note':'Opóźnione ceny dzienne z Stooq lub Yahoo Chart (źródła mogą blokować dostęp); daty do 7 dni. Brak ceny to brak danych, nie zero. Kapitalizacja i mnożniki wyłącznie orientacyjne, gdy dane są wystarczające.','financial_coverage':covered,'financial_source':'SEC EDGAR XBRL, annual 10-K/20-F where available','financial_limitations':'Dane historyczne, możliwe opóźnienia; brak cen i pełnej wyceny; nie wszystkie spółki raportują do SEC','coverage_note':'Lista startowa plus kandydaci wykryci przez dopasowanie nazw do rejestru SEC; brak pełnego globalnego pokrycia','ranking_method':'attention_score = 100*(1-exp(-mentions/4)); wskaźnik uwagi, NIE ocena inwestycyjna','investment_ranking_available':False,'disclaimer':'Wskaźnik uwagi nie oznacza atrakcyjnej wyceny, potencjału wzrostu ani rekomendacji. Rejestr SEC obejmuje głównie emitentów raportujących w USA. Dane RSS mogą być niepełne.'}
+    payload={'generated_at':datetime.now(timezone.utc).isoformat(),'source':'Google News RSS','queries':QUERIES,'scan_status':'ok' if allnews else 'no_sources', 'articles_collected':len(allnews),'companies':companies,'discoveries':discoveries,'articles':allnews[:100],'version':'4.2.2','valuation_coverage':valuation_coverage,'valuation_note':'Orientacyjna kapitalizacja = cena EOD × akcje z ostatniego dostępnego raportu SEC; nie uwzględnia późniejszego rozwodnienia, zmian liczby akcji ani ADR. P/S i P/E bazują na danych rocznych, nie TTM. Nie jest to ranking inwestycyjny.','price_health':price_health,'price_coverage':price_coverage,'price_note':'Opóźnione ceny dzienne z Stooq lub Yahoo Chart (źródła mogą blokować dostęp); daty do 7 dni. Brak ceny to brak danych, nie zero. Kapitalizacja i mnożniki wyłącznie orientacyjne, gdy dane są wystarczające.','financial_coverage':covered,'financial_source':'SEC EDGAR XBRL, annual 10-K/20-F where available','financial_limitations':'Dane historyczne, możliwe opóźnienia; nie wszystkie spółki raportują do SEC. Pokrycie rośnie stopniowo; limity 16 zapytań SEC i 24 prób cen na skan.','coverage_note':'Lista startowa plus kandydaci wykryci przez dopasowanie nazw do rejestru SEC; brak pełnego globalnego pokrycia','ranking_method':'attention_score = 100*(1-exp(-mentions/4)); wskaźnik uwagi, NIE ocena inwestycyjna','investment_ranking_available':False,'disclaimer':'Wskaźnik uwagi nie oznacza atrakcyjnej wyceny, potencjału wzrostu ani rekomendacji. Rejestr SEC obejmuje głównie emitentów raportujących w USA. Dane RSS mogą być niepełne.'}
     (ROOT/'data').mkdir(exist_ok=True)
     (ROOT/'data'/'scan.json').write_text(json.dumps(payload,ensure_ascii=False,indent=2),encoding='utf-8')
     print('Scanned',len(companies),'companies,',len(allnews),'articles')
