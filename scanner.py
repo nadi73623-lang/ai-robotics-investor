@@ -106,38 +106,80 @@ def add_fundamentals(companies,prior):
     return sum(bool(c['fundamentals']) for c in companies)
 
 
-# Best-effort delayed end-of-day prices. Source may block automated requests.
-# Never invent a quote; reject stale or malformed values.
-def stooq_quote(ticker):
-    from datetime import date
-    if not re.fullmatch(r'[A-Z]{1,5}',ticker):return None
-    url='https://stooq.com/q/d/l/?s='+ticker.lower()+'.us&i=d&d1='+(datetime.now(timezone.utc).strftime('%Y%m%d'))
-    # Request a recent window rather than a single day (weekends and holidays).
-    from datetime import timedelta
-    start=(datetime.now(timezone.utc)-timedelta(days=12)).strftime('%Y%m%d')
-    url='https://stooq.com/q/d/l/?s='+ticker.lower()+'.us&i=d&d1='+start+'&d2='+datetime.now(timezone.utc).strftime('%Y%m%d')
-    req=urllib.request.Request(url,headers={'User-Agent':'Mozilla/5.0 (compatible; AI-Robotics-Investor/4.1)'})
-    with urllib.request.urlopen(req,timeout=9) as response:
-        rows=list(csv.DictReader(io.StringIO(response.read(50000).decode('utf-8-sig'))))
-    if not rows:return None
-    row=rows[-1];price=float(row['Close']);stamp=datetime.fromisoformat(row['Date']).date()
+# Best-effort EOD quotes. Both sources are unofficial/free and may block access.
+# A failed request is NOT a zero price and does not imply a successful price scan.
+from datetime import timedelta
+
+class QuoteError(Exception):
+    pass
+
+def checked_quote(price, day, source, url):
+    try:
+        value=float(price)
+        stamp=datetime.fromisoformat(str(day)[:10]).date()
+    except (ValueError, TypeError, OverflowError) as exc:
+        raise QuoteError('invalid price or date') from exc
     age=(datetime.now(timezone.utc).date()-stamp).days
-    if price<=0 or age<0 or age>7:return None
-    return {'close_usd':round(price,4),'date':stamp.isoformat(),'age_days':age,'source':'Stooq, daily close (possibly delayed)','source_url':url,'is_live':False}
+    if not (0 < value < 10000000): raise QuoteError('price out of range')
+    if not 0 <= age <= 7: raise QuoteError('stale or future quote: '+str(day))
+    return {'close_usd':round(value,4),'date':stamp.isoformat(),'age_days':age,
+            'source':source,'source_url':url,'is_live':False}
+
+def stooq_quote(ticker):
+    if not re.fullmatch(r'[A-Z]{1,5}',ticker): raise QuoteError('unsupported ticker')
+    today=datetime.now(timezone.utc)
+    start=(today-timedelta(days=14)).strftime('%Y%m%d')
+    url='https://stooq.com/q/d/l/?'+urllib.parse.urlencode({'s':ticker.lower()+'.us','i':'d','d1':start,'d2':today.strftime('%Y%m%d')})
+    req=urllib.request.Request(url,headers={'User-Agent':'Mozilla/5.0','Accept':'text/csv'})
+    with urllib.request.urlopen(req,timeout=12) as response:
+        body=response.read(60000).decode('utf-8-sig',errors='replace').strip()
+    reader=csv.DictReader(io.StringIO(body))
+    if not reader.fieldnames or not {'Date','Close'}.issubset(set(reader.fieldnames)):
+        raise QuoteError('Stooq CSV missing Date/Close; header='+repr((reader.fieldnames or [])[:5])+'; preview='+repr(body[:80]))
+    rows=list(reader)
+    if not rows: raise QuoteError('Stooq CSV has no rows')
+    return checked_quote(rows[-1].get('Close'),rows[-1].get('Date'),'Stooq EOD',url)
+
+def yahoo_quote(ticker):
+    # Public chart endpoint: availability and redistribution rights may change.
+    if not re.fullmatch(r'[A-Z]{1,5}',ticker): raise QuoteError('unsupported ticker')
+    url='https://query1.finance.yahoo.com/v8/finance/chart/'+urllib.parse.quote(ticker)+'?interval=1d&range=15d'
+    req=urllib.request.Request(url,headers={'User-Agent':'Mozilla/5.0','Accept':'application/json'})
+    with urllib.request.urlopen(req,timeout=12) as response:
+        obj=json.load(response)
+    results=(obj.get('chart') or {}).get('result') or []
+    if not results: raise QuoteError('Yahoo chart has no result')
+    result=results[0]
+    meta=result.get('meta') or {}
+    if meta.get('currency')!='USD': raise QuoteError('Yahoo quote currency is not USD')
+    stamps=result.get('timestamp') or []
+    closes=(((result.get('indicators') or {}).get('quote') or [{}])[0].get('close') or [])
+    valid=[(ts,close) for ts,close in zip(stamps,closes) if close is not None]
+    if not valid: raise QuoteError('Yahoo chart has no daily closes')
+    ts,price=valid[-1]
+    day=datetime.fromtimestamp(ts,timezone.utc).date().isoformat()
+    return checked_quote(price,day,'Yahoo Finance chart EOD',url)
 
 def add_prices(companies,prior):
     old={x.get('ticker'):x.get('price') for x in prior.get('companies',[]) if x.get('price')}
-    # Refresh up to 12 US-listed candidates per scan, rotate stale ones.
+    diagnostics={};attempted=0;success=0
     eligible=[c for c in companies if re.fullmatch(r'[A-Z]{1,5}',c['ticker'])]
-    eligible.sort(key=lambda c:(old.get(c['ticker'],{}).get('checked_at',''),c['ticker']))
+    # Always check AVGO as a canary; rotate remaining slots across scans.
+    eligible.sort(key=lambda c:(c['ticker']!='AVGO',old.get(c['ticker'],{}).get('checked_at',''),c['ticker']))
     for c in eligible[:12]:
-        try:
-            quote=stooq_quote(c['ticker'])
-            if quote:
+        ticker=c['ticker'];attempted+=1;errors=[]
+        for name,provider in [('Stooq',stooq_quote),('Yahoo',yahoo_quote)]:
+            try:
+                quote=provider(ticker)
                 quote['checked_at']=datetime.now(timezone.utc).isoformat()
-                old[c['ticker']]=quote
-            else:print('No valid Stooq quote:',c['ticker'])
-        except Exception as e:print('Price source unavailable',c['ticker'],str(e)[:100])
+                old[ticker]=quote;success+=1
+                diagnostics[ticker]={'status':'ok','provider':name,'date':quote['date']}
+                break
+            except Exception as exc:
+                errors.append(name+': '+str(exc)[:160])
+        else:
+            diagnostics[ticker]={'status':'failed','errors':errors}
+            print('QUOTE_FAIL',ticker,' | '.join(errors))
         time.sleep(.1)
     for c in companies:
         q=old.get(c['ticker'])
@@ -147,7 +189,10 @@ def add_prices(companies,prior):
                 if not 0<=age<=7:q=None
             except (ValueError,KeyError,TypeError):q=None
         c['price']=q
-    return sum(bool(c['price']) for c in companies)
+    coverage=sum(bool(c['price']) for c in companies)
+    status='ok' if success==attempted and attempted else ('partial' if success else 'unavailable')
+    print('PRICE_SUMMARY',json.dumps({'attempted':attempted,'updated':success,'coverage':coverage,'status':status}))
+    return coverage,{'status':status,'attempted':attempted,'updated':success,'coverage':coverage,'diagnostics':diagnostics}
 
 def main():
     allnews=[]; seen=set()
@@ -192,8 +237,8 @@ def main():
         prior=json.loads((ROOT/'data'/'scan.json').read_text(encoding='utf-8'))
     except Exception: prior={}
     covered=add_fundamentals(companies,prior)
-    price_coverage=add_prices(companies,prior)
-    payload={'generated_at':datetime.now(timezone.utc).isoformat(),'source':'Google News RSS','queries':QUERIES,'scan_status':'ok' if allnews else 'no_sources', 'articles_collected':len(allnews),'companies':companies,'discoveries':discoveries,'articles':allnews[:100],'version':'4.1','price_coverage':price_coverage,'price_note':'Opóźnione ceny zamknięcia Stooq, tylko zweryfikowane daty do 7 dni; brak cen oznacza brak danych, nie zero. Bez kapitalizacji i wiarygodnej wyceny.','financial_coverage':covered,'financial_source':'SEC EDGAR XBRL, annual 10-K/20-F where available','financial_limitations':'Dane historyczne, możliwe opóźnienia; brak cen i pełnej wyceny; nie wszystkie spółki raportują do SEC','coverage_note':'Lista startowa plus kandydaci wykryci przez dopasowanie nazw do rejestru SEC; brak pełnego globalnego pokrycia','ranking_method':'attention_score = 100*(1-exp(-mentions/4)); wskaźnik uwagi, NIE ocena inwestycyjna','investment_ranking_available':False,'disclaimer':'Wskaźnik uwagi nie oznacza atrakcyjnej wyceny, potencjału wzrostu ani rekomendacji. Rejestr SEC obejmuje głównie emitentów raportujących w USA. Dane RSS mogą być niepełne.'}
+    price_coverage,price_health=add_prices(companies,prior)
+    payload={'generated_at':datetime.now(timezone.utc).isoformat(),'source':'Google News RSS','queries':QUERIES,'scan_status':'ok' if allnews else 'no_sources', 'articles_collected':len(allnews),'companies':companies,'discoveries':discoveries,'articles':allnews[:100],'version':'4.1.1','price_health':price_health,'price_coverage':price_coverage,'price_note':'Opóźnione ceny dzienne z Stooq lub Yahoo Chart (źródła mogą blokować dostęp); daty do 7 dni. Brak ceny to brak danych, nie zero. Bez kapitalizacji i wiarygodnej wyceny.','financial_coverage':covered,'financial_source':'SEC EDGAR XBRL, annual 10-K/20-F where available','financial_limitations':'Dane historyczne, możliwe opóźnienia; brak cen i pełnej wyceny; nie wszystkie spółki raportują do SEC','coverage_note':'Lista startowa plus kandydaci wykryci przez dopasowanie nazw do rejestru SEC; brak pełnego globalnego pokrycia','ranking_method':'attention_score = 100*(1-exp(-mentions/4)); wskaźnik uwagi, NIE ocena inwestycyjna','investment_ranking_available':False,'disclaimer':'Wskaźnik uwagi nie oznacza atrakcyjnej wyceny, potencjału wzrostu ani rekomendacji. Rejestr SEC obejmuje głównie emitentów raportujących w USA. Dane RSS mogą być niepełne.'}
     (ROOT/'data').mkdir(exist_ok=True)
     (ROOT/'data'/'scan.json').write_text(json.dumps(payload,ensure_ascii=False,indent=2),encoding='utf-8')
     print('Scanned',len(companies),'companies,',len(allnews),'articles')
