@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Public news scanner; no credentials or paid API required."""
-import json, re, time, urllib.parse, urllib.request, xml.etree.ElementTree as ET
+import json, re, time, os, urllib.parse, urllib.request, xml.etree.ElementTree as ET
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -28,6 +28,83 @@ def matches(title,ticker,name):
     if name.lower() in t: return True
     aliases={'NVDA':['nvidia'],'AVGO':['broadcom'],'PDYN':['palladyne'],'SYM':['symbotic'],'ISRG':['intuitive surgical'],'TSM':['tsmc'],'GOOGL':['google','alphabet'],'AMZN':['amazon','aws'],'MSFT':['microsoft'],'META':['meta platforms'],'ABB':['abb ltd'],'FANUY':['fanuc'],'MU':['micron'],'AI':['c3.ai'],'RR':['richtech robotics']}
     return any(a in t for a in aliases.get(ticker,[]))
+
+# SEC XBRL financials: official filings, US-reporting issuers only.
+# No API key. Bounded requests per scan and persisted cache in scan.json.
+SEC_UA=os.environ.get('SEC_USER_AGENT','AI-Robotics-Investor research contact research-team@example.com')
+FACTS={
+ 'revenue':['RevenueFromContractWithCustomerExcludingAssessedTax','Revenues','SalesRevenueNet'],
+ 'net_income':['NetIncomeLoss'],
+ 'operating_cash_flow':['NetCashProvidedByUsedInOperatingActivities'],
+ 'capex':['PaymentsToAcquirePropertyPlantAndEquipment'],
+ 'assets':['Assets'],
+ 'liabilities':['Liabilities'],
+ 'cash':['CashAndCashEquivalentsAtCarryingValue'],
+ 'debt_current':['LongTermDebtCurrent','LongTermDebtAndCapitalLeaseObligationsCurrent'],
+ 'debt_long':['LongTermDebtNoncurrent','LongTermDebt'],
+ 'shares':['CommonStockSharesOutstanding'],
+}
+def sec_json(url):
+    req=urllib.request.Request(url,headers={'User-Agent':SEC_UA,'Accept':'application/json','Accept-Encoding':'identity'})
+    with urllib.request.urlopen(req,timeout=12) as r: return json.load(r)
+def annual_values(facts,tags,unit='USD',instant=False):
+    for tag in tags:
+        rows=facts.get('us-gaap',{}).get(tag,{}).get('units',{}).get(unit,[])
+        rows=[x for x in rows if x.get('form') in ('10-K','20-F') and x.get('fy') and x.get('filed') and x.get('val') is not None and (instant or (x.get('start') and 330<= (datetime.fromisoformat(x['end'])-datetime.fromisoformat(x['start'])).days<=380))]
+        if not rows: continue
+        byyear={}
+        for x in rows:
+            year=x['end'][:4]
+            if year not in byyear or x['filed']>byyear[year]['filed']: byyear[year]=x
+        vals=sorted(byyear.values(),key=lambda x:x['end'],reverse=True)
+        if vals:return [{'year':v['end'][:4],'end':v['end'],'value':v['val'],'filed':v['filed']} for v in vals[:3]]
+    return []
+def fundamentals(ticker,cik):
+    data=sec_json('https://data.sec.gov/api/xbrl/companyfacts/CIK'+str(cik).zfill(10)+'.json')
+    facts=data.get('facts',{}); metrics={}
+    for key,tags in FACTS.items():
+        metrics[key]=annual_values(facts,tags,'shares' if key=='shares' else 'USD',key in ('assets','liabilities','cash','debt_current','debt_long','shares'))
+    latest=lambda key: metrics[key][0]['value'] if metrics[key] else None
+    rev=latest('revenue'); net=latest('net_income'); ocf=latest('operating_cash_flow'); capex=latest('capex')
+    margin=round(net/rev*100,1) if rev and net is not None else None
+    fcf=ocf-abs(capex) if ocf is not None and capex is not None else None
+    growth=None
+    if len(metrics['revenue'])>1:
+        a,b=metrics['revenue'][:2]
+        if int(a['year'])-int(b['year'])==1 and b['value']>0:growth=round((a['value']/b['value']-1)*100,1)
+    debt=(latest('debt_current') or 0)+(latest('debt_long') or 0) if latest('debt_current') is not None or latest('debt_long') is not None else None
+    # This is a data-coverage-aware descriptive score, not a buy recommendation.
+    checks=[growth is not None,margin is not None,fcf is not None]
+    score=None
+    if all(checks):
+        score=round(100*(int(growth>15)+int(margin>10)+int(fcf>0)+int(ocf is not None and ocf>0))/4)
+    return {'source':'SEC EDGAR XBRL','fiscal_year':metrics['revenue'][0]['year'] if metrics['revenue'] else None,
+      'revenue_usd':rev,'revenue_growth_pct':growth,'net_margin_pct':margin,'operating_cash_flow_usd':ocf,
+      'free_cash_flow_usd':fcf,'cash_usd':latest('cash'),'debt_usd':debt,
+      'financial_health_score':score,'score_label':'Prosty filtr 4 warunków, nie rekomendacja',
+      'as_of':datetime.now(timezone.utc).isoformat(),'source_url':'https://www.sec.gov/edgar/browse/?CIK='+str(cik)}
+def add_fundamentals(companies,prior):
+    previous={x.get('ticker'):x.get('fundamentals') for x in prior.get('companies',[]) if x.get('fundamentals')}
+    try:
+        registry=sec_json('https://www.sec.gov/files/company_tickers.json')
+        ciks={x['ticker']:x['cik_str'] for x in registry.values() if x.get('ticker')}
+    except Exception as e:
+        print('SEC issuer registry unavailable:',str(e)[:120]);ciks={}
+    # Rotate coverage across scans; cache is retained in data/scan.json.
+    # Prioritize uncovered tickers; cap to respect SEC fair-access policies.
+    pending=[c for c in companies if c['ticker'] in ciks and c['ticker'] not in previous]
+    stale=[c for c in companies if c['ticker'] in ciks and c['ticker'] in previous]
+    stale.sort(key=lambda c:previous[c['ticker']].get('as_of',''))
+    for c in (pending+stale)[:8]:
+        try:
+            previous[c['ticker']]=fundamentals(c['ticker'],ciks[c['ticker']]);time.sleep(.25)
+        except Exception as e: print('SEC facts',c['ticker'],str(e)[:110])
+    for c in companies:
+        c['fundamentals']=previous.get(c['ticker'])
+        c['valuation_status']='Brak zweryfikowanej bieżącej ceny i kapitalizacji; P/E i EV/FCF niedostępne'
+        c['investment_score']=None
+    return sum(bool(c['fundamentals']) for c in companies)
+
 def main():
     allnews=[]; seen=set()
     for q in QUERIES:
@@ -67,7 +144,11 @@ def main():
     for c in discoveries:
         c['attention_score']=min(100,round(100*(1-2.718281828**(-c['mentions']/4))))
         c['investment_score']=None
-    payload={'generated_at':datetime.now(timezone.utc).isoformat(),'source':'Google News RSS','queries':QUERIES,'scan_status':'ok' if allnews else 'no_sources', 'articles_collected':len(allnews),'companies':companies,'discoveries':discoveries,'articles':allnews[:100],'version':'3.0','coverage_note':'Lista startowa plus kandydaci wykryci przez dopasowanie nazw do rejestru SEC; brak pełnego globalnego pokrycia','ranking_method':'attention_score = 100*(1-exp(-mentions/4)); wskaźnik uwagi, NIE ocena inwestycyjna','investment_ranking_available':False,'disclaimer':'Wskaźnik uwagi nie oznacza atrakcyjnej wyceny, potencjału wzrostu ani rekomendacji. Rejestr SEC obejmuje głównie emitentów raportujących w USA. Dane RSS mogą być niepełne.'}
+    try:
+        prior=json.loads((ROOT/'data'/'scan.json').read_text(encoding='utf-8'))
+    except Exception: prior={}
+    covered=add_fundamentals(companies,prior)
+    payload={'generated_at':datetime.now(timezone.utc).isoformat(),'source':'Google News RSS','queries':QUERIES,'scan_status':'ok' if allnews else 'no_sources', 'articles_collected':len(allnews),'companies':companies,'discoveries':discoveries,'articles':allnews[:100],'version':'4.0','financial_coverage':covered,'financial_source':'SEC EDGAR XBRL, annual 10-K/20-F where available','financial_limitations':'Dane historyczne, możliwe opóźnienia; brak cen i pełnej wyceny; nie wszystkie spółki raportują do SEC','coverage_note':'Lista startowa plus kandydaci wykryci przez dopasowanie nazw do rejestru SEC; brak pełnego globalnego pokrycia','ranking_method':'attention_score = 100*(1-exp(-mentions/4)); wskaźnik uwagi, NIE ocena inwestycyjna','investment_ranking_available':False,'disclaimer':'Wskaźnik uwagi nie oznacza atrakcyjnej wyceny, potencjału wzrostu ani rekomendacji. Rejestr SEC obejmuje głównie emitentów raportujących w USA. Dane RSS mogą być niepełne.'}
     (ROOT/'data').mkdir(exist_ok=True)
     (ROOT/'data'/'scan.json').write_text(json.dumps(payload,ensure_ascii=False,indent=2),encoding='utf-8')
     print('Scanned',len(companies),'companies,',len(allnews),'articles')
