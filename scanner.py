@@ -42,7 +42,7 @@ FACTS={
  'cash':['CashAndCashEquivalentsAtCarryingValue'],
  'debt_current':['LongTermDebtCurrent','LongTermDebtAndCapitalLeaseObligationsCurrent'],
  'debt_long':['LongTermDebtNoncurrent','LongTermDebt'],
- 'shares':['CommonStockSharesOutstanding'],
+ 'shares':['CommonStockSharesOutstanding','EntityCommonStockSharesOutstanding'],
 }
 def sec_json(url):
     req=urllib.request.Request(url,headers={'User-Agent':SEC_UA,'Accept':'application/json','Accept-Encoding':'identity'})
@@ -64,6 +64,13 @@ def fundamentals(ticker,cik):
     facts=data.get('facts',{}); metrics={}
     for key,tags in FACTS.items():
         metrics[key]=annual_values(facts,tags,'shares' if key=='shares' else 'USD',key in ('assets','liabilities','cash','debt_current','debt_long','shares'))
+    # SEC share counts are commonly tagged in the DEI namespace, not us-gaap.
+    if not metrics['shares']:
+        rows=facts.get('dei',{}).get('EntityCommonStockSharesOutstanding',{}).get('units',{}).get('shares',[])
+        rows=[r for r in rows if r.get('form') in ('10-K','10-Q','20-F') and r.get('end') and r.get('filed') and isinstance(r.get('val'),(int,float)) and r['val']>0]
+        if rows:
+            r=max(rows,key=lambda x:(x['end'],x['filed']))
+            metrics['shares']=[{'year':r['end'][:4],'end':r['end'],'value':r['val'],'filed':r['filed']}]
     latest=lambda key: metrics[key][0]['value'] if metrics[key] else None
     rev=latest('revenue'); net=latest('net_income'); ocf=latest('operating_cash_flow'); capex=latest('capex')
     margin=round(net/rev*100,1) if rev and net is not None else None
@@ -79,10 +86,10 @@ def fundamentals(ticker,cik):
     if all(checks):
         score=round(100*(int(growth>15)+int(margin>10)+int(fcf>0)+int(ocf is not None and ocf>0))/4)
     return {'source':'SEC EDGAR XBRL','fiscal_year':metrics['revenue'][0]['year'] if metrics['revenue'] else None,
-      'revenue_usd':rev,'revenue_growth_pct':growth,'net_margin_pct':margin,'operating_cash_flow_usd':ocf,
+      'revenue_usd':rev,'net_income_usd':net,'revenue_growth_pct':growth,'net_margin_pct':margin,'operating_cash_flow_usd':ocf,
       'free_cash_flow_usd':fcf,'cash_usd':latest('cash'),'debt_usd':debt,
       'financial_health_score':score,'score_label':'Prosty filtr 4 warunków, nie rekomendacja',
-      'as_of':datetime.now(timezone.utc).isoformat(),'source_url':'https://www.sec.gov/edgar/browse/?CIK='+str(cik)}
+      'shares_outstanding':latest('shares'),'shares_as_of':metrics['shares'][0]['end'] if metrics['shares'] else None,'revenue_period_end':metrics['revenue'][0]['end'] if metrics['revenue'] else None,'net_income_period_end':metrics['net_income'][0]['end'] if metrics['net_income'] else None,'cash_flow_period_end':metrics['operating_cash_flow'][0]['end'] if metrics['operating_cash_flow'] else None,'capex_period_end':metrics['capex'][0]['end'] if metrics['capex'] else None,'as_of':datetime.now(timezone.utc).isoformat(),'source_url':'https://www.sec.gov/edgar/browse/?CIK='+str(cik)}
 def add_fundamentals(companies,prior):
     previous={x.get('ticker'):x.get('fundamentals') for x in prior.get('companies',[]) if x.get('fundamentals')}
     try:
@@ -194,6 +201,49 @@ def add_prices(companies,prior):
     print('PRICE_SUMMARY',json.dumps({'attempted':attempted,'updated':success,'coverage':coverage,'status':status}))
     return coverage,{'status':status,'attempted':attempted,'updated':success,'coverage':coverage,'diagnostics':diagnostics}
 
+def calculate_valuation(company, today=None):
+    """Indicative trailing annual ratios, only if SEC periods and shares are defensible.
+
+    This is NOT a live valuation or an investment recommendation. No estimated shares.
+    """
+    today=today or datetime.now(timezone.utc).date()
+    f=company.get('fundamentals') or {}; q=company.get('price') or {}
+    result={'status':'unavailable','reason':'Brak ceny lub kompletnych danych SEC','market_cap_usd':None,
+            'ps':None,'pe':None,'fcf_yield_pct':None,'share_date':f.get('shares_as_of'),
+            'price_date':q.get('date'),'basis':'Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)'}
+    try:
+        price=float(q['close_usd']); shares=float(f['shares_outstanding'])
+        if not (0<price<1e7 and 0<shares<1e13): raise ValueError('invalid price/shares')
+        share_day=datetime.fromisoformat(f['shares_as_of']).date()
+        quote_day=datetime.fromisoformat(q['date']).date()
+        if not 0 <= (today-share_day).days <= 540: raise ValueError('stale share count')
+        if not 0 <= (today-quote_day).days <= 7: raise ValueError('stale quote')
+        # SEC shares for foreign ADRs may refer to underlying ordinary shares, not US ADRs.
+        if company.get('ticker') in {'TSM','ASML','ARM','ABB','FANUY','SIEGY'}:
+            raise ValueError('ADR/foreign share-unit ambiguity')
+        cap=price*shares
+        result['market_cap_usd']=round(cap)
+        result['status']='partial';result['reason']='Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC'
+        def period_ok(key):
+            day=f.get(key)
+            if not day:return False
+            d=datetime.fromisoformat(day).date()
+            return 0 <= (today-d).days <= 540
+        revenue=f.get('revenue_usd')
+        if period_ok('revenue_period_end') and isinstance(revenue,(int,float)) and revenue>0:
+            result['ps']=round(cap/revenue,2)
+        net=f.get('net_income_usd')
+        if period_ok('net_income_period_end') and isinstance(net,(int,float)) and net>0:
+            result['pe']=round(cap/net,2)
+        fcf=f.get('free_cash_flow_usd')
+        if (period_ok('cash_flow_period_end') and period_ok('capex_period_end')
+            and f.get('cash_flow_period_end')==f.get('capex_period_end')
+            and isinstance(fcf,(int,float))):
+            result['fcf_yield_pct']=round(100*fcf/cap,2)
+        return result
+    except (ValueError,KeyError,TypeError,OverflowError):
+        return result
+
 def main():
     allnews=[]; seen=set()
     for q in QUERIES:
@@ -238,7 +288,12 @@ def main():
     except Exception: prior={}
     covered=add_fundamentals(companies,prior)
     price_coverage,price_health=add_prices(companies,prior)
-    payload={'generated_at':datetime.now(timezone.utc).isoformat(),'source':'Google News RSS','queries':QUERIES,'scan_status':'ok' if allnews else 'no_sources', 'articles_collected':len(allnews),'companies':companies,'discoveries':discoveries,'articles':allnews[:100],'version':'4.1.1','price_health':price_health,'price_coverage':price_coverage,'price_note':'Opóźnione ceny dzienne z Stooq lub Yahoo Chart (źródła mogą blokować dostęp); daty do 7 dni. Brak ceny to brak danych, nie zero. Bez kapitalizacji i wiarygodnej wyceny.','financial_coverage':covered,'financial_source':'SEC EDGAR XBRL, annual 10-K/20-F where available','financial_limitations':'Dane historyczne, możliwe opóźnienia; brak cen i pełnej wyceny; nie wszystkie spółki raportują do SEC','coverage_note':'Lista startowa plus kandydaci wykryci przez dopasowanie nazw do rejestru SEC; brak pełnego globalnego pokrycia','ranking_method':'attention_score = 100*(1-exp(-mentions/4)); wskaźnik uwagi, NIE ocena inwestycyjna','investment_ranking_available':False,'disclaimer':'Wskaźnik uwagi nie oznacza atrakcyjnej wyceny, potencjału wzrostu ani rekomendacji. Rejestr SEC obejmuje głównie emitentów raportujących w USA. Dane RSS mogą być niepełne.'}
+    for c in companies:
+        c['valuation']=calculate_valuation(c)
+        c['valuation_status']=('Orientacyjna kapitalizacja i mnożniki roczne — nie ranking zakupu' if c['valuation']['status']=='partial' else 'Brak wystarczających danych do wyceny')
+    valuation_coverage=sum(c['valuation']['status']=='partial' for c in companies)
+    print('VALUATION_SUMMARY',json.dumps({'covered':valuation_coverage,'total':len(companies)}))
+    payload={'generated_at':datetime.now(timezone.utc).isoformat(),'source':'Google News RSS','queries':QUERIES,'scan_status':'ok' if allnews else 'no_sources', 'articles_collected':len(allnews),'companies':companies,'discoveries':discoveries,'articles':allnews[:100],'version':'4.2','valuation_coverage':valuation_coverage,'valuation_note':'Orientacyjna kapitalizacja = cena EOD × akcje z ostatniego dostępnego raportu SEC; nie uwzględnia późniejszego rozwodnienia, zmian liczby akcji ani ADR. P/S i P/E bazują na danych rocznych, nie TTM. Nie jest to ranking inwestycyjny.','price_health':price_health,'price_coverage':price_coverage,'price_note':'Opóźnione ceny dzienne z Stooq lub Yahoo Chart (źródła mogą blokować dostęp); daty do 7 dni. Brak ceny to brak danych, nie zero. Kapitalizacja i mnożniki wyłącznie orientacyjne, gdy dane są wystarczające.','financial_coverage':covered,'financial_source':'SEC EDGAR XBRL, annual 10-K/20-F where available','financial_limitations':'Dane historyczne, możliwe opóźnienia; brak cen i pełnej wyceny; nie wszystkie spółki raportują do SEC','coverage_note':'Lista startowa plus kandydaci wykryci przez dopasowanie nazw do rejestru SEC; brak pełnego globalnego pokrycia','ranking_method':'attention_score = 100*(1-exp(-mentions/4)); wskaźnik uwagi, NIE ocena inwestycyjna','investment_ranking_available':False,'disclaimer':'Wskaźnik uwagi nie oznacza atrakcyjnej wyceny, potencjału wzrostu ani rekomendacji. Rejestr SEC obejmuje głównie emitentów raportujących w USA. Dane RSS mogą być niepełne.'}
     (ROOT/'data').mkdir(exist_ok=True)
     (ROOT/'data'/'scan.json').write_text(json.dumps(payload,ensure_ascii=False,indent=2),encoding='utf-8')
     print('Scanned',len(companies),'companies,',len(allnews),'articles')
