@@ -1,9 +1,16 @@
-# AI Robotics Investor 4.1.1 — naprawa notowań
+# AI Robotics Investor 4.2 — wycena orientacyjna
 
-Naprawiono wyjątek `KeyError: Close` przy niepoprawnym CSV Stooq. Skrypt waliduje nagłówki, wartości, walutę (Yahoo), datę (maksymalnie 7 dni) i przełącza się na drugi dostawca: publiczny endpoint Yahoo Finance Chart. Wyniki nie są notowaniami live. Źródła mogą ograniczać dostęp, zmieniać format lub zasady użycia. Dane nie są gwarantowane.
+Rozszerzenie wersji 4.1.1 bez nowych bibliotek i bez zmiany GitHub Actions. `scanner.py` działa przez `python scanner.py`.
 
-`price_health` w `data/scan.json` pokazuje `status`, `attempted`, `updated` i diagnostykę tickerów. Log GitHub Actions pokazuje `PRICE_SUMMARY` i `QUOTE_FAIL` (bez danych uwierzytelniających). AVGO jest sprawdzane w każdym skanie. Brak wiarygodnej ceny nie jest zastępowany fikcyjną liczbą.
+## Zmiany
+- SEC companyfacts: liczba akcji i daty okresów dla przychodów, zysku netto, cash flow i nakładów.
+- Wycena orientacyjna: kapitalizacja (cena EOD × historyczna liczba akcji), roczny P/S, roczny P/E wyłącznie przy dodatnim zysku, roczna rentowność FCF. Nie TTM i nie dane live.
+- Brak wskaźnika przy brakujących, zbyt starych lub nieporównywalnych danych; wybrane zagraniczne ADR pomijane z uwagi na różne jednostki akcji.
+- `VALUATION_SUMMARY` w logach i `valuation_coverage` w JSON. Dane SEC będą się stopniowo uzupełniać, maks. 8 emitentów na skan.
+- UI wyraźnie odróżnia orientacyjne mnożniki od rankingu inwestycyjnego.
 
-Zachowano istniejący `.github/workflows/scan.yml`, bez dodatkowych bibliotek i płatnych API. GitHub Actions nadal uruchamia `python scanner.py`.
+## Ograniczenia
+Wynik może być niedokładny po emisjach, splitach i wykupach akcji, gdy liczba akcji SEC jest starsza od notowania. Dodatkowo różne daty raportów i okresy roczne ograniczają porównywalność. Nie jest to profesjonalny feed kapitalizacji ani rekomendacja inwestycyjna. Nie wyliczamy rankingu zakupowego z niekompletnych danych.
 
-Testy: `python -m unittest discover -p 'test_*.py'`. Po wdrożeniu uruchom ręcznie skan i sprawdź `PRICE_SUMMARY`, a następnie cenę AVGO. Zielony workflow nie oznacza sukcesu dostawcy.
+## Test
+`python -m unittest discover -p 'test_*.py'`. W GitHub Actions uruchom skan, a następnie sprawdź `VALUATION_SUMMARY` i wycenę AVGO w aplikacji. Brak wyceny AVGO po pierwszym skanie nie musi oznaczać awarii, ponieważ dane SEC są uzupełniane rotacyjnie.
