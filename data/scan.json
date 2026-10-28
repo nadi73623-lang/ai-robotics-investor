@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-27T22:10:54.645500+00:00",
+  "generated_at": "2026-10-28T05:36:58.192236+00:00",
   "source": "Google News RSS",
   "queries": [
     "artificial intelligence robotics stocks companies contracts earnings",
@@ -10,13 +10,13 @@
     "AI infrastructure cooling energy grid power public company"
   ],
   "scan_status": "ok",
-  "articles_collected": 118,
+  "articles_collected": 112,
   "companies": [
     {
       "ticker": "AVGO",
       "name": "Broadcom",
       "sector": "AI infrastructure",
-      "mentions": 7,
+      "mentions": 6,
       "news": [
         {
           "title": "Broadcom vs. Taiwan Semiconductor: Two AI Powerhouses, One Surprising Revenue Trend - The Globe and Mail",
@@ -34,18 +34,18 @@
           "date": "Mon, 26 Oct 2026 22:01:00 GMT"
         },
         {
+          "title": "Broadcom’s Jericho4 boosts data center AI networking - TechTarget",
+          "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQaDd2SDZJYVFFS2Y4LVNKcHJtUVhUV0lvemtxczhGVzc0YzZYYlZBRkxmNjVERENlMmpJdFI4TENyOU1jajFpMXpFY2VWMGFUb25hSTU1Z0s0X2VESk1paWw0ODRzNGZHX2h5X3BDMFlkV0N3SEFicGFPREVXY0xCQzZ4VHFlVXFVaTdzWHhkV0pUQkFFamc?oc=5",
+          "date": "Tue, 27 Oct 2026 22:56:35 GMT"
+        },
+        {
           "title": "Broadcom vs. Taiwan Semiconductor: Two AI Powerhouses, One Surprising Revenue Trend - The Motley Fool",
           "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOM3dTR3dBVHFONkNYS1JEc2RPY0h0U09IaTJPX1lPQ2hEYnoyNmpRbk1kNVZyQzNLaW9JMlNyM0dTMER2QkJrdXllSTJfZTFhS01aamVJbXFjZUUwcktqZnpXV1NwRTBtbXA5WVk2bTYyTGxzV0xoZ2l2Y1R4c3pIdmxhWnZKUnJpMkNJRzdOLTNTSjI3akhYSjBOcnZtbGwtZ2hMcEEzdzRoNFFodlQ4Rm9URmV6X28zalc4RUpsWlJMT1FvNXFkNQ?oc=5",
           "date": "Tue, 27 Oct 2026 09:30:00 GMT"
-        },
-        {
-          "title": "Nvidia 🆚 Broadcom: AI-related revenue in the previous quarter rose 221% for Nvidia and 117% for Broadcom. - Moomoo",
-          "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQLVc0bGYtaTVNYXpVTkZRQWlRZUFTRUxIbDhCQVg5VGFZeEJkUEJ5WlRlTzlQZnhON21lRkh6UUk1U0owWGtILUdZMFJHVm94M01STmozazdSTWdTSTRQbU5aX2Z4VWVpd3RwZ211MkNqU3ozblpfdjhzd21zUk5LUDk4MFV4Q2RKQXhmYS1LM3NPbXVYSUtKUmFaNmMycnBkaWpyWWNrN1A0dGxtTGow?oc=5",
-          "date": "Sun, 25 Oct 2026 00:29:57 GMT"
         }
       ],
       "status": "Do analizy",
-      "attention_score": 83,
+      "attention_score": 78,
       "valuation_status": "Orientacyjna kapitalizacja i mnożniki roczne — nie ranking zakupu",
       "investment_score": null,
       "fundamentals": {
@@ -67,17 +67,17 @@
         "net_income_period_end": "2024-11-03",
         "cash_flow_period_end": "2025-11-02",
         "capex_period_end": "2025-11-02",
-        "as_of": "2026-10-27T22:10:29.406244+00:00",
+        "as_of": "2026-10-28T05:36:30.963804+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1730168"
       },
       "price": {
         "close_usd": 342.33,
         "date": "2026-10-27",
-        "age_days": 0,
+        "age_days": 1,
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/AVGO?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-10-27T22:10:37.823368+00:00"
+        "checked_at": "2026-10-28T05:36:40.443712+00:00"
       },
       "valuation": {
         "status": "partial",
@@ -92,35 +92,35 @@
       }
     },
     {
-      "ticker": "NVDA",
-      "name": "NVIDIA",
-      "sector": "AI chips",
+      "ticker": "BBAI",
+      "name": "BigBear.ai",
+      "sector": "AI software",
       "mentions": 5,
       "news": [
         {
-          "title": "Nvidia 🆚 Broadcom: AI-related revenue in the previous quarter rose 221% for Nvidia and 117% for Broadcom. - Moomoo",
-          "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQLVc0bGYtaTVNYXpVTkZRQWlRZUFTRUxIbDhCQVg5VGFZeEJkUEJ5WlRlTzlQZnhON21lRkh6UUk1U0owWGtILUdZMFJHVm94M01STmozazdSTWdTSTRQbU5aX2Z4VWVpd3RwZ211MkNqU3ozblpfdjhzd21zUk5LUDk4MFV4Q2RKQXhmYS1LM3NPbXVYSUtKUmFaNmMycnBkaWpyWWNrN1A0dGxtTGow?oc=5",
-          "date": "Sun, 25 Oct 2026 00:29:57 GMT"
+          "title": "BigBear.ai Holdings, Inc. (BBAI) Stock Price, News, Quote & History - Yahoo! Finance Canada",
+          "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1lM1hzeUR5X2dlX3B2NzFkVm9PaXlMTnZ6RmpDN0tLVnZIMVVBTDExVS1nODlZa3drVS1wUUF5dENVNUpKVkxlc2k5d2w2OTNMMHc?oc=5",
+          "date": "Tue, 27 Oct 2026 21:34:17 GMT"
         },
         {
-          "title": "The Ethernet Tollbooth: Arista Rides Broadcom Silicon to Break Nvidia’s InfiniBand Monopoly - 24/7 Wall St.",
-          "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQRWpNLVVJdlR4bzhpUnFnT3l2NjVxM2dPd2ZQN09odTlKeV81eG1MT3pCU3p1WGpTSFQ0R0lXQnlVWTctOTBZb0lMbUU2d2dRVTFCTk03YlBDajZzTWhESnBMVnR4V3plaS1HZTR0U0xlMTJQNGxwWGxPUGFZVW9TZmJOWjFjRk1UVGNHVFBIUW1BMHNtdmRtMFJVa3VSNEFWMWx6Z2toTGFabjBZLTdDQ3JtN0x1RkZ6aV9ndmhObTZxbDN1anltbmlmMXZwQQ?oc=5",
-          "date": "Mon, 26 Oct 2026 12:15:00 GMT"
+          "title": "BigBear.ai Q3 Earnings Call Highlights - MarketBeat",
+          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOelhlRTZ5LW9RcGtQS2RzS3E1SEc5M1k2aS1RNU1NNlRRT1JMMGNETjctZjN6NzFoaFpOVkVKbFl6YUNLX0R5Tm9IdzBmLWRoQUlySnBnTjZJbVZpV2toMjZlNlNFUnNOOXRSQ3FVajJhZTRmSktWVHdycXVmNGNSWlU5ZS1iMTB2d0tzTV9zNzltTXB4Nm5LM212ZkxadjU0YTFfTA?oc=5",
+          "date": "Tue, 27 Oct 2026 22:11:31 GMT"
         },
         {
-          "title": "Nvidia, AMD and Broadcom weigh $5 billion investment in Meta - jawlah.co",
-          "url": "https://news.google.com/rss/articles/CBMiP0FVX3lxTFBCdWNHSGpOeDNQcnZqaEpnSVR6NlVTRU1ZRkxLZl9yeTJyeW9KYlp3NEJKb3NUNGJodC1tdDdZNA?oc=5",
-          "date": "Mon, 26 Oct 2026 17:29:53 GMT"
+          "title": "BigBear.ai Q3 2026 Earnings Results and Report - MarketBeat",
+          "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNa01oWmpOTDdnWWtyM0RsZzNJSWJ0OVJmaHUxWVJ5Q3pHZVFKVDN5X1NfN0RablFvWjZabFFGbXllT3VnSHMtcnBkM2k4S3lCbklfaXhsckRvYTE5VnF2eTR3M29xTWRiaUNSQVBReTVoNmZnMmNONkxkc2pGQlJDZ1lYY3JYTEVDSENVag?oc=5",
+          "date": "Tue, 27 Oct 2026 20:36:07 GMT"
         },
         {
-          "title": "Agile Robots Launches Agile ONE SN Humanoid at NVIDIA GTC Berlin and Pilots Humanoids with Audi - Yahoo Finance",
-          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQeVEyVGNjTHp3SEdrY0ZoMWR5NHBfbFl4MDdIZjFPaVhYeHJHLVlObDZqeEx1X0lXamsyc2xwZncxNVZJdzVmaGRYRHRLR1pxdUlwMEJ6VFdkaFN1Y0xXTnJDQjFLUXN5MTd0VUxKTVlIVDVFOFpPanVsRzRyV3BjLXAtSHhhcF9UbW4xN29kSmltMERlMzNlQWFfTQ?oc=5",
-          "date": "Tue, 27 Oct 2026 06:22:00 GMT"
+          "title": "BBAI Stock Ticks Higher As $225M Federal AI Contracts Roll In - StocksToTrade",
+          "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1MUF8wd1c1VlU0RllZeUV6OXVULTFjNnRuaS02cUJQb00xTDRoZTlHbFR4OFRUcEg0S09UdVFDc3RnMHpHQlloZnZvanYzVnA0VUtjSE1teEtGZDY1QUluem9IMV9rMWV5NVVoNUt3cHVjUzND?oc=5",
+          "date": "Tue, 27 Oct 2026 17:19:28 GMT"
         },
         {
-          "title": "Nvidia and Schneider test a digital twin to rehearse AI data center upgrades - MarketScale",
-          "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQMlVWRVc4R19wY2VDaEJsVFVsX1Y2TXlhaHk0NHR6WUtCYldCWE44NFVqZ2lMLXJWRVNNUWhSZnpXclFISEtmRHYxczJhVElFc29Pam5iY0lqSFpFSXdHZHJKNkNqdDZSeFBNaXhuMklvOUozTkkxRnVuQ0htMlM5clhPNkNoSGJ5OW1iaEtVWlNna2hYZEdrczNpdE1GaEVwZUx1V1cyUGV6b1pfQUI0VU14SE9xYWV0dy1vREtTRQ?oc=5",
-          "date": "Mon, 26 Oct 2026 16:58:00 GMT"
+          "title": "BBAI Stock Pops As BigBear.ai Lands $225M Federal AI Deals - StocksToTrade",
+          "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE14T0wtTmVyc243WnFVWEU1RlZDUjJGY193TmZpSGo4R0pVV1NHcy0xb3A5cWpHblI5MnYxSUxjUTVraXJNZjBaYjc2SWt6WC1TY1loTmdtLW0wZ2F2ZHJOSlFwNjZNT2dQU3Rud3JXQjZZMC02R1Vz?oc=5",
+          "date": "Tue, 27 Oct 2026 21:47:00 GMT"
         }
       ],
       "status": "Do analizy",
@@ -129,43 +129,122 @@
       "investment_score": null,
       "fundamentals": {
         "source": "SEC EDGAR XBRL",
-        "fiscal_year": "2022",
-        "revenue_usd": 26914000000,
-        "net_income_usd": 120067000000,
-        "revenue_growth_pct": 61.4,
-        "net_margin_pct": 446.1,
-        "operating_cash_flow_usd": 102718000000,
-        "free_cash_flow_usd": 102579265000,
-        "cash_usd": 10605000000,
-        "debt_usd": 8468000000,
-        "financial_health_score": 100,
+        "fiscal_year": "2025",
+        "revenue_usd": 127672000,
+        "net_income_usd": -293914000,
+        "revenue_growth_pct": -19.3,
+        "net_margin_pct": -230.2,
+        "operating_cash_flow_usd": -41951000,
+        "free_cash_flow_usd": -42476000,
+        "cash_usd": 87126000,
+        "debt_usd": 107044000,
+        "financial_health_score": 0,
         "score_label": "Prosty filtr 4 warunków, nie rekomendacja",
-        "shares_outstanding": 24100000000,
-        "shares_as_of": "2026-08-21",
-        "revenue_period_end": "2022-01-30",
-        "net_income_period_end": "2026-01-25",
-        "cash_flow_period_end": "2026-01-25",
-        "capex_period_end": "2012-01-29",
-        "as_of": "2026-10-27T04:59:14.075969+00:00",
-        "source_url": "https://www.sec.gov/edgar/browse/?CIK=1045810"
+        "shares_outstanding": 479494493,
+        "shares_as_of": "2026-06-30",
+        "revenue_period_end": "2025-12-31",
+        "net_income_period_end": "2025-12-31",
+        "cash_flow_period_end": "2025-12-31",
+        "capex_period_end": "2025-12-31",
+        "as_of": "2026-10-28T05:36:34.155319+00:00",
+        "source_url": "https://www.sec.gov/edgar/browse/?CIK=1836981"
       },
       "price": {
-        "close_usd": 218.055,
+        "close_usd": 2.35,
         "date": "2026-10-27",
-        "age_days": 0,
+        "age_days": 1,
         "source": "Yahoo Finance chart EOD",
-        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/NVDA?interval=1d&range=15d",
+        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/BBAI?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-10-27T17:58:33.232669+00:00"
+        "checked_at": "2026-10-28T05:36:52.264594+00:00"
       },
       "valuation": {
         "status": "partial",
         "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 5255125500000,
-        "ps": null,
-        "pe": 43.77,
-        "fcf_yield_pct": null,
-        "share_date": "2026-08-21",
+        "market_cap_usd": 1126812059,
+        "ps": 8.83,
+        "pe": null,
+        "fcf_yield_pct": -3.77,
+        "share_date": "2026-06-30",
+        "price_date": "2026-10-27",
+        "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
+      }
+    },
+    {
+      "ticker": "INTC",
+      "name": "Intel",
+      "sector": "Semiconductors",
+      "mentions": 5,
+      "news": [
+        {
+          "title": "Best Artificial Intelligence Stocks To Consider - October 26th - MarketBeat",
+          "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQZXhGd194TE10YlNURjBJbGRWR1dZcHpqa0JDVTJaZVNjSFFTdWlIRXIyNXhuNS13MkdEZHVoQmpMTTc4cnpJbW96TENidmFQY0V6WUJhNkdCR011Um15cWF5d1BlNlJXU3NQVWNqeE90ZXhqOWE0OVhTczhLLTJGZi00REhuamx6UUVuY25SemJVSWNWSUdxaWx0c1d3aFVKTXBpY3BiQVlKRnlHRmd6MWpEaVhpRlI0YVM4?oc=5",
+          "date": "Mon, 26 Oct 2026 16:20:24 GMT"
+        },
+        {
+          "title": "AI Insider Intelligence Platform - AI Insider",
+          "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBMRnNpUjJtRk1pb3I4aEVHbXpGdkdCMzVGQ0tLRWhSRy1VVFU3aVMteS1jY3ExT1lPLUhlLWVIbm1yTGVadk9LSTBhOW1BdFVfZTFBVkxfdlVzUFQ4?oc=5",
+          "date": "Tue, 27 Oct 2026 12:02:40 GMT"
+        },
+        {
+          "title": "Can Higher Data Center Revenues Propel Intel's Q3 Earnings? - TradingView",
+          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQQURNNUYtWE4zX0VXbDhMcmhBZnNQcVNwQjJlNWJoRy11VjlEY3UwUTFEdlhFVXM4ZjNSS2xKZjNEQV8xSjRLQXFyVXNLRDhYNTMzTW5ENkNFVnJ5Q1NJMzJoNjUyQU1HSjVtT08zcERlOHBGUWs2cGphRG1yY3JSUVBZOUcxT2dGdTl2b2M3N1prM0NNcVhNN2tBZHU4bG9ZMjdwWWktQ05hREV4RlZuc0UwYlc?oc=5",
+          "date": "Tue, 27 Oct 2026 16:37:58 GMT"
+        },
+        {
+          "title": "Top 20 Robotics Companies Backed by Lei Jun: Key Investments in China’s Intelligent Automation Industry - 36Kr",
+          "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5aXzM5MEowSEpIOWJOckJBY2lNRXk1ZmU3bUxJMVNkQ3huc09sMmJQeXNmMUdIODJuRnE4d0otWDQxcUxCX0FTaVRDdUNlUV9MQ0xn?oc=5",
+          "date": "Wed, 28 Oct 2026 01:33:48 GMT"
+        },
+        {
+          "title": "Detailed Report on the Artificial Intelligence-Powered Robot Pick - The National Law Review",
+          "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQR3RIWnNqdEV2dzV5eTh2d3ptaC1GOWNtVWhUUnduU0g1NDBfbk13bFowWlE3NWV2cXFoYUdEM2prYXFZR1ZvRkktSEtHYnZDdmFYV3VoenRsVndBOG1OS090TmtCTlpyb2pLYnl0VDQyZ2Z3enh2cXduVHBtNmp0RmNzd2d3QTVZbUtkWVlZd3kzb2xIXzJZSDlmcmFaSVBIT002MldLenpLQWc?oc=5",
+          "date": "Mon, 26 Oct 2026 17:54:03 GMT"
+        }
+      ],
+      "status": "Do analizy",
+      "attention_score": 71,
+      "valuation_status": "Orientacyjna kapitalizacja i mnożniki roczne — nie ranking zakupu",
+      "investment_score": null,
+      "fundamentals": {
+        "source": "SEC EDGAR XBRL",
+        "fiscal_year": "2025",
+        "revenue_usd": 52853000000,
+        "net_income_usd": -267000000,
+        "revenue_growth_pct": -0.5,
+        "net_margin_pct": -0.5,
+        "operating_cash_flow_usd": 9697000000,
+        "free_cash_flow_usd": -4949000000,
+        "cash_usd": 14265000000,
+        "debt_usd": 46585000000,
+        "financial_health_score": 25,
+        "score_label": "Prosty filtr 4 warunków, nie rekomendacja",
+        "shares_outstanding": 5044000000,
+        "shares_as_of": "2026-07-17",
+        "revenue_period_end": "2025-12-27",
+        "net_income_period_end": "2025-12-27",
+        "cash_flow_period_end": "2025-12-27",
+        "capex_period_end": "2025-12-27",
+        "as_of": "2026-10-28T05:36:36.797512+00:00",
+        "source_url": "https://www.sec.gov/edgar/browse/?CIK=50863"
+      },
+      "price": {
+        "close_usd": 93.545,
+        "date": "2026-10-27",
+        "age_days": 0,
+        "source": "Yahoo Finance chart EOD",
+        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/INTC?interval=1d&range=15d",
+        "is_live": false,
+        "checked_at": "2026-10-27T17:58:23.848870+00:00"
+      },
+      "valuation": {
+        "status": "partial",
+        "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
+        "market_cap_usd": 471840980000,
+        "ps": 8.93,
+        "pe": null,
+        "fcf_yield_pct": -1.05,
+        "share_date": "2026-07-17",
         "price_date": "2026-10-27",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
       }
@@ -182,14 +261,14 @@
           "date": "Tue, 27 Oct 2026 12:50:00 GMT"
         },
         {
-          "title": "Vertiv Completes $1.45 Billion UtilityInnovation Group Acquisition to Expand AI Data Center Power Solutions - citybiz",
-          "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNbDlIa3hxaHotOTRuWGZkM2QzMmlJSjJFSjFPaGNWaktyb0tTdFd0SG1TMTFPSEpFd2l0RjMtWjl3bl9hSmdmRFhLU1pOX3VxWWRjdkRObFZ0WFFiLWJzM08yaU9FVlhfVVJqY3h5YXpxWTRUZ05ZcFBVSEdhUVM4am9SUWVETHB2dTZEbVlPVHZMSUtTejg0THM2SGQ2ODNwOEUwcjRXNlZSNUE2dHJGXzkwUU1RRFdYeG9OMUZkRmZJSHpQTmhHOUl4blhqV0VZUGMzOXZMdi1pNS1fRVE?oc=5",
-          "date": "Tue, 27 Oct 2026 12:43:21 GMT"
-        },
-        {
           "title": "Vertiv Holdings Co Stock (VRT) Moved Up by 5.18% on Oct 27: What Signal Does It Send? - TradingKey",
           "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPYTd5NFpIOTJZVWQ3X01KTkJTRWJHY2RJMjIwb1pZWjltZW1WZlRtNDAxRmxMYWNVaVFNQUV3WmVXbzFPUUZzMlljQlZHTkJCdWlwMWc0M3IxUnlIZVg3aEZHeW9vTHBtWnp2M3IxeGE1cDczd2M5NWhlZHNXZGtpdy1OYkM4RVA4dVE?oc=5",
           "date": "Tue, 27 Oct 2026 19:15:35 GMT"
+        },
+        {
+          "title": "Vertiv Completes $1.45 Billion UtilityInnovation Group Acquisition to Expand AI Data Center Power Solutions - citybiz",
+          "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNbDlIa3hxaHotOTRuWGZkM2QzMmlJSjJFSjFPaGNWaktyb0tTdFd0SG1TMTFPSEpFd2l0RjMtWjl3bl9hSmdmRFhLU1pOX3VxWWRjdkRObFZ0WFFiLWJzM08yaU9FVlhfVVJqY3h5YXpxWTRUZ05ZcFBVSEdhUVM4am9SUWVETHB2dTZEbVlPVHZMSUtTejg0THM2SGQ2ODNwOEUwcjRXNlZSNUE2dHJGXzkwUU1RRFdYeG9OMUZkRmZJSHpQTmhHOUl4blhqV0VZUGMzOXZMdi1pNS1fRVE?oc=5",
+          "date": "Tue, 27 Oct 2026 12:43:21 GMT"
         },
         {
           "title": "Vertiv Completes Acquisition of UtilityInnovation Group - PR Newswire",
@@ -197,9 +276,9 @@
           "date": "Tue, 27 Oct 2026 11:30:00 GMT"
         },
         {
-          "title": "Vertiv to Report Q3 Earnings: Should You Buy, Sell, or Hold the Stock? - TradingView",
-          "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQdHNGZ19aN1lwYkxCVE1SN2ZnbDVJYkw4QmFIM1JYd0VCdkVNN2d2LWdVNWlHWkVXMXpxYUFfdXhwTHNkNjRjb0pDd1ZBbUFTa2JMdVBFZFRmemxiWF9RRDV4LThGRFNIMmlUYkxLTkVNMkVMaUVseHBkaXd3ZmRWUndQcU10c2dXM1Y0WGxKV0RVY0NhOXdXTzZLX3JfcDljSk0wWnFmclphX3VaMjU2cnItTGIzWTBvZjlwQ01Jcw?oc=5",
-          "date": "Mon, 26 Oct 2026 17:11:00 GMT"
+          "title": "Vertiv Closes $1.45 Billion Purchase of UtilityInnovation Group - Securities.io",
+          "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOaHpsWkV3ekJ4elhXZGhWbnM1bHFGVDNNOExZOElOVkw3WDgzOWVPOGNmMjJjZjJoOXdLTGFrc2dRZ2FpZ24zaXRBb1Y2eXpLQTdfWTdPd1JKRWRiSE44LTRjWEVSYVAtOE9ZTkgwQV8wZGJhdDFwX1UwNzJ2X0NzZGFET2ZnMnhrTmYyOERGYzFNb1E?oc=5",
+          "date": "Tue, 27 Oct 2026 10:54:04 GMT"
         }
       ],
       "status": "Do analizy",
@@ -250,277 +329,65 @@
       }
     },
     {
-      "ticker": "INTC",
-      "name": "Intel",
-      "sector": "Semiconductors",
-      "mentions": 4,
-      "news": [
-        {
-          "title": "Best Artificial Intelligence Stocks To Consider - October 26th - MarketBeat",
-          "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQZXhGd194TE10YlNURjBJbGRWR1dZcHpqa0JDVTJaZVNjSFFTdWlIRXIyNXhuNS13MkdEZHVoQmpMTTc4cnpJbW96TENidmFQY0V6WUJhNkdCR011Um15cWF5d1BlNlJXU3NQVWNqeE90ZXhqOWE0OVhTczhLLTJGZi00REhuamx6UUVuY25SemJVSWNWSUdxaWx0c1d3aFVKTXBpY3BiQVlKRnlHRmd6MWpEaVhpRlI0YVM4?oc=5",
-          "date": "Mon, 26 Oct 2026 16:20:24 GMT"
-        },
-        {
-          "title": "AI Insider Intelligence Platform - AI Insider",
-          "url": "https://news.google.com/rss/articles/CBMiXEFVX3lxTFBMRnNpUjJtRk1pb3I4aEVHbXpGdkdCMzVGQ0tLRWhSRy1VVFU3aVMteS1jY3ExT1lPLUhlLWVIbm1yTGVadk9LSTBhOW1BdFVfZTFBVkxfdlVzUFQ4?oc=5",
-          "date": "Tue, 27 Oct 2026 12:02:40 GMT"
-        },
-        {
-          "title": "Can Higher Data Center Revenues Propel Intel's Q3 Earnings? - TradingView",
-          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQQURNNUYtWE4zX0VXbDhMcmhBZnNQcVNwQjJlNWJoRy11VjlEY3UwUTFEdlhFVXM4ZjNSS2xKZjNEQV8xSjRLQXFyVXNLRDhYNTMzTW5ENkNFVnJ5Q1NJMzJoNjUyQU1HSjVtT08zcERlOHBGUWs2cGphRG1yY3JSUVBZOUcxT2dGdTl2b2M3N1prM0NNcVhNN2tBZHU4bG9ZMjdwWWktQ05hREV4RlZuc0UwYlc?oc=5",
-          "date": "Tue, 27 Oct 2026 16:37:58 GMT"
-        },
-        {
-          "title": "Detailed Report on the Artificial Intelligence-Powered Robot Pick - The National Law Review",
-          "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQR3RIWnNqdEV2dzV5eTh2d3ptaC1GOWNtVWhUUnduU0g1NDBfbk13bFowWlE3NWV2cXFoYUdEM2prYXFZR1ZvRkktSEtHYnZDdmFYV3VoenRsVndBOG1OS090TmtCTlpyb2pLYnl0VDQyZ2Z3enh2cXduVHBtNmp0RmNzd2d3QTVZbUtkWVlZd3kzb2xIXzJZSDlmcmFaSVBIT002MldLenpLQWc?oc=5",
-          "date": "Mon, 26 Oct 2026 17:54:03 GMT"
-        }
-      ],
-      "status": "Do analizy",
-      "attention_score": 63,
-      "valuation_status": "Orientacyjna kapitalizacja i mnożniki roczne — nie ranking zakupu",
-      "investment_score": null,
-      "fundamentals": {
-        "source": "SEC EDGAR XBRL",
-        "fiscal_year": "2025",
-        "revenue_usd": 52853000000,
-        "net_income_usd": -267000000,
-        "revenue_growth_pct": -0.5,
-        "net_margin_pct": -0.5,
-        "operating_cash_flow_usd": 9697000000,
-        "free_cash_flow_usd": -4949000000,
-        "cash_usd": 14265000000,
-        "debt_usd": 46585000000,
-        "financial_health_score": 25,
-        "score_label": "Prosty filtr 4 warunków, nie rekomendacja",
-        "shares_outstanding": 5044000000,
-        "shares_as_of": "2026-07-17",
-        "revenue_period_end": "2025-12-27",
-        "net_income_period_end": "2025-12-27",
-        "cash_flow_period_end": "2025-12-27",
-        "capex_period_end": "2025-12-27",
-        "as_of": "2026-10-27T04:59:11.720039+00:00",
-        "source_url": "https://www.sec.gov/edgar/browse/?CIK=50863"
-      },
-      "price": {
-        "close_usd": 93.545,
-        "date": "2026-10-27",
-        "age_days": 0,
-        "source": "Yahoo Finance chart EOD",
-        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/INTC?interval=1d&range=15d",
-        "is_live": false,
-        "checked_at": "2026-10-27T17:58:23.848870+00:00"
-      },
-      "valuation": {
-        "status": "partial",
-        "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 471840980000,
-        "ps": 8.93,
-        "pe": null,
-        "fcf_yield_pct": -1.05,
-        "share_date": "2026-07-17",
-        "price_date": "2026-10-27",
-        "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
-      }
-    },
-    {
-      "ticker": "BBAI",
-      "name": "BigBear.ai",
-      "sector": "AI software",
-      "mentions": 3,
-      "news": [
-        {
-          "title": "BigBear.ai Q3 2026 Earnings Results and Report - MarketBeat",
-          "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNa01oWmpOTDdnWWtyM0RsZzNJSWJ0OVJmaHUxWVJ5Q3pHZVFKVDN5X1NfN0RablFvWjZabFFGbXllT3VnSHMtcnBkM2k4S3lCbklfaXhsckRvYTE5VnF2eTR3M29xTWRiaUNSQVBReTVoNmZnMmNONkxkc2pGQlJDZ1lYY3JYTEVDSENVag?oc=5",
-          "date": "Tue, 27 Oct 2026 20:36:07 GMT"
-        },
-        {
-          "title": "BBAI Stock Climbs As $225M Federal AI Contracts Fuel Momentum - Timothy Sykes",
-          "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBaOGoxNlhNckhXNEFPNm1qTG1EdFpfRGh0X09paGp5MDRfU1g5SG4wdGQ4djJ4VFRRc21yV09QdU1VZG94V0FabzdCYlJabk1EYlNtcUU5cmNqT25Vc3JTTmtwSmtaY3dNSnJWem9XRE9CTUc5WnRKUg?oc=5",
-          "date": "Tue, 27 Oct 2026 16:49:51 GMT"
-        },
-        {
-          "title": "BBAI Stock Ticks Higher As $225M Federal AI Contracts Roll In - StocksToTrade",
-          "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1MUF8wd1c1VlU0RllZeUV6OXVULTFjNnRuaS02cUJQb00xTDRoZTlHbFR4OFRUcEg0S09UdVFDc3RnMHpHQlloZnZvanYzVnA0VUtjSE1teEtGZDY1QUluem9IMV9rMWV5NVVoNUt3cHVjUzND?oc=5",
-          "date": "Tue, 27 Oct 2026 17:19:28 GMT"
-        }
-      ],
-      "status": "Do analizy",
-      "attention_score": 53,
-      "valuation_status": "Orientacyjna kapitalizacja i mnożniki roczne — nie ranking zakupu",
-      "investment_score": null,
-      "fundamentals": {
-        "source": "SEC EDGAR XBRL",
-        "fiscal_year": "2025",
-        "revenue_usd": 127672000,
-        "net_income_usd": -293914000,
-        "revenue_growth_pct": -19.3,
-        "net_margin_pct": -230.2,
-        "operating_cash_flow_usd": -41951000,
-        "free_cash_flow_usd": -42476000,
-        "cash_usd": 87126000,
-        "debt_usd": 107044000,
-        "financial_health_score": 0,
-        "score_label": "Prosty filtr 4 warunków, nie rekomendacja",
-        "shares_outstanding": 479494493,
-        "shares_as_of": "2026-06-30",
-        "revenue_period_end": "2025-12-31",
-        "net_income_period_end": "2025-12-31",
-        "cash_flow_period_end": "2025-12-31",
-        "capex_period_end": "2025-12-31",
-        "as_of": "2026-10-26T22:38:08.253092+00:00",
-        "source_url": "https://www.sec.gov/edgar/browse/?CIK=1836981"
-      },
-      "price": {
-        "close_usd": 2.12,
-        "date": "2026-10-26",
-        "age_days": 1,
-        "source": "Yahoo Finance chart EOD",
-        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/BBAI?interval=1d&range=15d",
-        "is_live": false,
-        "checked_at": "2026-10-27T12:06:25.047541+00:00"
-      },
-      "valuation": {
-        "status": "partial",
-        "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 1016528325,
-        "ps": 7.96,
-        "pe": null,
-        "fcf_yield_pct": -4.18,
-        "share_date": "2026-06-30",
-        "price_date": "2026-10-26",
-        "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
-      }
-    },
-    {
-      "ticker": "GOOGL",
-      "name": "Alphabet",
-      "sector": "AI platforms",
-      "mentions": 3,
-      "news": [
-        {
-          "title": "Ahead of Alphabet Earnings, Here's What Barchart Data Says Comes Next for GOOGL Stock - Barchart.com",
-          "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQNXF1eEhoNm5TY3AxeG1fVFJ5VWJpUEN0OEVJNFpCOWFxaG12Zi1Xa2xvZHlWMVBHMWJiOGhOME9zQjZFcXo0WVdLSVczeG9TMXhDLUpUcEVUZFBxZE54V3QzcEtjXzRSTjFYWjNza0hremdWUmFfckpTQWtFV3NkRFMyLWx0VmZFc3d0OGRSbTNrVlJWekNRYVMxcnVUQXhISXVfRllURHFQV01Qd3VYbE5OVF9FSzVPLXo3VVVKbmotUkM1dURV?oc=5",
-          "date": "Tue, 27 Oct 2026 16:10:51 GMT"
-        },
-        {
-          "title": "Alphabet Has $514 Billion in Cloud Orders. Here’s What Matters More Than That Number on Oct. 28. - The Motley Fool",
-          "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQcG9hUmJNWUdOdDBveTMxcHFzcGEtUmhTdnVyTG9vNXhxUjlkRTVJSTFoX1NNMk1qcWl6ZUEteXdWMzcxdDlqLVUwcDZ6TWJTWk82NjZ0TjVKcXVvbV9HY1FUOEwyVURaR1YyczZVd2tJTTB3UWd3TzZkS1QyU1VDMXBjN3AxMUtuZHZ2cXdFNFB2cWF1LXdfcllWdzhXc3l1ZGRieFRPaGRiYXdVTFdJVUlsTjdfcld2cGtYOFBRd190TjlkMTFyYV91Uk55YUpkREJ5OQ?oc=5",
-          "date": "Mon, 26 Oct 2026 10:10:00 GMT"
-        },
-        {
-          "title": "GOOGL Stock: 3 Things to Watch in Alphabet’s Q3 Earnings Tomorrow - TipRanks",
-          "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQOXJuUTdKai1uYVdVS3JpZC1vWVFrTjEtakNmUGVoVGlpbEU3ejMxX0VtZkhMelNWQVVOZE95Z2hlLThHT0VpTDBicEdzR3BHMFBHb1c4dG9oMFJVSExCS0lRNXhVM25wQm1oemZYTTZpdXladUVQM0NrUEt6SGVJQ25ZNFJjY2NDMm8wR3JfMjJzQlh3SzlpcQ?oc=5",
-          "date": "Tue, 27 Oct 2026 19:53:13 GMT"
-        }
-      ],
-      "status": "Do analizy",
-      "attention_score": 53,
-      "valuation_status": "Orientacyjna kapitalizacja i mnożniki roczne — nie ranking zakupu",
-      "investment_score": null,
-      "fundamentals": {
-        "source": "SEC EDGAR XBRL",
-        "fiscal_year": "2024",
-        "revenue_usd": 350018000000,
-        "net_income_usd": 132170000000,
-        "revenue_growth_pct": 13.9,
-        "net_margin_pct": 37.8,
-        "operating_cash_flow_usd": 164713000000,
-        "free_cash_flow_usd": 73266000000,
-        "cash_usd": 30708000000,
-        "debt_usd": 48543000000,
-        "financial_health_score": 75,
-        "score_label": "Prosty filtr 4 warunków, nie rekomendacja",
-        "shares_outstanding": 12088000000,
-        "shares_as_of": "2025-12-31",
-        "revenue_period_end": "2024-12-31",
-        "net_income_period_end": "2025-12-31",
-        "cash_flow_period_end": "2025-12-31",
-        "capex_period_end": "2025-12-31",
-        "as_of": "2026-10-27T04:59:11.109448+00:00",
-        "source_url": "https://www.sec.gov/edgar/browse/?CIK=1652044"
-      },
-      "price": {
-        "close_usd": 316.8,
-        "date": "2026-10-26",
-        "age_days": 1,
-        "source": "Yahoo Finance chart EOD",
-        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/GOOGL?interval=1d&range=15d",
-        "is_live": false,
-        "checked_at": "2026-10-27T12:06:31.290833+00:00"
-      },
-      "valuation": {
-        "status": "partial",
-        "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 3829478400000,
-        "ps": null,
-        "pe": 28.97,
-        "fcf_yield_pct": 1.91,
-        "share_date": "2025-12-31",
-        "price_date": "2026-10-26",
-        "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
-      }
-    },
-    {
-      "ticker": "META",
-      "name": "Meta Platforms",
-      "sector": "AI platforms",
+      "ticker": "NVDA",
+      "name": "NVIDIA",
+      "sector": "AI chips",
       "mentions": 2,
       "news": [
         {
-          "title": "Meta Sells Stock, SpaceX Takes On Financing: Who Runs Out of Cash First in the AI Race? - SoSoValue",
-          "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1iUFVTSHQ4NUFhdXBzaENSVGpYcGdadkpsaE9MbUt5MHVpQ3hZV2hNMDduQ1dXR2xrbG01bUpTY3pteXE3WVl2TkxmZms4YndkM0l4U0cxY3kxekhyb1ItMzhXY2xLVXdI?oc=5",
-          "date": "Tue, 27 Oct 2026 11:15:03 GMT"
+          "title": "The Ethernet Tollbooth: Arista Rides Broadcom Silicon to Break Nvidia’s InfiniBand Monopoly - 24/7 Wall St.",
+          "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQRWpNLVVJdlR4bzhpUnFnT3l2NjVxM2dPd2ZQN09odTlKeV81eG1MT3pCU3p1WGpTSFQ0R0lXQnlVWTctOTBZb0lMbUU2d2dRVTFCTk03YlBDajZzTWhESnBMVnR4V3plaS1HZTR0U0xlMTJQNGxwWGxPUGFZVW9TZmJOWjFjRk1UVGNHVFBIUW1BMHNtdmRtMFJVa3VSNEFWMWx6Z2toTGFabjBZLTdDQ3JtN0x1RkZ6aV9ndmhObTZxbDN1anltbmlmMXZwQQ?oc=5",
+          "date": "Mon, 26 Oct 2026 12:15:00 GMT"
         },
         {
-          "title": "Nvidia, AMD and Broadcom weigh $5 billion investment in Meta - jawlah.co",
-          "url": "https://news.google.com/rss/articles/CBMiP0FVX3lxTFBCdWNHSGpOeDNQcnZqaEpnSVR6NlVTRU1ZRkxLZl9yeTJyeW9KYlp3NEJKb3NUNGJodC1tdDdZNA?oc=5",
-          "date": "Mon, 26 Oct 2026 17:29:53 GMT"
+          "title": "Agile Robots Launches Agile ONE SN Humanoid at NVIDIA GTC Berlin and Pilots Humanoids with Audi - Yahoo Finance",
+          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQeVEyVGNjTHp3SEdrY0ZoMWR5NHBfbFl4MDdIZjFPaVhYeHJHLVlObDZqeEx1X0lXamsyc2xwZncxNVZJdzVmaGRYRHRLR1pxdUlwMEJ6VFdkaFN1Y0xXTnJDQjFLUXN5MTd0VUxKTVlIVDVFOFpPanVsRzRyV3BjLXAtSHhhcF9UbW4xN29kSmltMERlMzNlQWFfTQ?oc=5",
+          "date": "Tue, 27 Oct 2026 06:22:00 GMT"
         }
       ],
       "status": "Do analizy",
       "attention_score": 39,
-      "valuation_status": "Brak wystarczających danych do wyceny",
+      "valuation_status": "Orientacyjna kapitalizacja i mnożniki roczne — nie ranking zakupu",
       "investment_score": null,
       "fundamentals": {
         "source": "SEC EDGAR XBRL",
-        "fiscal_year": "2025",
-        "revenue_usd": 200966000000,
-        "net_income_usd": 60458000000,
-        "revenue_growth_pct": 22.2,
-        "net_margin_pct": 30.1,
-        "operating_cash_flow_usd": 115800000000,
-        "free_cash_flow_usd": 46109000000,
-        "cash_usd": 35873000000,
-        "debt_usd": 58744000000,
+        "fiscal_year": "2022",
+        "revenue_usd": 26914000000,
+        "net_income_usd": 120067000000,
+        "revenue_growth_pct": 61.4,
+        "net_margin_pct": 446.1,
+        "operating_cash_flow_usd": 102718000000,
+        "free_cash_flow_usd": 102579265000,
+        "cash_usd": 10605000000,
+        "debt_usd": 8468000000,
         "financial_health_score": 100,
         "score_label": "Prosty filtr 4 warunków, nie rekomendacja",
-        "shares_outstanding": null,
-        "shares_as_of": null,
-        "revenue_period_end": "2025-12-31",
-        "net_income_period_end": "2025-12-31",
-        "cash_flow_period_end": "2025-12-31",
-        "capex_period_end": "2025-12-31",
-        "as_of": "2026-10-27T22:10:28.357327+00:00",
-        "source_url": "https://www.sec.gov/edgar/browse/?CIK=1326801"
+        "shares_outstanding": 24100000000,
+        "shares_as_of": "2026-08-21",
+        "revenue_period_end": "2022-01-30",
+        "net_income_period_end": "2026-01-25",
+        "cash_flow_period_end": "2026-01-25",
+        "capex_period_end": "2012-01-29",
+        "as_of": "2026-10-28T05:36:39.258887+00:00",
+        "source_url": "https://www.sec.gov/edgar/browse/?CIK=1045810"
       },
       "price": {
-        "close_usd": 622.815,
+        "close_usd": 218.055,
         "date": "2026-10-27",
         "age_days": 0,
         "source": "Yahoo Finance chart EOD",
-        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/META?interval=1d&range=15d",
+        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/NVDA?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-10-27T17:58:29.991181+00:00"
+        "checked_at": "2026-10-27T17:58:33.232669+00:00"
       },
       "valuation": {
-        "status": "unavailable",
-        "reason": "float() argument must be a string or a real number, not 'NoneType'",
-        "market_cap_usd": null,
+        "status": "partial",
+        "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
+        "market_cap_usd": 5255125500000,
         "ps": null,
-        "pe": null,
+        "pe": 43.77,
         "fcf_yield_pct": null,
-        "share_date": null,
+        "share_date": "2026-08-21",
         "price_date": "2026-10-27",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
       }
@@ -590,65 +457,6 @@
       }
     },
     {
-      "ticker": "ALAB",
-      "name": "Astera Labs",
-      "sector": "AI connectivity",
-      "mentions": 1,
-      "news": [
-        {
-          "title": "Astera Labs (Nasdaq:ALAB) - Stock Analysis - Simply Wall Street",
-          "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTFBJTTJxLUZXZ2lMdUVwelRRelY5YUhHTkN4OWhoN2lDVHdoc2U4YklJSXBVZ0tqWUstV2VsM2pxOHpycEJHZEJDdEZrZnRteS1Pemk5QW9ibVNfdWY1MmJZTGJLb05lTG12eWVDME5XdEk4a3dnMzlZbk9n?oc=5",
-          "date": "Sun, 25 Oct 2026 07:00:00 GMT"
-        }
-      ],
-      "status": "Do analizy",
-      "attention_score": 22,
-      "valuation_status": "Orientacyjna kapitalizacja i mnożniki roczne — nie ranking zakupu",
-      "investment_score": null,
-      "fundamentals": {
-        "source": "SEC EDGAR XBRL",
-        "fiscal_year": "2025",
-        "revenue_usd": 852525000,
-        "net_income_usd": 219134000,
-        "revenue_growth_pct": 115.1,
-        "net_margin_pct": 25.7,
-        "operating_cash_flow_usd": 319306000,
-        "free_cash_flow_usd": 281762000,
-        "cash_usd": 167611000,
-        "debt_usd": null,
-        "financial_health_score": 100,
-        "score_label": "Prosty filtr 4 warunków, nie rekomendacja",
-        "shares_outstanding": 173485104,
-        "shares_as_of": "2026-07-31",
-        "revenue_period_end": "2025-12-31",
-        "net_income_period_end": "2025-12-31",
-        "cash_flow_period_end": "2025-12-31",
-        "capex_period_end": "2025-12-31",
-        "as_of": "2026-10-27T22:10:36.729128+00:00",
-        "source_url": "https://www.sec.gov/edgar/browse/?CIK=1736297"
-      },
-      "price": {
-        "close_usd": 259.51,
-        "date": "2026-10-26",
-        "age_days": 1,
-        "source": "Yahoo Finance chart EOD",
-        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/ALAB?interval=1d&range=15d",
-        "is_live": false,
-        "checked_at": "2026-10-27T04:59:34.625815+00:00"
-      },
-      "valuation": {
-        "status": "partial",
-        "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 45021119339,
-        "ps": 52.81,
-        "pe": 205.45,
-        "fcf_yield_pct": 0.63,
-        "share_date": "2026-07-31",
-        "price_date": "2026-10-26",
-        "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
-      }
-    },
-    {
       "ticker": "AMZN",
       "name": "Amazon",
       "sector": "AI cloud",
@@ -683,27 +491,86 @@
         "net_income_period_end": "2025-12-31",
         "cash_flow_period_end": "2025-12-31",
         "capex_period_end": "2016-12-31",
-        "as_of": "2026-10-26T22:38:05.775241+00:00",
+        "as_of": "2026-10-28T05:36:32.928405+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1018724"
       },
       "price": {
-        "close_usd": 249.09,
-        "date": "2026-10-26",
+        "close_usd": 253.1,
+        "date": "2026-10-27",
         "age_days": 1,
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/AMZN?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-10-27T12:06:21.669475+00:00"
+        "checked_at": "2026-10-28T05:36:47.707153+00:00"
       },
       "valuation": {
         "status": "partial",
         "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 2686762847649,
-        "ps": 3.75,
-        "pe": 34.59,
+        "market_cap_usd": 2730015965073,
+        "ps": 3.81,
+        "pe": 35.15,
         "fcf_yield_pct": null,
         "share_date": "2026-07-22",
-        "price_date": "2026-10-26",
+        "price_date": "2026-10-27",
+        "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
+      }
+    },
+    {
+      "ticker": "ANET",
+      "name": "Arista Networks",
+      "sector": "AI networking",
+      "mentions": 1,
+      "news": [
+        {
+          "title": "Arista Networks (ANET) Raises 2026 Outlook Following Record Revenue, But Is It Fully Valued? - Simply Wall Street",
+          "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPbktEaG8xbjgtN3JNUEZ1NEZDcjhTeVB3cmNyM2ZGaG9raVVNRUwzSHJVemlmUHk5LVIxQm1sdkVVaEdRN3BXWGxVSmVFN09XM3ZpcFUya0w5d2ZRbmg1eE5PNmlJV193anAxaFlKaEI5QjJLd0s3TzhkMkNiYy1fbUZaeFJVU1d3azRzcjc1Rng2ZU5UM2lYeXo1WlVpaUVPU2hyV3J3OUxxWE9jZTB5MFdNQ3RaeUlRMjJjMVBLUE5acDlsT1FB0gHMAUFVX3lxTFBTRk5RdmlJc21qT3JoVlp6TS1Id1lnSHBnNTliWkd6RVQwazB5eFlCQWtxc1VFcjM0TDZkR3pCdDhxbTVadzZ1aEtrUlJmNUtHaXZWallNcHJGRHA4SUVXVWVvbXdwdk05VzFIakgtQzhhNWg5MjFZbERsdmo2VFdmVWl2eTNHUGZ3WnVyeC1sSFRwSmdqblM1WC1FNGt2M1dPaHliZTlCWW5HNWNxN0IydG5Nam9oVklHVjVTdnR0by1yaGd6SHhfZHpndQ?oc=5",
+          "date": "Wed, 28 Oct 2026 05:07:32 GMT"
+        }
+      ],
+      "status": "Do analizy",
+      "attention_score": 22,
+      "valuation_status": "Orientacyjna kapitalizacja i mnożniki roczne — nie ranking zakupu",
+      "investment_score": null,
+      "fundamentals": {
+        "source": "SEC EDGAR XBRL",
+        "fiscal_year": "2025",
+        "revenue_usd": 9005700000,
+        "net_income_usd": 3511400000,
+        "revenue_growth_pct": 28.6,
+        "net_margin_pct": 39.0,
+        "operating_cash_flow_usd": 4371900000,
+        "free_cash_flow_usd": 4356149000,
+        "cash_usd": 1963900000,
+        "debt_usd": 98793000,
+        "financial_health_score": 100,
+        "score_label": "Prosty filtr 4 warunków, nie rekomendacja",
+        "shares_outstanding": 1261224648,
+        "shares_as_of": "2026-07-30",
+        "revenue_period_end": "2025-12-31",
+        "net_income_period_end": "2025-12-31",
+        "cash_flow_period_end": "2025-12-31",
+        "capex_period_end": "2019-12-31",
+        "as_of": "2026-10-28T05:36:33.544283+00:00",
+        "source_url": "https://www.sec.gov/edgar/browse/?CIK=1596532"
+      },
+      "price": {
+        "close_usd": 187.0,
+        "date": "2026-10-27",
+        "age_days": 1,
+        "source": "Yahoo Finance chart EOD",
+        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/ANET?interval=1d&range=15d",
+        "is_live": false,
+        "checked_at": "2026-10-28T05:36:48.556278+00:00"
+      },
+      "valuation": {
+        "status": "partial",
+        "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
+        "market_cap_usd": 235849009176,
+        "ps": 26.19,
+        "pe": 67.17,
+        "fcf_yield_pct": null,
+        "share_date": "2026-07-30",
+        "price_date": "2026-10-27",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
       }
     },
@@ -746,13 +613,13 @@
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1973239"
       },
       "price": {
-        "close_usd": 223.35,
-        "date": "2026-10-26",
+        "close_usd": 226.6,
+        "date": "2026-10-27",
         "age_days": 1,
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/ARM?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-10-27T12:06:23.423515+00:00"
+        "checked_at": "2026-10-28T05:36:49.992330+00:00"
       },
       "valuation": {
         "status": "unavailable",
@@ -762,7 +629,7 @@
         "pe": null,
         "fcf_yield_pct": null,
         "share_date": "2026-03-31",
-        "price_date": "2026-10-26",
+        "price_date": "2026-10-27",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
       }
     },
@@ -805,22 +672,81 @@
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=820318"
       },
       "price": {
-        "close_usd": 221.5,
-        "date": "2026-10-26",
+        "close_usd": 235.79,
+        "date": "2026-10-27",
         "age_days": 1,
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/COHR?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-10-27T12:06:26.627817+00:00"
+        "checked_at": "2026-10-28T05:36:54.427628+00:00"
       },
       "valuation": {
         "status": "partial",
         "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 43376842489,
-        "ps": 6.09,
-        "pe": 53.88,
-        "fcf_yield_pct": -2.36,
+        "market_cap_usd": 46175285284,
+        "ps": 6.49,
+        "pe": 57.36,
+        "fcf_yield_pct": -2.22,
         "share_date": "2026-08-10",
+        "price_date": "2026-10-27",
+        "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
+      }
+    },
+    {
+      "ticker": "GOOGL",
+      "name": "Alphabet",
+      "sector": "AI platforms",
+      "mentions": 1,
+      "news": [
+        {
+          "title": "Alphabet Has $514 Billion in Cloud Orders. Here’s What Matters More Than That Number on Oct. 28. - The Motley Fool",
+          "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQcG9hUmJNWUdOdDBveTMxcHFzcGEtUmhTdnVyTG9vNXhxUjlkRTVJSTFoX1NNMk1qcWl6ZUEteXdWMzcxdDlqLVUwcDZ6TWJTWk82NjZ0TjVKcXVvbV9HY1FUOEwyVURaR1YyczZVd2tJTTB3UWd3TzZkS1QyU1VDMXBjN3AxMUtuZHZ2cXdFNFB2cWF1LXdfcllWdzhXc3l1ZGRieFRPaGRiYXdVTFdJVUlsTjdfcld2cGtYOFBRd190TjlkMTFyYV91Uk55YUpkREJ5OQ?oc=5",
+          "date": "Mon, 26 Oct 2026 10:10:00 GMT"
+        }
+      ],
+      "status": "Do analizy",
+      "attention_score": 22,
+      "valuation_status": "Orientacyjna kapitalizacja i mnożniki roczne — nie ranking zakupu",
+      "investment_score": null,
+      "fundamentals": {
+        "source": "SEC EDGAR XBRL",
+        "fiscal_year": "2024",
+        "revenue_usd": 350018000000,
+        "net_income_usd": 132170000000,
+        "revenue_growth_pct": 13.9,
+        "net_margin_pct": 37.8,
+        "operating_cash_flow_usd": 164713000000,
+        "free_cash_flow_usd": 73266000000,
+        "cash_usd": 30708000000,
+        "debt_usd": 48543000000,
+        "financial_health_score": 75,
+        "score_label": "Prosty filtr 4 warunków, nie rekomendacja",
+        "shares_outstanding": 12088000000,
+        "shares_as_of": "2025-12-31",
+        "revenue_period_end": "2024-12-31",
+        "net_income_period_end": "2025-12-31",
+        "cash_flow_period_end": "2025-12-31",
+        "capex_period_end": "2025-12-31",
+        "as_of": "2026-10-28T05:36:36.155680+00:00",
+        "source_url": "https://www.sec.gov/edgar/browse/?CIK=1652044"
+      },
+      "price": {
+        "close_usd": 316.8,
+        "date": "2026-10-26",
+        "age_days": 1,
+        "source": "Yahoo Finance chart EOD",
+        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/GOOGL?interval=1d&range=15d",
+        "is_live": false,
+        "checked_at": "2026-10-27T12:06:31.290833+00:00"
+      },
+      "valuation": {
+        "status": "partial",
+        "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
+        "market_cap_usd": 3829478400000,
+        "ps": null,
+        "pe": 28.97,
+        "fcf_yield_pct": 1.91,
+        "share_date": "2025-12-31",
         "price_date": "2026-10-26",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
       }
@@ -880,6 +806,124 @@
         "pe": null,
         "fcf_yield_pct": 0.39,
         "share_date": "2026-08-14",
+        "price_date": "2026-10-27",
+        "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
+      }
+    },
+    {
+      "ticker": "META",
+      "name": "Meta Platforms",
+      "sector": "AI platforms",
+      "mentions": 1,
+      "news": [
+        {
+          "title": "Meta Sells Stock, SpaceX Takes On Financing: Who Runs Out of Cash First in the AI Race? - SoSoValue",
+          "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1iUFVTSHQ4NUFhdXBzaENSVGpYcGdadkpsaE9MbUt5MHVpQ3hZV2hNMDduQ1dXR2xrbG01bUpTY3pteXE3WVl2TkxmZms4YndkM0l4U0cxY3kxekhyb1ItMzhXY2xLVXdI?oc=5",
+          "date": "Tue, 27 Oct 2026 11:15:03 GMT"
+        }
+      ],
+      "status": "Do analizy",
+      "attention_score": 22,
+      "valuation_status": "Brak wystarczających danych do wyceny",
+      "investment_score": null,
+      "fundamentals": {
+        "source": "SEC EDGAR XBRL",
+        "fiscal_year": "2025",
+        "revenue_usd": 200966000000,
+        "net_income_usd": 60458000000,
+        "revenue_growth_pct": 22.2,
+        "net_margin_pct": 30.1,
+        "operating_cash_flow_usd": 115800000000,
+        "free_cash_flow_usd": 46109000000,
+        "cash_usd": 35873000000,
+        "debt_usd": 58744000000,
+        "financial_health_score": 100,
+        "score_label": "Prosty filtr 4 warunków, nie rekomendacja",
+        "shares_outstanding": null,
+        "shares_as_of": null,
+        "revenue_period_end": "2025-12-31",
+        "net_income_period_end": "2025-12-31",
+        "cash_flow_period_end": "2025-12-31",
+        "capex_period_end": "2025-12-31",
+        "as_of": "2026-10-28T05:36:29.244852+00:00",
+        "source_url": "https://www.sec.gov/edgar/browse/?CIK=1326801"
+      },
+      "price": {
+        "close_usd": 622.815,
+        "date": "2026-10-27",
+        "age_days": 0,
+        "source": "Yahoo Finance chart EOD",
+        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/META?interval=1d&range=15d",
+        "is_live": false,
+        "checked_at": "2026-10-27T17:58:29.991181+00:00"
+      },
+      "valuation": {
+        "status": "unavailable",
+        "reason": "float() argument must be a string or a real number, not 'NoneType'",
+        "market_cap_usd": null,
+        "ps": null,
+        "pe": null,
+        "fcf_yield_pct": null,
+        "share_date": null,
+        "price_date": "2026-10-27",
+        "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
+      }
+    },
+    {
+      "ticker": "MRVL",
+      "name": "Marvell Technology",
+      "sector": "AI networking",
+      "mentions": 1,
+      "news": [
+        {
+          "title": "Marvell Technology Inc Stock (MRVL) Moved Up by 3.26% on Oct 27: Key Drivers Unveiled - TradingKey",
+          "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOU01IRUM1WTd4Zi1KeGFFZTJEdFN5WWpYZUdVaWw1MTFUSlZSUUpzN2x1SDNOMkZpTkNGbGZ1WXE0QWRwU2Z3enVnU3BpeHlMdGdDZ004NEVlM1JLb1ZLUGk0Yno4YU1JRGg2WVNhTUQxdUpNQ09rYWdmWWlSWExWWl9VWHA1c3NtZVBF?oc=5",
+          "date": "Tue, 27 Oct 2026 15:15:25 GMT"
+        }
+      ],
+      "status": "Do analizy",
+      "attention_score": 22,
+      "valuation_status": "Orientacyjna kapitalizacja i mnożniki roczne — nie ranking zakupu",
+      "investment_score": null,
+      "fundamentals": {
+        "source": "SEC EDGAR XBRL",
+        "fiscal_year": "2026",
+        "revenue_usd": 8194600000,
+        "net_income_usd": 2670100000,
+        "revenue_growth_pct": 42.1,
+        "net_margin_pct": 32.6,
+        "operating_cash_flow_usd": 1750500000,
+        "free_cash_flow_usd": 1396400000,
+        "cash_usd": 2638800000,
+        "debt_usd": 4555200000,
+        "financial_health_score": 100,
+        "score_label": "Prosty filtr 4 warunków, nie rekomendacja",
+        "shares_outstanding": 876900000,
+        "shares_as_of": "2026-08-21",
+        "revenue_period_end": "2026-01-31",
+        "net_income_period_end": "2026-01-31",
+        "cash_flow_period_end": "2026-01-31",
+        "capex_period_end": "2026-01-31",
+        "as_of": "2026-10-28T05:36:37.315098+00:00",
+        "source_url": "https://www.sec.gov/edgar/browse/?CIK=1835632"
+      },
+      "price": {
+        "close_usd": 242.49,
+        "date": "2026-10-27",
+        "age_days": 0,
+        "source": "Yahoo Finance chart EOD",
+        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/MRVL?interval=1d&range=15d",
+        "is_live": false,
+        "checked_at": "2026-10-27T17:58:31.001158+00:00"
+      },
+      "valuation": {
+        "status": "partial",
+        "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
+        "market_cap_usd": 212639481000,
+        "ps": 25.95,
+        "pe": 79.64,
+        "fcf_yield_pct": 0.66,
+        "share_date": "2026-08-21",
         "price_date": "2026-10-27",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
       }
@@ -1118,23 +1162,23 @@
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1824502"
       },
       "price": {
-        "close_usd": 3.94,
-        "date": "2026-10-26",
+        "close_usd": 4.23,
+        "date": "2026-10-27",
         "age_days": 1,
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/ACHR?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-10-27T04:59:33.339349+00:00"
+        "checked_at": "2026-10-28T05:36:43.668589+00:00"
       },
       "valuation": {
         "status": "partial",
         "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 3033893772,
-        "ps": 10112.98,
+        "market_cap_usd": 3257200674,
+        "ps": 10857.34,
         "pe": null,
-        "fcf_yield_pct": -16.87,
+        "fcf_yield_pct": -15.71,
         "share_date": "2026-08-05",
-        "price_date": "2026-10-26",
+        "price_date": "2026-10-27",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
       }
     },
@@ -1171,13 +1215,13 @@
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1577526"
       },
       "price": {
-        "close_usd": 12.79,
-        "date": "2026-10-26",
+        "close_usd": 12.29,
+        "date": "2026-10-27",
         "age_days": 1,
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/AI?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-10-27T04:59:33.977961+00:00"
+        "checked_at": "2026-10-28T05:36:44.439522+00:00"
       },
       "valuation": {
         "status": "unavailable",
@@ -1187,7 +1231,60 @@
         "pe": null,
         "fcf_yield_pct": null,
         "share_date": "2021-04-30",
-        "price_date": "2026-10-26",
+        "price_date": "2026-10-27",
+        "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
+      }
+    },
+    {
+      "ticker": "ALAB",
+      "name": "Astera Labs",
+      "sector": "AI connectivity",
+      "mentions": 0,
+      "news": [],
+      "status": "Obserwacja",
+      "attention_score": 0,
+      "valuation_status": "Orientacyjna kapitalizacja i mnożniki roczne — nie ranking zakupu",
+      "investment_score": null,
+      "fundamentals": {
+        "source": "SEC EDGAR XBRL",
+        "fiscal_year": "2025",
+        "revenue_usd": 852525000,
+        "net_income_usd": 219134000,
+        "revenue_growth_pct": 115.1,
+        "net_margin_pct": 25.7,
+        "operating_cash_flow_usd": 319306000,
+        "free_cash_flow_usd": 281762000,
+        "cash_usd": 167611000,
+        "debt_usd": null,
+        "financial_health_score": 100,
+        "score_label": "Prosty filtr 4 warunków, nie rekomendacja",
+        "shares_outstanding": 173485104,
+        "shares_as_of": "2026-07-31",
+        "revenue_period_end": "2025-12-31",
+        "net_income_period_end": "2025-12-31",
+        "cash_flow_period_end": "2025-12-31",
+        "capex_period_end": "2025-12-31",
+        "as_of": "2026-10-27T22:10:36.729128+00:00",
+        "source_url": "https://www.sec.gov/edgar/browse/?CIK=1736297"
+      },
+      "price": {
+        "close_usd": 286.69,
+        "date": "2026-10-27",
+        "age_days": 1,
+        "source": "Yahoo Finance chart EOD",
+        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/ALAB?interval=1d&range=15d",
+        "is_live": false,
+        "checked_at": "2026-10-28T05:36:45.228023+00:00"
+      },
+      "valuation": {
+        "status": "partial",
+        "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
+        "market_cap_usd": 49736444466,
+        "ps": 58.34,
+        "pe": 226.97,
+        "fcf_yield_pct": 0.57,
+        "share_date": "2026-07-31",
+        "price_date": "2026-10-27",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
       }
     },
@@ -1220,27 +1317,27 @@
         "net_income_period_end": "2025-10-26",
         "cash_flow_period_end": "2025-10-26",
         "capex_period_end": "2025-10-26",
-        "as_of": "2026-10-26T22:38:04.795528+00:00",
+        "as_of": "2026-10-28T05:36:31.694036+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=6951"
       },
       "price": {
-        "close_usd": 387.59,
-        "date": "2026-10-26",
+        "close_usd": 395.93,
+        "date": "2026-10-27",
         "age_days": 1,
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/AMAT?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-10-27T04:59:35.383467+00:00"
+        "checked_at": "2026-10-28T05:36:46.008602+00:00"
       },
       "valuation": {
         "status": "partial",
         "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 307590432932,
-        "ps": 10.84,
-        "pe": 43.95,
-        "fcf_yield_pct": 1.85,
+        "market_cap_usd": 314209035607,
+        "ps": 11.08,
+        "pe": 44.9,
+        "fcf_yield_pct": 1.81,
         "share_date": "2026-07-26",
-        "price_date": "2026-10-26",
+        "price_date": "2026-10-27",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
       }
     },
@@ -1273,80 +1370,27 @@
         "net_income_period_end": "2025-12-27",
         "cash_flow_period_end": "2025-12-27",
         "capex_period_end": "2025-12-27",
-        "as_of": "2026-10-26T22:38:05.278206+00:00",
+        "as_of": "2026-10-28T05:36:32.284404+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=2488"
       },
       "price": {
-        "close_usd": 531.28,
-        "date": "2026-10-26",
+        "close_usd": 560.26,
+        "date": "2026-10-27",
         "age_days": 1,
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/AMD?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-10-27T12:06:21.227976+00:00"
+        "checked_at": "2026-10-28T05:36:46.848317+00:00"
       },
       "valuation": {
         "status": "partial",
         "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 867301340314,
-        "ps": 25.04,
-        "pe": 200.07,
-        "fcf_yield_pct": 0.78,
+        "market_cap_usd": 914610467031,
+        "ps": 26.4,
+        "pe": 210.98,
+        "fcf_yield_pct": 0.74,
         "share_date": "2026-07-29",
-        "price_date": "2026-10-26",
-        "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
-      }
-    },
-    {
-      "ticker": "ANET",
-      "name": "Arista Networks",
-      "sector": "AI networking",
-      "mentions": 0,
-      "news": [],
-      "status": "Obserwacja",
-      "attention_score": 0,
-      "valuation_status": "Orientacyjna kapitalizacja i mnożniki roczne — nie ranking zakupu",
-      "investment_score": null,
-      "fundamentals": {
-        "source": "SEC EDGAR XBRL",
-        "fiscal_year": "2025",
-        "revenue_usd": 9005700000,
-        "net_income_usd": 3511400000,
-        "revenue_growth_pct": 28.6,
-        "net_margin_pct": 39.0,
-        "operating_cash_flow_usd": 4371900000,
-        "free_cash_flow_usd": 4356149000,
-        "cash_usd": 1963900000,
-        "debt_usd": 98793000,
-        "financial_health_score": 100,
-        "score_label": "Prosty filtr 4 warunków, nie rekomendacja",
-        "shares_outstanding": 1261224648,
-        "shares_as_of": "2026-07-30",
-        "revenue_period_end": "2025-12-31",
-        "net_income_period_end": "2025-12-31",
-        "cash_flow_period_end": "2025-12-31",
-        "capex_period_end": "2019-12-31",
-        "as_of": "2026-10-26T22:38:07.655632+00:00",
-        "source_url": "https://www.sec.gov/edgar/browse/?CIK=1596532"
-      },
-      "price": {
-        "close_usd": 177.24,
-        "date": "2026-10-26",
-        "age_days": 1,
-        "source": "Yahoo Finance chart EOD",
-        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/ANET?interval=1d&range=15d",
-        "is_live": false,
-        "checked_at": "2026-10-27T12:06:22.307550+00:00"
-      },
-      "valuation": {
-        "status": "partial",
-        "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 223539456612,
-        "ps": 24.82,
-        "pe": 63.66,
-        "fcf_yield_pct": null,
-        "share_date": "2026-07-30",
-        "price_date": "2026-10-26",
+        "price_date": "2026-10-27",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
       }
     },
@@ -1383,23 +1427,23 @@
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=820313"
       },
       "price": {
-        "close_usd": 75.27,
-        "date": "2026-10-26",
+        "close_usd": 78.21,
+        "date": "2026-10-27",
         "age_days": 1,
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/APH?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-10-27T12:06:22.973085+00:00"
+        "checked_at": "2026-10-28T05:36:49.347866+00:00"
       },
       "valuation": {
         "status": "partial",
         "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 92806664808,
-        "ps": 4.02,
-        "pe": 21.73,
-        "fcf_yield_pct": 4.72,
+        "market_cap_usd": 96431636172,
+        "ps": 4.18,
+        "pe": 22.58,
+        "fcf_yield_pct": 4.54,
         "share_date": "2026-07-28",
-        "price_date": "2026-10-26",
+        "price_date": "2026-10-27",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
       }
     },
@@ -1436,13 +1480,13 @@
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=937966"
       },
       "price": {
-        "close_usd": 1590.9,
-        "date": "2026-10-26",
+        "close_usd": 1635.5699,
+        "date": "2026-10-27",
         "age_days": 1,
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/ASML?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-10-27T12:06:24.027325+00:00"
+        "checked_at": "2026-10-28T05:36:50.821505+00:00"
       },
       "valuation": {
         "status": "unavailable",
@@ -1452,7 +1496,7 @@
         "pe": null,
         "fcf_yield_pct": null,
         "share_date": "2025-12-31",
-        "price_date": "2026-10-26",
+        "price_date": "2026-10-27",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
       }
     },
@@ -1489,23 +1533,23 @@
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=933974"
       },
       "price": {
-        "close_usd": 37.17,
-        "date": "2026-10-26",
+        "close_usd": 39.08,
+        "date": "2026-10-27",
         "age_days": 1,
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/AZTA?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-10-27T12:06:24.500340+00:00"
+        "checked_at": "2026-10-28T05:36:51.460635+00:00"
       },
       "valuation": {
         "status": "partial",
         "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 1628357968,
-        "ps": 2.74,
+        "market_cap_usd": 1712031998,
+        "ps": 2.88,
         "pe": null,
-        "fcf_yield_pct": 2.35,
+        "fcf_yield_pct": 2.24,
         "share_date": "2026-08-03",
-        "price_date": "2026-10-26",
+        "price_date": "2026-10-27",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
       }
     },
@@ -1542,23 +1586,23 @@
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=851205"
       },
       "price": {
-        "close_usd": 55.63,
-        "date": "2026-10-26",
+        "close_usd": 58.22,
+        "date": "2026-10-27",
         "age_days": 1,
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/CGNX?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-10-27T12:06:25.543999+00:00"
+        "checked_at": "2026-10-28T05:36:52.909378+00:00"
       },
       "valuation": {
         "status": "partial",
         "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 9358292330,
-        "ps": 9.41,
-        "pe": 81.77,
-        "fcf_yield_pct": 2.53,
+        "market_cap_usd": 9793992081,
+        "ps": 9.85,
+        "pe": 85.58,
+        "fcf_yield_pct": 2.42,
         "share_date": "2026-08-02",
-        "price_date": "2026-10-26",
+        "price_date": "2026-10-27",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
       }
     },
@@ -1591,27 +1635,27 @@
         "net_income_period_end": "2025-12-31",
         "cash_flow_period_end": "2025-12-31",
         "capex_period_end": null,
-        "as_of": "2026-10-26T22:38:08.687357+00:00",
+        "as_of": "2026-10-28T05:36:34.944889+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1030894"
       },
       "price": {
-        "close_usd": 246.65,
-        "date": "2026-10-26",
+        "close_usd": 276.54,
+        "date": "2026-10-27",
         "age_days": 1,
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/CLS?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-10-27T12:06:26.155507+00:00"
+        "checked_at": "2026-10-28T05:36:53.780960+00:00"
       },
       "valuation": {
         "status": "partial",
         "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 31105477443,
-        "ps": 2.51,
-        "pe": 37.36,
+        "market_cap_usd": 34874959384,
+        "ps": 2.81,
+        "pe": 41.89,
         "fcf_yield_pct": null,
         "share_date": "2026-10-21",
-        "price_date": "2026-10-26",
+        "price_date": "2026-10-27",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
       }
     },
@@ -1648,23 +1692,23 @@
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1807794"
       },
       "price": {
-        "close_usd": 151.15,
-        "date": "2026-10-26",
+        "close_usd": 167.43,
+        "date": "2026-10-27",
         "age_days": 1,
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/CRDO?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-10-27T12:06:27.232688+00:00"
+        "checked_at": "2026-10-28T05:36:55.075546+00:00"
       },
       "valuation": {
         "status": "partial",
         "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 28408932406,
-        "ps": 21.28,
-        "pe": 60.15,
-        "fcf_yield_pct": 1.43,
+        "market_cap_usd": 31468789631,
+        "ps": 23.57,
+        "pe": 66.63,
+        "fcf_yield_pct": 1.29,
         "share_date": "2026-08-25",
-        "price_date": "2026-10-26",
+        "price_date": "2026-10-27",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
       }
     },
@@ -1697,27 +1741,27 @@
         "net_income_period_end": "2026-01-30",
         "cash_flow_period_end": "2026-01-30",
         "capex_period_end": "2026-01-30",
-        "as_of": "2026-10-26T22:38:09.409834+00:00",
+        "as_of": "2026-10-28T05:36:35.593255+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1571996"
       },
       "price": {
-        "close_usd": 467.09,
-        "date": "2026-10-26",
+        "close_usd": 501.96,
+        "date": "2026-10-27",
         "age_days": 1,
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/DELL?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-10-27T12:06:27.713867+00:00"
+        "checked_at": "2026-10-28T05:36:55.906711+00:00"
       },
       "valuation": {
         "status": "partial",
         "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 304542680000,
-        "ps": 2.68,
-        "pe": 51.3,
-        "fcf_yield_pct": 2.81,
+        "market_cap_usd": 327277920000,
+        "ps": 2.88,
+        "pe": 55.13,
+        "fcf_yield_pct": 2.61,
         "share_date": "2026-01-30",
-        "price_date": "2026-10-26",
+        "price_date": "2026-10-27",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
       }
     },
@@ -1754,23 +1798,23 @@
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=313616"
       },
       "price": {
-        "close_usd": 232.97,
-        "date": "2026-10-26",
+        "close_usd": 232.0,
+        "date": "2026-10-27",
         "age_days": 1,
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/DHR?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-10-27T12:06:28.373860+00:00"
+        "checked_at": "2026-10-28T05:36:56.752447+00:00"
       },
       "valuation": {
         "status": "partial",
         "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 163901573971,
-        "ps": 6.67,
-        "pe": 45.35,
-        "fcf_yield_pct": 3.21,
+        "market_cap_usd": 163219149080,
+        "ps": 6.64,
+        "pe": 45.16,
+        "fcf_yield_pct": 3.22,
         "share_date": "2026-10-15",
-        "price_date": "2026-10-26",
+        "price_date": "2026-10-27",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
       }
     },
@@ -1807,23 +1851,23 @@
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=32604"
       },
       "price": {
-        "close_usd": 161.7,
-        "date": "2026-10-26",
+        "close_usd": 166.27,
+        "date": "2026-10-27",
         "age_days": 1,
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/EMR?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-10-27T12:06:29.064529+00:00"
+        "checked_at": "2026-10-28T05:36:57.412614+00:00"
       },
       "valuation": {
         "status": "partial",
         "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 90196260000,
-        "ps": 5.01,
-        "pe": 39.34,
-        "fcf_yield_pct": 2.96,
+        "market_cap_usd": 92745406000,
+        "ps": 5.15,
+        "pe": 40.45,
+        "fcf_yield_pct": 2.88,
         "share_date": "2026-06-30",
-        "price_date": "2026-10-26",
+        "price_date": "2026-10-27",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
       }
     },
@@ -1860,23 +1904,23 @@
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1551182"
       },
       "price": {
-        "close_usd": 371.92,
-        "date": "2026-10-26",
+        "close_usd": 384.2,
+        "date": "2026-10-27",
         "age_days": 1,
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/ETN?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-10-27T12:06:29.673044+00:00"
+        "checked_at": "2026-10-28T05:36:58.091452+00:00"
       },
       "valuation": {
         "status": "partial",
         "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 144453728000,
-        "ps": 5.26,
-        "pe": 35.34,
-        "fcf_yield_pct": 2.46,
+        "market_cap_usd": 149223280000,
+        "ps": 5.44,
+        "pe": 36.51,
+        "fcf_yield_pct": 2.38,
         "share_date": "2026-06-30",
-        "price_date": "2026-10-26",
+        "price_date": "2026-10-27",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
       }
     },
@@ -2576,59 +2620,6 @@
       }
     },
     {
-      "ticker": "MRVL",
-      "name": "Marvell Technology",
-      "sector": "AI networking",
-      "mentions": 0,
-      "news": [],
-      "status": "Obserwacja",
-      "attention_score": 0,
-      "valuation_status": "Orientacyjna kapitalizacja i mnożniki roczne — nie ranking zakupu",
-      "investment_score": null,
-      "fundamentals": {
-        "source": "SEC EDGAR XBRL",
-        "fiscal_year": "2026",
-        "revenue_usd": 8194600000,
-        "net_income_usd": 2670100000,
-        "revenue_growth_pct": 42.1,
-        "net_margin_pct": 32.6,
-        "operating_cash_flow_usd": 1750500000,
-        "free_cash_flow_usd": 1396400000,
-        "cash_usd": 2638800000,
-        "debt_usd": 4555200000,
-        "financial_health_score": 100,
-        "score_label": "Prosty filtr 4 warunków, nie rekomendacja",
-        "shares_outstanding": 876900000,
-        "shares_as_of": "2026-08-21",
-        "revenue_period_end": "2026-01-31",
-        "net_income_period_end": "2026-01-31",
-        "cash_flow_period_end": "2026-01-31",
-        "capex_period_end": "2026-01-31",
-        "as_of": "2026-10-27T04:59:12.218684+00:00",
-        "source_url": "https://www.sec.gov/edgar/browse/?CIK=1835632"
-      },
-      "price": {
-        "close_usd": 242.49,
-        "date": "2026-10-27",
-        "age_days": 0,
-        "source": "Yahoo Finance chart EOD",
-        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/MRVL?interval=1d&range=15d",
-        "is_live": false,
-        "checked_at": "2026-10-27T17:58:31.001158+00:00"
-      },
-      "valuation": {
-        "status": "partial",
-        "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 212639481000,
-        "ps": 25.95,
-        "pe": 79.64,
-        "fcf_yield_pct": 0.66,
-        "share_date": "2026-08-21",
-        "price_date": "2026-10-27",
-        "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
-      }
-    },
-    {
       "ticker": "MSFT",
       "name": "Microsoft",
       "sector": "AI platforms",
@@ -2710,7 +2701,7 @@
         "net_income_period_end": "2026-09-03",
         "cash_flow_period_end": "2026-09-03",
         "capex_period_end": "2026-09-03",
-        "as_of": "2026-10-27T04:59:12.818549+00:00",
+        "as_of": "2026-10-28T05:36:37.897677+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=723125"
       },
       "price": {
@@ -2763,7 +2754,7 @@
         "net_income_period_end": "2025-12-31",
         "cash_flow_period_end": "2025-12-31",
         "capex_period_end": "2025-12-31",
-        "as_of": "2026-10-27T04:59:13.522497+00:00",
+        "as_of": "2026-10-28T05:36:38.623836+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1373715"
       },
       "price": {
@@ -2975,7 +2966,7 @@
         "net_income_period_end": "2026-01-31",
         "cash_flow_period_end": "2026-01-31",
         "capex_period_end": "2026-01-31",
-        "as_of": "2026-10-27T22:10:28.840640+00:00",
+        "as_of": "2026-10-28T05:36:30.020229+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1734722"
       },
       "price": {
@@ -3677,7 +3668,7 @@
         {
           "title": "Xtend AI Robotics, Inc. (XTND) stock price, news, quote and history - Yahoo Finance UK",
           "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5NTkVSLTNSOGt3MFhoVjJlOVZGOVFkMHNsOVJuYlF6SHNXZ3VIVnlZaW1XQkdHX1RxXzdDM1A2WnZ4WXVqYWhDeWNKWXcza1FTWHc?oc=5",
-          "date": "Mon, 26 Oct 2026 13:36:21 GMT"
+          "date": "Tue, 27 Oct 2026 17:16:45 GMT"
         }
       ],
       "public_listing": "SEC ticker registry (US); ticker requires verification",
@@ -3688,19 +3679,24 @@
   ],
   "articles": [
     {
-      "title": "Ahead of Alphabet Earnings, Here's What Barchart Data Says Comes Next for GOOGL Stock - Barchart.com",
-      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQNXF1eEhoNm5TY3AxeG1fVFJ5VWJpUEN0OEVJNFpCOWFxaG12Zi1Xa2xvZHlWMVBHMWJiOGhOME9zQjZFcXo0WVdLSVczeG9TMXhDLUpUcEVUZFBxZE54V3QzcEtjXzRSTjFYWjNza0hremdWUmFfckpTQWtFV3NkRFMyLWx0VmZFc3d0OGRSbTNrVlJWekNRYVMxcnVUQXhISXVfRllURHFQV01Qd3VYbE5OVF9FSzVPLXo3VVVKbmotUkM1dURV?oc=5",
-      "date": "Tue, 27 Oct 2026 16:10:51 GMT"
+      "title": "China Robot Stocks Extend Rally With Unitree Earnings in Focus - Bloomberg",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPbUgtN1ctOUdwcjFkVFZweHh2azZlUGpQZFRtOXRIUzg0MU9VeVpPWWVwTDc0bHVCZDczVHBXZ204WjFieHFCbkRPSUtxODR0clQ5dzFoNmx6SV9SSUVzZ0RyN0pjVUtfTVBGeGxZNVVCUmtMekM3Q0h6T3Z6M3Fwd2JOaXNWNjEySDdRaW14RTZPLVMycUptTENtV28xYzZBLTcyTFlLNGVhTWxXZVlxX0JSRQ?oc=5",
+      "date": "Wed, 28 Oct 2026 04:41:00 GMT"
     },
     {
-      "title": "Verizon Stock Q3: A 9% Shareholder Yield While The Market Chases SpaceX Myths (NYSE:VZ) - Seeking Alpha",
-      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPYUFMb21qd25INk9vVzlSR0cyUTNvM3BRMm02OUdza3paNTE4V192Q2N3UDFlcnJUYlpWTGNBdXlsRlhkamxqV1ducmFxSVU5SkxVUWo4cWViYU40WGt2ZnhocXBNM2xfc0JoZ2xMRzZWdW1LYkQ2M2Y5TVNGaWlyc1gxRHFEblhyTzZpdlJ5elhVUnBaVDBNZTBBQmw4eTQzaExIUnJndXpHRFd5N0dNUjFFLUFzbXJFNWc?oc=5",
-      "date": "Tue, 27 Oct 2026 13:10:50 GMT"
+      "title": "BigBear.ai Holdings, Inc. (BBAI) Stock Price, News, Quote & History - Yahoo! Finance Canada",
+      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1lM1hzeUR5X2dlX3B2NzFkVm9PaXlMTnZ6RmpDN0tLVnZIMVVBTDExVS1nODlZa3drVS1wUUF5dENVNUpKVkxlc2k5d2w2OTNMMHc?oc=5",
+      "date": "Tue, 27 Oct 2026 21:34:17 GMT"
     },
     {
-      "title": "China's AI Stock Rally Collapses as $480 Billion Evaporates - Startup Fortune",
-      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQUGZYUkJpdlpNalJyMWpkRE5xU1Z4cHJZbGtzLWluVUlnQ19WRmpmVTZPR1FITTlObmVxUWtiQU9fWk1qU0VRWnNPbkxKeXN6bFRxUlk2RkU3M2IyQkxXSmNIcDZNWC1fbEhmMVVTVTR4NHk3bWY4S1IwcnBzVmt0TFF5bEptbW0tZmZOazB3?oc=5",
-      "date": "Tue, 27 Oct 2026 02:24:52 GMT"
+      "title": "Anthropic Seeks $100 Billion in Nasdaq IPO at $2 Trillion Valuation - Seoul Economic Daily",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPRWxCMURaVDJpdU1fd1NWa2lGc0tfazNoaGcyNWpzUVh4ZlkyVl9DenRhSkNWdzQ5cWtZZXRUeUJIVDQwUnRaRFMtZWJ4czJIX1F4SVB1WjZudTJYMnRZLW9HcG1ucjVnMUxiV3V3MlM1QmJuSWYwSUpKZDdUOVduc2k3enpiY0pRRzlsS1FNdk00T3RRbzNYZmxGaUlVUQ?oc=5",
+      "date": "Wed, 28 Oct 2026 01:00:05 GMT"
+    },
+    {
+      "title": "Why Adobe Stock Is the Best ‘Anti-AI’ Play This Earnings Season - Barchart.com",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOalB5NExBeWZLZ3BmbkdXR3NYWWQyVG42ZFd2UVpMTnFoMmp3ZDQtTm4tQ3cyNUdfelBnaVpud2x3Nzc1UHVoSngxdm1tNTE3RURkWDU5RUpSdjVaQng3V3paMEdlbzRvSFZURFBnRUotVU5JZHRsRnhnZUJjSlNHdzQ5dlpRYld2eXplVXRKV2pLc0dTb2hwcTk1TWEyRzBCTjk4bjlHTko?oc=5",
+      "date": "Mon, 26 Oct 2026 11:30:02 GMT"
     },
     {
       "title": "Why Is Xtend AI Robotics Stock Surging Monday? - Benzinga",
@@ -3708,14 +3704,24 @@
       "date": "Mon, 26 Oct 2026 19:39:42 GMT"
     },
     {
-      "title": "The AI bubble has burst in China: shares of leading companies have lost $480 billion - Mezha",
-      "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQWG9HT05FeVBIUURnZmVOZUVGaFY5UXctckpPWlBhdjNPRDhwQmlnRXhCWUpIQlN2am1EWjZhNEgyZXVIRVA2WGVXSnMtWHQwTlBNTlJJYmZzUEFubnB3eDk0bGtEXzRkMVpfaUcxNGF5ZWFSRExhem9EVmpaejVkY0U3eHdCMVRoWHhUUEFYa09zV3JvTGtjMllmSThMT0w1VVh3UEhNU1BKYUlC?oc=5",
-      "date": "Tue, 27 Oct 2026 09:00:00 GMT"
+      "title": "SK Securities: \"No Signal of AI Demand Peaking — KOSPI Is a Staged-Buying Zone\" - BigGo Finance",
+      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE42cDBESkw5RXhyS2Z3Z1NQSFZ6WmMwX19ZTWF4ZTdVOU5nZXRwMWxuUGRZZnk4QzhGVndDN00wemdxeDFMYnZUQ2RJTmh1R25zMmY3SXZNUmZOWnNqcUdvSlpSZkp4ZXctbzBfZkVZR2dwV0Y3NUE?oc=5",
+      "date": "Tue, 27 Oct 2026 22:35:00 GMT"
     },
     {
-      "title": "3 Great Growth Stocks With Earnings Growth Over 20% - Simply Wall Street",
-      "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPYWVteVFGQ05vQzFoSUpkb2M0YkFjSlotaVpZVzNxYk1Ca19PQlVzR0NVMzlvNU85eXpzZ3pTdDJJQUNxaEJQZmhjZ3h1Vjlfb2djaWk0d0lEWWJDZHBkVnRMMURRNWtIaE9jWnUtWDMwSnhhUVN2TzhvLXhMOHM4U0VzZGpxYjVSeVlObWllVHRfdmFYQUVITzl4dlpOTmVIeUZ6enYzRTVyaUVJOVZMc3NyenQtX1Z0UmZUanpSZlBBVUVVM0ZPcUZWalZEZmExT0pfS3ZLRzLSAdgBQVVfeXFMT2FlbXlRRkNOb0MxaElKZG9jNGJBY0paLWlaWVczcWJNQmtfT0JVc0dDVTM5bzVPOXl6c2d6U3QySUFDcWhCUGZoY2d4dVY5X29nY2lpNHdJRFliQ2RwZFZ0TDFEUTVrSGhPY1p1LVgzMEp4YVFTdk84by14TDhzOFNFc2RqcWI1UnlZTm1pZVR0X3ZhWEFFSE85eHZaTk5lSHlGenp2M0U1cmlFSTlWTHNzcnp0LV9WdFJmVGp6UmZQQVVFVTNGT3FGVmpWRGZhMU9KX0t2S0cy?oc=5",
-      "date": "Tue, 27 Oct 2026 10:27:09 GMT"
+      "title": "SK hynix’s $45bn shareholder return plan lifts chip stocks - mkbn.mk.co.kr",
+      "url": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE04RURfNGRTNXFuS1JONmpNTFpKNDJaQWI4RWMxaVNsYXd5cktvdjhIN2xpb3BLbFZJa0ZISUpuXzB3STAteWVBUHJ0QXpSUE96NkllcW53?oc=5",
+      "date": "Wed, 28 Oct 2026 02:11:13 GMT"
+    },
+    {
+      "title": "China's AI Stock Rally Collapses as $480 Billion Evaporates - Startup Fortune",
+      "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQUGZYUkJpdlpNalJyMWpkRE5xU1Z4cHJZbGtzLWluVUlnQ19WRmpmVTZPR1FITTlObmVxUWtiQU9fWk1qU0VRWnNPbkxKeXN6bFRxUlk2RkU3M2IyQkxXSmNIcDZNWC1fbEhmMVVTVTR4NHk3bWY4S1IwcnBzVmt0TFF5bEptbW0tZmZOazB3?oc=5",
+      "date": "Tue, 27 Oct 2026 02:24:52 GMT"
+    },
+    {
+      "title": "Kospi tops 5,900 on Samsung, SK hynix gains as buy-sidecar triggers for second straight day - 머니투데이",
+      "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE4wVTUwTDBDNUtnUXAzc3I0eFdBbm5yMkg5QjR5b3VHQlBESFpaRGVmTzBMOFNzVHdWQkFBbTVfSUdUVGRNS25pLTVHZkNnNFRmWTR1cGRSZWlONENJV2F2WkpOeUM0aTBrTGg4MA?oc=5",
+      "date": "Wed, 28 Oct 2026 01:24:04 GMT"
     },
     {
       "title": "ETFs to Buy as Lockheed Shares Jump Post Q3 Earnings Beat, Record Backlog - TradingView",
@@ -3723,39 +3729,9 @@
       "date": "Mon, 26 Oct 2026 11:14:00 GMT"
     },
     {
-      "title": "BigBear.ai Q3 2026 Earnings Results and Report - MarketBeat",
-      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNa01oWmpOTDdnWWtyM0RsZzNJSWJ0OVJmaHUxWVJ5Q3pHZVFKVDN5X1NfN0RablFvWjZabFFGbXllT3VnSHMtcnBkM2k4S3lCbklfaXhsckRvYTE5VnF2eTR3M29xTWRiaUNSQVBReTVoNmZnMmNONkxkc2pGQlJDZ1lYY3JYTEVDSENVag?oc=5",
-      "date": "Tue, 27 Oct 2026 20:36:07 GMT"
-    },
-    {
-      "title": "Morgan Stanley Sees Amazon Stock Surging 100% with AWS Hitting $1 Trillion in Revenue Sooner Than People Think - Barchart.com",
-      "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxNRTlMTHZLbXU2X3RFdmhmRlg0RFBMNXNodVhKODRZQ2stU1k4eEd2Q1lHV1Itdm8zajZOOGxpNEpTTnVqUGdQMHlqSzBreUk5M3Jpei1Ma0treWYzVnRPS0drUnk2cXJYa3dlNG9ROXVYbF8ybDJtMTNFMzZ0MC1HRVZCaTd3RDZxMUlfeGRvemJDSXotemd0VUp3QzR0cWV5VGcxcXRXeGdOSzYzVkNwTGk3WUFpbmNCclVYX2p2dDZ1RC10eVRMNUxqb1dGYjcyZ29UM2twOXdYSFQ3R1c3a0JiSG9GbWM?oc=5",
-      "date": "Sun, 25 Oct 2026 17:30:02 GMT"
-    },
-    {
-      "title": "China Oil Push Puts Seadrill Stock And Offshore Drillers Back In Focus - Simply Wall Street",
-      "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxPWUo1VU81UEgzZzN6UzFaNDNEbW5KVnVXd2Y4eVZDQWtPN0gtWVZQYVVuQkVQNnkwODJkbzNzN0c1NEd4dXV1Z2JSQTdoeUtSWXRNc1ZCZjZseVdCYndHNXVfV2pjWlFPZ0ZzN0cweHNabVl5RDhZRTlrTnJEUGx6dE5uaTVqWUpoT01KcDc1V2FaNXloVUw2NzhKZ1lGcll3WW9xaTNkNGdMZ3NSVnRHNUs3bGZTc2NYMk40VGpXZkhGcEVOMDFyWXFVczVGQVFubnBQUVF5emh3dkd4YnfSAeMBQVVfeXFMTnp0T0l1Sm5TMmdrVHhoWmc4Y3BIU2k4empyVHJneUhURTE0RW9HOHBfYjRDclI2XzRIZUhBck94NV9ieHRFUlJxZHFYaVZPZnpwN1Rxa2x0MGtwQ0MxVGZnZTZ1MW5WVlpvRzRnT215dXp5RlA0LUJOYlhWTVFhVXI0SE40bFd1U3FSRUxLdjVXZXlFWEV5bWVKT1A3andDeUEzM09XZG9ZVnJVYzJPRlFrV1FRWW9NS3AyVzA0OUNCMDM2Y2FkalBHSGQxSXJhUXlodXVTOHVseFN3MHVwTV9CZU0?oc=5",
-      "date": "Tue, 27 Oct 2026 00:48:10 GMT"
-    },
-    {
-      "title": "US Stock Futures Gain, Oil Falls on Iran Comments: Markets Wrap - Bloomberg.com",
-      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPYTFLZTJNckNaRFN0TG9fLXJTY3h3VkVRSnZfMDJfLVkxOTNsU01IbWtXbDZQUTFIOXJXWENhY2NIX0ZuLUdLSHJMemcyUkNEZklQdUQxZlpHUWNwaVE3WFp1dk1meVZwejRrSUF1dEhFdDBjNUp3WVdqVnNBamJfQjFrN2g5b3QwZFBUMHZjYVU2aGhK?oc=5",
-      "date": "Mon, 26 Oct 2026 22:03:56 GMT"
-    },
-    {
-      "title": "Robo.ai Inc. Announces Results of Extraordinary General Meeting - Yahoo Finance",
-      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPbnZfYkZmZ25NN2xSR04yTklXLUZYVmt4eWxfYm1Yb3hJdzU3YXZiRkpOVk51NExUX3dDLWEzSHBmZk02TEFnS2ZHU05aMUVlc2lwUUZTQ1VXcHVkaUtTNjEtQzBjWGlFRnJZbFgwcTJFVl9uSXRCTVdNMlJpSzItbk9UYTBVMW40UGlqS21WTDFDM3FoYWN5UkhR?oc=5",
-      "date": "Mon, 26 Oct 2026 20:04:00 GMT"
-    },
-    {
-      "title": "Anthropic IPO 2026: Revenue, losses and $1.5T valuation - www.equiti.com",
-      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPUFQ1bDZJb3hJOFJydHhKNWJGLU56WjgwSWEtaG1fdHgtMTdhTEFfQVdJNzZkSjB1RTVlSlYtYl82RFRkcWNoRTZEY2YwanF4NEpQNmdpOXVibjBYa3A0bFAxaFdhck9scXJONFVqSU5mNHlNME1ZZURZdGdITGtaY2JfY1lXOFo5ZkNHVUUyWlF5R2gyOGx4Vy1UdEpkRFlDMVE?oc=5",
-      "date": "Tue, 27 Oct 2026 11:26:03 GMT"
-    },
-    {
-      "title": "Dow, S&P 500, Nasdaq Futures Climb As Tech Stocks Get A Boost From Anthropic IPO Listing: SOFI, BB, PYPL, CLS In Focus - Stocktwits",
-      "url": "https://news.google.com/rss/articles/CBMiggJBVV95cUxONUtWNEZySmZNeFc3b1dHSHljbWxwRFRQaVZhenZOaDgwMHV1TzJNSzBHQkRHQW9qSzN1Ym1UcE5pVkxpakRCcXZjUEhqVWk3NHNvLUVxVHJPS0pLUnczYTlUYVh3ei10dXVra3FLeXhuU01oak4zNGg0YkZ2eE85NG10Y3c2akZpZmM5LW44ZFhaUzNjRTJQbVlMd1JLNlFIeW5qcmdhbndaSGR3dFZOVmtWZGt5SUtEZllkVURpVFZnbTJVb0ZiR2JpUDZxZkM2MkpMNThhRVJnT25rbXdjampqdGFVN0E0SmUxenpxenl5bVBRZEJIZEt3TVNnOXBZYUE?oc=5",
-      "date": "Tue, 27 Oct 2026 02:49:31 GMT"
+      "title": "3 Great Growth Stocks With Earnings Growth Over 20% - Simply Wall Street",
+      "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPYWVteVFGQ05vQzFoSUpkb2M0YkFjSlotaVpZVzNxYk1Ca19PQlVzR0NVMzlvNU85eXpzZ3pTdDJJQUNxaEJQZmhjZ3h1Vjlfb2djaWk0d0lEWWJDZHBkVnRMMURRNWtIaE9jWnUtWDMwSnhhUVN2TzhvLXhMOHM4U0VzZGpxYjVSeVlObWllVHRfdmFYQUVITzl4dlpOTmVIeUZ6enYzRTVyaUVJOVZMc3NyenQtX1Z0UmZUanpSZlBBVUVVM0ZPcUZWalZEZmExT0pfS3ZLRzLSAdgBQVVfeXFMT2FlbXlRRkNOb0MxaElKZG9jNGJBY0paLWlaWVczcWJNQmtfT0JVc0dDVTM5bzVPOXl6c2d6U3QySUFDcWhCUGZoY2d4dVY5X29nY2lpNHdJRFliQ2RwZFZ0TDFEUTVrSGhPY1p1LVgzMEp4YVFTdk84by14TDhzOFNFc2RqcWI1UnlZTm1pZVR0X3ZhWEFFSE85eHZaTk5lSHlGenp2M0U1cmlFSTlWTHNzcnp0LV9WdFJmVGp6UmZQQVVFVTNGT3FGVmpWRGZhMU9KX0t2S0cy?oc=5",
+      "date": "Tue, 27 Oct 2026 10:27:09 GMT"
     },
     {
       "title": "Richtech Robotics (Nasdaq:RR) - Stock Analysis - Simply Wall Street",
@@ -3763,14 +3739,9 @@
       "date": "Sun, 25 Oct 2026 07:00:00 GMT"
     },
     {
-      "title": "Xtend AI Robotics, Inc. (XTND) stock price, news, quote and history - Yahoo Finance UK",
-      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5NTkVSLTNSOGt3MFhoVjJlOVZGOVFkMHNsOVJuYlF6SHNXZ3VIVnlZaW1XQkdHX1RxXzdDM1A2WnZ4WXVqYWhDeWNKWXcza1FTWHc?oc=5",
-      "date": "Mon, 26 Oct 2026 13:36:21 GMT"
-    },
-    {
-      "title": "Ahead of SoFi Earnings, Here's What Barchart Data Says Comes Next for SOFI Stock - Barchart.com",
-      "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNbnc5Wk5uYVlvTWJIZklfMXdjaVhlMUtGNGZVNUs1S3M1b3ExZ2RZOV9ST3VBN1ZXT1hTT0FrV29uN2E2TWFZRFV1NW9tU0F5bXJCZERTTkhkVklFcTlOQWZFMU9iYUFPY3RoMzZBT1pHdHZrZXdmREV4VmdWMDZMY1hoQlZwRFluVXBPamlmeGlRQU5IUG1hWGl6N0c2ajVUaDhrRDh0V1ZXeFdjV2tURFhBdHV5aVVuTGJhbVlHVFE?oc=5",
-      "date": "Mon, 26 Oct 2026 21:06:48 GMT"
+      "title": "Verizon Stock Q3: A 9% Shareholder Yield While The Market Chases SpaceX Myths (NYSE:VZ) - Seeking Alpha",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPYUFMb21qd25INk9vVzlSR0cyUTNvM3BRMm02OUdza3paNTE4V192Q2N3UDFlcnJUYlpWTGNBdXlsRlhkamxqV1ducmFxSVU5SkxVUWo4cWViYU40WGt2ZnhocXBNM2xfc0JoZ2xMRzZWdW1LYkQ2M2Y5TVNGaWlyc1gxRHFEblhyTzZpdlJ5elhVUnBaVDBNZTBBQmw4eTQzaExIUnJndXpHRFd5N0dNUjFFLUFzbXJFNWc?oc=5",
+      "date": "Tue, 27 Oct 2026 13:10:50 GMT"
     },
     {
       "title": "GMEX Robotics (Nasdaq:GMEX) - Stock Analysis - Simply Wall Street",
@@ -3778,14 +3749,44 @@
       "date": "Sun, 25 Oct 2026 07:00:00 GMT"
     },
     {
-      "title": "BIIB Stock Earnings Preview: What’s Next for Biogen as its MS Business Wanes? - CMC Markets",
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNbWN5RG0tYXRYTmJ3UlUxRjF1RG1icG5KdWpja2doTkhKd0dIN2NlcUxNM1lrVkVzWVJiNkxjWXZtNmVsWG9TUVNpQkRDS3dJWVRmX3hsVnEyaC1RSS1mNGRvb3o5OEIxMzE3YTVXTnJMT3dFWlJUaEhGLXhsOWdMWEUzb1oxdFZJUlVhTVRCM0R0OWFDLUF4S0g0UjNZcklSZXNSNjhneXdBYkQyN25sRU5n?oc=5",
-      "date": "Tue, 27 Oct 2026 15:32:04 GMT"
+      "title": "Dow, S&P 500, Nasdaq Futures Climb As Tech Stocks Get A Boost From Anthropic IPO Listing: SOFI, BB, PYPL, CLS In Focus - Stocktwits",
+      "url": "https://news.google.com/rss/articles/CBMiggJBVV95cUxONUtWNEZySmZNeFc3b1dHSHljbWxwRFRQaVZhenZOaDgwMHV1TzJNSzBHQkRHQW9qSzN1Ym1UcE5pVkxpakRCcXZjUEhqVWk3NHNvLUVxVHJPS0pLUnczYTlUYVh3ei10dXVra3FLeXhuU01oak4zNGg0YkZ2eE85NG10Y3c2akZpZmM5LW44ZFhaUzNjRTJQbVlMd1JLNlFIeW5qcmdhbndaSGR3dFZOVmtWZGt5SUtEZllkVURpVFZnbTJVb0ZiR2JpUDZxZkM2MkpMNThhRVJnT25rbXdjampqdGFVN0E0SmUxenpxenl5bVBRZEJIZEt3TVNnOXBZYUE?oc=5",
+      "date": "Tue, 27 Oct 2026 02:49:31 GMT"
+    },
+    {
+      "title": "US Stock Futures Gain, Oil Falls on Iran Comments: Markets Wrap - Bloomberg",
+      "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPYTFLZTJNckNaRFN0TG9fLXJTY3h3VkVRSnZfMDJfLVkxOTNsU01IbWtXbDZQUTFIOXJXWENhY2NIX0ZuLUdLSHJMemcyUkNEZklQdUQxZlpHUWNwaVE3WFp1dk1meVZwejRrSUF1dEhFdDBjNUp3WVdqVnNBamJfQjFrN2g5b3QwZFBUMHZjYVU2aGhK?oc=5",
+      "date": "Tue, 27 Oct 2026 20:06:31 GMT"
+    },
+    {
+      "title": "Xtend AI Robotics, Inc. (XTND) stock price, news, quote and history - Yahoo Finance UK",
+      "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5NTkVSLTNSOGt3MFhoVjJlOVZGOVFkMHNsOVJuYlF6SHNXZ3VIVnlZaW1XQkdHX1RxXzdDM1A2WnZ4WXVqYWhDeWNKWXcza1FTWHc?oc=5",
+      "date": "Tue, 27 Oct 2026 17:16:45 GMT"
+    },
+    {
+      "title": "Robo.ai Inc. Announces Results of Extraordinary General Meeting - Yahoo Finance",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPbnZfYkZmZ25NN2xSR04yTklXLUZYVmt4eWxfYm1Yb3hJdzU3YXZiRkpOVk51NExUX3dDLWEzSHBmZk02TEFnS2ZHU05aMUVlc2lwUUZTQ1VXcHVkaUtTNjEtQzBjWGlFRnJZbFgwcTJFVl9uSXRCTVdNMlJpSzItbk9UYTBVMW40UGlqS21WTDFDM3FoYWN5UkhR?oc=5",
+      "date": "Mon, 26 Oct 2026 20:04:00 GMT"
     },
     {
       "title": "Alphabet Has $514 Billion in Cloud Orders. Here’s What Matters More Than That Number on Oct. 28. - The Motley Fool",
       "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQcG9hUmJNWUdOdDBveTMxcHFzcGEtUmhTdnVyTG9vNXhxUjlkRTVJSTFoX1NNMk1qcWl6ZUEteXdWMzcxdDlqLVUwcDZ6TWJTWk82NjZ0TjVKcXVvbV9HY1FUOEwyVURaR1YyczZVd2tJTTB3UWd3TzZkS1QyU1VDMXBjN3AxMUtuZHZ2cXdFNFB2cWF1LXdfcllWdzhXc3l1ZGRieFRPaGRiYXdVTFdJVUlsTjdfcld2cGtYOFBRd190TjlkMTFyYV91Uk55YUpkREJ5OQ?oc=5",
       "date": "Mon, 26 Oct 2026 10:10:00 GMT"
+    },
+    {
+      "title": "Morgan Stanley Sees Amazon Stock Surging 100% with AWS Hitting $1 Trillion in Revenue Sooner Than People Think - Barchart.com",
+      "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxNRTlMTHZLbXU2X3RFdmhmRlg0RFBMNXNodVhKODRZQ2stU1k4eEd2Q1lHV1Itdm8zajZOOGxpNEpTTnVqUGdQMHlqSzBreUk5M3Jpei1Ma0treWYzVnRPS0drUnk2cXJYa3dlNG9ROXVYbF8ybDJtMTNFMzZ0MC1HRVZCaTd3RDZxMUlfeGRvemJDSXotemd0VUp3QzR0cWV5VGcxcXRXeGdOSzYzVkNwTGk3WUFpbmNCclVYX2p2dDZ1RC10eVRMNUxqb1dGYjcyZ29UM2twOXdYSFQ3R1c3a0JiSG9GbWM?oc=5",
+      "date": "Sun, 25 Oct 2026 17:30:02 GMT"
+    },
+    {
+      "title": "Tesla's Q3 Profit Slumps 43% as Musk Pitches SpaceX Merger and Robot Future - BigGo Finance",
+      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1TVy1qbTRrMVpRUjEyQWgyNWlVN1FjZGJaMEZXUG9lTFFNd0tqN1hucjR0RXRKcXlVeDZ0c2JRb0NtX2ZvclBtVHBweUE2ckE2aHNjbloxeVVaRXdocE5KcEVFSm9kNExaUEtlWHFyYjNOb2hIcmc?oc=5",
+      "date": "Wed, 28 Oct 2026 01:05:00 GMT"
+    },
+    {
+      "title": "BigBear.ai Q3 Earnings Call Highlights - MarketBeat",
+      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOelhlRTZ5LW9RcGtQS2RzS3E1SEc5M1k2aS1RNU1NNlRRT1JMMGNETjctZjN6NzFoaFpOVkVKbFl6YUNLX0R5Tm9IdzBmLWRoQUlySnBnTjZJbVZpV2toMjZlNlNFUnNOOXRSQ3FVajJhZTRmSktWVHdycXVmNGNSWlU5ZS1iMTB2d0tzTV9zNzltTXB4Nm5LM212ZkxadjU0YTFfTA?oc=5",
+      "date": "Tue, 27 Oct 2026 22:11:31 GMT"
     },
     {
       "title": "Best Artificial Intelligence Stocks To Consider - October 26th - MarketBeat",
@@ -3803,19 +3804,9 @@
       "date": "Tue, 27 Oct 2026 12:22:00 GMT"
     },
     {
-      "title": "BBAI Stock Climbs As $225M Federal AI Contracts Fuel Momentum - Timothy Sykes",
-      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBaOGoxNlhNckhXNEFPNm1qTG1EdFpfRGh0X09paGp5MDRfU1g5SG4wdGQ4djJ4VFRRc21yV09QdU1VZG94V0FabzdCYlJabk1EYlNtcUU5cmNqT25Vc3JTTmtwSmtaY3dNSnJWem9XRE9CTUc5WnRKUg?oc=5",
-      "date": "Tue, 27 Oct 2026 16:49:51 GMT"
-    },
-    {
-      "title": "Elon Musk | SpaceX, Tesla, xAI, X, & PayPal - Britannica",
-      "url": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5xeFllLWI4enZVQmExeDZsV2Ewa19ESXc4XzVlUmc3N29kQmhyRnZOa2dWUlV1SFd2bHBkS3FrX0ZTTW5PekRWaFUweEFOMkgwRDNnRQ?oc=5",
-      "date": "Sun, 25 Oct 2026 07:00:00 GMT"
-    },
-    {
-      "title": "A warehouse robot moved more than 100,000 containers. Its rollout at two more sites is expected in early 2027. - Stock Titan",
-      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQazlyOVBtc01vVnlqN193RHAxOGlpN3FEeGlHUlRNSVhGSkxrYjVGVjh0dklxZ0RKdlNTSUlGaFRuSms5RGd4Ui1STm1PMFZSZ0JwbE5PSl9aTmlPelNnM0JVMFJvakxLakpYOFdGNFNkRFVjdThnUHFjaVhRTnA4c2NBUjFKb21jcTVIM09vWWRwOHROV1lIZG5kZ1JLZ0dWUkVYYmhySUhxNHhra1lNQUc1Q0ZpV1VXMkw5a1JxYw?oc=5",
-      "date": "Mon, 26 Oct 2026 11:00:00 GMT"
+      "title": "BigBear.ai Q3 2026 Earnings Results and Report - MarketBeat",
+      "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNa01oWmpOTDdnWWtyM0RsZzNJSWJ0OVJmaHUxWVJ5Q3pHZVFKVDN5X1NfN0RablFvWjZabFFGbXllT3VnSHMtcnBkM2k4S3lCbklfaXhsckRvYTE5VnF2eTR3M29xTWRiaUNSQVBReTVoNmZnMmNONkxkc2pGQlJDZ1lYY3JYTEVDSENVag?oc=5",
+      "date": "Tue, 27 Oct 2026 20:36:07 GMT"
     },
     {
       "title": "BBAI Stock Ticks Higher As $225M Federal AI Contracts Roll In - StocksToTrade",
@@ -3823,14 +3814,14 @@
       "date": "Tue, 27 Oct 2026 17:19:28 GMT"
     },
     {
+      "title": "BBAI Stock Pops As BigBear.ai Lands $225M Federal AI Deals - StocksToTrade",
+      "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE14T0wtTmVyc243WnFVWEU1RlZDUjJGY193TmZpSGo4R0pVV1NHcy0xb3A5cWpHblI5MnYxSUxjUTVraXJNZjBaYjc2SWt6WC1TY1loTmdtLW0wZ2F2ZHJOSlFwNjZNT2dQU3Rud3JXQjZZMC02R1Vz?oc=5",
+      "date": "Tue, 27 Oct 2026 21:47:00 GMT"
+    },
+    {
       "title": "Teradyne posts $1.306 billion Q3 revenue as AI demand lifts results - Crypto Briefing",
       "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9SdmtzQ1VIb3k3U0JWTkV3cldjVnRGNXVMUXItSmNqOV9od3FKd1YtbHBLd2s0UWx1NlFkc2xGd21YYzYyb2RwVF90VHBsNS1lcjQ1ZlhUa2Rxa2lGNU1WQXY0WWtqVTZ1?oc=5",
       "date": "Tue, 27 Oct 2026 20:49:35 GMT"
-    },
-    {
-      "title": "GOOGL Stock: 3 Things to Watch in Alphabet’s Q3 Earnings Tomorrow - TipRanks",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQOXJuUTdKai1uYVdVS3JpZC1vWVFrTjEtakNmUGVoVGlpbEU3ejMxX0VtZkhMelNWQVVOZE95Z2hlLThHT0VpTDBicEdzR3BHMFBHb1c4dG9oMFJVSExCS0lRNXhVM25wQm1oemZYTTZpdXladUVQM0NrUEt6SGVJQ25ZNFJjY2NDMm8wR3JfMjJzQlh3SzlpcQ?oc=5",
-      "date": "Tue, 27 Oct 2026 19:53:13 GMT"
     },
     {
       "title": "What a $1.4 Trillion AI Chip Market Means for Everything Around the GPU - TradingView",
@@ -3838,9 +3829,9 @@
       "date": "Tue, 27 Oct 2026 12:55:00 GMT"
     },
     {
-      "title": "What Happens When the Market’s Biggest Winners Start to Falter? - Investing Daily -",
-      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQOU9zX1pjWmtjdnNIM2FoX05PSDZXYkZMWmZ5NEVvR0N4QkZ5cmxGZVY5SEpMUFdPZnZEZ1lROUt5aU9WU29yTlVlaHd2c0lkX0NLdkhOb2Nnc0xiQk5Cc21zbWZKVDc4Q1FaZzdLTS1UYVRPRThTbXJFX0RZQzNkbHk3aXBITkd6WVp1Ul8tQjUwRzBIY3FyT256QlY5SVFZX1E?oc=5",
-      "date": "Tue, 27 Oct 2026 10:14:16 GMT"
+      "title": "AI Stocks Boom as MEXC Tokenized Trading Volume Jumps 88% - Cryptonews.net",
+      "url": "https://news.google.com/rss/articles/CBMiV0FVX3lxTE1KVk1CMGpzTnAxX1FhUjNXcmpDS2VLd0tncVlwalBSWTFCV0o0aHVSRXRnMFBZZjhCcVA2WUtKQUR3YUpmdVlLOFRFWkh3TFY3UHVMNEFMTQ?oc=5",
+      "date": "Wed, 28 Oct 2026 04:35:29 GMT"
     },
     {
       "title": "Companies powering the AI data center boom, explained - qz.com",
@@ -3848,9 +3839,9 @@
       "date": "Mon, 26 Oct 2026 09:14:50 GMT"
     },
     {
-      "title": "Broadcom vs. Taiwan Semiconductor: Two AI Powerhouses, One Surprising Revenue Trend - The Globe and Mail",
-      "url": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxNVE5qTUZ0SGZRQ1BhZUhva3EwcVJZeU1fOEp5ZXA0VVhVLU1oSlFWRlk3NTlvend5SzR0b3JkNEZBWnhvV3hrRDZTV0duNEJPT2s5VW9qYk1WYXZsUUZnR3hNVEZCYkQ3TmRKZmZMT3JmTVBtR3RVOW1zbVBEMldlaXpUMXN2cEdOMXNZS1ZNbXNXWE90WmlZZktOMjJoX01mV19ib1BOZ1NxTWVzRTVEMGRjamRjeWRvUmJ1cnk4eDJzMGJQaU1DZ0t2WmtwLXVnNDNWenRxYURnSDZMQ3JiREc3NDgzeUZvSWRiSXFtajV3M3V3aXhXbw?oc=5",
-      "date": "Tue, 27 Oct 2026 08:57:38 GMT"
+      "title": "What Happens When the Market’s Biggest Winners Start to Falter? - Investing Daily -",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQOU9zX1pjWmtjdnNIM2FoX05PSDZXYkZMWmZ5NEVvR0N4QkZ5cmxGZVY5SEpMUFdPZnZEZ1lROUt5aU9WU29yTlVlaHd2c0lkX0NLdkhOb2Nnc0xiQk5Cc21zbWZKVDc4Q1FaZzdLTS1UYVRPRThTbXJFX0RZQzNkbHk3aXBITkd6WVp1Ul8tQjUwRzBIY3FyT256QlY5SVFZX1E?oc=5",
+      "date": "Tue, 27 Oct 2026 10:14:16 GMT"
     },
     {
       "title": "Is Money for AI Data Centers Drying Up? Here’s Who Could Come Out on Top. - 24/7 Wall St.",
@@ -3858,9 +3849,14 @@
       "date": "Mon, 26 Oct 2026 12:20:00 GMT"
     },
     {
-      "title": "Broadcom (AVGO) May Join $95 Billion AI Infrastructure Fundraise - Simply Wall Street",
-      "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNRXFrLTJDNFFNbnl5Q2dWUm00clB0OHZXMDM3aGpFdnZBb3lQSklaMXdzSmtMZ1RmU0xnVkpMR0ZpU1p3QzBmSmVzamVxV2JtV3N3R01iMmdpa212WVJxbGp2V0ZFSi1zUjhJUnJLNGRjaG9FM0twVEFlX0R3YlN4aGlvdC1EcjhDWU1BODg4TFJfSlNDZE5YcFFlVzBDSjJjYk9UUERUeFJPUlVaSVJNNnRjanRqeEtqaXVCdVh3eXR6S001TVhyTGZudE1nMURTXzJJ0gHTAUFVX3lxTE1FcWstMkM0UU1ueXlDZ1ZSbTRyUHQ4dlcwMzdoakV2dkFveVBKSVoxd3NKa0xnVGZTTGdWSkxHRmlTWndDMGZKZXNqZXFXYm1Xc3dHTWIyZ2lrbXZZUnFsanZXRkVKLXNSOElScks0ZGNob0UzS3BUQWVfRHdiU3hoaW90LURyOENZTUE4ODhMUl9KU0NkTlhwUWVXMENKMmNiT1RQRFR4Uk9SVVpJUk02dGNqdGp4S2ppdUJ1WHd5dHpLTTVNWHJMZm50TWcxRFNfMkk?oc=5",
-      "date": "Tue, 27 Oct 2026 15:21:27 GMT"
+      "title": "3 U.S. Nuclear Utility Stocks Riding Data Center Power Demand - Simply Wall Street",
+      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPVGtMRzl6SXpLZDNhcXRlSjRhOXNFdWRmSFk0TFFwOGo4MXk4d1dxOXE0ajl1MFkwcXBoZ0FhcHd3T3R0bTVRSk5EQTNyU21DRmhLWkwzcUhVZVQ0WE54ak45RlVuTzdISkRNNnNIY1RhNWU1bDdtMTlNWmZWUl8ybmVRQjNNUU5GR19hV3RHakM5ZUhFamZpdjBOWU9uZWhnc0Q5VEhDZ0lJZ1dEX1ZUbVA3dHVicFNkenVrZlJDNNIBxAFBVV95cUxOUVRVVVJLci1wU3dqSWlmZm9PaUNIT0RkaWdyUENELUtUdnZrV1UxOVRFdk8xeVhYM1FoZ25SZ3BZV3FLN1JFUHhoV0N5Mkk0MHQ2OG1vc296T3VJRXFIa3NkYmJlaHV4ZEQyWmc3SmNsS0g4WUs3QkZXdmNKYkdwWWtldHJIVC1OdU1NZmxLbTRfRXNraUdVcFJ6X3ItUnYyYlpJV0ZjZ291TUp0bjRTUXVfQndUdS0zZU9HazYyaFdhMnhz?oc=5",
+      "date": "Wed, 28 Oct 2026 05:07:31 GMT"
+    },
+    {
+      "title": "Broadcom vs. Taiwan Semiconductor: Two AI Powerhouses, One Surprising Revenue Trend - The Globe and Mail",
+      "url": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxNVE5qTUZ0SGZRQ1BhZUhva3EwcVJZeU1fOEp5ZXA0VVhVLU1oSlFWRlk3NTlvend5SzR0b3JkNEZBWnhvV3hrRDZTV0duNEJPT2s5VW9qYk1WYXZsUUZnR3hNVEZCYkQ3TmRKZmZMT3JmTVBtR3RVOW1zbVBEMldlaXpUMXN2cEdOMXNZS1ZNbXNXWE90WmlZZktOMjJoX01mV19ib1BOZ1NxTWVzRTVEMGRjamRjeWRvUmJ1cnk4eDJzMGJQaU1DZ0t2WmtwLXVnNDNWenRxYURnSDZMQ3JiREc3NDgzeUZvSWRiSXFtajV3M3V3aXhXbw?oc=5",
+      "date": "Tue, 27 Oct 2026 08:57:38 GMT"
     },
     {
       "title": "AI Capex Spending: Investor Uses for High-Growth Tech Stocks - SmartAsset",
@@ -3873,9 +3869,9 @@
       "date": "Tue, 27 Oct 2026 16:05:00 GMT"
     },
     {
-      "title": "Top 3 Grid Infrastructure Stocks To Watch In October 2026 - Yahoo Finance",
-      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQVzNfbUVzSjhLTmRKOWdTbmtJdV9iNzFCQmVZWHJZSmRSelB0RE8zSFBmMEppQkx0X056WkZleEppZ0Q0SEF0cW5tN3EyM3Z0N0xiTlBLMFFMS1VwbnRBOUQ4b1ZqRDNNaVpTQ3AyUDNYNUVGOHFCSFl1U24xQkRWUVZ3enVPVzdjSXg5ZjBpUkozM1E?oc=5",
-      "date": "Sun, 25 Oct 2026 01:13:00 GMT"
+      "title": "3 U.S. AI Infrastructure Finance Stocks Retail Investors Should Watch - Simply Wall Street",
+      "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxOb2w1dXdxcjI0aWJvR1ZwVzZhR2RxUHFoa1g2bzBMYUNDazV1dU8zSGM0dEM3WV9JUkdsZTVGZ2pBd0QtOG84TV83VkVUcW5iSmRGZzBKVnM4OGNFWEZoS19sRkQxVHgtdXgwbEUydklrbzZDbmRjQ19UendqaUJsQ0FEdmR5ak5oczlnc2d6RXZTNFpyZnNfSnp0akEtMFpYcG5kOElxeVFVMnhnbm85ZjRnbW1kZWs2WmZuNkFDNk0xV0JXa1dtcjVobnRYOFNqV05HMGMzT0dXTDRnWTRLN0ZKU1LSAeoBQVVfeXFMTmdkTTN2SHp4ZEFGNEZzdEhrRUJSSlkzTjhyNVBDTE4xdUcwUkh4SHB2V2ZCOUM1TzY2R2VPRWkzenZyQW5SeU9BSGR6S0tFa1ptWjVTSHJXaVZvbF9VblAwNWFLcDVDLUNBaGNFcUNXZnh0SzMtUElIZUxGbjI3Z09uMHh5dzl3aWw2Y3NDcU9uX3dualhwRW5ZcXg1UzdIdF8zSmhja3cwMVp3V2loZnRtcXlQbS1sVjNxNnBPNmtUNjhEODlNZ0s0WFRUNmFCYXluQXNhMThnNllLWlBERlo0aGlkOXp2SUhn?oc=5",
+      "date": "Wed, 28 Oct 2026 00:47:27 GMT"
     },
     {
       "title": "Anthropic’s $750B Compute Ambition Puts SOXX, SMH and AI Infrastructure ETFs in Focus - TradingView",
@@ -3883,9 +3879,19 @@
       "date": "Tue, 27 Oct 2026 16:44:02 GMT"
     },
     {
+      "title": "Broadcom (AVGO) May Join $95 Billion AI Infrastructure Fundraise - Simply Wall Street",
+      "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNRXFrLTJDNFFNbnl5Q2dWUm00clB0OHZXMDM3aGpFdnZBb3lQSklaMXdzSmtMZ1RmU0xnVkpMR0ZpU1p3QzBmSmVzamVxV2JtV3N3R01iMmdpa212WVJxbGp2V0ZFSi1zUjhJUnJLNGRjaG9FM0twVEFlX0R3YlN4aGlvdC1EcjhDWU1BODg4TFJfSlNDZE5YcFFlVzBDSjJjYk9UUERUeFJPUlVaSVJNNnRjanRqeEtqaXVCdVh3eXR6S001TVhyTGZudE1nMURTXzJJ0gHTAUFVX3lxTE1FcWstMkM0UU1ueXlDZ1ZSbTRyUHQ4dlcwMzdoakV2dkFveVBKSVoxd3NKa0xnVGZTTGdWSkxHRmlTWndDMGZKZXNqZXFXYm1Xc3dHTWIyZ2lrbXZZUnFsanZXRkVKLXNSOElScks0ZGNob0UzS3BUQWVfRHdiU3hoaW90LURyOENZTUE4ODhMUl9KU0NkTlhwUWVXMENKMmNiT1RQRFR4Uk9SVVpJUk02dGNqdGp4S2ppdUJ1WHd5dHpLTTVNWHJMZm50TWcxRFNfMkk?oc=5",
+      "date": "Tue, 27 Oct 2026 15:21:27 GMT"
+    },
+    {
       "title": "3 Taiwan AI Chip Stocks Riding The Anthropic IPO Theme - Simply Wall Street",
       "url": "https://news.google.com/rss/articles/CBMi-AFBVV95cUxQUFJlNFZuUDVZTEtoZHRaMWRNcndXVjRNNk5xbXZqcFBjRFBGOVhmeElPVGl0RE9zeVhUUldBSWY0ZG1KdklzUVlON0FUaGNDN0s0WnY0em9BWmJDXzYwY2JWblhnVFUtWmRnZ09RS3kwSDFoSTQ0b3p6QUhIaTFlcDVUT29jVTBYRUVhSUk4ejhLUjFXdHM1WEVOTWt6aUdPNXg0RDROTmpGRWRmZFVHQ1BMVnNRWDlyeDZWcWRkQ3dONkhRWnNqQWxhckNPMUs2bGNTaUpkRWNyNjV6MHp6czAtRUFJU2c3a21nbVpEVEtNMmZyOEh4edIB-AFBVV95cUxQUFJlNFZuUDVZTEtoZHRaMWRNcndXVjRNNk5xbXZqcFBjRFBGOVhmeElPVGl0RE9zeVhUUldBSWY0ZG1KdklzUVlON0FUaGNDN0s0WnY0em9BWmJDXzYwY2JWblhnVFUtWmRnZ09RS3kwSDFoSTQ0b3p6QUhIaTFlcDVUT29jVTBYRUVhSUk4ejhLUjFXdHM1WEVOTWt6aUdPNXg0RDROTmpGRWRmZFVHQ1BMVnNRWDlyeDZWcWRkQ3dONkhRWnNqQWxhckNPMUs2bGNTaUpkRWNyNjV6MHp6czAtRUFJU2c3a21nbVpEVEtNMmZyOEh4eQ?oc=5",
       "date": "Tue, 27 Oct 2026 21:28:08 GMT"
+    },
+    {
+      "title": "AI Infrastructure Stocks to Watch as Data Center Demand Tests the Bubble Narrative - Simply Wall Street",
+      "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNdUxxbklnTVlEWW10OTNIRU5SNkZpTS1jQ2NqREhxbEZBUzFHcTdqNHdoWUdFam90TTV0Q1dqUEp3eXdwd3dMLUlSdTF0aF9HR21QUU5aVGRtbWpqVUQyZ0dYWTFDaUM5RlBpaC1DX3AxNmZGcGhGN0MzTk43dGsxdGNySnJ3c0hOd0x0Snh3X3ZMSFE4bFBjc2tITzNYYWlKZGl4X0p4WmNvSEdHbkpnc2J6UFFzMlcyaEMyb2VOZkcxOXVHQlN6WEdwS05kd0Q2UnktRXdn0gHbAUFVX3lxTE1ZQzRZVGQwMXJzc21OVlF4UUtNZ093SzNnUlJmbmRidDVMai1KQUwzcnoxdlZNUnRyaDlNUExBZEpQcUNuMGdwMUNtdkU2OWFhLURHVlBGTUpiOE45NjhnaFI0bDloTkFncUNacGdRRFdwMGJpdFowMHkxQzZFRlhMY2drbE5oSWhkVlNtcm85TlVXYjJmT1ZuUTUtcXJDXzZ6am9SbmlJNy0tejFobmJUWEtWUVdpYWpveExPQXVjRWlWeFZJRWctaEhhWkhvNUJob0tKemVjemxKUQ?oc=5",
+      "date": "Mon, 26 Oct 2026 08:48:45 GMT"
     },
     {
       "title": "3 US AI Infrastructure Stocks With Data Center Demand In Focus - Simply Wall Street",
@@ -3896,11 +3902,6 @@
       "title": "Anthropic IPO Could Lift Semtech Stock And Other AI Infrastructure Picks - Simply Wall Street",
       "url": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxOZkk3cmZPSHJiMy1IQWNCWW90WUtCUEZuYnNoczg4WXBWajcxU01uYm11UVctSGx3QmFkRk50U2NKT2VncTVTbmR6Ymp1SXE3WTRuOUFoYlpiSVJ2R2VDSDRWQjFKdjFyTGpEWG80b3RXb21xakczT2pGdWhoRHMwQ0ZCdDhjVzM1aEltSGtzRlZhWUdfOGdzck9ZVzg1ekFkbnhlMnB4a2ZZZncyZ0VVbndHaGl2bExGNXNIZ2R3VWRCdGM3TGd2OUY1WTdzQmRMMmNkOTVEa3hIb0phdDdzMtIB4AFBVV95cUxOZkk3cmZPSHJiMy1IQWNCWW90WUtCUEZuYnNoczg4WXBWajcxU01uYm11UVctSGx3QmFkRk50U2NKT2VncTVTbmR6Ymp1SXE3WTRuOUFoYlpiSVJ2R2VDSDRWQjFKdjFyTGpEWG80b3RXb21xakczT2pGdWhoRHMwQ0ZCdDhjVzM1aEltSGtzRlZhWUdfOGdzck9ZVzg1ekFkbnhlMnB4a2ZZZncyZ0VVbndHaGl2bExGNXNIZ2R3VWRCdGM3TGd2OUY1WTdzQmRMMmNkOTVEa3hIb0phdDdzMg?oc=5",
       "date": "Tue, 27 Oct 2026 17:18:57 GMT"
-    },
-    {
-      "title": "AI Infrastructure Stocks to Watch as Data Center Demand Tests the Bubble Narrative - Simply Wall Street",
-      "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNdUxxbklnTVlEWW10OTNIRU5SNkZpTS1jQ2NqREhxbEZBUzFHcTdqNHdoWUdFam90TTV0Q1dqUEp3eXdwd3dMLUlSdTF0aF9HR21QUU5aVGRtbWpqVUQyZ0dYWTFDaUM5RlBpaC1DX3AxNmZGcGhGN0MzTk43dGsxdGNySnJ3c0hOd0x0Snh3X3ZMSFE4bFBjc2tITzNYYWlKZGl4X0p4WmNvSEdHbkpnc2J6UFFzMlcyaEMyb2VOZkcxOXVHQlN6WEdwS05kd0Q2UnktRXdn0gHbAUFVX3lxTE1ZQzRZVGQwMXJzc21OVlF4UUtNZ093SzNnUlJmbmRidDVMai1KQUwzcnoxdlZNUnRyaDlNUExBZEpQcUNuMGdwMUNtdkU2OWFhLURHVlBGTUpiOE45NjhnaFI0bDloTkFncUNacGdRRFdwMGJpdFowMHkxQzZFRlhMY2drbE5oSWhkVlNtcm85TlVXYjJmT1ZuUTUtcXJDXzZ6am9SbmlJNy0tejFobmJUWEtWUVdpYWpveExPQXVjRWlWeFZJRWctaEhhWkhvNUJob0tKemVjemxKUQ?oc=5",
-      "date": "Mon, 26 Oct 2026 08:48:45 GMT"
     },
     {
       "title": "3 South Korean Chip Stocks Facing the Biggest AI Spending Slowdown Risk - Simply Wall Street",
@@ -3923,6 +3924,21 @@
       "date": "Mon, 26 Oct 2026 07:07:29 GMT"
     },
     {
+      "title": "The AI boom is getting so expensive that SpaceX needs a $40 billion GPU deal - Yahoo Finance",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPV182X21TWlJ3blR3cGxuTDNveVUwMXE2RHdrdkZqc1NqMW9wY2JMaFBPZXRBdXpNcHJzdWhlMkNUZTgtQXNoNkFfdUlySjYwX3JxU2NKTWhXbGxWbzVxXzM3dzRYbVUxSUlfZ2pfbnZYY2Z1NEhqNGhGY0FMSUx6dXVNQjlMd0xWenZMZXRGbjNmNDN4dDZfMzk4X0Q?oc=5",
+      "date": "Wed, 28 Oct 2026 01:05:00 GMT"
+    },
+    {
+      "title": "Broadcom’s Jericho4 boosts data center AI networking - TechTarget",
+      "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQaDd2SDZJYVFFS2Y4LVNKcHJtUVhUV0lvemtxczhGVzc0YzZYYlZBRkxmNjVERENlMmpJdFI4TENyOU1jajFpMXpFY2VWMGFUb25hSTU1Z0s0X2VESk1paWw0ODRzNGZHX2h5X3BDMFlkV0N3SEFicGFPREVXY0xCQzZ4VHFlVXFVaTdzWHhkV0pUQkFFamc?oc=5",
+      "date": "Tue, 27 Oct 2026 22:56:35 GMT"
+    },
+    {
+      "title": "Three Undervalued Technology Stocks to Buy Amid AI - Stock Investor",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQYUZNR1YyV09URjBXczkxRzgwd3FZME8zS2N4VkxEdm5yZ2NTaTUzS195Y3VGNFhHMEZNeF9nZmtvQ2l0SHVQVTRfaUtVZXJHdV9jWGVydW9uTDcwR3ltdDVPcVJyZDFtZG1PT05XNkh5Tm90blZRY09aVnFqanNiT1pOemp5UGdh0gGOAUFVX3lxTE80cWNFS2xjMFZidUJTTmFHbFotUEJEeVJ5VmxSc1NQbHU3XzJscXNYSllxejNfNDB5b3pBWU9CcjZpU1BMQWxqWW50X3Y5WW1hc0pkOWRRbVVoMHVENWxNUFZNaHBDWFdhblRHdGxRNWdTNjhKOVFsYWF6cEozNVc3eE5uNElidUhDV2pFRXc?oc=5",
+      "date": "Tue, 27 Oct 2026 18:27:22 GMT"
+    },
+    {
       "title": "What Equinix, KLA, and Vertiv Earnings Could Signal About Data Center Demand - 24/7 Wall St.",
       "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPTG1YbEp1Vk9GcGtISVU2TVhRYlZvRTVkNVdUajNWMjV6VEwxVi1fTGljUTJJN25RaVEzTjI2b0FSSXhIbUNnYnJPZlJCNWQ0ZnlxTDhVamk0R2hhckNOOG5WYkFocG5Kb3lXNHdhY09GNzZjdklPWXNzZ3lrcEFQZ0ZkeHFDSnpaQlVLUWk2QXNLVmM3NjU0SmNWMFYxUkZKNkZJbGRjUWd3Ykg0R0xnUFRDMzFRWFR5dHc?oc=5",
       "date": "Tue, 27 Oct 2026 12:50:00 GMT"
@@ -3938,14 +3954,14 @@
       "date": "Tue, 27 Oct 2026 09:30:00 GMT"
     },
     {
-      "title": "Nvidia 🆚 Broadcom: AI-related revenue in the previous quarter rose 221% for Nvidia and 117% for Broadcom. - Moomoo",
-      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQLVc0bGYtaTVNYXpVTkZRQWlRZUFTRUxIbDhCQVg5VGFZeEJkUEJ5WlRlTzlQZnhON21lRkh6UUk1U0owWGtILUdZMFJHVm94M01STmozazdSTWdTSTRQbU5aX2Z4VWVpd3RwZ211MkNqU3ozblpfdjhzd21zUk5LUDk4MFV4Q2RKQXhmYS1LM3NPbXVYSUtKUmFaNmMycnBkaWpyWWNrN1A0dGxtTGow?oc=5",
-      "date": "Sun, 25 Oct 2026 00:29:57 GMT"
-    },
-    {
       "title": "Meta Sells Stock, SpaceX Takes On Financing: Who Runs Out of Cash First in the AI Race? - SoSoValue",
       "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1iUFVTSHQ4NUFhdXBzaENSVGpYcGdadkpsaE9MbUt5MHVpQ3hZV2hNMDduQ1dXR2xrbG01bUpTY3pteXE3WVl2TkxmZms4YndkM0l4U0cxY3kxekhyb1ItMzhXY2xLVXdI?oc=5",
       "date": "Tue, 27 Oct 2026 11:15:03 GMT"
+    },
+    {
+      "title": "Anthropic’s $750B Compute Ambition Puts SOXX, SMH and AI Infrastructure ETFs in Focus - Benzinga",
+      "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPS3lmdlBramJDSFpPdlJIX0ctbmpOSWRCaVNlNC1UV1pOandSa1M1aDM0Ykt0WVpFNGZEbHZWR1hVci1xelhBSjIzT2ZNcWdlQXlENTNEdUtnclRSdEpPbE14eGxnQUJiZ2w4NWhfUzFfYmJ1VlNjaWhLbGZnSVlqbGJ4SkZFMnhRMVB5UlJkcnoxNFZvQ04zaUhwbE1fWk5TRjV1MEFTM0ZveDBDeGZLejdRM3VZZldMVUlqOWFKUVl0dC1fdTNnOER5bXROQUJIdGFMUg?oc=5",
+      "date": "Tue, 27 Oct 2026 16:44:02 GMT"
     },
     {
       "title": "The Ethernet Tollbooth: Arista Rides Broadcom Silicon to Break Nvidia’s InfiniBand Monopoly - 24/7 Wall St.",
@@ -3956,11 +3972,6 @@
       "title": "Can Higher Data Center Revenues Propel Intel's Q3 Earnings? - TradingView",
       "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQQURNNUYtWE4zX0VXbDhMcmhBZnNQcVNwQjJlNWJoRy11VjlEY3UwUTFEdlhFVXM4ZjNSS2xKZjNEQV8xSjRLQXFyVXNLRDhYNTMzTW5ENkNFVnJ5Q1NJMzJoNjUyQU1HSjVtT08zcERlOHBGUWs2cGphRG1yY3JSUVBZOUcxT2dGdTl2b2M3N1prM0NNcVhNN2tBZHU4bG9ZMjdwWWktQ05hREV4RlZuc0UwYlc?oc=5",
       "date": "Tue, 27 Oct 2026 16:37:58 GMT"
-    },
-    {
-      "title": "Anthropic’s $750B Compute Ambition Puts SOXX, SMH and AI Infrastructure ETFs in Focus - Benzinga",
-      "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxPS3lmdlBramJDSFpPdlJIX0ctbmpOSWRCaVNlNC1UV1pOandSa1M1aDM0Ykt0WVpFNGZEbHZWR1hVci1xelhBSjIzT2ZNcWdlQXlENTNEdUtnclRSdEpPbE14eGxnQUJiZ2w4NWhfUzFfYmJ1VlNjaWhLbGZnSVlqbGJ4SkZFMnhRMVB5UlJkcnoxNFZvQ04zaUhwbE1fWk5TRjV1MEFTM0ZveDBDeGZLejdRM3VZZldMVUlqOWFKUVl0dC1fdTNnOER5bXROQUJIdGFMUg?oc=5",
-      "date": "Tue, 27 Oct 2026 16:44:02 GMT"
     },
     {
       "title": "Nebius CEO Says Company Has Enough To Build Its Gigawatt, But Admits That \"Some Of The Capital Sources Are Temporarily Closed\" - 24/7 Wall St.",
@@ -3978,14 +3989,9 @@
       "date": "Mon, 26 Oct 2026 06:06:27 GMT"
     },
     {
-      "title": "Nvidia, AMD and Broadcom weigh $5 billion investment in Meta - jawlah.co",
-      "url": "https://news.google.com/rss/articles/CBMiP0FVX3lxTFBCdWNHSGpOeDNQcnZqaEpnSVR6NlVTRU1ZRkxLZl9yeTJyeW9KYlp3NEJKb3NUNGJodC1tdDdZNA?oc=5",
-      "date": "Mon, 26 Oct 2026 17:29:53 GMT"
-    },
-    {
-      "title": "US stocks close mixed - investingLive",
-      "url": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9qM0Riak12b1NHMTdUakVYSmFHMzU1dDM5ekllcXBDaVZYa1dBYmxRREp6T1EzTnZvTXRtLTVlZU5JVEE4ZGpEdDZDY01hZXBtUFZRbHVUVmFOR3VJWlpWdVg2SjFiMmdo?oc=5",
-      "date": "Sun, 25 Oct 2026 21:52:24 GMT"
+      "title": "Arista Networks (ANET) Raises 2026 Outlook Following Record Revenue, But Is It Fully Valued? - Simply Wall Street",
+      "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPbktEaG8xbjgtN3JNUEZ1NEZDcjhTeVB3cmNyM2ZGaG9raVVNRUwzSHJVemlmUHk5LVIxQm1sdkVVaEdRN3BXWGxVSmVFN09XM3ZpcFUya0w5d2ZRbmg1eE5PNmlJV193anAxaFlKaEI5QjJLd0s3TzhkMkNiYy1fbUZaeFJVU1d3azRzcjc1Rng2ZU5UM2lYeXo1WlVpaUVPU2hyV3J3OUxxWE9jZTB5MFdNQ3RaeUlRMjJjMVBLUE5acDlsT1FB0gHMAUFVX3lxTFBTRk5RdmlJc21qT3JoVlp6TS1Id1lnSHBnNTliWkd6RVQwazB5eFlCQWtxc1VFcjM0TDZkR3pCdDhxbTVadzZ1aEtrUlJmNUtHaXZWallNcHJGRHA4SUVXVWVvbXdwdk05VzFIakgtQzhhNWg5MjFZbERsdmo2VFdmVWl2eTNHUGZ3WnVyeC1sSFRwSmdqblM1WC1FNGt2M1dPaHliZTlCWW5HNWNxN0IydG5Nam9oVklHVjVTdnR0by1yaGd6SHhfZHpndQ?oc=5",
+      "date": "Wed, 28 Oct 2026 05:07:32 GMT"
     },
     {
       "title": "SpaceX Secures $40 Billion Financing for AI Chips as Computing Costs Surge - boldnewsonline.com",
@@ -3993,29 +3999,9 @@
       "date": "Mon, 26 Oct 2026 08:36:02 GMT"
     },
     {
-      "title": "Top 3 AI Stocks With Revenue Growth Over 14% To Watch - Simply Wall Street",
-      "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPdlhmWXNYT0N1ZkJNSlFXSHBRZFdMbGNWRHRvMm95emstaGRQdEdrdEJOTGpkR0dQUTIzSXViN010QXNDX3ZCbWtENk9ucTAtTkZ1YkQzQWNvZGQtMm1nTENzYzUzX0YtSE5GUVVQZjlZOVVHSnNlU3RUYmhwRU9QOEk2Y2tmc1hRZWV1TDg4MHEwMm14SENTWU42dUFscENZb283bzJicjJoQWpNcEZvTG5UbVRRRTJkaFVrQlBZaTFVc21zRkU3a1h6SGnSAdIBQVVfeXFMUEU0b042OU9wTW12bzFuaEVSNXVwdm5FT2p4d3djX19uQmpvRDVjT3BabFN5UWltR0JPR1BnQ05NMGhIeC1QYzdVc3Z6cFpkMHBpbEpIQ3kxZ3NRdk9ud2k0d0YtSUtvWlFFQmQ0LXhQc3lSXzFZOHFMQXh6SGNrNDRwZmVwbk1GUkNPMmNUWVhiYjRQX0JPNDNrSTVYZDZnSFBHUm1yV1o5MnhxUnJGZlFnQUpIUW9yUl9aTnFHWlFOYWFwZDFxOU1kS1dZZFRoZVNR?oc=5",
-      "date": "Sun, 25 Oct 2026 17:43:34 GMT"
-    },
-    {
-      "title": "3 Data Center Infrastructure Stocks With Strong Balance Sheets After The AI Funding Warning - Simply Wall Street",
-      "url": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxPQVJRU2dNVUlwY2c1dVVlb2VWZFhibGVLck1CWmNSQk93ZVlwQy1iSlo1cEpnUm02UHJpdWlwUUxkTXFub0xNc3dLWmFvLUhXdU93MjVrVl9yVkxpV1h3c2d4bGVqZlpNQTJtUlRXVk5RYW1JaU1PaEZNdVpQaER1dTFsUDctV3c0OVFqQUppdTUxdUtUS21xTXNKeHhTZkVKNV8zcHFtWmZwdkhKNVhOMTUyMTdiYnJqUGdHZ3gxeVpPT3R5VnBndmF0UWdXTm1INGkxWDlpZ0dqZ9IB3wFBVV95cUxOV2dvbWhiWS1mMDVVS0V5aHRZblRScDlXSTVFN2RYby1kMDBSWFpJTW5mQ09TUE1icFota1R5eXJ1ajE4dlBjb2tkdnNCbGkxMGxrQWZoaTFhckdwZEkwcks0THBqb2dySndzVGtDMmxqQ1UxVzlvNFBveWtWbWlQQkxOeENERVdtM1FTUzdVUDNRTkMtN3pROXlxN3lYVW1WUHNMd2NWcUF1c2w2V0tWVDJOSEh0QWxoUVBIUDRJX0N4UTJ4ZEVYa1lqdmszcGswRXpHcGRHRkJiUDRYa1RZ?oc=5",
-      "date": "Mon, 26 Oct 2026 14:23:04 GMT"
-    },
-    {
-      "title": "Cisco Systems (NASDAQ:CSCO) Rides AI Networking Demand Higher - Kalkine Media",
-      "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNOE1SMnZDMHFtQ2FBbGFueDFUaThEQVFLcjQyUUZpYVVWZmlWalNNaGZIQUo5SHJ4REhva0ttcm9jaFRTaG9GdmlDT29pQmoyX01JVy1zUUNZQUxjWGt6ZEkxSXdnbjlldl9aeG5BVGhnRHBoM1cyaDF5SkZSWHNSVkM1WENRTGs2di1hRXhKdGVrQ01EUWNkeG04R09lZ2RhZ19qbg?oc=5",
-      "date": "Mon, 26 Oct 2026 10:00:00 GMT"
-    },
-    {
-      "title": "Can Boston Dynamics keep up with Tesla and China in the humanoid robot race? - MassLive",
-      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPWVBHNEVBR05VR1NCSExqMWJ5cjJxUUlqRGtKOExZczNKN3plMFFQaS1ZYUktNGlpUWlGcUVYV21vR1l6X25tMGNuaWhCeFZPdkl6bUxZUUtTRkpqeGlpR0RPYl9wdDZWOVJWTGJoRFJyelJZNWJkNUk0TTRHcG1HakRCZHZPRVZzODhZSTFCNTdfNWRyTmRiTDhXbTRoamItWkdGcW12cGtUZlNQSjRnNHNVWVJzMmJydlE?oc=5",
-      "date": "Tue, 27 Oct 2026 09:33:00 GMT"
-    },
-    {
-      "title": "Humanoid Robots in 2027: Tesla, Figure AI, and Agility Race to Deploy - eWeek",
-      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE55UmxpazZfZHg2SkRZMG1uMFU3QV9pek1KWFNYSU9rODJXRlkxaUVxNFN2d1NaV1ZVd2JpaHhqZVYtRnEzNWF2YnVSeTFUNi16WWRtQ1FEcmxjd0N3a19pbmp2ZnY1Z2V3dWktSEJSTEpTUW8wbDNZWDNR?oc=5",
-      "date": "Tue, 27 Oct 2026 20:49:49 GMT"
+      "title": "Top 20 Robotics Companies Backed by Lei Jun: Key Investments in China’s Intelligent Automation Industry - 36Kr",
+      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5aXzM5MEowSEpIOWJOckJBY2lNRXk1ZmU3bUxJMVNkQ3huc09sMmJQeXNmMUdIODJuRnE4d0otWDQxcUxCX0FTaVRDdUNlUV9MQ0xn?oc=5",
+      "date": "Wed, 28 Oct 2026 01:33:48 GMT"
     },
     {
       "title": "Move Over, Tesla: This Robotics Stock Is the Better Buy - The Motley Fool",
@@ -4023,19 +4009,24 @@
       "date": "Mon, 26 Oct 2026 19:45:00 GMT"
     },
     {
-      "title": "Move Over, Tesla: This Robotics Stock Is the Better Buy - The Globe and Mail",
-      "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQLVdsQXFBaTlkdDlqbnAxeUc5UHNQWVBLNlhGb1FadmZfa1Z5Q1Y5dHNHbGJWQXZCbmxocTFXRHhOeW1tVG82MlF6YlF1RXRjbV9UZjh0cUJTNUFUeUZZZmFvVzFFY3E4UU03RlRvX3dGSmdvUkJDVkN4WTNUQzB2aXBrOHhnOGIzdFJmSVBwdUtZdVBvb2IzdEFSMDZkamJ6eXF2eGJvd2YwZVRUbE9FcVBkSDVBV01ET3Ztb2ZvVVNwSXlodEYxMEFwaTcyM0lyWkdnLVVQaw?oc=5",
-      "date": "Mon, 26 Oct 2026 19:21:35 GMT"
+      "title": "Can Boston Dynamics keep up with Tesla and China in the humanoid robot race? - MassLive",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPWVBHNEVBR05VR1NCSExqMWJ5cjJxUUlqRGtKOExZczNKN3plMFFQaS1ZYUktNGlpUWlGcUVYV21vR1l6X25tMGNuaWhCeFZPdkl6bUxZUUtTRkpqeGlpR0RPYl9wdDZWOVJWTGJoRFJyelJZNWJkNUk0TTRHcG1HakRCZHZPRVZzODhZSTFCNTdfNWRyTmRiTDhXbTRoamItWkdGcW12cGtUZlNQSjRnNHNVWVJzMmJydlE?oc=5",
+      "date": "Tue, 27 Oct 2026 09:33:00 GMT"
     },
     {
       "title": "Agility Robotics Highlights Commercial Momentum and Growing Enterprise Demand for Digit Humanoid Robot - TradingView",
-      "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxNOUx4a296dHAzMDBBNF9pdnJIRVUtOGJEMm4xRnpTV2MxdktjX0tXSDR5c0ktSTlqRlhtQWZRRW9lMkktaGh2UDJqNEd5YVgwUTRaQ2o2aVpzZzVjU2M3ZVp1MzdFT0JtZjhtMS1GeXJRcGt3SEk3Q0piMHRianFNYV96aWZNWTRzWkVzTkpPUWwxX01HMkJONEhUdzZkX3J5SEZTLWFzNEJHR2xfMlVIOVZpakhTVW1LTHRGQUpxaXJwS01LUl83NnRrT0d2X0NGQnhtc3BkNUtYOWVhWWNmRTI4ZUd0ak1EN3ZkLTcyMXdmVnF1?oc=5",
-      "date": "Mon, 26 Oct 2026 16:12:45 GMT"
+      "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxPMGYyZDk2a2V2NWpKZTFWMjJsMURvcm1pUVN1XzRlZnR6bXpSRDVlSi1Xb1k5VDJtTkJzTVRRZWgyaHgtOEtVUl9Pb2swQWFpektHcnAzZ0hVT1c0cDd6bHpRc3VkNGU2RnR5Y2lxOVo5Z01TV09QMXhaUXRjamR4cFA3c0Fud25CdEY4cFVsbFhuU0R2YUU3Zk9QR3ZNd0JScFJ3VlBJbmZuTTVKM2JVU2JYWERpcVNoWU5YdUJ2bXZpbkIzSkxPSk1GdmlqTHgwRlNNaU9zTG94ZzZ0a19VNUlBYjdtdDAzck1vbDVkenVXV0ZxYnc?oc=5",
+      "date": "Tue, 27 Oct 2026 13:11:09 GMT"
     },
     {
-      "title": "Primer: UBTECH Robotics (9880 HK) - Oct 2026 - Smartkarma",
-      "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxOd1BMZFVSQ2NNZ25za3lrRjNUM2F0OUJRVUJMa2RqQ0REZlJJLVdNUGtJT0dsQmVhWjNURENvc3lRbHRNS1RwNFdXYXZ6elZZQTQ3eVlmcThZUnZDa3ZvTE5odHEtLXhYYjNfMzRweEJBQ2VVN2w2ZDd3UUdnek05Rw?oc=5",
-      "date": "Sat, 24 Oct 2026 23:21:21 GMT"
+      "title": "Humanoid Robots in 2027: Tesla, Figure AI, and Agility Race to Deploy - eWeek",
+      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTE55UmxpazZfZHg2SkRZMG1uMFU3QV9pek1KWFNYSU9rODJXRlkxaUVxNFN2d1NaV1ZVd2JpaHhqZVYtRnEzNWF2YnVSeTFUNi16WWRtQ1FEcmxjd0N3a19pbmp2ZnY1Z2V3dWktSEJSTEpTUW8wbDNZWDNR?oc=5",
+      "date": "Tue, 27 Oct 2026 20:49:49 GMT"
+    },
+    {
+      "title": "Move Over, Tesla: This Robotics Stock Is the Better Buy - The Globe and Mail",
+      "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQLVdsQXFBaTlkdDlqbnAxeUc5UHNQWVBLNlhGb1FadmZfa1Z5Q1Y5dHNHbGJWQXZCbmxocTFXRHhOeW1tVG82MlF6YlF1RXRjbV9UZjh0cUJTNUFUeUZZZmFvVzFFY3E4UU03RlRvX3dGSmdvUkJDVkN4WTNUQzB2aXBrOHhnOGIzdFJmSVBwdUtZdVBvb2IzdEFSMDZkamJ6eXF2eGJvd2YwZVRUbE9FcVBkSDVBV01ET3Ztb2ZvVVNwSXlodEYxMEFwaTcyM0lyWkdnLVVQaw?oc=5",
+      "date": "Mon, 26 Oct 2026 19:21:35 GMT"
     },
     {
       "title": "Agile Robots Launches Agile ONE SN Humanoid at NVIDIA GTC Berlin and Pilots Humanoids with Audi - Yahoo Finance",
@@ -4065,7 +4056,12 @@
     {
       "title": "Humanoid robots are starting real jobs, but Singapore employers still have time to prepare - Human Resources Director",
       "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxPWDA2Z2tyS0poMXMxN0pMbmNxY3pwbUQwY2Jheko0bVdKODBCMkFidFY4OExkREEtcGNoekVBQWhrZmIxVENxZ1BtY0xsUWN5M0NoeUVsdVUzYkZVTVRfRlIzNkNZVEZDalE2TkFDZE1FZVh5MmV2cHdxNWZHUTRQMUdWbUI2Sml0V21McWxCeWdVQWttalMxNUZtM0hmVkZaQlI2LUR5TlhKVU1YYXhNMk9BZHI5WmZqdmJHOW9GdWpkVVd4OFpRRE0tZ0pIZGYySlI4d2w1SEgtdVpwVjU1X24xNUQ0NTByWnYyS0hn?oc=5",
-      "date": "Mon, 26 Oct 2026 17:57:01 GMT"
+      "date": "Tue, 27 Oct 2026 03:33:25 GMT"
+    },
+    {
+      "title": "Quant Group Secures Order for 2,000 Embodied-AI Robots - Bisinfotech",
+      "url": "https://news.google.com/rss/articles/CBMiiAJBVV95cUxORGtxdUlaZlBPTnlobVhTbGhFVW5iZFBxcDNuZFdTMmtFV2YtOExzNmFjUlpEdk5aRUZWUVZEQmpDZEE1LTc4Vlo1M1VVX2g0MW1PTUUxUGJZRmZIeDJGcFpRQUZNdVc2d3d3c0lWRGZySjQ4bUNsYmpmaDRySFNYSlFwMXJiVHY1T2tZUFNVZ2JfSENQRjlRVnlFTnBlTWZrdEpKSkZyZFUzU3hEQkpidHF1bFB2S1B0cmV2ZUJzVnBrb3ZGN2duT3lOX0I5NXdWZDU5ZWFweHNmTmY3OTk0RGRPMDhKUnFuOGFuQk9BT0c3V0lVb2FhamRoclpMbGFzUDZGVk5hdWE?oc=5",
+      "date": "Tue, 27 Oct 2026 10:35:46 GMT"
     },
     {
       "title": "Vietnam robotics market eyes double-digit growth by 2031 - VnEconomy",
@@ -4088,14 +4084,14 @@
       "date": "Mon, 26 Oct 2026 00:09:19 GMT"
     },
     {
+      "title": "Marvell Technology Inc Stock (MRVL) Moved Up by 3.26% on Oct 27: Key Drivers Unveiled - TradingKey",
+      "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOU01IRUM1WTd4Zi1KeGFFZTJEdFN5WWpYZUdVaWw1MTFUSlZSUUpzN2x1SDNOMkZpTkNGbGZ1WXE0QWRwU2Z3enVnU3BpeHlMdGdDZ004NEVlM1JLb1ZLUGk0Yno4YU1JRGg2WVNhTUQxdUpNQ09rYWdmWWlSWExWWl9VWHA1c3NtZVBF?oc=5",
+      "date": "Tue, 27 Oct 2026 15:15:25 GMT"
+    },
+    {
       "title": "Eight Shanghai-Listed Leaders Speak Out: AI, Innovative Drugs and High-End Equipment Advance on Three Fronts - BigGo Finance",
       "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE5wZW1PZU1seGlYNWh0a0ZRLUE2LWQ0dWFtR1l2MTFNTjJiLVlsaktJazZsYjVLUkNPUE1BSDNleVZPUFM2Y2RuRjBUYzlsbFhWUzFMeUVGbF9uelpLaS1RYXhVVFVKWnFxaHo1OHhBRmlmLVFONVE?oc=5",
       "date": "Tue, 27 Oct 2026 11:05:00 GMT"
-    },
-    {
-      "title": "Astera Labs (Nasdaq:ALAB) - Stock Analysis - Simply Wall Street",
-      "url": "https://news.google.com/rss/articles/CBMiekFVX3lxTFBJTTJxLUZXZ2lMdUVwelRRelY5YUhHTkN4OWhoN2lDVHdoc2U4YklJSXBVZ0tqWUstV2VsM2pxOHpycEJHZEJDdEZrZnRteS1Pemk5QW9ibVNfdWY1MmJZTGJLb05lTG12eWVDME5XdEk4a3dnMzlZbk9n?oc=5",
-      "date": "Sun, 25 Oct 2026 07:00:00 GMT"
     },
     {
       "title": "From Robots to Robotaxis - USBE and Information Technology",
@@ -4103,9 +4099,9 @@
       "date": "Mon, 26 Oct 2026 16:48:36 GMT"
     },
     {
-      "title": "Detailed Report on the Artificial Intelligence-Powered Robot Pick - The National Law Review",
-      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQR3RIWnNqdEV2dzV5eTh2d3ptaC1GOWNtVWhUUnduU0g1NDBfbk13bFowWlE3NWV2cXFoYUdEM2prYXFZR1ZvRkktSEtHYnZDdmFYV3VoenRsVndBOG1OS090TmtCTlpyb2pLYnl0VDQyZ2Z3enh2cXduVHBtNmp0RmNzd2d3QTVZbUtkWVlZd3kzb2xIXzJZSDlmcmFaSVBIT002MldLenpLQWc?oc=5",
-      "date": "Mon, 26 Oct 2026 17:54:03 GMT"
+      "title": "Comprehensive Report on the Autonomous Mobile Robots Market Inclu - The National Law Review",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPbjc1OGJjOTNfVHNUbkhqT2FPcmxDd0ZPTUNsbVNCdGJJNHl0SmpIQ0ViNFZIcGpJM01iWVVicWxIcGx0UlBjMEdMOUp1cWZWLWhWYWpNWmF0RUJnc1JPT25LRTNqTU1VYVBQelVYWGsxRU0tRnJIT2dQNFYxQ2RCdUdHcTlwZUJsQzdFSVgyUmk1WW5KTU5iZUZOZURvd0NfaHFTRWxlb01EYjFaVFpGakJn?oc=5",
+      "date": "Mon, 26 Oct 2026 14:09:22 GMT"
     },
     {
       "title": "Heavy Load Robot Arm Market Demand, Growth Trends & Global Forecast 2035 - Global Growth Insights",
@@ -4113,29 +4109,19 @@
       "date": "Tue, 27 Oct 2026 15:12:04 GMT"
     },
     {
-      "title": "Comprehensive Report on the Autonomous Mobile Robots Market Including Forecasts, Innovations, and Industry Perspectives - EIN News",
-      "url": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxPOGl2TmRqOVhiTVpxaFVJSmVLNHdldW1ZMTFZOVZFUjJpWl91bkVHQTVLc0dqNUVUTmtiMmtRWnpmaG5Qd2pLU2Y0VEVQOHFZR1FmUlhXLWQ4VGZvZVFDQ0hPS2tYRnRNUDNpem5QbjZfYXhwSXZ2cWtycTRWUFk5WjVRQ0ItbnBOeVRlT0VHeTlXTzVXWDhMWG1senE1RXhqNEZtano1eEl4VllocDhsSWI0RzNpcjh0c1ZqaEEwX0pPZTI2YzAyUy1Qa2NCX0JpdFJyM29jNVpCQmxSUW9WUGFCV0hkZnNrT1ExRTVtelU?oc=5",
-      "date": "Mon, 26 Oct 2026 13:00:00 GMT"
+      "title": "Detailed Report on the Artificial Intelligence-Powered Robot Pick - The National Law Review",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQR3RIWnNqdEV2dzV5eTh2d3ptaC1GOWNtVWhUUnduU0g1NDBfbk13bFowWlE3NWV2cXFoYUdEM2prYXFZR1ZvRkktSEtHYnZDdmFYV3VoenRsVndBOG1OS090TmtCTlpyb2pLYnl0VDQyZ2Z3enh2cXduVHBtNmp0RmNzd2d3QTVZbUtkWVlZd3kzb2xIXzJZSDlmcmFaSVBIT002MldLenpLQWc?oc=5",
+      "date": "Mon, 26 Oct 2026 17:54:03 GMT"
     },
     {
-      "title": "How AI Is Transforming Warehouse Automation and Robotics Operations - openPR.com",
-      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQdVVzVjBpbnJ0SVFiV29tMHVJOExvUEZwOVRha1NtSmNkUWV4NVNqQnMtQ2YtYjgyc2N2M0I2d0JaSVNCS24yU19Wd3hQZ2NVVml2enhzV18tYVAzamV5VzFFZjRyOVBYejRqcTRRVW80TVY5cERNTy0xdGJvdDFKYXJTSlNOTEdlWElOTFhiWjRaZG9kVmJN?oc=5",
-      "date": "Sun, 25 Oct 2026 01:36:00 GMT"
+      "title": "Unicorn startups in France (Oct, 2026) - Tracxn",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPcVNHRi1MWFVNQUlxNzNfb1Rud1Q0Z0xlSXZhbTNQSGQzWFoxSW1XenJ6aWNiRGp1WnVSUnVLWEdBQlkxdlJoWC0yS0tYblAwRDhyT2lkS1BHeWxzLU5DS2FJdnF0QVI1eG1ncUFVeWY2N3FEa1p5RTQ5VjdDRlJ1Y3RBcmVNYkNOeWc3cHpndTJXNE5zOVE5UGNR?oc=5",
+      "date": "Mon, 26 Oct 2026 00:14:21 GMT"
     },
     {
       "title": "At 7x24 Exchange, AI Data Center Growth Confronts New Realities of Power, Grid Reliability and Community Trust - Data Center Frontier",
       "url": "https://news.google.com/rss/articles/CBMiiAJBVV95cUxOTEpIMlJ3dXF0TlVBZ2Vqak9HUFJRUjM2a2tNcGVuaFM4eGZsaEdMMS1HR29hakxRTG43Vk9VMGs1UVEyU0xka1RfRzBTS2xKZ2VnUDh4dDBKZkxUejFXQ2ZYRDRwMTRrX0s3SHd1YTMxVWJyWmNweER5emdjMEFndVg4aFpPVklnV09jWlM4cG9BTC1QTV9NN2g3a3JYMkNmYnl1REFOalFCYWsycy1NSVZhaG4xU2FobGR5dk1LUWtKdV8wM0ZJdW9fZnMtQ1VuaE1aREE3U3hidElnanAtSElqZWt5UXZvSzdhREFhenFORXhuM1JkcnF3MXFjMzBiZlh5em1oSTM?oc=5",
       "date": "Tue, 27 Oct 2026 14:54:45 GMT"
-    },
-    {
-      "title": "Major U.S. Technology Company Selects Baker Hughes’ Power Generation and Cooling Solutions to Scale High-density AI Compute - Yahoo Finance",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPcGFVMGJfUUU5TjZtX0Mzdk13bHZ1WWpEVk9MRGdlLUMxQUVxYmlvUGRqQ3N3aEtYcVhXWW5XZUxBQUtSOWRTX0t6S2F4Wnc2YXZlRTZkbUVHT0JYSThGLUc4Tm00NU56N3NzNmNZTGtfWUpyaklUWk9CajhYX1dydkVNczFXNUhyT05zajhOdXIzS0dzVU5GMldRc210eVE?oc=5",
-      "date": "Tue, 27 Oct 2026 20:15:00 GMT"
-    },
-    {
-      "title": "AI Fuels Infrastructure Investment in Mexico - Mexico Business News",
-      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOR2FOMGJFTU9RR3R3THh1Q250LWstYWpIY1ozRkozTnNpaS0wV19TWkRBTHZzM2VRR2VvY25NN21KbFNFeTdhcWxySkhqelNjeWtXVi1FWFM2TnRpMTdwb2l1S0M1MlNjOGpESlZlXzFfQ3BSdzcxTjVfVTdBa3pjMW4ydHliajRrYV82anh3b0loUkU?oc=5",
-      "date": "Tue, 27 Oct 2026 19:34:36 GMT"
     },
     {
       "title": "NVT vs. LITE: Which AI Infrastructure Stock Has an Edge Right Now? - TradingView",
@@ -4148,9 +4134,9 @@
       "date": "Tue, 27 Oct 2026 13:50:00 GMT"
     },
     {
-      "title": "Vertiv Completes $1.45 Billion UtilityInnovation Group Acquisition to Expand AI Data Center Power Solutions - citybiz",
-      "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNbDlIa3hxaHotOTRuWGZkM2QzMmlJSjJFSjFPaGNWaktyb0tTdFd0SG1TMTFPSEpFd2l0RjMtWjl3bl9hSmdmRFhLU1pOX3VxWWRjdkRObFZ0WFFiLWJzM08yaU9FVlhfVVJqY3h5YXpxWTRUZ05ZcFBVSEdhUVM4am9SUWVETHB2dTZEbVlPVHZMSUtTejg0THM2SGQ2ODNwOEUwcjRXNlZSNUE2dHJGXzkwUU1RRFdYeG9OMUZkRmZJSHpQTmhHOUl4blhqV0VZUGMzOXZMdi1pNS1fRVE?oc=5",
-      "date": "Tue, 27 Oct 2026 12:43:21 GMT"
+      "title": "DATA CENTER INSIGHT – The New Infrastructure Race in North America and Why Communities Don’t Want Them - EnergyNow.com",
+      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNSUhwTXlvWGxvT25Vcl9qSG5DNm1kbTJiSEtVVXRyLW9TazRaVllKNmMtQm84YVNqRzNYa1R6ZlY2dmtWVlpVaGhGRThlVEdqalJYUm1IWE1aUVBhOEdGTUxJRDZ6Q0ctYmRNVWplcmJqZXpTSXVOdkZ6a0Z0bS1YY0k0UlRfVVBvS2poaV92N2U4RnRuQ0JoMTlIYzRpNXRIdU9LTElHZ19qM2tITjAzZzhfOXVCMXJpd21heTNfQkNjQ1lRaEhjT3B3?oc=5",
+      "date": "Sun, 25 Oct 2026 22:38:17 GMT"
     },
     {
       "title": "A U.S. tech company ordered turbines to supply about 1.1 gigawatts of power for AI computing. - Stock Titan",
@@ -4168,14 +4154,9 @@
       "date": "Tue, 27 Oct 2026 05:58:06 GMT"
     },
     {
-      "title": "DATA CENTER INSIGHT – The New Infrastructure Race in North America and Why Communities Don’t Want Them - EnergyNow.com",
-      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNSUhwTXlvWGxvT25Vcl9qSG5DNm1kbTJiSEtVVXRyLW9TazRaVllKNmMtQm84YVNqRzNYa1R6ZlY2dmtWVlpVaGhGRThlVEdqalJYUm1IWE1aUVBhOEdGTUxJRDZ6Q0ctYmRNVWplcmJqZXpTSXVOdkZ6a0Z0bS1YY0k0UlRfVVBvS2poaV92N2U4RnRuQ0JoMTlIYzRpNXRIdU9LTElHZ19qM2tITjAzZzhfOXVCMXJpd21heTNfQkNjQ1lRaEhjT3B3?oc=5",
-      "date": "Sun, 25 Oct 2026 22:38:17 GMT"
-    },
-    {
-      "title": "Two stock picks to capitalize on Wall Street’s misguided AI fears - MarketWatch",
-      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPd0ZvcFNOUUpHNVYzM29ZZ2JHQS0wbnlpNUY5SjBEbjAwMTJ5ZFlWMEMySVRkb3g4ZHhVdlhBa2tfbXhUZnhJMXViVDNYRnlaamRIQmk0NjJrLUY0Tm9WbnJjSXlJc3lEQkdLbXpNTHczTkhNV2MyVDB0R1RlSnh5VHh0bXUtUk15X0JiWGtHOVhzVzVwelNERDZBT3ozMkx5UnVIVk5mMHFiZWs?oc=5",
-      "date": "Mon, 26 Oct 2026 14:47:00 GMT"
+      "title": "\"From the Grid to Cooling at a Glance\"... Schneider Electric Unveils Integrated Infrastructure for AI Data Centers - 아시아경제",
+      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBuS2FQNnZkRTR3WVRLUTA0WnJ4WGpaWlhDaW5NNXVGQ0N3RXpZN0kyZFhqanhvMUJTT1BSSE1WdklDMEx1cXRKc1ZWSWY0RnloWGNaM3RKMEpkYWRIXzVlaHVaR2E?oc=5",
+      "date": "Tue, 27 Oct 2026 01:17:54 GMT"
     },
     {
       "title": "3 Power Grid Stocks Riding AI Data Center Demand - Simply Wall Street",
@@ -4183,9 +4164,19 @@
       "date": "Tue, 27 Oct 2026 02:51:46 GMT"
     },
     {
-      "title": "\"From the Grid to Cooling at a Glance\"... Schneider Electric Unveils Integrated Infrastructure for AI Data Centers - 아시아경제",
-      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBuS2FQNnZkRTR3WVRLUTA0WnJ4WGpaWlhDaW5NNXVGQ0N3RXpZN0kyZFhqanhvMUJTT1BSSE1WdklDMEx1cXRKc1ZWSWY0RnloWGNaM3RKMEpkYWRIXzVlaHVaR2E?oc=5",
-      "date": "Tue, 27 Oct 2026 01:17:54 GMT"
+      "title": "nVent Electric to Report Q3 Earnings: Buy, Sell or Hold the Stock? - TradingView",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOcUZuVklyNFFOS0N3WHdybzc3bTYyaXhyM05GdnJhZnR4N1djSll5WkRCdlpnQUVLSlZZWE9uM0RIVFIzYXhWYmloSTVUOHZSR3hndFBKMF9CVlM2Y0p5eEpDVjFqcGttcnpYNjFDMWFfXzYzdllaWFRDRm5rdEhvVnREbE85aktNV2hDZUI1RDVDNU1PZFVUdWYyeldmSEstamp4YlN6MmlFekY3bkZFeTgxQlZfTXUzbkZj?oc=5",
+      "date": "Tue, 27 Oct 2026 13:56:00 GMT"
+    },
+    {
+      "title": "Major U.S. Technology Company Selects Baker Hughes’ Power Generation and Cooling Solutions to Scale High-density AI Compute - Yahoo Finance",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPcGFVMGJfUUU5TjZtX0Mzdk13bHZ1WWpEVk9MRGdlLUMxQUVxYmlvUGRqQ3N3aEtYcVhXWW5XZUxBQUtSOWRTX0t6S2F4Wnc2YXZlRTZkbUVHT0JYSThGLUc4Tm00NU56N3NzNmNZTGtfWUpyaklUWk9CajhYX1dydkVNczFXNUhyT05zajhOdXIzS0dzVU5GMldRc210eVE?oc=5",
+      "date": "Tue, 27 Oct 2026 20:15:00 GMT"
+    },
+    {
+      "title": "AI Fuels Infrastructure Investment in Mexico - Mexico Business News",
+      "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxOR2FOMGJFTU9RR3R3THh1Q250LWstYWpIY1ozRkozTnNpaS0wV19TWkRBTHZzM2VRR2VvY25NN21KbFNFeTdhcWxySkhqelNjeWtXVi1FWFM2TnRpMTdwb2l1S0M1MlNjOGpESlZlXzFfQ3BSdzcxTjVfVTdBa3pjMW4ydHliajRrYV82anh3b0loUkU?oc=5",
+      "date": "Tue, 27 Oct 2026 19:34:36 GMT"
     }
   ],
   "version": "4.2.2",
@@ -4223,102 +4214,102 @@
           "Yahoo: HTTP Error 404: Not Found"
         ]
       },
-      "ONTO": {
+      "ACHR": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-10-27"
       },
-      "OUST": {
+      "AI": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-10-27"
       },
-      "PATH": {
+      "ALAB": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-10-27"
       },
-      "PDYN": {
+      "AMAT": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-10-27"
       },
-      "PLTR": {
+      "AMD": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-10-27"
       },
-      "PWR": {
+      "AMZN": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-10-27"
       },
-      "QCOM": {
+      "ANET": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-10-27"
       },
-      "RCAT": {
+      "APH": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-10-27"
       },
-      "ROK": {
+      "ARM": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-10-27"
       },
-      "RR": {
+      "ASML": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-10-27"
       },
-      "SERV": {
+      "AZTA": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-10-27"
       },
-      "SIEGY": {
+      "BBAI": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-10-27"
       },
-      "SMCI": {
+      "CGNX": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-10-27"
       },
-      "SNOW": {
+      "CLS": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-10-27"
       },
-      "SOUN": {
+      "COHR": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-10-27"
       },
-      "SYM": {
+      "CRDO": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-10-27"
       },
-      "TER": {
+      "DELL": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-10-27"
       },
-      "TSM": {
+      "DHR": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-10-27"
       },
-      "VRT": {
+      "EMR": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-10-27"
       },
-      "ZBRA": {
+      "ETN": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-10-27"
