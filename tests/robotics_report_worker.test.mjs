@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import worker, { validate } from "../private_sync_worker/robotics_report_worker.js";
+import worker, { validate } from "../private_sync_worker/robotics_report_worker.mjs";
 
 const fresh = () => ({ release_ready: true, strategy_version: "balanced-1.3-audit", generated_at: new Date().toISOString(), companies: [] });
 const env = (report = fresh()) => ({ READ_TOKEN: "test-read-token", ROBOTICS_REPORT_KV: { get: async key => { assert.equal(key, "latest_scan"); return JSON.stringify(report); } } });

@@ -1,5 +1,5 @@
 name = "ai-robotics-report-readonly"
-main = "robotics_report_worker.js"
+main = "robotics_report_worker.mjs"
 compatibility_date = "2026-11-11"
 
 [[kv_namespaces]]
