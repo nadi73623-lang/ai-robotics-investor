@@ -28,3 +28,9 @@
 - Physical installation and live-report acceptance on Motorola Edge 30 Fusion are not performed.
 - APK is debug-signed, not a production release.
 - No live trading or report publication path is included or enabled.
+
+
+## Deployment workflow correction (2026-11-11)
+- Commit 984272903c3f05d4a098c431be17f08337555dd5 keeps the generated Wrangler config beside the Worker entrypoint so the relative `main` path resolves correctly.
+- Workflow explicitly checks out `stage2-balanced-1.3.4` and removes the temporary CI config after deployment.
+- This is a source-level correction; Cloudflare deployment has not been run because owner-controlled Cloudflare secrets and the existing KV namespace ID are not yet configured/verified.
