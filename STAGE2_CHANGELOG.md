@@ -34,3 +34,11 @@
 - Commit 984272903c3f05d4a098c431be17f08337555dd5 keeps the generated Wrangler config beside the Worker entrypoint so the relative `main` path resolves correctly.
 - Workflow explicitly checks out `stage2-balanced-1.3.4` and removes the temporary CI config after deployment.
 - This is a source-level correction; Cloudflare deployment has not been run because owner-controlled Cloudflare secrets and the existing KV namespace ID are not yet configured/verified.
+
+
+## Existing production KV identified (2026-11-11)
+- Owner confirmed existing namespace `AI_ROBOTICS_REPORT`, Namespace ID `35a4ec24211540fa9a098923773d667f`, containing key `latest_scan`.
+- Isolated read-only Worker config now binds this exact namespace; existing publisher is not modified.
+- Deployment workflow now uses the checked-in binding and requires only Cloudflare account ID, deployment API token, and dedicated READ_TOKEN as GitHub environment secrets.
+- Owner-reported current KV payload fails publication gates: `release_ready=false`, strategy missing, generated_at `2026-10-16T08:29:04.568185+00:00`. Worker must reject it; do not manually edit or bypass these fields.
+- Worker deployment remains pending secret setup and a valid fresh report. Live endpoint and Android device acceptance are not claimed.
