@@ -44,3 +44,12 @@ Install verified debug APK `AI-Robotics-Investor-0.1.231-debug.apk` on Motorola 
 - Worker deployment and live endpoint smoke tests remain pending.
 - Current KV report fails the release gate; scanner/publisher refresh is required before Android live-report acceptance.
 - No paid service is required by this code. Do not enable paid features without owner approval.
+
+
+## Root-cause audit of stale KV (2026-11-11)
+- The current `.github/workflows/scan.yml` on `main` runs `python scanner.py` and commits only `data/scan.json`. It contains no Cloudflare credentials, KV binding, or KV publication step.
+- The Stage2 branch has the same scan workflow behavior. The separate read-only Worker only calls KV `get("latest_scan")`; it cannot refresh or publish the key.
+- Therefore a new market scan in GitHub does not automatically update the existing Cloudflare KV namespace. The owner-reported 2026-10-16 value can remain stale until the separate, currently unidentified publisher is located or an approved publisher integration is designed.
+- Current scanner output is a public-news/SEC/price attention report. It does not contain the required Balanced 1.3 release gate fields (`release_ready=true`, `strategy_version=balanced-1.3-audit`) and must not be relabeled as an approved Balanced report.
+- Do not connect `data/scan.json` directly to the production KV key or loosen the Worker validation. That would bypass investment-data and release-quality gates.
+- Next safe prerequisite: identify the existing publisher (likely outside this repository or in a separate Cloudflare Worker) and audit its source and deployment history. Then implement an explicit validated publication path only after Balanced 1.3 is genuinely integrated and its data acceptance tests pass.
