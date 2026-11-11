@@ -4,7 +4,7 @@ compatibility_date = "2026-11-11"
 
 [[kv_namespaces]]
 binding = "ROBOTICS_REPORT_KV"
-id = "REPLACE_WITH_EXISTING_KV_NAMESPACE_ID"
+id = "35a4ec24211540fa9a098923773d667f"
 
 # Configure READ_TOKEN with: wrangler secret put READ_TOKEN
 # This Worker exposes only GET/HEAD/OPTIONS at /api/robotics/report.
