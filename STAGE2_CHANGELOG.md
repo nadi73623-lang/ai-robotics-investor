@@ -8,22 +8,19 @@
 - Added Worker unit tests, Android metadata gate and GitHub Actions APK build workflow.
 - Existing scanner, scan workflow, and main branch are not edited.
 
-## Earlier verified build (2026-11-11)
-- Build commit: 1ef3f9c94042360307c33db99a959523f623c52c.
-- GitHub Actions run 43017737668: completed / success.
-- Worker tests, Android metadata validation, debug APK build, SHA-256 verification and artifact upload: all successful.
-- Artifact: AI-Robotics-Investor-0.1.231-debug (ID 13853826259).
-- APK SHA-256: 07a77910dccf244ef0f6de65e236b91b6ac3cf2eeb9c54d562f76c9a18f26900.
-- This APK predates the Keystore change and must not be represented as containing it.
+## Verified Keystore build (2026-11-11)
+- Source commit: 76c22a16fa5531ac86f08a6539f16d8b8dfa3117.
+- GitHub Actions run 43018909591: completed / success.
+- All 11 workflow steps succeeded, including Worker tests, Android metadata validation, debug APK build, SHA-256 calculation and artifact upload.
+- Artifact: AI-Robotics-Investor-0.1.231-debug (ID 13854022345).
+- APK SHA-256: d2f3df59a0a42e54f4c4e9d7d9d20432298efad025a89a138769126272ae38ff.
+- Artifact ZIP integrity and APK file type were checked after download.
+- APK includes the Android Keystore AES-GCM source change. It is debug-signed, not a production release.
 
-## Security hardening update (2026-11-11)
-- Commit 76c22a16fa5531ac86f08a6539f16d8b8dfa3117 encrypts READ_TOKEN using AES/GCM/NoPadding with an Android Keystore-managed AES key.
+## Security hardening
+- READ_TOKEN is encrypted using AES/GCM/NoPadding with an Android Keystore-managed AES key.
 - Legacy plaintext preference is migrated to encrypted storage and removed after successful encryption.
-- Source was inspected on GitHub. A fresh CI build and device acceptance for this source revision are not yet verified.
-
-## Documentation correction
-- Commit 546c1a8209b75def1077ba15b9f5ff86dc90311f corrects the deployment runbook: token storage is described as Keystore-backed AES-GCM, not plaintext SharedPreferences.
-- Runbook also distinguishes the older verified APK from a future build containing the security update.
+- Deployment runbook documents the current encrypted storage implementation.
 
 ## Outstanding acceptance gates
 - Cloudflare Worker is not deployed. Requires the exact existing KV namespace ID, Cloudflare account deployment access and a privately configured READ_TOKEN.
