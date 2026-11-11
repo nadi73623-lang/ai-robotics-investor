@@ -16,10 +16,15 @@
 - Artifact: AI-Robotics-Investor-0.1.231-debug (ID 13853826259).
 - APK SHA-256: 07a77910dccf244ef0f6de65e236b91b6ac3cf2eeb9c54d562f76c9a18f26900.
 
+## Security hardening update (2026-11-11)
+- Commit `76c22a16fa5531ac86f08a6539f16d8b8dfa3117` moves READ_TOKEN to AES/GCM/NoPadding with an Android Keystore-managed AES key.
+- Legacy plaintext preference is migrated to encrypted storage and removed after successful encryption.
+- CI is configured to build on this Android source change; the new run result must be checked before calling the APK verified.
+
 ## Outstanding acceptance gates
 - Cloudflare Worker is not deployed. Requires the exact existing KV namespace ID, Cloudflare account deployment access and a privately configured READ_TOKEN.
 - Live current report is not verified at the endpoint.
 - Physical installation and live-report acceptance on Motorola Edge 30 Fusion are not performed.
 - APK is debug-signed, not a production release.
-- Android currently stores the token in app-private SharedPreferences, not Android Keystore; restrict to owner testing and rotate if device is lost.
+- Android token storage has been changed to AES-GCM encryption backed by Android Keystore; a one-time migration encrypts any legacy plaintext preference on first read. This source change is committed, but a fresh CI build and device acceptance are still required before relying on it.
 - No live trading or report publication path is included or enabled.
