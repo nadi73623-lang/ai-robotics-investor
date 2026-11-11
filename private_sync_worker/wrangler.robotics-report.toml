@@ -1,0 +1,10 @@
+name = "ai-robotics-report-readonly"
+main = "robotics_report_worker.js"
+compatibility_date = "2026-11-11"
+
+[[kv_namespaces]]
+binding = "ROBOTICS_REPORT_KV"
+id = "REPLACE_WITH_EXISTING_KV_NAMESPACE_ID"
+
+# Configure READ_TOKEN with: wrangler secret put READ_TOKEN
+# This Worker exposes only GET/HEAD/OPTIONS at /api/robotics/report.
