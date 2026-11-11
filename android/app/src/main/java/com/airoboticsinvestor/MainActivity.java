@@ -3,6 +3,14 @@ package com.airoboticsinvestor;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.os.Bundle;
+import android.security.keystore.KeyGenParameterSpec;
+import android.security.keystore.KeyProperties;
+import android.util.Base64;
+import java.security.KeyStore;
+import javax.crypto.Cipher;
+import javax.crypto.KeyGenerator;
+import javax.crypto.SecretKey;
+import javax.crypto.spec.GCMParameterSpec;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.*;
@@ -75,7 +83,7 @@ public final class MainActivity extends Activity {
         EditText token = new EditText(this); token.setSingleLine(true);
         token.setHint("READ_TOKEN");
         token.setInputType(129);
-        token.setText(prefs.getString("token", ""));
+        token.setText(readToken());
         form.addView(url); form.addView(token);
         new AlertDialog.Builder(this).setTitle("Połączenie tylko do odczytu")
             .setMessage("Adres bazowy Worker oraz osobny READ_TOKEN. Token nie jest wysyłany do logów.")
@@ -88,14 +96,74 @@ public final class MainActivity extends Activity {
                     status.setText("Wymagany adres HTTPS i token READ_TOKEN.");
                     return;
                 }
-                prefs.edit().putString("url", u).putString("token", t).apply();
-                status.setText("Konfiguracja zapisana lokalnie.");
+                try {
+                    prefs.edit().putString("url", u).putString("token_enc", encryptToken(t)).remove("token").apply();
+                    status.setText("Konfiguracja zapisana lokalnie (Android Keystore).");
+                } catch (Exception ex) {
+                    status.setText("Nie udało się bezpiecznie zapisać tokenu: " + ex.getClass().getSimpleName());
+                }
             }).show();
+    }
+
+    private static final String KEY_ALIAS = "ai_robotics_read_token_v1";
+
+    private SecretKey getOrCreateKey() throws Exception {
+        KeyStore ks = KeyStore.getInstance("AndroidKeyStore");
+        ks.load(null);
+        java.security.Key existing = ks.getKey(KEY_ALIAS, null);
+        if (existing instanceof SecretKey) return (SecretKey) existing;
+        KeyGenerator generator = KeyGenerator.getInstance(KeyProperties.KEY_ALGORITHM_AES, "AndroidKeyStore");
+        generator.init(new KeyGenParameterSpec.Builder(KEY_ALIAS,
+                KeyProperties.PURPOSE_ENCRYPT | KeyProperties.PURPOSE_DECRYPT)
+                .setBlockModes(KeyProperties.BLOCK_MODE_GCM)
+                .setEncryptionPaddings(KeyProperties.ENCRYPTION_PADDING_NONE)
+                .setRandomizedEncryptionRequired(true)
+                .build());
+        return generator.generateKey();
+    }
+
+    private String encryptToken(String plain) throws Exception {
+        Cipher cipher = Cipher.getInstance("AES/GCM/NoPadding");
+        cipher.init(Cipher.ENCRYPT_MODE, getOrCreateKey());
+        byte[] iv = cipher.getIV();
+        byte[] encrypted = cipher.doFinal(plain.getBytes(StandardCharsets.UTF_8));
+        byte[] packed = new byte[iv.length + encrypted.length];
+        System.arraycopy(iv, 0, packed, 0, iv.length);
+        System.arraycopy(encrypted, 0, packed, iv.length, encrypted.length);
+        return "enc:" + Base64.encodeToString(packed, Base64.NO_WRAP);
+    }
+
+    private String decryptToken(String stored) throws Exception {
+        if (!stored.startsWith("enc:")) return stored;
+        byte[] packed = Base64.decode(stored.substring(4), Base64.NO_WRAP);
+        if (packed.length <= 12) throw new IllegalStateException("Nieprawidłowy zaszyfrowany token.");
+        byte[] iv = java.util.Arrays.copyOfRange(packed, 0, 12);
+        byte[] encrypted = java.util.Arrays.copyOfRange(packed, 12, packed.length);
+        Cipher cipher = Cipher.getInstance("AES/GCM/NoPadding");
+        cipher.init(Cipher.DECRYPT_MODE, getOrCreateKey(), new GCMParameterSpec(128, iv));
+        return new String(cipher.doFinal(encrypted), StandardCharsets.UTF_8);
+    }
+
+    private String readToken() {
+        String stored = prefs.getString("token_enc", "");
+        if (!stored.isEmpty()) {
+            try { return decryptToken(stored); }
+            catch (Exception ex) { return ""; }
+        }
+        // One-time migration from the pre-Keystore local preference key.
+        String legacy = prefs.getString("token", "");
+        if (!legacy.isEmpty()) {
+            try {
+                prefs.edit().putString("token_enc", encryptToken(legacy)).remove("token").apply();
+                return legacy;
+            } catch (Exception ex) { return ""; }
+        }
+        return "";
     }
 
     private void loadReport() {
         String base = prefs.getString("url", "");
-        String token = prefs.getString("token", "");
+        String token = readToken();
         if (base.isEmpty() || token.isEmpty()) { status.setText("Najpierw skonfiguruj backend."); return; }
         status.setText("Pobieranie raportu…");
         reportView.setText("");
