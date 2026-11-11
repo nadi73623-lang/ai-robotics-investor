@@ -1,0 +1,47 @@
+name: Deploy read-only Robotics Worker
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: robotics-worker-production
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Validate deployment inputs
+        env:
+          CF_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CF_KV_ID: ${{ secrets.ROBOTICS_REPORT_KV_ID }}
+          CF_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          READ_TOKEN: ${{ secrets.ROBOTICS_READ_TOKEN }}
+        run: |
+          test -n "$CF_ACCOUNT_ID"
+          test -n "$CF_KV_ID"
+          test -n "$CF_API_TOKEN"
+          test -n "$READ_TOKEN"
+          case "$CF_KV_ID" in *[!a-fA-F0-9]*) echo "KV namespace ID must be hexadecimal"; exit 1;; esac
+          test "${#CF_KV_ID}" -ge 32
+      - name: Test Worker before deployment
+        run: node --test tests/robotics_report_worker.test.mjs
+      - name: Configure isolated KV binding
+        env:
+          CF_KV_ID: ${{ secrets.ROBOTICS_REPORT_KV_ID }}
+        run: |
+          sed "s/REPLACE_WITH_EXISTING_KV_NAMESPACE_ID/$CF_KV_ID/" private_sync_worker/wrangler.robotics-report.toml > /tmp/wrangler.robotics-report.toml
+          grep -q "$CF_KV_ID" /tmp/wrangler.robotics-report.toml
+      - name: Deploy Worker
+        working-directory: private_sync_worker
+        env:
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          READ_TOKEN: ${{ secrets.ROBOTICS_READ_TOKEN }}
+        run: |
+          npx --yes wrangler@4 secret put READ_TOKEN --config /tmp/wrangler.robotics-report.toml <<< "$READ_TOKEN"
+          npx --yes wrangler@4 deploy --config /tmp/wrangler.robotics-report.toml
