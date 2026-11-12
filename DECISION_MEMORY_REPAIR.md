@@ -1,0 +1,35 @@
+# Decision memory repair — 2026-11-12
+
+## Purpose
+Prevent the scanner from losing its own historical recommendations, entry zones, price observations, and BUY-gate explanations between runs.
+
+## Added
+- `decision_memory.py`: append-only JSON memory with schema versioning.
+- `data/decision_memory.json`: created on first scan; committed by scheduled workflow.
+- Immutable historical entry-zone definitions recovered from the 2026-09-11 analysis for MU, ADBE, OUST, XPEV and MP (three tiers each).
+- Five historical zone-hit imports from the 2026-11-12 audit, preserving the difference between intraday low and closing price.
+- EOD close observation ledger with source, date, currency and timestamp.
+- Zone-touch events; duplicate close events are suppressed.
+- Append-only interfaces for frozen recommendations and per-gate PASS/FAIL/ND/VETO audits.
+- Scan payload exposes memory counts, new hits and imported historical events.
+- Workflow executes unit tests before running the scanner and commits both scan report and decision memory.
+
+## Critical safeguards
+- Entry-zone touch is not automatically BUY.
+- No quote means N/D, never zero.
+- Currency mismatch prevents zone comparison.
+- Missing gate audit cannot be represented as a passed gate.
+- Historical levels are immutable; changed levels must be appended as new versions/events.
+
+## Known limitations — not yet fixed
+- Current quote provider code still only supports USD tickers and does not provide reliable global OHLCV/FX coverage.
+- This patch tracks EOD close touches only for new scans; it does not reconstruct missing daily lows from a verified historical OHLCV source.
+- The five historical hits are imports from the prior audit, not independently re-downloaded exchange records in this commit.
+- No complete Balanced 1.3 ranking, DCF valuation engine, analyst-consensus history, full rejection registry, Android integration or APK build is included.
+- No live BUY signal is created by this patch.
+- GitHub Actions test execution has not yet been observed; tests are wired into the workflow for the next run.
+
+## Validation status
+- Branch created from current `main`; main was not modified.
+- Unit tests added for historical levels, zone-hit deduplication, missing prices, append-only recommendations and explicit gate states.
+- Runtime CI result: pending.
