@@ -9,6 +9,9 @@ on:
   workflow_dispatch:
   schedule:
     - cron: '17 */6 * * *'
+concurrency:
+  group: robotics-scan-${{ github.ref }}
+  cancel-in-progress: true
 permissions:
   contents: write
 jobs:
@@ -23,8 +26,10 @@ jobs:
       - name: Run scanner and decision-memory tests
         run: python -m unittest discover -v
       - name: Scan public news
+        if: github.event_name != 'pull_request'
         run: python scanner.py
       - name: Save scan results
+        if: github.event_name != 'pull_request'
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
