@@ -65,10 +65,11 @@ def initial_memory():
         "events": [
             {"type":"HISTORICAL_ENTRY_ZONE_HIT", "level_id":"legacy-20260911-"+h["ticker"]+"-"+h["zone"],
              "ticker":h["ticker"], "zone":h["zone"], "date":h["date"],
-             "intraday_low":h["low"], "close":h["close"], "basis":h["basis"],
+             "intraday_low":h["low"], "close":h["close"], "basis":basis,
              "currency":"USD", "source":h["source"],
              "status":"HISTORICAL_HIT_REQUIRES_REVIEW_NOT_AUTOMATIC_BUY"}
             for h in HISTORICAL_HITS
+            for basis in (["intraday_range","close"] if h["basis"]=="intraday_low_and_close" else [h["basis"]])
         ],
         "price_observations": [],
         "historical_imports": HISTORICAL_HITS,
