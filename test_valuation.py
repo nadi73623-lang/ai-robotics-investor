@@ -13,6 +13,8 @@ class ValuationTests(unittest.TestCase):
         del self.c['fundamentals']['shares_outstanding'];self.assertEqual(calculate_valuation(self.c,date(2026,10,11))['status'],'unavailable')
     def test_adr(self):
         self.c['ticker']='TSM';self.assertEqual(calculate_valuation(self.c,date(2026,10,11))['status'],'unavailable')
+    def test_local_listing_share_unit_guard(self):
+        self.c['ticker']='6479.T';self.assertEqual(calculate_valuation(self.c,date(2026,10,11))['status'],'unavailable')
     def test_mismatched_pe_period(self):
         self.c['fundamentals']['net_income_period_end']='2025-08-01'
         self.assertIsNone(calculate_valuation(self.c,date(2026,10,11))['pe'])
