@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-12T08:56:19.183321+00:00",
+  "generated_at": "2026-11-12T08:57:05.093525+00:00",
   "source": "Google News RSS",
   "queries": [
     "artificial intelligence robotics stocks companies contracts earnings",
@@ -10,7 +10,7 @@
     "AI infrastructure cooling energy grid power public company"
   ],
   "scan_status": "ok",
-  "articles_collected": 114,
+  "articles_collected": 115,
   "companies": [
     {
       "ticker": "NVDA",
@@ -74,10 +74,13 @@
         "close_usd": 173.73,
         "date": "2026-11-11",
         "age_days": 1,
+        "currency": "USD",
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/NVDA?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-11-12T08:50:58.555002+00:00"
+        "low_usd": 170.77,
+        "high_usd": 177.54,
+        "checked_at": "2026-11-12T08:57:02.020203+00:00"
       },
       "valuation": {
         "status": "partial",
@@ -285,7 +288,7 @@
         "net_income_period_end": "2024-11-03",
         "cash_flow_period_end": "2025-11-02",
         "capex_period_end": "2025-11-02",
-        "as_of": "2026-11-12T08:55:53.865520+00:00",
+        "as_of": "2026-11-12T08:56:44.143843+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1730168"
       },
       "price": {
@@ -298,7 +301,7 @@
         "is_live": false,
         "low_usd": 344.31,
         "high_usd": 356.85,
-        "checked_at": "2026-11-12T08:56:03.006531+00:00"
+        "checked_at": "2026-11-12T08:56:53.031986+00:00"
       },
       "valuation": {
         "status": "partial",
@@ -359,10 +362,13 @@
         "close_usd": 3.46,
         "date": "2026-11-11",
         "age_days": 1,
+        "currency": "USD",
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/PDYN?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-11-12T08:51:02.699960+00:00"
+        "low_usd": 3.36,
+        "high_usd": 3.903,
+        "checked_at": "2026-11-12T08:57:04.992770+00:00"
       },
       "valuation": {
         "status": "partial",
@@ -416,7 +422,7 @@
         "net_income_period_end": "2025-12-31",
         "cash_flow_period_end": "2025-12-31",
         "capex_period_end": "2025-12-31",
-        "as_of": "2026-11-12T00:38:13.057645+00:00",
+        "as_of": "2026-11-12T08:56:45.510396+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=97210"
       },
       "price": {
@@ -483,7 +489,7 @@
         "net_income_period_end": null,
         "cash_flow_period_end": null,
         "capex_period_end": null,
-        "as_of": "2026-11-12T00:38:13.487177+00:00",
+        "as_of": "2026-11-12T08:56:46.083140+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1046179"
       },
       "price": {
@@ -550,7 +556,7 @@
         "net_income_period_end": "2025-12-31",
         "cash_flow_period_end": "2025-12-31",
         "capex_period_end": "2025-12-31",
-        "as_of": "2026-11-12T00:38:13.949481+00:00",
+        "as_of": "2026-11-12T08:56:46.748981+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1674101"
       },
       "price": {
@@ -674,7 +680,7 @@
         "net_income_period_end": "2026-06-30",
         "cash_flow_period_end": "2026-06-30",
         "capex_period_end": "2026-06-30",
-        "as_of": "2026-11-12T08:48:54.436181+00:00",
+        "as_of": "2026-11-12T08:56:50.384050+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=820318"
       },
       "price": {
@@ -805,10 +811,13 @@
         "close_usd": 648.06,
         "date": "2026-11-11",
         "age_days": 1,
+        "currency": "USD",
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/LITE?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-11-12T08:49:13.403497+00:00"
+        "low_usd": 633.59,
+        "high_usd": 678.67,
+        "checked_at": "2026-11-12T08:56:56.813478+00:00"
       },
       "valuation": {
         "status": "partial",
@@ -864,10 +873,13 @@
         "close_usd": 38.22,
         "date": "2026-11-11",
         "age_days": 1,
+        "currency": "USD",
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/OUST?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-11-12T08:51:01.221395+00:00"
+        "low_usd": 38.025,
+        "high_usd": 40.17,
+        "checked_at": "2026-11-12T08:57:04.009376+00:00"
       },
       "valuation": {
         "status": "partial",
@@ -1429,7 +1441,7 @@
         "net_income_period_end": "2025-12-31",
         "cash_flow_period_end": "2025-12-31",
         "capex_period_end": "2025-12-31",
-        "as_of": "2026-11-12T00:38:15.458604+00:00",
+        "as_of": "2026-11-12T08:56:48.015888+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=820313"
       },
       "price": {
@@ -1485,7 +1497,7 @@
         "net_income_period_end": "2026-03-31",
         "cash_flow_period_end": "2026-03-31",
         "capex_period_end": "2026-03-31",
-        "as_of": "2026-11-12T00:38:16.054371+00:00",
+        "as_of": "2026-11-12T08:56:48.502602+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1973239"
       },
       "price": {
@@ -1541,7 +1553,7 @@
         "net_income_period_end": null,
         "cash_flow_period_end": null,
         "capex_period_end": null,
-        "as_of": "2026-11-12T08:48:52.415790+00:00",
+        "as_of": "2026-11-12T08:56:48.953498+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=937966"
       },
       "price": {
@@ -1597,7 +1609,7 @@
         "net_income_period_end": "2025-09-30",
         "cash_flow_period_end": "2025-09-30",
         "capex_period_end": "2025-09-30",
-        "as_of": "2026-11-12T08:48:53.165401+00:00",
+        "as_of": "2026-11-12T08:56:49.425762+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=933974"
       },
       "price": {
@@ -1709,7 +1721,7 @@
         "net_income_period_end": "2025-12-31",
         "cash_flow_period_end": "2025-12-31",
         "capex_period_end": "2025-12-31",
-        "as_of": "2026-11-12T08:48:53.857798+00:00",
+        "as_of": "2026-11-12T08:56:49.890969+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=851205"
       },
       "price": {
@@ -1821,7 +1833,7 @@
         "net_income_period_end": "2026-05-02",
         "cash_flow_period_end": "2026-05-02",
         "capex_period_end": "2026-05-02",
-        "as_of": "2026-11-12T08:48:54.992635+00:00",
+        "as_of": "2026-11-12T08:56:50.966076+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1807794"
       },
       "price": {
@@ -1877,7 +1889,7 @@
         "net_income_period_end": "2025-12-31",
         "cash_flow_period_end": "2025-12-31",
         "capex_period_end": "2025-12-31",
-        "as_of": "2026-11-12T08:48:55.505955+00:00",
+        "as_of": "2026-11-12T08:56:52.175631+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=313616"
       },
       "price": {
@@ -2335,10 +2347,13 @@
         "close_usd": 258.89,
         "date": "2026-11-11",
         "age_days": 1,
+        "currency": "USD",
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/JBL?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-11-12T08:50:51.854860+00:00"
+        "low_usd": 256.0,
+        "high_usd": 266.0,
+        "checked_at": "2026-11-12T08:56:57.383413+00:00"
       },
       "valuation": {
         "status": "partial",
@@ -2444,10 +2459,13 @@
         "close_usd": 161.01,
         "date": "2026-11-11",
         "age_days": 1,
+        "currency": "USD",
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/KLAC?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-11-12T08:49:11.850359+00:00"
+        "low_usd": 155.35,
+        "high_usd": 164.33,
+        "checked_at": "2026-11-12T08:56:55.143835+00:00"
       },
       "valuation": {
         "status": "partial",
@@ -2497,10 +2515,13 @@
         "close_usd": 36.69,
         "date": "2026-11-11",
         "age_days": 1,
+        "currency": "USD",
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/KTOS?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-11-12T08:49:12.316142+00:00"
+        "low_usd": 36.35,
+        "high_usd": 37.5,
+        "checked_at": "2026-11-12T08:56:55.689442+00:00"
       },
       "valuation": {
         "status": "partial",
@@ -2553,10 +2574,13 @@
         "close_usd": 31.73,
         "date": "2026-11-11",
         "age_days": 1,
+        "currency": "USD",
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/LAZR?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-11-12T08:49:12.761201+00:00"
+        "low_usd": 30.71,
+        "high_usd": 32.37,
+        "checked_at": "2026-11-12T08:56:56.277565+00:00"
       },
       "valuation": {
         "status": "unavailable",
@@ -2606,10 +2630,13 @@
         "close_usd": 235.88,
         "date": "2026-11-11",
         "age_days": 1,
+        "currency": "USD",
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/LRCX?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-11-12T08:50:52.501516+00:00"
+        "low_usd": 229.67,
+        "high_usd": 241.6,
+        "checked_at": "2026-11-12T08:56:57.935930+00:00"
       },
       "valuation": {
         "status": "partial",
@@ -2659,10 +2686,13 @@
         "close_usd": 5.78,
         "date": "2026-11-11",
         "age_days": 1,
+        "currency": "USD",
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/MBLY?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-11-12T08:50:53.324027+00:00"
+        "low_usd": 5.59,
+        "high_usd": 5.91,
+        "checked_at": "2026-11-12T08:56:58.489386+00:00"
       },
       "valuation": {
         "status": "partial",
@@ -2705,17 +2735,20 @@
         "net_income_period_end": "2025-12-31",
         "cash_flow_period_end": "2025-12-31",
         "capex_period_end": "2025-12-31",
-        "as_of": "2026-11-12T08:55:52.708448+00:00",
+        "as_of": "2026-11-12T08:56:43.048559+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1326801"
       },
       "price": {
         "close_usd": 628.77,
         "date": "2026-11-11",
         "age_days": 1,
+        "currency": "USD",
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/META?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-11-12T08:50:54.130119+00:00"
+        "low_usd": 627.97,
+        "high_usd": 648.45,
+        "checked_at": "2026-11-12T08:56:59.032512+00:00"
       },
       "valuation": {
         "status": "unavailable",
@@ -2765,10 +2798,13 @@
         "close_usd": 1478.6899,
         "date": "2026-11-11",
         "age_days": 1,
+        "currency": "USD",
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/MPWR?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-11-12T08:50:54.765023+00:00"
+        "low_usd": 1390.0,
+        "high_usd": 1513.49,
+        "checked_at": "2026-11-12T08:56:59.592683+00:00"
       },
       "valuation": {
         "status": "partial",
@@ -2818,10 +2854,13 @@
         "close_usd": 168.8,
         "date": "2026-11-11",
         "age_days": 1,
+        "currency": "USD",
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/MRVL?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-11-12T08:50:55.416360+00:00"
+        "low_usd": 162.5,
+        "high_usd": 174.53,
+        "checked_at": "2026-11-12T08:57:00.051843+00:00"
       },
       "valuation": {
         "status": "partial",
@@ -2871,10 +2910,13 @@
         "close_usd": 521.13,
         "date": "2026-11-11",
         "age_days": 1,
+        "currency": "USD",
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/MSFT?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-11-12T08:50:56.274105+00:00"
+        "low_usd": 518.45,
+        "high_usd": 534.76,
+        "checked_at": "2026-11-12T08:57:00.654711+00:00"
       },
       "valuation": {
         "status": "partial",
@@ -2924,10 +2966,13 @@
         "close_usd": 811.3,
         "date": "2026-11-11",
         "age_days": 1,
+        "currency": "USD",
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/MU?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-11-12T08:50:56.926935+00:00"
+        "low_usd": 763.05,
+        "high_usd": 827.58,
+        "checked_at": "2026-11-12T08:57:01.117217+00:00"
       },
       "valuation": {
         "status": "partial",
@@ -2977,10 +3022,13 @@
         "close_usd": 102.76,
         "date": "2026-11-11",
         "age_days": 1,
+        "currency": "USD",
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/NOW?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-11-12T08:50:57.754966+00:00"
+        "low_usd": 100.39,
+        "high_usd": 103.65,
+        "checked_at": "2026-11-12T08:57:01.562532+00:00"
       },
       "valuation": {
         "status": "partial",
@@ -3030,10 +3078,13 @@
         "close_usd": 116.73,
         "date": "2026-11-11",
         "age_days": 1,
+        "currency": "USD",
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/NVT?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-11-12T08:50:59.186461+00:00"
+        "low_usd": 116.0,
+        "high_usd": 121.0,
+        "checked_at": "2026-11-12T08:57:02.471184+00:00"
       },
       "valuation": {
         "status": "partial",
@@ -3083,10 +3134,13 @@
         "close_usd": 5.73,
         "date": "2026-11-11",
         "age_days": 1,
+        "currency": "USD",
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/ONDS?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-11-12T08:50:59.861280+00:00"
+        "low_usd": 5.65,
+        "high_usd": 5.9,
+        "checked_at": "2026-11-12T08:57:03.008779+00:00"
       },
       "valuation": {
         "status": "partial",
@@ -3136,10 +3190,13 @@
         "close_usd": 215.06,
         "date": "2026-11-11",
         "age_days": 1,
+        "currency": "USD",
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/ONTO?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-11-12T08:51:00.509044+00:00"
+        "low_usd": 203.05,
+        "high_usd": 222.48,
+        "checked_at": "2026-11-12T08:57:03.449883+00:00"
       },
       "valuation": {
         "status": "partial",
@@ -3182,17 +3239,20 @@
         "net_income_period_end": "2026-01-31",
         "cash_flow_period_end": "2026-01-31",
         "capex_period_end": "2026-01-31",
-        "as_of": "2026-11-12T08:55:53.277139+00:00",
+        "as_of": "2026-11-12T08:56:43.654919+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1734722"
       },
       "price": {
         "close_usd": 13.14,
         "date": "2026-11-11",
         "age_days": 1,
+        "currency": "USD",
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/PATH?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-11-12T08:51:02.053591+00:00"
+        "low_usd": 12.86,
+        "high_usd": 13.195,
+        "checked_at": "2026-11-12T08:57:04.454443+00:00"
       },
       "valuation": {
         "status": "unavailable",
@@ -3677,7 +3737,7 @@
         "net_income_period_end": "2025-09-27",
         "cash_flow_period_end": "2025-09-27",
         "capex_period_end": "2024-09-28",
-        "as_of": "2026-11-12T00:38:11.863821+00:00",
+        "as_of": "2026-11-12T08:56:44.731672+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1837240"
       },
       "price": {
@@ -3733,7 +3793,7 @@
         "net_income_period_end": "2025-12-31",
         "cash_flow_period_end": "2025-12-31",
         "capex_period_end": "2025-12-31",
-        "as_of": "2026-11-12T00:38:14.704862+00:00",
+        "as_of": "2026-11-12T08:56:47.382258+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=877212"
       },
       "price": {
@@ -3804,6 +3864,11 @@
       "date": "Mon, 09 Nov 2026 12:00:00 GMT"
     },
     {
+      "title": "CoreWeave arrests stock slide after posting a strong earnings beat and raising its full-year guidance - SiliconANGLE",
+      "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOWkwxc1RFb254em1WUVl3SzA4Vm1rcXJEdjRMajhWSWFqYzhpVXNGTGxPb2V6aWNWX2xlNHB5aHZiRzdCaWxETWY2NjVXS2JDb2c2Zm1qRHlaTm1OenFMVmpEUW5NdHl2dEFTc21fWEhNemVWeDJhZzVZbldVMU13NFBnNnBSS2p4WWVRUnAzeE54dzkyRlV4NEZES2IzdGVvT2Q3dVVqNVdSSnZCY3ZpWklpQXpxeWQ0SUYzdlhfSG9jYVdnNWNTa1VReWtnMzJHZ3NNcQ?oc=5",
+      "date": "Tue, 10 Nov 2026 23:26:00 GMT"
+    },
+    {
       "title": "CoreWeave turns to customer prepayments, shorter contracts to fund AI growth - TechCrunch",
       "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNMUZXNlhzbF9jX0NZZU1MQ1lnSUVTQjcyOWtuVThsempEY2F3WHNhZ2lGQVU5MXpaa2NuVGhoOUwtWVBSTnczZThFQW9LTHJhSnlBVjRicTg1aWQzazdnajNnWldtTEdLSURhaDQtdThYVUFZbEJCUzlxZlJUdm01ZVV2QWVXZERWRnpYeVdHWXV0dWFFZUN4MlZCUEZackdBU1VuTWNLakdLR2dlVnBR?oc=5",
       "date": "Wed, 11 Nov 2026 19:54:00 GMT"
@@ -3844,6 +3909,11 @@
       "date": "Mon, 09 Nov 2026 11:00:00 GMT"
     },
     {
+      "title": "FTAI Infrastructure Earnings Call Signals Broad Growth - TipRanks",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQaFhpeHFwcThfWUktMU14cmNjNnpBSnRIcXJGSmhodUdPMXJxRV9lZVZjTGFjOUh5NS1nLTZETEwzS0dOSi15d2xpLTNyUTZmRzVmc0JxOFdtXzQxdjBvTWVqMVJmZlc3Q0ttY1ZBTUVEVTRzMzBPa0xqZW84dmVLcG1UY3I0d3JfVEhYbFlYWVZEWXh4dlFvUENFOFpfYWZ1UEk3bzhIYWdUUQ?oc=5",
+      "date": "Thu, 12 Nov 2026 00:55:51 GMT"
+    },
+    {
       "title": "Mobile Infrastructure Earnings Call Shows Strong Operating Momentum - TipRanks",
       "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQcG55WkVGN29YZ2JUMUZ3RktwSk0zNXA4SDlhOHh3b3pNSHJIVWd0SE42NkZpNVhqZHB0ODFxYnBFSEY1RGRVeEFQbGd1Rklid1ctdTJZa19IcGpYbzBOR3ByQXNaeGxFcXljemFZbzdWTmhhcWhWclFNSl9hOXVmcVg0cFpZb0YyVWtyeHNhNkw4MlQ0N2pmSE1Wc2VVaXBQX2xTaXh0RnAtSDdtdE1VQTJ3YUNhY1RkVzBZ?oc=5",
       "date": "Thu, 12 Nov 2026 01:13:57 GMT"
@@ -3867,11 +3937,6 @@
       "title": "Evolv Technologies Warns Founder Share Dispute May Distort Earnings and Strain Financial Performance - TipRanks",
       "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxNclJaQ0lJUGdvUXR6RkRERlZLUG9OWW5uaWpfc3hQYWZ1OGNwWlIzd29iMnM4SS1DTmlsQlpkVU9iZkpPYV9ILUhiREVIRVczOWZRUzdnU3huNTl4blhLdFJtcFI4aTlwYWZ6bWxLM19MdS01RnN5MWhWRlVjS0JtWGhtU1hIaHRQRG4wYWJDd0NmZnMyV0ZBdVRMY0sxRlB2eTJYZTU0a0U2bGNTY2FKNEh3VGIzYzdBQkxUR0lLM0FKTkpiREQxWVNHWDJtdHY1ZzBfVUdXOXM0Mk5FMDdONTl2YzUxUG8?oc=5",
       "date": "Thu, 12 Nov 2026 06:06:51 GMT"
-    },
-    {
-      "title": "FTAI Infrastructure Earnings Call Signals Broad Growth - TipRanks",
-      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQaFhpeHFwcThfWUktMU14cmNjNnpBSnRIcXJGSmhodUdPMXJxRV9lZVZjTGFjOUh5NS1nLTZETEwzS0dOSi15d2xpLTNyUTZmRzVmc0JxOFdtXzQxdjBvTWVqMVJmZlc3Q0ttY1ZBTUVEVTRzMzBPa0xqZW84dmVLcG1UY3I0d3JfVEhYbFlYWVZEWXh4dlFvUENFOFpfYWZ1UEk3bzhIYWdUUQ?oc=5",
-      "date": "Thu, 12 Nov 2026 00:55:51 GMT"
     },
     {
       "title": "Ypsomed Earnings Call Signals Strong Growth Ahead - TipRanks",
@@ -4140,7 +4205,7 @@
     },
     {
       "title": "Baidu unveils AI chip roadmap, to launch 1,024-accelerator system in 2027 - Chosunbiz",
-      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQT2tPSU9fU0h1ZGJ5YUFiMFNlRjZBV2JfWGxGN1RvNkVfZXdmZ0Ewb2MxX2t5anQ2cFAxbngyYkNYcEdRSXpiUXM0TXhobWV2S1VaVkw4OTZXQVpLVFBVdTUzeVc2Z3pqdGE0RktLMlp0WUQtOW4xYzBqb0JickhpR1pYVWxFdHV10gGcAUFVX3lxTE54QzNVTWRndWZ6dXVCNWNLSE15YklPMkdNMVZKbFRnY0Z2T2lmMXNiUEo5V0xMTm5URExWbXVyWVZuNmZLNzVHVmJsOTdvc0wydDBsMTFqcnFITzR3Y251NkdKQncydFU1blJJUTZCYk1Qbmo0blBRai1VNWZoY3hldmtGdTFPRlRkY0hMMW5zTk1ab3FFeFhHT1FiMA?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOeEMzVU1kZ3VmenV1QjVjS0hNeWJJTzJHTTFWSmxUZ2NGdk9pZjFzYlBKOVdMTE5uVERMVm11cllWbjZmSzc1R1ZibDk3b3NMMnQwbDExanJxSE80d2NudTZHSkJ3MnRVNW5SSVE2QmJNUG5qNG5QUWotVTVmaGN4ZXZrRnUxT0ZUZGNITDFuc05NWm9xRXhYR09RYjDSAZwBQVVfeXFMTnhDM1VNZGd1Znp1dUI1Y0tITXliSU8yR00xVkpsVGdjRnZPaWYxc2JQSjlXTExOblRETFZtdXJZVm42Zks3NUdWYmw5N29zTDJ0MGwxMWpycUhPNHdjbnU2R0pCdzJ0VTVuUklRNkJiTVBuajRuUFFqLVU1ZmhjeGV2a0Z1MU9GVGRjSEwxbnNOTVpvcUV4WEdPUWIw?oc=5",
       "date": "Thu, 12 Nov 2026 07:19:00 GMT"
     },
     {
@@ -4257,11 +4322,6 @@
       "title": "The hidden environmental cost of AI data centers - DW.com",
       "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOWUpYbjhCemF4MnFWUVZVY1BoSlIzZGhaMFhoaW5lX01rek9Oc0otYWZhcW0zenZHRWpISjNVUTlONncxSVNRR0pfUE5aZmZpcl9NRjJsRW5TMmZWOTJ5RDEtREdhZndkdWliVU1BN3VuNlhHWjdXS01QX2ZTMWhiS0txaExpclNJ0gGIAUFVX3lxTE14UGg0b2FyUW5pVW1PNF9LYnlkVVhIVElxeHE2bzVwazQ0ZVZGUkRFRHcwcFlZVGx5OWVMTnRwdGlVMThpRkRzd2FzMGZQajNid09wVmxITUwtRjNrVVppaFc5Z2ZuVXk4TnN3aVZIckN5aUFXN3RyV1Z5NHBZWU5YcWVwdURoUGE?oc=5",
       "date": "Wed, 11 Nov 2026 23:37:59 GMT"
-    },
-    {
-      "title": "Google’s Utah Deal Puts Geothermal Power on the Data Center Map - Data Center Frontier",
-      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQczhYM0Zid2JoU3gtN0JUTjhJQlVUN0lOQXFXWm84NXl3T1Rad2tJWm55SjFQN2ZfZkdON3MtZnY3U0hHOG1uRHZyWFBMWXQ0YlNIcTFOTE81b2VSZjBUVm5ZWFdYZm93b0FuaGROU0FlV2pKd3Z6UGMxRmplZmRidzBaUVA3UUM1VEtVRXNFaEtTaEtLV3ZSZjJxRmJxbGNjWVBtQVdac041VEEzZU5zUlVGaUVTLVN0MUYyVXJ3?oc=5",
-      "date": "Wed, 11 Nov 2026 20:04:03 GMT"
     }
   ],
   "version": "4.2.2",
@@ -4299,102 +4359,102 @@
           "Yahoo: HTTP Error 404: Not Found"
         ]
       },
-      "ARM": {
+      "KLAC": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-11"
       },
-      "ASML": {
+      "KTOS": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-11"
       },
-      "AZTA": {
+      "LAZR": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-11"
       },
-      "BBAI": {
+      "LITE": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-11"
       },
-      "CGNX": {
+      "JBL": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-11"
       },
-      "CLS": {
+      "LRCX": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-11"
       },
-      "COHR": {
+      "MBLY": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-11"
       },
-      "CRDO": {
+      "META": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-11"
       },
-      "DELL": {
+      "MPWR": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-11"
       },
-      "DHR": {
+      "MRVL": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-11"
       },
-      "EMR": {
+      "MSFT": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-11"
       },
-      "ETN": {
+      "MU": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-11"
       },
-      "FANUY": {
+      "NOW": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-11"
       },
-      "GLW": {
+      "NVDA": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-11"
       },
-      "GOOGL": {
+      "NVT": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-11"
       },
-      "HON": {
+      "ONDS": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-11"
       },
-      "HUBB": {
+      "ONTO": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-11"
       },
-      "INTC": {
+      "OUST": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-11"
       },
-      "ISRG": {
+      "PATH": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-11"
       },
-      "JOBY": {
+      "PDYN": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-11"
@@ -4413,9 +4473,25 @@
     "schema_version": 1,
     "entry_levels": 15,
     "recommendations": 0,
-    "gate_audits": 68,
-    "events": 6,
-    "new_zone_hits": [],
+    "gate_audits": 136,
+    "events": 7,
+    "new_zone_hits": [
+      {
+        "type": "ENTRY_ZONE_TOUCHED",
+        "level_id": "legacy-20260911-MU-very_good",
+        "ticker": "MU",
+        "zone": "very_good",
+        "date": "2026-11-11",
+        "price": 763.05,
+        "intraday_low": 763.05,
+        "intraday_high": 827.58,
+        "close": 811.3,
+        "basis": "intraday_range",
+        "currency": "USD",
+        "detected_at": "2026-11-12T08:57:05.093525+00:00",
+        "status": "REQUIRES_FRESH_FUNDAMENTAL_AND_TECHNICAL_REVIEW"
+      }
+    ],
     "historical_imports": [
       {
         "ticker": "MU",
