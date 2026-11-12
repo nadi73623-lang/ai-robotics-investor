@@ -52,3 +52,15 @@ The archive's `historical_dataset_manifest.json` remains:
 - The archive's cached `data/scan.json` and `data/coverage_report.json` are dated 2026-10-16 and are not current market evidence.
 - Historical dataset manifest remains blocked: no audited point-in-time OHLCV/FX + delisted universe + historical analyst-target coverage. No real-data walk-forward backtest was performed.
 - BUY publication remains unauthorized. No production workflow, main branch, Worker, or Android release was changed.
+
+
+## Follow-up verification — 2026-11-12 (recovered archive executed locally)
+- Materialized the exact Library archive into the working container and extracted it: 873 ZIP entries, 843 files; ZIP integrity test returned no corrupt member.
+- `python -m compileall -q .` completed successfully for the recovered project tree.
+- Targeted regression command (Python 3.13, `PYTHONPATH=.`) covering Balanced evaluator/audit trace/backtest, global universe/data, analyst target/import, scanner, release gate/publish integrity, historical pipeline/adapters: **119 passed in 15.34s**.
+- A broad `pytest -q` attempt did not complete within the execution window; it was interrupted during the suite. This is not a full-suite pass.
+- The earlier note of 95 tests is superseded by the reproducible 119-test targeted run above.
+- Source archive scanner SHA-256: `b8c8d974efcfd1b40802c8a1b91081fb631f088a2f5d5af925c24d882678a216`; repair-branch scanner baseline SHA-256: `9aa7ddda22d48b200a1c0f95c38b529d6eb7cc3e`. They are different versions; the archive scanner has not yet been ported into this branch.
+- Recovered archive `historical_dataset_manifest.json` still reports `blocked_waiting_for_free_provider_key_and_point_in_time_target_access_test`. It explicitly states that historical target access, delisted-universe history and full point-in-time dataset are not verified.
+- The recovered archive's cached scan and coverage artifacts are historical snapshots, not current market data. No live market scan or walk-forward performance test was run.
+- Current repair branch remains an evaluator repair branch; no production scan, Worker, Android app, `main`, or BUY authorization was changed.
