@@ -347,6 +347,23 @@ def main():
         append_gate_audit(company['ticker'], scan_timestamp, unavailable_gates,
                           ['BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D.'])
     decision_memory = __import__('decision_memory').load_memory()
+    # Attach the complete, explicit per-issuer gate audit and prior level history
+    # to the published report; counts alone are not sufficient diagnostics.
+    current_gate_audits = {x['ticker']:x for x in decision_memory['gate_audits'] if x.get('scan_id') == scan_timestamp}
+    for company in companies:
+        ticker = company['ticker']
+        audit = current_gate_audits.get(ticker)
+        company['buy_gate_diagnostics'] = audit if audit else {
+            'ticker':ticker, 'scan_id':scan_timestamp,
+            'gates':unavailable_gates,
+            'blockers':['BUY zablokowany: brak kompletnego audytu tej spółki.'],
+            'status':'INCOMPLETE_AUDIT'
+        }
+        company['entry_zone_history'] = {
+            'levels':[x for x in decision_memory['entry_levels'] if x['ticker']==ticker],
+            'events':[x for x in decision_memory['events'] if x['ticker']==ticker],
+            'historical_imports':[x for x in decision_memory['historical_imports'] if x['ticker']==ticker]
+        }
     print('DECISION_MEMORY_SUMMARY',json.dumps({'levels':len(decision_memory['entry_levels']),'recommendations':len(decision_memory['recommendations']),'gate_audits':len(decision_memory['gate_audits']),'events':len(decision_memory['events']),'new_zone_hits':len(zone_hits)}))
     payload={'generated_at':scan_timestamp,'source':'Google News RSS','queries':QUERIES,'scan_status':'ok' if allnews else 'no_sources', 'articles_collected':len(allnews),'companies':companies,'discoveries':discoveries,'articles':allnews[:100],'version':'4.2.2','valuation_coverage':valuation_coverage,'valuation_note':'Orientacyjna kapitalizacja = cena EOD × akcje z ostatniego dostępnego raportu SEC; nie uwzględnia późniejszego rozwodnienia, zmian liczby akcji ani ADR. P/S i P/E bazują na danych rocznych, nie TTM. Nie jest to ranking inwestycyjny.','price_health':price_health,'price_coverage':price_coverage,'price_note':'Opóźnione ceny dzienne z Stooq lub Yahoo Chart (źródła mogą blokować dostęp); daty do 7 dni. Brak ceny to brak danych, nie zero. Kapitalizacja i mnożniki wyłącznie orientacyjne, gdy dane są wystarczające.','financial_coverage':covered,'financial_source':'SEC EDGAR XBRL, annual 10-K/20-F where available','financial_limitations':'Dane historyczne, możliwe opóźnienia; nie wszystkie spółki raportują do SEC. Pokrycie rośnie stopniowo; limity 16 zapytań SEC i 24 prób cen na skan.','coverage_note':'Lista startowa plus kandydaci wykryci przez dopasowanie nazw do rejestru SEC; brak pełnego globalnego pokrycia','ranking_method':'attention_score = 100*(1-exp(-mentions/4)); wskaźnik uwagi, NIE ocena inwestycyjna','investment_ranking_available':False,'decision_memory':{'schema_version':decision_memory['schema_version'],'entry_levels':len(decision_memory['entry_levels']),'recommendations':len(decision_memory['recommendations']),'gate_audits':len(decision_memory['gate_audits']),'events':len(decision_memory['events']),'new_zone_hits':zone_hits,'historical_imports':decision_memory['historical_imports'],'memory_file':'data/decision_memory.json'},'disclaimer':'Wskaźnik uwagi nie oznacza atrakcyjnej wyceny, potencjału wzrostu ani rekomendacji. Rejestr SEC obejmuje głównie emitentów raportujących w USA. Dane RSS mogą być niepełne.'}
     (ROOT/'data').mkdir(exist_ok=True)
