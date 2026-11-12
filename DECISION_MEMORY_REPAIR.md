@@ -43,3 +43,15 @@ Prevent the scanner from losing its own historical recommendations, entry zones,
 - Scan job serializes runs and rebases generated artifact commits before pushing, to mitigate concurrent workflow updates.
 - Unit tests passed in GitHub Actions on commit `50025b07fb819eff5bd80afc247fb616ad0233b4` (PR validation run).
 - A scheduled/push scan execution is still pending final confirmation of artifact commit and ledger contents.
+
+
+## Latest verified scan — 2026-11-12 08:56 UTC
+- Scheduled/push scan completed successfully, including unit tests and artifact commit.
+- 68 issuers scanned, 114 news articles collected.
+- Price coverage: 65/68; only 21 refreshed in the current rotating batch; three quote failures.
+- Valuation coverage: 54/68 partial/available, not full intrinsic valuations.
+- Decision ledger: 15 entry levels, 68 explicit N/D gate audits, 6 events at that run (5 historical imports plus one MU close event).
+- Investment ranking remains explicitly unavailable. No BUY was calculated.
+- AVGO quote providers failed in this run (Stooq bad CSV, Yahoo blocked); therefore AVGO's current quote must remain N/D.
+- Follow-up patch now attaches each issuer's gate audit and entry-zone history directly to the report and normalizes the imported intraday/close event basis.
+- The workflow test suite passed on earlier commits; the latest per-company report and ledger migration changes are awaiting CI verification.
