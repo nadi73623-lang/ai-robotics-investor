@@ -76,24 +76,41 @@ def fundamentals(ticker,cik):
             if not metrics['shares'] or dei_share['end'] >= metrics['shares'][0]['end']:
                 metrics['shares']=[dei_share]
     latest=lambda key: metrics[key][0]['value'] if metrics[key] else None
-    rev=latest('revenue'); net=latest('net_income'); ocf=latest('operating_cash_flow'); capex=latest('capex')
-    margin=round(net/rev*100,1) if rev and net is not None else None
+    # Never combine annual flow values from different fiscal periods.
+    def latest_common_end(*keys):
+        if not all(metrics.get(k) for k in keys): return None, None
+        common=set(x['end'] for x in metrics[keys[0]])
+        for key in keys[1:]: common &= {x['end'] for x in metrics[key]}
+        if not common: return None, None
+        end=max(common)
+        vals={key:next(x['value'] for x in metrics[key] if x['end']==end) for key in keys}
+        return end, vals
+    revenue_end, revenue_pair=latest_common_end('revenue','net_income')
+    cashflow_end, cashflow_pair=latest_common_end('operating_cash_flow','capex')
+    rev=latest('revenue')
+    net=revenue_pair['net_income'] if revenue_pair else None
+    ocf=cashflow_pair['operating_cash_flow'] if cashflow_pair else None
+    capex=cashflow_pair['capex'] if cashflow_pair else None
+    margin=round(net/rev*100,1) if rev and net is not None and revenue_end==metrics['revenue'][0]['end'] else None
     fcf=ocf-abs(capex) if ocf is not None and capex is not None else None
     growth=None
     if len(metrics['revenue'])>1:
         a,b=metrics['revenue'][:2]
         if int(a['year'])-int(b['year'])==1 and b['value']>0:growth=round((a['value']/b['value']-1)*100,1)
     debt=(latest('debt_current') or 0)+(latest('debt_long') or 0) if latest('debt_current') is not None or latest('debt_long') is not None else None
-    # This is a data-coverage-aware descriptive score, not a buy recommendation.
-    checks=[growth is not None,margin is not None,fcf is not None]
+    # Descriptive score only when all component metrics use aligned fiscal periods.
+    checks=[growth is not None,margin is not None,fcf is not None,ocf is not None]
     score=None
     if all(checks):
-        score=round(100*(int(growth>15)+int(margin>10)+int(fcf>0)+int(ocf is not None and ocf>0))/4)
+        score=round(100*(int(growth>15)+int(margin>10)+int(fcf>0)+int(ocf>0))/4)
     return {'source':'SEC EDGAR XBRL','fiscal_year':metrics['revenue'][0]['year'] if metrics['revenue'] else None,
       'revenue_usd':rev,'net_income_usd':net,'revenue_growth_pct':growth,'net_margin_pct':margin,'operating_cash_flow_usd':ocf,
       'free_cash_flow_usd':fcf,'cash_usd':latest('cash'),'debt_usd':debt,
-      'financial_health_score':score,'score_label':'Prosty filtr 4 warunków, nie rekomendacja',
-      'shares_outstanding':latest('shares'),'shares_as_of':metrics['shares'][0]['end'] if metrics['shares'] else None,'revenue_period_end':metrics['revenue'][0]['end'] if metrics['revenue'] else None,'net_income_period_end':metrics['net_income'][0]['end'] if metrics['net_income'] else None,'cash_flow_period_end':metrics['operating_cash_flow'][0]['end'] if metrics['operating_cash_flow'] else None,'capex_period_end':metrics['capex'][0]['end'] if metrics['capex'] else None,'as_of':datetime.now(timezone.utc).isoformat(),'source_url':'https://www.sec.gov/edgar/browse/?CIK='+str(cik)}
+      'financial_health_score':score,'score_label':'Prosty filtr 4 warunków, tylko zgodne okresy; nie rekomendacja',
+      'shares_outstanding':latest('shares'),'shares_as_of':metrics['shares'][0]['end'] if metrics['shares'] else None,'revenue_period_end':metrics['revenue'][0]['end'] if metrics['revenue'] else None,'net_income_period_end':revenue_end,'cash_flow_period_end':cashflow_end,'capex_period_end':cashflow_end,
+      'period_alignment':{'revenue_net_income_match':revenue_end is not None and revenue_end==metrics['revenue'][0]['end'],'cashflow_capex_match':cashflow_end is not None,'status':'aligned' if revenue_end and cashflow_end else 'partial_or_mismatched'},
+      'period_mismatch_flags':([key for key in ('revenue','net_income') if not metrics.get(key)] + (['revenue_net_income_period_mismatch'] if metrics.get('revenue') and metrics.get('net_income') and not revenue_end else []) + (['cashflow_capex_period_mismatch'] if metrics.get('operating_cash_flow') and metrics.get('capex') and not cashflow_end else [])),
+      'as_of':datetime.now(timezone.utc).isoformat(),'source_url':'https://www.sec.gov/edgar/browse/?CIK='+str(cik)}
 SEC_BATCH_SIZE=16  # max requests per six-hour scan; staggered, no paid API
 PRICE_BATCH_SIZE=24  # complete the 68-name rotation in about three successful scans
 
