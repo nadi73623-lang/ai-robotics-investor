@@ -4,7 +4,7 @@
 This module never invents missing prices or turns an entry-zone touch into a BUY.
 Historical recommendations are immutable records; changes are appended as events.
 """
-import json
+import json, hashlib
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -61,6 +61,7 @@ def initial_memory():
         },
         "entry_levels": levels,
         "recommendations": [],
+        "scan_snapshots": [],
         "gate_audits": [],
         "events": [
             {"type":"HISTORICAL_ENTRY_ZONE_HIT", "level_id":"legacy-20260911-"+h["ticker"]+"-"+h["zone"],
@@ -82,7 +83,9 @@ def load_memory(path=MEMORY_PATH):
     data = json.loads(path.read_text(encoding="utf-8"))
     if data.get("schema_version") != 1:
         raise ValueError("Unsupported decision memory schema")
-    for key in ("entry_levels", "recommendations", "gate_audits", "events", "price_observations", "historical_imports"):
+    # Backward-compatible schema-v1 migration: preserve all existing records.
+    data.setdefault("scan_snapshots", [])
+    for key in ("entry_levels", "recommendations", "scan_snapshots", "gate_audits", "events", "price_observations", "historical_imports"):
         if not isinstance(data.get(key), list):
             raise ValueError(f"Invalid decision memory field: {key}")
     # Idempotent migration for ledgers created by earlier repair commits:
@@ -104,6 +107,28 @@ def load_memory(path=MEMORY_PATH):
                 })
                 existing.add(key)
     return data
+
+
+def append_scan_snapshot(scan_id, companies, path=MEMORY_PATH):
+    """Persist exact scan inputs/results as an immutable, hash-checked record."""
+    if not scan_id or not isinstance(companies, list):
+        raise ValueError("Scan snapshot requires scan_id and company list")
+    memory = load_memory(path)
+    existing = next((x for x in memory["scan_snapshots"] if x.get("scan_id") == scan_id), None)
+    if existing:
+        return existing
+    fields = ("ticker", "name", "sector", "price", "fundamentals", "valuation",
+              "valuation_status", "attention_score", "investment_score",
+              "buy_gate_diagnostics", "entry_zone_history", "status")
+    rows = [{k: company.get(k) for k in fields if k in company} for company in companies]
+    payload = {"scan_id": scan_id, "companies": rows}
+    canonical = json.dumps(payload, ensure_ascii=False, sort_keys=True, separators=(",", ":"), allow_nan=False)
+    record = {**payload, "sha256": hashlib.sha256(canonical.encode("utf-8")).hexdigest(),
+              "company_count": len(rows), "immutable": True, "recorded_at": _now()}
+    memory["scan_snapshots"].append(record)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(memory, ensure_ascii=False, indent=2, allow_nan=False), encoding="utf-8")
+    return record
 
 def _in_zone(price, lower, upper):
     return lower <= price <= upper
