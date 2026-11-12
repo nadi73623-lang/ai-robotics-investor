@@ -88,20 +88,21 @@ def load_memory(path=MEMORY_PATH):
     # Idempotent migration for ledgers created by earlier repair commits:
     # expand combined intraday+close imports into two separately auditable events.
     existing = {(e.get("level_id"), e.get("date"), e.get("basis")) for e in data["events"]}
-    for h in HISTORICAL_HITS:
-        bases = ["intraday_range", "close"] if h["basis"] == "intraday_low_and_close" else [h["basis"]]
-        for basis in bases:
-            key = ("legacy-20260911-"+h["ticker"]+"-"+h["zone"], h["date"], basis)
-            if key in existing:
-                continue
-            data["events"].append({
-                "type":"HISTORICAL_ENTRY_ZONE_HIT", "level_id":key[0],
-                "ticker":h["ticker"], "zone":h["zone"], "date":h["date"],
-                "intraday_low":h["low"], "close":h["close"], "basis":basis,
-                "currency":"USD", "source":h["source"],
-                "status":"HISTORICAL_HIT_REQUIRES_REVIEW_NOT_AUTOMATIC_BUY"
-            })
-            existing.add(key)
+    if data["historical_imports"]:
+        for h in HISTORICAL_HITS:
+            bases = ["intraday_range", "close"] if h["basis"] == "intraday_low_and_close" else [h["basis"]]
+            for basis in bases:
+                key = ("legacy-20260911-"+h["ticker"]+"-"+h["zone"], h["date"], basis)
+                if key in existing:
+                    continue
+                data["events"].append({
+                    "type":"HISTORICAL_ENTRY_ZONE_HIT", "level_id":key[0],
+                    "ticker":h["ticker"], "zone":h["zone"], "date":h["date"],
+                    "intraday_low":h["low"], "close":h["close"], "basis":basis,
+                    "currency":"USD", "source":h["source"],
+                    "status":"HISTORICAL_HIT_REQUIRES_REVIEW_NOT_AUTOMATIC_BUY"
+                })
+                existing.add(key)
     return data
 
 def _in_zone(price, lower, upper):
