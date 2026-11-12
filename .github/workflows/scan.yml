@@ -1,8 +1,17 @@
 name: AI Robotics market scan
 on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - fix/decision-memory-entry-alerts
   workflow_dispatch:
   schedule:
     - cron: '17 */6 * * *'
+concurrency:
+  group: robotics-scan-${{ github.ref }}
+  cancel-in-progress: true
 permissions:
   contents: write
 jobs:
@@ -14,12 +23,21 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Run scanner and decision-memory tests
+        run: python -m unittest discover -v
       - name: Scan public news
+        if: github.event_name != 'pull_request'
         run: python scanner.py
       - name: Save scan results
+        if: github.event_name != 'pull_request'
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add data/scan.json
-          git diff --cached --quiet || (git commit -m 'Update AI robotics scan' && git push)
+          git add -f data/decision_memory.json
+          if ! git diff --cached --quiet; then
+            git commit -m 'Update AI robotics scan'
+          fi
+          git pull --rebase origin fix/decision-memory-entry-alerts
+          git push origin HEAD:fix/decision-memory-entry-alerts
           

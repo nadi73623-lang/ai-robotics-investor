@@ -3,10 +3,11 @@
 import json, re, time, os, csv, io, urllib.parse, urllib.request, xml.etree.ElementTree as ET
 from datetime import datetime, timezone
 from pathlib import Path
+from decision_memory import record_scan, append_gate_audit, append_scan_snapshot
 
 ROOT=Path(__file__).resolve().parent
 UNIVERSE=[
- ('NVDA','NVIDIA','AI chips'),('AVGO','Broadcom','AI infrastructure'),('AMD','Advanced Micro Devices','AI chips'),('TSM','Taiwan Semiconductor','Semiconductors'),('ASML','ASML','Semiconductor equipment'),('ARM','Arm Holdings','Chip architecture'),('MU','Micron Technology','AI memory'),('MRVL','Marvell Technology','AI networking'),('ANET','Arista Networks','AI networking'),('CRDO','Credo Technology','AI networking'),('ALAB','Astera Labs','AI connectivity'),('SMCI','Super Micro Computer','AI servers'),('DELL','Dell Technologies','AI servers'),('VRT','Vertiv','Data centers'),('ETN','Eaton','Data center power'),('GOOGL','Alphabet','AI platforms'),('MSFT','Microsoft','AI platforms'),('AMZN','Amazon','AI cloud'),('META','Meta Platforms','AI platforms'),('PLTR','Palantir','AI software'),('AI','C3.ai','AI software'),('SOUN','SoundHound AI','AI software'),('BBAI','BigBear.ai','AI software'),('PATH','UiPath','Automation'),('NOW','ServiceNow','Enterprise AI'),('SNOW','Snowflake','Data platform'),('PDYN','Palladyne AI','Robotics'),('SYM','Symbotic','Warehouse robotics'),('ISRG','Intuitive Surgical','Surgical robotics'),('TER','Teradyne','Industrial robotics'),('ROK','Rockwell Automation','Industrial automation'),('ABB','ABB Ltd','Industrial automation'),('FANUY','FANUC','Industrial robotics'),('KUKAF','KUKA','Industrial robotics'),('ZBRA','Zebra Technologies','Industrial automation'),('CGNX','Cognex','Machine vision'),('IRBT','iRobot','Consumer robotics'),('SERV','Serve Robotics','Autonomous robots'),('RR','Richtech Robotics','Service robotics'),('JOBY','Joby Aviation','Autonomy'),('ACHR','Archer Aviation','Autonomy'),('MBLY','Mobileye','Autonomous driving'),('LAZR','Luminar Technologies','Autonomous driving'),('OUST','Ouster','Sensors'),('KTOS','Kratos Defense','Autonomous systems'),('RCAT','Red Cat Holdings','Drones'),('ONDS','Ondas Holdings','Drones'),('QCOM','Qualcomm','Edge AI'),('INTC','Intel','Semiconductors'),('APH','Amphenol','AI connectivity'),('GLW','Corning','Optical infrastructure'),('COHR','Coherent','Optical infrastructure'),('LITE','Lumentum','Optical infrastructure'),('CLS','Celestica','AI hardware'),('JBL','Jabil','AI hardware'),('ONTO','Onto Innovation','Semiconductor equipment'),('AMAT','Applied Materials','Semiconductor equipment'),('LRCX','Lam Research','Semiconductor equipment'),('KLAC','KLA Corporation','Semiconductor equipment'),('MPWR','Monolithic Power Systems','Power semiconductors'),('NVT','nVent Electric','Data center power'),('PWR','Quanta Services','Grid infrastructure'),('HUBB','Hubbell','Grid infrastructure'),('EMR','Emerson Electric','Industrial automation'),('HON','Honeywell','Industrial automation'),('SIEGY','Siemens','Industrial automation'),('DHR','Danaher','Laboratory automation'),('AZTA','Azenta','Laboratory automation')]
+ ('NVDA','NVIDIA','AI chips'),('AVGO','Broadcom','AI infrastructure'),('AMD','Advanced Micro Devices','AI chips'),('TSM','Taiwan Semiconductor','Semiconductors'),('ASML','ASML','Semiconductor equipment'),('ARM','Arm Holdings','Chip architecture'),('MU','Micron Technology','AI memory'),('MRVL','Marvell Technology','AI networking'),('ANET','Arista Networks','AI networking'),('CRDO','Credo Technology','AI networking'),('ALAB','Astera Labs','AI connectivity'),('SMCI','Super Micro Computer','AI servers'),('DELL','Dell Technologies','AI servers'),('VRT','Vertiv','Data centers'),('ETN','Eaton','Data center power'),('GOOGL','Alphabet','AI platforms'),('MSFT','Microsoft','AI platforms'),('AMZN','Amazon','AI cloud'),('META','Meta Platforms','AI platforms'),('PLTR','Palantir','AI software'),('AI','C3.ai','AI software'),('SOUN','SoundHound AI','AI software'),('BBAI','BigBear.ai','AI software'),('PATH','UiPath','Automation'),('NOW','ServiceNow','Enterprise AI'),('SNOW','Snowflake','Data platform'),('PDYN','Palladyne AI','Robotics'),('SYM','Symbotic','Warehouse robotics'),('ISRG','Intuitive Surgical','Surgical robotics'),('TER','Teradyne','Industrial robotics'),('ROK','Rockwell Automation','Industrial automation'),('ABB','ABB Ltd','Industrial automation'),('FANUY','FANUC','Industrial robotics'),('KUKAF','KUKA','Industrial robotics'),('ZBRA','Zebra Technologies','Industrial automation'),('CGNX','Cognex','Machine vision'),('IRBT','iRobot','Consumer robotics'),('SERV','Serve Robotics','Autonomous robots'),('RR','Richtech Robotics','Service robotics'),('JOBY','Joby Aviation','Autonomy'),('ACHR','Archer Aviation','Autonomy'),('MBLY','Mobileye','Autonomous driving'),('LAZR','Luminar Technologies','Autonomous driving'),('OUST','Ouster','Sensors'),('KTOS','Kratos Defense','Autonomous systems'),('RCAT','Red Cat Holdings','Drones'),('ONDS','Ondas Holdings','Drones'),('QCOM','Qualcomm','Edge AI'),('INTC','Intel','Semiconductors'),('APH','Amphenol','AI connectivity'),('GLW','Corning','Optical infrastructure'),('COHR','Coherent','Optical infrastructure'),('LITE','Lumentum','Optical infrastructure'),('CLS','Celestica','AI hardware'),('JBL','Jabil','AI hardware'),('ONTO','Onto Innovation','Semiconductor equipment'),('AMAT','Applied Materials','Semiconductor equipment'),('LRCX','Lam Research','Semiconductor equipment'),('KLAC','KLA Corporation','Semiconductor equipment'),('MPWR','Monolithic Power Systems','Power semiconductors'),('NVT','nVent Electric','Data center power'),('PWR','Quanta Services','Grid infrastructure'),('HUBB','Hubbell','Grid infrastructure'),('EMR','Emerson Electric','Industrial automation'),('HON','Honeywell','Industrial automation'),('SIEGY','Siemens','Industrial automation'),('DHR','Danaher','Laboratory automation'),('AZTA','Azenta','Laboratory automation'),('6479.T','MinebeaMitsumi','Robotics components'),('2498.HK','RoboSense','LiDAR and perception'),('6471.T','NSK','Bearings and motion'),('6762.T','TDK','Electronic components'),('5471.T','Daido Steel','Magnetic and specialty materials'),('002050.SZ','Sanhua Intelligent Controls','Thermal and robotics components'),('601689.SS','Tuopu Group','Automotive and robotics components'),('300124.SZ','Inovance Technology','Industrial automation'),('2049.TW','HIWIN Technologies','Linear motion and robotics'),('1590.TW','AirTAC','Pneumatics and automation'),('6594.T','Nidec','Motors and actuators'),('6268.T','Nabtesco','Precision reducers'),('6481.T','THK','Linear motion'),('6954.T','FANUC Corp','Industrial robotics'),('6273.T','SMC Corp','Pneumatics and automation'),('6645.T','Omron','Sensing and automation'),('6324.T','Harmonic Drive Systems','Precision gears'),('6861.T','Keyence','Machine vision and sensors'),('2308.TW','Delta Electronics','Power and automation'),('2395.TW','Advantech','Industrial computing'),('000333.SZ','Midea Group','Robotics and appliances'),('1211.HK','BYD','EV and batteries'),('300750.SZ','CATL','Battery systems'),('373220.KS','LG Energy Solution','Battery systems'),('009150.KS','Samsung Electro-Mechanics','Electronic components'),('454910.KS','Doosan Robotics','Collaborative robots'),('277810.KS','Rainbow Robotics','Humanoid and industrial robots'),('2301.TW','Lite-On Technology','Optoelectronics'),('NOVT','Novanta','Precision motion and photonics'),('ALGM','Allegro MicroSystems','Power and sensing semiconductors'),('RRX','Regal Rexnord','Motion control'),('ST','Sensata Technologies','Sensors and controls'),('UMAC','Unusual Machines','Drones and components')]
 QUERIES=['artificial intelligence robotics stocks companies contracts earnings', 'AI data center chips networking power infrastructure stocks', 'industrial automation humanoid robots publicly traded companies', 'AI inference optical interconnect semiconductor publicly traded stock', 'warehouse automation machine vision autonomous systems listed company', 'AI infrastructure cooling energy grid power public company']
 UA={'User-Agent':'Mozilla/5.0 (compatible; AI-Robotics-Investor/2.0; public research)'}
 def fetch(q):
@@ -57,8 +58,18 @@ def annual_values(facts,tags,unit='USD',instant=False):
             year=x['end'][:4]
             if year not in byyear or x['filed']>byyear[year]['filed']: byyear[year]=x
         vals=sorted(byyear.values(),key=lambda x:x['end'],reverse=True)
-        if vals:return [{'year':v['end'][:4],'end':v['end'],'value':v['val'],'filed':v['filed']} for v in vals[:3]]
+        if vals:return [{'year':v['end'][:4],'start':v.get('start'),'end':v['end'],'value':v['val'],'filed':v['filed']} for v in vals[:3]]
     return []
+def latest_common_end(metrics, *keys):
+    """Return values only for the newest fiscal end shared by every requested metric."""
+    if not keys or not all(metrics.get(k) for k in keys): return None, None
+    common={(x.get('start'),x['end']) for x in metrics[keys[0]]}
+    for key in keys[1:]: common &= {(x.get('start'),x['end']) for x in metrics[key]}
+    if not common: return None, None
+    start,end=max(common,key=lambda x:x[1])
+    vals={key:next(x['value'] for x in metrics[key] if (x.get('start'),x['end'])==(start,end)) for key in keys}
+    return {'start':start,'end':end}, vals
+
 def fundamentals(ticker,cik):
     data=sec_json('https://data.sec.gov/api/xbrl/companyfacts/CIK'+str(cik).zfill(10)+'.json')
     facts=data.get('facts',{}); metrics={}
@@ -75,24 +86,40 @@ def fundamentals(ticker,cik):
             if not metrics['shares'] or dei_share['end'] >= metrics['shares'][0]['end']:
                 metrics['shares']=[dei_share]
     latest=lambda key: metrics[key][0]['value'] if metrics[key] else None
-    rev=latest('revenue'); net=latest('net_income'); ocf=latest('operating_cash_flow'); capex=latest('capex')
-    margin=round(net/rev*100,1) if rev and net is not None else None
+    # Never combine annual flow values from different fiscal periods.
+    revenue_end, revenue_pair=latest_common_end(metrics,'revenue','net_income')
+    cashflow_end, cashflow_pair=latest_common_end(metrics,'operating_cash_flow','capex')
+    rev=latest('revenue')
+    net=revenue_pair['net_income'] if revenue_pair else None
+    ocf=cashflow_pair['operating_cash_flow'] if cashflow_pair else None
+    capex=cashflow_pair['capex'] if cashflow_pair else None
+    margin=round(net/rev*100,1) if rev and net is not None and revenue_end and revenue_end['end']==metrics['revenue'][0]['end'] and revenue_end['start']==metrics['revenue'][0].get('start') else None
     fcf=ocf-abs(capex) if ocf is not None and capex is not None else None
     growth=None
     if len(metrics['revenue'])>1:
         a,b=metrics['revenue'][:2]
         if int(a['year'])-int(b['year'])==1 and b['value']>0:growth=round((a['value']/b['value']-1)*100,1)
     debt=(latest('debt_current') or 0)+(latest('debt_long') or 0) if latest('debt_current') is not None or latest('debt_long') is not None else None
-    # This is a data-coverage-aware descriptive score, not a buy recommendation.
-    checks=[growth is not None,margin is not None,fcf is not None]
+    # A score is withheld unless all flow metrics use their latest common fiscal end.
+    periods_fully_aligned=(
+        bool(metrics['revenue']) and bool(metrics['net_income']) and
+        revenue_end and revenue_end['end']==metrics['revenue'][0]['end']==metrics['net_income'][0]['end'] and revenue_end['start']==metrics['revenue'][0].get('start')==metrics['net_income'][0].get('start') and
+        bool(metrics['operating_cash_flow']) and bool(metrics['capex']) and
+        cashflow_end and cashflow_end['end']==metrics['operating_cash_flow'][0]['end']==metrics['capex'][0]['end'] and cashflow_end['start']==metrics['operating_cash_flow'][0].get('start')==metrics['capex'][0].get('start')
+    )
+    checks=[growth is not None,margin is not None,fcf is not None,ocf is not None]
     score=None
-    if all(checks):
-        score=round(100*(int(growth>15)+int(margin>10)+int(fcf>0)+int(ocf is not None and ocf>0))/4)
+    if all(checks) and periods_fully_aligned:
+        score=round(100*(int(growth>15)+int(margin>10)+int(fcf>0)+int(ocf>0))/4)
     return {'source':'SEC EDGAR XBRL','fiscal_year':metrics['revenue'][0]['year'] if metrics['revenue'] else None,
       'revenue_usd':rev,'net_income_usd':net,'revenue_growth_pct':growth,'net_margin_pct':margin,'operating_cash_flow_usd':ocf,
       'free_cash_flow_usd':fcf,'cash_usd':latest('cash'),'debt_usd':debt,
-      'financial_health_score':score,'score_label':'Prosty filtr 4 warunków, nie rekomendacja',
-      'shares_outstanding':latest('shares'),'shares_as_of':metrics['shares'][0]['end'] if metrics['shares'] else None,'revenue_period_end':metrics['revenue'][0]['end'] if metrics['revenue'] else None,'net_income_period_end':metrics['net_income'][0]['end'] if metrics['net_income'] else None,'cash_flow_period_end':metrics['operating_cash_flow'][0]['end'] if metrics['operating_cash_flow'] else None,'capex_period_end':metrics['capex'][0]['end'] if metrics['capex'] else None,'as_of':datetime.now(timezone.utc).isoformat(),'source_url':'https://www.sec.gov/edgar/browse/?CIK='+str(cik)}
+      'financial_health_score':score,'score_label':'Prosty filtr 4 warunków, tylko zgodne okresy; nie rekomendacja',
+      'shares_outstanding':latest('shares'),'shares_as_of':metrics['shares'][0]['end'] if metrics['shares'] else None,'revenue_period_end':metrics['revenue'][0]['end'] if metrics['revenue'] else None,'net_income_period_end':revenue_end['end'] if revenue_end else None,'net_income_period_start':revenue_end['start'] if revenue_end else None,'revenue_period_start':metrics['revenue'][0].get('start') if metrics['revenue'] else None,'cash_flow_period_end':cashflow_end['end'] if cashflow_end else None,'cash_flow_period_start':cashflow_end['start'] if cashflow_end else None,'capex_period_end':cashflow_end['end'] if cashflow_end else None,'capex_period_start':cashflow_end['start'] if cashflow_end else None,
+      'period_alignment':{'revenue_net_income_common_period':revenue_end,'cashflow_capex_common_period':cashflow_end,'revenue_net_income_match_latest':bool(metrics['revenue'] and metrics['net_income'] and revenue_end and revenue_end['end']==metrics['revenue'][0]['end']==metrics['net_income'][0]['end'] and revenue_end['start']==metrics['revenue'][0].get('start')==metrics['net_income'][0].get('start')),'cashflow_capex_match_latest':bool(metrics['operating_cash_flow'] and metrics['capex'] and cashflow_end and cashflow_end['end']==metrics['operating_cash_flow'][0]['end']==metrics['capex'][0]['end'] and cashflow_end['start']==metrics['operating_cash_flow'][0].get('start')==metrics['capex'][0].get('start')),'status':'aligned' if periods_fully_aligned else 'partial_or_mismatched'},
+      'period_mismatch_flags':([key for key in ('revenue','net_income','operating_cash_flow','capex') if not metrics.get(key)] + (['revenue_net_income_period_mismatch'] if metrics.get('revenue') and metrics.get('net_income') and not (revenue_end and revenue_end['end']==metrics['revenue'][0]['end']==metrics['net_income'][0]['end'] and revenue_end['start']==metrics['revenue'][0].get('start')==metrics['net_income'][0].get('start')) else []) + (['cashflow_capex_period_mismatch'] if metrics.get('operating_cash_flow') and metrics.get('capex') and not (cashflow_end and cashflow_end['end']==metrics['operating_cash_flow'][0]['end']==metrics['capex'][0]['end'] and cashflow_end['start']==metrics['operating_cash_flow'][0].get('start')==metrics['capex'][0].get('start')) else [])),
+      'financial_health_score_available':periods_fully_aligned,
+      'as_of':datetime.now(timezone.utc).isoformat(),'source_url':'https://www.sec.gov/edgar/browse/?CIK='+str(cik)}
 SEC_BATCH_SIZE=16  # max requests per six-hour scan; staggered, no paid API
 PRICE_BATCH_SIZE=24  # complete the 68-name rotation in about three successful scans
 
@@ -131,6 +158,50 @@ from datetime import timedelta
 class QuoteError(Exception):
     pass
 
+# Explicit primary/ADR Yahoo Finance symbols. No fuzzy ticker guessing.
+YAHOO_SYMBOLS = {
+ '6479.T':'6479.T','2498.HK':'2498.HK','6471.T':'6471.T','6762.T':'6762.T','5471.T':'5471.T',
+ '002050.SZ':'002050.SZ','601689.SS':'601689.SS','300124.SZ':'300124.SZ','2049.TW':'2049.TW',
+ '1590.TW':'1590.TW','6594.T':'6594.T','6268.T':'6268.T','6481.T':'6481.T','6954.T':'6954.T',
+ '6273.T':'6273.T','6645.T':'6645.T','6324.T':'6324.T','6861.T':'6861.T','2308.TW':'2308.TW',
+ '2395.TW':'2395.TW','000333.SZ':'000333.SZ','1211.HK':'1211.HK','300750.SZ':'300750.SZ',
+ '373220.KS':'373220.KS','009150.KS':'009150.KS','454910.KS':'454910.KS','277810.KS':'277810.KS',
+ '2301.TW':'2301.TW'
+}
+# Yahoo FX symbols are explicitly tagged by quote convention:
+# direct symbols return USD per 1 unit of foreign currency; inverse symbols return
+# units of foreign currency per 1 USD.
+FX_SYMBOLS = {
+ 'EUR':('EURUSD=X','direct'),'GBP':('GBPUSD=X','direct'),
+ 'JPY':('JPY=X','inverse'),'HKD':('HKD=X','inverse'),'TWD':('TWD=X','inverse'),
+ 'CNY':('CNY=X','inverse'),'KRW':('KRW=X','inverse')
+}
+def _yahoo_chart(symbol, period='6mo'):
+    url='https://query1.finance.yahoo.com/v8/finance/chart/'+urllib.parse.quote(symbol,safe='')+'?interval=1d&range='+period
+    req=urllib.request.Request(url,headers={'User-Agent':'Mozilla/5.0','Accept':'application/json'})
+    with urllib.request.urlopen(req,timeout=15) as response: obj=json.load(response)
+    results=(obj.get('chart') or {}).get('result') or []
+    if not results: raise QuoteError('Yahoo chart has no result for '+symbol)
+    return results[0],url
+def fx_to_usd(currency):
+    if currency=='USD': return 1.0
+    if currency not in FX_SYMBOLS: raise QuoteError('No approved FX mapping for '+str(currency))
+    symbol,mode=FX_SYMBOLS[currency]
+    result,url=_yahoo_chart(symbol,'5d')
+    meta=result.get('meta') or {}
+    stamps=result.get('timestamp') or []
+    bars=((result.get('indicators') or {}).get('quote') or [{}])[0]
+    closes=bars.get('close') or []
+    vals=[(ts,v) for ts,v in zip(stamps,closes) if v is not None and float(v)>0]
+    if not vals: raise QuoteError('FX chart has no valid close for '+currency)
+    ts,rate=vals[-1]; rate=float(rate)
+    fx_day=datetime.fromtimestamp(ts,timezone.utc).date()
+    fx_age=(datetime.now(timezone.utc).date()-fx_day).days
+    if not 0<=fx_age<=3: raise QuoteError('stale or future FX rate for '+currency+': '+fx_day.isoformat())
+    # Guard against reversed/invalid pair conventions and extreme rates.
+    if not (0.00001 < rate < 100000): raise QuoteError('FX rate out of range for '+currency)
+    return (rate if mode=='direct' else 1.0/rate), {'symbol':symbol,'date':fx_day.isoformat(),'age_days':fx_age,'rate':rate,'mode':mode,'source_url':url}
+
 def checked_quote(price, day, source, url):
     try:
         value=float(price)
@@ -141,7 +212,7 @@ def checked_quote(price, day, source, url):
     if not (0 < value < 10000000): raise QuoteError('price out of range')
     if not 0 <= age <= 7: raise QuoteError('stale or future quote: '+str(day))
     return {'close_usd':round(value,4),'date':stamp.isoformat(),'age_days':age,
-            'source':source,'source_url':url,'is_live':False}
+            'close_native':round(value,4),'currency':'USD','source':source,'source_url':url,'is_live':False}
 
 def stooq_quote(ticker):
     if not re.fullmatch(r'[A-Z]{1,5}',ticker): raise QuoteError('unsupported ticker')
@@ -156,37 +227,67 @@ def stooq_quote(ticker):
         raise QuoteError('Stooq CSV missing Date/Close; header='+repr((reader.fieldnames or [])[:5])+'; preview='+repr(body[:80]))
     rows=list(reader)
     if not rows: raise QuoteError('Stooq CSV has no rows')
-    return checked_quote(rows[-1].get('Close'),rows[-1].get('Date'),'Stooq EOD',url)
+    quote=checked_quote(rows[-1].get('Close'),rows[-1].get('Date'),'Stooq EOD',url)
+    for field, key in [('low_usd','Low'),('high_usd','High')]:
+        try: quote[field]=round(float(rows[-1][key]),4)
+        except (KeyError,TypeError,ValueError): quote[field]=None
+    return quote
 
 def yahoo_quote(ticker):
-    # Public chart endpoint: availability and redistribution rights may change.
-    if not re.fullmatch(r'[A-Z]{1,5}',ticker): raise QuoteError('unsupported ticker')
-    url='https://query1.finance.yahoo.com/v8/finance/chart/'+urllib.parse.quote(ticker)+'?interval=1d&range=15d'
-    req=urllib.request.Request(url,headers={'User-Agent':'Mozilla/5.0','Accept':'application/json'})
-    with urllib.request.urlopen(req,timeout=12) as response:
-        obj=json.load(response)
-    results=(obj.get('chart') or {}).get('result') or []
-    if not results: raise QuoteError('Yahoo chart has no result')
-    result=results[0]
+    # Resolve only explicit symbols; US tickers remain exact-symbol lookups.
+    if not re.fullmatch(r'[A-Z0-9.]{1,12}',ticker): raise QuoteError('unsupported ticker')
+    symbol=YAHOO_SYMBOLS.get(ticker,ticker)
+    result,url=_yahoo_chart(symbol,'6mo')
     meta=result.get('meta') or {}
-    if meta.get('currency')!='USD': raise QuoteError('Yahoo quote currency is not USD')
+    currency=meta.get('currency')
+    if not currency or len(currency)!=3: raise QuoteError('Yahoo chart returned no valid currency')
     stamps=result.get('timestamp') or []
-    closes=(((result.get('indicators') or {}).get('quote') or [{}])[0].get('close') or [])
-    valid=[(ts,close) for ts,close in zip(stamps,closes) if close is not None]
+    bars=((result.get('indicators') or {}).get('quote') or [{}])[0]
+    closes=bars.get('close') or []
+    valid=[i for i,(ts,close) in enumerate(zip(stamps,closes)) if close is not None and close>0]
     if not valid: raise QuoteError('Yahoo chart has no daily closes')
-    ts,price=valid[-1]
+    i=valid[-1]; ts,price=stamps[i],float(closes[i])
     day=datetime.fromtimestamp(ts,timezone.utc).date().isoformat()
-    return checked_quote(price,day,'Yahoo Finance chart EOD',url)
+    stamp=datetime.fromisoformat(day).date()
+    age=(datetime.now(timezone.utc).date()-stamp).days
+    if not 0<=age<=7: raise QuoteError('stale or future quote: '+day)
+    fx_info=None; close_usd=None
+    if currency=='USD':
+        close_usd=round(price,4)
+    else:
+        fx,fx_info=fx_to_usd(currency)
+        close_usd=round(price*fx,6)
+    quote={'close_native':round(price,6),'currency':currency,'close_usd':close_usd,
+           'date':day,'age_days':age,'source':'Yahoo Finance chart EOD',
+           'source_symbol':symbol,'source_url':url,'is_live':False,'fx_to_usd':fx_info,
+           'volume':None,'open_native':None,'low_native':None,'high_native':None,
+           'bars':[]}
+    for field,key in [('open_native','open'),('low_native','low'),('high_native','high'),('volume','volume')]:
+        values=bars.get(key) or []
+        try:
+            v=values[i]
+            quote[field]=int(v) if field=='volume' and v is not None else (round(float(v),6) if v is not None else None)
+        except (IndexError,TypeError,ValueError): quote[field]=None
+    # Preserve a compact, timestamped daily OHLCV series in native currency.
+    opens=bars.get('open') or []; highs=bars.get('high') or []; lows=bars.get('low') or []; vols=bars.get('volume') or []
+    for k in range(max(0,len(stamps)-126),len(stamps)):
+        if k>=len(closes) or closes[k] is None: continue
+        quote['bars'].append({'date':datetime.fromtimestamp(stamps[k],timezone.utc).date().isoformat(),
+            'open':opens[k] if k<len(opens) else None,'high':highs[k] if k<len(highs) else None,
+            'low':lows[k] if k<len(lows) else None,'close':closes[k],
+            'volume':vols[k] if k<len(vols) else None,'currency':currency})
+    return quote
 
 def add_prices(companies,prior):
     old={x.get('ticker'):x.get('price') for x in prior.get('companies',[]) if x.get('price')}
     diagnostics={};attempted=0;success=0
-    eligible=[c for c in companies if re.fullmatch(r'[A-Z]{1,5}',c['ticker'])]
+    eligible=[c for c in companies if re.fullmatch(r'[A-Z0-9.]{1,12}',c['ticker'])]
     # Always check AVGO as a canary; rotate remaining slots across scans.
     eligible.sort(key=lambda c:(c['ticker']!='AVGO',bool(old.get(c['ticker'],{}).get('close_usd')),old.get(c['ticker'],{}).get('checked_at',''),c['ticker']))
     for c in eligible[:PRICE_BATCH_SIZE]:
         ticker=c['ticker'];attempted+=1;errors=[]
-        for name,provider in [('Stooq',stooq_quote),('Yahoo',yahoo_quote)]:
+        providers=[('Yahoo',yahoo_quote)] if ticker in YAHOO_SYMBOLS else [('Stooq',stooq_quote),('Yahoo',yahoo_quote)]
+        for name,provider in providers:
             try:
                 quote=provider(ticker)
                 quote['checked_at']=datetime.now(timezone.utc).isoformat()
@@ -229,9 +330,10 @@ def calculate_valuation(company, today=None):
         quote_day=datetime.fromisoformat(q['date']).date()
         if not 0 <= (today-share_day).days <= 540: raise ValueError('stale share count')
         if not 0 <= (today-quote_day).days <= 7: raise ValueError('stale quote')
-        # SEC shares for foreign ADRs may refer to underlying ordinary shares, not US ADRs.
-        if company.get('ticker') in {'TSM','ASML','ARM','ABB','FANUY','SIEGY'}:
-            raise ValueError('ADR/foreign share-unit ambiguity')
+        # Local foreign listings require exchange-specific share units and ADR ratios.
+        # Until those are explicitly mapped, never multiply SEC ordinary shares by local/ADR price.
+        if '.' in company.get('ticker','') or company.get('ticker') in {'TSM','ASML','ARM','ABB','FANUY','SIEGY'}:
+            raise ValueError('foreign listing / ADR share-unit ambiguity')
         cap=price*shares
         result['market_cap_usd']=round(cap)
         result['status']='partial';result['reason']='Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC'
@@ -244,11 +346,13 @@ def calculate_valuation(company, today=None):
         if period_ok('revenue_period_end') and isinstance(revenue,(int,float)) and revenue>0:
             result['ps']=round(cap/revenue,2)
         net=f.get('net_income_usd')
-        if period_ok('net_income_period_end') and isinstance(net,(int,float)) and net>0:
+        if (period_ok('net_income_period_end') and f.get('net_income_period_end')==f.get('revenue_period_end') and f.get('net_income_period_start')==f.get('revenue_period_start') and isinstance(net,(int,float)) and net>0):
             result['pe']=round(cap/net,2)
         fcf=f.get('free_cash_flow_usd')
         if (period_ok('cash_flow_period_end') and period_ok('capex_period_end')
             and f.get('cash_flow_period_end')==f.get('capex_period_end')
+            and f.get('cash_flow_period_start') and f.get('capex_period_start')
+            and f.get('cash_flow_period_start')==f.get('capex_period_start')
             and isinstance(fcf,(int,float))):
             result['fcf_yield_pct']=round(100*fcf/cap,2)
         return result
@@ -318,7 +422,46 @@ def main():
         for r in reasons:missing[r]=missing.get(r,0)+1
         if c['ticker']=='AVGO': print('VALUATION_AVGO',json.dumps({'price':bool(q.get('close_usd')),'shares':bool(f.get('shares_outstanding')),'share_date':f.get('shares_as_of'),'reason':c['valuation']['reason'],'status':c['valuation']['status']}))
     print('VALUATION_SUMMARY',json.dumps({'covered':valuation_coverage,'total':len(companies),'missing':missing}))
-    payload={'generated_at':datetime.now(timezone.utc).isoformat(),'source':'Google News RSS','queries':QUERIES,'scan_status':'ok' if allnews else 'no_sources', 'articles_collected':len(allnews),'companies':companies,'discoveries':discoveries,'articles':allnews[:100],'version':'4.2.2','valuation_coverage':valuation_coverage,'valuation_note':'Orientacyjna kapitalizacja = cena EOD × akcje z ostatniego dostępnego raportu SEC; nie uwzględnia późniejszego rozwodnienia, zmian liczby akcji ani ADR. P/S i P/E bazują na danych rocznych, nie TTM. Nie jest to ranking inwestycyjny.','price_health':price_health,'price_coverage':price_coverage,'price_note':'Opóźnione ceny dzienne z Stooq lub Yahoo Chart (źródła mogą blokować dostęp); daty do 7 dni. Brak ceny to brak danych, nie zero. Kapitalizacja i mnożniki wyłącznie orientacyjne, gdy dane są wystarczające.','financial_coverage':covered,'financial_source':'SEC EDGAR XBRL, annual 10-K/20-F where available','financial_limitations':'Dane historyczne, możliwe opóźnienia; nie wszystkie spółki raportują do SEC. Pokrycie rośnie stopniowo; limity 16 zapytań SEC i 24 prób cen na skan.','coverage_note':'Lista startowa plus kandydaci wykryci przez dopasowanie nazw do rejestru SEC; brak pełnego globalnego pokrycia','ranking_method':'attention_score = 100*(1-exp(-mentions/4)); wskaźnik uwagi, NIE ocena inwestycyjna','investment_ranking_available':False,'disclaimer':'Wskaźnik uwagi nie oznacza atrakcyjnej wyceny, potencjału wzrostu ani rekomendacji. Rejestr SEC obejmuje głównie emitentów raportujących w USA. Dane RSS mogą być niepełne.'}
+    scan_timestamp=datetime.now(timezone.utc).isoformat()
+    decision_memory, zone_hits = record_scan(companies, scan_timestamp)
+    # The current scanner has no investment-ranking engine. Record this as an explicit
+    # N/D blocker for every issuer instead of silently omitting BUY-gate diagnostics.
+    unavailable_gates = {
+        'investment_ranking': {'status':'ND','value':None,'required':'validated Balanced 1.3 ranking'},
+        'fundamental_score': {'status':'ND','value':None,'required':'normalized financials and valuation'},
+        'entry_score': {'status':'ND','value':None,'required':'technical entry model with OHLCV'},
+        'base_upside': {'status':'ND','value':None,'required':'probability-weighted Bear/Base/Bull valuation'},
+        'risk_reward': {'status':'ND','value':None,'required':'validated entry, stop-loss and target'},
+        'data_quality': {'status':'ND','value':None,'required':'period-consistent fundamentals and fresh quotes'},
+        'analyst_consensus': {'status':'ND','value':None,'required':'timestamped analyst target history'},
+        'veto_check': {'status':'ND','value':None,'required':'complete risk and corporate-event review'}
+    }
+    for company in companies:
+        append_gate_audit(company['ticker'], scan_timestamp, unavailable_gates,
+                          ['BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D.'])
+    decision_memory = __import__('decision_memory').load_memory()
+    # Attach the complete, explicit per-issuer gate audit and prior level history
+    # to the published report; counts alone are not sufficient diagnostics.
+    current_gate_audits = {x['ticker']:x for x in decision_memory['gate_audits'] if x.get('scan_id') == scan_timestamp}
+    for company in companies:
+        ticker = company['ticker']
+        audit = current_gate_audits.get(ticker)
+        company['buy_gate_diagnostics'] = audit if audit else {
+            'ticker':ticker, 'scan_id':scan_timestamp,
+            'gates':unavailable_gates,
+            'blockers':['BUY zablokowany: brak kompletnego audytu tej spółki.'],
+            'status':'INCOMPLETE_AUDIT'
+        }
+        company['entry_zone_history'] = {
+            'levels':[x for x in decision_memory['entry_levels'] if x['ticker']==ticker],
+            'events':[x for x in decision_memory['events'] if x['ticker']==ticker],
+            'historical_imports':[x for x in decision_memory['historical_imports'] if x['ticker']==ticker]
+        }
+    # Freeze this scan's inputs, calculations and gate decisions before publishing.
+    scan_snapshot = append_scan_snapshot(scan_timestamp, companies)
+    decision_memory = __import__('decision_memory').load_memory()
+    print('DECISION_MEMORY_SUMMARY',json.dumps({'levels':len(decision_memory['entry_levels']),'recommendations':len(decision_memory['recommendations']),'gate_audits':len(decision_memory['gate_audits']),'events':len(decision_memory['events']),'scan_snapshots':len(decision_memory['scan_snapshots']),'snapshot_sha256':scan_snapshot['sha256'],'new_zone_hits':len(zone_hits)}))
+    payload={'generated_at':scan_timestamp,'source':'Google News RSS','queries':QUERIES,'scan_status':'ok' if allnews else 'no_sources', 'articles_collected':len(allnews),'companies':companies,'discoveries':discoveries,'articles':allnews[:100],'version':'4.2.2','valuation_coverage':valuation_coverage,'valuation_note':'Orientacyjna kapitalizacja = cena EOD × akcje z ostatniego dostępnego raportu SEC; nie uwzględnia późniejszego rozwodnienia, zmian liczby akcji ani ADR. P/S i P/E bazują na danych rocznych, nie TTM. Nie jest to ranking inwestycyjny.','price_health':price_health,'price_coverage':price_coverage,'price_note':'Opóźnione ceny dzienne z Stooq lub Yahoo Chart (źródła mogą blokować dostęp); daty do 7 dni. Brak ceny to brak danych, nie zero. Kapitalizacja i mnożniki wyłącznie orientacyjne, gdy dane są wystarczające.','financial_coverage':covered,'financial_source':'SEC EDGAR XBRL, annual 10-K/20-F where available','financial_limitations':'Dane historyczne, możliwe opóźnienia; nie wszystkie spółki raportują do SEC. Pokrycie rośnie stopniowo; limity 16 zapytań SEC i 24 prób cen na skan.','coverage_note':'Lista startowa plus kandydaci wykryci przez dopasowanie nazw do rejestru SEC; brak pełnego globalnego pokrycia','ranking_method':'attention_score = 100*(1-exp(-mentions/4)); wskaźnik uwagi, NIE ocena inwestycyjna','investment_ranking_available':False,'global_market_coverage':'INCOMPLETE_USD_ONLY_QUOTES_SEC_CENTRIC_DISCOVERY','decision_memory':{'schema_version':decision_memory['schema_version'],'entry_levels':len(decision_memory['entry_levels']),'recommendations':len(decision_memory['recommendations']),'gate_audits':len(decision_memory['gate_audits']),'events':len(decision_memory['events']),'scan_snapshots':len(decision_memory['scan_snapshots']),'latest_snapshot_sha256':scan_snapshot['sha256'],'new_zone_hits':zone_hits,'historical_imports':decision_memory['historical_imports'],'memory_file':'data/decision_memory.json'},'disclaimer':'Wskaźnik uwagi nie oznacza atrakcyjnej wyceny, potencjału wzrostu ani rekomendacji. Rejestr SEC obejmuje głównie emitentów raportujących w USA. Dane RSS mogą być niepełne.'}
     (ROOT/'data').mkdir(exist_ok=True)
     (ROOT/'data'/'scan.json').write_text(json.dumps(payload,ensure_ascii=False,indent=2),encoding='utf-8')
     print('Scanned',len(companies),'companies,',len(allnews),'articles')
