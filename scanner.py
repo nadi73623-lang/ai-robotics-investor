@@ -286,6 +286,7 @@ def calculate_valuation(company, today=None):
         fcf=f.get('free_cash_flow_usd')
         if (period_ok('cash_flow_period_end') and period_ok('capex_period_end')
             and f.get('cash_flow_period_end')==f.get('capex_period_end')
+            and f.get('cash_flow_period_start') and f.get('capex_period_start')
             and f.get('cash_flow_period_start')==f.get('capex_period_start')
             and isinstance(fcf,(int,float))):
             result['fcf_yield_pct']=round(100*fcf/cap,2)
