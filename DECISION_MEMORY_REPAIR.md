@@ -33,3 +33,13 @@ Prevent the scanner from losing its own historical recommendations, entry zones,
 - Branch created from current `main`; main was not modified.
 - Unit tests added for historical levels, zone-hit deduplication, missing prices, append-only recommendations and explicit gate states.
 - Runtime CI result: pending.
+
+
+## Follow-up changes — 2026-11-12
+- Added daily low/high extraction from Stooq and Yahoo chart bars where the provider returns those fields.
+- Entry-zone monitor now stores separate `intraday_range` and `close` events.
+- Scanner writes an explicit per-ticker N/D gate audit for investment ranking, fundamental score, entry score, base upside, risk/reward, data quality, analyst consensus and veto review. This is an honest block, not a simulated pass/fail.
+- Pull request workflow is test-only; scan publication is skipped for pull_request events.
+- Scan job serializes runs and rebases generated artifact commits before pushing, to mitigate concurrent workflow updates.
+- Unit tests passed in GitHub Actions on commit `50025b07fb819eff5bd80afc247fb616ad0233b4` (PR validation run).
+- A scheduled/push scan execution is still pending final confirmation of artifact commit and ledger contents.
