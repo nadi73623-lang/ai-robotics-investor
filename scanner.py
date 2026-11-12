@@ -195,9 +195,12 @@ def fx_to_usd(currency):
     vals=[(ts,v) for ts,v in zip(stamps,closes) if v is not None and float(v)>0]
     if not vals: raise QuoteError('FX chart has no valid close for '+currency)
     ts,rate=vals[-1]; rate=float(rate)
+    fx_day=datetime.fromtimestamp(ts,timezone.utc).date()
+    fx_age=(datetime.now(timezone.utc).date()-fx_day).days
+    if not 0<=fx_age<=3: raise QuoteError('stale or future FX rate for '+currency+': '+fx_day.isoformat())
     # Guard against reversed/invalid pair conventions and extreme rates.
     if not (0.00001 < rate < 100000): raise QuoteError('FX rate out of range for '+currency)
-    return (rate if mode=='direct' else 1.0/rate), {'symbol':symbol,'date':datetime.fromtimestamp(ts,timezone.utc).date().isoformat(),'rate':rate,'mode':mode,'source_url':url}
+    return (rate if mode=='direct' else 1.0/rate), {'symbol':symbol,'date':fx_day.isoformat(),'age_days':fx_age,'rate':rate,'mode':mode,'source_url':url}
 
 def checked_quote(price, day, source, url):
     try:
@@ -327,9 +330,10 @@ def calculate_valuation(company, today=None):
         quote_day=datetime.fromisoformat(q['date']).date()
         if not 0 <= (today-share_day).days <= 540: raise ValueError('stale share count')
         if not 0 <= (today-quote_day).days <= 7: raise ValueError('stale quote')
-        # SEC shares for foreign ADRs may refer to underlying ordinary shares, not US ADRs.
-        if company.get('ticker') in {'TSM','ASML','ARM','ABB','FANUY','SIEGY'}:
-            raise ValueError('ADR/foreign share-unit ambiguity')
+        # Local foreign listings require exchange-specific share units and ADR ratios.
+        # Until those are explicitly mapped, never multiply SEC ordinary shares by local/ADR price.
+        if '.' in company.get('ticker','') or company.get('ticker') in {'TSM','ASML','ARM','ABB','FANUY','SIEGY'}:
+            raise ValueError('foreign listing / ADR share-unit ambiguity')
         cap=price*shares
         result['market_cap_usd']=round(cap)
         result['status']='partial';result['reason']='Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC'
