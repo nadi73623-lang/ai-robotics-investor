@@ -33,8 +33,11 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git pull --rebase origin fix/decision-memory-entry-alerts
-          git add data/scan.json data/decision_memory.json
+          git add data/scan.json
           git add -f data/decision_memory.json
-          git diff --cached --quiet || (git commit -m 'Update AI robotics scan' && git push)
+          if ! git diff --cached --quiet; then
+            git commit -m 'Update AI robotics scan'
+          fi
+          git pull --rebase origin fix/decision-memory-entry-alerts
+          git push origin HEAD:fix/decision-memory-entry-alerts
           
