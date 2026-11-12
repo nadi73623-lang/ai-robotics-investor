@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-12T08:49:13.504261+00:00",
+  "generated_at": "2026-11-12T08:51:05.548891+00:00",
   "source": "Google News RSS",
   "queries": [
     "artificial intelligence robotics stocks companies contracts earnings",
@@ -71,23 +71,23 @@
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1045810"
       },
       "price": {
-        "close_usd": 168.89,
-        "date": "2026-11-10",
+        "close_usd": 173.73,
+        "date": "2026-11-11",
         "age_days": 1,
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/NVDA?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-11-11T14:14:37.457913+00:00"
+        "checked_at": "2026-11-12T08:50:58.555002+00:00"
       },
       "valuation": {
         "status": "partial",
         "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 4070249000000,
+        "market_cap_usd": 4186893000000,
         "ps": null,
-        "pe": 33.9,
+        "pe": 34.87,
         "fcf_yield_pct": null,
         "share_date": "2026-08-21",
-        "price_date": "2026-11-10",
+        "price_date": "2026-11-11",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
       }
     },
@@ -279,7 +279,7 @@
         "net_income_period_end": "2024-11-03",
         "cash_flow_period_end": "2025-11-02",
         "capex_period_end": "2025-11-02",
-        "as_of": "2026-11-12T08:48:51.573618+00:00",
+        "as_of": "2026-11-12T08:50:39.745664+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1730168"
       },
       "price": {
@@ -289,7 +289,7 @@
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/AVGO?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-11-12T08:49:00.609833+00:00"
+        "checked_at": "2026-11-12T08:50:48.874170+00:00"
       },
       "valuation": {
         "status": "partial",
@@ -347,23 +347,23 @@
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1826681"
       },
       "price": {
-        "close_usd": 3.57,
-        "date": "2026-11-10",
+        "close_usd": 3.46,
+        "date": "2026-11-11",
         "age_days": 1,
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/PDYN?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-11-11T14:14:42.156327+00:00"
+        "checked_at": "2026-11-12T08:51:02.699960+00:00"
       },
       "valuation": {
         "status": "partial",
         "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 183430588,
-        "ps": 34.97,
-        "pe": 18.27,
-        "fcf_yield_pct": -15.46,
+        "market_cap_usd": 177778665,
+        "ps": 33.89,
+        "pe": 17.71,
+        "fcf_yield_pct": -15.95,
         "share_date": "2026-10-28",
-        "price_date": "2026-11-10",
+        "price_date": "2026-11-11",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
       }
     },
@@ -771,7 +771,7 @@
         "net_income_period_end": "2026-06-27",
         "cash_flow_period_end": "2026-06-27",
         "capex_period_end": "2026-06-27",
-        "as_of": "2026-11-10T19:41:16.174702+00:00",
+        "as_of": "2026-11-12T08:50:42.234779+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1633978"
       },
       "price": {
@@ -835,12 +835,12 @@
       },
       "price": {
         "close_usd": 38.22,
-        "date": "2026-11-10",
+        "date": "2026-11-11",
         "age_days": 1,
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/OUST?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-11-11T14:14:40.701306+00:00"
+        "checked_at": "2026-11-12T08:51:01.221395+00:00"
       },
       "valuation": {
         "status": "partial",
@@ -850,7 +850,7 @@
         "pe": null,
         "fcf_yield_pct": -2.32,
         "share_date": "2026-10-30",
-        "price_date": "2026-11-10",
+        "price_date": "2026-11-11",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
       }
     },
@@ -893,23 +893,23 @@
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1050915"
       },
       "price": {
-        "close_usd": 583.14,
-        "date": "2026-11-10",
+        "close_usd": 607.94,
+        "date": "2026-11-11",
         "age_days": 1,
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/PWR?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-11-11T14:14:43.736917+00:00"
+        "checked_at": "2026-11-12T08:51:03.963895+00:00"
       },
       "valuation": {
         "status": "partial",
         "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 87865870335,
-        "ps": 3.09,
-        "pe": 85.44,
-        "fcf_yield_pct": 1.84,
+        "market_cap_usd": 91602663531,
+        "ps": 3.22,
+        "pe": 89.07,
+        "fcf_yield_pct": 1.77,
         "share_date": "2026-10-26",
-        "price_date": "2026-11-10",
+        "price_date": "2026-11-11",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
       }
     },
@@ -952,23 +952,23 @@
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=804328"
       },
       "price": {
-        "close_usd": 173.53,
-        "date": "2026-11-10",
+        "close_usd": 176.57,
+        "date": "2026-11-11",
         "age_days": 1,
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/QCOM?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-11-11T14:14:44.556047+00:00"
+        "checked_at": "2026-11-12T08:51:04.824911+00:00"
       },
       "valuation": {
         "status": "partial",
         "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 185677100000,
-        "ps": 4.31,
-        "pe": 13.62,
+        "market_cap_usd": 188929900000,
+        "ps": 4.38,
+        "pe": 13.86,
         "fcf_yield_pct": null,
         "share_date": "2026-11-02",
-        "price_date": "2026-11-10",
+        "price_date": "2026-11-11",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
       }
     },
@@ -1063,7 +1063,7 @@
         "net_income_period_end": "2025-12-31",
         "cash_flow_period_end": "2025-12-31",
         "capex_period_end": "2025-12-31",
-        "as_of": "2026-11-11T06:08:26.064732+00:00",
+        "as_of": "2026-11-12T08:50:45.087257+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1824502"
       },
       "price": {
@@ -1116,7 +1116,7 @@
         "net_income_period_end": "2026-04-30",
         "cash_flow_period_end": "2026-04-30",
         "capex_period_end": "2026-04-30",
-        "as_of": "2026-11-11T06:08:26.542360+00:00",
+        "as_of": "2026-11-12T08:50:45.871541+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1577526"
       },
       "price": {
@@ -1169,7 +1169,7 @@
         "net_income_period_end": "2025-12-31",
         "cash_flow_period_end": "2025-12-31",
         "capex_period_end": "2025-12-31",
-        "as_of": "2026-11-11T06:08:27.016745+00:00",
+        "as_of": "2026-11-12T08:50:46.442771+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1736297"
       },
       "price": {
@@ -1222,7 +1222,7 @@
         "net_income_period_end": "2025-10-26",
         "cash_flow_period_end": "2025-10-26",
         "capex_period_end": "2025-10-26",
-        "as_of": "2026-11-11T06:08:27.872493+00:00",
+        "as_of": "2026-11-12T08:50:47.158160+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=6951"
       },
       "price": {
@@ -1275,7 +1275,7 @@
         "net_income_period_end": "2025-12-27",
         "cash_flow_period_end": "2025-12-27",
         "capex_period_end": "2025-12-27",
-        "as_of": "2026-11-11T06:08:28.340374+00:00",
+        "as_of": "2026-11-12T08:50:47.706855+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=2488"
       },
       "price": {
@@ -2236,23 +2236,23 @@
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=898293"
       },
       "price": {
-        "close_usd": 249.82,
-        "date": "2026-11-10",
+        "close_usd": 258.89,
+        "date": "2026-11-11",
         "age_days": 1,
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/JBL?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-11-11T06:08:48.562782+00:00"
+        "checked_at": "2026-11-12T08:50:51.854860+00:00"
       },
       "valuation": {
         "status": "partial",
         "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 25725082095,
-        "ps": 0.72,
-        "pe": 24.69,
-        "fcf_yield_pct": 5.34,
+        "market_cap_usd": 26659060538,
+        "ps": 0.74,
+        "pe": 25.58,
+        "fcf_yield_pct": 5.15,
         "share_date": "2026-10-20",
-        "price_date": "2026-11-10",
+        "price_date": "2026-11-11",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
       }
     },
@@ -2285,7 +2285,7 @@
         "net_income_period_end": "2025-12-31",
         "cash_flow_period_end": "2025-12-31",
         "capex_period_end": "2025-12-31",
-        "as_of": "2026-11-10T19:41:14.427110+00:00",
+        "as_of": "2026-11-12T08:50:40.397875+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1819848"
       },
       "price": {
@@ -2338,7 +2338,7 @@
         "net_income_period_end": "2026-06-30",
         "cash_flow_period_end": "2026-06-30",
         "capex_period_end": "2026-06-30",
-        "as_of": "2026-11-10T19:41:15.081381+00:00",
+        "as_of": "2026-11-12T08:50:40.968813+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=319201"
       },
       "price": {
@@ -2391,7 +2391,7 @@
         "net_income_period_end": "2025-12-28",
         "cash_flow_period_end": "2025-12-28",
         "capex_period_end": null,
-        "as_of": "2026-11-10T19:41:15.636921+00:00",
+        "as_of": "2026-11-12T08:50:41.713129+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1069258"
       },
       "price": {
@@ -2500,27 +2500,27 @@
         "net_income_period_end": "2026-06-28",
         "cash_flow_period_end": "2026-06-28",
         "capex_period_end": null,
-        "as_of": "2026-11-10T19:41:16.942709+00:00",
+        "as_of": "2026-11-12T08:50:42.822716+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=707549"
       },
       "price": {
-        "close_usd": 222.39,
-        "date": "2026-11-10",
+        "close_usd": 235.88,
+        "date": "2026-11-11",
         "age_days": 1,
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/LRCX?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-11-11T06:08:49.199723+00:00"
+        "checked_at": "2026-11-12T08:50:52.501516+00:00"
       },
       "valuation": {
         "status": "partial",
         "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 277803138690,
-        "ps": 11.96,
-        "pe": 38.24,
+        "market_cap_usd": 294654455480,
+        "ps": 12.68,
+        "pe": 40.56,
         "fcf_yield_pct": null,
         "share_date": "2026-10-20",
-        "price_date": "2026-11-10",
+        "price_date": "2026-11-11",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
       }
     },
@@ -2553,27 +2553,27 @@
         "net_income_period_end": "2025-12-27",
         "cash_flow_period_end": "2025-12-27",
         "capex_period_end": "2025-12-27",
-        "as_of": "2026-11-10T19:41:17.727780+00:00",
+        "as_of": "2026-11-12T08:50:43.317671+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1910139"
       },
       "price": {
-        "close_usd": 5.63,
-        "date": "2026-11-10",
+        "close_usd": 5.78,
+        "date": "2026-11-11",
         "age_days": 1,
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/MBLY?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-11-11T06:08:49.818140+00:00"
+        "checked_at": "2026-11-12T08:50:53.324027+00:00"
       },
       "valuation": {
         "status": "partial",
         "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 1421033642,
-        "ps": 0.75,
+        "market_cap_usd": 1458894218,
+        "ps": 0.77,
         "pe": null,
-        "fcf_yield_pct": 36.8,
+        "fcf_yield_pct": 35.85,
         "share_date": "2026-10-21",
-        "price_date": "2026-11-10",
+        "price_date": "2026-11-11",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
       }
     },
@@ -2606,17 +2606,17 @@
         "net_income_period_end": "2025-12-31",
         "cash_flow_period_end": "2025-12-31",
         "capex_period_end": "2025-12-31",
-        "as_of": "2026-11-12T08:48:50.446798+00:00",
+        "as_of": "2026-11-12T08:50:38.660356+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1326801"
       },
       "price": {
-        "close_usd": 641.39,
-        "date": "2026-11-10",
+        "close_usd": 628.77,
+        "date": "2026-11-11",
         "age_days": 1,
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/META?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-11-11T06:08:50.423824+00:00"
+        "checked_at": "2026-11-12T08:50:54.130119+00:00"
       },
       "valuation": {
         "status": "unavailable",
@@ -2626,7 +2626,7 @@
         "pe": null,
         "fcf_yield_pct": null,
         "share_date": null,
-        "price_date": "2026-11-10",
+        "price_date": "2026-11-11",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
       }
     },
@@ -2659,27 +2659,27 @@
         "net_income_period_end": "2025-12-31",
         "cash_flow_period_end": "2025-12-31",
         "capex_period_end": "2025-12-31",
-        "as_of": "2026-11-10T19:41:18.602331+00:00",
+        "as_of": "2026-11-12T08:50:43.839262+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1280452"
       },
       "price": {
-        "close_usd": 1357.6,
-        "date": "2026-11-10",
+        "close_usd": 1478.6899,
+        "date": "2026-11-11",
         "age_days": 1,
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/MPWR?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-11-11T14:14:34.069680+00:00"
+        "checked_at": "2026-11-12T08:50:54.765023+00:00"
       },
       "valuation": {
         "status": "partial",
         "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 66207436800,
-        "ps": 23.73,
-        "pe": 106.53,
-        "fcf_yield_pct": 1.01,
+        "market_cap_usd": 72112749043,
+        "ps": 25.84,
+        "pe": 116.03,
+        "fcf_yield_pct": 0.92,
         "share_date": "2026-10-27",
-        "price_date": "2026-11-10",
+        "price_date": "2026-11-11",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
       }
     },
@@ -2716,23 +2716,23 @@
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1835632"
       },
       "price": {
-        "close_usd": 154.39,
-        "date": "2026-11-10",
+        "close_usd": 168.8,
+        "date": "2026-11-11",
         "age_days": 1,
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/MRVL?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-11-11T14:14:34.702436+00:00"
+        "checked_at": "2026-11-12T08:50:55.416360+00:00"
       },
       "valuation": {
         "status": "partial",
         "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 135384591000,
-        "ps": 16.52,
-        "pe": 50.7,
-        "fcf_yield_pct": 1.03,
+        "market_cap_usd": 148020720000,
+        "ps": 18.06,
+        "pe": 55.44,
+        "fcf_yield_pct": 0.94,
         "share_date": "2026-08-21",
-        "price_date": "2026-11-10",
+        "price_date": "2026-11-11",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
       }
     },
@@ -2765,27 +2765,27 @@
         "net_income_period_end": "2026-06-30",
         "cash_flow_period_end": "2026-06-30",
         "capex_period_end": "2026-06-30",
-        "as_of": "2026-11-11T06:08:25.637112+00:00",
+        "as_of": "2026-11-12T08:50:44.443422+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=789019"
       },
       "price": {
-        "close_usd": 533.16,
-        "date": "2026-11-10",
+        "close_usd": 521.13,
+        "date": "2026-11-11",
         "age_days": 1,
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/MSFT?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-11-11T14:14:35.497154+00:00"
+        "checked_at": "2026-11-12T08:50:56.274105+00:00"
       },
       "valuation": {
         "status": "partial",
         "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 3959349887344,
-        "ps": 11.93,
-        "pe": 29.6,
-        "fcf_yield_pct": 1.69,
+        "market_cap_usd": 3870012766884,
+        "ps": 11.66,
+        "pe": 28.93,
+        "fcf_yield_pct": 1.73,
         "share_date": "2026-10-22",
-        "price_date": "2026-11-10",
+        "price_date": "2026-11-11",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
       }
     },
@@ -2822,23 +2822,23 @@
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=723125"
       },
       "price": {
-        "close_usd": 725.11,
-        "date": "2026-11-10",
+        "close_usd": 811.3,
+        "date": "2026-11-11",
         "age_days": 1,
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/MU?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-11-11T14:14:36.133477+00:00"
+        "checked_at": "2026-11-12T08:50:56.926935+00:00"
       },
       "valuation": {
         "status": "partial",
         "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 820406285253,
-        "ps": 6.16,
-        "pe": 9.66,
-        "fcf_yield_pct": 7.19,
+        "market_cap_usd": 917923651896,
+        "ps": 6.89,
+        "pe": 10.8,
+        "fcf_yield_pct": 6.42,
         "share_date": "2026-10-02",
-        "price_date": "2026-11-10",
+        "price_date": "2026-11-11",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
       }
     },
@@ -2875,23 +2875,23 @@
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1373715"
       },
       "price": {
-        "close_usd": 99.61,
-        "date": "2026-11-10",
+        "close_usd": 102.76,
+        "date": "2026-11-11",
         "age_days": 1,
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/NOW?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-11-11T14:14:36.736690+00:00"
+        "checked_at": "2026-11-12T08:50:57.754966+00:00"
       },
       "valuation": {
         "status": "partial",
         "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 103395180000,
-        "ps": 7.79,
-        "pe": 59.15,
-        "fcf_yield_pct": 4.43,
+        "market_cap_usd": 106664880000,
+        "ps": 8.03,
+        "pe": 61.02,
+        "fcf_yield_pct": 4.29,
         "share_date": "2026-09-30",
-        "price_date": "2026-11-10",
+        "price_date": "2026-11-11",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
       }
     },
@@ -2928,23 +2928,23 @@
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1720635"
       },
       "price": {
-        "close_usd": 112.48,
-        "date": "2026-11-10",
+        "close_usd": 116.73,
+        "date": "2026-11-11",
         "age_days": 1,
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/NVT?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-11-11T14:14:38.090869+00:00"
+        "checked_at": "2026-11-12T08:50:59.186461+00:00"
       },
       "valuation": {
         "status": "partial",
         "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 18176549789,
-        "ps": 4.67,
-        "pe": 25.59,
-        "fcf_yield_pct": 2.05,
+        "market_cap_usd": 18863341544,
+        "ps": 4.85,
+        "pe": 26.56,
+        "fcf_yield_pct": 1.97,
         "share_date": "2026-09-30",
-        "price_date": "2026-11-10",
+        "price_date": "2026-11-11",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
       }
     },
@@ -2981,23 +2981,23 @@
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1646188"
       },
       "price": {
-        "close_usd": 5.57,
-        "date": "2026-11-10",
+        "close_usd": 5.73,
+        "date": "2026-11-11",
         "age_days": 1,
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/ONDS?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-11-11T14:14:39.004880+00:00"
+        "checked_at": "2026-11-12T08:50:59.861280+00:00"
       },
       "valuation": {
         "status": "partial",
         "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 3177976539,
-        "ps": 62.64,
+        "market_cap_usd": 3269264914,
+        "ps": 64.44,
         "pe": null,
-        "fcf_yield_pct": -1.28,
+        "fcf_yield_pct": -1.25,
         "share_date": "2026-08-11",
-        "price_date": "2026-11-10",
+        "price_date": "2026-11-11",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
       }
     },
@@ -3034,23 +3034,23 @@
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=704532"
       },
       "price": {
-        "close_usd": 197.51,
-        "date": "2026-11-10",
+        "close_usd": 215.06,
+        "date": "2026-11-11",
         "age_days": 1,
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/ONTO?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-11-11T14:14:39.838737+00:00"
+        "checked_at": "2026-11-12T08:51:00.509044+00:00"
       },
       "valuation": {
         "status": "partial",
         "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 9694645426,
-        "ps": 9.64,
-        "pe": 70.89,
-        "fcf_yield_pct": 3.09,
+        "market_cap_usd": 10556075365,
+        "ps": 10.5,
+        "pe": 77.19,
+        "fcf_yield_pct": 2.84,
         "share_date": "2026-10-30",
-        "price_date": "2026-11-10",
+        "price_date": "2026-11-11",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
       }
     },
@@ -3083,17 +3083,17 @@
         "net_income_period_end": "2026-01-31",
         "cash_flow_period_end": "2026-01-31",
         "capex_period_end": "2026-01-31",
-        "as_of": "2026-11-12T08:48:51.072339+00:00",
+        "as_of": "2026-11-12T08:50:39.247413+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1734722"
       },
       "price": {
-        "close_usd": 12.83,
-        "date": "2026-11-10",
+        "close_usd": 13.14,
+        "date": "2026-11-11",
         "age_days": 1,
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/PATH?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-11-11T14:14:41.347970+00:00"
+        "checked_at": "2026-11-12T08:51:02.053591+00:00"
       },
       "valuation": {
         "status": "unavailable",
@@ -3103,7 +3103,7 @@
         "pe": null,
         "fcf_yield_pct": null,
         "share_date": null,
-        "price_date": "2026-11-10",
+        "price_date": "2026-11-11",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
       }
     },
@@ -3140,23 +3140,23 @@
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1321655"
       },
       "price": {
-        "close_usd": 168.82,
-        "date": "2026-11-10",
+        "close_usd": 172.4,
+        "date": "2026-11-11",
         "age_days": 1,
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/PLTR?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-11-11T14:14:42.955063+00:00"
+        "checked_at": "2026-11-12T08:51:03.323158+00:00"
       },
       "valuation": {
         "status": "partial",
         "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 403681033440,
-        "ps": 90.2,
-        "pe": 248.41,
-        "fcf_yield_pct": 0.52,
+        "market_cap_usd": 412241500800,
+        "ps": 92.11,
+        "pe": 253.68,
+        "fcf_yield_pct": 0.51,
         "share_date": "2025-12-31",
-        "price_date": "2026-11-10",
+        "price_date": "2026-11-11",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
       }
     },
@@ -3193,23 +3193,23 @@
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=748268"
       },
       "price": {
-        "close_usd": 4.21,
-        "date": "2026-11-10",
+        "close_usd": 4.29,
+        "date": "2026-11-11",
         "age_days": 1,
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/RCAT?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-11-11T14:14:45.168948+00:00"
+        "checked_at": "2026-11-12T08:51:05.448268+00:00"
       },
       "valuation": {
         "status": "partial",
         "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 642927464,
-        "ps": 15.79,
+        "market_cap_usd": 655144613,
+        "ps": 16.09,
         "pe": null,
         "fcf_yield_pct": null,
         "share_date": "2026-08-04",
-        "price_date": "2026-11-10",
+        "price_date": "2026-11-11",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
       }
     },
@@ -3776,6 +3776,11 @@
       "date": "Wed, 11 Nov 2026 14:48:00 GMT"
     },
     {
+      "title": "Why Bitcoin, Nasdaq, AI Stocks, and Chips Move Together? The Liquidity Machine Explained - TradingView",
+      "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxOUkJnVURtQWRreU9hbGZ4eFNhMWF2MHBDS0JhTkVHQU15UGdOeVJlSnBTV0lraW5TMGxPdkFuY184Um9VVFZwakRFcHVNa2piQklRQ0ZsczIwZGQwcEdYc0lmM3l0M0pvWklSUEpzWXp1SW5LaHJuNkpLWi1fZDJpanZYX3hsWnJBUkRsSjFQNGRDZDRnUkQ4NkppTG50ZzN5Zkg3R2JQS2MxZExOXzJGQ2VDdHVjSkZ5VGlvOGJkRzctZ2FOOEdBWW5STlRERENtZGotdl84bFA2WDdWNUE?oc=5",
+      "date": "Wed, 11 Nov 2026 08:25:45 GMT"
+    },
+    {
       "title": "The Data Centre Play: 14 Stocks Behind the AI Boom - AskTraders.com",
       "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOZXVqRU9FSTl1RWkxa01YSUZlWDVlTXNEMDNWZmVhMHRnSTVxeTA5cm1adDZ3ZFlMc2IyS0dBWHgtRERhNzFqcmg0M3V2cXFrMDJiai1zcEI5NHBBQTJBVVp4U05QRk5HY1RyR3VOT0h0VUx2R043Yl9CdnNQTUpXNlRMOUt0TVI2RjBUQ1h3MUxQNlZ1NDJNZW9UeFIxRjRYN09xMVNTdUZKQQ?oc=5",
       "date": "Wed, 11 Nov 2026 10:50:33 GMT"
@@ -3836,19 +3841,14 @@
       "date": "Tue, 10 Nov 2026 03:14:00 GMT"
     },
     {
-      "title": "NVIDIA Rises 4% Despite Baird Downgrade and Huang Uncertainty; AMD Climbs 5%, Broadcom Gains 4% - 24/7 Wall St.",
-      "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQQzNfT3FUQkg5R0tudTFId2Jucks1MDdRX3pHNXF4UGx2TFc3UjJMUzVjYlB2SmcxRGFiX1VBV2xQRzJiM3A2MWJQZVF3YnpNZ3pmdklMNjZUYVBlVFplV0lpSXA1ZUtKckZCOUItMldEaVhhbVFHdWN1NW51elFSWjdrTGZWejlORjFsajltVnV0YzR6ZzdvMDRHVzVoNGdyUzBEWTBudzBEcU5jMTRMSjIzNWJ4UG93M3BBNW5odUpTc0U0WUVOLWdLSzRoeE0?oc=5",
-      "date": "Wed, 11 Nov 2026 14:05:00 GMT"
-    },
-    {
       "title": "3 AI Infrastructure Stocks Riding The Next Data Center Spending Wave - Yahoo Finance",
       "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNQmxYclh6TThZdXl6ak1WNTNhT1dIc050VGFWVjlobko5dmdOUEM4UkFiaTZJNzlrcm9iVjlaTmY1Ym1pczVkcUxEelk2SlRuWS1Ubm1fWldJalN5Q3ZkZVVUc2RVSWIzRk80YTJLQkdFaF9RNGV5cjd1a0J5TUFaTk54R3dDUWc5dUZieUNtNzMzQk9xTDRMWTNUVXdZZw?oc=5",
       "date": "Tue, 10 Nov 2026 14:10:41 GMT"
     },
     {
-      "title": "Applied Optoelectronics Surges 12%, Lumentum Jumps 11% as CoreWeave's Results Revive AI Trade; Coherent Climbs 7% - 24/7 Wall St.",
-      "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxQRll2UUR3aEJHMUYzN2Jnd1d6dEd6RmNwb2FtY1F2OFg2M1VMQmNMVTNEb040ZDBMUzhSMy12b0lrLVZ2aW96Q185dGg2cEdNbWlxZzVmUGNnajkwNS1NY2RwOVktNnpYOUFzMDQ4d2RPbUthNUxVVm1YZDVDbWFTY05pLTJ3cnNROXNyenBsUTVVdUxvNWJNWjVKTHlmM0szZGVWS3NoR25FTEZ5VFppX1MxNHFBaUVkQ0JFWXFnZjJ0T2ZpMHp4WDQyM1R3V3VxdzRzMFBkNmJGSzR5QVhSQ0dlVm1Idw?oc=5",
-      "date": "Wed, 11 Nov 2026 14:57:00 GMT"
+      "title": "NVIDIA Rises 4% Despite Baird Downgrade and Huang Uncertainty; AMD Climbs 5%, Broadcom Gains 4% - 24/7 Wall St.",
+      "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQQzNfT3FUQkg5R0tudTFId2Jucks1MDdRX3pHNXF4UGx2TFc3UjJMUzVjYlB2SmcxRGFiX1VBV2xQRzJiM3A2MWJQZVF3YnpNZ3pmdklMNjZUYVBlVFplV0lpSXA1ZUtKckZCOUItMldEaVhhbVFHdWN1NW51elFSWjdrTGZWejlORjFsajltVnV0YzR6ZzdvMDRHVzVoNGdyUzBEWTBudzBEcU5jMTRMSjIzNWJ4UG93M3BBNW5odUpTc0U0WUVOLWdLSzRoeE0?oc=5",
+      "date": "Wed, 11 Nov 2026 14:05:00 GMT"
     },
     {
       "title": "Iron Mountain Raises Its Dividend 15% as Data Center Revenue Surges 34% - 24/7 Wall St.",
@@ -3856,14 +3856,14 @@
       "date": "Wed, 11 Nov 2026 13:17:00 GMT"
     },
     {
+      "title": "Applied Optoelectronics Surges 12%, Lumentum Jumps 11% as CoreWeave's Results Revive AI Trade; Coherent Climbs 7% - 24/7 Wall St.",
+      "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxQRll2UUR3aEJHMUYzN2Jnd1d6dEd6RmNwb2FtY1F2OFg2M1VMQmNMVTNEb040ZDBMUzhSMy12b0lrLVZ2aW96Q185dGg2cEdNbWlxZzVmUGNnajkwNS1NY2RwOVktNnpYOUFzMDQ4d2RPbUthNUxVVm1YZDVDbWFTY05pLTJ3cnNROXNyenBsUTVVdUxvNWJNWjVKTHlmM0szZGVWS3NoR25FTEZ5VFppX1MxNHFBaUVkQ0JFWXFnZjJ0T2ZpMHp4WDQyM1R3V3VxdzRzMFBkNmJGSzR5QVhSQ0dlVm1Idw?oc=5",
+      "date": "Wed, 11 Nov 2026 14:57:00 GMT"
+    },
+    {
       "title": "Broadcom Inc Share Price - AVGO, RNS News, Articles, Quotes, & Charts (NASDAQ:AVGO) - Proactive financial news",
       "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9GRnpmQUV2dHphVHdJVHpYVHdpN3JLZ0RHZTBGQU0tNEdFbkVMS3VScEg3MnFHQndWWFpPMXZCMTJTNXBpbTd4dGk1NUxnWkFteWY3cW44RHpEVFRBWjRxQ2RjQzRwS1RpelNrREpkNA?oc=5",
       "date": "Wed, 11 Nov 2026 17:12:33 GMT"
-    },
-    {
-      "title": "Why Bitcoin, Nasdaq, AI Stocks, and Chips Move Together? The Liquidity Machine Explained - Cryptonews",
-      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBhVFBDRnZybV9iUW9KMzNDV1Q5UUJaNkt6TGlyNzJpOU9oTlMxdEYwRks4UFZiX2ZSOEVWbVBtWDJuNkdqeGxfZzdXT3MyWmlUWFJrMzNNV2ZubzB4TDctcy1VQVA3Y0J2RnRPbXlnR3R3Z1lOOHhPSw?oc=5",
-      "date": "Wed, 11 Nov 2026 08:25:45 GMT"
     },
     {
       "title": "Nvidia CEO Jensen Huang — The Fall of AI’s Keyman and Future Ecosystem - The Korea Daily",
@@ -3876,24 +3876,24 @@
       "date": "Wed, 11 Nov 2026 21:24:05 GMT"
     },
     {
-      "title": "Taiwan's AI server makers doubled October sales from a year earlier as Wistron, Gigabyte and Quanta led - MLQ.ai",
-      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOUVh1SGIzTVl5NHJ5TE0zVmUxMi1lSXpuZC1ocTNIUnhSTVNsRnR6dk00TGFEdUZEbDFYdDg5TFlrbVZmbUQtMkhjelg4SlA3RVJPVDYyeHVsTmpvR2tJSHV5TTBJMGgyMnNCSUpWbXNLcjJvTHJ2TVZqNHVnb1p0ZEFxeVZpQ3poSUZITG5fUXBWekFRQ0hIMWxHa3hfbkRfalZvdWhsdWJTblFrM0hSb3Zvb01sQTF2aXdsRm5Maw?oc=5",
-      "date": "Thu, 12 Nov 2026 05:06:01 GMT"
-    },
-    {
       "title": "Palo Alto Networks And 2 More Top Cybersecurity Stocks - Simply Wall St",
       "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOcjA2TGJPcDNQX1lpeHpMWnd6LWFfZklmZThWX1RsWU9ROVh1M3lxeUV4U0NuaGdBclkxellRLVpIUTBqVWRfLUtYdl8tQjB6bnRTNmphc0h4cDIzUFZPemZWYlJBYWdWb3dYSFo2VGp1Qk5zdHprQXBodlB2QXZnRWxhX05lLXRjd1hHWTFRSDVBeTVlWk9EZkpJNkpfZkZoQUpNa1YtWkRLTHY3NzdkaVZwejdsNTVzc1RQcHBLSk4zT0Nfd3AtR1ZTQQ?oc=5",
       "date": "Tue, 10 Nov 2026 23:43:33 GMT"
     },
     {
-      "title": "Google escalates Nvidia rivalry with specialised versions of AI chips - The Straits Times",
-      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOWkh6VmJCLUZGUVJ0QzBmNU92ZFBtZVo3NHBWQ1pEeEQyQk5RS2Y5RkkxOHNEc2dXUkhEVXFka3hOQlFQcW5uYTl1VVNvcC15Q0F1SlUwNmhGMEl1ZjJIU3l5eU5qM1ZGYjBUT1Q4Q0NSS2NsalVDNDIxWi1pc1BLUFRaVFQ5dGdhZDVvQ3J3eGtmQXctNGkwUFR4amcwaktKMVlQUV9PZzVVcTBhVm9vWnpzNzFkdw?oc=5",
-      "date": "Mon, 09 Nov 2026 13:45:00 GMT"
+      "title": "Taiwan's AI server makers doubled October sales from a year earlier as Wistron, Gigabyte and Quanta led - MLQ.ai",
+      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOUVh1SGIzTVl5NHJ5TE0zVmUxMi1lSXpuZC1ocTNIUnhSTVNsRnR6dk00TGFEdUZEbDFYdDg5TFlrbVZmbUQtMkhjelg4SlA3RVJPVDYyeHVsTmpvR2tJSHV5TTBJMGgyMnNCSUpWbXNLcjJvTHJ2TVZqNHVnb1p0ZEFxeVZpQ3poSUZITG5fUXBWekFRQ0hIMWxHa3hfbkRfalZvdWhsdWJTblFrM0hSb3Zvb01sQTF2aXdsRm5Maw?oc=5",
+      "date": "Thu, 12 Nov 2026 05:06:01 GMT"
     },
     {
       "title": "AI data center and network upgrade hopes lift Korea optical stocks - Chosunbiz",
       "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPV0ZwcDRGaXhjQkFOQTl3RldnWEtfajl1Tnl6SFBmd1FRaHBxVTQzcC1iMlJDMThWNldMTnZtbzh1N2ZuX0xTdUNnTnFzNzZlZll0U2Ffc1FKdzEyMGM0TEJaT0p6UldWU05vbzlLUVpiNlJ3V0JDMjlMYmo4UFB3ZmhObklvRnk3bnhJUzJZcnhQeENU0gGUAUFVX3lxTE9XRnBwNEZpeGNCQU5BOXdGV2dYS19qOXVOeXpIUGZ3UVFocHFVNDNwLWIyUkMxOFY2V0xOdm1vOHU3Zm5fTFN1Q2dOcXM3NmVmWXRTYV9zUUp3MTIwYzRMQlpPSnpSV1ZTTm9vOUtRWmI2UndXQkMyOUxiajhQUHdmaE5uSW9GeTdueElTMllyeFB4Q1Q?oc=5",
       "date": "Tue, 10 Nov 2026 00:36:00 GMT"
+    },
+    {
+      "title": "Google escalates Nvidia rivalry with specialised versions of AI chips - The Straits Times",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOWkh6VmJCLUZGUVJ0QzBmNU92ZFBtZVo3NHBWQ1pEeEQyQk5RS2Y5RkkxOHNEc2dXUkhEVXFka3hOQlFQcW5uYTl1VVNvcC15Q0F1SlUwNmhGMEl1ZjJIU3l5eU5qM1ZGYjBUT1Q4Q0NSS2NsalVDNDIxWi1pc1BLUFRaVFQ5dGdhZDVvQ3J3eGtmQXctNGkwUFR4amcwaktKMVlQUV9PZzVVcTBhVm9vWnpzNzFkdw?oc=5",
+      "date": "Mon, 09 Nov 2026 13:45:00 GMT"
     },
     {
       "title": "CoreWeave earnings bring good news for AI trade - Invezz",
@@ -4176,102 +4176,102 @@
           "Yahoo: HTTP Error 404: Not Found"
         ]
       },
-      "CGNX": {
+      "JBL": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-11"
       },
-      "CLS": {
+      "LRCX": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-11"
       },
-      "COHR": {
+      "MBLY": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-11"
       },
-      "CRDO": {
+      "META": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-11"
       },
-      "DELL": {
+      "MPWR": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-11"
       },
-      "DHR": {
+      "MRVL": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-11"
       },
-      "EMR": {
+      "MSFT": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-11"
       },
-      "ETN": {
+      "MU": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-11"
       },
-      "FANUY": {
+      "NOW": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-11"
       },
-      "GLW": {
+      "NVDA": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-11"
       },
-      "GOOGL": {
+      "NVT": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-11"
       },
-      "HON": {
+      "ONDS": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-11"
       },
-      "HUBB": {
+      "ONTO": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-11"
       },
-      "INTC": {
+      "OUST": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-11"
       },
-      "ISRG": {
+      "PATH": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-11"
       },
-      "JOBY": {
+      "PDYN": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-11"
       },
-      "KLAC": {
+      "PLTR": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-11"
       },
-      "KTOS": {
+      "PWR": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-11"
       },
-      "LAZR": {
+      "QCOM": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-11"
       },
-      "LITE": {
+      "RCAT": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-11"
@@ -4292,20 +4292,7 @@
     "recommendations": 0,
     "gate_audits": 0,
     "events": 6,
-    "new_zone_hits": [
-      {
-        "type": "ENTRY_ZONE_TOUCHED",
-        "level_id": "legacy-20260911-MU-very_good",
-        "ticker": "MU",
-        "zone": "very_good",
-        "date": "2026-11-10",
-        "price": 725.11,
-        "basis": "close",
-        "currency": "USD",
-        "detected_at": "2026-11-12T08:49:13.504261+00:00",
-        "status": "REQUIRES_FRESH_FUNDAMENTAL_AND_TECHNICAL_REVIEW"
-      }
-    ],
+    "new_zone_hits": [],
     "historical_imports": [
       {
         "ticker": "MU",
