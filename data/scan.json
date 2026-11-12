@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-12T09:14:12.172875+00:00",
+  "generated_at": "2026-11-12T09:19:01.168244+00:00",
   "source": "Google News RSS",
   "queries": [
     "artificial intelligence robotics stocks companies contracts earnings",
@@ -10,13 +10,13 @@
     "AI infrastructure cooling energy grid power public company"
   ],
   "scan_status": "ok",
-  "articles_collected": 116,
+  "articles_collected": 115,
   "companies": [
     {
       "ticker": "NVDA",
       "name": "NVIDIA",
       "sector": "AI chips",
-      "mentions": 10,
+      "mentions": 8,
       "news": [
         {
           "title": "Not AMD. Not Intel. This Is the Artificial Intelligence (AI) Chip Stock Nvidia Should Fear Most. - The Motley Fool",
@@ -34,18 +34,18 @@
           "date": "Mon, 09 Nov 2026 09:27:26 GMT"
         },
         {
-          "title": "Nvidia Export Curbs Could Shift AI Demand Toward These Data Center Stocks - Yahoo Finance",
-          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPVTJUV2NtRlFXRDJLbmcwQmp2Zk1FTnJ2MDlNUGM5c0htWHFVZ3RBLXdvcWtVc3NFUFRpRzNmUGozY3pROG90U2c5cDFSQ09Xbm1jLWhRVGhyZFhjcFVwSkVZQnFTTVAtREFyU011VlJhUkV1eUtwQjZNdHNhZmRQWXlaVnhFZ2MwTHdKaWNGWDBtOGxrSlFXTHE5VQ?oc=5",
-          "date": "Thu, 12 Nov 2026 00:43:07 GMT"
+          "title": "NVIDIA Rises 4% Despite Baird Downgrade and Huang Uncertainty; AMD Climbs 5%, Broadcom Gains 4% - 24/7 Wall St.",
+          "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQQzNfT3FUQkg5R0tudTFId2Jucks1MDdRX3pHNXF4UGx2TFc3UjJMUzVjYlB2SmcxRGFiX1VBV2xQRzJiM3A2MWJQZVF3YnpNZ3pmdklMNjZUYVBlVFplV0lpSXA1ZUtKckZCOUItMldEaVhhbVFHdWN1NW51elFSWjdrTGZWejlORjFsajltVnV0YzR6ZzdvMDRHVzVoNGdyUzBEWTBudzBEcU5jMTRMSjIzNWJ4UG93M3BBNW5odUpTc0U0WUVOLWdLSzRoeE0?oc=5",
+          "date": "Wed, 11 Nov 2026 14:05:00 GMT"
         },
         {
-          "title": "AI Sell-Off: Buy ANET, TSM & MU to Make Up for NVIDIA Losses - TradingView",
-          "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPMDJUNUd3WVQwUTlFX1FvN1Q4Q2NSdkpYRnFnenl2b3RSRC1RRGY5RzdjWU5wZU1wTFNEdWNSQy1jbHVDcWtoUm13UGNhcU9kTThIMlZQNlpWb2hES1dDajdyNllKOUZZWWxqVVZMWG9KWnRFN0RPeW5ZQUthS2hXOXRMdGFtZFppMkV0QWgtb3JPbU0yZkxsRjlOamhsLWNXNWJRT3F0WEhXWVVXNy1yTzZB?oc=5",
-          "date": "Wed, 11 Nov 2026 21:19:47 GMT"
+          "title": "Nvidia CEO Jensen Huang — The Fall of AI’s Keyman and Future Ecosystem - The Korea Daily",
+          "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBjNDJRSVQ5MklEeVJBdHljRnlUNFRVeVpPM2F0NTROTVVhbnhZaVozS0REUEo3WEpBNi04cF9YLUg1dDhoNndZbHdPRXNsQmhMUHpEZzUtd1VRQkFoOWlwMngwX3hXNW9kRlp4WGRsMDQ?oc=5",
+          "date": "Thu, 12 Nov 2026 07:45:44 GMT"
         }
       ],
       "status": "Do analizy",
-      "attention_score": 92,
+      "attention_score": 86,
       "valuation_status": "Orientacyjna kapitalizacja i mnożniki roczne — nie ranking zakupu",
       "investment_score": null,
       "fundamentals": {
@@ -107,7 +107,7 @@
       },
       "buy_gate_diagnostics": {
         "ticker": "NVDA",
-        "scan_id": "2026-11-12T09:14:12.172875+00:00",
+        "scan_id": "2026-11-12T09:19:01.168244+00:00",
         "gates": {
           "investment_ranking": {
             "status": "ND",
@@ -153,7 +153,140 @@
         "blockers": [
           "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
         ],
-        "recorded_at": "2026-11-12T09:14:12.205378+00:00",
+        "recorded_at": "2026-11-12T09:19:01.223747+00:00",
+        "immutable": true
+      },
+      "entry_zone_history": {
+        "levels": [],
+        "events": [],
+        "historical_imports": []
+      }
+    },
+    {
+      "ticker": "GOOGL",
+      "name": "Alphabet",
+      "sector": "AI platforms",
+      "mentions": 4,
+      "news": [
+        {
+          "title": "Google escalates Nvidia rivalry with specialised versions of AI chips - The Straits Times",
+          "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOWkh6VmJCLUZGUVJ0QzBmNU92ZFBtZVo3NHBWQ1pEeEQyQk5RS2Y5RkkxOHNEc2dXUkhEVXFka3hOQlFQcW5uYTl1VVNvcC15Q0F1SlUwNmhGMEl1ZjJIU3l5eU5qM1ZGYjBUT1Q4Q0NSS2NsalVDNDIxWi1pc1BLUFRaVFQ5dGdhZDVvQ3J3eGtmQXctNGkwUFR4amcwaktKMVlQUV9PZzVVcTBhVm9vWnpzNzFkdw?oc=5",
+          "date": "Mon, 09 Nov 2026 13:45:00 GMT"
+        },
+        {
+          "title": "Google’s Semiconductor Alliance vs. NVIDIA’s Integrated Ecosystem: How TPUs Are Reshaping the Global AI Semiconductor Industry - semivision",
+          "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5PT2NYd2F2c3JCVlpQb0xwX2NYUG43dlBTUW9ZRENFeU1OSVY1MGZqNUtvcWdUVV9zWm8yR0wtRklHNThXSDVMLWhuWkhfakkxMEZzbFVJNG5ISTFXSTcyNmJEMW85N0trejNVcFpNRlh1U0dsbTA2QUJEdGQzVDQ?oc=5",
+          "date": "Tue, 10 Nov 2026 03:09:38 GMT"
+        },
+        {
+          "title": "Alphabet’s Regulatory Advantage Never Gets Talked About But It Should - 24/7 Wall St.",
+          "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPaWs3Nnc5TWduZnAyOERLNHFLemZtblJZdGVpUTJaVEN5QmNQNDNhVXg3a3c3OVlxNjVmTEwxeW5OWjdJaDctMWdrNVFzYUV6eHdIcUVFaHRMS2tyaUt2aVhmZnJyMmFuMS1sNWY4Y0ZGWFUyODdQam5la3dXMVNkUmgweWVwM1BkMk85MjNQS190Tlh1TXUzUUUwTFBEM3hlUGhxMDdmeGhXV2EySFNCd3l3?oc=5",
+          "date": "Tue, 10 Nov 2026 15:45:00 GMT"
+        },
+        {
+          "title": "Google’s Utah Deal Puts Geothermal Power on the Data Center Map - Data Center Frontier",
+          "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQczhYM0Zid2JoU3gtN0JUTjhJQlVUN0lOQXFXWm84NXl3T1Rad2tJWm55SjFQN2ZfZkdON3MtZnY3U0hHOG1uRHZyWFBMWXQ0YlNIcTFOTE81b2VSZjBUVm5ZWFdYZm93b0FuaGROU0FlV2pKd3Z6UGMxRmplZmRidzBaUVA3UUM1VEtVRXNFaEtTaEtLV3ZSZjJxRmJxbGNjWVBtQVdac041VEEzZU5zUlVGaUVTLVN0MUYyVXJ3?oc=5",
+          "date": "Wed, 11 Nov 2026 20:04:03 GMT"
+        }
+      ],
+      "status": "Do analizy",
+      "attention_score": 63,
+      "valuation_status": "Orientacyjna kapitalizacja i mnożniki roczne — nie ranking zakupu",
+      "investment_score": null,
+      "fundamentals": {
+        "source": "SEC EDGAR XBRL",
+        "fiscal_year": "2024",
+        "revenue_usd": 350018000000,
+        "net_income_usd": 132170000000,
+        "revenue_growth_pct": 13.9,
+        "net_margin_pct": 37.8,
+        "operating_cash_flow_usd": 164713000000,
+        "free_cash_flow_usd": 73266000000,
+        "cash_usd": 30708000000,
+        "debt_usd": 48543000000,
+        "financial_health_score": 75,
+        "score_label": "Prosty filtr 4 warunków, nie rekomendacja",
+        "shares_outstanding": 12088000000,
+        "shares_as_of": "2025-12-31",
+        "revenue_period_end": "2024-12-31",
+        "net_income_period_end": "2025-12-31",
+        "cash_flow_period_end": "2025-12-31",
+        "capex_period_end": "2025-12-31",
+        "as_of": "2026-11-12T09:06:28.441011+00:00",
+        "source_url": "https://www.sec.gov/edgar/browse/?CIK=1652044"
+      },
+      "price": {
+        "close_usd": 293.45,
+        "date": "2026-11-11",
+        "age_days": 1,
+        "currency": "USD",
+        "source": "Yahoo Finance chart EOD",
+        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/GOOGL?interval=1d&range=15d",
+        "is_live": false,
+        "low_usd": 289.48,
+        "high_usd": 295.74,
+        "checked_at": "2026-11-12T09:06:45.961900+00:00"
+      },
+      "valuation": {
+        "status": "partial",
+        "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
+        "market_cap_usd": 3547223600000,
+        "ps": null,
+        "pe": null,
+        "fcf_yield_pct": null,
+        "share_date": "2025-12-31",
+        "price_date": "2026-11-11",
+        "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
+      },
+      "buy_gate_diagnostics": {
+        "ticker": "GOOGL",
+        "scan_id": "2026-11-12T09:19:01.168244+00:00",
+        "gates": {
+          "investment_ranking": {
+            "status": "ND",
+            "value": null,
+            "required": "validated Balanced 1.3 ranking"
+          },
+          "fundamental_score": {
+            "status": "ND",
+            "value": null,
+            "required": "normalized financials and valuation"
+          },
+          "entry_score": {
+            "status": "ND",
+            "value": null,
+            "required": "technical entry model with OHLCV"
+          },
+          "base_upside": {
+            "status": "ND",
+            "value": null,
+            "required": "probability-weighted Bear/Base/Bull valuation"
+          },
+          "risk_reward": {
+            "status": "ND",
+            "value": null,
+            "required": "validated entry, stop-loss and target"
+          },
+          "data_quality": {
+            "status": "ND",
+            "value": null,
+            "required": "period-consistent fundamentals and fresh quotes"
+          },
+          "analyst_consensus": {
+            "status": "ND",
+            "value": null,
+            "required": "timestamped analyst target history"
+          },
+          "veto_check": {
+            "status": "ND",
+            "value": null,
+            "required": "complete risk and corporate-event review"
+          }
+        },
+        "blockers": [
+          "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
+        ],
+        "recorded_at": "2026-11-12T09:19:01.268149+00:00",
         "immutable": true
       },
       "entry_zone_history": {
@@ -181,7 +314,7 @@
         {
           "title": "5 Best Artificial Intelligence (AI) ETFs to Buy in 2026 - The Motley Fool",
           "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQYzA2Wld0QkFFTkVjZGlIQ3JfdklNNS1SeUVIb21TMFlFZTc4ejB1UWZqN3FLT2FlWVhEeW5QOFM1STZCM0kxRE9lcERjRTY4ZjlDZFNLaVNiSDVZMDhMdjEwbUQ2WG9XeUZ5M2hBeENWaENUbE5tTE1tU2tBS0x5TV9Gak8wVUlMTmlqRl85SkQzSnJmMGd0T1JaelpWS3lvVWc?oc=5",
-          "date": "Thu, 12 Nov 2026 07:17:04 GMT"
+          "date": "Wed, 11 Nov 2026 21:52:35 GMT"
         },
         {
           "title": "WATCH VIDEO: Advanced Humanoid Robot Performs Remarkably Human-Like Movements, Showcasing How Artificial Intelligence Is Transforming The Future Of Robotics And Automation - The Sunday Guardian",
@@ -242,14 +375,14 @@
         "market_cap_usd": 332187500000,
         "ps": 6.29,
         "pe": null,
-        "fcf_yield_pct": -1.49,
+        "fcf_yield_pct": null,
         "share_date": "2026-10-23",
         "price_date": "2026-11-11",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
       },
       "buy_gate_diagnostics": {
         "ticker": "INTC",
-        "scan_id": "2026-11-12T09:14:12.172875+00:00",
+        "scan_id": "2026-11-12T09:19:01.168244+00:00",
         "gates": {
           "investment_ranking": {
             "status": "ND",
@@ -295,135 +428,7 @@
         "blockers": [
           "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
         ],
-        "recorded_at": "2026-11-12T09:14:12.230713+00:00",
-        "immutable": true
-      },
-      "entry_zone_history": {
-        "levels": [],
-        "events": [],
-        "historical_imports": []
-      }
-    },
-    {
-      "ticker": "GOOGL",
-      "name": "Alphabet",
-      "sector": "AI platforms",
-      "mentions": 3,
-      "news": [
-        {
-          "title": "Google’s Semiconductor Alliance vs. NVIDIA’s Integrated Ecosystem: How TPUs Are Reshaping the Global AI Semiconductor Industry - semivision",
-          "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5PT2NYd2F2c3JCVlpQb0xwX2NYUG43dlBTUW9ZRENFeU1OSVY1MGZqNUtvcWdUVV9zWm8yR0wtRklHNThXSDVMLWhuWkhfakkxMEZzbFVJNG5ISTFXSTcyNmJEMW85N0trejNVcFpNRlh1U0dsbTA2QUJEdGQzVDQ?oc=5",
-          "date": "Tue, 10 Nov 2026 03:09:38 GMT"
-        },
-        {
-          "title": "Alphabet’s Regulatory Advantage Never Gets Talked About But It Should - 24/7 Wall St.",
-          "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPaWs3Nnc5TWduZnAyOERLNHFLemZtblJZdGVpUTJaVEN5QmNQNDNhVXg3a3c3OVlxNjVmTEwxeW5OWjdJaDctMWdrNVFzYUV6eHdIcUVFaHRMS2tyaUt2aVhmZnJyMmFuMS1sNWY4Y0ZGWFUyODdQam5la3dXMVNkUmgweWVwM1BkMk85MjNQS190Tlh1TXUzUUUwTFBEM3hlUGhxMDdmeGhXV2EySFNCd3l3?oc=5",
-          "date": "Tue, 10 Nov 2026 15:45:00 GMT"
-        },
-        {
-          "title": "Google’s Utah Deal Puts Geothermal Power on the Data Center Map - Data Center Frontier",
-          "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQczhYM0Zid2JoU3gtN0JUTjhJQlVUN0lOQXFXWm84NXl3T1Rad2tJWm55SjFQN2ZfZkdON3MtZnY3U0hHOG1uRHZyWFBMWXQ0YlNIcTFOTE81b2VSZjBUVm5ZWFdYZm93b0FuaGROU0FlV2pKd3Z6UGMxRmplZmRidzBaUVA3UUM1VEtVRXNFaEtTaEtLV3ZSZjJxRmJxbGNjWVBtQVdac041VEEzZU5zUlVGaUVTLVN0MUYyVXJ3?oc=5",
-          "date": "Wed, 11 Nov 2026 20:04:03 GMT"
-        }
-      ],
-      "status": "Do analizy",
-      "attention_score": 53,
-      "valuation_status": "Orientacyjna kapitalizacja i mnożniki roczne — nie ranking zakupu",
-      "investment_score": null,
-      "fundamentals": {
-        "source": "SEC EDGAR XBRL",
-        "fiscal_year": "2024",
-        "revenue_usd": 350018000000,
-        "net_income_usd": 132170000000,
-        "revenue_growth_pct": 13.9,
-        "net_margin_pct": 37.8,
-        "operating_cash_flow_usd": 164713000000,
-        "free_cash_flow_usd": 73266000000,
-        "cash_usd": 30708000000,
-        "debt_usd": 48543000000,
-        "financial_health_score": 75,
-        "score_label": "Prosty filtr 4 warunków, nie rekomendacja",
-        "shares_outstanding": 12088000000,
-        "shares_as_of": "2025-12-31",
-        "revenue_period_end": "2024-12-31",
-        "net_income_period_end": "2025-12-31",
-        "cash_flow_period_end": "2025-12-31",
-        "capex_period_end": "2025-12-31",
-        "as_of": "2026-11-12T09:06:28.441011+00:00",
-        "source_url": "https://www.sec.gov/edgar/browse/?CIK=1652044"
-      },
-      "price": {
-        "close_usd": 293.45,
-        "date": "2026-11-11",
-        "age_days": 1,
-        "currency": "USD",
-        "source": "Yahoo Finance chart EOD",
-        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/GOOGL?interval=1d&range=15d",
-        "is_live": false,
-        "low_usd": 289.48,
-        "high_usd": 295.74,
-        "checked_at": "2026-11-12T09:06:45.961900+00:00"
-      },
-      "valuation": {
-        "status": "partial",
-        "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 3547223600000,
-        "ps": null,
-        "pe": null,
-        "fcf_yield_pct": 2.07,
-        "share_date": "2025-12-31",
-        "price_date": "2026-11-11",
-        "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
-      },
-      "buy_gate_diagnostics": {
-        "ticker": "GOOGL",
-        "scan_id": "2026-11-12T09:14:12.172875+00:00",
-        "gates": {
-          "investment_ranking": {
-            "status": "ND",
-            "value": null,
-            "required": "validated Balanced 1.3 ranking"
-          },
-          "fundamental_score": {
-            "status": "ND",
-            "value": null,
-            "required": "normalized financials and valuation"
-          },
-          "entry_score": {
-            "status": "ND",
-            "value": null,
-            "required": "technical entry model with OHLCV"
-          },
-          "base_upside": {
-            "status": "ND",
-            "value": null,
-            "required": "probability-weighted Bear/Base/Bull valuation"
-          },
-          "risk_reward": {
-            "status": "ND",
-            "value": null,
-            "required": "validated entry, stop-loss and target"
-          },
-          "data_quality": {
-            "status": "ND",
-            "value": null,
-            "required": "period-consistent fundamentals and fresh quotes"
-          },
-          "analyst_consensus": {
-            "status": "ND",
-            "value": null,
-            "required": "timestamped analyst target history"
-          },
-          "veto_check": {
-            "status": "ND",
-            "value": null,
-            "required": "complete risk and corporate-event review"
-          }
-        },
-        "blockers": [
-          "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
-        ],
-        "recorded_at": "2026-11-12T09:14:12.256168+00:00",
+        "recorded_at": "2026-11-12T09:19:01.312668+00:00",
         "immutable": true
       },
       "entry_zone_history": {
@@ -439,14 +444,14 @@
       "mentions": 2,
       "news": [
         {
-          "title": "Broadcom Inc Share Price - AVGO, RNS News, Articles, Quotes, & Charts (NASDAQ:AVGO) - Proactive financial news",
-          "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9GRnpmQUV2dHphVHdJVHpYVHdpN3JLZ0RHZTBGQU0tNEdFbkVMS3VScEg3MnFHQndWWFpPMXZCMTJTNXBpbTd4dGk1NUxnWkFteWY3cW44RHpEVFRBWjRxQ2RjQzRwS1RpelNrREpkNA?oc=5",
-          "date": "Wed, 11 Nov 2026 17:12:33 GMT"
-        },
-        {
           "title": "NVIDIA Rises 4% Despite Baird Downgrade and Huang Uncertainty; AMD Climbs 5%, Broadcom Gains 4% - 24/7 Wall St.",
           "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQQzNfT3FUQkg5R0tudTFId2Jucks1MDdRX3pHNXF4UGx2TFc3UjJMUzVjYlB2SmcxRGFiX1VBV2xQRzJiM3A2MWJQZVF3YnpNZ3pmdklMNjZUYVBlVFplV0lpSXA1ZUtKckZCOUItMldEaVhhbVFHdWN1NW51elFSWjdrTGZWejlORjFsajltVnV0YzR6ZzdvMDRHVzVoNGdyUzBEWTBudzBEcU5jMTRMSjIzNWJ4UG93M3BBNW5odUpTc0U0WUVOLWdLSzRoeE0?oc=5",
           "date": "Wed, 11 Nov 2026 14:05:00 GMT"
+        },
+        {
+          "title": "Broadcom Inc Share Price - AVGO, RNS News, Articles, Quotes, & Charts (NASDAQ:AVGO) - Proactive financial news",
+          "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9GRnpmQUV2dHphVHdJVHpYVHdpN3JLZ0RHZTBGQU0tNEdFbkVMS3VScEg3MnFHQndWWFpPMXZCMTJTNXBpbTd4dGk1NUxnWkFteWY3cW44RHpEVFRBWjRxQ2RjQzRwS1RpelNrREpkNA?oc=5",
+          "date": "Wed, 11 Nov 2026 17:12:33 GMT"
         }
       ],
       "status": "Do analizy",
@@ -493,7 +498,7 @@
           "revenue_net_income_period_mismatch"
         ],
         "financial_health_score_available": false,
-        "as_of": "2026-11-12T09:13:51.551069+00:00",
+        "as_of": "2026-11-12T09:18:35.497994+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1730168"
       },
       "price": {
@@ -506,7 +511,7 @@
         "is_live": false,
         "low_usd": 344.31,
         "high_usd": 356.85,
-        "checked_at": "2026-11-12T09:13:59.850214+00:00"
+        "checked_at": "2026-11-12T09:18:45.278650+00:00"
       },
       "valuation": {
         "status": "partial",
@@ -521,7 +526,7 @@
       },
       "buy_gate_diagnostics": {
         "ticker": "AVGO",
-        "scan_id": "2026-11-12T09:14:12.172875+00:00",
+        "scan_id": "2026-11-12T09:19:01.168244+00:00",
         "gates": {
           "investment_ranking": {
             "status": "ND",
@@ -567,7 +572,7 @@
         "blockers": [
           "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
         ],
-        "recorded_at": "2026-11-12T09:14:12.281219+00:00",
+        "recorded_at": "2026-11-12T09:19:01.356593+00:00",
         "immutable": true
       },
       "entry_zone_history": {
@@ -646,14 +651,14 @@
         "market_cap_usd": 177778665,
         "ps": 33.89,
         "pe": 17.71,
-        "fcf_yield_pct": -15.95,
+        "fcf_yield_pct": null,
         "share_date": "2026-10-28",
         "price_date": "2026-11-11",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
       },
       "buy_gate_diagnostics": {
         "ticker": "PDYN",
-        "scan_id": "2026-11-12T09:14:12.172875+00:00",
+        "scan_id": "2026-11-12T09:19:01.168244+00:00",
         "gates": {
           "investment_ranking": {
             "status": "ND",
@@ -699,7 +704,7 @@
         "blockers": [
           "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
         ],
-        "recorded_at": "2026-11-12T09:14:12.306516+00:00",
+        "recorded_at": "2026-11-12T09:19:01.400480+00:00",
         "immutable": true
       },
       "entry_zone_history": {
@@ -715,14 +720,14 @@
       "mentions": 2,
       "news": [
         {
-          "title": "Teradyne stock expands physical AI testing with Omnyx Edge - ad-hoc-news.de",
-          "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOcUJhOFNPa3VJXzN5X0lVVVNqWkQtcHNtLV90RHh6bDFlR2pib25qaWlEZDFhaWlDNnZjRFdZbHNJU1ZUaTg2NEtUUnVZNDk5ZnJwZHFJM3hQSjdwUjlhSC1xRXRhLVV0UFFzYXhVdkJTX0VwUV9CV2lGNWdEVVhIZHhyZ3hhcTk4YzBzN3lzTUs4bUE5REFQQlBDZVlyVGJaYWhWTHhhbVR3QjZncHBMbUM5eFdtX3VGVjBwd3NB?oc=5",
-          "date": "Wed, 11 Nov 2026 13:04:22 GMT"
-        },
-        {
           "title": "Teradyne stock adds physical AI test platform with Omnyx Edge - ad-hoc-news.de",
           "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNMFgxWE1CcF81b3dBbHo4cFVQb09zbkhZYjBJbENuV2JQeHVNVXJFcWd5NlkyUjNZWEQxQmo1TjZwOGlLcG1PY09udU04ekJZQ1BDLUFtcHBzUmZJbk1lb2cwaEZGdjdCd1pjRFZBS3pGQjNITThDTGhCWEZaRDRRTGNxX1lUbEkyZGhOQ0Zfam9yTDlVUmF5bDZLVjkwaXo4NmRIMDFReVVyOUJJclpMUTVRcXdqTmRFaVRfRW5nWEUyQQ?oc=5",
           "date": "Mon, 09 Nov 2026 13:00:45 GMT"
+        },
+        {
+          "title": "Teradyne stock expands physical AI testing with Omnyx Edge - ad-hoc-news.de",
+          "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOcUJhOFNPa3VJXzN5X0lVVVNqWkQtcHNtLV90RHh6bDFlR2pib25qaWlEZDFhaWlDNnZjRFdZbHNJU1ZUaTg2NEtUUnVZNDk5ZnJwZHFJM3hQSjdwUjlhSC1xRXRhLVV0UFFzYXhVdkJTX0VwUV9CV2lGNWdEVVhIZHhyZ3hhcTk4YzBzN3lzTUs4bUE5REFQQlBDZVlyVGJaYWhWTHhhbVR3QjZncHBMbUM5eFdtX3VGVjBwd3NB?oc=5",
+          "date": "Wed, 11 Nov 2026 13:04:22 GMT"
         }
       ],
       "status": "Do analizy",
@@ -794,7 +799,7 @@
       },
       "buy_gate_diagnostics": {
         "ticker": "TER",
-        "scan_id": "2026-11-12T09:14:12.172875+00:00",
+        "scan_id": "2026-11-12T09:19:01.168244+00:00",
         "gates": {
           "investment_ranking": {
             "status": "ND",
@@ -840,7 +845,7 @@
         "blockers": [
           "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
         ],
-        "recorded_at": "2026-11-12T09:14:12.331789+00:00",
+        "recorded_at": "2026-11-12T09:19:01.444547+00:00",
         "immutable": true
       },
       "entry_zone_history": {
@@ -935,7 +940,7 @@
       },
       "buy_gate_diagnostics": {
         "ticker": "TSM",
-        "scan_id": "2026-11-12T09:14:12.172875+00:00",
+        "scan_id": "2026-11-12T09:19:01.168244+00:00",
         "gates": {
           "investment_ranking": {
             "status": "ND",
@@ -981,7 +986,7 @@
         "blockers": [
           "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
         ],
-        "recorded_at": "2026-11-12T09:14:12.357256+00:00",
+        "recorded_at": "2026-11-12T09:19:01.488314+00:00",
         "immutable": true
       },
       "entry_zone_history": {
@@ -1077,7 +1082,7 @@
       },
       "buy_gate_diagnostics": {
         "ticker": "VRT",
-        "scan_id": "2026-11-12T09:14:12.172875+00:00",
+        "scan_id": "2026-11-12T09:19:01.168244+00:00",
         "gates": {
           "investment_ranking": {
             "status": "ND",
@@ -1123,7 +1128,7 @@
         "blockers": [
           "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
         ],
-        "recorded_at": "2026-11-12T09:14:12.404798+00:00",
+        "recorded_at": "2026-11-12T09:19:01.532347+00:00",
         "immutable": true
       },
       "entry_zone_history": {
@@ -1180,7 +1185,7 @@
         "is_live": false,
         "low_usd": 265.62,
         "high_usd": 274.87,
-        "checked_at": "2026-11-12T09:06:33.795537+00:00"
+        "checked_at": "2026-11-12T09:18:51.893666+00:00"
       },
       "valuation": {
         "status": "partial",
@@ -1195,7 +1200,7 @@
       },
       "buy_gate_diagnostics": {
         "ticker": "AMZN",
-        "scan_id": "2026-11-12T09:14:12.172875+00:00",
+        "scan_id": "2026-11-12T09:19:01.168244+00:00",
         "gates": {
           "investment_ranking": {
             "status": "ND",
@@ -1241,125 +1246,7 @@
         "blockers": [
           "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
         ],
-        "recorded_at": "2026-11-12T09:14:12.431165+00:00",
-        "immutable": true
-      },
-      "entry_zone_history": {
-        "levels": [],
-        "events": [],
-        "historical_imports": []
-      }
-    },
-    {
-      "ticker": "ANET",
-      "name": "Arista Networks",
-      "sector": "AI networking",
-      "mentions": 1,
-      "news": [
-        {
-          "title": "AI Sell-Off: Buy ANET, TSM & MU to Make Up for NVIDIA Losses - TradingView",
-          "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPMDJUNUd3WVQwUTlFX1FvN1Q4Q2NSdkpYRnFnenl2b3RSRC1RRGY5RzdjWU5wZU1wTFNEdWNSQy1jbHVDcWtoUm13UGNhcU9kTThIMlZQNlpWb2hES1dDajdyNllKOUZZWWxqVVZMWG9KWnRFN0RPeW5ZQUthS2hXOXRMdGFtZFppMkV0QWgtb3JPbU0yZkxsRjlOamhsLWNXNWJRT3F0WEhXWVVXNy1yTzZB?oc=5",
-          "date": "Wed, 11 Nov 2026 21:19:47 GMT"
-        }
-      ],
-      "status": "Do analizy",
-      "attention_score": 22,
-      "valuation_status": "Orientacyjna kapitalizacja i mnożniki roczne — nie ranking zakupu",
-      "investment_score": null,
-      "fundamentals": {
-        "source": "SEC EDGAR XBRL",
-        "fiscal_year": "2025",
-        "revenue_usd": 9005700000,
-        "net_income_usd": 3511400000,
-        "revenue_growth_pct": 28.6,
-        "net_margin_pct": 39.0,
-        "operating_cash_flow_usd": 4371900000,
-        "free_cash_flow_usd": 4356149000,
-        "cash_usd": 1963900000,
-        "debt_usd": 98793000,
-        "financial_health_score": 100,
-        "score_label": "Prosty filtr 4 warunków, nie rekomendacja",
-        "shares_outstanding": 1263402335,
-        "shares_as_of": "2026-10-29",
-        "revenue_period_end": "2025-12-31",
-        "net_income_period_end": "2025-12-31",
-        "cash_flow_period_end": "2025-12-31",
-        "capex_period_end": "2019-12-31",
-        "as_of": "2026-11-12T09:06:26.732058+00:00",
-        "source_url": "https://www.sec.gov/edgar/browse/?CIK=1596532"
-      },
-      "price": {
-        "close_usd": 196.68,
-        "date": "2026-11-11",
-        "age_days": 1,
-        "currency": "USD",
-        "source": "Yahoo Finance chart EOD",
-        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/ANET?interval=1d&range=15d",
-        "is_live": false,
-        "low_usd": 193.88,
-        "high_usd": 199.46,
-        "checked_at": "2026-11-12T09:06:34.413189+00:00"
-      },
-      "valuation": {
-        "status": "partial",
-        "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 248485971248,
-        "ps": 27.59,
-        "pe": 70.77,
-        "fcf_yield_pct": null,
-        "share_date": "2026-10-29",
-        "price_date": "2026-11-11",
-        "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
-      },
-      "buy_gate_diagnostics": {
-        "ticker": "ANET",
-        "scan_id": "2026-11-12T09:14:12.172875+00:00",
-        "gates": {
-          "investment_ranking": {
-            "status": "ND",
-            "value": null,
-            "required": "validated Balanced 1.3 ranking"
-          },
-          "fundamental_score": {
-            "status": "ND",
-            "value": null,
-            "required": "normalized financials and valuation"
-          },
-          "entry_score": {
-            "status": "ND",
-            "value": null,
-            "required": "technical entry model with OHLCV"
-          },
-          "base_upside": {
-            "status": "ND",
-            "value": null,
-            "required": "probability-weighted Bear/Base/Bull valuation"
-          },
-          "risk_reward": {
-            "status": "ND",
-            "value": null,
-            "required": "validated entry, stop-loss and target"
-          },
-          "data_quality": {
-            "status": "ND",
-            "value": null,
-            "required": "period-consistent fundamentals and fresh quotes"
-          },
-          "analyst_consensus": {
-            "status": "ND",
-            "value": null,
-            "required": "timestamped analyst target history"
-          },
-          "veto_check": {
-            "status": "ND",
-            "value": null,
-            "required": "complete risk and corporate-event review"
-          }
-        },
-        "blockers": [
-          "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
-        ],
-        "recorded_at": "2026-11-12T09:14:12.457594+00:00",
+        "recorded_at": "2026-11-12T09:19:01.577092+00:00",
         "immutable": true
       },
       "entry_zone_history": {
@@ -1396,14 +1283,33 @@
         "cash_usd": 1162018000,
         "debt_usd": 3222224000,
         "financial_health_score": 75,
-        "score_label": "Prosty filtr 4 warunków, nie rekomendacja",
+        "score_label": "Prosty filtr 4 warunków, tylko zgodne okresy; nie rekomendacja",
         "shares_outstanding": 196958669,
         "shares_as_of": "2026-11-02",
         "revenue_period_end": "2026-06-30",
         "net_income_period_end": "2026-06-30",
+        "net_income_period_start": "2025-07-01",
+        "revenue_period_start": "2025-07-01",
         "cash_flow_period_end": "2026-06-30",
+        "cash_flow_period_start": "2025-07-01",
         "capex_period_end": "2026-06-30",
-        "as_of": "2026-11-12T08:56:50.384050+00:00",
+        "capex_period_start": "2025-07-01",
+        "period_alignment": {
+          "revenue_net_income_common_period": {
+            "start": "2025-07-01",
+            "end": "2026-06-30"
+          },
+          "cashflow_capex_common_period": {
+            "start": "2025-07-01",
+            "end": "2026-06-30"
+          },
+          "revenue_net_income_match_latest": true,
+          "cashflow_capex_match_latest": true,
+          "status": "aligned"
+        },
+        "period_mismatch_flags": [],
+        "financial_health_score_available": true,
+        "as_of": "2026-11-12T09:18:38.772912+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=820318"
       },
       "price": {
@@ -1416,7 +1322,7 @@
         "is_live": false,
         "low_usd": 223.52,
         "high_usd": 245.73,
-        "checked_at": "2026-11-12T09:06:40.293464+00:00"
+        "checked_at": "2026-11-12T09:18:57.796598+00:00"
       },
       "valuation": {
         "status": "partial",
@@ -1431,7 +1337,7 @@
       },
       "buy_gate_diagnostics": {
         "ticker": "COHR",
-        "scan_id": "2026-11-12T09:14:12.172875+00:00",
+        "scan_id": "2026-11-12T09:19:01.168244+00:00",
         "gates": {
           "investment_ranking": {
             "status": "ND",
@@ -1477,7 +1383,7 @@
         "blockers": [
           "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
         ],
-        "recorded_at": "2026-11-12T09:14:12.483245+00:00",
+        "recorded_at": "2026-11-12T09:19:01.621235+00:00",
         "immutable": true
       },
       "entry_zone_history": {
@@ -1534,7 +1440,7 @@
         "is_live": false,
         "low_usd": 358.52,
         "high_usd": 384.69,
-        "checked_at": "2026-11-12T09:06:41.785336+00:00"
+        "checked_at": "2026-11-12T09:18:59.006037+00:00"
       },
       "valuation": {
         "status": "partial",
@@ -1542,14 +1448,14 @@
         "market_cap_usd": 243639360000,
         "ps": 2.15,
         "pe": 41.04,
-        "fcf_yield_pct": 3.51,
+        "fcf_yield_pct": null,
         "share_date": "2026-01-30",
         "price_date": "2026-11-11",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
       },
       "buy_gate_diagnostics": {
         "ticker": "DELL",
-        "scan_id": "2026-11-12T09:14:12.172875+00:00",
+        "scan_id": "2026-11-12T09:19:01.168244+00:00",
         "gates": {
           "investment_ranking": {
             "status": "ND",
@@ -1595,7 +1501,7 @@
         "blockers": [
           "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
         ],
-        "recorded_at": "2026-11-12T09:14:12.508766+00:00",
+        "recorded_at": "2026-11-12T09:19:01.665964+00:00",
         "immutable": true
       },
       "entry_zone_history": {
@@ -1660,14 +1566,14 @@
         "market_cap_usd": 58779042000,
         "ps": 19.5,
         "pe": null,
-        "fcf_yield_pct": 0.51,
+        "fcf_yield_pct": null,
         "share_date": "2026-10-28",
         "price_date": "2026-11-11",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
       },
       "buy_gate_diagnostics": {
         "ticker": "LITE",
-        "scan_id": "2026-11-12T09:14:12.172875+00:00",
+        "scan_id": "2026-11-12T09:19:01.168244+00:00",
         "gates": {
           "investment_ranking": {
             "status": "ND",
@@ -1713,7 +1619,7 @@
         "blockers": [
           "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
         ],
-        "recorded_at": "2026-11-12T09:14:12.534304+00:00",
+        "recorded_at": "2026-11-12T09:19:01.710265+00:00",
         "immutable": true
       },
       "entry_zone_history": {
@@ -1787,14 +1693,14 @@
         "market_cap_usd": 2789951799,
         "ps": 16.47,
         "pe": null,
-        "fcf_yield_pct": -2.32,
+        "fcf_yield_pct": null,
         "share_date": "2026-10-30",
         "price_date": "2026-11-11",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
       },
       "buy_gate_diagnostics": {
         "ticker": "OUST",
-        "scan_id": "2026-11-12T09:14:12.172875+00:00",
+        "scan_id": "2026-11-12T09:19:01.168244+00:00",
         "gates": {
           "investment_ranking": {
             "status": "ND",
@@ -1840,7 +1746,7 @@
         "blockers": [
           "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
         ],
-        "recorded_at": "2026-11-12T09:14:12.560094+00:00",
+        "recorded_at": "2026-11-12T09:19:01.755441+00:00",
         "immutable": true
       },
       "entry_zone_history": {
@@ -1978,14 +1884,14 @@
         "market_cap_usd": 91602663531,
         "ps": 3.22,
         "pe": 89.07,
-        "fcf_yield_pct": 1.77,
+        "fcf_yield_pct": null,
         "share_date": "2026-10-26",
         "price_date": "2026-11-11",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
       },
       "buy_gate_diagnostics": {
         "ticker": "PWR",
-        "scan_id": "2026-11-12T09:14:12.172875+00:00",
+        "scan_id": "2026-11-12T09:19:01.168244+00:00",
         "gates": {
           "investment_ranking": {
             "status": "ND",
@@ -2031,7 +1937,7 @@
         "blockers": [
           "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
         ],
-        "recorded_at": "2026-11-12T09:14:12.585984+00:00",
+        "recorded_at": "2026-11-12T09:19:01.799839+00:00",
         "immutable": true
       },
       "entry_zone_history": {
@@ -2114,7 +2020,7 @@
       },
       "buy_gate_diagnostics": {
         "ticker": "QCOM",
-        "scan_id": "2026-11-12T09:14:12.172875+00:00",
+        "scan_id": "2026-11-12T09:19:01.168244+00:00",
         "gates": {
           "investment_ranking": {
             "status": "ND",
@@ -2160,7 +2066,7 @@
         "blockers": [
           "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
         ],
-        "recorded_at": "2026-11-12T09:14:12.611968+00:00",
+        "recorded_at": "2026-11-12T09:19:01.843869+00:00",
         "immutable": true
       },
       "entry_zone_history": {
@@ -2211,7 +2117,7 @@
       },
       "buy_gate_diagnostics": {
         "ticker": "SIEGY",
-        "scan_id": "2026-11-12T09:14:12.172875+00:00",
+        "scan_id": "2026-11-12T09:19:01.168244+00:00",
         "gates": {
           "investment_ranking": {
             "status": "ND",
@@ -2257,7 +2163,7 @@
         "blockers": [
           "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
         ],
-        "recorded_at": "2026-11-12T09:14:12.637760+00:00",
+        "recorded_at": "2026-11-12T09:19:01.888470+00:00",
         "immutable": true
       },
       "entry_zone_history": {
@@ -2291,7 +2197,7 @@
       },
       "buy_gate_diagnostics": {
         "ticker": "ABB",
-        "scan_id": "2026-11-12T09:14:12.172875+00:00",
+        "scan_id": "2026-11-12T09:19:01.168244+00:00",
         "gates": {
           "investment_ranking": {
             "status": "ND",
@@ -2337,7 +2243,7 @@
         "blockers": [
           "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
         ],
-        "recorded_at": "2026-11-12T09:14:12.663689+00:00",
+        "recorded_at": "2026-11-12T09:19:01.933727+00:00",
         "immutable": true
       },
       "entry_zone_history": {
@@ -2388,7 +2294,7 @@
         "is_live": false,
         "low_usd": 4.76,
         "high_usd": 5.07,
-        "checked_at": "2026-11-12T09:01:33.220434+00:00"
+        "checked_at": "2026-11-12T09:18:48.226426+00:00"
       },
       "valuation": {
         "status": "partial",
@@ -2396,14 +2302,14 @@
         "market_cap_usd": 3803227579,
         "ps": 12677.43,
         "pe": null,
-        "fcf_yield_pct": -13.45,
+        "fcf_yield_pct": null,
         "share_date": "2026-11-04",
         "price_date": "2026-11-11",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
       },
       "buy_gate_diagnostics": {
         "ticker": "ACHR",
-        "scan_id": "2026-11-12T09:14:12.172875+00:00",
+        "scan_id": "2026-11-12T09:19:01.168244+00:00",
         "gates": {
           "investment_ranking": {
             "status": "ND",
@@ -2449,7 +2355,7 @@
         "blockers": [
           "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
         ],
-        "recorded_at": "2026-11-12T09:14:12.689742+00:00",
+        "recorded_at": "2026-11-12T09:19:01.978301+00:00",
         "immutable": true
       },
       "entry_zone_history": {
@@ -2500,7 +2406,7 @@
         "is_live": false,
         "low_usd": 11.9,
         "high_usd": 12.29,
-        "checked_at": "2026-11-12T09:01:33.662345+00:00"
+        "checked_at": "2026-11-12T09:18:48.941993+00:00"
       },
       "valuation": {
         "status": "unavailable",
@@ -2515,7 +2421,7 @@
       },
       "buy_gate_diagnostics": {
         "ticker": "AI",
-        "scan_id": "2026-11-12T09:14:12.172875+00:00",
+        "scan_id": "2026-11-12T09:19:01.168244+00:00",
         "gates": {
           "investment_ranking": {
             "status": "ND",
@@ -2561,7 +2467,7 @@
         "blockers": [
           "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
         ],
-        "recorded_at": "2026-11-12T09:14:12.715697+00:00",
+        "recorded_at": "2026-11-12T09:19:02.022777+00:00",
         "immutable": true
       },
       "entry_zone_history": {
@@ -2612,7 +2518,7 @@
         "is_live": false,
         "low_usd": 222.925,
         "high_usd": 237.762,
-        "checked_at": "2026-11-12T09:01:34.224736+00:00"
+        "checked_at": "2026-11-12T09:18:49.655451+00:00"
       },
       "valuation": {
         "status": "partial",
@@ -2620,14 +2526,14 @@
         "market_cap_usd": 40358928938,
         "ps": 47.34,
         "pe": 184.17,
-        "fcf_yield_pct": 0.7,
+        "fcf_yield_pct": null,
         "share_date": "2026-10-31",
         "price_date": "2026-11-11",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
       },
       "buy_gate_diagnostics": {
         "ticker": "ALAB",
-        "scan_id": "2026-11-12T09:14:12.172875+00:00",
+        "scan_id": "2026-11-12T09:19:01.168244+00:00",
         "gates": {
           "investment_ranking": {
             "status": "ND",
@@ -2673,7 +2579,7 @@
         "blockers": [
           "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
         ],
-        "recorded_at": "2026-11-12T09:14:12.741850+00:00",
+        "recorded_at": "2026-11-12T09:19:02.067471+00:00",
         "immutable": true
       },
       "entry_zone_history": {
@@ -2724,7 +2630,7 @@
         "is_live": false,
         "low_usd": 381.75,
         "high_usd": 404.71,
-        "checked_at": "2026-11-12T09:01:34.811498+00:00"
+        "checked_at": "2026-11-12T09:18:50.357617+00:00"
       },
       "valuation": {
         "status": "partial",
@@ -2732,14 +2638,14 @@
         "market_cap_usd": 313534477780,
         "ps": 11.05,
         "pe": 44.8,
-        "fcf_yield_pct": 1.82,
+        "fcf_yield_pct": null,
         "share_date": "2026-07-26",
         "price_date": "2026-11-11",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
       },
       "buy_gate_diagnostics": {
         "ticker": "AMAT",
-        "scan_id": "2026-11-12T09:14:12.172875+00:00",
+        "scan_id": "2026-11-12T09:19:01.168244+00:00",
         "gates": {
           "investment_ranking": {
             "status": "ND",
@@ -2785,7 +2691,7 @@
         "blockers": [
           "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
         ],
-        "recorded_at": "2026-11-12T09:14:12.769877+00:00",
+        "recorded_at": "2026-11-12T09:19:02.111940+00:00",
         "immutable": true
       },
       "entry_zone_history": {
@@ -2836,7 +2742,7 @@
         "is_live": false,
         "low_usd": 522.65,
         "high_usd": 567.65,
-        "checked_at": "2026-11-12T09:06:33.005461+00:00"
+        "checked_at": "2026-11-12T09:18:51.134021+00:00"
       },
       "valuation": {
         "status": "partial",
@@ -2844,14 +2750,14 @@
         "market_cap_usd": 906804241078,
         "ps": 26.18,
         "pe": 209.18,
-        "fcf_yield_pct": 0.74,
+        "fcf_yield_pct": null,
         "share_date": "2026-10-28",
         "price_date": "2026-11-11",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
       },
       "buy_gate_diagnostics": {
         "ticker": "AMD",
-        "scan_id": "2026-11-12T09:14:12.172875+00:00",
+        "scan_id": "2026-11-12T09:19:01.168244+00:00",
         "gates": {
           "investment_ranking": {
             "status": "ND",
@@ -2897,7 +2803,119 @@
         "blockers": [
           "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
         ],
-        "recorded_at": "2026-11-12T09:14:12.800078+00:00",
+        "recorded_at": "2026-11-12T09:19:02.156549+00:00",
+        "immutable": true
+      },
+      "entry_zone_history": {
+        "levels": [],
+        "events": [],
+        "historical_imports": []
+      }
+    },
+    {
+      "ticker": "ANET",
+      "name": "Arista Networks",
+      "sector": "AI networking",
+      "mentions": 0,
+      "news": [],
+      "status": "Obserwacja",
+      "attention_score": 0,
+      "valuation_status": "Orientacyjna kapitalizacja i mnożniki roczne — nie ranking zakupu",
+      "investment_score": null,
+      "fundamentals": {
+        "source": "SEC EDGAR XBRL",
+        "fiscal_year": "2025",
+        "revenue_usd": 9005700000,
+        "net_income_usd": 3511400000,
+        "revenue_growth_pct": 28.6,
+        "net_margin_pct": 39.0,
+        "operating_cash_flow_usd": 4371900000,
+        "free_cash_flow_usd": 4356149000,
+        "cash_usd": 1963900000,
+        "debt_usd": 98793000,
+        "financial_health_score": 100,
+        "score_label": "Prosty filtr 4 warunków, nie rekomendacja",
+        "shares_outstanding": 1263402335,
+        "shares_as_of": "2026-10-29",
+        "revenue_period_end": "2025-12-31",
+        "net_income_period_end": "2025-12-31",
+        "cash_flow_period_end": "2025-12-31",
+        "capex_period_end": "2019-12-31",
+        "as_of": "2026-11-12T09:06:26.732058+00:00",
+        "source_url": "https://www.sec.gov/edgar/browse/?CIK=1596532"
+      },
+      "price": {
+        "close_usd": 196.68,
+        "date": "2026-11-11",
+        "age_days": 1,
+        "currency": "USD",
+        "source": "Yahoo Finance chart EOD",
+        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/ANET?interval=1d&range=15d",
+        "is_live": false,
+        "low_usd": 193.88,
+        "high_usd": 199.46,
+        "checked_at": "2026-11-12T09:18:52.635524+00:00"
+      },
+      "valuation": {
+        "status": "partial",
+        "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
+        "market_cap_usd": 248485971248,
+        "ps": 27.59,
+        "pe": 70.77,
+        "fcf_yield_pct": null,
+        "share_date": "2026-10-29",
+        "price_date": "2026-11-11",
+        "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
+      },
+      "buy_gate_diagnostics": {
+        "ticker": "ANET",
+        "scan_id": "2026-11-12T09:19:01.168244+00:00",
+        "gates": {
+          "investment_ranking": {
+            "status": "ND",
+            "value": null,
+            "required": "validated Balanced 1.3 ranking"
+          },
+          "fundamental_score": {
+            "status": "ND",
+            "value": null,
+            "required": "normalized financials and valuation"
+          },
+          "entry_score": {
+            "status": "ND",
+            "value": null,
+            "required": "technical entry model with OHLCV"
+          },
+          "base_upside": {
+            "status": "ND",
+            "value": null,
+            "required": "probability-weighted Bear/Base/Bull valuation"
+          },
+          "risk_reward": {
+            "status": "ND",
+            "value": null,
+            "required": "validated entry, stop-loss and target"
+          },
+          "data_quality": {
+            "status": "ND",
+            "value": null,
+            "required": "period-consistent fundamentals and fresh quotes"
+          },
+          "analyst_consensus": {
+            "status": "ND",
+            "value": null,
+            "required": "timestamped analyst target history"
+          },
+          "veto_check": {
+            "status": "ND",
+            "value": null,
+            "required": "complete risk and corporate-event review"
+          }
+        },
+        "blockers": [
+          "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
+        ],
+        "recorded_at": "2026-11-12T09:19:02.201020+00:00",
         "immutable": true
       },
       "entry_zone_history": {
@@ -2967,7 +2985,7 @@
         "is_live": false,
         "low_usd": 79.19,
         "high_usd": 83.99,
-        "checked_at": "2026-11-12T09:06:35.237629+00:00"
+        "checked_at": "2026-11-12T09:18:53.238546+00:00"
       },
       "valuation": {
         "status": "partial",
@@ -2982,7 +3000,7 @@
       },
       "buy_gate_diagnostics": {
         "ticker": "APH",
-        "scan_id": "2026-11-12T09:14:12.172875+00:00",
+        "scan_id": "2026-11-12T09:19:01.168244+00:00",
         "gates": {
           "investment_ranking": {
             "status": "ND",
@@ -3028,7 +3046,7 @@
         "blockers": [
           "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
         ],
-        "recorded_at": "2026-11-12T09:14:12.833195+00:00",
+        "recorded_at": "2026-11-12T09:19:02.245974+00:00",
         "immutable": true
       },
       "entry_zone_history": {
@@ -3059,14 +3077,33 @@
         "cash_usd": 2751000000,
         "debt_usd": null,
         "financial_health_score": 100,
-        "score_label": "Prosty filtr 4 warunków, nie rekomendacja",
+        "score_label": "Prosty filtr 4 warunków, tylko zgodne okresy; nie rekomendacja",
         "shares_outstanding": 1064055252,
         "shares_as_of": "2026-03-31",
         "revenue_period_end": "2026-03-31",
         "net_income_period_end": "2026-03-31",
+        "net_income_period_start": "2025-04-01",
+        "revenue_period_start": "2025-04-01",
         "cash_flow_period_end": "2026-03-31",
+        "cash_flow_period_start": "2025-04-01",
         "capex_period_end": "2026-03-31",
-        "as_of": "2026-11-12T08:56:48.502602+00:00",
+        "capex_period_start": "2025-04-01",
+        "period_alignment": {
+          "revenue_net_income_common_period": {
+            "start": "2025-04-01",
+            "end": "2026-03-31"
+          },
+          "cashflow_capex_common_period": {
+            "start": "2025-04-01",
+            "end": "2026-03-31"
+          },
+          "revenue_net_income_match_latest": true,
+          "cashflow_capex_match_latest": true,
+          "status": "aligned"
+        },
+        "period_mismatch_flags": [],
+        "financial_health_score_available": true,
+        "as_of": "2026-11-12T09:18:36.083252+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1973239"
       },
       "price": {
@@ -3079,7 +3116,7 @@
         "is_live": false,
         "low_usd": 188.425,
         "high_usd": 207.44,
-        "checked_at": "2026-11-12T09:06:36.021934+00:00"
+        "checked_at": "2026-11-12T09:18:53.969386+00:00"
       },
       "valuation": {
         "status": "unavailable",
@@ -3094,7 +3131,7 @@
       },
       "buy_gate_diagnostics": {
         "ticker": "ARM",
-        "scan_id": "2026-11-12T09:14:12.172875+00:00",
+        "scan_id": "2026-11-12T09:19:01.168244+00:00",
         "gates": {
           "investment_ranking": {
             "status": "ND",
@@ -3140,7 +3177,7 @@
         "blockers": [
           "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
         ],
-        "recorded_at": "2026-11-12T09:14:12.859514+00:00",
+        "recorded_at": "2026-11-12T09:19:02.291123+00:00",
         "immutable": true
       },
       "entry_zone_history": {
@@ -3171,14 +3208,32 @@
         "cash_usd": null,
         "debt_usd": null,
         "financial_health_score": null,
-        "score_label": "Prosty filtr 4 warunków, nie rekomendacja",
+        "score_label": "Prosty filtr 4 warunków, tylko zgodne okresy; nie rekomendacja",
         "shares_outstanding": 385417665,
         "shares_as_of": "2025-12-31",
         "revenue_period_end": null,
         "net_income_period_end": null,
+        "net_income_period_start": null,
+        "revenue_period_start": null,
         "cash_flow_period_end": null,
+        "cash_flow_period_start": null,
         "capex_period_end": null,
-        "as_of": "2026-11-12T08:56:48.953498+00:00",
+        "capex_period_start": null,
+        "period_alignment": {
+          "revenue_net_income_common_period": null,
+          "cashflow_capex_common_period": null,
+          "revenue_net_income_match_latest": false,
+          "cashflow_capex_match_latest": false,
+          "status": "partial_or_mismatched"
+        },
+        "period_mismatch_flags": [
+          "revenue",
+          "net_income",
+          "operating_cash_flow",
+          "capex"
+        ],
+        "financial_health_score_available": false,
+        "as_of": "2026-11-12T09:18:36.609640+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=937966"
       },
       "price": {
@@ -3191,7 +3246,7 @@
         "is_live": false,
         "low_usd": 1517.11,
         "high_usd": 1563.46,
-        "checked_at": "2026-11-12T09:06:36.658234+00:00"
+        "checked_at": "2026-11-12T09:18:54.667988+00:00"
       },
       "valuation": {
         "status": "unavailable",
@@ -3206,7 +3261,7 @@
       },
       "buy_gate_diagnostics": {
         "ticker": "ASML",
-        "scan_id": "2026-11-12T09:14:12.172875+00:00",
+        "scan_id": "2026-11-12T09:19:01.168244+00:00",
         "gates": {
           "investment_ranking": {
             "status": "ND",
@@ -3252,7 +3307,7 @@
         "blockers": [
           "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
         ],
-        "recorded_at": "2026-11-12T09:14:12.886432+00:00",
+        "recorded_at": "2026-11-12T09:19:02.339555+00:00",
         "immutable": true
       },
       "entry_zone_history": {
@@ -3283,14 +3338,33 @@
         "cash_usd": 279783000,
         "debt_usd": 50504000,
         "financial_health_score": 50,
-        "score_label": "Prosty filtr 4 warunków, nie rekomendacja",
+        "score_label": "Prosty filtr 4 warunków, tylko zgodne okresy; nie rekomendacja",
         "shares_outstanding": 43808393,
         "shares_as_of": "2026-08-03",
         "revenue_period_end": "2025-09-30",
         "net_income_period_end": "2025-09-30",
+        "net_income_period_start": "2024-10-01",
+        "revenue_period_start": "2024-10-01",
         "cash_flow_period_end": "2025-09-30",
+        "cash_flow_period_start": "2024-10-01",
         "capex_period_end": "2025-09-30",
-        "as_of": "2026-11-12T08:56:49.425762+00:00",
+        "capex_period_start": "2024-10-01",
+        "period_alignment": {
+          "revenue_net_income_common_period": {
+            "start": "2024-10-01",
+            "end": "2025-09-30"
+          },
+          "cashflow_capex_common_period": {
+            "start": "2024-10-01",
+            "end": "2025-09-30"
+          },
+          "revenue_net_income_match_latest": true,
+          "cashflow_capex_match_latest": true,
+          "status": "aligned"
+        },
+        "period_mismatch_flags": [],
+        "financial_health_score_available": true,
+        "as_of": "2026-11-12T09:18:37.315998+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=933974"
       },
       "price": {
@@ -3303,7 +3377,7 @@
         "is_live": false,
         "low_usd": 43.67,
         "high_usd": 50.06,
-        "checked_at": "2026-11-12T09:06:37.286696+00:00"
+        "checked_at": "2026-11-12T09:18:55.258191+00:00"
       },
       "valuation": {
         "status": "partial",
@@ -3318,7 +3392,7 @@
       },
       "buy_gate_diagnostics": {
         "ticker": "AZTA",
-        "scan_id": "2026-11-12T09:14:12.172875+00:00",
+        "scan_id": "2026-11-12T09:19:01.168244+00:00",
         "gates": {
           "investment_ranking": {
             "status": "ND",
@@ -3364,7 +3438,7 @@
         "blockers": [
           "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
         ],
-        "recorded_at": "2026-11-12T09:14:12.913382+00:00",
+        "recorded_at": "2026-11-12T09:19:02.385464+00:00",
         "immutable": true
       },
       "entry_zone_history": {
@@ -3415,7 +3489,7 @@
         "is_live": false,
         "low_usd": 2.29,
         "high_usd": 2.41,
-        "checked_at": "2026-11-12T09:06:38.138416+00:00"
+        "checked_at": "2026-11-12T09:18:55.794913+00:00"
       },
       "valuation": {
         "status": "partial",
@@ -3423,14 +3497,14 @@
         "market_cap_usd": 1107199201,
         "ps": 8.67,
         "pe": null,
-        "fcf_yield_pct": -3.84,
+        "fcf_yield_pct": null,
         "share_date": "2026-10-23",
         "price_date": "2026-11-11",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
       },
       "buy_gate_diagnostics": {
         "ticker": "BBAI",
-        "scan_id": "2026-11-12T09:14:12.172875+00:00",
+        "scan_id": "2026-11-12T09:19:01.168244+00:00",
         "gates": {
           "investment_ranking": {
             "status": "ND",
@@ -3476,7 +3550,7 @@
         "blockers": [
           "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
         ],
-        "recorded_at": "2026-11-12T09:14:12.939881+00:00",
+        "recorded_at": "2026-11-12T09:19:02.430340+00:00",
         "immutable": true
       },
       "entry_zone_history": {
@@ -3507,14 +3581,33 @@
         "cash_usd": 262925000,
         "debt_usd": null,
         "financial_health_score": 75,
-        "score_label": "Prosty filtr 4 warunków, nie rekomendacja",
+        "score_label": "Prosty filtr 4 warunków, tylko zgodne okresy; nie rekomendacja",
         "shares_outstanding": 168378060,
         "shares_as_of": "2026-11-01",
         "revenue_period_end": "2025-12-31",
         "net_income_period_end": "2025-12-31",
+        "net_income_period_start": "2025-01-01",
+        "revenue_period_start": "2025-01-01",
         "cash_flow_period_end": "2025-12-31",
+        "cash_flow_period_start": "2025-01-01",
         "capex_period_end": "2025-12-31",
-        "as_of": "2026-11-12T08:56:49.890969+00:00",
+        "capex_period_start": "2025-01-01",
+        "period_alignment": {
+          "revenue_net_income_common_period": {
+            "start": "2025-01-01",
+            "end": "2025-12-31"
+          },
+          "cashflow_capex_common_period": {
+            "start": "2025-01-01",
+            "end": "2025-12-31"
+          },
+          "revenue_net_income_match_latest": true,
+          "cashflow_capex_match_latest": true,
+          "status": "aligned"
+        },
+        "period_mismatch_flags": [],
+        "financial_health_score_available": true,
+        "as_of": "2026-11-12T09:18:38.189447+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=851205"
       },
       "price": {
@@ -3527,7 +3620,7 @@
         "is_live": false,
         "low_usd": 51.54,
         "high_usd": 53.85,
-        "checked_at": "2026-11-12T09:06:38.804806+00:00"
+        "checked_at": "2026-11-12T09:18:56.388367+00:00"
       },
       "valuation": {
         "status": "partial",
@@ -3542,7 +3635,7 @@
       },
       "buy_gate_diagnostics": {
         "ticker": "CGNX",
-        "scan_id": "2026-11-12T09:14:12.172875+00:00",
+        "scan_id": "2026-11-12T09:19:01.168244+00:00",
         "gates": {
           "investment_ranking": {
             "status": "ND",
@@ -3588,7 +3681,7 @@
         "blockers": [
           "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
         ],
-        "recorded_at": "2026-11-12T09:14:12.967164+00:00",
+        "recorded_at": "2026-11-12T09:19:02.475387+00:00",
         "immutable": true
       },
       "entry_zone_history": {
@@ -3639,7 +3732,7 @@
         "is_live": false,
         "low_usd": 232.69,
         "high_usd": 247.12,
-        "checked_at": "2026-11-12T09:06:39.676909+00:00"
+        "checked_at": "2026-11-12T09:18:57.120862+00:00"
       },
       "valuation": {
         "status": "partial",
@@ -3654,7 +3747,7 @@
       },
       "buy_gate_diagnostics": {
         "ticker": "CLS",
-        "scan_id": "2026-11-12T09:14:12.172875+00:00",
+        "scan_id": "2026-11-12T09:19:01.168244+00:00",
         "gates": {
           "investment_ranking": {
             "status": "ND",
@@ -3700,7 +3793,7 @@
         "blockers": [
           "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
         ],
-        "recorded_at": "2026-11-12T09:14:12.993728+00:00",
+        "recorded_at": "2026-11-12T09:19:02.520629+00:00",
         "immutable": true
       },
       "entry_zone_history": {
@@ -3731,14 +3824,33 @@
         "cash_usd": 1164952000,
         "debt_usd": null,
         "financial_health_score": 100,
-        "score_label": "Prosty filtr 4 warunków, nie rekomendacja",
+        "score_label": "Prosty filtr 4 warunków, tylko zgodne okresy; nie rekomendacja",
         "shares_outstanding": 187951918,
         "shares_as_of": "2026-08-25",
         "revenue_period_end": "2026-05-02",
         "net_income_period_end": "2026-05-02",
+        "net_income_period_start": "2025-05-04",
+        "revenue_period_start": "2025-05-04",
         "cash_flow_period_end": "2026-05-02",
+        "cash_flow_period_start": "2025-05-04",
         "capex_period_end": "2026-05-02",
-        "as_of": "2026-11-12T08:56:50.966076+00:00",
+        "capex_period_start": "2025-05-04",
+        "period_alignment": {
+          "revenue_net_income_common_period": {
+            "start": "2025-05-04",
+            "end": "2026-05-02"
+          },
+          "cashflow_capex_common_period": {
+            "start": "2025-05-04",
+            "end": "2026-05-02"
+          },
+          "revenue_net_income_match_latest": true,
+          "cashflow_capex_match_latest": true,
+          "status": "aligned"
+        },
+        "period_mismatch_flags": [],
+        "financial_health_score_available": true,
+        "as_of": "2026-11-12T09:18:39.373984+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1807794"
       },
       "price": {
@@ -3751,7 +3863,7 @@
         "is_live": false,
         "low_usd": 136.21,
         "high_usd": 148.19,
-        "checked_at": "2026-11-12T09:06:41.166397+00:00"
+        "checked_at": "2026-11-12T09:18:58.424418+00:00"
       },
       "valuation": {
         "status": "partial",
@@ -3766,7 +3878,7 @@
       },
       "buy_gate_diagnostics": {
         "ticker": "CRDO",
-        "scan_id": "2026-11-12T09:14:12.172875+00:00",
+        "scan_id": "2026-11-12T09:19:01.168244+00:00",
         "gates": {
           "investment_ranking": {
             "status": "ND",
@@ -3812,7 +3924,7 @@
         "blockers": [
           "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
         ],
-        "recorded_at": "2026-11-12T09:14:13.020627+00:00",
+        "recorded_at": "2026-11-12T09:19:02.565812+00:00",
         "immutable": true
       },
       "entry_zone_history": {
@@ -3843,14 +3955,33 @@
         "cash_usd": 19912300000,
         "debt_usd": 18456761000,
         "financial_health_score": 75,
-        "score_label": "Prosty filtr 4 warunków, nie rekomendacja",
+        "score_label": "Prosty filtr 4 warunków, tylko zgodne okresy; nie rekomendacja",
         "shares_outstanding": 703530815,
         "shares_as_of": "2026-10-15",
         "revenue_period_end": "2025-12-31",
         "net_income_period_end": "2025-12-31",
+        "net_income_period_start": "2025-01-01",
+        "revenue_period_start": "2025-01-01",
         "cash_flow_period_end": "2025-12-31",
+        "cash_flow_period_start": "2025-01-01",
         "capex_period_end": "2025-12-31",
-        "as_of": "2026-11-12T08:56:52.175631+00:00",
+        "capex_period_start": "2025-01-01",
+        "period_alignment": {
+          "revenue_net_income_common_period": {
+            "start": "2025-01-01",
+            "end": "2025-12-31"
+          },
+          "cashflow_capex_common_period": {
+            "start": "2025-01-01",
+            "end": "2025-12-31"
+          },
+          "revenue_net_income_match_latest": true,
+          "cashflow_capex_match_latest": true,
+          "status": "aligned"
+        },
+        "period_mismatch_flags": [],
+        "financial_health_score_available": true,
+        "as_of": "2026-11-12T09:18:39.955421+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=313616"
       },
       "price": {
@@ -3863,7 +3994,7 @@
         "is_live": false,
         "low_usd": 234.11,
         "high_usd": 237.95,
-        "checked_at": "2026-11-12T09:06:42.494490+00:00"
+        "checked_at": "2026-11-12T09:18:59.722998+00:00"
       },
       "valuation": {
         "status": "partial",
@@ -3878,7 +4009,7 @@
       },
       "buy_gate_diagnostics": {
         "ticker": "DHR",
-        "scan_id": "2026-11-12T09:14:12.172875+00:00",
+        "scan_id": "2026-11-12T09:19:01.168244+00:00",
         "gates": {
           "investment_ranking": {
             "status": "ND",
@@ -3924,7 +4055,7 @@
         "blockers": [
           "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
         ],
-        "recorded_at": "2026-11-12T09:14:13.047225+00:00",
+        "recorded_at": "2026-11-12T09:19:02.611294+00:00",
         "immutable": true
       },
       "entry_zone_history": {
@@ -3955,14 +4086,33 @@
         "cash_usd": 2354000000,
         "debt_usd": 8274000000,
         "financial_health_score": 75,
-        "score_label": "Prosty filtr 4 warunków, nie rekomendacja",
+        "score_label": "Prosty filtr 4 warunków, tylko zgodne okresy; nie rekomendacja",
         "shares_outstanding": 548600000,
         "shares_as_of": "2026-10-31",
         "revenue_period_end": "2026-09-30",
         "net_income_period_end": "2026-09-30",
+        "net_income_period_start": "2025-10-01",
+        "revenue_period_start": "2025-10-01",
         "cash_flow_period_end": "2026-09-30",
+        "cash_flow_period_start": "2025-10-01",
         "capex_period_end": "2026-09-30",
-        "as_of": "2026-11-12T09:01:16.248363+00:00",
+        "capex_period_start": "2025-10-01",
+        "period_alignment": {
+          "revenue_net_income_common_period": {
+            "start": "2025-10-01",
+            "end": "2026-09-30"
+          },
+          "cashflow_capex_common_period": {
+            "start": "2025-10-01",
+            "end": "2026-09-30"
+          },
+          "revenue_net_income_match_latest": true,
+          "cashflow_capex_match_latest": true,
+          "status": "aligned"
+        },
+        "period_mismatch_flags": [],
+        "financial_health_score_available": true,
+        "as_of": "2026-11-12T09:18:40.513365+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=32604"
       },
       "price": {
@@ -3975,7 +4125,7 @@
         "is_live": false,
         "low_usd": 166.97,
         "high_usd": 169.78,
-        "checked_at": "2026-11-12T09:06:43.144879+00:00"
+        "checked_at": "2026-11-12T09:19:00.324060+00:00"
       },
       "valuation": {
         "status": "partial",
@@ -3990,7 +4140,7 @@
       },
       "buy_gate_diagnostics": {
         "ticker": "EMR",
-        "scan_id": "2026-11-12T09:14:12.172875+00:00",
+        "scan_id": "2026-11-12T09:19:01.168244+00:00",
         "gates": {
           "investment_ranking": {
             "status": "ND",
@@ -4036,7 +4186,7 @@
         "blockers": [
           "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
         ],
-        "recorded_at": "2026-11-12T09:14:13.073956+00:00",
+        "recorded_at": "2026-11-12T09:19:02.656506+00:00",
         "immutable": true
       },
       "entry_zone_history": {
@@ -4067,14 +4217,33 @@
         "cash_usd": 622000000,
         "debt_usd": 9160000000,
         "financial_health_score": 75,
-        "score_label": "Prosty filtr 4 warunków, nie rekomendacja",
+        "score_label": "Prosty filtr 4 warunków, tylko zgodne okresy; nie rekomendacja",
         "shares_outstanding": 388500000,
         "shares_as_of": "2026-09-30",
         "revenue_period_end": "2025-12-31",
         "net_income_period_end": "2025-12-31",
+        "net_income_period_start": "2025-01-01",
+        "revenue_period_start": "2025-01-01",
         "cash_flow_period_end": "2025-12-31",
+        "cash_flow_period_start": "2025-01-01",
         "capex_period_end": "2025-12-31",
-        "as_of": "2026-11-12T09:01:16.699576+00:00",
+        "capex_period_start": "2025-01-01",
+        "period_alignment": {
+          "revenue_net_income_common_period": {
+            "start": "2025-01-01",
+            "end": "2025-12-31"
+          },
+          "cashflow_capex_common_period": {
+            "start": "2025-01-01",
+            "end": "2025-12-31"
+          },
+          "revenue_net_income_match_latest": true,
+          "cashflow_capex_match_latest": true,
+          "status": "aligned"
+        },
+        "period_mismatch_flags": [],
+        "financial_health_score_available": true,
+        "as_of": "2026-11-12T09:18:41.069578+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1551182"
       },
       "price": {
@@ -4087,7 +4256,7 @@
         "is_live": false,
         "low_usd": 357.24,
         "high_usd": 368.63,
-        "checked_at": "2026-11-12T09:06:43.936447+00:00"
+        "checked_at": "2026-11-12T09:19:01.067392+00:00"
       },
       "valuation": {
         "status": "partial",
@@ -4102,7 +4271,7 @@
       },
       "buy_gate_diagnostics": {
         "ticker": "ETN",
-        "scan_id": "2026-11-12T09:14:12.172875+00:00",
+        "scan_id": "2026-11-12T09:19:01.168244+00:00",
         "gates": {
           "investment_ranking": {
             "status": "ND",
@@ -4148,7 +4317,7 @@
         "blockers": [
           "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
         ],
-        "recorded_at": "2026-11-12T09:14:13.100355+00:00",
+        "recorded_at": "2026-11-12T09:19:02.701752+00:00",
         "immutable": true
       },
       "entry_zone_history": {
@@ -4193,7 +4362,7 @@
       },
       "buy_gate_diagnostics": {
         "ticker": "FANUY",
-        "scan_id": "2026-11-12T09:14:12.172875+00:00",
+        "scan_id": "2026-11-12T09:19:01.168244+00:00",
         "gates": {
           "investment_ranking": {
             "status": "ND",
@@ -4239,7 +4408,7 @@
         "blockers": [
           "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
         ],
-        "recorded_at": "2026-11-12T09:14:13.126793+00:00",
+        "recorded_at": "2026-11-12T09:19:02.747010+00:00",
         "immutable": true
       },
       "entry_zone_history": {
@@ -4265,19 +4434,37 @@
         "net_income_usd": 1596000000,
         "revenue_growth_pct": 19.1,
         "net_margin_pct": 10.2,
-        "operating_cash_flow_usd": 2695000000,
+        "operating_cash_flow_usd": null,
         "free_cash_flow_usd": null,
         "cash_usd": 1526000000,
         "debt_usd": 3485000000,
         "financial_health_score": null,
-        "score_label": "Prosty filtr 4 warunków, nie rekomendacja",
+        "score_label": "Prosty filtr 4 warunków, tylko zgodne okresy; nie rekomendacja",
         "shares_outstanding": 861401106,
         "shares_as_of": "2026-10-23",
         "revenue_period_end": "2025-12-31",
         "net_income_period_end": "2025-12-31",
-        "cash_flow_period_end": "2025-12-31",
+        "net_income_period_start": "2025-01-01",
+        "revenue_period_start": "2025-01-01",
+        "cash_flow_period_end": null,
+        "cash_flow_period_start": null,
         "capex_period_end": null,
-        "as_of": "2026-11-12T09:01:17.163971+00:00",
+        "capex_period_start": null,
+        "period_alignment": {
+          "revenue_net_income_common_period": {
+            "start": "2025-01-01",
+            "end": "2025-12-31"
+          },
+          "cashflow_capex_common_period": null,
+          "revenue_net_income_match_latest": true,
+          "cashflow_capex_match_latest": false,
+          "status": "partial_or_mismatched"
+        },
+        "period_mismatch_flags": [
+          "capex"
+        ],
+        "financial_health_score_available": false,
+        "as_of": "2026-11-12T09:18:41.736867+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=24741"
       },
       "price": {
@@ -4305,7 +4492,7 @@
       },
       "buy_gate_diagnostics": {
         "ticker": "GLW",
-        "scan_id": "2026-11-12T09:14:12.172875+00:00",
+        "scan_id": "2026-11-12T09:19:01.168244+00:00",
         "gates": {
           "investment_ranking": {
             "status": "ND",
@@ -4351,7 +4538,7 @@
         "blockers": [
           "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
         ],
-        "recorded_at": "2026-11-12T09:14:13.153331+00:00",
+        "recorded_at": "2026-11-12T09:19:02.792671+00:00",
         "immutable": true
       },
       "entry_zone_history": {
@@ -4382,14 +4569,33 @@
         "cash_usd": 12487000000,
         "debt_usd": 30592000000,
         "financial_health_score": 75,
-        "score_label": "Prosty filtr 4 warunków, nie rekomendacja",
+        "score_label": "Prosty filtr 4 warunków, tylko zgodne okresy; nie rekomendacja",
         "shares_outstanding": 317358518,
         "shares_as_of": "2026-09-30",
         "revenue_period_end": "2025-12-31",
         "net_income_period_end": "2025-12-31",
+        "net_income_period_start": "2025-01-01",
+        "revenue_period_start": "2025-01-01",
         "cash_flow_period_end": "2025-12-31",
+        "cash_flow_period_start": "2025-01-01",
         "capex_period_end": "2025-12-31",
-        "as_of": "2026-11-12T09:01:17.648020+00:00",
+        "capex_period_start": "2025-01-01",
+        "period_alignment": {
+          "revenue_net_income_common_period": {
+            "start": "2025-01-01",
+            "end": "2025-12-31"
+          },
+          "cashflow_capex_common_period": {
+            "start": "2025-01-01",
+            "end": "2025-12-31"
+          },
+          "revenue_net_income_match_latest": true,
+          "cashflow_capex_match_latest": true,
+          "status": "aligned"
+        },
+        "period_mismatch_flags": [],
+        "financial_health_score_available": true,
+        "as_of": "2026-11-12T09:18:42.703857+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=773840"
       },
       "price": {
@@ -4417,7 +4623,7 @@
       },
       "buy_gate_diagnostics": {
         "ticker": "HON",
-        "scan_id": "2026-11-12T09:14:12.172875+00:00",
+        "scan_id": "2026-11-12T09:19:01.168244+00:00",
         "gates": {
           "investment_ranking": {
             "status": "ND",
@@ -4463,7 +4669,7 @@
         "blockers": [
           "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
         ],
-        "recorded_at": "2026-11-12T09:14:13.180329+00:00",
+        "recorded_at": "2026-11-12T09:19:02.837754+00:00",
         "immutable": true
       },
       "entry_zone_history": {
@@ -4489,19 +4695,37 @@
         "net_income_usd": 887100000,
         "revenue_growth_pct": 3.8,
         "net_margin_pct": 15.2,
-        "operating_cash_flow_usd": 1029800000,
+        "operating_cash_flow_usd": null,
         "free_cash_flow_usd": null,
         "cash_usd": 482500000,
         "debt_usd": 2051300000,
         "financial_health_score": null,
-        "score_label": "Prosty filtr 4 warunków, nie rekomendacja",
+        "score_label": "Prosty filtr 4 warunków, tylko zgodne okresy; nie rekomendacja",
         "shares_outstanding": 52835035,
         "shares_as_of": "2026-10-22",
         "revenue_period_end": "2025-12-31",
         "net_income_period_end": "2025-12-31",
-        "cash_flow_period_end": "2025-12-31",
+        "net_income_period_start": "2025-01-01",
+        "revenue_period_start": "2025-01-01",
+        "cash_flow_period_end": null,
+        "cash_flow_period_start": null,
         "capex_period_end": null,
-        "as_of": "2026-11-12T09:01:18.123249+00:00",
+        "capex_period_start": null,
+        "period_alignment": {
+          "revenue_net_income_common_period": {
+            "start": "2025-01-01",
+            "end": "2025-12-31"
+          },
+          "cashflow_capex_common_period": null,
+          "revenue_net_income_match_latest": true,
+          "cashflow_capex_match_latest": false,
+          "status": "partial_or_mismatched"
+        },
+        "period_mismatch_flags": [
+          "capex"
+        ],
+        "financial_health_score_available": false,
+        "as_of": "2026-11-12T09:18:43.647239+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=48898"
       },
       "price": {
@@ -4529,7 +4753,7 @@
       },
       "buy_gate_diagnostics": {
         "ticker": "HUBB",
-        "scan_id": "2026-11-12T09:14:12.172875+00:00",
+        "scan_id": "2026-11-12T09:19:01.168244+00:00",
         "gates": {
           "investment_ranking": {
             "status": "ND",
@@ -4575,7 +4799,7 @@
         "blockers": [
           "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
         ],
-        "recorded_at": "2026-11-12T09:14:13.207557+00:00",
+        "recorded_at": "2026-11-12T09:19:02.883011+00:00",
         "immutable": true
       },
       "entry_zone_history": {
@@ -4609,7 +4833,7 @@
       },
       "buy_gate_diagnostics": {
         "ticker": "IRBT",
-        "scan_id": "2026-11-12T09:14:12.172875+00:00",
+        "scan_id": "2026-11-12T09:19:01.168244+00:00",
         "gates": {
           "investment_ranking": {
             "status": "ND",
@@ -4655,7 +4879,7 @@
         "blockers": [
           "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
         ],
-        "recorded_at": "2026-11-12T09:14:13.234754+00:00",
+        "recorded_at": "2026-11-12T09:19:02.929269+00:00",
         "immutable": true
       },
       "entry_zone_history": {
@@ -4681,19 +4905,37 @@
         "net_income_usd": 2856000000,
         "revenue_growth_pct": 20.5,
         "net_margin_pct": 28.4,
-        "operating_cash_flow_usd": 3030500000,
+        "operating_cash_flow_usd": null,
         "free_cash_flow_usd": null,
         "cash_usd": 3368000000,
         "debt_usd": null,
         "financial_health_score": null,
-        "score_label": "Prosty filtr 4 warunków, nie rekomendacja",
+        "score_label": "Prosty filtr 4 warunków, tylko zgodne okresy; nie rekomendacja",
         "shares_outstanding": 346643718,
         "shares_as_of": "2026-10-15",
         "revenue_period_end": "2025-12-31",
         "net_income_period_end": "2025-12-31",
-        "cash_flow_period_end": "2025-12-31",
+        "net_income_period_start": "2025-01-01",
+        "revenue_period_start": "2025-01-01",
+        "cash_flow_period_end": null,
+        "cash_flow_period_start": null,
         "capex_period_end": null,
-        "as_of": "2026-11-12T09:01:18.663945+00:00",
+        "capex_period_start": null,
+        "period_alignment": {
+          "revenue_net_income_common_period": {
+            "start": "2025-01-01",
+            "end": "2025-12-31"
+          },
+          "cashflow_capex_common_period": null,
+          "revenue_net_income_match_latest": true,
+          "cashflow_capex_match_latest": false,
+          "status": "partial_or_mismatched"
+        },
+        "period_mismatch_flags": [
+          "capex"
+        ],
+        "financial_health_score_available": false,
+        "as_of": "2026-11-12T09:18:44.243186+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1035267"
       },
       "price": {
@@ -4721,7 +4963,7 @@
       },
       "buy_gate_diagnostics": {
         "ticker": "ISRG",
-        "scan_id": "2026-11-12T09:14:12.172875+00:00",
+        "scan_id": "2026-11-12T09:19:01.168244+00:00",
         "gates": {
           "investment_ranking": {
             "status": "ND",
@@ -4767,7 +5009,7 @@
         "blockers": [
           "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
         ],
-        "recorded_at": "2026-11-12T09:14:13.263582+00:00",
+        "recorded_at": "2026-11-12T09:19:02.974941+00:00",
         "immutable": true
       },
       "entry_zone_history": {
@@ -4826,14 +5068,14 @@
         "market_cap_usd": 26659060538,
         "ps": 0.74,
         "pe": 25.58,
-        "fcf_yield_pct": 5.15,
+        "fcf_yield_pct": null,
         "share_date": "2026-10-20",
         "price_date": "2026-11-11",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
       },
       "buy_gate_diagnostics": {
         "ticker": "JBL",
-        "scan_id": "2026-11-12T09:14:12.172875+00:00",
+        "scan_id": "2026-11-12T09:19:01.168244+00:00",
         "gates": {
           "investment_ranking": {
             "status": "ND",
@@ -4879,7 +5121,7 @@
         "blockers": [
           "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
         ],
-        "recorded_at": "2026-11-12T09:14:13.290781+00:00",
+        "recorded_at": "2026-11-12T09:19:03.020446+00:00",
         "immutable": true
       },
       "entry_zone_history": {
@@ -4938,14 +5180,14 @@
         "market_cap_usd": 5977856483,
         "ps": 111.89,
         "pe": null,
-        "fcf_yield_pct": -9.43,
+        "fcf_yield_pct": null,
         "share_date": "2026-11-02",
         "price_date": "2026-11-11",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
       },
       "buy_gate_diagnostics": {
         "ticker": "JOBY",
-        "scan_id": "2026-11-12T09:14:12.172875+00:00",
+        "scan_id": "2026-11-12T09:19:01.168244+00:00",
         "gates": {
           "investment_ranking": {
             "status": "ND",
@@ -4991,7 +5233,7 @@
         "blockers": [
           "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
         ],
-        "recorded_at": "2026-11-12T09:14:13.317258+00:00",
+        "recorded_at": "2026-11-12T09:19:03.065720+00:00",
         "immutable": true
       },
       "entry_zone_history": {
@@ -5050,14 +5292,14 @@
         "market_cap_usd": 209789981659,
         "ps": 15.45,
         "pe": 43.43,
-        "fcf_yield_pct": 1.8,
+        "fcf_yield_pct": null,
         "share_date": "2026-10-26",
         "price_date": "2026-11-11",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
       },
       "buy_gate_diagnostics": {
         "ticker": "KLAC",
-        "scan_id": "2026-11-12T09:14:12.172875+00:00",
+        "scan_id": "2026-11-12T09:19:01.168244+00:00",
         "gates": {
           "investment_ranking": {
             "status": "ND",
@@ -5103,7 +5345,7 @@
         "blockers": [
           "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
         ],
-        "recorded_at": "2026-11-12T09:14:13.454898+00:00",
+        "recorded_at": "2026-11-12T09:19:03.111265+00:00",
         "immutable": true
       },
       "entry_zone_history": {
@@ -5169,7 +5411,7 @@
       },
       "buy_gate_diagnostics": {
         "ticker": "KTOS",
-        "scan_id": "2026-11-12T09:14:12.172875+00:00",
+        "scan_id": "2026-11-12T09:19:01.168244+00:00",
         "gates": {
           "investment_ranking": {
             "status": "ND",
@@ -5215,7 +5457,7 @@
         "blockers": [
           "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
         ],
-        "recorded_at": "2026-11-12T09:14:13.484082+00:00",
+        "recorded_at": "2026-11-12T09:19:03.157063+00:00",
         "immutable": true
       },
       "entry_zone_history": {
@@ -5249,7 +5491,7 @@
       },
       "buy_gate_diagnostics": {
         "ticker": "KUKAF",
-        "scan_id": "2026-11-12T09:14:12.172875+00:00",
+        "scan_id": "2026-11-12T09:19:01.168244+00:00",
         "gates": {
           "investment_ranking": {
             "status": "ND",
@@ -5295,7 +5537,7 @@
         "blockers": [
           "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
         ],
-        "recorded_at": "2026-11-12T09:14:13.511180+00:00",
+        "recorded_at": "2026-11-12T09:19:03.203139+00:00",
         "immutable": true
       },
       "entry_zone_history": {
@@ -5340,7 +5582,7 @@
       },
       "buy_gate_diagnostics": {
         "ticker": "LAZR",
-        "scan_id": "2026-11-12T09:14:12.172875+00:00",
+        "scan_id": "2026-11-12T09:19:01.168244+00:00",
         "gates": {
           "investment_ranking": {
             "status": "ND",
@@ -5386,7 +5628,7 @@
         "blockers": [
           "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
         ],
-        "recorded_at": "2026-11-12T09:14:13.538136+00:00",
+        "recorded_at": "2026-11-12T09:19:03.249599+00:00",
         "immutable": true
       },
       "entry_zone_history": {
@@ -5452,7 +5694,7 @@
       },
       "buy_gate_diagnostics": {
         "ticker": "LRCX",
-        "scan_id": "2026-11-12T09:14:12.172875+00:00",
+        "scan_id": "2026-11-12T09:19:01.168244+00:00",
         "gates": {
           "investment_ranking": {
             "status": "ND",
@@ -5498,7 +5740,7 @@
         "blockers": [
           "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
         ],
-        "recorded_at": "2026-11-12T09:14:13.566052+00:00",
+        "recorded_at": "2026-11-12T09:19:03.295591+00:00",
         "immutable": true
       },
       "entry_zone_history": {
@@ -5557,14 +5799,14 @@
         "market_cap_usd": 1458894218,
         "ps": 0.77,
         "pe": null,
-        "fcf_yield_pct": 35.85,
+        "fcf_yield_pct": null,
         "share_date": "2026-10-21",
         "price_date": "2026-11-11",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
       },
       "buy_gate_diagnostics": {
         "ticker": "MBLY",
-        "scan_id": "2026-11-12T09:14:12.172875+00:00",
+        "scan_id": "2026-11-12T09:19:01.168244+00:00",
         "gates": {
           "investment_ranking": {
             "status": "ND",
@@ -5610,7 +5852,7 @@
         "blockers": [
           "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
         ],
-        "recorded_at": "2026-11-12T09:14:13.594220+00:00",
+        "recorded_at": "2026-11-12T09:19:03.341422+00:00",
         "immutable": true
       },
       "entry_zone_history": {
@@ -5667,7 +5909,7 @@
         },
         "period_mismatch_flags": [],
         "financial_health_score_available": true,
-        "as_of": "2026-11-12T09:13:50.347189+00:00",
+        "as_of": "2026-11-12T09:18:34.116937+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1326801"
       },
       "price": {
@@ -5695,7 +5937,7 @@
       },
       "buy_gate_diagnostics": {
         "ticker": "META",
-        "scan_id": "2026-11-12T09:14:12.172875+00:00",
+        "scan_id": "2026-11-12T09:19:01.168244+00:00",
         "gates": {
           "investment_ranking": {
             "status": "ND",
@@ -5741,7 +5983,7 @@
         "blockers": [
           "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
         ],
-        "recorded_at": "2026-11-12T09:14:13.622240+00:00",
+        "recorded_at": "2026-11-12T09:19:03.387641+00:00",
         "immutable": true
       },
       "entry_zone_history": {
@@ -5800,14 +6042,14 @@
         "market_cap_usd": 72112749043,
         "ps": 25.84,
         "pe": 116.03,
-        "fcf_yield_pct": 0.92,
+        "fcf_yield_pct": null,
         "share_date": "2026-10-27",
         "price_date": "2026-11-11",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
       },
       "buy_gate_diagnostics": {
         "ticker": "MPWR",
-        "scan_id": "2026-11-12T09:14:12.172875+00:00",
+        "scan_id": "2026-11-12T09:19:01.168244+00:00",
         "gates": {
           "investment_ranking": {
             "status": "ND",
@@ -5853,7 +6095,7 @@
         "blockers": [
           "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
         ],
-        "recorded_at": "2026-11-12T09:14:13.650145+00:00",
+        "recorded_at": "2026-11-12T09:19:03.433496+00:00",
         "immutable": true
       },
       "entry_zone_history": {
@@ -5921,14 +6163,14 @@
         "market_cap_usd": 148020720000,
         "ps": 18.06,
         "pe": 55.44,
-        "fcf_yield_pct": 0.94,
+        "fcf_yield_pct": null,
         "share_date": "2026-08-21",
         "price_date": "2026-11-11",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
       },
       "buy_gate_diagnostics": {
         "ticker": "MRVL",
-        "scan_id": "2026-11-12T09:14:12.172875+00:00",
+        "scan_id": "2026-11-12T09:19:01.168244+00:00",
         "gates": {
           "investment_ranking": {
             "status": "ND",
@@ -5974,7 +6216,7 @@
         "blockers": [
           "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
         ],
-        "recorded_at": "2026-11-12T09:14:13.678037+00:00",
+        "recorded_at": "2026-11-12T09:19:03.479344+00:00",
         "immutable": true
       },
       "entry_zone_history": {
@@ -6033,14 +6275,14 @@
         "market_cap_usd": 3870012766884,
         "ps": 11.66,
         "pe": 28.93,
-        "fcf_yield_pct": 1.73,
+        "fcf_yield_pct": null,
         "share_date": "2026-10-22",
         "price_date": "2026-11-11",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
       },
       "buy_gate_diagnostics": {
         "ticker": "MSFT",
-        "scan_id": "2026-11-12T09:14:12.172875+00:00",
+        "scan_id": "2026-11-12T09:19:01.168244+00:00",
         "gates": {
           "investment_ranking": {
             "status": "ND",
@@ -6086,7 +6328,7 @@
         "blockers": [
           "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
         ],
-        "recorded_at": "2026-11-12T09:14:13.706553+00:00",
+        "recorded_at": "2026-11-12T09:19:03.525496+00:00",
         "immutable": true
       },
       "entry_zone_history": {
@@ -6154,14 +6396,14 @@
         "market_cap_usd": 917923651896,
         "ps": 6.89,
         "pe": 10.8,
-        "fcf_yield_pct": 6.42,
+        "fcf_yield_pct": null,
         "share_date": "2026-10-02",
         "price_date": "2026-11-11",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
       },
       "buy_gate_diagnostics": {
         "ticker": "MU",
-        "scan_id": "2026-11-12T09:14:12.172875+00:00",
+        "scan_id": "2026-11-12T09:19:01.168244+00:00",
         "gates": {
           "investment_ranking": {
             "status": "ND",
@@ -6207,7 +6449,7 @@
         "blockers": [
           "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
         ],
-        "recorded_at": "2026-11-12T09:14:13.734448+00:00",
+        "recorded_at": "2026-11-12T09:19:03.571979+00:00",
         "immutable": true
       },
       "entry_zone_history": {
@@ -6379,14 +6621,14 @@
         "market_cap_usd": 106664880000,
         "ps": 8.03,
         "pe": 61.02,
-        "fcf_yield_pct": 4.29,
+        "fcf_yield_pct": null,
         "share_date": "2026-09-30",
         "price_date": "2026-11-11",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
       },
       "buy_gate_diagnostics": {
         "ticker": "NOW",
-        "scan_id": "2026-11-12T09:14:12.172875+00:00",
+        "scan_id": "2026-11-12T09:19:01.168244+00:00",
         "gates": {
           "investment_ranking": {
             "status": "ND",
@@ -6432,7 +6674,7 @@
         "blockers": [
           "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
         ],
-        "recorded_at": "2026-11-12T09:14:13.763318+00:00",
+        "recorded_at": "2026-11-12T09:19:03.618599+00:00",
         "immutable": true
       },
       "entry_zone_history": {
@@ -6500,14 +6742,14 @@
         "market_cap_usd": 18863341544,
         "ps": 4.85,
         "pe": 26.56,
-        "fcf_yield_pct": 1.97,
+        "fcf_yield_pct": null,
         "share_date": "2026-09-30",
         "price_date": "2026-11-11",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
       },
       "buy_gate_diagnostics": {
         "ticker": "NVT",
-        "scan_id": "2026-11-12T09:14:12.172875+00:00",
+        "scan_id": "2026-11-12T09:19:01.168244+00:00",
         "gates": {
           "investment_ranking": {
             "status": "ND",
@@ -6553,7 +6795,7 @@
         "blockers": [
           "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
         ],
-        "recorded_at": "2026-11-12T09:14:13.791367+00:00",
+        "recorded_at": "2026-11-12T09:19:03.665129+00:00",
         "immutable": true
       },
       "entry_zone_history": {
@@ -6621,14 +6863,14 @@
         "market_cap_usd": 3269264914,
         "ps": 64.44,
         "pe": null,
-        "fcf_yield_pct": -1.25,
+        "fcf_yield_pct": null,
         "share_date": "2026-08-11",
         "price_date": "2026-11-11",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
       },
       "buy_gate_diagnostics": {
         "ticker": "ONDS",
-        "scan_id": "2026-11-12T09:14:12.172875+00:00",
+        "scan_id": "2026-11-12T09:19:01.168244+00:00",
         "gates": {
           "investment_ranking": {
             "status": "ND",
@@ -6674,7 +6916,7 @@
         "blockers": [
           "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
         ],
-        "recorded_at": "2026-11-12T09:14:13.818821+00:00",
+        "recorded_at": "2026-11-12T09:19:03.711272+00:00",
         "immutable": true
       },
       "entry_zone_history": {
@@ -6742,14 +6984,14 @@
         "market_cap_usd": 10556075365,
         "ps": 10.5,
         "pe": 77.19,
-        "fcf_yield_pct": 2.84,
+        "fcf_yield_pct": null,
         "share_date": "2026-10-30",
         "price_date": "2026-11-11",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
       },
       "buy_gate_diagnostics": {
         "ticker": "ONTO",
-        "scan_id": "2026-11-12T09:14:12.172875+00:00",
+        "scan_id": "2026-11-12T09:19:01.168244+00:00",
         "gates": {
           "investment_ranking": {
             "status": "ND",
@@ -6795,7 +7037,7 @@
         "blockers": [
           "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
         ],
-        "recorded_at": "2026-11-12T09:14:13.847987+00:00",
+        "recorded_at": "2026-11-12T09:19:03.757705+00:00",
         "immutable": true
       },
       "entry_zone_history": {
@@ -6852,7 +7094,7 @@
         },
         "period_mismatch_flags": [],
         "financial_health_score_available": true,
-        "as_of": "2026-11-12T09:13:51.034587+00:00",
+        "as_of": "2026-11-12T09:18:34.736433+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1734722"
       },
       "price": {
@@ -6880,7 +7122,7 @@
       },
       "buy_gate_diagnostics": {
         "ticker": "PATH",
-        "scan_id": "2026-11-12T09:14:12.172875+00:00",
+        "scan_id": "2026-11-12T09:19:01.168244+00:00",
         "gates": {
           "investment_ranking": {
             "status": "ND",
@@ -6926,7 +7168,7 @@
         "blockers": [
           "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
         ],
-        "recorded_at": "2026-11-12T09:14:13.876364+00:00",
+        "recorded_at": "2026-11-12T09:19:03.804598+00:00",
         "immutable": true
       },
       "entry_zone_history": {
@@ -6994,14 +7236,14 @@
         "market_cap_usd": 412241500800,
         "ps": 92.11,
         "pe": 253.68,
-        "fcf_yield_pct": 0.51,
+        "fcf_yield_pct": null,
         "share_date": "2025-12-31",
         "price_date": "2026-11-11",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
       },
       "buy_gate_diagnostics": {
         "ticker": "PLTR",
-        "scan_id": "2026-11-12T09:14:12.172875+00:00",
+        "scan_id": "2026-11-12T09:19:01.168244+00:00",
         "gates": {
           "investment_ranking": {
             "status": "ND",
@@ -7047,7 +7289,7 @@
         "blockers": [
           "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
         ],
-        "recorded_at": "2026-11-12T09:14:13.905491+00:00",
+        "recorded_at": "2026-11-12T09:19:03.851042+00:00",
         "immutable": true
       },
       "entry_zone_history": {
@@ -7131,7 +7373,7 @@
       },
       "buy_gate_diagnostics": {
         "ticker": "RCAT",
-        "scan_id": "2026-11-12T09:14:12.172875+00:00",
+        "scan_id": "2026-11-12T09:19:01.168244+00:00",
         "gates": {
           "investment_ranking": {
             "status": "ND",
@@ -7177,7 +7419,7 @@
         "blockers": [
           "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
         ],
-        "recorded_at": "2026-11-12T09:14:13.934044+00:00",
+        "recorded_at": "2026-11-12T09:19:03.897458+00:00",
         "immutable": true
       },
       "entry_zone_history": {
@@ -7264,7 +7506,7 @@
       },
       "buy_gate_diagnostics": {
         "ticker": "ROK",
-        "scan_id": "2026-11-12T09:14:12.172875+00:00",
+        "scan_id": "2026-11-12T09:19:01.168244+00:00",
         "gates": {
           "investment_ranking": {
             "status": "ND",
@@ -7310,7 +7552,7 @@
         "blockers": [
           "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
         ],
-        "recorded_at": "2026-11-12T09:14:13.962381+00:00",
+        "recorded_at": "2026-11-12T09:19:03.945624+00:00",
         "immutable": true
       },
       "entry_zone_history": {
@@ -7395,7 +7637,7 @@
       },
       "buy_gate_diagnostics": {
         "ticker": "RR",
-        "scan_id": "2026-11-12T09:14:12.172875+00:00",
+        "scan_id": "2026-11-12T09:19:01.168244+00:00",
         "gates": {
           "investment_ranking": {
             "status": "ND",
@@ -7441,7 +7683,7 @@
         "blockers": [
           "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
         ],
-        "recorded_at": "2026-11-12T09:14:13.993379+00:00",
+        "recorded_at": "2026-11-12T09:19:03.992447+00:00",
         "immutable": true
       },
       "entry_zone_history": {
@@ -7526,7 +7768,7 @@
       },
       "buy_gate_diagnostics": {
         "ticker": "SERV",
-        "scan_id": "2026-11-12T09:14:12.172875+00:00",
+        "scan_id": "2026-11-12T09:19:01.168244+00:00",
         "gates": {
           "investment_ranking": {
             "status": "ND",
@@ -7572,7 +7814,7 @@
         "blockers": [
           "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
         ],
-        "recorded_at": "2026-11-12T09:14:14.027442+00:00",
+        "recorded_at": "2026-11-12T09:19:04.038975+00:00",
         "immutable": true
       },
       "entry_zone_history": {
@@ -7657,7 +7899,7 @@
       },
       "buy_gate_diagnostics": {
         "ticker": "SMCI",
-        "scan_id": "2026-11-12T09:14:12.172875+00:00",
+        "scan_id": "2026-11-12T09:19:01.168244+00:00",
         "gates": {
           "investment_ranking": {
             "status": "ND",
@@ -7703,7 +7945,7 @@
         "blockers": [
           "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
         ],
-        "recorded_at": "2026-11-12T09:14:14.056000+00:00",
+        "recorded_at": "2026-11-12T09:19:04.085645+00:00",
         "immutable": true
       },
       "entry_zone_history": {
@@ -7788,7 +8030,7 @@
       },
       "buy_gate_diagnostics": {
         "ticker": "SNOW",
-        "scan_id": "2026-11-12T09:14:12.172875+00:00",
+        "scan_id": "2026-11-12T09:19:01.168244+00:00",
         "gates": {
           "investment_ranking": {
             "status": "ND",
@@ -7834,7 +8076,7 @@
         "blockers": [
           "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
         ],
-        "recorded_at": "2026-11-12T09:14:14.083926+00:00",
+        "recorded_at": "2026-11-12T09:19:04.132605+00:00",
         "immutable": true
       },
       "entry_zone_history": {
@@ -7918,7 +8160,7 @@
       },
       "buy_gate_diagnostics": {
         "ticker": "SOUN",
-        "scan_id": "2026-11-12T09:14:12.172875+00:00",
+        "scan_id": "2026-11-12T09:19:01.168244+00:00",
         "gates": {
           "investment_ranking": {
             "status": "ND",
@@ -7964,7 +8206,7 @@
         "blockers": [
           "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
         ],
-        "recorded_at": "2026-11-12T09:14:14.112510+00:00",
+        "recorded_at": "2026-11-12T09:19:04.179081+00:00",
         "immutable": true
       },
       "entry_zone_history": {
@@ -8051,7 +8293,7 @@
       },
       "buy_gate_diagnostics": {
         "ticker": "SYM",
-        "scan_id": "2026-11-12T09:14:12.172875+00:00",
+        "scan_id": "2026-11-12T09:19:01.168244+00:00",
         "gates": {
           "investment_ranking": {
             "status": "ND",
@@ -8097,7 +8339,7 @@
         "blockers": [
           "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
         ],
-        "recorded_at": "2026-11-12T09:14:14.142000+00:00",
+        "recorded_at": "2026-11-12T09:19:04.225744+00:00",
         "immutable": true
       },
       "entry_zone_history": {
@@ -8182,7 +8424,7 @@
       },
       "buy_gate_diagnostics": {
         "ticker": "ZBRA",
-        "scan_id": "2026-11-12T09:14:12.172875+00:00",
+        "scan_id": "2026-11-12T09:19:01.168244+00:00",
         "gates": {
           "investment_ranking": {
             "status": "ND",
@@ -8228,7 +8470,7 @@
         "blockers": [
           "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
         ],
-        "recorded_at": "2026-11-12T09:14:14.171194+00:00",
+        "recorded_at": "2026-11-12T09:19:04.273845+00:00",
         "immutable": true
       },
       "entry_zone_history": {
@@ -8381,24 +8623,14 @@
       "date": "Wed, 11 Nov 2026 14:48:00 GMT"
     },
     {
-      "title": "Why Bitcoin, Nasdaq, AI Stocks, and Chips Move Together? The Liquidity Machine Explained - TradingView",
-      "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxOUkJnVURtQWRreU9hbGZ4eFNhMWF2MHBDS0JhTkVHQU15UGdOeVJlSnBTV0lraW5TMGxPdkFuY184Um9VVFZwakRFcHVNa2piQklRQ0ZsczIwZGQwcEdYc0lmM3l0M0pvWklSUEpzWXp1SW5LaHJuNkpLWi1fZDJpanZYX3hsWnJBUkRsSjFQNGRDZDRnUkQ4NkppTG50ZzN5Zkg3R2JQS2MxZExOXzJGQ2VDdHVjSkZ5VGlvOGJkRzctZ2FOOEdBWW5STlRERENtZGotdl84bFA2WDdWNUE?oc=5",
-      "date": "Wed, 11 Nov 2026 08:25:45 GMT"
-    },
-    {
-      "title": "Broadcom Inc Share Price - AVGO, RNS News, Articles, Quotes, & Charts (NASDAQ:AVGO) - Proactive financial news",
-      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9GRnpmQUV2dHphVHdJVHpYVHdpN3JLZ0RHZTBGQU0tNEdFbkVMS3VScEg3MnFHQndWWFpPMXZCMTJTNXBpbTd4dGk1NUxnWkFteWY3cW44RHpEVFRBWjRxQ2RjQzRwS1RpelNrREpkNA?oc=5",
-      "date": "Wed, 11 Nov 2026 17:12:33 GMT"
+      "title": "The Data Centre Play: 14 Stocks Behind the AI Boom - AskTraders.com",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOZXVqRU9FSTl1RWkxa01YSUZlWDVlTXNEMDNWZmVhMHRnSTVxeTA5cm1adDZ3ZFlMc2IyS0dBWHgtRERhNzFqcmg0M3V2cXFrMDJiai1zcEI5NHBBQTJBVVp4U05QRk5HY1RyR3VOT0h0VUx2R043Yl9CdnNQTUpXNlRMOUt0TVI2RjBUQ1h3MUxQNlZ1NDJNZW9UeFIxRjRYN09xMVNTdUZKQQ?oc=5",
+      "date": "Wed, 11 Nov 2026 10:50:33 GMT"
     },
     {
       "title": "SpaceX Targets $500 Billion in AI Revenue in 2027 - entARABI",
       "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNbVk5ZjlES19MM2RwcjZzbFFnZHpRX3dzaW50Vk1WWFFVbW9yNy1zR0kxemRLT2VybE1fZWRmTFlPS2ptRWtWUllrdjNEbGtnY3Y2eTRiQU1STFFfVlBIOXlLZ1liTGtIXzNVSWRLMXQ1cXg2RGdpRkdtZnJKdlJQR05vVldyRWJTbEhrQ0RRMzlwV1E?oc=5",
       "date": "Wed, 11 Nov 2026 12:21:20 GMT"
-    },
-    {
-      "title": "The Data Centre Play: 14 Stocks Behind the AI Boom - AskTraders.com",
-      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOZXVqRU9FSTl1RWkxa01YSUZlWDVlTXNEMDNWZmVhMHRnSTVxeTA5cm1adDZ3ZFlMc2IyS0dBWHgtRERhNzFqcmg0M3V2cXFrMDJiai1zcEI5NHBBQTJBVVp4U05QRk5HY1RyR3VOT0h0VUx2R043Yl9CdnNQTUpXNlRMOUt0TVI2RjBUQ1h3MUxQNlZ1NDJNZW9UeFIxRjRYN09xMVNTdUZKQQ?oc=5",
-      "date": "Wed, 11 Nov 2026 10:50:33 GMT"
     },
     {
       "title": "AI Infrastructure Beyond GPUs: Why Power, Cooling, and Networking May Create the Next Opportunities - MEXC",
@@ -8431,34 +8663,14 @@
       "date": "Wed, 11 Nov 2026 16:02:00 GMT"
     },
     {
-      "title": "Top 3 AI Infrastructure Stocks To Watch In November 2026 - Yahoo Finance",
-      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNV3ZoYWxpTGdNZDRoRmNsMEhoaGsxcEpEU1Q0MTZLYXN5dnpjbTNpUC15aFVHcGF6QzVNYTNGWTRpNXBLT2huRFNYS3hvOGNSQWxqdnNSSl91OExnQkdjVldFVFdwcVJBNVNfS1RDWjhFSjFFVkY5QmxOTjdBaUx4MUx0RDltWkZGZ21ITF9kUUJ6cTk1MFBDSVRB?oc=5",
-      "date": "Thu, 12 Nov 2026 08:11:08 GMT"
-    },
-    {
       "title": "Nvidia Shock Puts AI Infrastructure Stocks Like TTM Technologies In Focus - Simply Wall St",
       "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQd2taVlU3Y0g4NWJzSjFwa1RWYXc1VXdxaWN0WHFmdG9RX2p2NmprT1UybnJOc1JZVTNmVGpZMHdoMWlENFFsZl96M2xCV3ZBMVY0M2ltdUJyaGNWTURUY3JzSDBjaFJ6WWdlc2tiT09fYjcwcElGOGJTX3ZxVEJOb0g1TkFZQmtIVTJHZ1RYUFR4ZTZJSHRoN1B6eTFINGM2WmphUXJISG1wcGNzVkdEZ0E3V0lXT2pCUVBKaXBhU2dpQ0VabGI2WW9LU0JlWkE30gHQAUFVX3lxTFB3a1pWVTdjSDg1YnNKMXBrVFZhdzVVd3FpY3RYcWZ0b1FfanY2amtPVTJuck5zUllVM2ZUalkwd2gxaUQ0UWxmX3ozbEJXdkExVjQzaW11QnJoY1ZNRFRjcnNIMGNoUnpZZ2Vza2JPT19iNzBwSUY4YlNfdnFUQk5vSDVOQVlCa0hVMkdnVFhQVHhlNklIdGg3UHp5MUg0YzZaamFRckhIbXBwY3NWR0RnQTdXSVdPakJRUEppcGFTZ2lDRVpsYjZZb0tTQmVaQTc?oc=5",
       "date": "Mon, 09 Nov 2026 09:27:26 GMT"
     },
     {
-      "title": "Nvidia Export Curbs Could Shift AI Demand Toward These Data Center Stocks - Yahoo Finance",
-      "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPVTJUV2NtRlFXRDJLbmcwQmp2Zk1FTnJ2MDlNUGM5c0htWHFVZ3RBLXdvcWtVc3NFUFRpRzNmUGozY3pROG90U2c5cDFSQ09Xbm1jLWhRVGhyZFhjcFVwSkVZQnFTTVAtREFyU011VlJhUkV1eUtwQjZNdHNhZmRQWXlaVnhFZ2MwTHdKaWNGWDBtOGxrSlFXTHE5VQ?oc=5",
-      "date": "Thu, 12 Nov 2026 00:43:07 GMT"
-    },
-    {
-      "title": "Anthropic's S-1 Says It Will Expand Its Data Center Footprint. Here's Who Could Pour the Concrete, Wire the Power, and Cool the Chips. - Yahoo Finance",
-      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQYlhuMG52LXZZSjdSVFBHX3pTVTZBZ2h0ZEhTY1ZVSHJjZE1pT3ZpOW1pVDdHUTBlOTRXZ3FEeGZSem41R09HWlJDdmlxQ0dtUzJqZ195Y0ZNOWd6Z1BhbFRwWmVodzlkYWdKeDRHZFZlQVd5Sk10MllCWldzZWFuZEpKYllhQi01bldfX1VBWjRyT2VxbkY3UA?oc=5",
-      "date": "Tue, 10 Nov 2026 03:14:00 GMT"
-    },
-    {
-      "title": "AI Sell-Off: Buy ANET, TSM & MU to Make Up for NVIDIA Losses - TradingView",
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPMDJUNUd3WVQwUTlFX1FvN1Q4Q2NSdkpYRnFnenl2b3RSRC1RRGY5RzdjWU5wZU1wTFNEdWNSQy1jbHVDcWtoUm13UGNhcU9kTThIMlZQNlpWb2hES1dDajdyNllKOUZZWWxqVVZMWG9KWnRFN0RPeW5ZQUthS2hXOXRMdGFtZFppMkV0QWgtb3JPbU0yZkxsRjlOamhsLWNXNWJRT3F0WEhXWVVXNy1yTzZB?oc=5",
-      "date": "Wed, 11 Nov 2026 21:19:47 GMT"
-    },
-    {
-      "title": "Prediction: The AI Stock Wall Street Could Be Underestimating for 2027 - 24/7 Wall St.",
-      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNb3NyLXJJblBCSzIyYmE2ZUNSX05FSG5MLXBDNG96NTJ0Z0JFbTVMN3phMndrd2ZvaWF1cFZPV3JULXlFMmRXR1AyNWdCYU03aFJGRmVtLU92aFBySjNkQkJtaC1ZX0I1SFFSeEhjaE5fLXdlVE9JLVp6ZlhtcXVkSi14M2YyYnd2aFRxWi11YXNPRVpJNE9lcXZnUWxBbXpGbFRVZ0VUV2ZDMEY4WF9xOFZlSQ?oc=5",
-      "date": "Wed, 11 Nov 2026 14:33:00 GMT"
+      "title": "Top 3 AI Infrastructure Stocks To Watch In November 2026 - Yahoo Finance",
+      "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxNV3ZoYWxpTGdNZDRoRmNsMEhoaGsxcEpEU1Q0MTZLYXN5dnpjbTNpUC15aFVHcGF6QzVNYTNGWTRpNXBLT2huRFNYS3hvOGNSQWxqdnNSSl91OExnQkdjVldFVFdwcVJBNVNfS1RDWjhFSjFFVkY5QmxOTjdBaUx4MUx0RDltWkZGZ21ITF9kUUJ6cTk1MFBDSVRB?oc=5",
+      "date": "Thu, 12 Nov 2026 08:11:08 GMT"
     },
     {
       "title": "2 Stocks Sidestep the Data Center Backlash - 24/7 Wall St.",
@@ -8466,14 +8678,19 @@
       "date": "Tue, 10 Nov 2026 13:14:00 GMT"
     },
     {
-      "title": "5 Best Artificial Intelligence (AI) ETFs to Buy in 2026 - The Motley Fool",
-      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQYzA2Wld0QkFFTkVjZGlIQ3JfdklNNS1SeUVIb21TMFlFZTc4ejB1UWZqN3FLT2FlWVhEeW5QOFM1STZCM0kxRE9lcERjRTY4ZjlDZFNLaVNiSDVZMDhMdjEwbUQ2WG9XeUZ5M2hBeENWaENUbE5tTE1tU2tBS0x5TV9Gak8wVUlMTmlqRl85SkQzSnJmMGd0T1JaelpWS3lvVWc?oc=5",
-      "date": "Thu, 12 Nov 2026 07:17:04 GMT"
+      "title": "Anthropic's S-1 Says It Will Expand Its Data Center Footprint. Here's Who Could Pour the Concrete, Wire the Power, and Cool the Chips. - Yahoo Finance",
+      "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQYlhuMG52LXZZSjdSVFBHX3pTVTZBZ2h0ZEhTY1ZVSHJjZE1pT3ZpOW1pVDdHUTBlOTRXZ3FEeGZSem41R09HWlJDdmlxQ0dtUzJqZ195Y0ZNOWd6Z1BhbFRwWmVodzlkYWdKeDRHZFZlQVd5Sk10MllCWldzZWFuZEpKYllhQi01bldfX1VBWjRyT2VxbkY3UA?oc=5",
+      "date": "Tue, 10 Nov 2026 03:14:00 GMT"
     },
     {
       "title": "NVIDIA Rises 4% Despite Baird Downgrade and Huang Uncertainty; AMD Climbs 5%, Broadcom Gains 4% - 24/7 Wall St.",
       "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQQzNfT3FUQkg5R0tudTFId2Jucks1MDdRX3pHNXF4UGx2TFc3UjJMUzVjYlB2SmcxRGFiX1VBV2xQRzJiM3A2MWJQZVF3YnpNZ3pmdklMNjZUYVBlVFplV0lpSXA1ZUtKckZCOUItMldEaVhhbVFHdWN1NW51elFSWjdrTGZWejlORjFsajltVnV0YzR6ZzdvMDRHVzVoNGdyUzBEWTBudzBEcU5jMTRMSjIzNWJ4UG93M3BBNW5odUpTc0U0WUVOLWdLSzRoeE0?oc=5",
       "date": "Wed, 11 Nov 2026 14:05:00 GMT"
+    },
+    {
+      "title": "3 AI Infrastructure Stocks Riding The Next Data Center Spending Wave - Yahoo Finance",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNQmxYclh6TThZdXl6ak1WNTNhT1dIc050VGFWVjlobko5dmdOUEM4UkFiaTZJNzlrcm9iVjlaTmY1Ym1pczVkcUxEelk2SlRuWS1Ubm1fWldJalN5Q3ZkZVVUc2RVSWIzRk80YTJLQkdFaF9RNGV5cjd1a0J5TUFaTk54R3dDUWc5dUZieUNtNzMzQk9xTDRMWTNUVXdZZw?oc=5",
+      "date": "Tue, 10 Nov 2026 14:10:41 GMT"
     },
     {
       "title": "Iron Mountain Raises Its Dividend 15% as Data Center Revenue Surges 34% - 24/7 Wall St.",
@@ -8486,6 +8703,16 @@
       "date": "Wed, 11 Nov 2026 14:57:00 GMT"
     },
     {
+      "title": "Broadcom Inc Share Price - AVGO, RNS News, Articles, Quotes, & Charts (NASDAQ:AVGO) - Proactive financial news",
+      "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9GRnpmQUV2dHphVHdJVHpYVHdpN3JLZ0RHZTBGQU0tNEdFbkVMS3VScEg3MnFHQndWWFpPMXZCMTJTNXBpbTd4dGk1NUxnWkFteWY3cW44RHpEVFRBWjRxQ2RjQzRwS1RpelNrREpkNA?oc=5",
+      "date": "Wed, 11 Nov 2026 17:12:33 GMT"
+    },
+    {
+      "title": "Why Bitcoin, Nasdaq, AI Stocks, and Chips Move Together? The Liquidity Machine Explained - Cryptonews",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBhVFBDRnZybV9iUW9KMzNDV1Q5UUJaNkt6TGlyNzJpOU9oTlMxdEYwRks4UFZiX2ZSOEVWbVBtWDJuNkdqeGxfZzdXT3MyWmlUWFJrMzNNV2ZubzB4TDctcy1VQVA3Y0J2RnRPbXlnR3R3Z1lOOHhPSw?oc=5",
+      "date": "Wed, 11 Nov 2026 08:25:45 GMT"
+    },
+    {
       "title": "Nvidia CEO Jensen Huang — The Fall of AI’s Keyman and Future Ecosystem - The Korea Daily",
       "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBjNDJRSVQ5MklEeVJBdHljRnlUNFRVeVpPM2F0NTROTVVhbnhZaVozS0REUEo3WEpBNi04cF9YLUg1dDhoNndZbHdPRXNsQmhMUHpEZzUtd1VRQkFoOWlwMngwX3hXNW9kRlp4WGRsMDQ?oc=5",
       "date": "Thu, 12 Nov 2026 07:45:44 GMT"
@@ -8496,14 +8723,14 @@
       "date": "Wed, 11 Nov 2026 21:24:05 GMT"
     },
     {
-      "title": "Taiwan's AI server makers doubled October sales from a year earlier as Wistron, Gigabyte and Quanta led - MLQ.ai",
-      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOUVh1SGIzTVl5NHJ5TE0zVmUxMi1lSXpuZC1ocTNIUnhSTVNsRnR6dk00TGFEdUZEbDFYdDg5TFlrbVZmbUQtMkhjelg4SlA3RVJPVDYyeHVsTmpvR2tJSHV5TTBJMGgyMnNCSUpWbXNLcjJvTHJ2TVZqNHVnb1p0ZEFxeVZpQ3poSUZITG5fUXBWekFRQ0hIMWxHa3hfbkRfalZvdWhsdWJTblFrM0hSb3Zvb01sQTF2aXdsRm5Maw?oc=5",
-      "date": "Thu, 12 Nov 2026 05:06:01 GMT"
-    },
-    {
       "title": "Palo Alto Networks And 2 More Top Cybersecurity Stocks - Simply Wall St",
       "url": "https://news.google.com/rss/articles/CBMiywFBVV95cUxOcjA2TGJPcDNQX1lpeHpMWnd6LWFfZklmZThWX1RsWU9ROVh1M3lxeUV4U0NuaGdBclkxellRLVpIUTBqVWRfLUtYdl8tQjB6bnRTNmphc0h4cDIzUFZPemZWYlJBYWdWb3dYSFo2VGp1Qk5zdHprQXBodlB2QXZnRWxhX05lLXRjd1hHWTFRSDVBeTVlWk9EZkpJNkpfZkZoQUpNa1YtWkRLTHY3NzdkaVZwejdsNTVzc1RQcHBLSk4zT0Nfd3AtR1ZTQQ?oc=5",
       "date": "Tue, 10 Nov 2026 23:43:33 GMT"
+    },
+    {
+      "title": "Taiwan's AI server makers doubled October sales from a year earlier as Wistron, Gigabyte and Quanta led - MLQ.ai",
+      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxOUVh1SGIzTVl5NHJ5TE0zVmUxMi1lSXpuZC1ocTNIUnhSTVNsRnR6dk00TGFEdUZEbDFYdDg5TFlrbVZmbUQtMkhjelg4SlA3RVJPVDYyeHVsTmpvR2tJSHV5TTBJMGgyMnNCSUpWbXNLcjJvTHJ2TVZqNHVnb1p0ZEFxeVZpQ3poSUZITG5fUXBWekFRQ0hIMWxHa3hfbkRfalZvdWhsdWJTblFrM0hSb3Zvb01sQTF2aXdsRm5Maw?oc=5",
+      "date": "Thu, 12 Nov 2026 05:06:01 GMT"
     },
     {
       "title": "AI data center and network upgrade hopes lift Korea optical stocks - Chosunbiz",
@@ -8511,9 +8738,14 @@
       "date": "Tue, 10 Nov 2026 00:36:00 GMT"
     },
     {
-      "title": "Investors Assess AI Infrastructure Stocks After Nvidia Shock - Demokratis.co.id",
-      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE0yVFBOODZOcTFNRWF2SFUxaEVLR0g2YjQzb1ZLLU5oYXhEc2dTeDJxUi1LVVBZX1NXYjN1WGUzTHpROEo1WmRBUDVLXzlxUG9JOUZXVnpES0hqRDVrTG4wSlhfZ2o4QzBFdmltcV9jN254QQ?oc=5",
-      "date": "Wed, 11 Nov 2026 19:26:00 GMT"
+      "title": "Google escalates Nvidia rivalry with specialised versions of AI chips - The Straits Times",
+      "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOWkh6VmJCLUZGUVJ0QzBmNU92ZFBtZVo3NHBWQ1pEeEQyQk5RS2Y5RkkxOHNEc2dXUkhEVXFka3hOQlFQcW5uYTl1VVNvcC15Q0F1SlUwNmhGMEl1ZjJIU3l5eU5qM1ZGYjBUT1Q4Q0NSS2NsalVDNDIxWi1pc1BLUFRaVFQ5dGdhZDVvQ3J3eGtmQXctNGkwUFR4amcwaktKMVlQUV9PZzVVcTBhVm9vWnpzNzFkdw?oc=5",
+      "date": "Mon, 09 Nov 2026 13:45:00 GMT"
+    },
+    {
+      "title": "CoreWeave earnings bring good news for AI trade - Invezz",
+      "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOVERHRzR4WDY2WTB1RVFKR1VXVUozYWdicV9YQXBaUWZPNmJBaGh5ZDBlV25oemNxazJCQUJXRmx2cFE5ZURlWTdyUHYxdzVuVnhfRDhJSzh4dlFOMjEtZlNJV2NVdnJBZmZ4bDFNX0ZfbXVOT2dkeFo4ZHVUNlh1RkkyQmNGVHRxX2VLWVRqMA?oc=5",
+      "date": "Wed, 11 Nov 2026 00:30:13 GMT"
     },
     {
       "title": "Agility Robotics completes merger and secures $465 million in capital ahead of Nasdaq listing - Robotics & Automation News",
@@ -8531,6 +8763,11 @@
       "date": "Wed, 11 Nov 2026 23:00:45 GMT"
     },
     {
+      "title": "5 Best Artificial Intelligence (AI) ETFs to Buy in 2026 - The Motley Fool",
+      "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQYzA2Wld0QkFFTkVjZGlIQ3JfdklNNS1SeUVIb21TMFlFZTc4ejB1UWZqN3FLT2FlWVhEeW5QOFM1STZCM0kxRE9lcERjRTY4ZjlDZFNLaVNiSDVZMDhMdjEwbUQ2WG9XeUZ5M2hBeENWaENUbE5tTE1tU2tBS0x5TV9Gak8wVUlMTmlqRl85SkQzSnJmMGd0T1JaelpWS3lvVWc?oc=5",
+      "date": "Wed, 11 Nov 2026 21:52:35 GMT"
+    },
+    {
       "title": "ZJK Establishes Six-Series Precision Component Product Matrix to Expand Robotics Opportunities - Yahoo Finance",
       "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxPZ3VmWkVwZXpLUk0zUFYtMEZvYXctaU53ZlVPV2VoQlJZaFBsNklKZmRlQXAtRE43SVY0SkVfZHRHT0RFMFhVZF9Ic1RReFFBYnFSY0YzN19VM0tKZXJ1WWx2TXBKRVd5S3lxTENRRkRjcnNZNUZsTHRIUk5ra1lzbXBlNkxzX29xZXRrUS1scGpqUFZPalpZQWpyMUZCQQ?oc=5",
       "date": "Wed, 11 Nov 2026 13:00:00 GMT"
@@ -8546,19 +8783,24 @@
       "date": "Wed, 11 Nov 2026 07:03:59 GMT"
     },
     {
-      "title": "GITEX World RobotiX 2026 to showcase humanoid robots, embodied AI and next-generation automation in Dubai - MyJoyOnline",
-      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOeXlVc1RtVXNJakVKVFBvZ2J3Vks5dXV3MWh0SVVuY01hOHhyT2pGcWZ3cElKelU5ZDNxNk9rTnlGWmR4NXBBWk5OV29mbzFINFU1eUlicTZ0LTAzUXVSeW1FckpTdVNtZlAzRjI5S2FienZ4QURiVmVGS2ZmRVlZcG5DMHI4ZmhHN2RFZkRPd0tvYUpPX0ZWLTViNHZQLURWVHE5QzY1SHhIUWVHb1VfX29SQ0RmSFMxWWotOXRoOV96TG80MUlvQVhHMDJ4Zw?oc=5",
-      "date": "Wed, 11 Nov 2026 18:19:16 GMT"
-    },
-    {
       "title": "ZJK launches six-series precision components to boost robotics market growth. - Pluang",
       "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNSHhGN3JRalFTd29kd2NFdmVTWE1PY0w2blNVUWZRNmlSWng2RWgxUlllU0IzX3pPcXd5bThrWFhFb255SjNaSlUxcDNLeGVadDlxRTExVHdHdGxnMWoxSFNqVWFXaXozYnFHcks1NXZHZmR3a21DYTI2aWktTlBQeWE5WExpYXhWdWZQTQ?oc=5",
       "date": "Wed, 11 Nov 2026 13:18:24 GMT"
     },
     {
+      "title": "TECO Electric & Machinery stock joins Foxconn on AI data center design - ad-hoc-news.de",
+      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNR2pTSkxOWVcyYTNvNkc2amRSWDluX2F0ei01ZFU3NVZ1eV9lR1RXY0dwVXlaU0FPWVhzenBvak1kaDdXbjFLS09ta0cyOWRPSnVZUVg5MnExTDVEWlZOdTM0RHd3NjhLWU5veEhjd0xudzRCYm51Z1EyUXVCQlhkUGltcTQwQ2dXRjBQYXNmelFQU2pTWDZhQU4xY1Q2OWlOYUozUjkyLVViQUdaWWNNcjFUSzlselhYMGtVeHpvQVpjZmR6WXc?oc=5",
+      "date": "Wed, 11 Nov 2026 00:53:23 GMT"
+    },
+    {
       "title": "Agile Robots Raises $500 Million From SoftBank and Nvidia - trendingtopics.eu",
       "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1pcHI4ZEpOTlNCZWhtdk4wcjU0S1JRUkFGVG5hYkJKUldvdWM3MXVZZ1ZWSjVsVjFYWmRrclRDNXM5dGhqa0w1c1NpdnRrTHI3UEVvZ2VMUFcwUW5oWHlCVDNud0ZVcUNuUlR6clBYYURrVnN5TFMwWnNoYw?oc=5",
       "date": "Thu, 12 Nov 2026 06:43:25 GMT"
+    },
+    {
+      "title": "Teradyne stock adds physical AI test platform with Omnyx Edge - ad-hoc-news.de",
+      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNMFgxWE1CcF81b3dBbHo4cFVQb09zbkhZYjBJbENuV2JQeHVNVXJFcWd5NlkyUjNZWEQxQmo1TjZwOGlLcG1PY09udU04ekJZQ1BDLUFtcHBzUmZJbk1lb2cwaEZGdjdCd1pjRFZBS3pGQjNITThDTGhCWEZaRDRRTGNxX1lUbEkyZGhOQ0Zfam9yTDlVUmF5bDZLVjkwaXo4NmRIMDFReVVyOUJJclpMUTVRcXdqTmRFaVRfRW5nWEUyQQ?oc=5",
+      "date": "Mon, 09 Nov 2026 13:00:45 GMT"
     },
     {
       "title": "SoftBank pours 7.2 trillion won into Swiss robotics as foreign capital dominates - Chosunbiz",
@@ -8596,14 +8838,14 @@
       "date": "Tue, 10 Nov 2026 22:29:14 GMT"
     },
     {
-      "title": "Epson AX6 simplifies industrial automation - Daily Tribune",
-      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxObUQ2WXVxcnhVdzZ4WHVkUm81Z2tSUlYtTEw3Ukx3VjFEWnBLRmd5QmxuaEYyaXZtVF84a3c5V0JkMXdjUlZVNFBZNDNoZzBNUlA3MkVWVjFMYVVfcEVkNEpibjNoMk5TWmc5NlpGRUlMTll5eEk5ZGdVZUQxamtlVmdB?oc=5",
-      "date": "Tue, 10 Nov 2026 19:18:46 GMT"
-    },
-    {
       "title": "Agility management will attend a Miami conference featuring a panel on funding AI-powered machines. - Stock Titan",
       "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOZHk5b1ZHbGl2bEl5dXliUTVfclRKN0VKRUJqWjNDaWZWNGJFenhYOHF4Zjg2bkcybE1hMDlzVUptQ1VJQUFOeUZBTlR4Vl9XMjEtLTdBN2JzUktFdk1HTk5GTTRpZXl2U0N3QmdTb3Jlc01HQnJ2VXo4eVdxY1BKQWpXRjdGYlJYdF9FSEtfejhjMXN3?oc=5",
       "date": "Mon, 09 Nov 2026 12:00:00 GMT"
+    },
+    {
+      "title": "Epson AX6 simplifies industrial automation - Daily Tribune",
+      "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxObUQ2WXVxcnhVdzZ4WHVkUm81Z2tSUlYtTEw3Ukx3VjFEWnBLRmd5QmxuaEYyaXZtVF84a3c5V0JkMXdjUlZVNFBZNDNoZzBNUlA3MkVWVjFMYVVfcEVkNEpibjNoMk5TWmc5NlpGRUlMTll5eEk5ZGdVZUQxamtlVmdB?oc=5",
+      "date": "Tue, 10 Nov 2026 19:18:46 GMT"
     },
     {
       "title": "Gulf Business readies for landmark UAE–India summit - Gulf Business",
@@ -8611,19 +8853,14 @@
       "date": "Wed, 11 Nov 2026 13:47:23 GMT"
     },
     {
-      "title": "TECO Electric & Machinery stock joins Foxconn on AI data center design - ad-hoc-news.de",
-      "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNR2pTSkxOWVcyYTNvNkc2amRSWDluX2F0ei01ZFU3NVZ1eV9lR1RXY0dwVXlaU0FPWVhzenBvak1kaDdXbjFLS09ta0cyOWRPSnVZUVg5MnExTDVEWlZOdTM0RHd3NjhLWU5veEhjd0xudzRCYm51Z1EyUXVCQlhkUGltcTQwQ2dXRjBQYXNmelFQU2pTWDZhQU4xY1Q2OWlOYUozUjkyLVViQUdaWWNNcjFUSzlselhYMGtVeHpvQVpjZmR6WXc?oc=5",
-      "date": "Wed, 11 Nov 2026 00:53:23 GMT"
+      "title": "GITEX World RobotiX 2026 to showcase humanoid robots, embodied AI and next-generation automation in Dubai - MyJoyOnline",
+      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOeXlVc1RtVXNJakVKVFBvZ2J3Vks5dXV3MWh0SVVuY01hOHhyT2pGcWZ3cElKelU5ZDNxNk9rTnlGWmR4NXBBWk5OV29mbzFINFU1eUlicTZ0LTAzUXVSeW1FckpTdVNtZlAzRjI5S2FienZ4QURiVmVGS2ZmRVlZcG5DMHI4ZmhHN2RFZkRPd0tvYUpPX0ZWLTViNHZQLURWVHE5QzY1SHhIUWVHb1VfX29SQ0RmSFMxWWotOXRoOV96TG80MUlvQVhHMDJ4Zw?oc=5",
+      "date": "Wed, 11 Nov 2026 18:19:16 GMT"
     },
     {
       "title": "Teradyne stock expands physical AI testing with Omnyx Edge - ad-hoc-news.de",
       "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOcUJhOFNPa3VJXzN5X0lVVVNqWkQtcHNtLV90RHh6bDFlR2pib25qaWlEZDFhaWlDNnZjRFdZbHNJU1ZUaTg2NEtUUnVZNDk5ZnJwZHFJM3hQSjdwUjlhSC1xRXRhLVV0UFFzYXhVdkJTX0VwUV9CV2lGNWdEVVhIZHhyZ3hhcTk4YzBzN3lzTUs4bUE5REFQQlBDZVlyVGJaYWhWTHhhbVR3QjZncHBMbUM5eFdtX3VGVjBwd3NB?oc=5",
       "date": "Wed, 11 Nov 2026 13:04:22 GMT"
-    },
-    {
-      "title": "Teradyne stock adds physical AI test platform with Omnyx Edge - ad-hoc-news.de",
-      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNMFgxWE1CcF81b3dBbHo4cFVQb09zbkhZYjBJbENuV2JQeHVNVXJFcWd5NlkyUjNZWEQxQmo1TjZwOGlLcG1PY09udU04ekJZQ1BDLUFtcHBzUmZJbk1lb2cwaEZGdjdCd1pjRFZBS3pGQjNITThDTGhCWEZaRDRRTGNxX1lUbEkyZGhOQ0Zfam9yTDlVUmF5bDZLVjkwaXo4NmRIMDFReVVyOUJJclpMUTVRcXdqTmRFaVRfRW5nWEUyQQ?oc=5",
-      "date": "Mon, 09 Nov 2026 13:00:45 GMT"
     },
     {
       "title": "WATCH VIDEO: Advanced Humanoid Robot Performs Remarkably Human-Like Movements, Showcasing How Artificial Intelligence Is Transforming The Future Of Robotics And Automation - The Sunday Guardian",
@@ -8739,6 +8976,11 @@
       "title": "FPS Declines 42% in a Month: Time to Buy the Stock Now? - TradingView",
       "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPNUh3S3BiY1c2dHBERzlBX0lpZENFRHM3MGRBVmNnSFRhLUVvYW5QUkRQbVpzSC05SUthbXY2cS1STV9VZGJVTTZNOEs1aVRSSVpLVC1UdHQ4dUpPeWU0Y3BpaHZSRV9SZHBQdTJQaFN6TGtRODlqelhCZnlQVHE4UEpQYlpDV2ZrZVd2MUk2R0RxaWRvdHU1RmhMWVdoMlVmVEc5RzdYZDZXME5M?oc=5",
       "date": "Wed, 11 Nov 2026 19:17:54 GMT"
+    },
+    {
+      "title": "GE Vernova Declines 6% as AI Power Stocks Give Back Monday's Rally; Vertiv Drops 4%, Quanta Services Slides 2% - 24/7 Wall St.",
+      "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxOVEZOazR0eWpoSUs2UFlJX3JvUlFBYmFuUEFrNC12UVJMeko3VkZIWDJsQ0VIbUVSUldoT3NnQm9pcmlqUTkzeS1XN3N0NzZjRDdZR1ltc1FoeFpQTmc5YnJuaUJwZlpZYktUdjFqWFJES0doVEZwYmlxdFFmVlZSQ0NpU200bkIxU3pFYWQ1bEhvRE5CcEdFbW9MZXVxbzIwQ2RQZWdxdDN0eTNDYXJ1VzJ4RE04X2szeGZZTGx1NVU0Ykd4d1F5cEUxSU9CWC1USjNwSVJBX3BFaTQ4SmN2VmZB?oc=5",
+      "date": "Tue, 10 Nov 2026 15:04:00 GMT"
     }
   ],
   "version": "4.2.2",
@@ -8776,102 +9018,102 @@
           "Yahoo: HTTP Error 404: Not Found"
         ]
       },
-      "ONTO": {
+      "ACHR": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-11"
       },
-      "OUST": {
+      "AI": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-11"
       },
-      "PATH": {
+      "ALAB": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-11"
       },
-      "PDYN": {
+      "AMAT": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-11"
       },
-      "PLTR": {
+      "AMD": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-11"
       },
-      "PWR": {
+      "AMZN": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-11"
       },
-      "QCOM": {
+      "ANET": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-11"
       },
-      "RCAT": {
+      "APH": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-11"
       },
-      "ROK": {
+      "ARM": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-11"
       },
-      "RR": {
+      "ASML": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-11"
       },
-      "SERV": {
+      "AZTA": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-11"
       },
-      "SIEGY": {
+      "BBAI": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-11"
       },
-      "SMCI": {
+      "CGNX": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-11"
       },
-      "SNOW": {
+      "CLS": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-11"
       },
-      "SOUN": {
+      "COHR": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-11"
       },
-      "SYM": {
+      "CRDO": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-11"
       },
-      "TER": {
+      "DELL": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-11"
       },
-      "TSM": {
+      "DHR": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-11"
       },
-      "VRT": {
+      "EMR": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-11"
       },
-      "ZBRA": {
+      "ETN": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-11"
@@ -8891,10 +9133,10 @@
     "schema_version": 1,
     "entry_levels": 15,
     "recommendations": 0,
-    "gate_audits": 408,
+    "gate_audits": 476,
     "events": 12,
-    "scan_snapshots": 3,
-    "latest_snapshot_sha256": "b86c46f4488a5ffd1ca39d216c448ea1d35046bbe5724f2f81d36027d953f981",
+    "scan_snapshots": 4,
+    "latest_snapshot_sha256": "7b47c1f9e6aae67b8c5e57b33ea8546cc859f20fd52cf365880e92aaa89e2dce",
     "new_zone_hits": [],
     "historical_imports": [
       {
