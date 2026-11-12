@@ -19,6 +19,7 @@ class ValuationTests(unittest.TestCase):
     def test_missing_period_start_blocks_pe_and_fcf(self):
         self.c['fundamentals'].pop('revenue_period_start')
         self.assertIsNone(calculate_valuation(self.c,date(2026,10,11))['pe'])
+        self.c['fundamentals'].pop('cash_flow_period_start')
         self.assertIsNone(calculate_valuation(self.c,date(2026,10,11))['fcf_yield_pct'])
     def test_mismatched_pe_start_blocks_pe(self):
         self.c['fundamentals']['net_income_period_start']='2025-01-01'
