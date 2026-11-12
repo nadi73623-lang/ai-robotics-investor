@@ -13,12 +13,12 @@ class DecisionMemoryTests(unittest.TestCase):
         self.assertEqual({x["ticker"] for x in m["entry_levels"]},{"MU","ADBE","OUST","XPEV","MP"})
         self.assertTrue(all(x["immutable"] for x in m["entry_levels"]))
     def test_close_touch_creates_event_and_deduplicates(self):
-        companies=[{"ticker":"MU","price":{"close_usd":725.11,"date":"2026-11-10","source":"test"}}]
+        companies=[{"ticker":"MU","price":{"close_usd":725.11,"low_usd":699.63,"high_usd":735.0,"date":"2026-11-10","source":"test"}}]
         m,h=record_scan(companies,"2026-11-12T00:00:00Z",self.path)
-        self.assertEqual(len(h),1)
+        self.assertEqual(len(h),2)
         m,h=record_scan(companies,"2026-11-12T06:00:00Z",self.path)
         self.assertEqual(len(h),0)
-        self.assertEqual(len(m["events"]),6)
+        self.assertEqual(len(m["events"]),7)
     def test_no_price_does_not_create_zero(self):
         m,h=record_scan([{"ticker":"MU","price":None}],"scan",self.path)
         self.assertEqual(m["price_observations"],[])
