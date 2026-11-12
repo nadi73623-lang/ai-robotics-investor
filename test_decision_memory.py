@@ -15,6 +15,10 @@ class DecisionMemoryTests(unittest.TestCase):
         self.assertEqual(len(m["events"]),8)
         self.assertEqual(sum(x["basis"]=="intraday_range" for x in m["events"]),3)
     def test_close_touch_creates_event_and_deduplicates(self):
+        seed=initial_memory()
+        seed["events"]=[]
+        seed["historical_imports"]=[]
+        self.path.write_text(json.dumps(seed))
         companies=[{"ticker":"MU","price":{"close_usd":725.11,"low_usd":699.63,"high_usd":735.0,"date":"2026-11-10","source":"test"}}]
         m,h=record_scan(companies,"2026-11-12T00:00:00Z",self.path)
         self.assertEqual(len(h),2)
