@@ -13,6 +13,9 @@ class ValuationTests(unittest.TestCase):
         del self.c['fundamentals']['shares_outstanding'];self.assertEqual(calculate_valuation(self.c,date(2026,10,11))['status'],'unavailable')
     def test_adr(self):
         self.c['ticker']='TSM';self.assertEqual(calculate_valuation(self.c,date(2026,10,11))['status'],'unavailable')
+    def test_mismatched_pe_period(self):
+        self.c['fundamentals']['net_income_period_end']='2025-08-01'
+        self.assertIsNone(calculate_valuation(self.c,date(2026,10,11))['pe'])
     def test_negative_income(self):
         self.c['fundamentals']['net_income_usd']=-1;self.assertIsNone(calculate_valuation(self.c,date(2026,10,11))['pe'])
     def test_mismatched_fcf_period(self):
