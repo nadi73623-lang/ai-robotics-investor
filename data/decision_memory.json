@@ -207,7 +207,3476 @@
     }
   ],
   "recommendations": [],
-  "gate_audits": [],
+  "gate_audits": [
+    {
+      "ticker": "NVDA",
+      "scan_id": "2026-11-12T08:56:19.183321+00:00",
+      "gates": {
+        "investment_ranking": {
+          "status": "ND",
+          "value": null,
+          "required": "validated Balanced 1.3 ranking"
+        },
+        "fundamental_score": {
+          "status": "ND",
+          "value": null,
+          "required": "normalized financials and valuation"
+        },
+        "entry_score": {
+          "status": "ND",
+          "value": null,
+          "required": "technical entry model with OHLCV"
+        },
+        "base_upside": {
+          "status": "ND",
+          "value": null,
+          "required": "probability-weighted Bear/Base/Bull valuation"
+        },
+        "risk_reward": {
+          "status": "ND",
+          "value": null,
+          "required": "validated entry, stop-loss and target"
+        },
+        "data_quality": {
+          "status": "ND",
+          "value": null,
+          "required": "period-consistent fundamentals and fresh quotes"
+        },
+        "analyst_consensus": {
+          "status": "ND",
+          "value": null,
+          "required": "timestamped analyst target history"
+        },
+        "veto_check": {
+          "status": "ND",
+          "value": null,
+          "required": "complete risk and corporate-event review"
+        }
+      },
+      "blockers": [
+        "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
+      ],
+      "recorded_at": "2026-11-12T08:56:19.185150+00:00",
+      "immutable": true
+    },
+    {
+      "ticker": "GOOGL",
+      "scan_id": "2026-11-12T08:56:19.183321+00:00",
+      "gates": {
+        "investment_ranking": {
+          "status": "ND",
+          "value": null,
+          "required": "validated Balanced 1.3 ranking"
+        },
+        "fundamental_score": {
+          "status": "ND",
+          "value": null,
+          "required": "normalized financials and valuation"
+        },
+        "entry_score": {
+          "status": "ND",
+          "value": null,
+          "required": "technical entry model with OHLCV"
+        },
+        "base_upside": {
+          "status": "ND",
+          "value": null,
+          "required": "probability-weighted Bear/Base/Bull valuation"
+        },
+        "risk_reward": {
+          "status": "ND",
+          "value": null,
+          "required": "validated entry, stop-loss and target"
+        },
+        "data_quality": {
+          "status": "ND",
+          "value": null,
+          "required": "period-consistent fundamentals and fresh quotes"
+        },
+        "analyst_consensus": {
+          "status": "ND",
+          "value": null,
+          "required": "timestamped analyst target history"
+        },
+        "veto_check": {
+          "status": "ND",
+          "value": null,
+          "required": "complete risk and corporate-event review"
+        }
+      },
+      "blockers": [
+        "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
+      ],
+      "recorded_at": "2026-11-12T08:56:19.186620+00:00",
+      "immutable": true
+    },
+    {
+      "ticker": "INTC",
+      "scan_id": "2026-11-12T08:56:19.183321+00:00",
+      "gates": {
+        "investment_ranking": {
+          "status": "ND",
+          "value": null,
+          "required": "validated Balanced 1.3 ranking"
+        },
+        "fundamental_score": {
+          "status": "ND",
+          "value": null,
+          "required": "normalized financials and valuation"
+        },
+        "entry_score": {
+          "status": "ND",
+          "value": null,
+          "required": "technical entry model with OHLCV"
+        },
+        "base_upside": {
+          "status": "ND",
+          "value": null,
+          "required": "probability-weighted Bear/Base/Bull valuation"
+        },
+        "risk_reward": {
+          "status": "ND",
+          "value": null,
+          "required": "validated entry, stop-loss and target"
+        },
+        "data_quality": {
+          "status": "ND",
+          "value": null,
+          "required": "period-consistent fundamentals and fresh quotes"
+        },
+        "analyst_consensus": {
+          "status": "ND",
+          "value": null,
+          "required": "timestamped analyst target history"
+        },
+        "veto_check": {
+          "status": "ND",
+          "value": null,
+          "required": "complete risk and corporate-event review"
+        }
+      },
+      "blockers": [
+        "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
+      ],
+      "recorded_at": "2026-11-12T08:56:19.188063+00:00",
+      "immutable": true
+    },
+    {
+      "ticker": "AVGO",
+      "scan_id": "2026-11-12T08:56:19.183321+00:00",
+      "gates": {
+        "investment_ranking": {
+          "status": "ND",
+          "value": null,
+          "required": "validated Balanced 1.3 ranking"
+        },
+        "fundamental_score": {
+          "status": "ND",
+          "value": null,
+          "required": "normalized financials and valuation"
+        },
+        "entry_score": {
+          "status": "ND",
+          "value": null,
+          "required": "technical entry model with OHLCV"
+        },
+        "base_upside": {
+          "status": "ND",
+          "value": null,
+          "required": "probability-weighted Bear/Base/Bull valuation"
+        },
+        "risk_reward": {
+          "status": "ND",
+          "value": null,
+          "required": "validated entry, stop-loss and target"
+        },
+        "data_quality": {
+          "status": "ND",
+          "value": null,
+          "required": "period-consistent fundamentals and fresh quotes"
+        },
+        "analyst_consensus": {
+          "status": "ND",
+          "value": null,
+          "required": "timestamped analyst target history"
+        },
+        "veto_check": {
+          "status": "ND",
+          "value": null,
+          "required": "complete risk and corporate-event review"
+        }
+      },
+      "blockers": [
+        "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
+      ],
+      "recorded_at": "2026-11-12T08:56:19.189515+00:00",
+      "immutable": true
+    },
+    {
+      "ticker": "PDYN",
+      "scan_id": "2026-11-12T08:56:19.183321+00:00",
+      "gates": {
+        "investment_ranking": {
+          "status": "ND",
+          "value": null,
+          "required": "validated Balanced 1.3 ranking"
+        },
+        "fundamental_score": {
+          "status": "ND",
+          "value": null,
+          "required": "normalized financials and valuation"
+        },
+        "entry_score": {
+          "status": "ND",
+          "value": null,
+          "required": "technical entry model with OHLCV"
+        },
+        "base_upside": {
+          "status": "ND",
+          "value": null,
+          "required": "probability-weighted Bear/Base/Bull valuation"
+        },
+        "risk_reward": {
+          "status": "ND",
+          "value": null,
+          "required": "validated entry, stop-loss and target"
+        },
+        "data_quality": {
+          "status": "ND",
+          "value": null,
+          "required": "period-consistent fundamentals and fresh quotes"
+        },
+        "analyst_consensus": {
+          "status": "ND",
+          "value": null,
+          "required": "timestamped analyst target history"
+        },
+        "veto_check": {
+          "status": "ND",
+          "value": null,
+          "required": "complete risk and corporate-event review"
+        }
+      },
+      "blockers": [
+        "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
+      ],
+      "recorded_at": "2026-11-12T08:56:19.190961+00:00",
+      "immutable": true
+    },
+    {
+      "ticker": "TER",
+      "scan_id": "2026-11-12T08:56:19.183321+00:00",
+      "gates": {
+        "investment_ranking": {
+          "status": "ND",
+          "value": null,
+          "required": "validated Balanced 1.3 ranking"
+        },
+        "fundamental_score": {
+          "status": "ND",
+          "value": null,
+          "required": "normalized financials and valuation"
+        },
+        "entry_score": {
+          "status": "ND",
+          "value": null,
+          "required": "technical entry model with OHLCV"
+        },
+        "base_upside": {
+          "status": "ND",
+          "value": null,
+          "required": "probability-weighted Bear/Base/Bull valuation"
+        },
+        "risk_reward": {
+          "status": "ND",
+          "value": null,
+          "required": "validated entry, stop-loss and target"
+        },
+        "data_quality": {
+          "status": "ND",
+          "value": null,
+          "required": "period-consistent fundamentals and fresh quotes"
+        },
+        "analyst_consensus": {
+          "status": "ND",
+          "value": null,
+          "required": "timestamped analyst target history"
+        },
+        "veto_check": {
+          "status": "ND",
+          "value": null,
+          "required": "complete risk and corporate-event review"
+        }
+      },
+      "blockers": [
+        "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
+      ],
+      "recorded_at": "2026-11-12T08:56:19.192496+00:00",
+      "immutable": true
+    },
+    {
+      "ticker": "TSM",
+      "scan_id": "2026-11-12T08:56:19.183321+00:00",
+      "gates": {
+        "investment_ranking": {
+          "status": "ND",
+          "value": null,
+          "required": "validated Balanced 1.3 ranking"
+        },
+        "fundamental_score": {
+          "status": "ND",
+          "value": null,
+          "required": "normalized financials and valuation"
+        },
+        "entry_score": {
+          "status": "ND",
+          "value": null,
+          "required": "technical entry model with OHLCV"
+        },
+        "base_upside": {
+          "status": "ND",
+          "value": null,
+          "required": "probability-weighted Bear/Base/Bull valuation"
+        },
+        "risk_reward": {
+          "status": "ND",
+          "value": null,
+          "required": "validated entry, stop-loss and target"
+        },
+        "data_quality": {
+          "status": "ND",
+          "value": null,
+          "required": "period-consistent fundamentals and fresh quotes"
+        },
+        "analyst_consensus": {
+          "status": "ND",
+          "value": null,
+          "required": "timestamped analyst target history"
+        },
+        "veto_check": {
+          "status": "ND",
+          "value": null,
+          "required": "complete risk and corporate-event review"
+        }
+      },
+      "blockers": [
+        "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
+      ],
+      "recorded_at": "2026-11-12T08:56:19.194065+00:00",
+      "immutable": true
+    },
+    {
+      "ticker": "VRT",
+      "scan_id": "2026-11-12T08:56:19.183321+00:00",
+      "gates": {
+        "investment_ranking": {
+          "status": "ND",
+          "value": null,
+          "required": "validated Balanced 1.3 ranking"
+        },
+        "fundamental_score": {
+          "status": "ND",
+          "value": null,
+          "required": "normalized financials and valuation"
+        },
+        "entry_score": {
+          "status": "ND",
+          "value": null,
+          "required": "technical entry model with OHLCV"
+        },
+        "base_upside": {
+          "status": "ND",
+          "value": null,
+          "required": "probability-weighted Bear/Base/Bull valuation"
+        },
+        "risk_reward": {
+          "status": "ND",
+          "value": null,
+          "required": "validated entry, stop-loss and target"
+        },
+        "data_quality": {
+          "status": "ND",
+          "value": null,
+          "required": "period-consistent fundamentals and fresh quotes"
+        },
+        "analyst_consensus": {
+          "status": "ND",
+          "value": null,
+          "required": "timestamped analyst target history"
+        },
+        "veto_check": {
+          "status": "ND",
+          "value": null,
+          "required": "complete risk and corporate-event review"
+        }
+      },
+      "blockers": [
+        "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
+      ],
+      "recorded_at": "2026-11-12T08:56:19.195669+00:00",
+      "immutable": true
+    },
+    {
+      "ticker": "AMZN",
+      "scan_id": "2026-11-12T08:56:19.183321+00:00",
+      "gates": {
+        "investment_ranking": {
+          "status": "ND",
+          "value": null,
+          "required": "validated Balanced 1.3 ranking"
+        },
+        "fundamental_score": {
+          "status": "ND",
+          "value": null,
+          "required": "normalized financials and valuation"
+        },
+        "entry_score": {
+          "status": "ND",
+          "value": null,
+          "required": "technical entry model with OHLCV"
+        },
+        "base_upside": {
+          "status": "ND",
+          "value": null,
+          "required": "probability-weighted Bear/Base/Bull valuation"
+        },
+        "risk_reward": {
+          "status": "ND",
+          "value": null,
+          "required": "validated entry, stop-loss and target"
+        },
+        "data_quality": {
+          "status": "ND",
+          "value": null,
+          "required": "period-consistent fundamentals and fresh quotes"
+        },
+        "analyst_consensus": {
+          "status": "ND",
+          "value": null,
+          "required": "timestamped analyst target history"
+        },
+        "veto_check": {
+          "status": "ND",
+          "value": null,
+          "required": "complete risk and corporate-event review"
+        }
+      },
+      "blockers": [
+        "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
+      ],
+      "recorded_at": "2026-11-12T08:56:19.197300+00:00",
+      "immutable": true
+    },
+    {
+      "ticker": "COHR",
+      "scan_id": "2026-11-12T08:56:19.183321+00:00",
+      "gates": {
+        "investment_ranking": {
+          "status": "ND",
+          "value": null,
+          "required": "validated Balanced 1.3 ranking"
+        },
+        "fundamental_score": {
+          "status": "ND",
+          "value": null,
+          "required": "normalized financials and valuation"
+        },
+        "entry_score": {
+          "status": "ND",
+          "value": null,
+          "required": "technical entry model with OHLCV"
+        },
+        "base_upside": {
+          "status": "ND",
+          "value": null,
+          "required": "probability-weighted Bear/Base/Bull valuation"
+        },
+        "risk_reward": {
+          "status": "ND",
+          "value": null,
+          "required": "validated entry, stop-loss and target"
+        },
+        "data_quality": {
+          "status": "ND",
+          "value": null,
+          "required": "period-consistent fundamentals and fresh quotes"
+        },
+        "analyst_consensus": {
+          "status": "ND",
+          "value": null,
+          "required": "timestamped analyst target history"
+        },
+        "veto_check": {
+          "status": "ND",
+          "value": null,
+          "required": "complete risk and corporate-event review"
+        }
+      },
+      "blockers": [
+        "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
+      ],
+      "recorded_at": "2026-11-12T08:56:19.199008+00:00",
+      "immutable": true
+    },
+    {
+      "ticker": "DELL",
+      "scan_id": "2026-11-12T08:56:19.183321+00:00",
+      "gates": {
+        "investment_ranking": {
+          "status": "ND",
+          "value": null,
+          "required": "validated Balanced 1.3 ranking"
+        },
+        "fundamental_score": {
+          "status": "ND",
+          "value": null,
+          "required": "normalized financials and valuation"
+        },
+        "entry_score": {
+          "status": "ND",
+          "value": null,
+          "required": "technical entry model with OHLCV"
+        },
+        "base_upside": {
+          "status": "ND",
+          "value": null,
+          "required": "probability-weighted Bear/Base/Bull valuation"
+        },
+        "risk_reward": {
+          "status": "ND",
+          "value": null,
+          "required": "validated entry, stop-loss and target"
+        },
+        "data_quality": {
+          "status": "ND",
+          "value": null,
+          "required": "period-consistent fundamentals and fresh quotes"
+        },
+        "analyst_consensus": {
+          "status": "ND",
+          "value": null,
+          "required": "timestamped analyst target history"
+        },
+        "veto_check": {
+          "status": "ND",
+          "value": null,
+          "required": "complete risk and corporate-event review"
+        }
+      },
+      "blockers": [
+        "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
+      ],
+      "recorded_at": "2026-11-12T08:56:19.200743+00:00",
+      "immutable": true
+    },
+    {
+      "ticker": "LITE",
+      "scan_id": "2026-11-12T08:56:19.183321+00:00",
+      "gates": {
+        "investment_ranking": {
+          "status": "ND",
+          "value": null,
+          "required": "validated Balanced 1.3 ranking"
+        },
+        "fundamental_score": {
+          "status": "ND",
+          "value": null,
+          "required": "normalized financials and valuation"
+        },
+        "entry_score": {
+          "status": "ND",
+          "value": null,
+          "required": "technical entry model with OHLCV"
+        },
+        "base_upside": {
+          "status": "ND",
+          "value": null,
+          "required": "probability-weighted Bear/Base/Bull valuation"
+        },
+        "risk_reward": {
+          "status": "ND",
+          "value": null,
+          "required": "validated entry, stop-loss and target"
+        },
+        "data_quality": {
+          "status": "ND",
+          "value": null,
+          "required": "period-consistent fundamentals and fresh quotes"
+        },
+        "analyst_consensus": {
+          "status": "ND",
+          "value": null,
+          "required": "timestamped analyst target history"
+        },
+        "veto_check": {
+          "status": "ND",
+          "value": null,
+          "required": "complete risk and corporate-event review"
+        }
+      },
+      "blockers": [
+        "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
+      ],
+      "recorded_at": "2026-11-12T08:56:19.202559+00:00",
+      "immutable": true
+    },
+    {
+      "ticker": "OUST",
+      "scan_id": "2026-11-12T08:56:19.183321+00:00",
+      "gates": {
+        "investment_ranking": {
+          "status": "ND",
+          "value": null,
+          "required": "validated Balanced 1.3 ranking"
+        },
+        "fundamental_score": {
+          "status": "ND",
+          "value": null,
+          "required": "normalized financials and valuation"
+        },
+        "entry_score": {
+          "status": "ND",
+          "value": null,
+          "required": "technical entry model with OHLCV"
+        },
+        "base_upside": {
+          "status": "ND",
+          "value": null,
+          "required": "probability-weighted Bear/Base/Bull valuation"
+        },
+        "risk_reward": {
+          "status": "ND",
+          "value": null,
+          "required": "validated entry, stop-loss and target"
+        },
+        "data_quality": {
+          "status": "ND",
+          "value": null,
+          "required": "period-consistent fundamentals and fresh quotes"
+        },
+        "analyst_consensus": {
+          "status": "ND",
+          "value": null,
+          "required": "timestamped analyst target history"
+        },
+        "veto_check": {
+          "status": "ND",
+          "value": null,
+          "required": "complete risk and corporate-event review"
+        }
+      },
+      "blockers": [
+        "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
+      ],
+      "recorded_at": "2026-11-12T08:56:19.204407+00:00",
+      "immutable": true
+    },
+    {
+      "ticker": "PWR",
+      "scan_id": "2026-11-12T08:56:19.183321+00:00",
+      "gates": {
+        "investment_ranking": {
+          "status": "ND",
+          "value": null,
+          "required": "validated Balanced 1.3 ranking"
+        },
+        "fundamental_score": {
+          "status": "ND",
+          "value": null,
+          "required": "normalized financials and valuation"
+        },
+        "entry_score": {
+          "status": "ND",
+          "value": null,
+          "required": "technical entry model with OHLCV"
+        },
+        "base_upside": {
+          "status": "ND",
+          "value": null,
+          "required": "probability-weighted Bear/Base/Bull valuation"
+        },
+        "risk_reward": {
+          "status": "ND",
+          "value": null,
+          "required": "validated entry, stop-loss and target"
+        },
+        "data_quality": {
+          "status": "ND",
+          "value": null,
+          "required": "period-consistent fundamentals and fresh quotes"
+        },
+        "analyst_consensus": {
+          "status": "ND",
+          "value": null,
+          "required": "timestamped analyst target history"
+        },
+        "veto_check": {
+          "status": "ND",
+          "value": null,
+          "required": "complete risk and corporate-event review"
+        }
+      },
+      "blockers": [
+        "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
+      ],
+      "recorded_at": "2026-11-12T08:56:19.206281+00:00",
+      "immutable": true
+    },
+    {
+      "ticker": "QCOM",
+      "scan_id": "2026-11-12T08:56:19.183321+00:00",
+      "gates": {
+        "investment_ranking": {
+          "status": "ND",
+          "value": null,
+          "required": "validated Balanced 1.3 ranking"
+        },
+        "fundamental_score": {
+          "status": "ND",
+          "value": null,
+          "required": "normalized financials and valuation"
+        },
+        "entry_score": {
+          "status": "ND",
+          "value": null,
+          "required": "technical entry model with OHLCV"
+        },
+        "base_upside": {
+          "status": "ND",
+          "value": null,
+          "required": "probability-weighted Bear/Base/Bull valuation"
+        },
+        "risk_reward": {
+          "status": "ND",
+          "value": null,
+          "required": "validated entry, stop-loss and target"
+        },
+        "data_quality": {
+          "status": "ND",
+          "value": null,
+          "required": "period-consistent fundamentals and fresh quotes"
+        },
+        "analyst_consensus": {
+          "status": "ND",
+          "value": null,
+          "required": "timestamped analyst target history"
+        },
+        "veto_check": {
+          "status": "ND",
+          "value": null,
+          "required": "complete risk and corporate-event review"
+        }
+      },
+      "blockers": [
+        "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
+      ],
+      "recorded_at": "2026-11-12T08:56:19.208196+00:00",
+      "immutable": true
+    },
+    {
+      "ticker": "SIEGY",
+      "scan_id": "2026-11-12T08:56:19.183321+00:00",
+      "gates": {
+        "investment_ranking": {
+          "status": "ND",
+          "value": null,
+          "required": "validated Balanced 1.3 ranking"
+        },
+        "fundamental_score": {
+          "status": "ND",
+          "value": null,
+          "required": "normalized financials and valuation"
+        },
+        "entry_score": {
+          "status": "ND",
+          "value": null,
+          "required": "technical entry model with OHLCV"
+        },
+        "base_upside": {
+          "status": "ND",
+          "value": null,
+          "required": "probability-weighted Bear/Base/Bull valuation"
+        },
+        "risk_reward": {
+          "status": "ND",
+          "value": null,
+          "required": "validated entry, stop-loss and target"
+        },
+        "data_quality": {
+          "status": "ND",
+          "value": null,
+          "required": "period-consistent fundamentals and fresh quotes"
+        },
+        "analyst_consensus": {
+          "status": "ND",
+          "value": null,
+          "required": "timestamped analyst target history"
+        },
+        "veto_check": {
+          "status": "ND",
+          "value": null,
+          "required": "complete risk and corporate-event review"
+        }
+      },
+      "blockers": [
+        "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
+      ],
+      "recorded_at": "2026-11-12T08:56:19.210173+00:00",
+      "immutable": true
+    },
+    {
+      "ticker": "ABB",
+      "scan_id": "2026-11-12T08:56:19.183321+00:00",
+      "gates": {
+        "investment_ranking": {
+          "status": "ND",
+          "value": null,
+          "required": "validated Balanced 1.3 ranking"
+        },
+        "fundamental_score": {
+          "status": "ND",
+          "value": null,
+          "required": "normalized financials and valuation"
+        },
+        "entry_score": {
+          "status": "ND",
+          "value": null,
+          "required": "technical entry model with OHLCV"
+        },
+        "base_upside": {
+          "status": "ND",
+          "value": null,
+          "required": "probability-weighted Bear/Base/Bull valuation"
+        },
+        "risk_reward": {
+          "status": "ND",
+          "value": null,
+          "required": "validated entry, stop-loss and target"
+        },
+        "data_quality": {
+          "status": "ND",
+          "value": null,
+          "required": "period-consistent fundamentals and fresh quotes"
+        },
+        "analyst_consensus": {
+          "status": "ND",
+          "value": null,
+          "required": "timestamped analyst target history"
+        },
+        "veto_check": {
+          "status": "ND",
+          "value": null,
+          "required": "complete risk and corporate-event review"
+        }
+      },
+      "blockers": [
+        "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
+      ],
+      "recorded_at": "2026-11-12T08:56:19.212172+00:00",
+      "immutable": true
+    },
+    {
+      "ticker": "ACHR",
+      "scan_id": "2026-11-12T08:56:19.183321+00:00",
+      "gates": {
+        "investment_ranking": {
+          "status": "ND",
+          "value": null,
+          "required": "validated Balanced 1.3 ranking"
+        },
+        "fundamental_score": {
+          "status": "ND",
+          "value": null,
+          "required": "normalized financials and valuation"
+        },
+        "entry_score": {
+          "status": "ND",
+          "value": null,
+          "required": "technical entry model with OHLCV"
+        },
+        "base_upside": {
+          "status": "ND",
+          "value": null,
+          "required": "probability-weighted Bear/Base/Bull valuation"
+        },
+        "risk_reward": {
+          "status": "ND",
+          "value": null,
+          "required": "validated entry, stop-loss and target"
+        },
+        "data_quality": {
+          "status": "ND",
+          "value": null,
+          "required": "period-consistent fundamentals and fresh quotes"
+        },
+        "analyst_consensus": {
+          "status": "ND",
+          "value": null,
+          "required": "timestamped analyst target history"
+        },
+        "veto_check": {
+          "status": "ND",
+          "value": null,
+          "required": "complete risk and corporate-event review"
+        }
+      },
+      "blockers": [
+        "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
+      ],
+      "recorded_at": "2026-11-12T08:56:19.214219+00:00",
+      "immutable": true
+    },
+    {
+      "ticker": "AI",
+      "scan_id": "2026-11-12T08:56:19.183321+00:00",
+      "gates": {
+        "investment_ranking": {
+          "status": "ND",
+          "value": null,
+          "required": "validated Balanced 1.3 ranking"
+        },
+        "fundamental_score": {
+          "status": "ND",
+          "value": null,
+          "required": "normalized financials and valuation"
+        },
+        "entry_score": {
+          "status": "ND",
+          "value": null,
+          "required": "technical entry model with OHLCV"
+        },
+        "base_upside": {
+          "status": "ND",
+          "value": null,
+          "required": "probability-weighted Bear/Base/Bull valuation"
+        },
+        "risk_reward": {
+          "status": "ND",
+          "value": null,
+          "required": "validated entry, stop-loss and target"
+        },
+        "data_quality": {
+          "status": "ND",
+          "value": null,
+          "required": "period-consistent fundamentals and fresh quotes"
+        },
+        "analyst_consensus": {
+          "status": "ND",
+          "value": null,
+          "required": "timestamped analyst target history"
+        },
+        "veto_check": {
+          "status": "ND",
+          "value": null,
+          "required": "complete risk and corporate-event review"
+        }
+      },
+      "blockers": [
+        "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
+      ],
+      "recorded_at": "2026-11-12T08:56:19.216397+00:00",
+      "immutable": true
+    },
+    {
+      "ticker": "ALAB",
+      "scan_id": "2026-11-12T08:56:19.183321+00:00",
+      "gates": {
+        "investment_ranking": {
+          "status": "ND",
+          "value": null,
+          "required": "validated Balanced 1.3 ranking"
+        },
+        "fundamental_score": {
+          "status": "ND",
+          "value": null,
+          "required": "normalized financials and valuation"
+        },
+        "entry_score": {
+          "status": "ND",
+          "value": null,
+          "required": "technical entry model with OHLCV"
+        },
+        "base_upside": {
+          "status": "ND",
+          "value": null,
+          "required": "probability-weighted Bear/Base/Bull valuation"
+        },
+        "risk_reward": {
+          "status": "ND",
+          "value": null,
+          "required": "validated entry, stop-loss and target"
+        },
+        "data_quality": {
+          "status": "ND",
+          "value": null,
+          "required": "period-consistent fundamentals and fresh quotes"
+        },
+        "analyst_consensus": {
+          "status": "ND",
+          "value": null,
+          "required": "timestamped analyst target history"
+        },
+        "veto_check": {
+          "status": "ND",
+          "value": null,
+          "required": "complete risk and corporate-event review"
+        }
+      },
+      "blockers": [
+        "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
+      ],
+      "recorded_at": "2026-11-12T08:56:19.218543+00:00",
+      "immutable": true
+    },
+    {
+      "ticker": "AMAT",
+      "scan_id": "2026-11-12T08:56:19.183321+00:00",
+      "gates": {
+        "investment_ranking": {
+          "status": "ND",
+          "value": null,
+          "required": "validated Balanced 1.3 ranking"
+        },
+        "fundamental_score": {
+          "status": "ND",
+          "value": null,
+          "required": "normalized financials and valuation"
+        },
+        "entry_score": {
+          "status": "ND",
+          "value": null,
+          "required": "technical entry model with OHLCV"
+        },
+        "base_upside": {
+          "status": "ND",
+          "value": null,
+          "required": "probability-weighted Bear/Base/Bull valuation"
+        },
+        "risk_reward": {
+          "status": "ND",
+          "value": null,
+          "required": "validated entry, stop-loss and target"
+        },
+        "data_quality": {
+          "status": "ND",
+          "value": null,
+          "required": "period-consistent fundamentals and fresh quotes"
+        },
+        "analyst_consensus": {
+          "status": "ND",
+          "value": null,
+          "required": "timestamped analyst target history"
+        },
+        "veto_check": {
+          "status": "ND",
+          "value": null,
+          "required": "complete risk and corporate-event review"
+        }
+      },
+      "blockers": [
+        "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
+      ],
+      "recorded_at": "2026-11-12T08:56:19.220734+00:00",
+      "immutable": true
+    },
+    {
+      "ticker": "AMD",
+      "scan_id": "2026-11-12T08:56:19.183321+00:00",
+      "gates": {
+        "investment_ranking": {
+          "status": "ND",
+          "value": null,
+          "required": "validated Balanced 1.3 ranking"
+        },
+        "fundamental_score": {
+          "status": "ND",
+          "value": null,
+          "required": "normalized financials and valuation"
+        },
+        "entry_score": {
+          "status": "ND",
+          "value": null,
+          "required": "technical entry model with OHLCV"
+        },
+        "base_upside": {
+          "status": "ND",
+          "value": null,
+          "required": "probability-weighted Bear/Base/Bull valuation"
+        },
+        "risk_reward": {
+          "status": "ND",
+          "value": null,
+          "required": "validated entry, stop-loss and target"
+        },
+        "data_quality": {
+          "status": "ND",
+          "value": null,
+          "required": "period-consistent fundamentals and fresh quotes"
+        },
+        "analyst_consensus": {
+          "status": "ND",
+          "value": null,
+          "required": "timestamped analyst target history"
+        },
+        "veto_check": {
+          "status": "ND",
+          "value": null,
+          "required": "complete risk and corporate-event review"
+        }
+      },
+      "blockers": [
+        "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
+      ],
+      "recorded_at": "2026-11-12T08:56:19.222952+00:00",
+      "immutable": true
+    },
+    {
+      "ticker": "ANET",
+      "scan_id": "2026-11-12T08:56:19.183321+00:00",
+      "gates": {
+        "investment_ranking": {
+          "status": "ND",
+          "value": null,
+          "required": "validated Balanced 1.3 ranking"
+        },
+        "fundamental_score": {
+          "status": "ND",
+          "value": null,
+          "required": "normalized financials and valuation"
+        },
+        "entry_score": {
+          "status": "ND",
+          "value": null,
+          "required": "technical entry model with OHLCV"
+        },
+        "base_upside": {
+          "status": "ND",
+          "value": null,
+          "required": "probability-weighted Bear/Base/Bull valuation"
+        },
+        "risk_reward": {
+          "status": "ND",
+          "value": null,
+          "required": "validated entry, stop-loss and target"
+        },
+        "data_quality": {
+          "status": "ND",
+          "value": null,
+          "required": "period-consistent fundamentals and fresh quotes"
+        },
+        "analyst_consensus": {
+          "status": "ND",
+          "value": null,
+          "required": "timestamped analyst target history"
+        },
+        "veto_check": {
+          "status": "ND",
+          "value": null,
+          "required": "complete risk and corporate-event review"
+        }
+      },
+      "blockers": [
+        "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
+      ],
+      "recorded_at": "2026-11-12T08:56:19.225206+00:00",
+      "immutable": true
+    },
+    {
+      "ticker": "APH",
+      "scan_id": "2026-11-12T08:56:19.183321+00:00",
+      "gates": {
+        "investment_ranking": {
+          "status": "ND",
+          "value": null,
+          "required": "validated Balanced 1.3 ranking"
+        },
+        "fundamental_score": {
+          "status": "ND",
+          "value": null,
+          "required": "normalized financials and valuation"
+        },
+        "entry_score": {
+          "status": "ND",
+          "value": null,
+          "required": "technical entry model with OHLCV"
+        },
+        "base_upside": {
+          "status": "ND",
+          "value": null,
+          "required": "probability-weighted Bear/Base/Bull valuation"
+        },
+        "risk_reward": {
+          "status": "ND",
+          "value": null,
+          "required": "validated entry, stop-loss and target"
+        },
+        "data_quality": {
+          "status": "ND",
+          "value": null,
+          "required": "period-consistent fundamentals and fresh quotes"
+        },
+        "analyst_consensus": {
+          "status": "ND",
+          "value": null,
+          "required": "timestamped analyst target history"
+        },
+        "veto_check": {
+          "status": "ND",
+          "value": null,
+          "required": "complete risk and corporate-event review"
+        }
+      },
+      "blockers": [
+        "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
+      ],
+      "recorded_at": "2026-11-12T08:56:19.227543+00:00",
+      "immutable": true
+    },
+    {
+      "ticker": "ARM",
+      "scan_id": "2026-11-12T08:56:19.183321+00:00",
+      "gates": {
+        "investment_ranking": {
+          "status": "ND",
+          "value": null,
+          "required": "validated Balanced 1.3 ranking"
+        },
+        "fundamental_score": {
+          "status": "ND",
+          "value": null,
+          "required": "normalized financials and valuation"
+        },
+        "entry_score": {
+          "status": "ND",
+          "value": null,
+          "required": "technical entry model with OHLCV"
+        },
+        "base_upside": {
+          "status": "ND",
+          "value": null,
+          "required": "probability-weighted Bear/Base/Bull valuation"
+        },
+        "risk_reward": {
+          "status": "ND",
+          "value": null,
+          "required": "validated entry, stop-loss and target"
+        },
+        "data_quality": {
+          "status": "ND",
+          "value": null,
+          "required": "period-consistent fundamentals and fresh quotes"
+        },
+        "analyst_consensus": {
+          "status": "ND",
+          "value": null,
+          "required": "timestamped analyst target history"
+        },
+        "veto_check": {
+          "status": "ND",
+          "value": null,
+          "required": "complete risk and corporate-event review"
+        }
+      },
+      "blockers": [
+        "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
+      ],
+      "recorded_at": "2026-11-12T08:56:19.229944+00:00",
+      "immutable": true
+    },
+    {
+      "ticker": "ASML",
+      "scan_id": "2026-11-12T08:56:19.183321+00:00",
+      "gates": {
+        "investment_ranking": {
+          "status": "ND",
+          "value": null,
+          "required": "validated Balanced 1.3 ranking"
+        },
+        "fundamental_score": {
+          "status": "ND",
+          "value": null,
+          "required": "normalized financials and valuation"
+        },
+        "entry_score": {
+          "status": "ND",
+          "value": null,
+          "required": "technical entry model with OHLCV"
+        },
+        "base_upside": {
+          "status": "ND",
+          "value": null,
+          "required": "probability-weighted Bear/Base/Bull valuation"
+        },
+        "risk_reward": {
+          "status": "ND",
+          "value": null,
+          "required": "validated entry, stop-loss and target"
+        },
+        "data_quality": {
+          "status": "ND",
+          "value": null,
+          "required": "period-consistent fundamentals and fresh quotes"
+        },
+        "analyst_consensus": {
+          "status": "ND",
+          "value": null,
+          "required": "timestamped analyst target history"
+        },
+        "veto_check": {
+          "status": "ND",
+          "value": null,
+          "required": "complete risk and corporate-event review"
+        }
+      },
+      "blockers": [
+        "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
+      ],
+      "recorded_at": "2026-11-12T08:56:19.232340+00:00",
+      "immutable": true
+    },
+    {
+      "ticker": "AZTA",
+      "scan_id": "2026-11-12T08:56:19.183321+00:00",
+      "gates": {
+        "investment_ranking": {
+          "status": "ND",
+          "value": null,
+          "required": "validated Balanced 1.3 ranking"
+        },
+        "fundamental_score": {
+          "status": "ND",
+          "value": null,
+          "required": "normalized financials and valuation"
+        },
+        "entry_score": {
+          "status": "ND",
+          "value": null,
+          "required": "technical entry model with OHLCV"
+        },
+        "base_upside": {
+          "status": "ND",
+          "value": null,
+          "required": "probability-weighted Bear/Base/Bull valuation"
+        },
+        "risk_reward": {
+          "status": "ND",
+          "value": null,
+          "required": "validated entry, stop-loss and target"
+        },
+        "data_quality": {
+          "status": "ND",
+          "value": null,
+          "required": "period-consistent fundamentals and fresh quotes"
+        },
+        "analyst_consensus": {
+          "status": "ND",
+          "value": null,
+          "required": "timestamped analyst target history"
+        },
+        "veto_check": {
+          "status": "ND",
+          "value": null,
+          "required": "complete risk and corporate-event review"
+        }
+      },
+      "blockers": [
+        "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
+      ],
+      "recorded_at": "2026-11-12T08:56:19.234808+00:00",
+      "immutable": true
+    },
+    {
+      "ticker": "BBAI",
+      "scan_id": "2026-11-12T08:56:19.183321+00:00",
+      "gates": {
+        "investment_ranking": {
+          "status": "ND",
+          "value": null,
+          "required": "validated Balanced 1.3 ranking"
+        },
+        "fundamental_score": {
+          "status": "ND",
+          "value": null,
+          "required": "normalized financials and valuation"
+        },
+        "entry_score": {
+          "status": "ND",
+          "value": null,
+          "required": "technical entry model with OHLCV"
+        },
+        "base_upside": {
+          "status": "ND",
+          "value": null,
+          "required": "probability-weighted Bear/Base/Bull valuation"
+        },
+        "risk_reward": {
+          "status": "ND",
+          "value": null,
+          "required": "validated entry, stop-loss and target"
+        },
+        "data_quality": {
+          "status": "ND",
+          "value": null,
+          "required": "period-consistent fundamentals and fresh quotes"
+        },
+        "analyst_consensus": {
+          "status": "ND",
+          "value": null,
+          "required": "timestamped analyst target history"
+        },
+        "veto_check": {
+          "status": "ND",
+          "value": null,
+          "required": "complete risk and corporate-event review"
+        }
+      },
+      "blockers": [
+        "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
+      ],
+      "recorded_at": "2026-11-12T08:56:19.237306+00:00",
+      "immutable": true
+    },
+    {
+      "ticker": "CGNX",
+      "scan_id": "2026-11-12T08:56:19.183321+00:00",
+      "gates": {
+        "investment_ranking": {
+          "status": "ND",
+          "value": null,
+          "required": "validated Balanced 1.3 ranking"
+        },
+        "fundamental_score": {
+          "status": "ND",
+          "value": null,
+          "required": "normalized financials and valuation"
+        },
+        "entry_score": {
+          "status": "ND",
+          "value": null,
+          "required": "technical entry model with OHLCV"
+        },
+        "base_upside": {
+          "status": "ND",
+          "value": null,
+          "required": "probability-weighted Bear/Base/Bull valuation"
+        },
+        "risk_reward": {
+          "status": "ND",
+          "value": null,
+          "required": "validated entry, stop-loss and target"
+        },
+        "data_quality": {
+          "status": "ND",
+          "value": null,
+          "required": "period-consistent fundamentals and fresh quotes"
+        },
+        "analyst_consensus": {
+          "status": "ND",
+          "value": null,
+          "required": "timestamped analyst target history"
+        },
+        "veto_check": {
+          "status": "ND",
+          "value": null,
+          "required": "complete risk and corporate-event review"
+        }
+      },
+      "blockers": [
+        "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
+      ],
+      "recorded_at": "2026-11-12T08:56:19.239835+00:00",
+      "immutable": true
+    },
+    {
+      "ticker": "CLS",
+      "scan_id": "2026-11-12T08:56:19.183321+00:00",
+      "gates": {
+        "investment_ranking": {
+          "status": "ND",
+          "value": null,
+          "required": "validated Balanced 1.3 ranking"
+        },
+        "fundamental_score": {
+          "status": "ND",
+          "value": null,
+          "required": "normalized financials and valuation"
+        },
+        "entry_score": {
+          "status": "ND",
+          "value": null,
+          "required": "technical entry model with OHLCV"
+        },
+        "base_upside": {
+          "status": "ND",
+          "value": null,
+          "required": "probability-weighted Bear/Base/Bull valuation"
+        },
+        "risk_reward": {
+          "status": "ND",
+          "value": null,
+          "required": "validated entry, stop-loss and target"
+        },
+        "data_quality": {
+          "status": "ND",
+          "value": null,
+          "required": "period-consistent fundamentals and fresh quotes"
+        },
+        "analyst_consensus": {
+          "status": "ND",
+          "value": null,
+          "required": "timestamped analyst target history"
+        },
+        "veto_check": {
+          "status": "ND",
+          "value": null,
+          "required": "complete risk and corporate-event review"
+        }
+      },
+      "blockers": [
+        "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
+      ],
+      "recorded_at": "2026-11-12T08:56:19.242396+00:00",
+      "immutable": true
+    },
+    {
+      "ticker": "CRDO",
+      "scan_id": "2026-11-12T08:56:19.183321+00:00",
+      "gates": {
+        "investment_ranking": {
+          "status": "ND",
+          "value": null,
+          "required": "validated Balanced 1.3 ranking"
+        },
+        "fundamental_score": {
+          "status": "ND",
+          "value": null,
+          "required": "normalized financials and valuation"
+        },
+        "entry_score": {
+          "status": "ND",
+          "value": null,
+          "required": "technical entry model with OHLCV"
+        },
+        "base_upside": {
+          "status": "ND",
+          "value": null,
+          "required": "probability-weighted Bear/Base/Bull valuation"
+        },
+        "risk_reward": {
+          "status": "ND",
+          "value": null,
+          "required": "validated entry, stop-loss and target"
+        },
+        "data_quality": {
+          "status": "ND",
+          "value": null,
+          "required": "period-consistent fundamentals and fresh quotes"
+        },
+        "analyst_consensus": {
+          "status": "ND",
+          "value": null,
+          "required": "timestamped analyst target history"
+        },
+        "veto_check": {
+          "status": "ND",
+          "value": null,
+          "required": "complete risk and corporate-event review"
+        }
+      },
+      "blockers": [
+        "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
+      ],
+      "recorded_at": "2026-11-12T08:56:19.245133+00:00",
+      "immutable": true
+    },
+    {
+      "ticker": "DHR",
+      "scan_id": "2026-11-12T08:56:19.183321+00:00",
+      "gates": {
+        "investment_ranking": {
+          "status": "ND",
+          "value": null,
+          "required": "validated Balanced 1.3 ranking"
+        },
+        "fundamental_score": {
+          "status": "ND",
+          "value": null,
+          "required": "normalized financials and valuation"
+        },
+        "entry_score": {
+          "status": "ND",
+          "value": null,
+          "required": "technical entry model with OHLCV"
+        },
+        "base_upside": {
+          "status": "ND",
+          "value": null,
+          "required": "probability-weighted Bear/Base/Bull valuation"
+        },
+        "risk_reward": {
+          "status": "ND",
+          "value": null,
+          "required": "validated entry, stop-loss and target"
+        },
+        "data_quality": {
+          "status": "ND",
+          "value": null,
+          "required": "period-consistent fundamentals and fresh quotes"
+        },
+        "analyst_consensus": {
+          "status": "ND",
+          "value": null,
+          "required": "timestamped analyst target history"
+        },
+        "veto_check": {
+          "status": "ND",
+          "value": null,
+          "required": "complete risk and corporate-event review"
+        }
+      },
+      "blockers": [
+        "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
+      ],
+      "recorded_at": "2026-11-12T08:56:19.247811+00:00",
+      "immutable": true
+    },
+    {
+      "ticker": "EMR",
+      "scan_id": "2026-11-12T08:56:19.183321+00:00",
+      "gates": {
+        "investment_ranking": {
+          "status": "ND",
+          "value": null,
+          "required": "validated Balanced 1.3 ranking"
+        },
+        "fundamental_score": {
+          "status": "ND",
+          "value": null,
+          "required": "normalized financials and valuation"
+        },
+        "entry_score": {
+          "status": "ND",
+          "value": null,
+          "required": "technical entry model with OHLCV"
+        },
+        "base_upside": {
+          "status": "ND",
+          "value": null,
+          "required": "probability-weighted Bear/Base/Bull valuation"
+        },
+        "risk_reward": {
+          "status": "ND",
+          "value": null,
+          "required": "validated entry, stop-loss and target"
+        },
+        "data_quality": {
+          "status": "ND",
+          "value": null,
+          "required": "period-consistent fundamentals and fresh quotes"
+        },
+        "analyst_consensus": {
+          "status": "ND",
+          "value": null,
+          "required": "timestamped analyst target history"
+        },
+        "veto_check": {
+          "status": "ND",
+          "value": null,
+          "required": "complete risk and corporate-event review"
+        }
+      },
+      "blockers": [
+        "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
+      ],
+      "recorded_at": "2026-11-12T08:56:19.250532+00:00",
+      "immutable": true
+    },
+    {
+      "ticker": "ETN",
+      "scan_id": "2026-11-12T08:56:19.183321+00:00",
+      "gates": {
+        "investment_ranking": {
+          "status": "ND",
+          "value": null,
+          "required": "validated Balanced 1.3 ranking"
+        },
+        "fundamental_score": {
+          "status": "ND",
+          "value": null,
+          "required": "normalized financials and valuation"
+        },
+        "entry_score": {
+          "status": "ND",
+          "value": null,
+          "required": "technical entry model with OHLCV"
+        },
+        "base_upside": {
+          "status": "ND",
+          "value": null,
+          "required": "probability-weighted Bear/Base/Bull valuation"
+        },
+        "risk_reward": {
+          "status": "ND",
+          "value": null,
+          "required": "validated entry, stop-loss and target"
+        },
+        "data_quality": {
+          "status": "ND",
+          "value": null,
+          "required": "period-consistent fundamentals and fresh quotes"
+        },
+        "analyst_consensus": {
+          "status": "ND",
+          "value": null,
+          "required": "timestamped analyst target history"
+        },
+        "veto_check": {
+          "status": "ND",
+          "value": null,
+          "required": "complete risk and corporate-event review"
+        }
+      },
+      "blockers": [
+        "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
+      ],
+      "recorded_at": "2026-11-12T08:56:19.253260+00:00",
+      "immutable": true
+    },
+    {
+      "ticker": "FANUY",
+      "scan_id": "2026-11-12T08:56:19.183321+00:00",
+      "gates": {
+        "investment_ranking": {
+          "status": "ND",
+          "value": null,
+          "required": "validated Balanced 1.3 ranking"
+        },
+        "fundamental_score": {
+          "status": "ND",
+          "value": null,
+          "required": "normalized financials and valuation"
+        },
+        "entry_score": {
+          "status": "ND",
+          "value": null,
+          "required": "technical entry model with OHLCV"
+        },
+        "base_upside": {
+          "status": "ND",
+          "value": null,
+          "required": "probability-weighted Bear/Base/Bull valuation"
+        },
+        "risk_reward": {
+          "status": "ND",
+          "value": null,
+          "required": "validated entry, stop-loss and target"
+        },
+        "data_quality": {
+          "status": "ND",
+          "value": null,
+          "required": "period-consistent fundamentals and fresh quotes"
+        },
+        "analyst_consensus": {
+          "status": "ND",
+          "value": null,
+          "required": "timestamped analyst target history"
+        },
+        "veto_check": {
+          "status": "ND",
+          "value": null,
+          "required": "complete risk and corporate-event review"
+        }
+      },
+      "blockers": [
+        "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
+      ],
+      "recorded_at": "2026-11-12T08:56:19.256068+00:00",
+      "immutable": true
+    },
+    {
+      "ticker": "GLW",
+      "scan_id": "2026-11-12T08:56:19.183321+00:00",
+      "gates": {
+        "investment_ranking": {
+          "status": "ND",
+          "value": null,
+          "required": "validated Balanced 1.3 ranking"
+        },
+        "fundamental_score": {
+          "status": "ND",
+          "value": null,
+          "required": "normalized financials and valuation"
+        },
+        "entry_score": {
+          "status": "ND",
+          "value": null,
+          "required": "technical entry model with OHLCV"
+        },
+        "base_upside": {
+          "status": "ND",
+          "value": null,
+          "required": "probability-weighted Bear/Base/Bull valuation"
+        },
+        "risk_reward": {
+          "status": "ND",
+          "value": null,
+          "required": "validated entry, stop-loss and target"
+        },
+        "data_quality": {
+          "status": "ND",
+          "value": null,
+          "required": "period-consistent fundamentals and fresh quotes"
+        },
+        "analyst_consensus": {
+          "status": "ND",
+          "value": null,
+          "required": "timestamped analyst target history"
+        },
+        "veto_check": {
+          "status": "ND",
+          "value": null,
+          "required": "complete risk and corporate-event review"
+        }
+      },
+      "blockers": [
+        "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
+      ],
+      "recorded_at": "2026-11-12T08:56:19.258964+00:00",
+      "immutable": true
+    },
+    {
+      "ticker": "HON",
+      "scan_id": "2026-11-12T08:56:19.183321+00:00",
+      "gates": {
+        "investment_ranking": {
+          "status": "ND",
+          "value": null,
+          "required": "validated Balanced 1.3 ranking"
+        },
+        "fundamental_score": {
+          "status": "ND",
+          "value": null,
+          "required": "normalized financials and valuation"
+        },
+        "entry_score": {
+          "status": "ND",
+          "value": null,
+          "required": "technical entry model with OHLCV"
+        },
+        "base_upside": {
+          "status": "ND",
+          "value": null,
+          "required": "probability-weighted Bear/Base/Bull valuation"
+        },
+        "risk_reward": {
+          "status": "ND",
+          "value": null,
+          "required": "validated entry, stop-loss and target"
+        },
+        "data_quality": {
+          "status": "ND",
+          "value": null,
+          "required": "period-consistent fundamentals and fresh quotes"
+        },
+        "analyst_consensus": {
+          "status": "ND",
+          "value": null,
+          "required": "timestamped analyst target history"
+        },
+        "veto_check": {
+          "status": "ND",
+          "value": null,
+          "required": "complete risk and corporate-event review"
+        }
+      },
+      "blockers": [
+        "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
+      ],
+      "recorded_at": "2026-11-12T08:56:19.261879+00:00",
+      "immutable": true
+    },
+    {
+      "ticker": "HUBB",
+      "scan_id": "2026-11-12T08:56:19.183321+00:00",
+      "gates": {
+        "investment_ranking": {
+          "status": "ND",
+          "value": null,
+          "required": "validated Balanced 1.3 ranking"
+        },
+        "fundamental_score": {
+          "status": "ND",
+          "value": null,
+          "required": "normalized financials and valuation"
+        },
+        "entry_score": {
+          "status": "ND",
+          "value": null,
+          "required": "technical entry model with OHLCV"
+        },
+        "base_upside": {
+          "status": "ND",
+          "value": null,
+          "required": "probability-weighted Bear/Base/Bull valuation"
+        },
+        "risk_reward": {
+          "status": "ND",
+          "value": null,
+          "required": "validated entry, stop-loss and target"
+        },
+        "data_quality": {
+          "status": "ND",
+          "value": null,
+          "required": "period-consistent fundamentals and fresh quotes"
+        },
+        "analyst_consensus": {
+          "status": "ND",
+          "value": null,
+          "required": "timestamped analyst target history"
+        },
+        "veto_check": {
+          "status": "ND",
+          "value": null,
+          "required": "complete risk and corporate-event review"
+        }
+      },
+      "blockers": [
+        "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
+      ],
+      "recorded_at": "2026-11-12T08:56:19.264827+00:00",
+      "immutable": true
+    },
+    {
+      "ticker": "IRBT",
+      "scan_id": "2026-11-12T08:56:19.183321+00:00",
+      "gates": {
+        "investment_ranking": {
+          "status": "ND",
+          "value": null,
+          "required": "validated Balanced 1.3 ranking"
+        },
+        "fundamental_score": {
+          "status": "ND",
+          "value": null,
+          "required": "normalized financials and valuation"
+        },
+        "entry_score": {
+          "status": "ND",
+          "value": null,
+          "required": "technical entry model with OHLCV"
+        },
+        "base_upside": {
+          "status": "ND",
+          "value": null,
+          "required": "probability-weighted Bear/Base/Bull valuation"
+        },
+        "risk_reward": {
+          "status": "ND",
+          "value": null,
+          "required": "validated entry, stop-loss and target"
+        },
+        "data_quality": {
+          "status": "ND",
+          "value": null,
+          "required": "period-consistent fundamentals and fresh quotes"
+        },
+        "analyst_consensus": {
+          "status": "ND",
+          "value": null,
+          "required": "timestamped analyst target history"
+        },
+        "veto_check": {
+          "status": "ND",
+          "value": null,
+          "required": "complete risk and corporate-event review"
+        }
+      },
+      "blockers": [
+        "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
+      ],
+      "recorded_at": "2026-11-12T08:56:19.267837+00:00",
+      "immutable": true
+    },
+    {
+      "ticker": "ISRG",
+      "scan_id": "2026-11-12T08:56:19.183321+00:00",
+      "gates": {
+        "investment_ranking": {
+          "status": "ND",
+          "value": null,
+          "required": "validated Balanced 1.3 ranking"
+        },
+        "fundamental_score": {
+          "status": "ND",
+          "value": null,
+          "required": "normalized financials and valuation"
+        },
+        "entry_score": {
+          "status": "ND",
+          "value": null,
+          "required": "technical entry model with OHLCV"
+        },
+        "base_upside": {
+          "status": "ND",
+          "value": null,
+          "required": "probability-weighted Bear/Base/Bull valuation"
+        },
+        "risk_reward": {
+          "status": "ND",
+          "value": null,
+          "required": "validated entry, stop-loss and target"
+        },
+        "data_quality": {
+          "status": "ND",
+          "value": null,
+          "required": "period-consistent fundamentals and fresh quotes"
+        },
+        "analyst_consensus": {
+          "status": "ND",
+          "value": null,
+          "required": "timestamped analyst target history"
+        },
+        "veto_check": {
+          "status": "ND",
+          "value": null,
+          "required": "complete risk and corporate-event review"
+        }
+      },
+      "blockers": [
+        "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
+      ],
+      "recorded_at": "2026-11-12T08:56:19.270968+00:00",
+      "immutable": true
+    },
+    {
+      "ticker": "JBL",
+      "scan_id": "2026-11-12T08:56:19.183321+00:00",
+      "gates": {
+        "investment_ranking": {
+          "status": "ND",
+          "value": null,
+          "required": "validated Balanced 1.3 ranking"
+        },
+        "fundamental_score": {
+          "status": "ND",
+          "value": null,
+          "required": "normalized financials and valuation"
+        },
+        "entry_score": {
+          "status": "ND",
+          "value": null,
+          "required": "technical entry model with OHLCV"
+        },
+        "base_upside": {
+          "status": "ND",
+          "value": null,
+          "required": "probability-weighted Bear/Base/Bull valuation"
+        },
+        "risk_reward": {
+          "status": "ND",
+          "value": null,
+          "required": "validated entry, stop-loss and target"
+        },
+        "data_quality": {
+          "status": "ND",
+          "value": null,
+          "required": "period-consistent fundamentals and fresh quotes"
+        },
+        "analyst_consensus": {
+          "status": "ND",
+          "value": null,
+          "required": "timestamped analyst target history"
+        },
+        "veto_check": {
+          "status": "ND",
+          "value": null,
+          "required": "complete risk and corporate-event review"
+        }
+      },
+      "blockers": [
+        "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
+      ],
+      "recorded_at": "2026-11-12T08:56:19.274281+00:00",
+      "immutable": true
+    },
+    {
+      "ticker": "JOBY",
+      "scan_id": "2026-11-12T08:56:19.183321+00:00",
+      "gates": {
+        "investment_ranking": {
+          "status": "ND",
+          "value": null,
+          "required": "validated Balanced 1.3 ranking"
+        },
+        "fundamental_score": {
+          "status": "ND",
+          "value": null,
+          "required": "normalized financials and valuation"
+        },
+        "entry_score": {
+          "status": "ND",
+          "value": null,
+          "required": "technical entry model with OHLCV"
+        },
+        "base_upside": {
+          "status": "ND",
+          "value": null,
+          "required": "probability-weighted Bear/Base/Bull valuation"
+        },
+        "risk_reward": {
+          "status": "ND",
+          "value": null,
+          "required": "validated entry, stop-loss and target"
+        },
+        "data_quality": {
+          "status": "ND",
+          "value": null,
+          "required": "period-consistent fundamentals and fresh quotes"
+        },
+        "analyst_consensus": {
+          "status": "ND",
+          "value": null,
+          "required": "timestamped analyst target history"
+        },
+        "veto_check": {
+          "status": "ND",
+          "value": null,
+          "required": "complete risk and corporate-event review"
+        }
+      },
+      "blockers": [
+        "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
+      ],
+      "recorded_at": "2026-11-12T08:56:19.277378+00:00",
+      "immutable": true
+    },
+    {
+      "ticker": "KLAC",
+      "scan_id": "2026-11-12T08:56:19.183321+00:00",
+      "gates": {
+        "investment_ranking": {
+          "status": "ND",
+          "value": null,
+          "required": "validated Balanced 1.3 ranking"
+        },
+        "fundamental_score": {
+          "status": "ND",
+          "value": null,
+          "required": "normalized financials and valuation"
+        },
+        "entry_score": {
+          "status": "ND",
+          "value": null,
+          "required": "technical entry model with OHLCV"
+        },
+        "base_upside": {
+          "status": "ND",
+          "value": null,
+          "required": "probability-weighted Bear/Base/Bull valuation"
+        },
+        "risk_reward": {
+          "status": "ND",
+          "value": null,
+          "required": "validated entry, stop-loss and target"
+        },
+        "data_quality": {
+          "status": "ND",
+          "value": null,
+          "required": "period-consistent fundamentals and fresh quotes"
+        },
+        "analyst_consensus": {
+          "status": "ND",
+          "value": null,
+          "required": "timestamped analyst target history"
+        },
+        "veto_check": {
+          "status": "ND",
+          "value": null,
+          "required": "complete risk and corporate-event review"
+        }
+      },
+      "blockers": [
+        "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
+      ],
+      "recorded_at": "2026-11-12T08:56:19.280552+00:00",
+      "immutable": true
+    },
+    {
+      "ticker": "KTOS",
+      "scan_id": "2026-11-12T08:56:19.183321+00:00",
+      "gates": {
+        "investment_ranking": {
+          "status": "ND",
+          "value": null,
+          "required": "validated Balanced 1.3 ranking"
+        },
+        "fundamental_score": {
+          "status": "ND",
+          "value": null,
+          "required": "normalized financials and valuation"
+        },
+        "entry_score": {
+          "status": "ND",
+          "value": null,
+          "required": "technical entry model with OHLCV"
+        },
+        "base_upside": {
+          "status": "ND",
+          "value": null,
+          "required": "probability-weighted Bear/Base/Bull valuation"
+        },
+        "risk_reward": {
+          "status": "ND",
+          "value": null,
+          "required": "validated entry, stop-loss and target"
+        },
+        "data_quality": {
+          "status": "ND",
+          "value": null,
+          "required": "period-consistent fundamentals and fresh quotes"
+        },
+        "analyst_consensus": {
+          "status": "ND",
+          "value": null,
+          "required": "timestamped analyst target history"
+        },
+        "veto_check": {
+          "status": "ND",
+          "value": null,
+          "required": "complete risk and corporate-event review"
+        }
+      },
+      "blockers": [
+        "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
+      ],
+      "recorded_at": "2026-11-12T08:56:19.283804+00:00",
+      "immutable": true
+    },
+    {
+      "ticker": "KUKAF",
+      "scan_id": "2026-11-12T08:56:19.183321+00:00",
+      "gates": {
+        "investment_ranking": {
+          "status": "ND",
+          "value": null,
+          "required": "validated Balanced 1.3 ranking"
+        },
+        "fundamental_score": {
+          "status": "ND",
+          "value": null,
+          "required": "normalized financials and valuation"
+        },
+        "entry_score": {
+          "status": "ND",
+          "value": null,
+          "required": "technical entry model with OHLCV"
+        },
+        "base_upside": {
+          "status": "ND",
+          "value": null,
+          "required": "probability-weighted Bear/Base/Bull valuation"
+        },
+        "risk_reward": {
+          "status": "ND",
+          "value": null,
+          "required": "validated entry, stop-loss and target"
+        },
+        "data_quality": {
+          "status": "ND",
+          "value": null,
+          "required": "period-consistent fundamentals and fresh quotes"
+        },
+        "analyst_consensus": {
+          "status": "ND",
+          "value": null,
+          "required": "timestamped analyst target history"
+        },
+        "veto_check": {
+          "status": "ND",
+          "value": null,
+          "required": "complete risk and corporate-event review"
+        }
+      },
+      "blockers": [
+        "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
+      ],
+      "recorded_at": "2026-11-12T08:56:19.287037+00:00",
+      "immutable": true
+    },
+    {
+      "ticker": "LAZR",
+      "scan_id": "2026-11-12T08:56:19.183321+00:00",
+      "gates": {
+        "investment_ranking": {
+          "status": "ND",
+          "value": null,
+          "required": "validated Balanced 1.3 ranking"
+        },
+        "fundamental_score": {
+          "status": "ND",
+          "value": null,
+          "required": "normalized financials and valuation"
+        },
+        "entry_score": {
+          "status": "ND",
+          "value": null,
+          "required": "technical entry model with OHLCV"
+        },
+        "base_upside": {
+          "status": "ND",
+          "value": null,
+          "required": "probability-weighted Bear/Base/Bull valuation"
+        },
+        "risk_reward": {
+          "status": "ND",
+          "value": null,
+          "required": "validated entry, stop-loss and target"
+        },
+        "data_quality": {
+          "status": "ND",
+          "value": null,
+          "required": "period-consistent fundamentals and fresh quotes"
+        },
+        "analyst_consensus": {
+          "status": "ND",
+          "value": null,
+          "required": "timestamped analyst target history"
+        },
+        "veto_check": {
+          "status": "ND",
+          "value": null,
+          "required": "complete risk and corporate-event review"
+        }
+      },
+      "blockers": [
+        "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
+      ],
+      "recorded_at": "2026-11-12T08:56:19.290308+00:00",
+      "immutable": true
+    },
+    {
+      "ticker": "LRCX",
+      "scan_id": "2026-11-12T08:56:19.183321+00:00",
+      "gates": {
+        "investment_ranking": {
+          "status": "ND",
+          "value": null,
+          "required": "validated Balanced 1.3 ranking"
+        },
+        "fundamental_score": {
+          "status": "ND",
+          "value": null,
+          "required": "normalized financials and valuation"
+        },
+        "entry_score": {
+          "status": "ND",
+          "value": null,
+          "required": "technical entry model with OHLCV"
+        },
+        "base_upside": {
+          "status": "ND",
+          "value": null,
+          "required": "probability-weighted Bear/Base/Bull valuation"
+        },
+        "risk_reward": {
+          "status": "ND",
+          "value": null,
+          "required": "validated entry, stop-loss and target"
+        },
+        "data_quality": {
+          "status": "ND",
+          "value": null,
+          "required": "period-consistent fundamentals and fresh quotes"
+        },
+        "analyst_consensus": {
+          "status": "ND",
+          "value": null,
+          "required": "timestamped analyst target history"
+        },
+        "veto_check": {
+          "status": "ND",
+          "value": null,
+          "required": "complete risk and corporate-event review"
+        }
+      },
+      "blockers": [
+        "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
+      ],
+      "recorded_at": "2026-11-12T08:56:19.293791+00:00",
+      "immutable": true
+    },
+    {
+      "ticker": "MBLY",
+      "scan_id": "2026-11-12T08:56:19.183321+00:00",
+      "gates": {
+        "investment_ranking": {
+          "status": "ND",
+          "value": null,
+          "required": "validated Balanced 1.3 ranking"
+        },
+        "fundamental_score": {
+          "status": "ND",
+          "value": null,
+          "required": "normalized financials and valuation"
+        },
+        "entry_score": {
+          "status": "ND",
+          "value": null,
+          "required": "technical entry model with OHLCV"
+        },
+        "base_upside": {
+          "status": "ND",
+          "value": null,
+          "required": "probability-weighted Bear/Base/Bull valuation"
+        },
+        "risk_reward": {
+          "status": "ND",
+          "value": null,
+          "required": "validated entry, stop-loss and target"
+        },
+        "data_quality": {
+          "status": "ND",
+          "value": null,
+          "required": "period-consistent fundamentals and fresh quotes"
+        },
+        "analyst_consensus": {
+          "status": "ND",
+          "value": null,
+          "required": "timestamped analyst target history"
+        },
+        "veto_check": {
+          "status": "ND",
+          "value": null,
+          "required": "complete risk and corporate-event review"
+        }
+      },
+      "blockers": [
+        "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
+      ],
+      "recorded_at": "2026-11-12T08:56:19.297166+00:00",
+      "immutable": true
+    },
+    {
+      "ticker": "META",
+      "scan_id": "2026-11-12T08:56:19.183321+00:00",
+      "gates": {
+        "investment_ranking": {
+          "status": "ND",
+          "value": null,
+          "required": "validated Balanced 1.3 ranking"
+        },
+        "fundamental_score": {
+          "status": "ND",
+          "value": null,
+          "required": "normalized financials and valuation"
+        },
+        "entry_score": {
+          "status": "ND",
+          "value": null,
+          "required": "technical entry model with OHLCV"
+        },
+        "base_upside": {
+          "status": "ND",
+          "value": null,
+          "required": "probability-weighted Bear/Base/Bull valuation"
+        },
+        "risk_reward": {
+          "status": "ND",
+          "value": null,
+          "required": "validated entry, stop-loss and target"
+        },
+        "data_quality": {
+          "status": "ND",
+          "value": null,
+          "required": "period-consistent fundamentals and fresh quotes"
+        },
+        "analyst_consensus": {
+          "status": "ND",
+          "value": null,
+          "required": "timestamped analyst target history"
+        },
+        "veto_check": {
+          "status": "ND",
+          "value": null,
+          "required": "complete risk and corporate-event review"
+        }
+      },
+      "blockers": [
+        "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
+      ],
+      "recorded_at": "2026-11-12T08:56:19.300569+00:00",
+      "immutable": true
+    },
+    {
+      "ticker": "MPWR",
+      "scan_id": "2026-11-12T08:56:19.183321+00:00",
+      "gates": {
+        "investment_ranking": {
+          "status": "ND",
+          "value": null,
+          "required": "validated Balanced 1.3 ranking"
+        },
+        "fundamental_score": {
+          "status": "ND",
+          "value": null,
+          "required": "normalized financials and valuation"
+        },
+        "entry_score": {
+          "status": "ND",
+          "value": null,
+          "required": "technical entry model with OHLCV"
+        },
+        "base_upside": {
+          "status": "ND",
+          "value": null,
+          "required": "probability-weighted Bear/Base/Bull valuation"
+        },
+        "risk_reward": {
+          "status": "ND",
+          "value": null,
+          "required": "validated entry, stop-loss and target"
+        },
+        "data_quality": {
+          "status": "ND",
+          "value": null,
+          "required": "period-consistent fundamentals and fresh quotes"
+        },
+        "analyst_consensus": {
+          "status": "ND",
+          "value": null,
+          "required": "timestamped analyst target history"
+        },
+        "veto_check": {
+          "status": "ND",
+          "value": null,
+          "required": "complete risk and corporate-event review"
+        }
+      },
+      "blockers": [
+        "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
+      ],
+      "recorded_at": "2026-11-12T08:56:19.303985+00:00",
+      "immutable": true
+    },
+    {
+      "ticker": "MRVL",
+      "scan_id": "2026-11-12T08:56:19.183321+00:00",
+      "gates": {
+        "investment_ranking": {
+          "status": "ND",
+          "value": null,
+          "required": "validated Balanced 1.3 ranking"
+        },
+        "fundamental_score": {
+          "status": "ND",
+          "value": null,
+          "required": "normalized financials and valuation"
+        },
+        "entry_score": {
+          "status": "ND",
+          "value": null,
+          "required": "technical entry model with OHLCV"
+        },
+        "base_upside": {
+          "status": "ND",
+          "value": null,
+          "required": "probability-weighted Bear/Base/Bull valuation"
+        },
+        "risk_reward": {
+          "status": "ND",
+          "value": null,
+          "required": "validated entry, stop-loss and target"
+        },
+        "data_quality": {
+          "status": "ND",
+          "value": null,
+          "required": "period-consistent fundamentals and fresh quotes"
+        },
+        "analyst_consensus": {
+          "status": "ND",
+          "value": null,
+          "required": "timestamped analyst target history"
+        },
+        "veto_check": {
+          "status": "ND",
+          "value": null,
+          "required": "complete risk and corporate-event review"
+        }
+      },
+      "blockers": [
+        "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
+      ],
+      "recorded_at": "2026-11-12T08:56:19.307458+00:00",
+      "immutable": true
+    },
+    {
+      "ticker": "MSFT",
+      "scan_id": "2026-11-12T08:56:19.183321+00:00",
+      "gates": {
+        "investment_ranking": {
+          "status": "ND",
+          "value": null,
+          "required": "validated Balanced 1.3 ranking"
+        },
+        "fundamental_score": {
+          "status": "ND",
+          "value": null,
+          "required": "normalized financials and valuation"
+        },
+        "entry_score": {
+          "status": "ND",
+          "value": null,
+          "required": "technical entry model with OHLCV"
+        },
+        "base_upside": {
+          "status": "ND",
+          "value": null,
+          "required": "probability-weighted Bear/Base/Bull valuation"
+        },
+        "risk_reward": {
+          "status": "ND",
+          "value": null,
+          "required": "validated entry, stop-loss and target"
+        },
+        "data_quality": {
+          "status": "ND",
+          "value": null,
+          "required": "period-consistent fundamentals and fresh quotes"
+        },
+        "analyst_consensus": {
+          "status": "ND",
+          "value": null,
+          "required": "timestamped analyst target history"
+        },
+        "veto_check": {
+          "status": "ND",
+          "value": null,
+          "required": "complete risk and corporate-event review"
+        }
+      },
+      "blockers": [
+        "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
+      ],
+      "recorded_at": "2026-11-12T08:56:19.311196+00:00",
+      "immutable": true
+    },
+    {
+      "ticker": "MU",
+      "scan_id": "2026-11-12T08:56:19.183321+00:00",
+      "gates": {
+        "investment_ranking": {
+          "status": "ND",
+          "value": null,
+          "required": "validated Balanced 1.3 ranking"
+        },
+        "fundamental_score": {
+          "status": "ND",
+          "value": null,
+          "required": "normalized financials and valuation"
+        },
+        "entry_score": {
+          "status": "ND",
+          "value": null,
+          "required": "technical entry model with OHLCV"
+        },
+        "base_upside": {
+          "status": "ND",
+          "value": null,
+          "required": "probability-weighted Bear/Base/Bull valuation"
+        },
+        "risk_reward": {
+          "status": "ND",
+          "value": null,
+          "required": "validated entry, stop-loss and target"
+        },
+        "data_quality": {
+          "status": "ND",
+          "value": null,
+          "required": "period-consistent fundamentals and fresh quotes"
+        },
+        "analyst_consensus": {
+          "status": "ND",
+          "value": null,
+          "required": "timestamped analyst target history"
+        },
+        "veto_check": {
+          "status": "ND",
+          "value": null,
+          "required": "complete risk and corporate-event review"
+        }
+      },
+      "blockers": [
+        "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
+      ],
+      "recorded_at": "2026-11-12T08:56:19.314840+00:00",
+      "immutable": true
+    },
+    {
+      "ticker": "NOW",
+      "scan_id": "2026-11-12T08:56:19.183321+00:00",
+      "gates": {
+        "investment_ranking": {
+          "status": "ND",
+          "value": null,
+          "required": "validated Balanced 1.3 ranking"
+        },
+        "fundamental_score": {
+          "status": "ND",
+          "value": null,
+          "required": "normalized financials and valuation"
+        },
+        "entry_score": {
+          "status": "ND",
+          "value": null,
+          "required": "technical entry model with OHLCV"
+        },
+        "base_upside": {
+          "status": "ND",
+          "value": null,
+          "required": "probability-weighted Bear/Base/Bull valuation"
+        },
+        "risk_reward": {
+          "status": "ND",
+          "value": null,
+          "required": "validated entry, stop-loss and target"
+        },
+        "data_quality": {
+          "status": "ND",
+          "value": null,
+          "required": "period-consistent fundamentals and fresh quotes"
+        },
+        "analyst_consensus": {
+          "status": "ND",
+          "value": null,
+          "required": "timestamped analyst target history"
+        },
+        "veto_check": {
+          "status": "ND",
+          "value": null,
+          "required": "complete risk and corporate-event review"
+        }
+      },
+      "blockers": [
+        "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
+      ],
+      "recorded_at": "2026-11-12T08:56:19.318444+00:00",
+      "immutable": true
+    },
+    {
+      "ticker": "NVT",
+      "scan_id": "2026-11-12T08:56:19.183321+00:00",
+      "gates": {
+        "investment_ranking": {
+          "status": "ND",
+          "value": null,
+          "required": "validated Balanced 1.3 ranking"
+        },
+        "fundamental_score": {
+          "status": "ND",
+          "value": null,
+          "required": "normalized financials and valuation"
+        },
+        "entry_score": {
+          "status": "ND",
+          "value": null,
+          "required": "technical entry model with OHLCV"
+        },
+        "base_upside": {
+          "status": "ND",
+          "value": null,
+          "required": "probability-weighted Bear/Base/Bull valuation"
+        },
+        "risk_reward": {
+          "status": "ND",
+          "value": null,
+          "required": "validated entry, stop-loss and target"
+        },
+        "data_quality": {
+          "status": "ND",
+          "value": null,
+          "required": "period-consistent fundamentals and fresh quotes"
+        },
+        "analyst_consensus": {
+          "status": "ND",
+          "value": null,
+          "required": "timestamped analyst target history"
+        },
+        "veto_check": {
+          "status": "ND",
+          "value": null,
+          "required": "complete risk and corporate-event review"
+        }
+      },
+      "blockers": [
+        "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
+      ],
+      "recorded_at": "2026-11-12T08:56:19.322143+00:00",
+      "immutable": true
+    },
+    {
+      "ticker": "ONDS",
+      "scan_id": "2026-11-12T08:56:19.183321+00:00",
+      "gates": {
+        "investment_ranking": {
+          "status": "ND",
+          "value": null,
+          "required": "validated Balanced 1.3 ranking"
+        },
+        "fundamental_score": {
+          "status": "ND",
+          "value": null,
+          "required": "normalized financials and valuation"
+        },
+        "entry_score": {
+          "status": "ND",
+          "value": null,
+          "required": "technical entry model with OHLCV"
+        },
+        "base_upside": {
+          "status": "ND",
+          "value": null,
+          "required": "probability-weighted Bear/Base/Bull valuation"
+        },
+        "risk_reward": {
+          "status": "ND",
+          "value": null,
+          "required": "validated entry, stop-loss and target"
+        },
+        "data_quality": {
+          "status": "ND",
+          "value": null,
+          "required": "period-consistent fundamentals and fresh quotes"
+        },
+        "analyst_consensus": {
+          "status": "ND",
+          "value": null,
+          "required": "timestamped analyst target history"
+        },
+        "veto_check": {
+          "status": "ND",
+          "value": null,
+          "required": "complete risk and corporate-event review"
+        }
+      },
+      "blockers": [
+        "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
+      ],
+      "recorded_at": "2026-11-12T08:56:19.325952+00:00",
+      "immutable": true
+    },
+    {
+      "ticker": "ONTO",
+      "scan_id": "2026-11-12T08:56:19.183321+00:00",
+      "gates": {
+        "investment_ranking": {
+          "status": "ND",
+          "value": null,
+          "required": "validated Balanced 1.3 ranking"
+        },
+        "fundamental_score": {
+          "status": "ND",
+          "value": null,
+          "required": "normalized financials and valuation"
+        },
+        "entry_score": {
+          "status": "ND",
+          "value": null,
+          "required": "technical entry model with OHLCV"
+        },
+        "base_upside": {
+          "status": "ND",
+          "value": null,
+          "required": "probability-weighted Bear/Base/Bull valuation"
+        },
+        "risk_reward": {
+          "status": "ND",
+          "value": null,
+          "required": "validated entry, stop-loss and target"
+        },
+        "data_quality": {
+          "status": "ND",
+          "value": null,
+          "required": "period-consistent fundamentals and fresh quotes"
+        },
+        "analyst_consensus": {
+          "status": "ND",
+          "value": null,
+          "required": "timestamped analyst target history"
+        },
+        "veto_check": {
+          "status": "ND",
+          "value": null,
+          "required": "complete risk and corporate-event review"
+        }
+      },
+      "blockers": [
+        "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
+      ],
+      "recorded_at": "2026-11-12T08:56:19.329725+00:00",
+      "immutable": true
+    },
+    {
+      "ticker": "PATH",
+      "scan_id": "2026-11-12T08:56:19.183321+00:00",
+      "gates": {
+        "investment_ranking": {
+          "status": "ND",
+          "value": null,
+          "required": "validated Balanced 1.3 ranking"
+        },
+        "fundamental_score": {
+          "status": "ND",
+          "value": null,
+          "required": "normalized financials and valuation"
+        },
+        "entry_score": {
+          "status": "ND",
+          "value": null,
+          "required": "technical entry model with OHLCV"
+        },
+        "base_upside": {
+          "status": "ND",
+          "value": null,
+          "required": "probability-weighted Bear/Base/Bull valuation"
+        },
+        "risk_reward": {
+          "status": "ND",
+          "value": null,
+          "required": "validated entry, stop-loss and target"
+        },
+        "data_quality": {
+          "status": "ND",
+          "value": null,
+          "required": "period-consistent fundamentals and fresh quotes"
+        },
+        "analyst_consensus": {
+          "status": "ND",
+          "value": null,
+          "required": "timestamped analyst target history"
+        },
+        "veto_check": {
+          "status": "ND",
+          "value": null,
+          "required": "complete risk and corporate-event review"
+        }
+      },
+      "blockers": [
+        "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
+      ],
+      "recorded_at": "2026-11-12T08:56:19.333503+00:00",
+      "immutable": true
+    },
+    {
+      "ticker": "PLTR",
+      "scan_id": "2026-11-12T08:56:19.183321+00:00",
+      "gates": {
+        "investment_ranking": {
+          "status": "ND",
+          "value": null,
+          "required": "validated Balanced 1.3 ranking"
+        },
+        "fundamental_score": {
+          "status": "ND",
+          "value": null,
+          "required": "normalized financials and valuation"
+        },
+        "entry_score": {
+          "status": "ND",
+          "value": null,
+          "required": "technical entry model with OHLCV"
+        },
+        "base_upside": {
+          "status": "ND",
+          "value": null,
+          "required": "probability-weighted Bear/Base/Bull valuation"
+        },
+        "risk_reward": {
+          "status": "ND",
+          "value": null,
+          "required": "validated entry, stop-loss and target"
+        },
+        "data_quality": {
+          "status": "ND",
+          "value": null,
+          "required": "period-consistent fundamentals and fresh quotes"
+        },
+        "analyst_consensus": {
+          "status": "ND",
+          "value": null,
+          "required": "timestamped analyst target history"
+        },
+        "veto_check": {
+          "status": "ND",
+          "value": null,
+          "required": "complete risk and corporate-event review"
+        }
+      },
+      "blockers": [
+        "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
+      ],
+      "recorded_at": "2026-11-12T08:56:19.337342+00:00",
+      "immutable": true
+    },
+    {
+      "ticker": "RCAT",
+      "scan_id": "2026-11-12T08:56:19.183321+00:00",
+      "gates": {
+        "investment_ranking": {
+          "status": "ND",
+          "value": null,
+          "required": "validated Balanced 1.3 ranking"
+        },
+        "fundamental_score": {
+          "status": "ND",
+          "value": null,
+          "required": "normalized financials and valuation"
+        },
+        "entry_score": {
+          "status": "ND",
+          "value": null,
+          "required": "technical entry model with OHLCV"
+        },
+        "base_upside": {
+          "status": "ND",
+          "value": null,
+          "required": "probability-weighted Bear/Base/Bull valuation"
+        },
+        "risk_reward": {
+          "status": "ND",
+          "value": null,
+          "required": "validated entry, stop-loss and target"
+        },
+        "data_quality": {
+          "status": "ND",
+          "value": null,
+          "required": "period-consistent fundamentals and fresh quotes"
+        },
+        "analyst_consensus": {
+          "status": "ND",
+          "value": null,
+          "required": "timestamped analyst target history"
+        },
+        "veto_check": {
+          "status": "ND",
+          "value": null,
+          "required": "complete risk and corporate-event review"
+        }
+      },
+      "blockers": [
+        "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
+      ],
+      "recorded_at": "2026-11-12T08:56:19.341220+00:00",
+      "immutable": true
+    },
+    {
+      "ticker": "ROK",
+      "scan_id": "2026-11-12T08:56:19.183321+00:00",
+      "gates": {
+        "investment_ranking": {
+          "status": "ND",
+          "value": null,
+          "required": "validated Balanced 1.3 ranking"
+        },
+        "fundamental_score": {
+          "status": "ND",
+          "value": null,
+          "required": "normalized financials and valuation"
+        },
+        "entry_score": {
+          "status": "ND",
+          "value": null,
+          "required": "technical entry model with OHLCV"
+        },
+        "base_upside": {
+          "status": "ND",
+          "value": null,
+          "required": "probability-weighted Bear/Base/Bull valuation"
+        },
+        "risk_reward": {
+          "status": "ND",
+          "value": null,
+          "required": "validated entry, stop-loss and target"
+        },
+        "data_quality": {
+          "status": "ND",
+          "value": null,
+          "required": "period-consistent fundamentals and fresh quotes"
+        },
+        "analyst_consensus": {
+          "status": "ND",
+          "value": null,
+          "required": "timestamped analyst target history"
+        },
+        "veto_check": {
+          "status": "ND",
+          "value": null,
+          "required": "complete risk and corporate-event review"
+        }
+      },
+      "blockers": [
+        "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
+      ],
+      "recorded_at": "2026-11-12T08:56:19.345198+00:00",
+      "immutable": true
+    },
+    {
+      "ticker": "RR",
+      "scan_id": "2026-11-12T08:56:19.183321+00:00",
+      "gates": {
+        "investment_ranking": {
+          "status": "ND",
+          "value": null,
+          "required": "validated Balanced 1.3 ranking"
+        },
+        "fundamental_score": {
+          "status": "ND",
+          "value": null,
+          "required": "normalized financials and valuation"
+        },
+        "entry_score": {
+          "status": "ND",
+          "value": null,
+          "required": "technical entry model with OHLCV"
+        },
+        "base_upside": {
+          "status": "ND",
+          "value": null,
+          "required": "probability-weighted Bear/Base/Bull valuation"
+        },
+        "risk_reward": {
+          "status": "ND",
+          "value": null,
+          "required": "validated entry, stop-loss and target"
+        },
+        "data_quality": {
+          "status": "ND",
+          "value": null,
+          "required": "period-consistent fundamentals and fresh quotes"
+        },
+        "analyst_consensus": {
+          "status": "ND",
+          "value": null,
+          "required": "timestamped analyst target history"
+        },
+        "veto_check": {
+          "status": "ND",
+          "value": null,
+          "required": "complete risk and corporate-event review"
+        }
+      },
+      "blockers": [
+        "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
+      ],
+      "recorded_at": "2026-11-12T08:56:19.349235+00:00",
+      "immutable": true
+    },
+    {
+      "ticker": "SERV",
+      "scan_id": "2026-11-12T08:56:19.183321+00:00",
+      "gates": {
+        "investment_ranking": {
+          "status": "ND",
+          "value": null,
+          "required": "validated Balanced 1.3 ranking"
+        },
+        "fundamental_score": {
+          "status": "ND",
+          "value": null,
+          "required": "normalized financials and valuation"
+        },
+        "entry_score": {
+          "status": "ND",
+          "value": null,
+          "required": "technical entry model with OHLCV"
+        },
+        "base_upside": {
+          "status": "ND",
+          "value": null,
+          "required": "probability-weighted Bear/Base/Bull valuation"
+        },
+        "risk_reward": {
+          "status": "ND",
+          "value": null,
+          "required": "validated entry, stop-loss and target"
+        },
+        "data_quality": {
+          "status": "ND",
+          "value": null,
+          "required": "period-consistent fundamentals and fresh quotes"
+        },
+        "analyst_consensus": {
+          "status": "ND",
+          "value": null,
+          "required": "timestamped analyst target history"
+        },
+        "veto_check": {
+          "status": "ND",
+          "value": null,
+          "required": "complete risk and corporate-event review"
+        }
+      },
+      "blockers": [
+        "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
+      ],
+      "recorded_at": "2026-11-12T08:56:19.353308+00:00",
+      "immutable": true
+    },
+    {
+      "ticker": "SMCI",
+      "scan_id": "2026-11-12T08:56:19.183321+00:00",
+      "gates": {
+        "investment_ranking": {
+          "status": "ND",
+          "value": null,
+          "required": "validated Balanced 1.3 ranking"
+        },
+        "fundamental_score": {
+          "status": "ND",
+          "value": null,
+          "required": "normalized financials and valuation"
+        },
+        "entry_score": {
+          "status": "ND",
+          "value": null,
+          "required": "technical entry model with OHLCV"
+        },
+        "base_upside": {
+          "status": "ND",
+          "value": null,
+          "required": "probability-weighted Bear/Base/Bull valuation"
+        },
+        "risk_reward": {
+          "status": "ND",
+          "value": null,
+          "required": "validated entry, stop-loss and target"
+        },
+        "data_quality": {
+          "status": "ND",
+          "value": null,
+          "required": "period-consistent fundamentals and fresh quotes"
+        },
+        "analyst_consensus": {
+          "status": "ND",
+          "value": null,
+          "required": "timestamped analyst target history"
+        },
+        "veto_check": {
+          "status": "ND",
+          "value": null,
+          "required": "complete risk and corporate-event review"
+        }
+      },
+      "blockers": [
+        "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
+      ],
+      "recorded_at": "2026-11-12T08:56:19.357499+00:00",
+      "immutable": true
+    },
+    {
+      "ticker": "SNOW",
+      "scan_id": "2026-11-12T08:56:19.183321+00:00",
+      "gates": {
+        "investment_ranking": {
+          "status": "ND",
+          "value": null,
+          "required": "validated Balanced 1.3 ranking"
+        },
+        "fundamental_score": {
+          "status": "ND",
+          "value": null,
+          "required": "normalized financials and valuation"
+        },
+        "entry_score": {
+          "status": "ND",
+          "value": null,
+          "required": "technical entry model with OHLCV"
+        },
+        "base_upside": {
+          "status": "ND",
+          "value": null,
+          "required": "probability-weighted Bear/Base/Bull valuation"
+        },
+        "risk_reward": {
+          "status": "ND",
+          "value": null,
+          "required": "validated entry, stop-loss and target"
+        },
+        "data_quality": {
+          "status": "ND",
+          "value": null,
+          "required": "period-consistent fundamentals and fresh quotes"
+        },
+        "analyst_consensus": {
+          "status": "ND",
+          "value": null,
+          "required": "timestamped analyst target history"
+        },
+        "veto_check": {
+          "status": "ND",
+          "value": null,
+          "required": "complete risk and corporate-event review"
+        }
+      },
+      "blockers": [
+        "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
+      ],
+      "recorded_at": "2026-11-12T08:56:19.361715+00:00",
+      "immutable": true
+    },
+    {
+      "ticker": "SOUN",
+      "scan_id": "2026-11-12T08:56:19.183321+00:00",
+      "gates": {
+        "investment_ranking": {
+          "status": "ND",
+          "value": null,
+          "required": "validated Balanced 1.3 ranking"
+        },
+        "fundamental_score": {
+          "status": "ND",
+          "value": null,
+          "required": "normalized financials and valuation"
+        },
+        "entry_score": {
+          "status": "ND",
+          "value": null,
+          "required": "technical entry model with OHLCV"
+        },
+        "base_upside": {
+          "status": "ND",
+          "value": null,
+          "required": "probability-weighted Bear/Base/Bull valuation"
+        },
+        "risk_reward": {
+          "status": "ND",
+          "value": null,
+          "required": "validated entry, stop-loss and target"
+        },
+        "data_quality": {
+          "status": "ND",
+          "value": null,
+          "required": "period-consistent fundamentals and fresh quotes"
+        },
+        "analyst_consensus": {
+          "status": "ND",
+          "value": null,
+          "required": "timestamped analyst target history"
+        },
+        "veto_check": {
+          "status": "ND",
+          "value": null,
+          "required": "complete risk and corporate-event review"
+        }
+      },
+      "blockers": [
+        "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
+      ],
+      "recorded_at": "2026-11-12T08:56:19.365927+00:00",
+      "immutable": true
+    },
+    {
+      "ticker": "SYM",
+      "scan_id": "2026-11-12T08:56:19.183321+00:00",
+      "gates": {
+        "investment_ranking": {
+          "status": "ND",
+          "value": null,
+          "required": "validated Balanced 1.3 ranking"
+        },
+        "fundamental_score": {
+          "status": "ND",
+          "value": null,
+          "required": "normalized financials and valuation"
+        },
+        "entry_score": {
+          "status": "ND",
+          "value": null,
+          "required": "technical entry model with OHLCV"
+        },
+        "base_upside": {
+          "status": "ND",
+          "value": null,
+          "required": "probability-weighted Bear/Base/Bull valuation"
+        },
+        "risk_reward": {
+          "status": "ND",
+          "value": null,
+          "required": "validated entry, stop-loss and target"
+        },
+        "data_quality": {
+          "status": "ND",
+          "value": null,
+          "required": "period-consistent fundamentals and fresh quotes"
+        },
+        "analyst_consensus": {
+          "status": "ND",
+          "value": null,
+          "required": "timestamped analyst target history"
+        },
+        "veto_check": {
+          "status": "ND",
+          "value": null,
+          "required": "complete risk and corporate-event review"
+        }
+      },
+      "blockers": [
+        "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
+      ],
+      "recorded_at": "2026-11-12T08:56:19.370145+00:00",
+      "immutable": true
+    },
+    {
+      "ticker": "ZBRA",
+      "scan_id": "2026-11-12T08:56:19.183321+00:00",
+      "gates": {
+        "investment_ranking": {
+          "status": "ND",
+          "value": null,
+          "required": "validated Balanced 1.3 ranking"
+        },
+        "fundamental_score": {
+          "status": "ND",
+          "value": null,
+          "required": "normalized financials and valuation"
+        },
+        "entry_score": {
+          "status": "ND",
+          "value": null,
+          "required": "technical entry model with OHLCV"
+        },
+        "base_upside": {
+          "status": "ND",
+          "value": null,
+          "required": "probability-weighted Bear/Base/Bull valuation"
+        },
+        "risk_reward": {
+          "status": "ND",
+          "value": null,
+          "required": "validated entry, stop-loss and target"
+        },
+        "data_quality": {
+          "status": "ND",
+          "value": null,
+          "required": "period-consistent fundamentals and fresh quotes"
+        },
+        "analyst_consensus": {
+          "status": "ND",
+          "value": null,
+          "required": "timestamped analyst target history"
+        },
+        "veto_check": {
+          "status": "ND",
+          "value": null,
+          "required": "complete risk and corporate-event review"
+        }
+      },
+      "blockers": [
+        "BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D."
+      ],
+      "recorded_at": "2026-11-12T08:56:19.374459+00:00",
+      "immutable": true
+    }
+  ],
   "events": [
     {
       "type": "HISTORICAL_ENTRY_ZONE_HIT",
@@ -1275,10 +4744,10 @@
     }
   ],
   "last_scan": {
-    "generated_at": "2026-11-12T08:52:40.339388+00:00",
+    "generated_at": "2026-11-12T08:56:19.183321+00:00",
     "companies_seen": 68,
     "quotes_seen": 65,
     "zone_hits": 0
   },
-  "updated_at": "2026-11-12T08:52:40.339388+00:00"
+  "updated_at": "2026-11-12T08:56:19.183321+00:00"
 }
