@@ -112,6 +112,7 @@ def record_scan(companies, generated_at=None, path=MEMORY_PATH):
         if obs_key not in observations:
             memory["price_observations"].append({
                 "ticker": ticker, "date": date, "close": close,
+                "low": quote.get("low_usd"), "high": quote.get("high_usd"),
                 "currency": currency, "source": quote.get("source"),
                 "source_url": quote.get("source_url"),
                 "observed_at": generated_at, "price_type": "EOD_close"
@@ -122,17 +123,26 @@ def record_scan(companies, generated_at=None, path=MEMORY_PATH):
                 continue
             if level.get("currency") != currency:
                 continue
-            if _in_zone(close, float(level["lower"]), float(level["upper"])):
-                key = (level["id"], date, "close")
-                if key not in events:
-                    event = {
-                        "type": "ENTRY_ZONE_TOUCHED", "level_id": level["id"],
-                        "ticker": ticker, "zone": level["zone"], "date": date,
-                        "price": close, "basis": "close", "currency": currency,
-                        "detected_at": generated_at,
-                        "status": "REQUIRES_FRESH_FUNDAMENTAL_AND_TECHNICAL_REVIEW"
-                    }
-                    memory["events"].append(event); hits.append(event); events.add(key)
+            lower, upper = float(level["lower"]), float(level["upper"])
+            low, high = quote.get("low_usd"), quote.get("high_usd")
+            touched_intraday = low is not None and high is not None and float(low) <= upper and float(high) >= lower
+            touched_close = _in_zone(close, lower, upper)
+            for basis, touched, observed_price in (
+                ("intraday_range", touched_intraday, float(low) if low is not None else None),
+                ("close", touched_close, close)
+            ):
+                if touched:
+                    key = (level["id"], date, basis)
+                    if key not in events:
+                        event = {
+                            "type": "ENTRY_ZONE_TOUCHED", "level_id": level["id"],
+                            "ticker": ticker, "zone": level["zone"], "date": date,
+                            "price": observed_price, "intraday_low": low, "intraday_high": high,
+                            "close": close, "basis": basis, "currency": currency,
+                            "detected_at": generated_at,
+                            "status": "REQUIRES_FRESH_FUNDAMENTAL_AND_TECHNICAL_REVIEW"
+                        }
+                        memory["events"].append(event); hits.append(event); events.add(key)
         # Never infer a BUY from price alone. A separate complete gate audit is required.
     memory["last_scan"] = {"generated_at": generated_at, "companies_seen": len(companies),
                            "quotes_seen": sum(1 for c in companies if (c.get("price") or {}).get("close_usd") is not None),
