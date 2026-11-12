@@ -3,7 +3,7 @@
 import json, re, time, os, csv, io, urllib.parse, urllib.request, xml.etree.ElementTree as ET
 from datetime import datetime, timezone
 from pathlib import Path
-from decision_memory import record_scan
+from decision_memory import record_scan, append_gate_audit
 
 ROOT=Path(__file__).resolve().parent
 UNIVERSE=[
@@ -331,6 +331,22 @@ def main():
     print('VALUATION_SUMMARY',json.dumps({'covered':valuation_coverage,'total':len(companies),'missing':missing}))
     scan_timestamp=datetime.now(timezone.utc).isoformat()
     decision_memory, zone_hits = record_scan(companies, scan_timestamp)
+    # The current scanner has no investment-ranking engine. Record this as an explicit
+    # N/D blocker for every issuer instead of silently omitting BUY-gate diagnostics.
+    unavailable_gates = {
+        'investment_ranking': {'status':'ND','value':None,'required':'validated Balanced 1.3 ranking'},
+        'fundamental_score': {'status':'ND','value':None,'required':'normalized financials and valuation'},
+        'entry_score': {'status':'ND','value':None,'required':'technical entry model with OHLCV'},
+        'base_upside': {'status':'ND','value':None,'required':'probability-weighted Bear/Base/Bull valuation'},
+        'risk_reward': {'status':'ND','value':None,'required':'validated entry, stop-loss and target'},
+        'data_quality': {'status':'ND','value':None,'required':'period-consistent fundamentals and fresh quotes'},
+        'analyst_consensus': {'status':'ND','value':None,'required':'timestamped analyst target history'},
+        'veto_check': {'status':'ND','value':None,'required':'complete risk and corporate-event review'}
+    }
+    for company in companies:
+        append_gate_audit(company['ticker'], scan_timestamp, unavailable_gates,
+                          ['BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D.'])
+    decision_memory = __import__('decision_memory').load_memory()
     print('DECISION_MEMORY_SUMMARY',json.dumps({'levels':len(decision_memory['entry_levels']),'recommendations':len(decision_memory['recommendations']),'gate_audits':len(decision_memory['gate_audits']),'events':len(decision_memory['events']),'new_zone_hits':len(zone_hits)}))
     payload={'generated_at':scan_timestamp,'source':'Google News RSS','queries':QUERIES,'scan_status':'ok' if allnews else 'no_sources', 'articles_collected':len(allnews),'companies':companies,'discoveries':discoveries,'articles':allnews[:100],'version':'4.2.2','valuation_coverage':valuation_coverage,'valuation_note':'Orientacyjna kapitalizacja = cena EOD × akcje z ostatniego dostępnego raportu SEC; nie uwzględnia późniejszego rozwodnienia, zmian liczby akcji ani ADR. P/S i P/E bazują na danych rocznych, nie TTM. Nie jest to ranking inwestycyjny.','price_health':price_health,'price_coverage':price_coverage,'price_note':'Opóźnione ceny dzienne z Stooq lub Yahoo Chart (źródła mogą blokować dostęp); daty do 7 dni. Brak ceny to brak danych, nie zero. Kapitalizacja i mnożniki wyłącznie orientacyjne, gdy dane są wystarczające.','financial_coverage':covered,'financial_source':'SEC EDGAR XBRL, annual 10-K/20-F where available','financial_limitations':'Dane historyczne, możliwe opóźnienia; nie wszystkie spółki raportują do SEC. Pokrycie rośnie stopniowo; limity 16 zapytań SEC i 24 prób cen na skan.','coverage_note':'Lista startowa plus kandydaci wykryci przez dopasowanie nazw do rejestru SEC; brak pełnego globalnego pokrycia','ranking_method':'attention_score = 100*(1-exp(-mentions/4)); wskaźnik uwagi, NIE ocena inwestycyjna','investment_ranking_available':False,'decision_memory':{'schema_version':decision_memory['schema_version'],'entry_levels':len(decision_memory['entry_levels']),'recommendations':len(decision_memory['recommendations']),'gate_audits':len(decision_memory['gate_audits']),'events':len(decision_memory['events']),'new_zone_hits':zone_hits,'historical_imports':decision_memory['historical_imports'],'memory_file':'data/decision_memory.json'},'disclaimer':'Wskaźnik uwagi nie oznacza atrakcyjnej wyceny, potencjału wzrostu ani rekomendacji. Rejestr SEC obejmuje głównie emitentów raportujących w USA. Dane RSS mogą być niepełne.'}
     (ROOT/'data').mkdir(exist_ok=True)
