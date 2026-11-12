@@ -1,5 +1,8 @@
 name: AI Robotics market scan
 on:
+  push:
+    branches:
+      - fix/decision-memory-entry-alerts
   workflow_dispatch:
   schedule:
     - cron: '17 */6 * * *'
