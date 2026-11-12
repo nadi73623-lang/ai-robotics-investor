@@ -142,7 +142,7 @@ def checked_quote(price, day, source, url):
     if not (0 < value < 10000000): raise QuoteError('price out of range')
     if not 0 <= age <= 7: raise QuoteError('stale or future quote: '+str(day))
     return {'close_usd':round(value,4),'date':stamp.isoformat(),'age_days':age,
-            'source':source,'source_url':url,'is_live':False}
+            'currency':'USD','source':source,'source_url':url,'is_live':False}
 
 def stooq_quote(ticker):
     if not re.fullmatch(r'[A-Z]{1,5}',ticker): raise QuoteError('unsupported ticker')
@@ -157,7 +157,11 @@ def stooq_quote(ticker):
         raise QuoteError('Stooq CSV missing Date/Close; header='+repr((reader.fieldnames or [])[:5])+'; preview='+repr(body[:80]))
     rows=list(reader)
     if not rows: raise QuoteError('Stooq CSV has no rows')
-    return checked_quote(rows[-1].get('Close'),rows[-1].get('Date'),'Stooq EOD',url)
+    quote=checked_quote(rows[-1].get('Close'),rows[-1].get('Date'),'Stooq EOD',url)
+    for field, key in [('low_usd','Low'),('high_usd','High')]:
+        try: quote[field]=round(float(rows[-1][key]),4)
+        except (KeyError,TypeError,ValueError): quote[field]=None
+    return quote
 
 def yahoo_quote(ticker):
     # Public chart endpoint: availability and redistribution rights may change.
@@ -172,12 +176,18 @@ def yahoo_quote(ticker):
     meta=result.get('meta') or {}
     if meta.get('currency')!='USD': raise QuoteError('Yahoo quote currency is not USD')
     stamps=result.get('timestamp') or []
-    closes=(((result.get('indicators') or {}).get('quote') or [{}])[0].get('close') or [])
-    valid=[(ts,close) for ts,close in zip(stamps,closes) if close is not None]
+    bars=((result.get('indicators') or {}).get('quote') or [{}])[0]
+    closes=bars.get('close') or []
+    valid=[i for i,(ts,close) in enumerate(zip(stamps,closes)) if close is not None]
     if not valid: raise QuoteError('Yahoo chart has no daily closes')
-    ts,price=valid[-1]
+    i=valid[-1]; ts,price=stamps[i],closes[i]
     day=datetime.fromtimestamp(ts,timezone.utc).date().isoformat()
-    return checked_quote(price,day,'Yahoo Finance chart EOD',url)
+    quote=checked_quote(price,day,'Yahoo Finance chart EOD',url)
+    for field,key in [('low_usd','low'),('high_usd','high')]:
+        values=bars.get(key) or []
+        try: quote[field]=round(float(values[i]),4) if values[i] is not None else None
+        except (IndexError,TypeError,ValueError): quote[field]=None
+    return quote
 
 def add_prices(companies,prior):
     old={x.get('ticker'):x.get('price') for x in prior.get('companies',[]) if x.get('price')}
