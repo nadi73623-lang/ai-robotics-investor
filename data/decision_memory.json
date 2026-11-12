@@ -1177,6 +1177,54 @@
       "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/RCAT?interval=1d&range=15d",
       "observed_at": "2026-11-12T08:51:05.548891+00:00",
       "price_type": "EOD_close"
+    },
+    {
+      "ticker": "SIEGY",
+      "date": "2026-11-11",
+      "close": 154.46,
+      "low": 151.74,
+      "high": 154.47,
+      "currency": "USD",
+      "source": "Yahoo Finance chart EOD",
+      "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/SIEGY?interval=1d&range=15d",
+      "observed_at": "2026-11-12T08:52:40.339388+00:00",
+      "price_type": "EOD_close"
+    },
+    {
+      "ticker": "ROK",
+      "date": "2026-11-11",
+      "close": 406.19,
+      "low": 401.66,
+      "high": 415.0,
+      "currency": "USD",
+      "source": "Yahoo Finance chart EOD",
+      "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/ROK?interval=1d&range=15d",
+      "observed_at": "2026-11-12T08:52:40.339388+00:00",
+      "price_type": "EOD_close"
+    },
+    {
+      "ticker": "RR",
+      "date": "2026-11-11",
+      "close": 0.948,
+      "low": 0.934,
+      "high": 1.03,
+      "currency": "USD",
+      "source": "Yahoo Finance chart EOD",
+      "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/RR?interval=1d&range=15d",
+      "observed_at": "2026-11-12T08:52:40.339388+00:00",
+      "price_type": "EOD_close"
+    },
+    {
+      "ticker": "SERV",
+      "date": "2026-11-11",
+      "close": 3.165,
+      "low": 3.16,
+      "high": 3.33,
+      "currency": "USD",
+      "source": "Yahoo Finance chart EOD",
+      "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/SERV?interval=1d&range=15d",
+      "observed_at": "2026-11-12T08:52:40.339388+00:00",
+      "price_type": "EOD_close"
     }
   ],
   "historical_imports": [
@@ -1227,10 +1275,10 @@
     }
   ],
   "last_scan": {
-    "generated_at": "2026-11-12T08:51:05.548891+00:00",
+    "generated_at": "2026-11-12T08:52:40.339388+00:00",
     "companies_seen": 68,
     "quotes_seen": 65,
     "zone_hits": 0
   },
-  "updated_at": "2026-11-12T08:51:05.548891+00:00"
+  "updated_at": "2026-11-12T08:52:40.339388+00:00"
 }

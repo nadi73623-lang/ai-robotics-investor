@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-12T08:51:05.548891+00:00",
+  "generated_at": "2026-11-12T08:52:40.339388+00:00",
   "source": "Google News RSS",
   "queries": [
     "artificial intelligence robotics stocks companies contracts earnings",
@@ -67,7 +67,7 @@
         "net_income_period_end": "2026-01-25",
         "cash_flow_period_end": "2026-01-25",
         "capex_period_end": "2012-01-29",
-        "as_of": "2026-11-11T14:14:24.127380+00:00",
+        "as_of": "2026-11-12T08:52:22.374634+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1045810"
       },
       "price": {
@@ -141,7 +141,7 @@
         "net_income_period_end": "2025-12-31",
         "cash_flow_period_end": "2025-12-31",
         "capex_period_end": "2025-12-31",
-        "as_of": "2026-11-11T06:08:31.525301+00:00",
+        "as_of": "2026-11-12T08:52:19.183962+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1652044"
       },
       "price": {
@@ -215,7 +215,7 @@
         "net_income_period_end": "2025-12-27",
         "cash_flow_period_end": "2025-12-27",
         "capex_period_end": "2025-12-27",
-        "as_of": "2026-11-11T06:08:32.086941+00:00",
+        "as_of": "2026-11-12T08:52:19.799302+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=50863"
       },
       "price": {
@@ -279,17 +279,20 @@
         "net_income_period_end": "2024-11-03",
         "cash_flow_period_end": "2025-11-02",
         "capex_period_end": "2025-11-02",
-        "as_of": "2026-11-12T08:50:39.745664+00:00",
+        "as_of": "2026-11-12T08:52:14.935169+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1730168"
       },
       "price": {
         "close_usd": 345.22,
         "date": "2026-11-11",
         "age_days": 1,
+        "currency": "USD",
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/AVGO?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-11-12T08:50:48.874170+00:00"
+        "low_usd": 344.31,
+        "high_usd": 356.85,
+        "checked_at": "2026-11-12T08:52:24.849977+00:00"
       },
       "valuation": {
         "status": "partial",
@@ -414,10 +417,13 @@
         "close_usd": 265.78,
         "date": "2026-11-11",
         "age_days": 1,
+        "currency": "USD",
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/TER?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-11-12T00:38:21.599402+00:00"
+        "low_usd": 254.75,
+        "high_usd": 273.22,
+        "checked_at": "2026-11-12T08:52:33.156391+00:00"
       },
       "valuation": {
         "status": "partial",
@@ -478,10 +484,13 @@
         "close_usd": 413.35,
         "date": "2026-11-11",
         "age_days": 1,
+        "currency": "USD",
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/TSM?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-11-12T00:38:22.199106+00:00"
+        "low_usd": 407.03,
+        "high_usd": 416.8,
+        "checked_at": "2026-11-12T08:52:33.770040+00:00"
       },
       "valuation": {
         "status": "unavailable",
@@ -542,10 +551,13 @@
         "close_usd": 206.51,
         "date": "2026-11-11",
         "age_days": 1,
+        "currency": "USD",
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/VRT?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-11-12T00:38:22.865216+00:00"
+        "low_usd": 202.01,
+        "high_usd": 211.81,
+        "checked_at": "2026-11-12T08:52:34.607090+00:00"
       },
       "valuation": {
         "status": "partial",
@@ -594,17 +606,20 @@
         "net_income_period_end": "2025-12-31",
         "cash_flow_period_end": "2025-12-31",
         "capex_period_end": "2016-12-31",
-        "as_of": "2026-11-11T06:08:28.886080+00:00",
+        "as_of": "2026-11-12T08:52:15.638269+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1018724"
       },
       "price": {
         "close_usd": 266.17,
         "date": "2026-11-11",
         "age_days": 1,
+        "currency": "USD",
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/AMZN?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-11-12T00:38:26.570773+00:00"
+        "low_usd": 265.62,
+        "high_usd": 274.87,
+        "checked_at": "2026-11-12T08:52:38.885233+00:00"
       },
       "valuation": {
         "status": "partial",
@@ -712,7 +727,7 @@
         "net_income_period_end": "2026-01-30",
         "cash_flow_period_end": "2026-01-30",
         "capex_period_end": "2026-01-30",
-        "as_of": "2026-11-11T06:08:31.007909+00:00",
+        "as_of": "2026-11-12T08:52:18.550337+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1571996"
       },
       "price": {
@@ -990,13 +1005,16 @@
       "investment_score": null,
       "fundamentals": null,
       "price": {
-        "close_usd": 152.67,
+        "close_usd": 154.46,
         "date": "2026-11-11",
-        "age_days": 0,
+        "age_days": 1,
+        "currency": "USD",
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/SIEGY?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-11-11T14:14:48.231566+00:00"
+        "low_usd": 151.74,
+        "high_usd": 154.47,
+        "checked_at": "2026-11-12T08:52:29.684009+00:00"
       },
       "valuation": {
         "status": "unavailable",
@@ -1070,10 +1088,13 @@
         "close_usd": 4.86,
         "date": "2026-11-11",
         "age_days": 1,
+        "currency": "USD",
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/ACHR?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-11-12T00:38:24.070594+00:00"
+        "low_usd": 4.76,
+        "high_usd": 5.07,
+        "checked_at": "2026-11-12T08:52:35.939521+00:00"
       },
       "valuation": {
         "status": "partial",
@@ -1123,10 +1144,13 @@
         "close_usd": 12.19,
         "date": "2026-11-11",
         "age_days": 1,
+        "currency": "USD",
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/AI?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-11-12T00:38:24.647532+00:00"
+        "low_usd": 11.9,
+        "high_usd": 12.29,
+        "checked_at": "2026-11-12T08:52:36.523808+00:00"
       },
       "valuation": {
         "status": "unavailable",
@@ -1176,10 +1200,13 @@
         "close_usd": 230.91,
         "date": "2026-11-11",
         "age_days": 1,
+        "currency": "USD",
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/ALAB?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-11-12T00:38:25.089985+00:00"
+        "low_usd": 222.925,
+        "high_usd": 237.762,
+        "checked_at": "2026-11-12T08:52:37.115001+00:00"
       },
       "valuation": {
         "status": "partial",
@@ -1229,10 +1256,13 @@
         "close_usd": 395.08,
         "date": "2026-11-11",
         "age_days": 1,
+        "currency": "USD",
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/AMAT?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-11-12T00:38:25.668078+00:00"
+        "low_usd": 381.75,
+        "high_usd": 404.71,
+        "checked_at": "2026-11-12T08:52:37.709005+00:00"
       },
       "valuation": {
         "status": "partial",
@@ -1282,10 +1312,13 @@
         "close_usd": 552.9,
         "date": "2026-11-11",
         "age_days": 1,
+        "currency": "USD",
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/AMD?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-11-12T00:38:26.117781+00:00"
+        "low_usd": 522.65,
+        "high_usd": 567.65,
+        "checked_at": "2026-11-12T08:52:38.286195+00:00"
       },
       "valuation": {
         "status": "partial",
@@ -1328,17 +1361,20 @@
         "net_income_period_end": "2025-12-31",
         "cash_flow_period_end": "2025-12-31",
         "capex_period_end": "2019-12-31",
-        "as_of": "2026-11-11T06:08:29.492637+00:00",
+        "as_of": "2026-11-12T08:52:16.436441+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1596532"
       },
       "price": {
         "close_usd": 196.68,
         "date": "2026-11-11",
         "age_days": 1,
+        "currency": "USD",
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/ANET?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-11-12T00:38:27.025289+00:00"
+        "low_usd": 193.88,
+        "high_usd": 199.46,
+        "checked_at": "2026-11-12T08:52:39.622895+00:00"
       },
       "valuation": {
         "status": "partial",
@@ -1388,10 +1424,13 @@
         "close_usd": 79.31,
         "date": "2026-11-11",
         "age_days": 1,
+        "currency": "USD",
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/APH?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-11-12T00:38:27.592014+00:00"
+        "low_usd": 79.19,
+        "high_usd": 83.99,
+        "checked_at": "2026-11-12T08:52:40.238847+00:00"
       },
       "valuation": {
         "status": "partial",
@@ -1593,7 +1632,7 @@
         "net_income_period_end": "2025-12-31",
         "cash_flow_period_end": "2025-12-31",
         "capex_period_end": "2025-12-31",
-        "as_of": "2026-11-11T06:08:30.084856+00:00",
+        "as_of": "2026-11-12T08:52:17.162149+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1836981"
       },
       "price": {
@@ -1699,7 +1738,7 @@
         "net_income_period_end": "2025-12-31",
         "cash_flow_period_end": "2025-12-31",
         "capex_period_end": null,
-        "as_of": "2026-11-11T06:08:30.555164+00:00",
+        "as_of": "2026-11-12T08:52:17.893507+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1030894"
       },
       "price": {
@@ -2606,7 +2645,7 @@
         "net_income_period_end": "2025-12-31",
         "cash_flow_period_end": "2025-12-31",
         "capex_period_end": "2025-12-31",
-        "as_of": "2026-11-12T08:50:38.660356+00:00",
+        "as_of": "2026-11-12T08:52:13.719580+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1326801"
       },
       "price": {
@@ -2712,7 +2751,7 @@
         "net_income_period_end": "2026-01-31",
         "cash_flow_period_end": "2026-01-31",
         "capex_period_end": "2026-01-31",
-        "as_of": "2026-11-11T14:14:22.448480+00:00",
+        "as_of": "2026-11-12T08:52:20.439563+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1835632"
       },
       "price": {
@@ -2818,7 +2857,7 @@
         "net_income_period_end": "2026-09-03",
         "cash_flow_period_end": "2026-09-03",
         "capex_period_end": "2026-09-03",
-        "as_of": "2026-11-11T14:14:22.977970+00:00",
+        "as_of": "2026-11-12T08:52:21.064972+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=723125"
       },
       "price": {
@@ -2871,7 +2910,7 @@
         "net_income_period_end": "2025-12-31",
         "cash_flow_period_end": "2025-12-31",
         "capex_period_end": "2025-12-31",
-        "as_of": "2026-11-11T14:14:23.622143+00:00",
+        "as_of": "2026-11-12T08:52:21.792575+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1373715"
       },
       "price": {
@@ -2924,7 +2963,7 @@
         "net_income_period_end": "2025-12-31",
         "cash_flow_period_end": "2025-12-31",
         "capex_period_end": "2025-12-31",
-        "as_of": "2026-11-11T14:14:24.844839+00:00",
+        "as_of": "2026-11-12T08:52:23.064687+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1720635"
       },
       "price": {
@@ -2977,7 +3016,7 @@
         "net_income_period_end": "2025-12-31",
         "cash_flow_period_end": "2025-12-31",
         "capex_period_end": "2025-12-31",
-        "as_of": "2026-11-11T14:14:25.467852+00:00",
+        "as_of": "2026-11-12T08:52:23.721958+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1646188"
       },
       "price": {
@@ -3083,7 +3122,7 @@
         "net_income_period_end": "2026-01-31",
         "cash_flow_period_end": "2026-01-31",
         "capex_period_end": "2026-01-31",
-        "as_of": "2026-11-12T08:50:39.247413+00:00",
+        "as_of": "2026-11-12T08:52:14.382410+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1734722"
       },
       "price": {
@@ -3246,23 +3285,26 @@
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1024478"
       },
       "price": {
-        "close_usd": 397.16,
-        "date": "2026-11-10",
+        "close_usd": 406.19,
+        "date": "2026-11-11",
         "age_days": 1,
+        "currency": "USD",
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/ROK?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-11-11T14:14:46.012093+00:00"
+        "low_usd": 401.66,
+        "high_usd": 415.0,
+        "checked_at": "2026-11-12T08:52:27.745877+00:00"
       },
       "valuation": {
         "status": "partial",
         "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 44104092160,
-        "ps": 5.29,
-        "pe": 50.75,
+        "market_cap_usd": 45106861704,
+        "ps": 5.41,
+        "pe": 51.91,
         "fcf_yield_pct": null,
         "share_date": "2026-06-30",
-        "price_date": "2026-11-10",
+        "price_date": "2026-11-11",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
       }
     },
@@ -3299,13 +3341,16 @@
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1963685"
       },
       "price": {
-        "close_usd": 0.909,
-        "date": "2026-11-10",
+        "close_usd": 0.948,
+        "date": "2026-11-11",
         "age_days": 1,
+        "currency": "USD",
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/RR?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-11-11T14:14:46.632840+00:00"
+        "low_usd": 0.934,
+        "high_usd": 1.03,
+        "checked_at": "2026-11-12T08:52:28.497252+00:00"
       },
       "valuation": {
         "status": "unavailable",
@@ -3315,7 +3360,7 @@
         "pe": null,
         "fcf_yield_pct": null,
         "share_date": "2024-02-14",
-        "price_date": "2026-11-10",
+        "price_date": "2026-11-11",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
       }
     },
@@ -3352,23 +3397,26 @@
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1832483"
       },
       "price": {
-        "close_usd": 3.11,
-        "date": "2026-11-10",
+        "close_usd": 3.165,
+        "date": "2026-11-11",
         "age_days": 1,
+        "currency": "USD",
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/SERV?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-11-11T14:14:47.399565+00:00"
+        "low_usd": 3.16,
+        "high_usd": 3.33,
+        "checked_at": "2026-11-12T08:52:29.085537+00:00"
       },
       "valuation": {
         "status": "partial",
         "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 273321579,
-        "ps": 103.1,
+        "market_cap_usd": 278155240,
+        "ps": 104.92,
         "pe": null,
-        "fcf_yield_pct": -43.02,
+        "fcf_yield_pct": -42.27,
         "share_date": "2026-11-03",
-        "price_date": "2026-11-10",
+        "price_date": "2026-11-11",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
       }
     },
@@ -3408,10 +3456,13 @@
         "close_usd": 30.43,
         "date": "2026-11-11",
         "age_days": 1,
+        "currency": "USD",
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/SMCI?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-11-12T00:38:19.242978+00:00"
+        "low_usd": 29.12,
+        "high_usd": 31.19,
+        "checked_at": "2026-11-12T08:52:30.432633+00:00"
       },
       "valuation": {
         "status": "partial",
@@ -3461,10 +3512,13 @@
         "close_usd": 301.22,
         "date": "2026-11-11",
         "age_days": 1,
+        "currency": "USD",
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/SNOW?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-11-12T00:38:19.784205+00:00"
+        "low_usd": 300.44,
+        "high_usd": 310.192,
+        "checked_at": "2026-11-12T08:52:31.013155+00:00"
       },
       "valuation": {
         "status": "partial",
@@ -3514,10 +3568,13 @@
         "close_usd": 3.91,
         "date": "2026-11-11",
         "age_days": 1,
+        "currency": "USD",
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/SOUN?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-11-12T00:38:20.373023+00:00"
+        "low_usd": 3.815,
+        "high_usd": 4.02,
+        "checked_at": "2026-11-12T08:52:31.847133+00:00"
       },
       "valuation": {
         "status": "unavailable",
@@ -3567,10 +3624,13 @@
         "close_usd": 37.11,
         "date": "2026-11-11",
         "age_days": 1,
+        "currency": "USD",
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/SYM?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-11-12T00:38:20.983999+00:00"
+        "low_usd": 37.055,
+        "high_usd": 38.59,
+        "checked_at": "2026-11-12T08:52:32.562540+00:00"
       },
       "valuation": {
         "status": "partial",
@@ -3620,10 +3680,13 @@
         "close_usd": 327.44,
         "date": "2026-11-11",
         "age_days": 1,
+        "currency": "USD",
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/ZBRA?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-11-12T00:38:23.489334+00:00"
+        "low_usd": 326.49,
+        "high_usd": 335.0,
+        "checked_at": "2026-11-12T08:52:35.197488+00:00"
       },
       "valuation": {
         "status": "partial",
@@ -3776,11 +3839,6 @@
       "date": "Wed, 11 Nov 2026 14:48:00 GMT"
     },
     {
-      "title": "Why Bitcoin, Nasdaq, AI Stocks, and Chips Move Together? The Liquidity Machine Explained - TradingView",
-      "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxOUkJnVURtQWRreU9hbGZ4eFNhMWF2MHBDS0JhTkVHQU15UGdOeVJlSnBTV0lraW5TMGxPdkFuY184Um9VVFZwakRFcHVNa2piQklRQ0ZsczIwZGQwcEdYc0lmM3l0M0pvWklSUEpzWXp1SW5LaHJuNkpLWi1fZDJpanZYX3hsWnJBUkRsSjFQNGRDZDRnUkQ4NkppTG50ZzN5Zkg3R2JQS2MxZExOXzJGQ2VDdHVjSkZ5VGlvOGJkRzctZ2FOOEdBWW5STlRERENtZGotdl84bFA2WDdWNUE?oc=5",
-      "date": "Wed, 11 Nov 2026 08:25:45 GMT"
-    },
-    {
       "title": "The Data Centre Play: 14 Stocks Behind the AI Boom - AskTraders.com",
       "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOZXVqRU9FSTl1RWkxa01YSUZlWDVlTXNEMDNWZmVhMHRnSTVxeTA5cm1adDZ3ZFlMc2IyS0dBWHgtRERhNzFqcmg0M3V2cXFrMDJiai1zcEI5NHBBQTJBVVp4U05QRk5HY1RyR3VOT0h0VUx2R043Yl9CdnNQTUpXNlRMOUt0TVI2RjBUQ1h3MUxQNlZ1NDJNZW9UeFIxRjRYN09xMVNTdUZKQQ?oc=5",
       "date": "Wed, 11 Nov 2026 10:50:33 GMT"
@@ -3841,14 +3899,14 @@
       "date": "Tue, 10 Nov 2026 03:14:00 GMT"
     },
     {
-      "title": "3 AI Infrastructure Stocks Riding The Next Data Center Spending Wave - Yahoo Finance",
-      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNQmxYclh6TThZdXl6ak1WNTNhT1dIc050VGFWVjlobko5dmdOUEM4UkFiaTZJNzlrcm9iVjlaTmY1Ym1pczVkcUxEelk2SlRuWS1Ubm1fWldJalN5Q3ZkZVVUc2RVSWIzRk80YTJLQkdFaF9RNGV5cjd1a0J5TUFaTk54R3dDUWc5dUZieUNtNzMzQk9xTDRMWTNUVXdZZw?oc=5",
-      "date": "Tue, 10 Nov 2026 14:10:41 GMT"
-    },
-    {
       "title": "NVIDIA Rises 4% Despite Baird Downgrade and Huang Uncertainty; AMD Climbs 5%, Broadcom Gains 4% - 24/7 Wall St.",
       "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQQzNfT3FUQkg5R0tudTFId2Jucks1MDdRX3pHNXF4UGx2TFc3UjJMUzVjYlB2SmcxRGFiX1VBV2xQRzJiM3A2MWJQZVF3YnpNZ3pmdklMNjZUYVBlVFplV0lpSXA1ZUtKckZCOUItMldEaVhhbVFHdWN1NW51elFSWjdrTGZWejlORjFsajltVnV0YzR6ZzdvMDRHVzVoNGdyUzBEWTBudzBEcU5jMTRMSjIzNWJ4UG93M3BBNW5odUpTc0U0WUVOLWdLSzRoeE0?oc=5",
       "date": "Wed, 11 Nov 2026 14:05:00 GMT"
+    },
+    {
+      "title": "3 AI Infrastructure Stocks Riding The Next Data Center Spending Wave - Yahoo Finance",
+      "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxNQmxYclh6TThZdXl6ak1WNTNhT1dIc050VGFWVjlobko5dmdOUEM4UkFiaTZJNzlrcm9iVjlaTmY1Ym1pczVkcUxEelk2SlRuWS1Ubm1fWldJalN5Q3ZkZVVUc2RVSWIzRk80YTJLQkdFaF9RNGV5cjd1a0J5TUFaTk54R3dDUWc5dUZieUNtNzMzQk9xTDRMWTNUVXdZZw?oc=5",
+      "date": "Tue, 10 Nov 2026 14:10:41 GMT"
     },
     {
       "title": "Iron Mountain Raises Its Dividend 15% as Data Center Revenue Surges 34% - 24/7 Wall St.",
@@ -3864,6 +3922,11 @@
       "title": "Broadcom Inc Share Price - AVGO, RNS News, Articles, Quotes, & Charts (NASDAQ:AVGO) - Proactive financial news",
       "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9GRnpmQUV2dHphVHdJVHpYVHdpN3JLZ0RHZTBGQU0tNEdFbkVMS3VScEg3MnFHQndWWFpPMXZCMTJTNXBpbTd4dGk1NUxnWkFteWY3cW44RHpEVFRBWjRxQ2RjQzRwS1RpelNrREpkNA?oc=5",
       "date": "Wed, 11 Nov 2026 17:12:33 GMT"
+    },
+    {
+      "title": "Why Bitcoin, Nasdaq, AI Stocks, and Chips Move Together? The Liquidity Machine Explained - Cryptonews",
+      "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBhVFBDRnZybV9iUW9KMzNDV1Q5UUJaNkt6TGlyNzJpOU9oTlMxdEYwRks4UFZiX2ZSOEVWbVBtWDJuNkdqeGxfZzdXT3MyWmlUWFJrMzNNV2ZubzB4TDctcy1VQVA3Y0J2RnRPbXlnR3R3Z1lOOHhPSw?oc=5",
+      "date": "Wed, 11 Nov 2026 08:25:45 GMT"
     },
     {
       "title": "Nvidia CEO Jensen Huang — The Fall of AI’s Keyman and Future Ecosystem - The Korea Daily",
@@ -4176,102 +4239,102 @@
           "Yahoo: HTTP Error 404: Not Found"
         ]
       },
-      "JBL": {
+      "ROK": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-11"
       },
-      "LRCX": {
+      "RR": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-11"
       },
-      "MBLY": {
+      "SERV": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-11"
       },
-      "META": {
+      "SIEGY": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-11"
       },
-      "MPWR": {
+      "SMCI": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-11"
       },
-      "MRVL": {
+      "SNOW": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-11"
       },
-      "MSFT": {
+      "SOUN": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-11"
       },
-      "MU": {
+      "SYM": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-11"
       },
-      "NOW": {
+      "TER": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-11"
       },
-      "NVDA": {
+      "TSM": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-11"
       },
-      "NVT": {
+      "VRT": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-11"
       },
-      "ONDS": {
+      "ZBRA": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-11"
       },
-      "ONTO": {
+      "ACHR": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-11"
       },
-      "OUST": {
+      "AI": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-11"
       },
-      "PATH": {
+      "ALAB": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-11"
       },
-      "PDYN": {
+      "AMAT": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-11"
       },
-      "PLTR": {
+      "AMD": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-11"
       },
-      "PWR": {
+      "AMZN": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-11"
       },
-      "QCOM": {
+      "ANET": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-11"
       },
-      "RCAT": {
+      "APH": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-11"
