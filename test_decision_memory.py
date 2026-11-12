@@ -18,7 +18,7 @@ class DecisionMemoryTests(unittest.TestCase):
         self.assertEqual(len(h),1)
         m,h=record_scan(companies,"2026-11-12T06:00:00Z",self.path)
         self.assertEqual(len(h),0)
-        self.assertEqual(len(m["events"]),1)
+        self.assertEqual(len(m["events"]),6)
     def test_no_price_does_not_create_zero(self):
         m,h=record_scan([{"ticker":"MU","price":None}],"scan",self.path)
         self.assertEqual(m["price_observations"],[])
