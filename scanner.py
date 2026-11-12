@@ -60,6 +60,16 @@ def annual_values(facts,tags,unit='USD',instant=False):
         vals=sorted(byyear.values(),key=lambda x:x['end'],reverse=True)
         if vals:return [{'year':v['end'][:4],'end':v['end'],'value':v['val'],'filed':v['filed']} for v in vals[:3]]
     return []
+def latest_common_end(metrics, *keys):
+    """Return values only for the newest fiscal end shared by every requested metric."""
+    if not keys or not all(metrics.get(k) for k in keys): return None, None
+    common=set(x['end'] for x in metrics[keys[0]])
+    for key in keys[1:]: common &= {x['end'] for x in metrics[key]}
+    if not common: return None, None
+    end=max(common)
+    vals={key:next(x['value'] for x in metrics[key] if x['end']==end) for key in keys}
+    return end, vals
+
 def fundamentals(ticker,cik):
     data=sec_json('https://data.sec.gov/api/xbrl/companyfacts/CIK'+str(cik).zfill(10)+'.json')
     facts=data.get('facts',{}); metrics={}
@@ -77,16 +87,8 @@ def fundamentals(ticker,cik):
                 metrics['shares']=[dei_share]
     latest=lambda key: metrics[key][0]['value'] if metrics[key] else None
     # Never combine annual flow values from different fiscal periods.
-    def latest_common_end(*keys):
-        if not all(metrics.get(k) for k in keys): return None, None
-        common=set(x['end'] for x in metrics[keys[0]])
-        for key in keys[1:]: common &= {x['end'] for x in metrics[key]}
-        if not common: return None, None
-        end=max(common)
-        vals={key:next(x['value'] for x in metrics[key] if x['end']==end) for key in keys}
-        return end, vals
-    revenue_end, revenue_pair=latest_common_end('revenue','net_income')
-    cashflow_end, cashflow_pair=latest_common_end('operating_cash_flow','capex')
+    revenue_end, revenue_pair=latest_common_end(metrics,'revenue','net_income')
+    cashflow_end, cashflow_pair=latest_common_end(metrics,'operating_cash_flow','capex')
     rev=latest('revenue')
     net=revenue_pair['net_income'] if revenue_pair else None
     ocf=cashflow_pair['operating_cash_flow'] if cashflow_pair else None
@@ -272,7 +274,7 @@ def calculate_valuation(company, today=None):
         if period_ok('revenue_period_end') and isinstance(revenue,(int,float)) and revenue>0:
             result['ps']=round(cap/revenue,2)
         net=f.get('net_income_usd')
-        if period_ok('net_income_period_end') and isinstance(net,(int,float)) and net>0:
+        if (period_ok('net_income_period_end') and f.get('net_income_period_end')==f.get('revenue_period_end') and isinstance(net,(int,float)) and net>0):
             result['pe']=round(cap/net,2)
         fcf=f.get('free_cash_flow_usd')
         if (period_ok('cash_flow_period_end') and period_ok('capex_period_end')
