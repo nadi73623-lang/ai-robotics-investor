@@ -62,7 +62,14 @@ def initial_memory():
         "entry_levels": levels,
         "recommendations": [],
         "gate_audits": [],
-        "events": [],
+        "events": [
+            {"type":"HISTORICAL_ENTRY_ZONE_HIT", "level_id":"legacy-20260911-"+h["ticker"]+"-"+h["zone"],
+             "ticker":h["ticker"], "zone":h["zone"], "date":h["date"],
+             "intraday_low":h["low"], "close":h["close"], "basis":h["basis"],
+             "currency":"USD", "source":h["source"],
+             "status":"HISTORICAL_HIT_REQUIRES_REVIEW_NOT_AUTOMATIC_BUY"}
+            for h in HISTORICAL_HITS
+        ],
         "price_observations": [],
         "historical_imports": HISTORICAL_HITS,
         "last_scan": None
@@ -131,9 +138,8 @@ def record_scan(companies, generated_at=None, path=MEMORY_PATH):
                            "quotes_seen": sum(1 for c in companies if (c.get("price") or {}).get("close_usd") is not None),
                            "zone_hits": len(hits)}
     memory["updated_at"] = generated_at
-    if path == MEMORY_PATH:
-        path.parent.mkdir(parents=True, exist_ok=True)
-        path.write_text(json.dumps(memory, ensure_ascii=False, indent=2), encoding="utf-8")
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(memory, ensure_ascii=False, indent=2), encoding="utf-8")
     return memory, hits
 
 def append_recommendation(ticker, recommendation, price, currency, as_of, zones, rationale, path=MEMORY_PATH):
