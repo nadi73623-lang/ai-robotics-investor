@@ -41,3 +41,14 @@ The archive's `historical_dataset_manifest.json` remains:
 3. Add an integration test proving the production scan path calls Balanced 1.3 and writes one rejection/decision trace per security.
 4. Run the real-data audit and walk-forward event study. Reject any dataset with future-dated inputs, incomplete corporate-action treatment, or survivorship bias.
 5. Keep BUY authorization false until coverage and performance acceptance criteria pass. Only then consider a separate production PR.
+
+
+## Recovery audit — 2026-11-12
+- The exact archive was found in the user's Library (not missing): `AI_Robotics_Investor_Balanced_1.3.4_Global_Equity_Master_2026-11-08.zip`.
+- SHA-256 verified: `49d694dc8a3b3e3402654e2ed0c205b589fdaed0383baf0a8c5155ba3a9c8a81`; ZIP integrity check passed.
+- The archive's `scanner.py` is version `5.1.0-global-equity-master-balanced-1.3.4`; it invokes `evaluate_company` for each company and writes `data/signal_rejections.json`. This integration is in the archive, not yet in this repair branch.
+- Focused local tests on the recovered archive: 95 passed across scanner, Balanced evaluator/audit trace, global market universe/data and analyst-target/import tests. Core Python modules passed `py_compile`.
+- Full-scan integration test is stale: it asserts a 68-company universe while the recovered scanner now has 92 tracked entries. After updating the expected universe and expanding fixture batch sizes, the SEC-success fixture passed; the SEC-outage fixture still timed out due to unmocked external/network fallback and remains unresolved.
+- The archive's cached `data/scan.json` and `data/coverage_report.json` are dated 2026-10-16 and are not current market evidence.
+- Historical dataset manifest remains blocked: no audited point-in-time OHLCV/FX + delisted universe + historical analyst-target coverage. No real-data walk-forward backtest was performed.
+- BUY publication remains unauthorized. No production workflow, main branch, Worker, or Android release was changed.
