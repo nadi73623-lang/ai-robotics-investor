@@ -58,17 +58,17 @@ def annual_values(facts,tags,unit='USD',instant=False):
             year=x['end'][:4]
             if year not in byyear or x['filed']>byyear[year]['filed']: byyear[year]=x
         vals=sorted(byyear.values(),key=lambda x:x['end'],reverse=True)
-        if vals:return [{'year':v['end'][:4],'end':v['end'],'value':v['val'],'filed':v['filed']} for v in vals[:3]]
+        if vals:return [{'year':v['end'][:4],'start':v.get('start'),'end':v['end'],'value':v['val'],'filed':v['filed']} for v in vals[:3]]
     return []
 def latest_common_end(metrics, *keys):
     """Return values only for the newest fiscal end shared by every requested metric."""
     if not keys or not all(metrics.get(k) for k in keys): return None, None
-    common=set(x['end'] for x in metrics[keys[0]])
-    for key in keys[1:]: common &= {x['end'] for x in metrics[key]}
+    common={(x.get('start'),x['end']) for x in metrics[keys[0]]}
+    for key in keys[1:]: common &= {(x.get('start'),x['end']) for x in metrics[key]}
     if not common: return None, None
-    end=max(common)
-    vals={key:next(x['value'] for x in metrics[key] if x['end']==end) for key in keys}
-    return end, vals
+    start,end=max(common,key=lambda x:x[1])
+    vals={key:next(x['value'] for x in metrics[key] if (x.get('start'),x['end'])==(start,end)) for key in keys}
+    return {'start':start,'end':end}, vals
 
 def fundamentals(ticker,cik):
     data=sec_json('https://data.sec.gov/api/xbrl/companyfacts/CIK'+str(cik).zfill(10)+'.json')
@@ -93,7 +93,7 @@ def fundamentals(ticker,cik):
     net=revenue_pair['net_income'] if revenue_pair else None
     ocf=cashflow_pair['operating_cash_flow'] if cashflow_pair else None
     capex=cashflow_pair['capex'] if cashflow_pair else None
-    margin=round(net/rev*100,1) if rev and net is not None and revenue_end==metrics['revenue'][0]['end'] else None
+    margin=round(net/rev*100,1) if rev and net is not None and revenue_end and revenue_end['end']==metrics['revenue'][0]['end'] else None
     fcf=ocf-abs(capex) if ocf is not None and capex is not None else None
     growth=None
     if len(metrics['revenue'])>1:
@@ -103,9 +103,9 @@ def fundamentals(ticker,cik):
     # A score is withheld unless all flow metrics use their latest common fiscal end.
     periods_fully_aligned=(
         bool(metrics['revenue']) and bool(metrics['net_income']) and
-        revenue_end==metrics['revenue'][0]['end']==metrics['net_income'][0]['end'] and
+        revenue_end and revenue_end['end']==metrics['revenue'][0]['end']==metrics['net_income'][0]['end'] and revenue_end['start']==metrics['revenue'][0].get('start')==metrics['net_income'][0].get('start') and
         bool(metrics['operating_cash_flow']) and bool(metrics['capex']) and
-        cashflow_end==metrics['operating_cash_flow'][0]['end']==metrics['capex'][0]['end']
+        cashflow_end and cashflow_end['end']==metrics['operating_cash_flow'][0]['end']==metrics['capex'][0]['end'] and cashflow_end['start']==metrics['operating_cash_flow'][0].get('start')==metrics['capex'][0].get('start')
     )
     checks=[growth is not None,margin is not None,fcf is not None,ocf is not None]
     score=None
@@ -116,8 +116,8 @@ def fundamentals(ticker,cik):
       'free_cash_flow_usd':fcf,'cash_usd':latest('cash'),'debt_usd':debt,
       'financial_health_score':score,'score_label':'Prosty filtr 4 warunków, tylko zgodne okresy; nie rekomendacja',
       'shares_outstanding':latest('shares'),'shares_as_of':metrics['shares'][0]['end'] if metrics['shares'] else None,'revenue_period_end':metrics['revenue'][0]['end'] if metrics['revenue'] else None,'net_income_period_end':revenue_end,'cash_flow_period_end':cashflow_end,'capex_period_end':cashflow_end,
-      'period_alignment':{'revenue_net_income_common_end':revenue_end,'cashflow_capex_common_end':cashflow_end,'revenue_net_income_match_latest':bool(metrics['revenue'] and metrics['net_income'] and revenue_end==metrics['revenue'][0]['end']==metrics['net_income'][0]['end']),'cashflow_capex_match_latest':bool(metrics['operating_cash_flow'] and metrics['capex'] and cashflow_end==metrics['operating_cash_flow'][0]['end']==metrics['capex'][0]['end']),'status':'aligned' if periods_fully_aligned else 'partial_or_mismatched'},
-      'period_mismatch_flags':([key for key in ('revenue','net_income','operating_cash_flow','capex') if not metrics.get(key)] + (['revenue_net_income_period_mismatch'] if metrics.get('revenue') and metrics.get('net_income') and not (revenue_end==metrics['revenue'][0]['end']==metrics['net_income'][0]['end']) else []) + (['cashflow_capex_period_mismatch'] if metrics.get('operating_cash_flow') and metrics.get('capex') and not (cashflow_end==metrics['operating_cash_flow'][0]['end']==metrics['capex'][0]['end']) else [])),
+      'period_alignment':{'revenue_net_income_common_period':revenue_end,'cashflow_capex_common_period':cashflow_end,'revenue_net_income_match_latest':bool(metrics['revenue'] and metrics['net_income'] and revenue_end and revenue_end['end']==metrics['revenue'][0]['end']==metrics['net_income'][0]['end'] and revenue_end['start']==metrics['revenue'][0].get('start')==metrics['net_income'][0].get('start')),'cashflow_capex_match_latest':bool(metrics['operating_cash_flow'] and metrics['capex'] and cashflow_end and cashflow_end['end']==metrics['operating_cash_flow'][0]['end']==metrics['capex'][0]['end'] and cashflow_end['start']==metrics['operating_cash_flow'][0].get('start')==metrics['capex'][0].get('start')),'status':'aligned' if periods_fully_aligned else 'partial_or_mismatched'},
+      'period_mismatch_flags':([key for key in ('revenue','net_income','operating_cash_flow','capex') if not metrics.get(key)] + (['revenue_net_income_period_mismatch'] if metrics.get('revenue') and metrics.get('net_income') and not (revenue_end and revenue_end['end']==metrics['revenue'][0]['end']==metrics['net_income'][0]['end'] and revenue_end['start']==metrics['revenue'][0].get('start')==metrics['net_income'][0].get('start')) else []) + (['cashflow_capex_period_mismatch'] if metrics.get('operating_cash_flow') and metrics.get('capex') and not (cashflow_end and cashflow_end['end']==metrics['operating_cash_flow'][0]['end']==metrics['capex'][0]['end'] and cashflow_end['start']==metrics['operating_cash_flow'][0].get('start')==metrics['capex'][0].get('start')) else [])),
       'financial_health_score_available':periods_fully_aligned,
       'as_of':datetime.now(timezone.utc).isoformat(),'source_url':'https://www.sec.gov/edgar/browse/?CIK='+str(cik)}
 SEC_BATCH_SIZE=16  # max requests per six-hour scan; staggered, no paid API
