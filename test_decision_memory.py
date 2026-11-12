@@ -1,6 +1,6 @@
 import json, tempfile, unittest
 from pathlib import Path
-from decision_memory import initial_memory, record_scan, append_recommendation, append_gate_audit
+from decision_memory import initial_memory, record_scan, append_recommendation, append_gate_audit, append_scan_snapshot
 
 class DecisionMemoryTests(unittest.TestCase):
     def setUp(self):
@@ -34,6 +34,20 @@ class DecisionMemoryTests(unittest.TestCase):
         b=append_recommendation("MU","BUY",700,"USD","2026-11-11",{"good":[700,800]},"new test",self.path)
         self.assertNotEqual(a["id"],b["id"])
         self.assertEqual(len(json.loads(self.path.read_text())["recommendations"]),2)
+
+    def test_scan_snapshot_is_immutable_and_hash_stable(self):
+        companies=[{"ticker":"MU","price":{"close_usd":725.11,"date":"2026-11-10","currency":"USD"},"valuation":{"status":"partial","market_cap_usd":900}}]
+        first=append_scan_snapshot("scan-1",companies,self.path)
+        second=append_scan_snapshot("scan-1",[{"ticker":"MU"}],self.path)
+        self.assertEqual(first["sha256"],second["sha256"])
+        self.assertTrue(first["immutable"])
+        self.assertEqual(first["company_count"],1)
+        self.assertEqual(len(json.loads(self.path.read_text())["scan_snapshots"]),1)
+
+    def test_snapshot_rejects_nonfinite_calculations(self):
+        with self.assertRaises(ValueError):
+            append_scan_snapshot("scan-nan",[{"ticker":"MU","valuation":{"pe":float("nan")}}],self.path)
+
     def test_gate_audit_requires_explicit_states(self):
         with self.assertRaises(ValueError):
             append_gate_audit("MU","scan",{"R/R":{"status":"MAYBE"}},[],self.path)
