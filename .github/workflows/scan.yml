@@ -1,5 +1,8 @@
 name: AI Robotics market scan
 on:
+  pull_request:
+    branches:
+      - main
   push:
     branches:
       - fix/decision-memory-entry-alerts
