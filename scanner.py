@@ -100,18 +100,25 @@ def fundamentals(ticker,cik):
         a,b=metrics['revenue'][:2]
         if int(a['year'])-int(b['year'])==1 and b['value']>0:growth=round((a['value']/b['value']-1)*100,1)
     debt=(latest('debt_current') or 0)+(latest('debt_long') or 0) if latest('debt_current') is not None or latest('debt_long') is not None else None
-    # Descriptive score only when all component metrics use aligned fiscal periods.
+    # A score is withheld unless all flow metrics use their latest common fiscal end.
+    periods_fully_aligned=(
+        bool(metrics['revenue']) and bool(metrics['net_income']) and
+        revenue_end==metrics['revenue'][0]['end']==metrics['net_income'][0]['end'] and
+        bool(metrics['operating_cash_flow']) and bool(metrics['capex']) and
+        cashflow_end==metrics['operating_cash_flow'][0]['end']==metrics['capex'][0]['end']
+    )
     checks=[growth is not None,margin is not None,fcf is not None,ocf is not None]
     score=None
-    if all(checks):
+    if all(checks) and periods_fully_aligned:
         score=round(100*(int(growth>15)+int(margin>10)+int(fcf>0)+int(ocf>0))/4)
     return {'source':'SEC EDGAR XBRL','fiscal_year':metrics['revenue'][0]['year'] if metrics['revenue'] else None,
       'revenue_usd':rev,'net_income_usd':net,'revenue_growth_pct':growth,'net_margin_pct':margin,'operating_cash_flow_usd':ocf,
       'free_cash_flow_usd':fcf,'cash_usd':latest('cash'),'debt_usd':debt,
       'financial_health_score':score,'score_label':'Prosty filtr 4 warunków, tylko zgodne okresy; nie rekomendacja',
       'shares_outstanding':latest('shares'),'shares_as_of':metrics['shares'][0]['end'] if metrics['shares'] else None,'revenue_period_end':metrics['revenue'][0]['end'] if metrics['revenue'] else None,'net_income_period_end':revenue_end,'cash_flow_period_end':cashflow_end,'capex_period_end':cashflow_end,
-      'period_alignment':{'revenue_net_income_match':revenue_end is not None and revenue_end==metrics['revenue'][0]['end'],'cashflow_capex_match':cashflow_end is not None,'status':'aligned' if revenue_end and cashflow_end else 'partial_or_mismatched'},
-      'period_mismatch_flags':([key for key in ('revenue','net_income') if not metrics.get(key)] + (['revenue_net_income_period_mismatch'] if metrics.get('revenue') and metrics.get('net_income') and not revenue_end else []) + (['cashflow_capex_period_mismatch'] if metrics.get('operating_cash_flow') and metrics.get('capex') and not cashflow_end else [])),
+      'period_alignment':{'revenue_net_income_common_end':revenue_end,'cashflow_capex_common_end':cashflow_end,'revenue_net_income_match_latest':bool(metrics['revenue'] and metrics['net_income'] and revenue_end==metrics['revenue'][0]['end']==metrics['net_income'][0]['end']),'cashflow_capex_match_latest':bool(metrics['operating_cash_flow'] and metrics['capex'] and cashflow_end==metrics['operating_cash_flow'][0]['end']==metrics['capex'][0]['end']),'status':'aligned' if periods_fully_aligned else 'partial_or_mismatched'},
+      'period_mismatch_flags':([key for key in ('revenue','net_income','operating_cash_flow','capex') if not metrics.get(key)] + (['revenue_net_income_period_mismatch'] if metrics.get('revenue') and metrics.get('net_income') and not (revenue_end==metrics['revenue'][0]['end']==metrics['net_income'][0]['end']) else []) + (['cashflow_capex_period_mismatch'] if metrics.get('operating_cash_flow') and metrics.get('capex') and not (cashflow_end==metrics['operating_cash_flow'][0]['end']==metrics['capex'][0]['end']) else [])),
+      'financial_health_score_available':periods_fully_aligned,
       'as_of':datetime.now(timezone.utc).isoformat(),'source_url':'https://www.sec.gov/edgar/browse/?CIK='+str(cik)}
 SEC_BATCH_SIZE=16  # max requests per six-hour scan; staggered, no paid API
 PRICE_BATCH_SIZE=24  # complete the 68-name rotation in about three successful scans
