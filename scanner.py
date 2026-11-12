@@ -7,7 +7,7 @@ from decision_memory import record_scan, append_gate_audit, append_scan_snapshot
 
 ROOT=Path(__file__).resolve().parent
 UNIVERSE=[
- ('NVDA','NVIDIA','AI chips'),('AVGO','Broadcom','AI infrastructure'),('AMD','Advanced Micro Devices','AI chips'),('TSM','Taiwan Semiconductor','Semiconductors'),('ASML','ASML','Semiconductor equipment'),('ARM','Arm Holdings','Chip architecture'),('MU','Micron Technology','AI memory'),('MRVL','Marvell Technology','AI networking'),('ANET','Arista Networks','AI networking'),('CRDO','Credo Technology','AI networking'),('ALAB','Astera Labs','AI connectivity'),('SMCI','Super Micro Computer','AI servers'),('DELL','Dell Technologies','AI servers'),('VRT','Vertiv','Data centers'),('ETN','Eaton','Data center power'),('GOOGL','Alphabet','AI platforms'),('MSFT','Microsoft','AI platforms'),('AMZN','Amazon','AI cloud'),('META','Meta Platforms','AI platforms'),('PLTR','Palantir','AI software'),('AI','C3.ai','AI software'),('SOUN','SoundHound AI','AI software'),('BBAI','BigBear.ai','AI software'),('PATH','UiPath','Automation'),('NOW','ServiceNow','Enterprise AI'),('SNOW','Snowflake','Data platform'),('PDYN','Palladyne AI','Robotics'),('SYM','Symbotic','Warehouse robotics'),('ISRG','Intuitive Surgical','Surgical robotics'),('TER','Teradyne','Industrial robotics'),('ROK','Rockwell Automation','Industrial automation'),('ABB','ABB Ltd','Industrial automation'),('FANUY','FANUC','Industrial robotics'),('KUKAF','KUKA','Industrial robotics'),('ZBRA','Zebra Technologies','Industrial automation'),('CGNX','Cognex','Machine vision'),('IRBT','iRobot','Consumer robotics'),('SERV','Serve Robotics','Autonomous robots'),('RR','Richtech Robotics','Service robotics'),('JOBY','Joby Aviation','Autonomy'),('ACHR','Archer Aviation','Autonomy'),('MBLY','Mobileye','Autonomous driving'),('LAZR','Luminar Technologies','Autonomous driving'),('OUST','Ouster','Sensors'),('KTOS','Kratos Defense','Autonomous systems'),('RCAT','Red Cat Holdings','Drones'),('ONDS','Ondas Holdings','Drones'),('QCOM','Qualcomm','Edge AI'),('INTC','Intel','Semiconductors'),('APH','Amphenol','AI connectivity'),('GLW','Corning','Optical infrastructure'),('COHR','Coherent','Optical infrastructure'),('LITE','Lumentum','Optical infrastructure'),('CLS','Celestica','AI hardware'),('JBL','Jabil','AI hardware'),('ONTO','Onto Innovation','Semiconductor equipment'),('AMAT','Applied Materials','Semiconductor equipment'),('LRCX','Lam Research','Semiconductor equipment'),('KLAC','KLA Corporation','Semiconductor equipment'),('MPWR','Monolithic Power Systems','Power semiconductors'),('NVT','nVent Electric','Data center power'),('PWR','Quanta Services','Grid infrastructure'),('HUBB','Hubbell','Grid infrastructure'),('EMR','Emerson Electric','Industrial automation'),('HON','Honeywell','Industrial automation'),('SIEGY','Siemens','Industrial automation'),('DHR','Danaher','Laboratory automation'),('AZTA','Azenta','Laboratory automation')]
+ ('NVDA','NVIDIA','AI chips'),('AVGO','Broadcom','AI infrastructure'),('AMD','Advanced Micro Devices','AI chips'),('TSM','Taiwan Semiconductor','Semiconductors'),('ASML','ASML','Semiconductor equipment'),('ARM','Arm Holdings','Chip architecture'),('MU','Micron Technology','AI memory'),('MRVL','Marvell Technology','AI networking'),('ANET','Arista Networks','AI networking'),('CRDO','Credo Technology','AI networking'),('ALAB','Astera Labs','AI connectivity'),('SMCI','Super Micro Computer','AI servers'),('DELL','Dell Technologies','AI servers'),('VRT','Vertiv','Data centers'),('ETN','Eaton','Data center power'),('GOOGL','Alphabet','AI platforms'),('MSFT','Microsoft','AI platforms'),('AMZN','Amazon','AI cloud'),('META','Meta Platforms','AI platforms'),('PLTR','Palantir','AI software'),('AI','C3.ai','AI software'),('SOUN','SoundHound AI','AI software'),('BBAI','BigBear.ai','AI software'),('PATH','UiPath','Automation'),('NOW','ServiceNow','Enterprise AI'),('SNOW','Snowflake','Data platform'),('PDYN','Palladyne AI','Robotics'),('SYM','Symbotic','Warehouse robotics'),('ISRG','Intuitive Surgical','Surgical robotics'),('TER','Teradyne','Industrial robotics'),('ROK','Rockwell Automation','Industrial automation'),('ABB','ABB Ltd','Industrial automation'),('FANUY','FANUC','Industrial robotics'),('KUKAF','KUKA','Industrial robotics'),('ZBRA','Zebra Technologies','Industrial automation'),('CGNX','Cognex','Machine vision'),('IRBT','iRobot','Consumer robotics'),('SERV','Serve Robotics','Autonomous robots'),('RR','Richtech Robotics','Service robotics'),('JOBY','Joby Aviation','Autonomy'),('ACHR','Archer Aviation','Autonomy'),('MBLY','Mobileye','Autonomous driving'),('LAZR','Luminar Technologies','Autonomous driving'),('OUST','Ouster','Sensors'),('KTOS','Kratos Defense','Autonomous systems'),('RCAT','Red Cat Holdings','Drones'),('ONDS','Ondas Holdings','Drones'),('QCOM','Qualcomm','Edge AI'),('INTC','Intel','Semiconductors'),('APH','Amphenol','AI connectivity'),('GLW','Corning','Optical infrastructure'),('COHR','Coherent','Optical infrastructure'),('LITE','Lumentum','Optical infrastructure'),('CLS','Celestica','AI hardware'),('JBL','Jabil','AI hardware'),('ONTO','Onto Innovation','Semiconductor equipment'),('AMAT','Applied Materials','Semiconductor equipment'),('LRCX','Lam Research','Semiconductor equipment'),('KLAC','KLA Corporation','Semiconductor equipment'),('MPWR','Monolithic Power Systems','Power semiconductors'),('NVT','nVent Electric','Data center power'),('PWR','Quanta Services','Grid infrastructure'),('HUBB','Hubbell','Grid infrastructure'),('EMR','Emerson Electric','Industrial automation'),('HON','Honeywell','Industrial automation'),('SIEGY','Siemens','Industrial automation'),('DHR','Danaher','Laboratory automation'),('AZTA','Azenta','Laboratory automation'),('6479.T','MinebeaMitsumi','Robotics components'),('2498.HK','RoboSense','LiDAR and perception'),('6471.T','NSK','Bearings and motion'),('6762.T','TDK','Electronic components'),('5471.T','Daido Steel','Magnetic and specialty materials'),('002050.SZ','Sanhua Intelligent Controls','Thermal and robotics components'),('601689.SS','Tuopu Group','Automotive and robotics components'),('300124.SZ','Inovance Technology','Industrial automation'),('2049.TW','HIWIN Technologies','Linear motion and robotics'),('1590.TW','AirTAC','Pneumatics and automation'),('6594.T','Nidec','Motors and actuators'),('6268.T','Nabtesco','Precision reducers'),('6481.T','THK','Linear motion'),('6954.T','FANUC Corp','Industrial robotics'),('6273.T','SMC Corp','Pneumatics and automation'),('6645.T','Omron','Sensing and automation'),('6324.T','Harmonic Drive Systems','Precision gears'),('6861.T','Keyence','Machine vision and sensors'),('2308.TW','Delta Electronics','Power and automation'),('2395.TW','Advantech','Industrial computing'),('000333.SZ','Midea Group','Robotics and appliances'),('1211.HK','BYD','EV and batteries'),('300750.SZ','CATL','Battery systems'),('373220.KS','LG Energy Solution','Battery systems'),('009150.KS','Samsung Electro-Mechanics','Electronic components'),('454910.KS','Doosan Robotics','Collaborative robots'),('277810.KS','Rainbow Robotics','Humanoid and industrial robots'),('2301.TW','Lite-On Technology','Optoelectronics'),('NOVT','Novanta','Precision motion and photonics'),('ALGM','Allegro MicroSystems','Power and sensing semiconductors'),('RRX','Regal Rexnord','Motion control'),('ST','Sensata Technologies','Sensors and controls'),('UMAC','Unusual Machines','Drones and components')]
 QUERIES=['artificial intelligence robotics stocks companies contracts earnings', 'AI data center chips networking power infrastructure stocks', 'industrial automation humanoid robots publicly traded companies', 'AI inference optical interconnect semiconductor publicly traded stock', 'warehouse automation machine vision autonomous systems listed company', 'AI infrastructure cooling energy grid power public company']
 UA={'User-Agent':'Mozilla/5.0 (compatible; AI-Robotics-Investor/2.0; public research)'}
 def fetch(q):
@@ -158,6 +158,47 @@ from datetime import timedelta
 class QuoteError(Exception):
     pass
 
+# Explicit primary/ADR Yahoo Finance symbols. No fuzzy ticker guessing.
+YAHOO_SYMBOLS = {
+ '6479.T':'6479.T','2498.HK':'2498.HK','6471.T':'6471.T','6762.T':'6762.T','5471.T':'5471.T',
+ '002050.SZ':'002050.SZ','601689.SS':'601689.SS','300124.SZ':'300124.SZ','2049.TW':'2049.TW',
+ '1590.TW':'1590.TW','6594.T':'6594.T','6268.T':'6268.T','6481.T':'6481.T','6954.T':'6954.T',
+ '6273.T':'6273.T','6645.T':'6645.T','6324.T':'6324.T','6861.T':'6861.T','2308.TW':'2308.TW',
+ '2395.TW':'2395.TW','000333.SZ':'000333.SZ','1211.HK':'1211.HK','300750.SZ':'300750.SZ',
+ '373220.KS':'373220.KS','009150.KS':'009150.KS','454910.KS':'454910.KS','277810.KS':'277810.KS',
+ '2301.TW':'2301.TW'
+}
+# Yahoo FX symbols are explicitly tagged by quote convention:
+# direct symbols return USD per 1 unit of foreign currency; inverse symbols return
+# units of foreign currency per 1 USD.
+FX_SYMBOLS = {
+ 'EUR':('EURUSD=X','direct'),'GBP':('GBPUSD=X','direct'),
+ 'JPY':('JPY=X','inverse'),'HKD':('HKD=X','inverse'),'TWD':('TWD=X','inverse'),
+ 'CNY':('CNY=X','inverse'),'KRW':('KRW=X','inverse')
+}
+def _yahoo_chart(symbol, period='6mo'):
+    url='https://query1.finance.yahoo.com/v8/finance/chart/'+urllib.parse.quote(symbol,safe='')+'?interval=1d&range='+period
+    req=urllib.request.Request(url,headers={'User-Agent':'Mozilla/5.0','Accept':'application/json'})
+    with urllib.request.urlopen(req,timeout=15) as response: obj=json.load(response)
+    results=(obj.get('chart') or {}).get('result') or []
+    if not results: raise QuoteError('Yahoo chart has no result for '+symbol)
+    return results[0],url
+def fx_to_usd(currency):
+    if currency=='USD': return 1.0
+    if currency not in FX_SYMBOLS: raise QuoteError('No approved FX mapping for '+str(currency))
+    symbol,mode=FX_SYMBOLS[currency]
+    result,url=_yahoo_chart(symbol,'5d')
+    meta=result.get('meta') or {}
+    stamps=result.get('timestamp') or []
+    bars=((result.get('indicators') or {}).get('quote') or [{}])[0]
+    closes=bars.get('close') or []
+    vals=[(ts,v) for ts,v in zip(stamps,closes) if v is not None and float(v)>0]
+    if not vals: raise QuoteError('FX chart has no valid close for '+currency)
+    ts,rate=vals[-1]; rate=float(rate)
+    # Guard against reversed/invalid pair conventions and extreme rates.
+    if not (0.00001 < rate < 100000): raise QuoteError('FX rate out of range for '+currency)
+    return (rate if mode=='direct' else 1.0/rate), {'symbol':symbol,'date':datetime.fromtimestamp(ts,timezone.utc).date().isoformat(),'rate':rate,'mode':mode,'source_url':url}
+
 def checked_quote(price, day, source, url):
     try:
         value=float(price)
@@ -168,7 +209,7 @@ def checked_quote(price, day, source, url):
     if not (0 < value < 10000000): raise QuoteError('price out of range')
     if not 0 <= age <= 7: raise QuoteError('stale or future quote: '+str(day))
     return {'close_usd':round(value,4),'date':stamp.isoformat(),'age_days':age,
-            'currency':'USD','source':source,'source_url':url,'is_live':False}
+            'close_native':round(value,4),'currency':'USD','source':source,'source_url':url,'is_live':False}
 
 def stooq_quote(ticker):
     if not re.fullmatch(r'[A-Z]{1,5}',ticker): raise QuoteError('unsupported ticker')
@@ -190,40 +231,60 @@ def stooq_quote(ticker):
     return quote
 
 def yahoo_quote(ticker):
-    # Public chart endpoint: availability and redistribution rights may change.
-    if not re.fullmatch(r'[A-Z]{1,5}',ticker): raise QuoteError('unsupported ticker')
-    url='https://query1.finance.yahoo.com/v8/finance/chart/'+urllib.parse.quote(ticker)+'?interval=1d&range=15d'
-    req=urllib.request.Request(url,headers={'User-Agent':'Mozilla/5.0','Accept':'application/json'})
-    with urllib.request.urlopen(req,timeout=12) as response:
-        obj=json.load(response)
-    results=(obj.get('chart') or {}).get('result') or []
-    if not results: raise QuoteError('Yahoo chart has no result')
-    result=results[0]
+    # Resolve only explicit symbols; US tickers remain exact-symbol lookups.
+    if not re.fullmatch(r'[A-Z0-9.]{1,12}',ticker): raise QuoteError('unsupported ticker')
+    symbol=YAHOO_SYMBOLS.get(ticker,ticker)
+    result,url=_yahoo_chart(symbol,'6mo')
     meta=result.get('meta') or {}
-    if meta.get('currency')!='USD': raise QuoteError('Yahoo quote currency is not USD')
+    currency=meta.get('currency')
+    if not currency or len(currency)!=3: raise QuoteError('Yahoo chart returned no valid currency')
     stamps=result.get('timestamp') or []
     bars=((result.get('indicators') or {}).get('quote') or [{}])[0]
     closes=bars.get('close') or []
-    valid=[i for i,(ts,close) in enumerate(zip(stamps,closes)) if close is not None]
+    valid=[i for i,(ts,close) in enumerate(zip(stamps,closes)) if close is not None and close>0]
     if not valid: raise QuoteError('Yahoo chart has no daily closes')
-    i=valid[-1]; ts,price=stamps[i],closes[i]
+    i=valid[-1]; ts,price=stamps[i],float(closes[i])
     day=datetime.fromtimestamp(ts,timezone.utc).date().isoformat()
-    quote=checked_quote(price,day,'Yahoo Finance chart EOD',url)
-    for field,key in [('low_usd','low'),('high_usd','high')]:
+    stamp=datetime.fromisoformat(day).date()
+    age=(datetime.now(timezone.utc).date()-stamp).days
+    if not 0<=age<=7: raise QuoteError('stale or future quote: '+day)
+    fx_info=None; close_usd=None
+    if currency=='USD':
+        close_usd=round(price,4)
+    else:
+        fx,fx_info=fx_to_usd(currency)
+        close_usd=round(price*fx,6)
+    quote={'close_native':round(price,6),'currency':currency,'close_usd':close_usd,
+           'date':day,'age_days':age,'source':'Yahoo Finance chart EOD',
+           'source_symbol':symbol,'source_url':url,'is_live':False,'fx_to_usd':fx_info,
+           'volume':None,'open_native':None,'low_native':None,'high_native':None,
+           'bars':[]}
+    for field,key in [('open_native','open'),('low_native','low'),('high_native','high'),('volume','volume')]:
         values=bars.get(key) or []
-        try: quote[field]=round(float(values[i]),4) if values[i] is not None else None
+        try:
+            v=values[i]
+            quote[field]=int(v) if field=='volume' and v is not None else (round(float(v),6) if v is not None else None)
         except (IndexError,TypeError,ValueError): quote[field]=None
+    # Preserve a compact, timestamped daily OHLCV series in native currency.
+    opens=bars.get('open') or []; highs=bars.get('high') or []; lows=bars.get('low') or []; vols=bars.get('volume') or []
+    for k in range(max(0,len(stamps)-126),len(stamps)):
+        if k>=len(closes) or closes[k] is None: continue
+        quote['bars'].append({'date':datetime.fromtimestamp(stamps[k],timezone.utc).date().isoformat(),
+            'open':opens[k] if k<len(opens) else None,'high':highs[k] if k<len(highs) else None,
+            'low':lows[k] if k<len(lows) else None,'close':closes[k],
+            'volume':vols[k] if k<len(vols) else None,'currency':currency})
     return quote
 
 def add_prices(companies,prior):
     old={x.get('ticker'):x.get('price') for x in prior.get('companies',[]) if x.get('price')}
     diagnostics={};attempted=0;success=0
-    eligible=[c for c in companies if re.fullmatch(r'[A-Z]{1,5}',c['ticker'])]
+    eligible=[c for c in companies if re.fullmatch(r'[A-Z0-9.]{1,12}',c['ticker'])]
     # Always check AVGO as a canary; rotate remaining slots across scans.
     eligible.sort(key=lambda c:(c['ticker']!='AVGO',bool(old.get(c['ticker'],{}).get('close_usd')),old.get(c['ticker'],{}).get('checked_at',''),c['ticker']))
     for c in eligible[:PRICE_BATCH_SIZE]:
         ticker=c['ticker'];attempted+=1;errors=[]
-        for name,provider in [('Stooq',stooq_quote),('Yahoo',yahoo_quote)]:
+        providers=[('Yahoo',yahoo_quote)] if ticker in YAHOO_SYMBOLS else [('Stooq',stooq_quote),('Yahoo',yahoo_quote)]
+        for name,provider in providers:
             try:
                 quote=provider(ticker)
                 quote['checked_at']=datetime.now(timezone.utc).isoformat()
