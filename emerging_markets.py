@@ -114,8 +114,6 @@ COMPANIES = [
     ("XNDU", "Xanadu", "quantum", "CA/US", "photonic quantum computing"),
     ("ARQQ", "Arqit Quantum", "quantum", "UK/US", "post-quantum security"),
     ("LAES", "SEALSQ", "quantum", "CH/US", "quantum-resistant semiconductor security"),
-    ("HQ", "Horizon Quantum", "quantum", "US", "quantum software and compilation"),
-    ("ZPTA", "Zapata Quantum", "quantum", "US OTC", "quantum software and applications"),
     # Silicon photonics / optical interconnect
     ("COHR", "Coherent", "silicon_photonics", "US", "lasers and optical components"),
     ("LITE", "Lumentum", "silicon_photonics", "US", "optical components"),
