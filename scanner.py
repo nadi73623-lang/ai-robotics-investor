@@ -166,22 +166,30 @@ def checked_quote(price, day, source, url):
 def stooq_quote(ticker):
     if not re.fullmatch(r'[A-Z]{1,5}',ticker): raise QuoteError('unsupported ticker')
     today=datetime.now(timezone.utc)
-    start=(today-timedelta(days=14)).strftime('%Y%m%d')
+    start=(today-timedelta(days=180)).strftime('%Y%m%d')
     url='https://stooq.com/q/d/l/?'+urllib.parse.urlencode({'s':ticker.lower()+'.us','i':'d','d1':start,'d2':today.strftime('%Y%m%d')})
     req=urllib.request.Request(url,headers={'User-Agent':'Mozilla/5.0','Accept':'text/csv'})
     with urllib.request.urlopen(req,timeout=12) as response:
         body=response.read(60000).decode('utf-8-sig',errors='replace').strip()
     reader=csv.DictReader(io.StringIO(body))
-    if not reader.fieldnames or not {'Date','Close'}.issubset(set(reader.fieldnames)):
+    if not reader.fieldnames or not {'Date','Close','Volume'}.issubset(set(reader.fieldnames)):
         raise QuoteError('Stooq CSV missing Date/Close; header='+repr((reader.fieldnames or [])[:5])+'; preview='+repr(body[:80]))
     rows=list(reader)
     if not rows: raise QuoteError('Stooq CSV has no rows')
-    return checked_quote(rows[-1].get('Close'),rows[-1].get('Date'),'Stooq EOD',url)
+    bars=[]
+    for row in rows:
+        try:
+            close=float(row['Close']); volume=float(row['Volume'])
+            if close>0 and volume>=0: bars.append({'date':row['Date'],'close':close,'volume':volume})
+        except (TypeError,ValueError): continue
+    quote=checked_quote(rows[-1].get('Close'),rows[-1].get('Date'),'Stooq EOD',url)
+    quote['bars']=bars
+    return quote
 
 def yahoo_quote(ticker):
     # Public chart endpoint: availability and redistribution rights may change.
     if not re.fullmatch(r'[A-Z]{1,5}',ticker): raise QuoteError('unsupported ticker')
-    url='https://query1.finance.yahoo.com/v8/finance/chart/'+urllib.parse.quote(ticker)+'?interval=1d&range=15d'
+    url='https://query1.finance.yahoo.com/v8/finance/chart/'+urllib.parse.quote(ticker)+'?interval=1d&range=6mo'
     req=urllib.request.Request(url,headers={'User-Agent':'Mozilla/5.0','Accept':'application/json'})
     with urllib.request.urlopen(req,timeout=12) as response:
         obj=json.load(response)
@@ -191,12 +199,15 @@ def yahoo_quote(ticker):
     meta=result.get('meta') or {}
     if meta.get('currency')!='USD': raise QuoteError('Yahoo quote currency is not USD')
     stamps=result.get('timestamp') or []
-    closes=(((result.get('indicators') or {}).get('quote') or [{}])[0].get('close') or [])
+    quote_rows=((result.get('indicators') or {}).get('quote') or [{}])[0]
+    closes=quote_rows.get('close') or []; volumes=quote_rows.get('volume') or []
     valid=[(ts,close) for ts,close in zip(stamps,closes) if close is not None]
     if not valid: raise QuoteError('Yahoo chart has no daily closes')
     ts,price=valid[-1]
     day=datetime.fromtimestamp(ts,timezone.utc).date().isoformat()
-    return checked_quote(price,day,'Yahoo Finance chart EOD',url)
+    quote=checked_quote(price,day,'Yahoo Finance chart EOD',url)
+    quote['bars']=[{'date':datetime.fromtimestamp(t,timezone.utc).date().isoformat(),'close':float(v),'volume':float(volumes[i] or 0)} for i,(t,v) in enumerate(zip(stamps,closes)) if v is not None and i<len(volumes)]
+    return quote
 
 def add_prices(companies,prior):
     old={x.get('ticker'):x.get('price') for x in prior.get('companies',[]) if x.get('price')}
@@ -227,7 +238,10 @@ def add_prices(companies,prior):
                 if not 0<=age<=7:q=None
             except (ValueError,KeyError,TypeError):q=None
         c['price']=q
-        c['price_quality']='refreshed' if q and q.get('checked_at') and q.get('date') else 'unavailable'
+        try:
+            refreshed=(datetime.now(timezone.utc)-datetime.fromisoformat(q['checked_at'])).total_seconds()<=900 if q and q.get('checked_at') else False
+        except (ValueError,TypeError): refreshed=False
+        c['price_quality']='refreshed' if refreshed and q.get('date') else ('cached' if q else 'unavailable')
     coverage=sum(bool(c['price']) for c in companies)
     status='ok' if success==attempted and attempted else ('partial' if success else 'unavailable')
     print('PRICE_SUMMARY',json.dumps({'attempted':attempted,'updated':success,'coverage':coverage,'status':status,'batch_limit':PRICE_BATCH_SIZE}))
