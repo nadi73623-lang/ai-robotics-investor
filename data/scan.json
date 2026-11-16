@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-16T15:15:27.407623+00:00",
+  "generated_at": "2026-11-16T15:16:19.611820+00:00",
   "source": "Google News RSS",
   "queries": [
     "artificial intelligence robotics stocks companies contracts earnings",
@@ -46,7 +46,7 @@
       ],
       "status": "Do analizy",
       "attention_score": 96,
-      "valuation_status": "Orientacyjna kapitalizacja i mnożniki roczne — nie ranking zakupu",
+      "valuation_status": "Brak wystarczających danych do wyceny",
       "investment_score": null,
       "fundamentals": {
         "source": "SEC EDGAR XBRL",
@@ -83,9 +83,9 @@
         "as_of": "2026-11-16T15:15:11.453198+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1045810"
       },
-      "fundamentals_quality": "refreshed",
+      "fundamentals_quality": "cached",
       "price": {
-        "close_usd": 158.995,
+        "close_usd": null,
         "date": "2026-11-16",
         "age_days": 0,
         "source": "Yahoo Finance chart EOD",
@@ -740,13 +740,15 @@
         "rsi_as_of": "2026-11-16",
         "sma20_as_of": "2026-11-16",
         "sma50_as_of": "2026-11-16",
-        "volume_as_of": "2026-11-16"
+        "volume_as_of": "2026-11-16",
+        "native_close": 158.995,
+        "native_currency": null
       },
       "price_quality": "refreshed",
       "valuation": {
-        "status": "partial",
-        "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 3831779500000,
+        "status": "unavailable",
+        "reason": "float() argument must be a string or a real number, not 'NoneType'",
+        "market_cap_usd": null,
         "ps": null,
         "pe": null,
         "fcf_yield_pct": null,
@@ -784,7 +786,7 @@
         "strategy_version": "balanced-1.3.4-integrity",
         "signal": "WATCH",
         "buy_eligible": false,
-        "decision_stage": "analyst_consensus",
+        "decision_stage": "data_gate",
         "decision_trace": [
           {
             "stage": "data",
@@ -797,22 +799,14 @@
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
-            "actual": "refreshed",
+            "actual": "cached",
             "required": "refreshed",
-            "passed": true,
-            "reason": null
-          },
-          {
-            "stage": "consensus",
-            "check": "analyst_targets",
-            "actual": "unavailable",
-            "required": "documented",
             "passed": false,
-            "reason": "analyst_consensus_missing"
+            "reason": "fundamentals_not_refreshed"
           }
         ],
         "reasons": [
-          "analyst_consensus_missing"
+          "fundamentals_not_refreshed"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -849,7 +843,7 @@
       ],
       "status": "Do analizy",
       "attention_score": 63,
-      "valuation_status": "Orientacyjna kapitalizacja i mnożniki roczne — nie ranking zakupu",
+      "valuation_status": "Brak wystarczających danych do wyceny",
       "investment_score": null,
       "fundamentals": {
         "source": "SEC EDGAR XBRL",
@@ -887,12 +881,12 @@
         },
         "period_mismatch_flags": [],
         "filed": "2026-02-13",
-        "as_of": "2026-11-16T15:04:59.660233+00:00",
+        "as_of": "2026-11-16T15:16:03.317177+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1674101"
       },
-      "fundamentals_quality": "cached",
+      "fundamentals_quality": "refreshed",
       "price": {
-        "close_usd": 190.1525,
+        "close_usd": null,
         "date": "2026-11-16",
         "age_days": 0,
         "source": "Yahoo Finance chart EOD",
@@ -1547,16 +1541,18 @@
         "rsi_as_of": "2026-11-16",
         "sma20_as_of": "2026-11-16",
         "sma50_as_of": "2026-11-16",
-        "volume_as_of": "2026-11-16"
+        "volume_as_of": "2026-11-16",
+        "native_close": 190.1525,
+        "native_currency": null
       },
       "price_quality": "refreshed",
       "valuation": {
-        "status": "partial",
-        "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 73220201704,
-        "ps": 7.16,
-        "pe": 54.94,
-        "fcf_yield_pct": 2.59,
+        "status": "unavailable",
+        "reason": "float() argument must be a string or a real number, not 'NoneType'",
+        "market_cap_usd": null,
+        "ps": null,
+        "pe": null,
+        "fcf_yield_pct": null,
         "share_date": "2026-10-26",
         "price_date": "2026-11-16",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)",
@@ -1591,7 +1587,7 @@
         "strategy_version": "balanced-1.3.4-integrity",
         "signal": "WATCH",
         "buy_eligible": false,
-        "decision_stage": "data_gate",
+        "decision_stage": "analyst_consensus",
         "decision_trace": [
           {
             "stage": "data",
@@ -1604,14 +1600,22 @@
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
-            "actual": "cached",
+            "actual": "refreshed",
             "required": "refreshed",
+            "passed": true,
+            "reason": null
+          },
+          {
+            "stage": "consensus",
+            "check": "analyst_targets",
+            "actual": "unavailable",
+            "required": "documented",
             "passed": false,
-            "reason": "fundamentals_not_refreshed"
+            "reason": "analyst_consensus_missing"
           }
         ],
         "reasons": [
-          "fundamentals_not_refreshed"
+          "analyst_consensus_missing"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -1638,7 +1642,7 @@
       ],
       "status": "Do analizy",
       "attention_score": 39,
-      "valuation_status": "Orientacyjna kapitalizacja i mnożniki roczne — nie ranking zakupu",
+      "valuation_status": "Brak wystarczających danych do wyceny",
       "investment_score": null,
       "fundamentals": {
         "source": "SEC EDGAR XBRL",
@@ -1680,7 +1684,7 @@
       },
       "fundamentals_quality": "cached",
       "price": {
-        "close_usd": 259.8056,
+        "close_usd": null,
         "date": "2026-11-16",
         "age_days": 0,
         "source": "Yahoo Finance chart EOD",
@@ -2335,15 +2339,17 @@
         "rsi_as_of": "2026-11-16",
         "sma20_as_of": "2026-11-16",
         "sma50_as_of": "2026-11-16",
-        "volume_as_of": "2026-11-16"
+        "volume_as_of": "2026-11-16",
+        "native_close": 259.8056,
+        "native_currency": null
       },
       "price_quality": "refreshed",
       "valuation": {
-        "status": "partial",
-        "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 2809313885473,
-        "ps": 3.92,
-        "pe": 36.17,
+        "status": "unavailable",
+        "reason": "float() argument must be a string or a real number, not 'NoneType'",
+        "market_cap_usd": null,
+        "ps": null,
+        "pe": null,
         "fcf_yield_pct": null,
         "share_date": "2026-10-21",
         "price_date": "2026-11-16",
@@ -2421,7 +2427,7 @@
       ],
       "status": "Do analizy",
       "attention_score": 22,
-      "valuation_status": "Orientacyjna kapitalizacja i mnożniki roczne — nie ranking zakupu",
+      "valuation_status": "Brak wystarczających danych do wyceny",
       "investment_score": null,
       "fundamentals": {
         "source": "SEC EDGAR XBRL",
@@ -2461,12 +2467,12 @@
           "annual_flow_periods_not_aligned"
         ],
         "filed": "2025-12-18",
-        "as_of": "2026-11-16T15:15:08.371830+00:00",
+        "as_of": "2026-11-16T15:15:55.698934+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1730168"
       },
       "fundamentals_quality": "refreshed",
       "price": {
-        "close_usd": 330.8,
+        "close_usd": null,
         "date": "2026-11-16",
         "age_days": 0,
         "source": "Yahoo Finance chart EOD",
@@ -3121,16 +3127,18 @@
         "rsi_as_of": "2026-11-16",
         "sma20_as_of": "2026-11-16",
         "sma50_as_of": "2026-11-16",
-        "volume_as_of": "2026-11-16"
+        "volume_as_of": "2026-11-16",
+        "native_close": 330.8,
+        "native_currency": null
       },
       "price_quality": "refreshed",
       "valuation": {
-        "status": "partial",
-        "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 1579116759342,
-        "ps": 24.72,
+        "status": "unavailable",
+        "reason": "float() argument must be a string or a real number, not 'NoneType'",
+        "market_cap_usd": null,
+        "ps": null,
         "pe": null,
-        "fcf_yield_pct": 1.7,
+        "fcf_yield_pct": null,
         "share_date": "2026-08-28",
         "price_date": "2026-11-16",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)",
@@ -3215,7 +3223,7 @@
       ],
       "status": "Do analizy",
       "attention_score": 22,
-      "valuation_status": "Orientacyjna kapitalizacja i mnożniki roczne — nie ranking zakupu",
+      "valuation_status": "Brak wystarczających danych do wyceny",
       "investment_score": null,
       "fundamentals": {
         "source": "SEC EDGAR XBRL",
@@ -3258,7 +3266,7 @@
       },
       "fundamentals_quality": "cached",
       "price": {
-        "close_usd": 343.6,
+        "close_usd": null,
         "date": "2026-11-16",
         "age_days": 0,
         "source": "Yahoo Finance chart EOD",
@@ -3913,16 +3921,18 @@
         "sma50_as_of": "2026-11-16",
         "volume_as_of": "2026-11-16",
         "relative_strength_20d_pct": null,
-        "relative_strength_benchmark": null
+        "relative_strength_benchmark": null,
+        "native_close": 343.6,
+        "native_currency": null
       },
       "price_quality": "refreshed",
       "valuation": {
-        "status": "partial",
-        "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 133488600000,
-        "ps": 4.86,
-        "pe": 32.66,
-        "fcf_yield_pct": 2.66,
+        "status": "unavailable",
+        "reason": "float() argument must be a string or a real number, not 'NoneType'",
+        "market_cap_usd": null,
+        "ps": null,
+        "pe": null,
+        "fcf_yield_pct": null,
         "share_date": "2026-09-30",
         "price_date": "2026-11-16",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)",
@@ -3999,7 +4009,7 @@
       ],
       "status": "Do analizy",
       "attention_score": 22,
-      "valuation_status": "Orientacyjna kapitalizacja i mnożniki roczne — nie ranking zakupu",
+      "valuation_status": "Brak wystarczających danych do wyceny",
       "investment_score": null,
       "fundamentals": {
         "source": "SEC EDGAR XBRL",
@@ -4042,9 +4052,9 @@
         "as_of": "2026-11-16T15:15:08.824685+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1652044"
       },
-      "fundamentals_quality": "refreshed",
+      "fundamentals_quality": "cached",
       "price": {
-        "close_usd": 287.47,
+        "close_usd": null,
         "date": "2026-11-16",
         "age_days": 0,
         "source": "Yahoo Finance chart EOD",
@@ -4699,16 +4709,18 @@
         "sma50_as_of": "2026-11-16",
         "volume_as_of": "2026-11-16",
         "relative_strength_20d_pct": null,
-        "relative_strength_benchmark": null
+        "relative_strength_benchmark": null,
+        "native_close": 287.47,
+        "native_currency": null
       },
       "price_quality": "refreshed",
       "valuation": {
-        "status": "partial",
-        "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 3474937360000,
+        "status": "unavailable",
+        "reason": "float() argument must be a string or a real number, not 'NoneType'",
+        "market_cap_usd": null,
         "ps": null,
         "pe": null,
-        "fcf_yield_pct": 2.11,
+        "fcf_yield_pct": null,
         "share_date": "2025-12-31",
         "price_date": "2026-11-16",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)",
@@ -4743,7 +4755,7 @@
         "strategy_version": "balanced-1.3.4-integrity",
         "signal": "WATCH",
         "buy_eligible": false,
-        "decision_stage": "analyst_consensus",
+        "decision_stage": "data_gate",
         "decision_trace": [
           {
             "stage": "data",
@@ -4756,22 +4768,14 @@
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
-            "actual": "refreshed",
+            "actual": "cached",
             "required": "refreshed",
-            "passed": true,
-            "reason": null
-          },
-          {
-            "stage": "consensus",
-            "check": "analyst_targets",
-            "actual": "unavailable",
-            "required": "documented",
             "passed": false,
-            "reason": "analyst_consensus_missing"
+            "reason": "fundamentals_not_refreshed"
           }
         ],
         "reasons": [
-          "analyst_consensus_missing"
+          "fundamentals_not_refreshed"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -4793,7 +4797,7 @@
       ],
       "status": "Do analizy",
       "attention_score": 22,
-      "valuation_status": "Orientacyjna kapitalizacja i mnożniki roczne — nie ranking zakupu",
+      "valuation_status": "Brak wystarczających danych do wyceny",
       "investment_score": null,
       "fundamentals": {
         "source": "SEC EDGAR XBRL",
@@ -4834,9 +4838,9 @@
         "as_of": "2026-11-16T15:15:09.489919+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=50863"
       },
-      "fundamentals_quality": "refreshed",
+      "fundamentals_quality": "cached",
       "price": {
-        "close_usd": 56.06,
+        "close_usd": null,
         "date": "2026-11-16",
         "age_days": 0,
         "source": "Yahoo Finance chart EOD",
@@ -5491,16 +5495,18 @@
         "sma50_as_of": "2026-11-16",
         "volume_as_of": "2026-11-16",
         "relative_strength_20d_pct": null,
-        "relative_strength_benchmark": null
+        "relative_strength_benchmark": null,
+        "native_close": 56.06,
+        "native_currency": null
       },
       "price_quality": "refreshed",
       "valuation": {
-        "status": "partial",
-        "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 297958900000,
-        "ps": 5.64,
+        "status": "unavailable",
+        "reason": "float() argument must be a string or a real number, not 'NoneType'",
+        "market_cap_usd": null,
+        "ps": null,
         "pe": null,
-        "fcf_yield_pct": -1.66,
+        "fcf_yield_pct": null,
         "share_date": "2026-10-23",
         "price_date": "2026-11-16",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)",
@@ -5535,7 +5541,7 @@
         "strategy_version": "balanced-1.3.4-integrity",
         "signal": "WATCH",
         "buy_eligible": false,
-        "decision_stage": "analyst_consensus",
+        "decision_stage": "data_gate",
         "decision_trace": [
           {
             "stage": "data",
@@ -5548,22 +5554,14 @@
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
-            "actual": "refreshed",
+            "actual": "cached",
             "required": "refreshed",
-            "passed": true,
-            "reason": null
-          },
-          {
-            "stage": "consensus",
-            "check": "analyst_targets",
-            "actual": "unavailable",
-            "required": "documented",
             "passed": false,
-            "reason": "analyst_consensus_missing"
+            "reason": "fundamentals_not_refreshed"
           }
         ],
         "reasons": [
-          "analyst_consensus_missing"
+          "fundamentals_not_refreshed"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -5623,12 +5621,12 @@
         },
         "period_mismatch_flags": [],
         "filed": "2026-01-29",
-        "as_of": "2026-11-16T15:15:07.009734+00:00",
+        "as_of": "2026-11-16T15:15:54.553162+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1326801"
       },
       "fundamentals_quality": "refreshed",
       "price": {
-        "close_usd": 627.0,
+        "close_usd": null,
         "date": "2026-11-16",
         "age_days": 0,
         "source": "Yahoo Finance chart EOD",
@@ -6283,7 +6281,9 @@
         "sma50_as_of": "2026-11-16",
         "volume_as_of": "2026-11-16",
         "relative_strength_20d_pct": null,
-        "relative_strength_benchmark": null
+        "relative_strength_benchmark": null,
+        "native_close": 627.0,
+        "native_currency": null
       },
       "price_quality": "refreshed",
       "valuation": {
@@ -6377,7 +6377,7 @@
       ],
       "status": "Do analizy",
       "attention_score": 22,
-      "valuation_status": "Orientacyjna kapitalizacja i mnożniki roczne — nie ranking zakupu",
+      "valuation_status": "Brak wystarczających danych do wyceny",
       "investment_score": null,
       "fundamentals": {
         "source": "SEC EDGAR XBRL",
@@ -6420,7 +6420,7 @@
       },
       "fundamentals_quality": "cached",
       "price": {
-        "close_usd": 520.81,
+        "close_usd": null,
         "date": "2026-11-16",
         "age_days": 0,
         "source": "Yahoo Finance chart EOD",
@@ -7075,16 +7075,18 @@
         "rsi_as_of": "2026-11-16",
         "sma20_as_of": "2026-11-16",
         "sma50_as_of": "2026-11-16",
-        "volume_as_of": "2026-11-16"
+        "volume_as_of": "2026-11-16",
+        "native_close": 520.81,
+        "native_currency": null
       },
       "price_quality": "refreshed",
       "valuation": {
-        "status": "partial",
-        "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 3867636384627,
-        "ps": 11.66,
-        "pe": 28.92,
-        "fcf_yield_pct": 1.73,
+        "status": "unavailable",
+        "reason": "float() argument must be a string or a real number, not 'NoneType'",
+        "market_cap_usd": null,
+        "ps": null,
+        "pe": null,
+        "fcf_yield_pct": null,
         "share_date": "2026-10-22",
         "price_date": "2026-11-16",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)",
@@ -7161,7 +7163,7 @@
       ],
       "status": "Do analizy",
       "attention_score": 22,
-      "valuation_status": "Orientacyjna kapitalizacja i mnożniki roczne — nie ranking zakupu",
+      "valuation_status": "Brak wystarczających danych do wyceny",
       "investment_score": null,
       "fundamentals": {
         "source": "SEC EDGAR XBRL",
@@ -7202,9 +7204,9 @@
         "as_of": "2026-11-16T15:15:14.404099+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1826681"
       },
-      "fundamentals_quality": "refreshed",
+      "fundamentals_quality": "cached",
       "price": {
-        "close_usd": 3.0,
+        "close_usd": null,
         "date": "2026-11-16",
         "age_days": 0,
         "source": "Yahoo Finance chart EOD",
@@ -7859,16 +7861,18 @@
         "rsi_as_of": "2026-11-16",
         "sma20_as_of": "2026-11-16",
         "sma50_as_of": "2026-11-16",
-        "volume_as_of": "2026-11-16"
+        "volume_as_of": "2026-11-16",
+        "native_close": 3.0,
+        "native_currency": null
       },
       "price_quality": "refreshed",
       "valuation": {
-        "status": "partial",
-        "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 154143351,
-        "ps": 29.38,
-        "pe": 15.35,
-        "fcf_yield_pct": -18.39,
+        "status": "unavailable",
+        "reason": "float() argument must be a string or a real number, not 'NoneType'",
+        "market_cap_usd": null,
+        "ps": null,
+        "pe": null,
+        "fcf_yield_pct": null,
         "share_date": "2026-10-28",
         "price_date": "2026-11-16",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)",
@@ -7903,7 +7907,7 @@
         "strategy_version": "balanced-1.3.4-integrity",
         "signal": "WATCH",
         "buy_eligible": false,
-        "decision_stage": "analyst_consensus",
+        "decision_stage": "data_gate",
         "decision_trace": [
           {
             "stage": "data",
@@ -7916,22 +7920,14 @@
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
-            "actual": "refreshed",
+            "actual": "cached",
             "required": "refreshed",
-            "passed": true,
-            "reason": null
-          },
-          {
-            "stage": "consensus",
-            "check": "analyst_targets",
-            "actual": "unavailable",
-            "required": "documented",
             "passed": false,
-            "reason": "analyst_consensus_missing"
+            "reason": "fundamentals_not_refreshed"
           }
         ],
         "reasons": [
-          "analyst_consensus_missing"
+          "fundamentals_not_refreshed"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -8022,7 +8018,7 @@
       "news": [],
       "status": "Obserwacja",
       "attention_score": 0,
-      "valuation_status": "Orientacyjna kapitalizacja i mnożniki roczne — nie ranking zakupu",
+      "valuation_status": "Brak wystarczających danych do wyceny",
       "investment_score": null,
       "fundamentals": {
         "source": "SEC EDGAR XBRL",
@@ -8065,7 +8061,7 @@
       },
       "fundamentals_quality": "cached",
       "price": {
-        "close_usd": 3.715,
+        "close_usd": null,
         "date": "2026-11-16",
         "age_days": 0,
         "source": "Yahoo Finance chart EOD",
@@ -8720,16 +8716,18 @@
         "rsi_as_of": "2026-11-16",
         "sma20_as_of": "2026-11-16",
         "sma50_as_of": "2026-11-16",
-        "volume_as_of": "2026-11-16"
+        "volume_as_of": "2026-11-16",
+        "native_close": 3.715,
+        "native_currency": null
       },
       "price_quality": "refreshed",
       "valuation": {
-        "status": "partial",
-        "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 2907199682,
-        "ps": 9690.67,
+        "status": "unavailable",
+        "reason": "float() argument must be a string or a real number, not 'NoneType'",
+        "market_cap_usd": null,
+        "ps": null,
         "pe": null,
-        "fcf_yield_pct": -17.6,
+        "fcf_yield_pct": null,
         "share_date": "2026-11-04",
         "price_date": "2026-11-16",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)",
@@ -8843,7 +8841,7 @@
       },
       "fundamentals_quality": "cached",
       "price": {
-        "close_usd": 11.445,
+        "close_usd": null,
         "date": "2026-11-16",
         "age_days": 0,
         "source": "Yahoo Finance chart EOD",
@@ -9498,12 +9496,14 @@
         "rsi_as_of": "2026-11-16",
         "sma20_as_of": "2026-11-16",
         "sma50_as_of": "2026-11-16",
-        "volume_as_of": "2026-11-16"
+        "volume_as_of": "2026-11-16",
+        "native_close": 11.445,
+        "native_currency": null
       },
       "price_quality": "refreshed",
       "valuation": {
         "status": "unavailable",
-        "reason": "stale share count",
+        "reason": "float() argument must be a string or a real number, not 'NoneType'",
         "market_cap_usd": null,
         "ps": null,
         "pe": null,
@@ -9578,7 +9578,7 @@
       "news": [],
       "status": "Obserwacja",
       "attention_score": 0,
-      "valuation_status": "Orientacyjna kapitalizacja i mnożniki roczne — nie ranking zakupu",
+      "valuation_status": "Brak wystarczających danych do wyceny",
       "investment_score": null,
       "fundamentals": {
         "source": "SEC EDGAR XBRL",
@@ -9621,7 +9621,7 @@
       },
       "fundamentals_quality": "cached",
       "price": {
-        "close_usd": 205.995,
+        "close_usd": null,
         "date": "2026-11-16",
         "age_days": 0,
         "source": "Yahoo Finance chart EOD",
@@ -10276,16 +10276,18 @@
         "rsi_as_of": "2026-11-16",
         "sma20_as_of": "2026-11-16",
         "sma50_as_of": "2026-11-16",
-        "volume_as_of": "2026-11-16"
+        "volume_as_of": "2026-11-16",
+        "native_close": 205.995,
+        "native_currency": null
       },
       "price_quality": "refreshed",
       "valuation": {
-        "status": "partial",
-        "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 36004233540,
-        "ps": 42.23,
-        "pe": 164.3,
-        "fcf_yield_pct": 0.78,
+        "status": "unavailable",
+        "reason": "float() argument must be a string or a real number, not 'NoneType'",
+        "market_cap_usd": null,
+        "ps": null,
+        "pe": null,
+        "fcf_yield_pct": null,
         "share_date": "2026-10-31",
         "price_date": "2026-11-16",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)",
@@ -10356,7 +10358,7 @@
       "news": [],
       "status": "Obserwacja",
       "attention_score": 0,
-      "valuation_status": "Orientacyjna kapitalizacja i mnożniki roczne — nie ranking zakupu",
+      "valuation_status": "Brak wystarczających danych do wyceny",
       "investment_score": null,
       "fundamentals": {
         "source": "SEC EDGAR XBRL",
@@ -10399,7 +10401,7 @@
       },
       "fundamentals_quality": "cached",
       "price": {
-        "close_usd": 353.6,
+        "close_usd": null,
         "date": "2026-11-16",
         "age_days": 0,
         "source": "Yahoo Finance chart EOD",
@@ -11054,16 +11056,18 @@
         "rsi_as_of": "2026-11-16",
         "sma20_as_of": "2026-11-16",
         "sma50_as_of": "2026-11-16",
-        "volume_as_of": "2026-11-16"
+        "volume_as_of": "2026-11-16",
+        "native_close": 353.6,
+        "native_currency": null
       },
       "price_quality": "refreshed",
       "valuation": {
-        "status": "partial",
-        "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 280616055845,
-        "ps": 9.89,
-        "pe": 40.1,
-        "fcf_yield_pct": 2.03,
+        "status": "unavailable",
+        "reason": "float() argument must be a string or a real number, not 'NoneType'",
+        "market_cap_usd": null,
+        "ps": null,
+        "pe": null,
+        "fcf_yield_pct": null,
         "share_date": "2026-07-26",
         "price_date": "2026-11-16",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)",
@@ -11134,7 +11138,7 @@
       "news": [],
       "status": "Obserwacja",
       "attention_score": 0,
-      "valuation_status": "Orientacyjna kapitalizacja i mnożniki roczne — nie ranking zakupu",
+      "valuation_status": "Brak wystarczających danych do wyceny",
       "investment_score": null,
       "fundamentals": {
         "source": "SEC EDGAR XBRL",
@@ -11177,7 +11181,7 @@
       },
       "fundamentals_quality": "cached",
       "price": {
-        "close_usd": 510.71,
+        "close_usd": null,
         "date": "2026-11-16",
         "age_days": 0,
         "source": "Yahoo Finance chart EOD",
@@ -11832,16 +11836,18 @@
         "rsi_as_of": "2026-11-16",
         "sma20_as_of": "2026-11-16",
         "sma50_as_of": "2026-11-16",
-        "volume_as_of": "2026-11-16"
+        "volume_as_of": "2026-11-16",
+        "native_close": 510.71,
+        "native_currency": null
       },
       "price_quality": "refreshed",
       "valuation": {
-        "status": "partial",
-        "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 837608959958,
-        "ps": 24.18,
-        "pe": 193.22,
-        "fcf_yield_pct": 0.8,
+        "status": "unavailable",
+        "reason": "float() argument must be a string or a real number, not 'NoneType'",
+        "market_cap_usd": null,
+        "ps": null,
+        "pe": null,
+        "fcf_yield_pct": null,
         "share_date": "2026-10-28",
         "price_date": "2026-11-16",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)",
@@ -11912,7 +11918,7 @@
       "news": [],
       "status": "Obserwacja",
       "attention_score": 0,
-      "valuation_status": "Orientacyjna kapitalizacja i mnożniki roczne — nie ranking zakupu",
+      "valuation_status": "Brak wystarczających danych do wyceny",
       "investment_score": null,
       "fundamentals": {
         "source": "SEC EDGAR XBRL",
@@ -11954,7 +11960,7 @@
       },
       "fundamentals_quality": "cached",
       "price": {
-        "close_usd": 186.03,
+        "close_usd": null,
         "date": "2026-11-16",
         "age_days": 0,
         "source": "Yahoo Finance chart EOD",
@@ -12609,15 +12615,17 @@
         "rsi_as_of": "2026-11-16",
         "sma20_as_of": "2026-11-16",
         "sma50_as_of": "2026-11-16",
-        "volume_as_of": "2026-11-16"
+        "volume_as_of": "2026-11-16",
+        "native_close": 186.03,
+        "native_currency": null
       },
       "price_quality": "refreshed",
       "valuation": {
-        "status": "partial",
-        "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 235030736380,
-        "ps": 26.1,
-        "pe": 66.93,
+        "status": "unavailable",
+        "reason": "float() argument must be a string or a real number, not 'NoneType'",
+        "market_cap_usd": null,
+        "ps": null,
+        "pe": null,
         "fcf_yield_pct": null,
         "share_date": "2026-10-29",
         "price_date": "2026-11-16",
@@ -12689,7 +12697,7 @@
       "news": [],
       "status": "Obserwacja",
       "attention_score": 0,
-      "valuation_status": "Orientacyjna kapitalizacja i mnożniki roczne — nie ranking zakupu",
+      "valuation_status": "Brak wystarczających danych do wyceny",
       "investment_score": null,
       "fundamentals": {
         "source": "SEC EDGAR XBRL",
@@ -12732,7 +12740,7 @@
       },
       "fundamentals_quality": "cached",
       "price": {
-        "close_usd": 75.97,
+        "close_usd": null,
         "date": "2026-11-16",
         "age_days": 0,
         "source": "Yahoo Finance chart EOD",
@@ -13387,16 +13395,18 @@
         "rsi_as_of": "2026-11-16",
         "sma20_as_of": "2026-11-16",
         "sma50_as_of": "2026-11-16",
-        "volume_as_of": "2026-11-16"
+        "volume_as_of": "2026-11-16",
+        "native_close": 75.97,
+        "native_currency": null
       },
       "price_quality": "refreshed",
       "valuation": {
-        "status": "partial",
-        "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 187589772452,
-        "ps": 8.12,
-        "pe": 43.93,
-        "fcf_yield_pct": 2.33,
+        "status": "unavailable",
+        "reason": "float() argument must be a string or a real number, not 'NoneType'",
+        "market_cap_usd": null,
+        "ps": null,
+        "pe": null,
+        "fcf_yield_pct": null,
         "share_date": "2026-10-27",
         "price_date": "2026-11-16",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)",
@@ -13510,7 +13520,7 @@
       },
       "fundamentals_quality": "cached",
       "price": {
-        "close_usd": 177.9907,
+        "close_usd": null,
         "date": "2026-11-16",
         "age_days": 0,
         "source": "Yahoo Finance chart EOD",
@@ -14165,12 +14175,14 @@
         "rsi_as_of": "2026-11-16",
         "sma20_as_of": "2026-11-16",
         "sma50_as_of": "2026-11-16",
-        "volume_as_of": "2026-11-16"
+        "volume_as_of": "2026-11-16",
+        "native_close": 177.9907,
+        "native_currency": null
       },
       "price_quality": "refreshed",
       "valuation": {
         "status": "unavailable",
-        "reason": "ADR/foreign share-unit ambiguity",
+        "reason": "float() argument must be a string or a real number, not 'NoneType'",
         "market_cap_usd": null,
         "ps": null,
         "pe": null,
@@ -14284,7 +14296,7 @@
       },
       "fundamentals_quality": "cached",
       "price": {
-        "close_usd": 1425.6125,
+        "close_usd": null,
         "date": "2026-11-16",
         "age_days": 0,
         "source": "Yahoo Finance chart EOD",
@@ -14939,12 +14951,14 @@
         "rsi_as_of": "2026-11-16",
         "sma20_as_of": "2026-11-16",
         "sma50_as_of": "2026-11-16",
-        "volume_as_of": "2026-11-16"
+        "volume_as_of": "2026-11-16",
+        "native_close": 1425.6125,
+        "native_currency": null
       },
       "price_quality": "refreshed",
       "valuation": {
         "status": "unavailable",
-        "reason": "ADR/foreign share-unit ambiguity",
+        "reason": "float() argument must be a string or a real number, not 'NoneType'",
         "market_cap_usd": null,
         "ps": null,
         "pe": null,
@@ -15019,7 +15033,7 @@
       "news": [],
       "status": "Obserwacja",
       "attention_score": 0,
-      "valuation_status": "Orientacyjna kapitalizacja i mnożniki roczne — nie ranking zakupu",
+      "valuation_status": "Brak wystarczających danych do wyceny",
       "investment_score": null,
       "fundamentals": {
         "source": "SEC EDGAR XBRL",
@@ -15062,7 +15076,7 @@
       },
       "fundamentals_quality": "cached",
       "price": {
-        "close_usd": 45.64,
+        "close_usd": null,
         "date": "2026-11-16",
         "age_days": 0,
         "source": "Yahoo Finance chart EOD",
@@ -15717,16 +15731,18 @@
         "rsi_as_of": "2026-11-16",
         "sma20_as_of": "2026-11-16",
         "sma50_as_of": "2026-11-16",
-        "volume_as_of": "2026-11-16"
+        "volume_as_of": "2026-11-16",
+        "native_close": 45.64,
+        "native_currency": null
       },
       "price_quality": "refreshed",
       "valuation": {
-        "status": "partial",
-        "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 1999415057,
-        "ps": 3.37,
+        "status": "unavailable",
+        "reason": "float() argument must be a string or a real number, not 'NoneType'",
+        "market_cap_usd": null,
+        "ps": null,
         "pe": null,
-        "fcf_yield_pct": 1.92,
+        "fcf_yield_pct": null,
         "share_date": "2026-08-03",
         "price_date": "2026-11-16",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)",
@@ -15797,7 +15813,7 @@
       "news": [],
       "status": "Obserwacja",
       "attention_score": 0,
-      "valuation_status": "Orientacyjna kapitalizacja i mnożniki roczne — nie ranking zakupu",
+      "valuation_status": "Brak wystarczających danych do wyceny",
       "investment_score": null,
       "fundamentals": {
         "source": "SEC EDGAR XBRL",
@@ -15840,7 +15856,7 @@
       },
       "fundamentals_quality": "cached",
       "price": {
-        "close_usd": 1.8613,
+        "close_usd": null,
         "date": "2026-11-16",
         "age_days": 0,
         "source": "Yahoo Finance chart EOD",
@@ -16495,16 +16511,18 @@
         "rsi_as_of": "2026-11-16",
         "sma20_as_of": "2026-11-16",
         "sma50_as_of": "2026-11-16",
-        "volume_as_of": "2026-11-16"
+        "volume_as_of": "2026-11-16",
+        "native_close": 1.8613,
+        "native_currency": null
       },
       "price_quality": "refreshed",
       "valuation": {
-        "status": "partial",
-        "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 896012988,
-        "ps": 7.02,
+        "status": "unavailable",
+        "reason": "float() argument must be a string or a real number, not 'NoneType'",
+        "market_cap_usd": null,
+        "ps": null,
         "pe": null,
-        "fcf_yield_pct": -4.74,
+        "fcf_yield_pct": null,
         "share_date": "2026-10-23",
         "price_date": "2026-11-16",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)",
@@ -16575,7 +16593,7 @@
       "news": [],
       "status": "Obserwacja",
       "attention_score": 0,
-      "valuation_status": "Orientacyjna kapitalizacja i mnożniki roczne — nie ranking zakupu",
+      "valuation_status": "Brak wystarczających danych do wyceny",
       "investment_score": null,
       "fundamentals": {
         "source": "SEC EDGAR XBRL",
@@ -16618,22 +16636,24 @@
       },
       "fundamentals_quality": "cached",
       "price": {
-        "close_usd": 49.185,
+        "close_usd": null,
         "date": "2026-11-16",
         "age_days": 0,
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/CGNX?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-11-16T14:44:11.238532+00:00"
+        "checked_at": "2026-11-16T14:44:11.238532+00:00",
+        "native_close": 49.185,
+        "native_currency": null
       },
       "price_quality": "cached",
       "valuation": {
-        "status": "partial",
-        "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 8281674881,
-        "ps": 8.33,
-        "pe": 72.37,
-        "fcf_yield_pct": 2.86,
+        "status": "unavailable",
+        "reason": "float() argument must be a string or a real number, not 'NoneType'",
+        "market_cap_usd": null,
+        "ps": null,
+        "pe": null,
+        "fcf_yield_pct": null,
         "share_date": "2026-11-01",
         "price_date": "2026-11-16",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)",
@@ -16696,7 +16716,7 @@
       "news": [],
       "status": "Obserwacja",
       "attention_score": 0,
-      "valuation_status": "Orientacyjna kapitalizacja i mnożniki roczne — nie ranking zakupu",
+      "valuation_status": "Brak wystarczających danych do wyceny",
       "investment_score": null,
       "fundamentals": {
         "source": "SEC EDGAR XBRL",
@@ -16738,21 +16758,23 @@
       },
       "fundamentals_quality": "cached",
       "price": {
-        "close_usd": 238.91,
+        "close_usd": null,
         "date": "2026-11-16",
         "age_days": 0,
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/CLS?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-11-16T14:44:11.795939+00:00"
+        "checked_at": "2026-11-16T14:44:11.795939+00:00",
+        "native_close": 238.91,
+        "native_currency": null
       },
       "price_quality": "cached",
       "valuation": {
-        "status": "partial",
-        "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 30129372049,
-        "ps": 2.43,
-        "pe": 36.19,
+        "status": "unavailable",
+        "reason": "float() argument must be a string or a real number, not 'NoneType'",
+        "market_cap_usd": null,
+        "ps": null,
+        "pe": null,
         "fcf_yield_pct": null,
         "share_date": "2026-10-21",
         "price_date": "2026-11-16",
@@ -16816,7 +16838,7 @@
       "news": [],
       "status": "Obserwacja",
       "attention_score": 0,
-      "valuation_status": "Orientacyjna kapitalizacja i mnożniki roczne — nie ranking zakupu",
+      "valuation_status": "Brak wystarczających danych do wyceny",
       "investment_score": null,
       "fundamentals": {
         "source": "SEC EDGAR XBRL",
@@ -16859,22 +16881,24 @@
       },
       "fundamentals_quality": "cached",
       "price": {
-        "close_usd": 206.03,
+        "close_usd": null,
         "date": "2026-11-16",
         "age_days": 0,
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/COHR?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-11-16T14:44:12.329025+00:00"
+        "checked_at": "2026-11-16T14:44:12.329025+00:00",
+        "native_close": 206.03,
+        "native_currency": null
       },
       "price_quality": "cached",
       "valuation": {
-        "status": "partial",
-        "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 40579394574,
-        "ps": 5.7,
-        "pe": 50.41,
-        "fcf_yield_pct": -2.52,
+        "status": "unavailable",
+        "reason": "float() argument must be a string or a real number, not 'NoneType'",
+        "market_cap_usd": null,
+        "ps": null,
+        "pe": null,
+        "fcf_yield_pct": null,
         "share_date": "2026-11-02",
         "price_date": "2026-11-16",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)",
@@ -16937,7 +16961,7 @@
       "news": [],
       "status": "Obserwacja",
       "attention_score": 0,
-      "valuation_status": "Orientacyjna kapitalizacja i mnożniki roczne — nie ranking zakupu",
+      "valuation_status": "Brak wystarczających danych do wyceny",
       "investment_score": null,
       "fundamentals": {
         "source": "SEC EDGAR XBRL",
@@ -16980,22 +17004,24 @@
       },
       "fundamentals_quality": "cached",
       "price": {
-        "close_usd": 122.78,
+        "close_usd": null,
         "date": "2026-11-16",
         "age_days": 0,
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/CRDO?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-11-16T14:44:12.834470+00:00"
+        "checked_at": "2026-11-16T14:44:12.834470+00:00",
+        "native_close": 122.78,
+        "native_currency": null
       },
       "price_quality": "cached",
       "valuation": {
-        "status": "partial",
-        "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 23076736492,
-        "ps": 17.28,
-        "pe": 48.86,
-        "fcf_yield_pct": 1.76,
+        "status": "unavailable",
+        "reason": "float() argument must be a string or a real number, not 'NoneType'",
+        "market_cap_usd": null,
+        "ps": null,
+        "pe": null,
+        "fcf_yield_pct": null,
         "share_date": "2026-08-25",
         "price_date": "2026-11-16",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)",
@@ -17058,7 +17084,7 @@
       "news": [],
       "status": "Obserwacja",
       "attention_score": 0,
-      "valuation_status": "Orientacyjna kapitalizacja i mnożniki roczne — nie ranking zakupu",
+      "valuation_status": "Brak wystarczających danych do wyceny",
       "investment_score": null,
       "fundamentals": {
         "source": "SEC EDGAR XBRL",
@@ -17101,7 +17127,7 @@
       },
       "fundamentals_quality": "cached",
       "price": {
-        "close_usd": 322.94,
+        "close_usd": null,
         "date": "2026-11-16",
         "age_days": 0,
         "source": "Yahoo Finance chart EOD",
@@ -17756,16 +17782,18 @@
         "sma50_as_of": "2026-11-16",
         "volume_as_of": "2026-11-16",
         "relative_strength_20d_pct": null,
-        "relative_strength_benchmark": null
+        "relative_strength_benchmark": null,
+        "native_close": 322.94,
+        "native_currency": null
       },
       "price_quality": "refreshed",
       "valuation": {
-        "status": "partial",
-        "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 210556880000,
-        "ps": 1.85,
-        "pe": 35.47,
-        "fcf_yield_pct": 4.06,
+        "status": "unavailable",
+        "reason": "float() argument must be a string or a real number, not 'NoneType'",
+        "market_cap_usd": null,
+        "ps": null,
+        "pe": null,
+        "fcf_yield_pct": null,
         "share_date": "2026-01-30",
         "price_date": "2026-11-16",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)",
@@ -17836,7 +17864,7 @@
       "news": [],
       "status": "Obserwacja",
       "attention_score": 0,
-      "valuation_status": "Orientacyjna kapitalizacja i mnożniki roczne — nie ranking zakupu",
+      "valuation_status": "Brak wystarczających danych do wyceny",
       "investment_score": null,
       "fundamentals": {
         "source": "SEC EDGAR XBRL",
@@ -17879,7 +17907,7 @@
       },
       "fundamentals_quality": "cached",
       "price": {
-        "close_usd": 231.885,
+        "close_usd": null,
         "date": "2026-11-16",
         "age_days": 0,
         "source": "Yahoo Finance chart EOD",
@@ -18534,16 +18562,18 @@
         "sma50_as_of": "2026-11-16",
         "volume_as_of": "2026-11-16",
         "relative_strength_20d_pct": null,
-        "relative_strength_benchmark": null
+        "relative_strength_benchmark": null,
+        "native_close": 231.885,
+        "native_currency": null
       },
       "price_quality": "refreshed",
       "valuation": {
-        "status": "partial",
-        "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 163138243036,
-        "ps": 6.64,
-        "pe": 45.14,
-        "fcf_yield_pct": 3.22,
+        "status": "unavailable",
+        "reason": "float() argument must be a string or a real number, not 'NoneType'",
+        "market_cap_usd": null,
+        "ps": null,
+        "pe": null,
+        "fcf_yield_pct": null,
         "share_date": "2026-10-15",
         "price_date": "2026-11-16",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)",
@@ -18614,7 +18644,7 @@
       "news": [],
       "status": "Obserwacja",
       "attention_score": 0,
-      "valuation_status": "Orientacyjna kapitalizacja i mnożniki roczne — nie ranking zakupu",
+      "valuation_status": "Brak wystarczających danych do wyceny",
       "investment_score": null,
       "fundamentals": {
         "source": "SEC EDGAR XBRL",
@@ -18657,7 +18687,7 @@
       },
       "fundamentals_quality": "cached",
       "price": {
-        "close_usd": 161.78,
+        "close_usd": null,
         "date": "2026-11-16",
         "age_days": 0,
         "source": "Yahoo Finance chart EOD",
@@ -19312,16 +19342,18 @@
         "sma50_as_of": "2026-11-16",
         "volume_as_of": "2026-11-16",
         "relative_strength_20d_pct": null,
-        "relative_strength_benchmark": null
+        "relative_strength_benchmark": null,
+        "native_close": 161.78,
+        "native_currency": null
       },
       "price_quality": "refreshed",
       "valuation": {
-        "status": "partial",
-        "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 88752508000,
-        "ps": 4.68,
-        "pe": 32.98,
-        "fcf_yield_pct": 3.98,
+        "status": "unavailable",
+        "reason": "float() argument must be a string or a real number, not 'NoneType'",
+        "market_cap_usd": null,
+        "ps": null,
+        "pe": null,
+        "fcf_yield_pct": null,
         "share_date": "2026-10-31",
         "price_date": "2026-11-16",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)",
@@ -19397,7 +19429,7 @@
       "fundamentals": null,
       "fundamentals_quality": "unavailable",
       "price": {
-        "close_usd": 16.65,
+        "close_usd": null,
         "date": "2026-11-16",
         "age_days": 0,
         "source": "Yahoo Finance chart EOD",
@@ -20052,12 +20084,14 @@
         "sma50_as_of": "2026-11-16",
         "volume_as_of": "2026-11-16",
         "relative_strength_20d_pct": null,
-        "relative_strength_benchmark": null
+        "relative_strength_benchmark": null,
+        "native_close": 16.65,
+        "native_currency": null
       },
       "price_quality": "refreshed",
       "valuation": {
         "status": "unavailable",
-        "reason": "'shares_outstanding'",
+        "reason": "float() argument must be a string or a real number, not 'NoneType'",
         "market_cap_usd": null,
         "ps": null,
         "pe": null,
@@ -20132,7 +20166,7 @@
       "news": [],
       "status": "Obserwacja",
       "attention_score": 0,
-      "valuation_status": "Orientacyjna kapitalizacja i mnożniki roczne — nie ranking zakupu",
+      "valuation_status": "Brak wystarczających danych do wyceny",
       "investment_score": null,
       "fundamentals": {
         "source": "SEC EDGAR XBRL",
@@ -20174,7 +20208,7 @@
       },
       "fundamentals_quality": "cached",
       "price": {
-        "close_usd": 107.24,
+        "close_usd": null,
         "date": "2026-11-16",
         "age_days": 0,
         "source": "Yahoo Finance chart EOD",
@@ -20829,15 +20863,17 @@
         "sma50_as_of": "2026-11-16",
         "volume_as_of": "2026-11-16",
         "relative_strength_20d_pct": null,
-        "relative_strength_benchmark": null
+        "relative_strength_benchmark": null,
+        "native_close": 107.24,
+        "native_currency": null
       },
       "price_quality": "refreshed",
       "valuation": {
-        "status": "partial",
-        "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 92376654607,
-        "ps": 5.91,
-        "pe": 57.88,
+        "status": "unavailable",
+        "reason": "float() argument must be a string or a real number, not 'NoneType'",
+        "market_cap_usd": null,
+        "ps": null,
+        "pe": null,
         "fcf_yield_pct": null,
         "share_date": "2026-10-23",
         "price_date": "2026-11-16",
@@ -20909,7 +20945,7 @@
       "news": [],
       "status": "Obserwacja",
       "attention_score": 0,
-      "valuation_status": "Orientacyjna kapitalizacja i mnożniki roczne — nie ranking zakupu",
+      "valuation_status": "Brak wystarczających danych do wyceny",
       "investment_score": null,
       "fundamentals": {
         "source": "SEC EDGAR XBRL",
@@ -20952,7 +20988,7 @@
       },
       "fundamentals_quality": "cached",
       "price": {
-        "close_usd": 221.4,
+        "close_usd": null,
         "date": "2026-11-16",
         "age_days": 0,
         "source": "Yahoo Finance chart EOD",
@@ -21607,16 +21643,18 @@
         "sma50_as_of": "2026-11-16",
         "volume_as_of": "2026-11-16",
         "relative_strength_20d_pct": null,
-        "relative_strength_benchmark": null
+        "relative_strength_benchmark": null,
+        "native_close": 221.4,
+        "native_currency": null
       },
       "price_quality": "refreshed",
       "valuation": {
-        "status": "partial",
-        "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 70263175885,
-        "ps": 1.88,
-        "pe": 14.86,
-        "fcf_yield_pct": 7.72,
+        "status": "unavailable",
+        "reason": "float() argument must be a string or a real number, not 'NoneType'",
+        "market_cap_usd": null,
+        "ps": null,
+        "pe": null,
+        "fcf_yield_pct": null,
         "share_date": "2026-09-30",
         "price_date": "2026-11-16",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)",
@@ -21687,7 +21725,7 @@
       "news": [],
       "status": "Obserwacja",
       "attention_score": 0,
-      "valuation_status": "Orientacyjna kapitalizacja i mnożniki roczne — nie ranking zakupu",
+      "valuation_status": "Brak wystarczających danych do wyceny",
       "investment_score": null,
       "fundamentals": {
         "source": "SEC EDGAR XBRL",
@@ -21729,7 +21767,7 @@
       },
       "fundamentals_quality": "cached",
       "price": {
-        "close_usd": 429.28,
+        "close_usd": null,
         "date": "2026-11-16",
         "age_days": 0,
         "source": "Yahoo Finance chart EOD",
@@ -22384,15 +22422,17 @@
         "sma50_as_of": "2026-11-16",
         "volume_as_of": "2026-11-16",
         "relative_strength_20d_pct": null,
-        "relative_strength_benchmark": null
+        "relative_strength_benchmark": null,
+        "native_close": 429.28,
+        "native_currency": null
       },
       "price_quality": "refreshed",
       "valuation": {
-        "status": "partial",
-        "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 22681023825,
-        "ps": 3.88,
-        "pe": 25.57,
+        "status": "unavailable",
+        "reason": "float() argument must be a string or a real number, not 'NoneType'",
+        "market_cap_usd": null,
+        "ps": null,
+        "pe": null,
         "fcf_yield_pct": null,
         "share_date": "2026-10-22",
         "price_date": "2026-11-16",
@@ -22539,7 +22579,7 @@
       "news": [],
       "status": "Obserwacja",
       "attention_score": 0,
-      "valuation_status": "Orientacyjna kapitalizacja i mnożniki roczne — nie ranking zakupu",
+      "valuation_status": "Brak wystarczających danych do wyceny",
       "investment_score": null,
       "fundamentals": {
         "source": "SEC EDGAR XBRL",
@@ -22581,7 +22621,7 @@
       },
       "fundamentals_quality": "cached",
       "price": {
-        "close_usd": 438.33,
+        "close_usd": null,
         "date": "2026-11-16",
         "age_days": 0,
         "source": "Yahoo Finance chart EOD",
@@ -23236,15 +23276,17 @@
         "sma50_as_of": "2026-11-16",
         "volume_as_of": "2026-11-16",
         "relative_strength_20d_pct": null,
-        "relative_strength_benchmark": null
+        "relative_strength_benchmark": null,
+        "native_close": 438.33,
+        "native_currency": null
       },
       "price_quality": "refreshed",
       "valuation": {
-        "status": "partial",
-        "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 151944340911,
-        "ps": 15.1,
-        "pe": 53.2,
+        "status": "unavailable",
+        "reason": "float() argument must be a string or a real number, not 'NoneType'",
+        "market_cap_usd": null,
+        "ps": null,
+        "pe": null,
         "fcf_yield_pct": null,
         "share_date": "2026-10-15",
         "price_date": "2026-11-16",
@@ -23316,7 +23358,7 @@
       "news": [],
       "status": "Obserwacja",
       "attention_score": 0,
-      "valuation_status": "Orientacyjna kapitalizacja i mnożniki roczne — nie ranking zakupu",
+      "valuation_status": "Brak wystarczających danych do wyceny",
       "investment_score": null,
       "fundamentals": {
         "source": "SEC EDGAR XBRL",
@@ -23359,7 +23401,7 @@
       },
       "fundamentals_quality": "cached",
       "price": {
-        "close_usd": 247.01,
+        "close_usd": null,
         "date": "2026-11-16",
         "age_days": 0,
         "source": "Yahoo Finance chart EOD",
@@ -24014,16 +24056,18 @@
         "sma50_as_of": "2026-11-16",
         "volume_as_of": "2026-11-16",
         "relative_strength_20d_pct": null,
-        "relative_strength_benchmark": null
+        "relative_strength_benchmark": null,
+        "native_close": 247.01,
+        "native_currency": null
       },
       "price_quality": "refreshed",
       "valuation": {
-        "status": "partial",
-        "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 25435723835,
-        "ps": 0.71,
-        "pe": 24.41,
-        "fcf_yield_pct": 5.4,
+        "status": "unavailable",
+        "reason": "float() argument must be a string or a real number, not 'NoneType'",
+        "market_cap_usd": null,
+        "ps": null,
+        "pe": null,
+        "fcf_yield_pct": null,
         "share_date": "2026-10-20",
         "price_date": "2026-11-16",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)",
@@ -24094,7 +24138,7 @@
       "news": [],
       "status": "Obserwacja",
       "attention_score": 0,
-      "valuation_status": "Orientacyjna kapitalizacja i mnożniki roczne — nie ranking zakupu",
+      "valuation_status": "Brak wystarczających danych do wyceny",
       "investment_score": null,
       "fundamentals": {
         "source": "SEC EDGAR XBRL",
@@ -24137,7 +24181,7 @@
       },
       "fundamentals_quality": "cached",
       "price": {
-        "close_usd": 4.8494,
+        "close_usd": null,
         "date": "2026-11-16",
         "age_days": 0,
         "source": "Yahoo Finance chart EOD",
@@ -24792,16 +24836,18 @@
         "sma50_as_of": "2026-11-16",
         "volume_as_of": "2026-11-16",
         "relative_strength_20d_pct": null,
-        "relative_strength_benchmark": null
+        "relative_strength_benchmark": null,
+        "native_close": 4.8494,
+        "native_currency": null
       },
       "price_quality": "refreshed",
       "valuation": {
-        "status": "partial",
-        "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 4930104971,
-        "ps": 92.28,
+        "status": "unavailable",
+        "reason": "float() argument must be a string or a real number, not 'NoneType'",
+        "market_cap_usd": null,
+        "ps": null,
         "pe": null,
-        "fcf_yield_pct": -11.44,
+        "fcf_yield_pct": null,
         "share_date": "2026-11-02",
         "price_date": "2026-11-16",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)",
@@ -24872,7 +24918,7 @@
       "news": [],
       "status": "Obserwacja",
       "attention_score": 0,
-      "valuation_status": "Orientacyjna kapitalizacja i mnożniki roczne — nie ranking zakupu",
+      "valuation_status": "Brak wystarczających danych do wyceny",
       "investment_score": null,
       "fundamentals": {
         "source": "SEC EDGAR XBRL",
@@ -24915,7 +24961,7 @@
       },
       "fundamentals_quality": "cached",
       "price": {
-        "close_usd": 143.76,
+        "close_usd": null,
         "date": "2026-11-16",
         "age_days": 0,
         "source": "Yahoo Finance chart EOD",
@@ -25570,16 +25616,18 @@
         "sma50_as_of": "2026-11-16",
         "volume_as_of": "2026-11-16",
         "relative_strength_20d_pct": null,
-        "relative_strength_benchmark": null
+        "relative_strength_benchmark": null,
+        "native_close": 143.76,
+        "native_currency": null
       },
       "price_quality": "refreshed",
       "valuation": {
-        "status": "partial",
-        "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 187313879656,
-        "ps": 13.79,
-        "pe": 38.78,
-        "fcf_yield_pct": 2.01,
+        "status": "unavailable",
+        "reason": "float() argument must be a string or a real number, not 'NoneType'",
+        "market_cap_usd": null,
+        "ps": null,
+        "pe": null,
+        "fcf_yield_pct": null,
         "share_date": "2026-10-26",
         "price_date": "2026-11-16",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)",
@@ -25650,7 +25698,7 @@
       "news": [],
       "status": "Obserwacja",
       "attention_score": 0,
-      "valuation_status": "Orientacyjna kapitalizacja i mnożniki roczne — nie ranking zakupu",
+      "valuation_status": "Brak wystarczających danych do wyceny",
       "investment_score": null,
       "fundamentals": {
         "source": "SEC EDGAR XBRL",
@@ -25692,7 +25740,7 @@
       },
       "fundamentals_quality": "cached",
       "price": {
-        "close_usd": 33.23,
+        "close_usd": null,
         "date": "2026-11-16",
         "age_days": 0,
         "source": "Yahoo Finance chart EOD",
@@ -26347,15 +26395,17 @@
         "sma50_as_of": "2026-11-16",
         "volume_as_of": "2026-11-16",
         "relative_strength_20d_pct": null,
-        "relative_strength_benchmark": null
+        "relative_strength_benchmark": null,
+        "native_close": 33.23,
+        "native_currency": null
       },
       "price_quality": "refreshed",
       "valuation": {
-        "status": "partial",
-        "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 6256328671,
-        "ps": 4.65,
-        "pe": 284.38,
+        "status": "unavailable",
+        "reason": "float() argument must be a string or a real number, not 'NoneType'",
+        "market_cap_usd": null,
+        "ps": null,
+        "pe": null,
         "fcf_yield_pct": null,
         "share_date": "2026-10-30",
         "price_date": "2026-11-16",
@@ -26507,7 +26557,7 @@
       "fundamentals": null,
       "fundamentals_quality": "unavailable",
       "price": {
-        "close_usd": 26.945,
+        "close_usd": null,
         "date": "2026-11-16",
         "age_days": 0,
         "source": "Yahoo Finance chart EOD",
@@ -27017,12 +27067,14 @@
         "sma50_as_of": "2026-11-16",
         "volume_as_of": "2026-11-16",
         "relative_strength_20d_pct": null,
-        "relative_strength_benchmark": null
+        "relative_strength_benchmark": null,
+        "native_close": 26.945,
+        "native_currency": null
       },
       "price_quality": "refreshed",
       "valuation": {
         "status": "unavailable",
-        "reason": "'shares_outstanding'",
+        "reason": "float() argument must be a string or a real number, not 'NoneType'",
         "market_cap_usd": null,
         "ps": null,
         "pe": null,
@@ -27097,7 +27149,7 @@
       "news": [],
       "status": "Obserwacja",
       "attention_score": 0,
-      "valuation_status": "Orientacyjna kapitalizacja i mnożniki roczne — nie ranking zakupu",
+      "valuation_status": "Brak wystarczających danych do wyceny",
       "investment_score": null,
       "fundamentals": {
         "source": "SEC EDGAR XBRL",
@@ -27140,7 +27192,7 @@
       },
       "fundamentals_quality": "cached",
       "price": {
-        "close_usd": 544.05,
+        "close_usd": null,
         "date": "2026-11-16",
         "age_days": 0,
         "source": "Yahoo Finance chart EOD",
@@ -27795,16 +27847,18 @@
         "sma50_as_of": "2026-11-16",
         "volume_as_of": "2026-11-16",
         "relative_strength_20d_pct": null,
-        "relative_strength_benchmark": null
+        "relative_strength_benchmark": null,
+        "native_close": 544.05,
+        "native_currency": null
       },
       "price_quality": "refreshed",
       "valuation": {
-        "status": "partial",
-        "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 49345335000,
-        "ps": 16.37,
+        "status": "unavailable",
+        "reason": "float() argument must be a string or a real number, not 'NoneType'",
+        "market_cap_usd": null,
+        "ps": null,
         "pe": null,
-        "fcf_yield_pct": 0.61,
+        "fcf_yield_pct": null,
         "share_date": "2026-10-28",
         "price_date": "2026-11-16",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)",
@@ -27875,7 +27929,7 @@
       "news": [],
       "status": "Obserwacja",
       "attention_score": 0,
-      "valuation_status": "Orientacyjna kapitalizacja i mnożniki roczne — nie ranking zakupu",
+      "valuation_status": "Brak wystarczających danych do wyceny",
       "investment_score": null,
       "fundamentals": {
         "source": "SEC EDGAR XBRL",
@@ -27917,7 +27971,7 @@
       },
       "fundamentals_quality": "cached",
       "price": {
-        "close_usd": 212.12,
+        "close_usd": null,
         "date": "2026-11-16",
         "age_days": 0,
         "source": "Yahoo Finance chart EOD",
@@ -28572,15 +28626,17 @@
         "sma50_as_of": "2026-11-16",
         "volume_as_of": "2026-11-16",
         "relative_strength_20d_pct": null,
-        "relative_strength_benchmark": null
+        "relative_strength_benchmark": null,
+        "native_close": 212.12,
+        "native_currency": null
       },
       "price_quality": "refreshed",
       "valuation": {
-        "status": "partial",
-        "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 264974152520,
-        "ps": 11.41,
-        "pe": 36.47,
+        "status": "unavailable",
+        "reason": "float() argument must be a string or a real number, not 'NoneType'",
+        "market_cap_usd": null,
+        "ps": null,
+        "pe": null,
         "fcf_yield_pct": null,
         "share_date": "2026-10-20",
         "price_date": "2026-11-16",
@@ -28652,7 +28708,7 @@
       "news": [],
       "status": "Obserwacja",
       "attention_score": 0,
-      "valuation_status": "Orientacyjna kapitalizacja i mnożniki roczne — nie ranking zakupu",
+      "valuation_status": "Brak wystarczających danych do wyceny",
       "investment_score": null,
       "fundamentals": {
         "source": "SEC EDGAR XBRL",
@@ -28695,7 +28751,7 @@
       },
       "fundamentals_quality": "cached",
       "price": {
-        "close_usd": 5.3016,
+        "close_usd": null,
         "date": "2026-11-16",
         "age_days": 0,
         "source": "Yahoo Finance chart EOD",
@@ -29350,16 +29406,18 @@
         "sma50_as_of": "2026-11-16",
         "volume_as_of": "2026-11-16",
         "relative_strength_20d_pct": null,
-        "relative_strength_benchmark": null
+        "relative_strength_benchmark": null,
+        "native_close": 5.3016,
+        "native_currency": null
       },
       "price_quality": "refreshed",
       "valuation": {
-        "status": "partial",
-        "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 1338144219,
-        "ps": 0.71,
+        "status": "unavailable",
+        "reason": "float() argument must be a string or a real number, not 'NoneType'",
+        "market_cap_usd": null,
+        "ps": null,
         "pe": null,
-        "fcf_yield_pct": 39.08,
+        "fcf_yield_pct": null,
         "share_date": "2026-10-21",
         "price_date": "2026-11-16",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)",
@@ -29430,7 +29488,7 @@
       "news": [],
       "status": "Obserwacja",
       "attention_score": 0,
-      "valuation_status": "Orientacyjna kapitalizacja i mnożniki roczne — nie ranking zakupu",
+      "valuation_status": "Brak wystarczających danych do wyceny",
       "investment_score": null,
       "fundamentals": {
         "source": "SEC EDGAR XBRL",
@@ -29473,7 +29531,7 @@
       },
       "fundamentals_quality": "cached",
       "price": {
-        "close_usd": 1290.9399,
+        "close_usd": null,
         "date": "2026-11-16",
         "age_days": 0,
         "source": "Yahoo Finance chart EOD",
@@ -30128,16 +30186,18 @@
         "rsi_as_of": "2026-11-16",
         "sma20_as_of": "2026-11-16",
         "sma50_as_of": "2026-11-16",
-        "volume_as_of": "2026-11-16"
+        "volume_as_of": "2026-11-16",
+        "native_close": 1290.9399,
+        "native_currency": null
       },
       "price_quality": "refreshed",
       "valuation": {
-        "status": "partial",
-        "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 62956557043,
-        "ps": 22.56,
-        "pe": 101.3,
-        "fcf_yield_pct": 1.06,
+        "status": "unavailable",
+        "reason": "float() argument must be a string or a real number, not 'NoneType'",
+        "market_cap_usd": null,
+        "ps": null,
+        "pe": null,
+        "fcf_yield_pct": null,
         "share_date": "2026-10-27",
         "price_date": "2026-11-16",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)",
@@ -30208,7 +30268,7 @@
       "news": [],
       "status": "Obserwacja",
       "attention_score": 0,
-      "valuation_status": "Orientacyjna kapitalizacja i mnożniki roczne — nie ranking zakupu",
+      "valuation_status": "Brak wystarczających danych do wyceny",
       "investment_score": null,
       "fundamentals": {
         "source": "SEC EDGAR XBRL",
@@ -30249,9 +30309,9 @@
         "as_of": "2026-11-16T15:15:09.977840+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1835632"
       },
-      "fundamentals_quality": "refreshed",
+      "fundamentals_quality": "cached",
       "price": {
-        "close_usd": 145.09,
+        "close_usd": null,
         "date": "2026-11-16",
         "age_days": 0,
         "source": "Yahoo Finance chart EOD",
@@ -30906,16 +30966,18 @@
         "rsi_as_of": "2026-11-16",
         "sma20_as_of": "2026-11-16",
         "sma50_as_of": "2026-11-16",
-        "volume_as_of": "2026-11-16"
+        "volume_as_of": "2026-11-16",
+        "native_close": 145.09,
+        "native_currency": null
       },
       "price_quality": "refreshed",
       "valuation": {
-        "status": "partial",
-        "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 127229421000,
-        "ps": 15.53,
-        "pe": 47.65,
-        "fcf_yield_pct": 1.1,
+        "status": "unavailable",
+        "reason": "float() argument must be a string or a real number, not 'NoneType'",
+        "market_cap_usd": null,
+        "ps": null,
+        "pe": null,
+        "fcf_yield_pct": null,
         "share_date": "2026-08-21",
         "price_date": "2026-11-16",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)",
@@ -30950,7 +31012,7 @@
         "strategy_version": "balanced-1.3.4-integrity",
         "signal": "WATCH",
         "buy_eligible": false,
-        "decision_stage": "analyst_consensus",
+        "decision_stage": "data_gate",
         "decision_trace": [
           {
             "stage": "data",
@@ -30963,22 +31025,14 @@
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
-            "actual": "refreshed",
+            "actual": "cached",
             "required": "refreshed",
-            "passed": true,
-            "reason": null
-          },
-          {
-            "stage": "consensus",
-            "check": "analyst_targets",
-            "actual": "unavailable",
-            "required": "documented",
             "passed": false,
-            "reason": "analyst_consensus_missing"
+            "reason": "fundamentals_not_refreshed"
           }
         ],
         "reasons": [
-          "analyst_consensus_missing"
+          "fundamentals_not_refreshed"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -30994,7 +31048,7 @@
       "news": [],
       "status": "Obserwacja",
       "attention_score": 0,
-      "valuation_status": "Orientacyjna kapitalizacja i mnożniki roczne — nie ranking zakupu",
+      "valuation_status": "Brak wystarczających danych do wyceny",
       "investment_score": null,
       "fundamentals": {
         "source": "SEC EDGAR XBRL",
@@ -31035,9 +31089,9 @@
         "as_of": "2026-11-16T15:15:10.445871+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=723125"
       },
-      "fundamentals_quality": "refreshed",
+      "fundamentals_quality": "cached",
       "price": {
-        "close_usd": 720.77,
+        "close_usd": null,
         "date": "2026-11-16",
         "age_days": 0,
         "source": "Yahoo Finance chart EOD",
@@ -31692,16 +31746,18 @@
         "rsi_as_of": "2026-11-16",
         "sma20_as_of": "2026-11-16",
         "sma50_as_of": "2026-11-16",
-        "volume_as_of": "2026-11-16"
+        "volume_as_of": "2026-11-16",
+        "native_close": 720.77,
+        "native_currency": null
       },
       "price_quality": "refreshed",
       "valuation": {
-        "status": "partial",
-        "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 815495908513,
-        "ps": 6.12,
-        "pe": 9.6,
-        "fcf_yield_pct": 7.23,
+        "status": "unavailable",
+        "reason": "float() argument must be a string or a real number, not 'NoneType'",
+        "market_cap_usd": null,
+        "ps": null,
+        "pe": null,
+        "fcf_yield_pct": null,
         "share_date": "2026-10-02",
         "price_date": "2026-11-16",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)",
@@ -31736,7 +31792,7 @@
         "strategy_version": "balanced-1.3.4-integrity",
         "signal": "WATCH",
         "buy_eligible": false,
-        "decision_stage": "analyst_consensus",
+        "decision_stage": "data_gate",
         "decision_trace": [
           {
             "stage": "data",
@@ -31749,22 +31805,14 @@
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
-            "actual": "refreshed",
+            "actual": "cached",
             "required": "refreshed",
-            "passed": true,
-            "reason": null
-          },
-          {
-            "stage": "consensus",
-            "check": "analyst_targets",
-            "actual": "unavailable",
-            "required": "documented",
             "passed": false,
-            "reason": "analyst_consensus_missing"
+            "reason": "fundamentals_not_refreshed"
           }
         ],
         "reasons": [
-          "analyst_consensus_missing"
+          "fundamentals_not_refreshed"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -31780,7 +31828,7 @@
       "news": [],
       "status": "Obserwacja",
       "attention_score": 0,
-      "valuation_status": "Orientacyjna kapitalizacja i mnożniki roczne — nie ranking zakupu",
+      "valuation_status": "Brak wystarczających danych do wyceny",
       "investment_score": null,
       "fundamentals": {
         "source": "SEC EDGAR XBRL",
@@ -31821,9 +31869,9 @@
         "as_of": "2026-11-16T15:15:10.966341+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1373715"
       },
-      "fundamentals_quality": "refreshed",
+      "fundamentals_quality": "cached",
       "price": {
-        "close_usd": 99.69,
+        "close_usd": null,
         "date": "2026-11-16",
         "age_days": 0,
         "source": "Yahoo Finance chart EOD",
@@ -32478,16 +32526,18 @@
         "rsi_as_of": "2026-11-16",
         "sma20_as_of": "2026-11-16",
         "sma50_as_of": "2026-11-16",
-        "volume_as_of": "2026-11-16"
+        "volume_as_of": "2026-11-16",
+        "native_close": 99.69,
+        "native_currency": null
       },
       "price_quality": "refreshed",
       "valuation": {
-        "status": "partial",
-        "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 103478220000,
-        "ps": 7.79,
-        "pe": 59.2,
-        "fcf_yield_pct": 4.42,
+        "status": "unavailable",
+        "reason": "float() argument must be a string or a real number, not 'NoneType'",
+        "market_cap_usd": null,
+        "ps": null,
+        "pe": null,
+        "fcf_yield_pct": null,
         "share_date": "2026-09-30",
         "price_date": "2026-11-16",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)",
@@ -32522,7 +32572,7 @@
         "strategy_version": "balanced-1.3.4-integrity",
         "signal": "WATCH",
         "buy_eligible": false,
-        "decision_stage": "analyst_consensus",
+        "decision_stage": "data_gate",
         "decision_trace": [
           {
             "stage": "data",
@@ -32535,22 +32585,14 @@
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
-            "actual": "refreshed",
+            "actual": "cached",
             "required": "refreshed",
-            "passed": true,
-            "reason": null
-          },
-          {
-            "stage": "consensus",
-            "check": "analyst_targets",
-            "actual": "unavailable",
-            "required": "documented",
             "passed": false,
-            "reason": "analyst_consensus_missing"
+            "reason": "fundamentals_not_refreshed"
           }
         ],
         "reasons": [
-          "analyst_consensus_missing"
+          "fundamentals_not_refreshed"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -32566,7 +32608,7 @@
       "news": [],
       "status": "Obserwacja",
       "attention_score": 0,
-      "valuation_status": "Orientacyjna kapitalizacja i mnożniki roczne — nie ranking zakupu",
+      "valuation_status": "Brak wystarczających danych do wyceny",
       "investment_score": null,
       "fundamentals": {
         "source": "SEC EDGAR XBRL",
@@ -32607,9 +32649,9 @@
         "as_of": "2026-11-16T15:15:12.078690+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1720635"
       },
-      "fundamentals_quality": "refreshed",
+      "fundamentals_quality": "cached",
       "price": {
-        "close_usd": 109.34,
+        "close_usd": null,
         "date": "2026-11-16",
         "age_days": 0,
         "source": "Yahoo Finance chart EOD",
@@ -33264,16 +33306,18 @@
         "rsi_as_of": "2026-11-16",
         "sma20_as_of": "2026-11-16",
         "sma50_as_of": "2026-11-16",
-        "volume_as_of": "2026-11-16"
+        "volume_as_of": "2026-11-16",
+        "native_close": 109.34,
+        "native_currency": null
       },
       "price_quality": "refreshed",
       "valuation": {
-        "status": "partial",
-        "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 17669131880,
-        "ps": 4.54,
-        "pe": 24.88,
-        "fcf_yield_pct": 2.1,
+        "status": "unavailable",
+        "reason": "float() argument must be a string or a real number, not 'NoneType'",
+        "market_cap_usd": null,
+        "ps": null,
+        "pe": null,
+        "fcf_yield_pct": null,
         "share_date": "2026-09-30",
         "price_date": "2026-11-16",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)",
@@ -33308,7 +33352,7 @@
         "strategy_version": "balanced-1.3.4-integrity",
         "signal": "WATCH",
         "buy_eligible": false,
-        "decision_stage": "analyst_consensus",
+        "decision_stage": "data_gate",
         "decision_trace": [
           {
             "stage": "data",
@@ -33321,22 +33365,14 @@
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
-            "actual": "refreshed",
+            "actual": "cached",
             "required": "refreshed",
-            "passed": true,
-            "reason": null
-          },
-          {
-            "stage": "consensus",
-            "check": "analyst_targets",
-            "actual": "unavailable",
-            "required": "documented",
             "passed": false,
-            "reason": "analyst_consensus_missing"
+            "reason": "fundamentals_not_refreshed"
           }
         ],
         "reasons": [
-          "analyst_consensus_missing"
+          "fundamentals_not_refreshed"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -33352,7 +33388,7 @@
       "news": [],
       "status": "Obserwacja",
       "attention_score": 0,
-      "valuation_status": "Orientacyjna kapitalizacja i mnożniki roczne — nie ranking zakupu",
+      "valuation_status": "Brak wystarczających danych do wyceny",
       "investment_score": null,
       "fundamentals": {
         "source": "SEC EDGAR XBRL",
@@ -33393,9 +33429,9 @@
         "as_of": "2026-11-16T15:15:12.654120+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1646188"
       },
-      "fundamentals_quality": "refreshed",
+      "fundamentals_quality": "cached",
       "price": {
-        "close_usd": 4.805,
+        "close_usd": null,
         "date": "2026-11-16",
         "age_days": 0,
         "source": "Yahoo Finance chart EOD",
@@ -34050,16 +34086,18 @@
         "rsi_as_of": "2026-11-16",
         "sma20_as_of": "2026-11-16",
         "sma50_as_of": "2026-11-16",
-        "volume_as_of": "2026-11-16"
+        "volume_as_of": "2026-11-16",
+        "native_close": 4.805,
+        "native_currency": null
       },
       "price_quality": "refreshed",
       "valuation": {
-        "status": "partial",
-        "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 2741503999,
-        "ps": 54.04,
+        "status": "unavailable",
+        "reason": "float() argument must be a string or a real number, not 'NoneType'",
+        "market_cap_usd": null,
+        "ps": null,
         "pe": null,
-        "fcf_yield_pct": -1.49,
+        "fcf_yield_pct": null,
         "share_date": "2026-08-11",
         "price_date": "2026-11-16",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)",
@@ -34094,7 +34132,7 @@
         "strategy_version": "balanced-1.3.4-integrity",
         "signal": "WATCH",
         "buy_eligible": false,
-        "decision_stage": "analyst_consensus",
+        "decision_stage": "data_gate",
         "decision_trace": [
           {
             "stage": "data",
@@ -34107,22 +34145,14 @@
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
-            "actual": "refreshed",
+            "actual": "cached",
             "required": "refreshed",
-            "passed": true,
-            "reason": null
-          },
-          {
-            "stage": "consensus",
-            "check": "analyst_targets",
-            "actual": "unavailable",
-            "required": "documented",
             "passed": false,
-            "reason": "analyst_consensus_missing"
+            "reason": "fundamentals_not_refreshed"
           }
         ],
         "reasons": [
-          "analyst_consensus_missing"
+          "fundamentals_not_refreshed"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -34138,7 +34168,7 @@
       "news": [],
       "status": "Obserwacja",
       "attention_score": 0,
-      "valuation_status": "Orientacyjna kapitalizacja i mnożniki roczne — nie ranking zakupu",
+      "valuation_status": "Brak wystarczających danych do wyceny",
       "investment_score": null,
       "fundamentals": {
         "source": "SEC EDGAR XBRL",
@@ -34179,9 +34209,9 @@
         "as_of": "2026-11-16T15:15:13.122839+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=704532"
       },
-      "fundamentals_quality": "refreshed",
+      "fundamentals_quality": "cached",
       "price": {
-        "close_usd": 190.48,
+        "close_usd": null,
         "date": "2026-11-16",
         "age_days": 0,
         "source": "Yahoo Finance chart EOD",
@@ -34836,16 +34866,18 @@
         "rsi_as_of": "2026-11-16",
         "sma20_as_of": "2026-11-16",
         "sma50_as_of": "2026-11-16",
-        "volume_as_of": "2026-11-16"
+        "volume_as_of": "2026-11-16",
+        "native_close": 190.48,
+        "native_currency": null
       },
       "price_quality": "refreshed",
       "valuation": {
-        "status": "partial",
-        "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 9349582607,
-        "ps": 9.3,
-        "pe": 68.37,
-        "fcf_yield_pct": 3.21,
+        "status": "unavailable",
+        "reason": "float() argument must be a string or a real number, not 'NoneType'",
+        "market_cap_usd": null,
+        "ps": null,
+        "pe": null,
+        "fcf_yield_pct": null,
         "share_date": "2026-10-30",
         "price_date": "2026-11-16",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)",
@@ -34880,7 +34912,7 @@
         "strategy_version": "balanced-1.3.4-integrity",
         "signal": "WATCH",
         "buy_eligible": false,
-        "decision_stage": "analyst_consensus",
+        "decision_stage": "data_gate",
         "decision_trace": [
           {
             "stage": "data",
@@ -34893,22 +34925,14 @@
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
-            "actual": "refreshed",
+            "actual": "cached",
             "required": "refreshed",
-            "passed": true,
-            "reason": null
-          },
-          {
-            "stage": "consensus",
-            "check": "analyst_targets",
-            "actual": "unavailable",
-            "required": "documented",
             "passed": false,
-            "reason": "analyst_consensus_missing"
+            "reason": "fundamentals_not_refreshed"
           }
         ],
         "reasons": [
-          "analyst_consensus_missing"
+          "fundamentals_not_refreshed"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -34924,7 +34948,7 @@
       "news": [],
       "status": "Obserwacja",
       "attention_score": 0,
-      "valuation_status": "Orientacyjna kapitalizacja i mnożniki roczne — nie ranking zakupu",
+      "valuation_status": "Brak wystarczających danych do wyceny",
       "investment_score": null,
       "fundamentals": {
         "source": "SEC EDGAR XBRL",
@@ -34965,9 +34989,9 @@
         "as_of": "2026-11-16T15:15:13.930674+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1816581"
       },
-      "fundamentals_quality": "refreshed",
+      "fundamentals_quality": "cached",
       "price": {
-        "close_usd": 31.3,
+        "close_usd": null,
         "date": "2026-11-16",
         "age_days": 0,
         "source": "Yahoo Finance chart EOD",
@@ -35622,16 +35646,18 @@
         "rsi_as_of": "2026-11-16",
         "sma20_as_of": "2026-11-16",
         "sma50_as_of": "2026-11-16",
-        "volume_as_of": "2026-11-16"
+        "volume_as_of": "2026-11-16",
+        "native_close": 31.3,
+        "native_currency": null
       },
       "price_quality": "refreshed",
       "valuation": {
-        "status": "partial",
-        "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 2284811390,
-        "ps": 13.49,
+        "status": "unavailable",
+        "reason": "float() argument must be a string or a real number, not 'NoneType'",
+        "market_cap_usd": null,
+        "ps": null,
         "pe": null,
-        "fcf_yield_pct": -2.84,
+        "fcf_yield_pct": null,
         "share_date": "2026-10-30",
         "price_date": "2026-11-16",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)",
@@ -35666,7 +35692,7 @@
         "strategy_version": "balanced-1.3.4-integrity",
         "signal": "WATCH",
         "buy_eligible": false,
-        "decision_stage": "analyst_consensus",
+        "decision_stage": "data_gate",
         "decision_trace": [
           {
             "stage": "data",
@@ -35679,22 +35705,14 @@
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
-            "actual": "refreshed",
+            "actual": "cached",
             "required": "refreshed",
-            "passed": true,
-            "reason": null
-          },
-          {
-            "stage": "consensus",
-            "check": "analyst_targets",
-            "actual": "unavailable",
-            "required": "documented",
             "passed": false,
-            "reason": "analyst_consensus_missing"
+            "reason": "fundamentals_not_refreshed"
           }
         ],
         "reasons": [
-          "analyst_consensus_missing"
+          "fundamentals_not_refreshed"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -35748,12 +35766,12 @@
         },
         "period_mismatch_flags": [],
         "filed": "2026-03-25",
-        "as_of": "2026-11-16T15:15:07.603027+00:00",
+        "as_of": "2026-11-16T15:15:55.140439+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1734722"
       },
       "fundamentals_quality": "refreshed",
       "price": {
-        "close_usd": 13.115,
+        "close_usd": null,
         "date": "2026-11-16",
         "age_days": 0,
         "source": "Yahoo Finance chart EOD",
@@ -36408,7 +36426,9 @@
         "rsi_as_of": "2026-11-16",
         "sma20_as_of": "2026-11-16",
         "sma50_as_of": "2026-11-16",
-        "volume_as_of": "2026-11-16"
+        "volume_as_of": "2026-11-16",
+        "native_close": 13.115,
+        "native_currency": null
       },
       "price_quality": "refreshed",
       "valuation": {
@@ -36496,7 +36516,7 @@
       "news": [],
       "status": "Obserwacja",
       "attention_score": 0,
-      "valuation_status": "Orientacyjna kapitalizacja i mnożniki roczne — nie ranking zakupu",
+      "valuation_status": "Brak wystarczających danych do wyceny",
       "investment_score": null,
       "fundamentals": {
         "source": "SEC EDGAR XBRL",
@@ -36537,9 +36557,9 @@
         "as_of": "2026-11-16T15:15:14.848531+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1321655"
       },
-      "fundamentals_quality": "refreshed",
+      "fundamentals_quality": "cached",
       "price": {
-        "close_usd": 163.11,
+        "close_usd": null,
         "date": "2026-11-16",
         "age_days": 0,
         "source": "Yahoo Finance chart EOD",
@@ -37194,16 +37214,18 @@
         "rsi_as_of": "2026-11-16",
         "sma20_as_of": "2026-11-16",
         "sma50_as_of": "2026-11-16",
-        "volume_as_of": "2026-11-16"
+        "volume_as_of": "2026-11-16",
+        "native_close": 163.11,
+        "native_currency": null
       },
       "price_quality": "refreshed",
       "valuation": {
-        "status": "partial",
-        "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 390027327120,
-        "ps": 87.15,
-        "pe": 240.01,
-        "fcf_yield_pct": 0.54,
+        "status": "unavailable",
+        "reason": "float() argument must be a string or a real number, not 'NoneType'",
+        "market_cap_usd": null,
+        "ps": null,
+        "pe": null,
+        "fcf_yield_pct": null,
         "share_date": "2025-12-31",
         "price_date": "2026-11-16",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)",
@@ -37238,7 +37260,7 @@
         "strategy_version": "balanced-1.3.4-integrity",
         "signal": "WATCH",
         "buy_eligible": false,
-        "decision_stage": "analyst_consensus",
+        "decision_stage": "data_gate",
         "decision_trace": [
           {
             "stage": "data",
@@ -37251,22 +37273,14 @@
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
-            "actual": "refreshed",
+            "actual": "cached",
             "required": "refreshed",
-            "passed": true,
-            "reason": null
-          },
-          {
-            "stage": "consensus",
-            "check": "analyst_targets",
-            "actual": "unavailable",
-            "required": "documented",
             "passed": false,
-            "reason": "analyst_consensus_missing"
+            "reason": "fundamentals_not_refreshed"
           }
         ],
         "reasons": [
-          "analyst_consensus_missing"
+          "fundamentals_not_refreshed"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -37282,7 +37296,7 @@
       "news": [],
       "status": "Obserwacja",
       "attention_score": 0,
-      "valuation_status": "Orientacyjna kapitalizacja i mnożniki roczne — nie ranking zakupu",
+      "valuation_status": "Brak wystarczających danych do wyceny",
       "investment_score": null,
       "fundamentals": {
         "source": "SEC EDGAR XBRL",
@@ -37323,9 +37337,9 @@
         "as_of": "2026-11-16T15:15:15.418663+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1050915"
       },
-      "fundamentals_quality": "refreshed",
+      "fundamentals_quality": "cached",
       "price": {
-        "close_usd": 593.725,
+        "close_usd": null,
         "date": "2026-11-16",
         "age_days": 0,
         "source": "Yahoo Finance chart EOD",
@@ -37980,16 +37994,18 @@
         "rsi_as_of": "2026-11-16",
         "sma20_as_of": "2026-11-16",
         "sma50_as_of": "2026-11-16",
-        "volume_as_of": "2026-11-16"
+        "volume_as_of": "2026-11-16",
+        "native_close": 593.725,
+        "native_currency": null
       },
       "price_quality": "refreshed",
       "valuation": {
-        "status": "partial",
-        "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 89460787915,
-        "ps": 3.14,
-        "pe": 86.99,
-        "fcf_yield_pct": 1.81,
+        "status": "unavailable",
+        "reason": "float() argument must be a string or a real number, not 'NoneType'",
+        "market_cap_usd": null,
+        "ps": null,
+        "pe": null,
+        "fcf_yield_pct": null,
         "share_date": "2026-10-26",
         "price_date": "2026-11-16",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)",
@@ -38024,7 +38040,7 @@
         "strategy_version": "balanced-1.3.4-integrity",
         "signal": "WATCH",
         "buy_eligible": false,
-        "decision_stage": "analyst_consensus",
+        "decision_stage": "data_gate",
         "decision_trace": [
           {
             "stage": "data",
@@ -38037,22 +38053,14 @@
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
-            "actual": "refreshed",
+            "actual": "cached",
             "required": "refreshed",
-            "passed": true,
-            "reason": null
-          },
-          {
-            "stage": "consensus",
-            "check": "analyst_targets",
-            "actual": "unavailable",
-            "required": "documented",
             "passed": false,
-            "reason": "analyst_consensus_missing"
+            "reason": "fundamentals_not_refreshed"
           }
         ],
         "reasons": [
-          "analyst_consensus_missing"
+          "fundamentals_not_refreshed"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -38068,7 +38076,7 @@
       "news": [],
       "status": "Obserwacja",
       "attention_score": 0,
-      "valuation_status": "Orientacyjna kapitalizacja i mnożniki roczne — nie ranking zakupu",
+      "valuation_status": "Brak wystarczających danych do wyceny",
       "investment_score": null,
       "fundamentals": {
         "source": "SEC EDGAR XBRL",
@@ -38105,12 +38113,12 @@
           "annual_flow_periods_not_aligned"
         ],
         "filed": "2026-11-04",
-        "as_of": "2026-11-16T14:43:55.143569+00:00",
+        "as_of": "2026-11-16T15:15:56.389941+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=804328"
       },
-      "fundamentals_quality": "cached",
+      "fundamentals_quality": "refreshed",
       "price": {
-        "close_usd": 169.895,
+        "close_usd": null,
         "date": "2026-11-16",
         "age_days": 0,
         "source": "Yahoo Finance chart EOD",
@@ -38765,15 +38773,17 @@
         "rsi_as_of": "2026-11-16",
         "sma20_as_of": "2026-11-16",
         "sma50_as_of": "2026-11-16",
-        "volume_as_of": "2026-11-16"
+        "volume_as_of": "2026-11-16",
+        "native_close": 169.895,
+        "native_currency": null
       },
       "price_quality": "refreshed",
       "valuation": {
-        "status": "partial",
-        "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 181787650000,
-        "ps": 4.22,
-        "pe": 13.34,
+        "status": "unavailable",
+        "reason": "float() argument must be a string or a real number, not 'NoneType'",
+        "market_cap_usd": null,
+        "ps": null,
+        "pe": null,
         "fcf_yield_pct": null,
         "share_date": "2026-11-02",
         "price_date": "2026-11-16",
@@ -38809,7 +38819,7 @@
         "strategy_version": "balanced-1.3.4-integrity",
         "signal": "WATCH",
         "buy_eligible": false,
-        "decision_stage": "data_gate",
+        "decision_stage": "analyst_consensus",
         "decision_trace": [
           {
             "stage": "data",
@@ -38822,14 +38832,22 @@
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
-            "actual": "cached",
+            "actual": "refreshed",
             "required": "refreshed",
+            "passed": true,
+            "reason": null
+          },
+          {
+            "stage": "consensus",
+            "check": "analyst_targets",
+            "actual": "unavailable",
+            "required": "documented",
             "passed": false,
-            "reason": "fundamentals_not_refreshed"
+            "reason": "analyst_consensus_missing"
           }
         ],
         "reasons": [
-          "fundamentals_not_refreshed"
+          "analyst_consensus_missing"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -38845,7 +38863,7 @@
       "news": [],
       "status": "Obserwacja",
       "attention_score": 0,
-      "valuation_status": "Orientacyjna kapitalizacja i mnożniki roczne — nie ranking zakupu",
+      "valuation_status": "Brak wystarczających danych do wyceny",
       "investment_score": null,
       "fundamentals": {
         "source": "SEC EDGAR XBRL",
@@ -38882,12 +38900,12 @@
           "annual_flow_periods_not_aligned"
         ],
         "filed": "2026-03-19",
-        "as_of": "2026-11-16T14:43:55.689842+00:00",
+        "as_of": "2026-11-16T15:15:57.039813+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=748268"
       },
-      "fundamentals_quality": "cached",
+      "fundamentals_quality": "refreshed",
       "price": {
-        "close_usd": 3.605,
+        "close_usd": null,
         "date": "2026-11-16",
         "age_days": 0,
         "source": "Yahoo Finance chart EOD",
@@ -39542,14 +39560,16 @@
         "rsi_as_of": "2026-11-16",
         "sma20_as_of": "2026-11-16",
         "sma50_as_of": "2026-11-16",
-        "volume_as_of": "2026-11-16"
+        "volume_as_of": "2026-11-16",
+        "native_close": 3.605,
+        "native_currency": null
       },
       "price_quality": "refreshed",
       "valuation": {
-        "status": "partial",
-        "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 550535275,
-        "ps": 13.52,
+        "status": "unavailable",
+        "reason": "float() argument must be a string or a real number, not 'NoneType'",
+        "market_cap_usd": null,
+        "ps": null,
         "pe": null,
         "fcf_yield_pct": null,
         "share_date": "2026-08-04",
@@ -39586,7 +39606,7 @@
         "strategy_version": "balanced-1.3.4-integrity",
         "signal": "WATCH",
         "buy_eligible": false,
-        "decision_stage": "data_gate",
+        "decision_stage": "analyst_consensus",
         "decision_trace": [
           {
             "stage": "data",
@@ -39599,14 +39619,22 @@
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
-            "actual": "cached",
+            "actual": "refreshed",
             "required": "refreshed",
+            "passed": true,
+            "reason": null
+          },
+          {
+            "stage": "consensus",
+            "check": "analyst_targets",
+            "actual": "unavailable",
+            "required": "documented",
             "passed": false,
-            "reason": "fundamentals_not_refreshed"
+            "reason": "analyst_consensus_missing"
           }
         ],
         "reasons": [
-          "fundamentals_not_refreshed"
+          "analyst_consensus_missing"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -39622,7 +39650,7 @@
       "news": [],
       "status": "Obserwacja",
       "attention_score": 0,
-      "valuation_status": "Orientacyjna kapitalizacja i mnożniki roczne — nie ranking zakupu",
+      "valuation_status": "Brak wystarczających danych do wyceny",
       "investment_score": null,
       "fundamentals": {
         "source": "SEC EDGAR XBRL",
@@ -39660,12 +39688,12 @@
         },
         "period_mismatch_flags": [],
         "filed": "2026-11-12",
-        "as_of": "2026-11-16T14:43:56.381101+00:00",
+        "as_of": "2026-11-16T15:15:57.904328+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1024478"
       },
-      "fundamentals_quality": "cached",
+      "fundamentals_quality": "refreshed",
       "price": {
-        "close_usd": 389.28,
+        "close_usd": null,
         "date": "2026-11-16",
         "age_days": 0,
         "source": "Yahoo Finance chart EOD",
@@ -40320,16 +40348,18 @@
         "rsi_as_of": "2026-11-16",
         "sma20_as_of": "2026-11-16",
         "sma50_as_of": "2026-11-16",
-        "volume_as_of": "2026-11-16"
+        "volume_as_of": "2026-11-16",
+        "native_close": 389.28,
+        "native_currency": null
       },
       "price_quality": "refreshed",
       "valuation": {
-        "status": "partial",
-        "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 42726856225,
-        "ps": 4.75,
-        "pe": 30.32,
-        "fcf_yield_pct": 3.98,
+        "status": "unavailable",
+        "reason": "float() argument must be a string or a real number, not 'NoneType'",
+        "market_cap_usd": null,
+        "ps": null,
+        "pe": null,
+        "fcf_yield_pct": null,
         "share_date": "2026-10-31",
         "price_date": "2026-11-16",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)",
@@ -40364,7 +40394,7 @@
         "strategy_version": "balanced-1.3.4-integrity",
         "signal": "WATCH",
         "buy_eligible": false,
-        "decision_stage": "data_gate",
+        "decision_stage": "analyst_consensus",
         "decision_trace": [
           {
             "stage": "data",
@@ -40377,14 +40407,22 @@
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
-            "actual": "cached",
+            "actual": "refreshed",
             "required": "refreshed",
+            "passed": true,
+            "reason": null
+          },
+          {
+            "stage": "consensus",
+            "check": "analyst_targets",
+            "actual": "unavailable",
+            "required": "documented",
             "passed": false,
-            "reason": "fundamentals_not_refreshed"
+            "reason": "analyst_consensus_missing"
           }
         ],
         "reasons": [
-          "fundamentals_not_refreshed"
+          "analyst_consensus_missing"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -40438,12 +40476,12 @@
         },
         "period_mismatch_flags": [],
         "filed": "2026-01-20",
-        "as_of": "2026-11-16T14:43:56.913249+00:00",
+        "as_of": "2026-11-16T15:15:58.503482+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1963685"
       },
-      "fundamentals_quality": "cached",
+      "fundamentals_quality": "refreshed",
       "price": {
-        "close_usd": 0.7244,
+        "close_usd": null,
         "date": "2026-11-16",
         "age_days": 0,
         "source": "Yahoo Finance chart EOD",
@@ -41098,12 +41136,14 @@
         "rsi_as_of": "2026-11-16",
         "sma20_as_of": "2026-11-16",
         "sma50_as_of": "2026-11-16",
-        "volume_as_of": "2026-11-16"
+        "volume_as_of": "2026-11-16",
+        "native_close": 0.7244,
+        "native_currency": null
       },
       "price_quality": "refreshed",
       "valuation": {
         "status": "unavailable",
-        "reason": "stale share count",
+        "reason": "float() argument must be a string or a real number, not 'NoneType'",
         "market_cap_usd": null,
         "ps": null,
         "pe": null,
@@ -41142,7 +41182,7 @@
         "strategy_version": "balanced-1.3.4-integrity",
         "signal": "WATCH",
         "buy_eligible": false,
-        "decision_stage": "data_gate",
+        "decision_stage": "analyst_consensus",
         "decision_trace": [
           {
             "stage": "data",
@@ -41155,14 +41195,22 @@
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
-            "actual": "cached",
+            "actual": "refreshed",
             "required": "refreshed",
+            "passed": true,
+            "reason": null
+          },
+          {
+            "stage": "consensus",
+            "check": "analyst_targets",
+            "actual": "unavailable",
+            "required": "documented",
             "passed": false,
-            "reason": "fundamentals_not_refreshed"
+            "reason": "analyst_consensus_missing"
           }
         ],
         "reasons": [
-          "fundamentals_not_refreshed"
+          "analyst_consensus_missing"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -41178,7 +41226,7 @@
       "news": [],
       "status": "Obserwacja",
       "attention_score": 0,
-      "valuation_status": "Orientacyjna kapitalizacja i mnożniki roczne — nie ranking zakupu",
+      "valuation_status": "Brak wystarczających danych do wyceny",
       "investment_score": null,
       "fundamentals": {
         "source": "SEC EDGAR XBRL",
@@ -41216,12 +41264,12 @@
         },
         "period_mismatch_flags": [],
         "filed": "2026-03-12",
-        "as_of": "2026-11-16T14:43:57.430672+00:00",
+        "as_of": "2026-11-16T15:15:59.022390+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1832483"
       },
-      "fundamentals_quality": "cached",
+      "fundamentals_quality": "refreshed",
       "price": {
-        "close_usd": 2.405,
+        "close_usd": null,
         "date": "2026-11-16",
         "age_days": 0,
         "source": "Yahoo Finance chart EOD",
@@ -41876,16 +41924,18 @@
         "rsi_as_of": "2026-11-16",
         "sma20_as_of": "2026-11-16",
         "sma50_as_of": "2026-11-16",
-        "volume_as_of": "2026-11-16"
+        "volume_as_of": "2026-11-16",
+        "native_close": 2.405,
+        "native_currency": null
       },
       "price_quality": "refreshed",
       "valuation": {
-        "status": "partial",
-        "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 211362829,
-        "ps": 79.73,
+        "status": "unavailable",
+        "reason": "float() argument must be a string or a real number, not 'NoneType'",
+        "market_cap_usd": null,
+        "ps": null,
         "pe": null,
-        "fcf_yield_pct": -55.63,
+        "fcf_yield_pct": null,
         "share_date": "2026-11-03",
         "price_date": "2026-11-16",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)",
@@ -41920,7 +41970,7 @@
         "strategy_version": "balanced-1.3.4-integrity",
         "signal": "WATCH",
         "buy_eligible": false,
-        "decision_stage": "data_gate",
+        "decision_stage": "analyst_consensus",
         "decision_trace": [
           {
             "stage": "data",
@@ -41933,14 +41983,22 @@
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
-            "actual": "cached",
+            "actual": "refreshed",
             "required": "refreshed",
+            "passed": true,
+            "reason": null
+          },
+          {
+            "stage": "consensus",
+            "check": "analyst_targets",
+            "actual": "unavailable",
+            "required": "documented",
             "passed": false,
-            "reason": "fundamentals_not_refreshed"
+            "reason": "analyst_consensus_missing"
           }
         ],
         "reasons": [
-          "fundamentals_not_refreshed"
+          "analyst_consensus_missing"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -41961,7 +42019,7 @@
       "fundamentals": null,
       "fundamentals_quality": "unavailable",
       "price": {
-        "close_usd": 150.23,
+        "close_usd": null,
         "date": "2026-11-16",
         "age_days": 0,
         "source": "Yahoo Finance chart EOD",
@@ -42616,12 +42674,14 @@
         "rsi_as_of": "2026-11-16",
         "sma20_as_of": "2026-11-16",
         "sma50_as_of": "2026-11-16",
-        "volume_as_of": "2026-11-16"
+        "volume_as_of": "2026-11-16",
+        "native_close": 150.23,
+        "native_currency": null
       },
       "price_quality": "refreshed",
       "valuation": {
         "status": "unavailable",
-        "reason": "'shares_outstanding'",
+        "reason": "float() argument must be a string or a real number, not 'NoneType'",
         "market_cap_usd": null,
         "ps": null,
         "pe": null,
@@ -42696,7 +42756,7 @@
       "news": [],
       "status": "Obserwacja",
       "attention_score": 0,
-      "valuation_status": "Orientacyjna kapitalizacja i mnożniki roczne — nie ranking zakupu",
+      "valuation_status": "Brak wystarczających danych do wyceny",
       "investment_score": null,
       "fundamentals": {
         "source": "SEC EDGAR XBRL",
@@ -42734,12 +42794,12 @@
         },
         "period_mismatch_flags": [],
         "filed": "2026-08-31",
-        "as_of": "2026-11-16T14:43:58.047497+00:00",
+        "as_of": "2026-11-16T15:15:59.526071+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1375365"
       },
-      "fundamentals_quality": "cached",
+      "fundamentals_quality": "refreshed",
       "price": {
-        "close_usd": 25.455,
+        "close_usd": null,
         "date": "2026-11-16",
         "age_days": 0,
         "source": "Yahoo Finance chart EOD",
@@ -43394,16 +43454,18 @@
         "rsi_as_of": "2026-11-16",
         "sma20_as_of": "2026-11-16",
         "sma50_as_of": "2026-11-16",
-        "volume_as_of": "2026-11-16"
+        "volume_as_of": "2026-11-16",
+        "native_close": 25.455,
+        "native_currency": null
       },
       "price_quality": "refreshed",
       "valuation": {
-        "status": "partial",
-        "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 16780632627,
-        "ps": 0.43,
-        "pe": 7.52,
-        "fcf_yield_pct": -41.55,
+        "status": "unavailable",
+        "reason": "float() argument must be a string or a real number, not 'NoneType'",
+        "market_cap_usd": null,
+        "ps": null,
+        "pe": null,
+        "fcf_yield_pct": null,
         "share_date": "2026-10-31",
         "price_date": "2026-11-16",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)",
@@ -43438,7 +43500,7 @@
         "strategy_version": "balanced-1.3.4-integrity",
         "signal": "WATCH",
         "buy_eligible": false,
-        "decision_stage": "data_gate",
+        "decision_stage": "analyst_consensus",
         "decision_trace": [
           {
             "stage": "data",
@@ -43451,14 +43513,22 @@
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
-            "actual": "cached",
+            "actual": "refreshed",
             "required": "refreshed",
+            "passed": true,
+            "reason": null
+          },
+          {
+            "stage": "consensus",
+            "check": "analyst_targets",
+            "actual": "unavailable",
+            "required": "documented",
             "passed": false,
-            "reason": "fundamentals_not_refreshed"
+            "reason": "analyst_consensus_missing"
           }
         ],
         "reasons": [
-          "fundamentals_not_refreshed"
+          "analyst_consensus_missing"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -43474,7 +43544,7 @@
       "news": [],
       "status": "Obserwacja",
       "attention_score": 0,
-      "valuation_status": "Orientacyjna kapitalizacja i mnożniki roczne — nie ranking zakupu",
+      "valuation_status": "Brak wystarczających danych do wyceny",
       "investment_score": null,
       "fundamentals": {
         "source": "SEC EDGAR XBRL",
@@ -43512,12 +43582,12 @@
         },
         "period_mismatch_flags": [],
         "filed": "2026-03-20",
-        "as_of": "2026-11-16T14:43:58.635344+00:00",
+        "as_of": "2026-11-16T15:16:00.041442+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1640147"
       },
-      "fundamentals_quality": "cached",
+      "fundamentals_quality": "refreshed",
       "price": {
-        "close_usd": 283.22,
+        "close_usd": null,
         "date": "2026-11-16",
         "age_days": 0,
         "source": "Yahoo Finance chart EOD",
@@ -44172,16 +44242,18 @@
         "rsi_as_of": "2026-11-16",
         "sma20_as_of": "2026-11-16",
         "sma50_as_of": "2026-11-16",
-        "volume_as_of": "2026-11-16"
+        "volume_as_of": "2026-11-16",
+        "native_close": 283.22,
+        "native_currency": null
       },
       "price_quality": "refreshed",
       "valuation": {
-        "status": "partial",
-        "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 99920016000,
-        "ps": 21.33,
+        "status": "unavailable",
+        "reason": "float() argument must be a string or a real number, not 'NoneType'",
+        "market_cap_usd": null,
+        "ps": null,
         "pe": null,
-        "fcf_yield_pct": 1.12,
+        "fcf_yield_pct": null,
         "share_date": "2026-08-21",
         "price_date": "2026-11-16",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)",
@@ -44216,7 +44288,7 @@
         "strategy_version": "balanced-1.3.4-integrity",
         "signal": "WATCH",
         "buy_eligible": false,
-        "decision_stage": "data_gate",
+        "decision_stage": "analyst_consensus",
         "decision_trace": [
           {
             "stage": "data",
@@ -44229,14 +44301,22 @@
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
-            "actual": "cached",
+            "actual": "refreshed",
             "required": "refreshed",
+            "passed": true,
+            "reason": null
+          },
+          {
+            "stage": "consensus",
+            "check": "analyst_targets",
+            "actual": "unavailable",
+            "required": "documented",
             "passed": false,
-            "reason": "fundamentals_not_refreshed"
+            "reason": "analyst_consensus_missing"
           }
         ],
         "reasons": [
-          "fundamentals_not_refreshed"
+          "analyst_consensus_missing"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -44289,12 +44369,12 @@
           "annual_flow_periods_not_aligned"
         ],
         "filed": "2026-03-02",
-        "as_of": "2026-11-16T15:04:56.878823+00:00",
+        "as_of": "2026-11-16T15:16:00.705555+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1840856"
       },
-      "fundamentals_quality": "cached",
+      "fundamentals_quality": "refreshed",
       "price": {
-        "close_usd": 3.2806,
+        "close_usd": null,
         "date": "2026-11-16",
         "age_days": 0,
         "source": "Yahoo Finance chart EOD",
@@ -44949,12 +45029,14 @@
         "rsi_as_of": "2026-11-16",
         "sma20_as_of": "2026-11-16",
         "sma50_as_of": "2026-11-16",
-        "volume_as_of": "2026-11-16"
+        "volume_as_of": "2026-11-16",
+        "native_close": 3.2806,
+        "native_currency": null
       },
       "price_quality": "refreshed",
       "valuation": {
         "status": "unavailable",
-        "reason": "stale share count",
+        "reason": "float() argument must be a string or a real number, not 'NoneType'",
         "market_cap_usd": null,
         "ps": null,
         "pe": null,
@@ -44993,7 +45075,7 @@
         "strategy_version": "balanced-1.3.4-integrity",
         "signal": "WATCH",
         "buy_eligible": false,
-        "decision_stage": "data_gate",
+        "decision_stage": "analyst_consensus",
         "decision_trace": [
           {
             "stage": "data",
@@ -45006,14 +45088,22 @@
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
-            "actual": "cached",
+            "actual": "refreshed",
             "required": "refreshed",
+            "passed": true,
+            "reason": null
+          },
+          {
+            "stage": "consensus",
+            "check": "analyst_targets",
+            "actual": "unavailable",
+            "required": "documented",
             "passed": false,
-            "reason": "fundamentals_not_refreshed"
+            "reason": "analyst_consensus_missing"
           }
         ],
         "reasons": [
-          "fundamentals_not_refreshed"
+          "analyst_consensus_missing"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -45029,7 +45119,7 @@
       "news": [],
       "status": "Obserwacja",
       "attention_score": 0,
-      "valuation_status": "Orientacyjna kapitalizacja i mnożniki roczne — nie ranking zakupu",
+      "valuation_status": "Brak wystarczających danych do wyceny",
       "investment_score": null,
       "fundamentals": {
         "source": "SEC EDGAR XBRL",
@@ -45069,12 +45159,12 @@
           "annual_flow_periods_not_aligned"
         ],
         "filed": "2025-11-24",
-        "as_of": "2026-11-16T15:04:57.511624+00:00",
+        "as_of": "2026-11-16T15:16:01.309528+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1837240"
       },
-      "fundamentals_quality": "cached",
+      "fundamentals_quality": "refreshed",
       "price": {
-        "close_usd": 34.655,
+        "close_usd": null,
         "date": "2026-11-16",
         "age_days": 0,
         "source": "Yahoo Finance chart EOD",
@@ -45729,14 +45819,16 @@
         "rsi_as_of": "2026-11-16",
         "sma20_as_of": "2026-11-16",
         "sma50_as_of": "2026-11-16",
-        "volume_as_of": "2026-11-16"
+        "volume_as_of": "2026-11-16",
+        "native_close": 34.655,
+        "native_currency": null
       },
       "price_quality": "refreshed",
       "valuation": {
-        "status": "partial",
-        "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 20477238854,
-        "ps": 9.11,
+        "status": "unavailable",
+        "reason": "float() argument must be a string or a real number, not 'NoneType'",
+        "market_cap_usd": null,
+        "ps": null,
         "pe": null,
         "fcf_yield_pct": null,
         "share_date": "2025-09-27",
@@ -45773,7 +45865,7 @@
         "strategy_version": "balanced-1.3.4-integrity",
         "signal": "WATCH",
         "buy_eligible": false,
-        "decision_stage": "data_gate",
+        "decision_stage": "analyst_consensus",
         "decision_trace": [
           {
             "stage": "data",
@@ -45786,14 +45878,22 @@
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
-            "actual": "cached",
+            "actual": "refreshed",
             "required": "refreshed",
+            "passed": true,
+            "reason": null
+          },
+          {
+            "stage": "consensus",
+            "check": "analyst_targets",
+            "actual": "unavailable",
+            "required": "documented",
             "passed": false,
-            "reason": "fundamentals_not_refreshed"
+            "reason": "analyst_consensus_missing"
           }
         ],
         "reasons": [
-          "fundamentals_not_refreshed"
+          "analyst_consensus_missing"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -45809,7 +45909,7 @@
       "news": [],
       "status": "Obserwacja",
       "attention_score": 0,
-      "valuation_status": "Orientacyjna kapitalizacja i mnożniki roczne — nie ranking zakupu",
+      "valuation_status": "Brak wystarczających danych do wyceny",
       "investment_score": null,
       "fundamentals": {
         "source": "SEC EDGAR XBRL",
@@ -45846,12 +45946,12 @@
           "annual_flow_periods_not_aligned"
         ],
         "filed": "2026-02-19",
-        "as_of": "2026-11-16T15:04:58.181646+00:00",
+        "as_of": "2026-11-16T15:16:02.184717+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=97210"
       },
-      "fundamentals_quality": "cached",
+      "fundamentals_quality": "refreshed",
       "price": {
-        "close_usd": 233.815,
+        "close_usd": null,
         "date": "2026-11-16",
         "age_days": 0,
         "source": "Yahoo Finance chart EOD",
@@ -46506,16 +46606,18 @@
         "rsi_as_of": "2026-11-16",
         "sma20_as_of": "2026-11-16",
         "sma50_as_of": "2026-11-16",
-        "volume_as_of": "2026-11-16"
+        "volume_as_of": "2026-11-16",
+        "native_close": 233.815,
+        "native_currency": null
       },
       "price_quality": "refreshed",
       "valuation": {
-        "status": "partial",
-        "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 36504308655,
+        "status": "unavailable",
+        "reason": "float() argument must be a string or a real number, not 'NoneType'",
+        "market_cap_usd": null,
         "ps": null,
         "pe": null,
-        "fcf_yield_pct": 1.23,
+        "fcf_yield_pct": null,
         "share_date": "2026-10-26",
         "price_date": "2026-11-16",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)",
@@ -46550,7 +46652,7 @@
         "strategy_version": "balanced-1.3.4-integrity",
         "signal": "WATCH",
         "buy_eligible": false,
-        "decision_stage": "data_gate",
+        "decision_stage": "analyst_consensus",
         "decision_trace": [
           {
             "stage": "data",
@@ -46563,14 +46665,22 @@
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
-            "actual": "cached",
+            "actual": "refreshed",
             "required": "refreshed",
+            "passed": true,
+            "reason": null
+          },
+          {
+            "stage": "consensus",
+            "check": "analyst_targets",
+            "actual": "unavailable",
+            "required": "documented",
             "passed": false,
-            "reason": "fundamentals_not_refreshed"
+            "reason": "analyst_consensus_missing"
           }
         ],
         "reasons": [
-          "fundamentals_not_refreshed"
+          "analyst_consensus_missing"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -46620,12 +46730,12 @@
           "annual_flow_periods_not_aligned"
         ],
         "filed": null,
-        "as_of": "2026-11-16T15:04:58.889307+00:00",
+        "as_of": "2026-11-16T15:16:02.715575+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1046179"
       },
-      "fundamentals_quality": "cached",
+      "fundamentals_quality": "refreshed",
       "price": {
-        "close_usd": 376.23,
+        "close_usd": null,
         "date": "2026-11-16",
         "age_days": 0,
         "source": "Yahoo Finance chart EOD",
@@ -47280,12 +47390,14 @@
         "rsi_as_of": "2026-11-16",
         "sma20_as_of": "2026-11-16",
         "sma50_as_of": "2026-11-16",
-        "volume_as_of": "2026-11-16"
+        "volume_as_of": "2026-11-16",
+        "native_close": 376.23,
+        "native_currency": null
       },
       "price_quality": "refreshed",
       "valuation": {
         "status": "unavailable",
-        "reason": "ADR/foreign share-unit ambiguity",
+        "reason": "float() argument must be a string or a real number, not 'NoneType'",
         "market_cap_usd": null,
         "ps": null,
         "pe": null,
@@ -47337,14 +47449,25 @@
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
-            "actual": "cached",
+            "actual": "refreshed",
             "required": "refreshed",
+            "passed": true,
+            "reason": null
+          },
+          {
+            "stage": "data",
+            "check": "filing_and_quote_dates",
+            "actual": {
+              "quote": "2026-11-16",
+              "filed": null
+            },
+            "required": "valid filing not after quote",
             "passed": false,
-            "reason": "fundamentals_not_refreshed"
+            "reason": "invalid_or_future_filing_date"
           }
         ],
         "reasons": [
-          "fundamentals_not_refreshed"
+          "invalid_or_future_filing_date"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -47360,7 +47483,7 @@
       "news": [],
       "status": "Obserwacja",
       "attention_score": 0,
-      "valuation_status": "Orientacyjna kapitalizacja i mnożniki roczne — nie ranking zakupu",
+      "valuation_status": "Brak wystarczających danych do wyceny",
       "investment_score": null,
       "fundamentals": {
         "source": "SEC EDGAR XBRL",
@@ -47398,12 +47521,12 @@
         },
         "period_mismatch_flags": [],
         "filed": "2026-02-12",
-        "as_of": "2026-11-16T15:05:00.173609+00:00",
+        "as_of": "2026-11-16T15:16:03.855011+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=877212"
       },
-      "fundamentals_quality": "cached",
+      "fundamentals_quality": "refreshed",
       "price": {
-        "close_usd": 320.89,
+        "close_usd": null,
         "date": "2026-11-16",
         "age_days": 0,
         "source": "Yahoo Finance chart EOD",
@@ -48058,16 +48181,18 @@
         "rsi_as_of": "2026-11-16",
         "sma20_as_of": "2026-11-16",
         "sma50_as_of": "2026-11-16",
-        "volume_as_of": "2026-11-16"
+        "volume_as_of": "2026-11-16",
+        "native_close": 320.89,
+        "native_currency": null
       },
       "price_quality": "refreshed",
       "valuation": {
-        "status": "partial",
-        "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 15109893114,
-        "ps": 2.8,
-        "pe": 36.06,
-        "fcf_yield_pct": 5.5,
+        "status": "unavailable",
+        "reason": "float() argument must be a string or a real number, not 'NoneType'",
+        "market_cap_usd": null,
+        "ps": null,
+        "pe": null,
+        "fcf_yield_pct": null,
         "share_date": "2026-10-27",
         "price_date": "2026-11-16",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)",
@@ -48102,7 +48227,7 @@
         "strategy_version": "balanced-1.3.4-integrity",
         "signal": "WATCH",
         "buy_eligible": false,
-        "decision_stage": "data_gate",
+        "decision_stage": "analyst_consensus",
         "decision_trace": [
           {
             "stage": "data",
@@ -48115,14 +48240,22 @@
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
-            "actual": "cached",
+            "actual": "refreshed",
             "required": "refreshed",
+            "passed": true,
+            "reason": null
+          },
+          {
+            "stage": "consensus",
+            "check": "analyst_targets",
+            "actual": "unavailable",
+            "required": "documented",
             "passed": false,
-            "reason": "fundamentals_not_refreshed"
+            "reason": "analyst_consensus_missing"
           }
         ],
         "reasons": [
-          "fundamentals_not_refreshed"
+          "analyst_consensus_missing"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -48147,11 +48280,6 @@
       "title": "Xtend AI Robotics (NYSE:XTND) - Stock Analysis - Simply Wall St",
       "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFAwMnZZUkRxZm1XbkwzZzcyclhRdnFtelhMTmFWVzd0RHcyVDd4ckM1TENUSExrUk1VbUFoU3RqV1ZDZzduWGl3c1J5ZU53aFBWQktCcGZjS1ZYTGxkMmxjRFBWUVNiZzM0VE92LXRQOS1CT245M2hZMXdfS1RLQQ?oc=5",
       "date": "Mon, 16 Nov 2026 09:17:39 GMT"
-    },
-    {
-      "title": "XTEND AI Robotics Q3FY26 Results: Revenue jumps 281% YoY to $14.9 million - scanx.trade",
-      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxONElSdTNGb1kwTVE5QlY5LWlNYnpVa3oxQlYzcU5xMVJocXdHNlM4dHdfbkVEREJlaHFsYXdVWE1FZjl3S080QlNsU1NQVTJzMDU0T296c1RFYUt0MVRFckE2T0x4N2RrZWJPSUJDR0wwNWpJMG1JQm1tNFJmWkVIVG80Y3lKOVVDZk1hVV9UcGJIN0hEMHVrbi14U1d1Mkc0LWZ3YkFuaFh6VEZhMlJ5bnFuZkJUd2hZUDg4?oc=5",
-      "date": "Mon, 16 Nov 2026 11:56:48 GMT"
     },
     {
       "title": "Eric Trump-backed robot soldier startup can't pay staff after founder borrowed $4.6 million from company to buy home - CNBC",
@@ -48199,14 +48327,14 @@
       "date": "Mon, 16 Nov 2026 13:00:00 GMT"
     },
     {
+      "title": "GXO Logistics (GXO) Could Be 23% Overvalued On Robot And ASOS News - Simply Wall St",
+      "url": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNTzRHd3A2eGtnT2tLcDY0V1cyWGg3OEJXc2VFS05yNUctcmRjV3Z0cHY5MGxublRrUkR3Z0hmTzhycUtBdlhhc1pLN3QtbERhOElEWVlpRHpLXy1VcTgwc0ota3UzRW1mNWZXS21QQ0w3eExLb0VOTTV6SUw2d21oc05JcExqRktQeklSUUMwWjQ4ZUh0aVREUjRGZUVpeFFZbFdxbUhPdmNrNElRVG1TWDExVzNnRkhpeGFreXdfWGo0YjJkUktXVGFjRTBHNjBG0gHWAUFVX3lxTE5SWmZpbUplME0yX1laQ3pwYVN4ZzN3TXFhdVp1amJDdWFweFlWQ3Z0bHhpSnBWWFl5d2JOcnVzWE1tdUhVN2NGMDdoSGg2WW1leFdfdkwtSzZ5bmViNFFjdXdSSTkxczNGNllhSW9zWEFhZlZ6VXZ1WWd6NkdnRHR0bGdmYWRPSmdHNzFlY1RXQWg5V3FraTlfQXZ2SlJ3bXNOMUZkYmYzSjlwcEJ6ak90SmdFWjd0blhHZ1NSaEp6UEZ0cThtMXhtS2RpYUZlMmdFMi1nVHc?oc=5",
+      "date": "Sun, 15 Nov 2026 12:23:40 GMT"
+    },
+    {
       "title": "3 Growth Stocks With Earnings Growth Up To 129% - Simply Wall St",
       "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPNUpsTTJrREU2UEZ6TXd3ZHR1d0pNVXhaVzJaWmZXZ3pJUEhlTVhmdEFvQmVWRU9SQkpYTE56MlBtbmoxbGJLaUI2Q1pKZzVCb0VnWDlXbWdOdWxrVzBkZlcxaTJDcEJvbThVXzVHblRLUUVVQmYyT1B5ajJPODRhUUpKOVo2ZWtDU05KVzBpZ2pETm9KS1F1Yi1OVGVTekRnU1U4SjF1OGFNYTVuc3lBTHQ3dVIxTWg30gG4AUFVX3lxTE81SmxNMmtERTZQRnpNd3dkdHV3Sk1VeFpXMlpaZldneklQSGVNWGZ0QW9CZVZFT1JCSlhMTnoyUG1uajFsYktpQjZDWkpnNUJvRWdYOVdtZ051bGtXMGRmVzFpMkNwQm9tOFVfNUduVEtRRVVCZjJPUHlqMk84NGFRSko5WjZla0NTTkpXMGlnakROb0pLUXViLU5UZVN6RGdTVThKMXU4YU1hNW5zeUFMdDd1UjFNaDc?oc=5",
       "date": "Sat, 14 Nov 2026 03:25:20 GMT"
-    },
-    {
-      "title": "3 British Growth Stocks To Watch With Up To 85% Earnings Growth - Simply Wall St",
-      "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQX0lrUWJadUFGaW0xR09MNWpPZ2c5cDFrTlcyUGZ3OHJMRmJNSHhheUhrc05sOVFLM3QtbXVwNVlTUUdSUGdSM1JYSFdkNWNQODFfaE5kbTlxcUFEZnNBX05CTTBKekJWTE5MdFJla1RBMS1wc1F6Yjlzck9RZWtLY2o2bEJrcTlRaW5MUUtYRkdNS1Rnbmt3TFNUVWN2R0I4YjZKYnNleW40VzdkMU1ydWU1TVNtdnV4c3JvbzJnQnFmMDdwT2FCRGlZRGpmZmJoSW9rN3Z4VQ?oc=5",
-      "date": "Mon, 16 Nov 2026 05:26:44 GMT"
     },
     {
       "title": "Xtend AI Robotics reports Q3 EPS (45c) vs. (33c) last year - TipRanks",
@@ -48214,9 +48342,19 @@
       "date": "Mon, 16 Nov 2026 11:35:28 GMT"
     },
     {
+      "title": "3 British Growth Stocks To Watch With Up To 85% Earnings Growth - Simply Wall St",
+      "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQX0lrUWJadUFGaW0xR09MNWpPZ2c5cDFrTlcyUGZ3OHJMRmJNSHhheUhrc05sOVFLM3QtbXVwNVlTUUdSUGdSM1JYSFdkNWNQODFfaE5kbTlxcUFEZnNBX05CTTBKekJWTE5MdFJla1RBMS1wc1F6Yjlzck9RZWtLY2o2bEJrcTlRaW5MUUtYRkdNS1Rnbmt3TFNUVWN2R0I4YjZKYnNleW40VzdkMU1ydWU1TVNtdnV4c3JvbzJnQnFmMDdwT2FCRGlZRGpmZmJoSW9rN3Z4VQ?oc=5",
+      "date": "Mon, 16 Nov 2026 05:26:44 GMT"
+    },
+    {
       "title": "Tennant Earnings Call Highlights Growth and Robotics Momentum - TipRanks",
       "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNaW9iVVZrUGpHak9RMnc5Q1hNUzRqUnZnZFpCbUFPLXdnbXI2bXY3WTJwb0RCTWpqLXNHNk1oTmxkaUZyY0o1WG5UX0hpVzh1bTl2T1BpUS1SQ29Bc1hZVVRfYnNBQ1dqaEo4RDNyejlWN1dGUG5ieThmRWYwTnFlRTRWN0Q0RERzcjlQbWdsY1l5U0c1ZTFaX1pHVkZpLVYtZ21zNjB4UW5fZm9Vd013MU4xaw?oc=5",
       "date": "Sun, 15 Nov 2026 01:28:13 GMT"
+    },
+    {
+      "title": "Palladyne AI Earnings Call Signals Rapid Growth Ahead - TipRanks",
+      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNM3BCZEpjcFMtcXpEclV3RTIya3JRa0lseVZSVmxkNlFMT1ZScVdmSHFHZkQ3aFM0Yzlxa2pEMXF5bnNOd3R1a2dIWlh2UEZaMUF4QUJ6bDlBZE03NEM5a3NXNHdKX0E4ckhNYWFjblo5WmVkRVVZR3JsWUFaaUJKR1VyRmV1ZW5YdmdreWRhTXhSc19qeVR6RW1GUGpZaXByVHViZU01RGg?oc=5",
+      "date": "Sun, 15 Nov 2026 04:08:59 GMT"
     },
     {
       "title": "Hesai Group Earnings Call Highlights Lidar Growth - TipRanks",
@@ -48224,9 +48362,9 @@
       "date": "Sun, 15 Nov 2026 01:14:09 GMT"
     },
     {
-      "title": "Oshkosh Earnings Call Exposes Execution Strains Amid Strong Demand - TipRanks",
-      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNdmh4UHlVeExnN19BNlU5eXlmRHF5NkR2Y3M1WXowbTVZSmF2WVRvWWFOWnpYOEozQ1dhQ0pldFlLMlhJZHFaSFdRbnVoQUhnYjdGTTVHSDU0SHFRZ3FhM1BwQ1dQZHVNeHhvRHJLMHQxWm5SVUtESXhaX2NSUElONG1SYk5kUnFLN0k3c0RjLUxuWjJTalc4R19Ea1psNW1HRnlKVVJsNk4tY1JxeEMtMkxzaTdoZWVybVE?oc=5",
-      "date": "Sun, 15 Nov 2026 00:30:03 GMT"
+      "title": "FF EAI Robotics Ecosystem Reports Third-Quarter Results - TipRanks",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNcFVHUTdhd3ZfcWhnVkk5X2k3UWZyLV96Nlc4VWR3eWE5S0ZrTEp3T1l1V041NExHT1JsN1l0a0RIWHVXRUdnRzQxU3lzVkpyWDdKYU5vS2MtVlZPcWI1UlJ0MUdEeFl5RXg4dDVXU2h6UHJOb19Ec2ktMDA2T29RaXY0Y29HSmEzLUNfLU1hY3Bxd2p5QWU4SHlZbUFmT2NxOE1vcExXNHF2enM?oc=5",
+      "date": "Fri, 13 Nov 2026 20:35:29 GMT"
     },
     {
       "title": "AI disruption wipes out $206 billion in market value of 10 listed companies; which businesses are most at risk? - Livemint",
@@ -48239,11 +48377,6 @@
       "date": "Mon, 16 Nov 2026 13:46:26 GMT"
     },
     {
-      "title": "Palladyne AI Earnings Call Signals Rapid Growth Ahead - TipRanks",
-      "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNM3BCZEpjcFMtcXpEclV3RTIya3JRa0lseVZSVmxkNlFMT1ZScVdmSHFHZkQ3aFM0Yzlxa2pEMXF5bnNOd3R1a2dIWlh2UEZaMUF4QUJ6bDlBZE03NEM5a3NXNHdKX0E4ckhNYWFjblo5WmVkRVVZR3JsWUFaaUJKR1VyRmV1ZW5YdmdreWRhTXhSc19qeVR6RW1GUGpZaXByVHViZU01RGg?oc=5",
-      "date": "Sun, 15 Nov 2026 04:08:59 GMT"
-    },
-    {
       "title": "Data I/O Earnings Call Highlights V-TEK Growth - TipRanks",
       "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNc1M5SzFGMHNfQUxtVUJMNV81Z0lNejlsclFhSHZyWHFXVDJiLUZjRzRoME9yb214dE1la1NSeXZONGkyZUVWdWw2OWMzakM2X2FsNk45LW1ZNi12NENHLVlNX1l0RjJkZl93eHdJSm45WnFIQ2NlYTZJcmNfWWd3aHN0WTA5UG9RYVZuN0hMTXhIdngwdlNiX3JrcmY3U28?oc=5",
       "date": "Sun, 15 Nov 2026 04:24:47 GMT"
@@ -48254,9 +48387,9 @@
       "date": "Sun, 15 Nov 2026 05:39:01 GMT"
     },
     {
-      "title": "FF EAI Robotics Ecosystem Reports Third-Quarter Results - TipRanks",
-      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNcFVHUTdhd3ZfcWhnVkk5X2k3UWZyLV96Nlc4VWR3eWE5S0ZrTEp3T1l1V041NExHT1JsN1l0a0RIWHVXRUdnRzQxU3lzVkpyWDdKYU5vS2MtVlZPcWI1UlJ0MUdEeFl5RXg4dDVXU2h6UHJOb19Ec2ktMDA2T29RaXY0Y29HSmEzLUNfLU1hY3Bxd2p5QWU4SHlZbUFmT2NxOE1vcExXNHF2enM?oc=5",
-      "date": "Fri, 13 Nov 2026 20:35:29 GMT"
+      "title": "Arrow Electronics Earnings Call Signals Broad Growth Ahead - TipRanks",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNdnFSVWtzaThfOVlDcTdMdWFHTlB1a0VZcVVwXzE0NTMyQ3hFdTQ2NmNjZUVJZldtVVc3b01TV2NDaGp4a0tLNVdyV3kxdHUyOVQ2MVZTYUVPamVtR1d3SHBweHNPekI2akdET2x6WXV2S0d4RDVLVl9BZVpMZVRwSzlCZHRDdGJHRWo0SHJpRDZNYmEzaVpTcVF3UUJPUlJ4VUFWX2c3VVRYOHMwaUNF?oc=5",
+      "date": "Sun, 15 Nov 2026 02:12:17 GMT"
     },
     {
       "title": "Which Technology Stocks Are Powering AI Infrastructure Beyond GPUs? - Kalkine Media",
@@ -48282,6 +48415,11 @@
       "title": "Why Cisco stock is falling today - StockStory",
       "url": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOdzEwMlBpQjZJSUxQeWhTMjRKR01fZ09kaU53b3R6bDdwQ0hqUE1TVWx6OWlxYTExMjFRUVJIV0JzbXdjVHpvbkxmam4tSkRLQzdkY2o4VUY3blloSzJMMjF5ZWJnck15dHYyaUl1eUdISlVRV3NlUkcwVHc0RFBudHZxUkxSWXJMNWlvbEtIajVmM1lsdHBLNDhn?oc=5",
       "date": "Fri, 13 Nov 2026 17:02:33 GMT"
+    },
+    {
+      "title": "Where Big Tech's $720 Billion AI Budget Actually Goes (323 Stocks) Ap Swatch (dP65ZvkrW8) - Unisba Media",
+      "url": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1lWlo2Si1QSmZSUG5mVjNvdEZQWnBkTzFJV3ZHcU5DdTY0UC1mUllmTUIzWUhpVFZQN2tSUS1CT1k1czc1Q2hOYXMxWDgwMjdoWXRqS0RYeGNPTWg5RFZibVZZWTdWZw?oc=5",
+      "date": "Sun, 15 Nov 2026 03:20:36 GMT"
     },
     {
       "title": "Oracle Stock And US AI Data Center Winners Worth Watching - Yahoo Finance Australia",
@@ -48314,11 +48452,6 @@
       "date": "Sat, 14 Nov 2026 11:25:02 GMT"
     },
     {
-      "title": "November 2026 Cash Flow Stocks Like NVIDIA Stock - Yahoo Finance Singapore",
-      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNQWtFQ0x4dDJXVDFFR1VsQ0twLW11NnlwTFlWdFNxN1dpTUhNQl85Zm85bFAzd0NqODJZN29sMmQ1UEJkQTRTYXotTnFRSVotUWQ1RUNNU1dQNWtxQWhRekpTcGFDRHRhSDYwWkdDS2k0SHZnWDhfNjN5TVRaaVFCNFBtNmlXUQ?oc=5",
-      "date": "Mon, 16 Nov 2026 08:09:26 GMT"
-    },
-    {
       "title": "3 Undervalued Stocks With At Least 23% ROE - Simply Wall St",
       "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQc0dlTzRIaDBhdG1YTW4wX0tTTGN5bGxYdUtLODd2ZHl2OWFBQ2tiMXQtTmtwYlFuanJsOWxkWlNOZ2d0bzlNSFJPbFpOazM4MmFIXzg3NzdvLW5TOFpjYmNXakN4LUpuODd6dFdsRjREeE5zdFMyMndyWkpBVUJiSGhrZUxSV1l0dVNxT29NNGRDcXNoRkRPalJVdzV5eEEyNGg2Y2QyQ2doRXQ3Ujk1cW5B0gG3AUFVX3lxTE5NN0lCb0NZV3J0MmtqcWlvMFNuQjY2MmxaQjlFaTBjdWJEMnphay15WXJhRERlc2VReWpEV1dtY05zcnZwWFNyOFI2ZHdaUFd0VkxJX2FlSnF4Z0l0NnNEZUxIQmROSDVvQkFsaHM5RjVkRXpfX3ZxNERvOXU4VFl6WDMtYlV4Vkk4N2ctZmJweHVwejNqNldFRXhuUXBUbW5UR042YVFQRW1aRjE0bEE1cmdYc1NEaw?oc=5",
       "date": "Sun, 15 Nov 2026 01:38:24 GMT"
@@ -48334,6 +48467,11 @@
       "date": "Sat, 14 Nov 2026 18:18:03 GMT"
     },
     {
+      "title": "November 2026 Cash Flow Stocks Like NVIDIA Stock - Yahoo Finance Singapore",
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNQWtFQ0x4dDJXVDFFR1VsQ0twLW11NnlwTFlWdFNxN1dpTUhNQl85Zm85bFAzd0NqODJZN29sMmQ1UEJkQTRTYXotTnFRSVotUWQ1RUNNU1dQNWtxQWhRekpTcGFDRHRhSDYwWkdDS2k0SHZnWDhfNjN5TVRaaVFCNFBtNmlXUQ?oc=5",
+      "date": "Mon, 16 Nov 2026 08:09:26 GMT"
+    },
+    {
       "title": "Tech Weekly: NVIDIA Shakeup Rattles Chip Stocks, Anthropic Sets IPO Terms - Investing News Network",
       "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5xc1ZETzNSQnR0UnducUtIRUtmTWRocmN3a0hNeUJFZC02VDJIa3NaTmVhZmVyTHB5LVNyWWJoU1g5dzRGQmFncjBUeU1KRUNfc2c?oc=5",
       "date": "Fri, 13 Nov 2026 20:30:00 GMT"
@@ -48342,11 +48480,6 @@
       "title": "AI Infrastructure Stocks Retail Investors Are Watching After Nvidia Shock - Simply Wall St",
       "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNY3Y4ZDJIV2FZVUhBTmlaTlVGVXl2XzJENlplbEFrejAzczZ1em1rQjlkaUNpNzQtcEZvOEtDOFlYN21XRl9lTWxWMjh3TGZfSXN3Y3V3ME1LcWpmSTBlRGlycXQ2c2g4NmJqeW9lX0lBT1JpcXBKOEpyUWtjQkhZMXFmOTRCcWxxTUNwbnRDbkJTbnFVUGdiZTRFdG9ZZUdSLXhMZlBsaWxjZm54UnpOMjJLNkhGdGxDY2JQY2YwQnVnUDlEX292d1hIQ1jSAdIBQVVfeXFMUEctRzJEMTY3d2RzVjVSejdlU1lQMXlwc3JGeEJ5QlVzbUxhR3lQOWVpMWRlRXNsYTF1VG14bTIxUmdGN3ZibFhLSUtuTk5GdkdJcnI4dTh5aWpWVFpPT3kxNW9BQ3ZDWlkzNDJ4cFM5NEE5alV6Umk4U3JuTFVUcTM2dWU3MnhXVzBZWlRyaFlEMXZ6WHNWLWs3WFVWb0hFaFdNbGVMMlpfSjNHSzhGNko2emlHT1UwQ1d3NWo4Rm5rQkVBN0NGajJEU2RzLXVzLWJ3?oc=5",
       "date": "Sun, 15 Nov 2026 03:26:51 GMT"
-    },
-    {
-      "title": "Top 3 AI Infrastructure Stocks To Watch In November 2026 - Simply Wall St",
-      "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOdV9YSXgtTG1qQnZCWUFaVmZjWFRqU09ONlBsNzJvdnlqUDNvNkZKeHJOa29UUWlrVTRieWxoTU9HLXZkR2NMMU5yUnRab3Q1Y21YRFNJRGVsRHVBdE1pb0FfRFAzcTByYlBDRVFyZl9RU20wQzRfakJrdHFZbG9WVmx5RkdEYjN0OG9HZ1ZTQ1BkMk0xMGV3TDNVOURHWFUwX1d4ZzBQSmlrdTc1aGpSQXZFS3hxOXJTYVU4eFVYMmloQdIBxwFBVV95cUxNMS1Gd1hFRGFhSFFydkFabm80UzlTX3hicXFBQ2l1cVp0SXZkX3BtSEVaVC1NbC0wcWVKVDZZX3JUQTZaNkVON2ZyVmVfQ0g4UFd4T2hMVTRSc1pyU2FkNkkwbTExV3pCSEpVQm5vdF9lXy1aR2RvbGVwczdvbHVXYVVaNVZtc294WUNDYzFBSE4yOVJDVkVCdHVKMnVwXzNKbFB1WDE0ckI4V1dPeUdkeDlQU1JNUXZ2TVg2bG1NNDBZMEdib2pN?oc=5",
-      "date": "Sun, 15 Nov 2026 21:21:57 GMT"
     },
     {
       "title": "Gigabyte and Schneider Electric collaborate on AI factory infrastructure - ET Datacenters",
@@ -48615,7 +48748,7 @@
     }
   ],
   "version": "4.2.2",
-  "valuation_coverage": 54,
+  "valuation_coverage": 0,
   "valuation_note": "Orientacyjna kapitalizacja = cena EOD × akcje z ostatniego dostępnego raportu SEC; nie uwzględnia późniejszego rozwodnienia, zmian liczby akcji ani ADR. P/S i P/E bazują na danych rocznych, nie TTM. Nie jest to ranking inwestycyjny.",
   "price_health": {
     "status": "unavailable",
