@@ -492,7 +492,7 @@ def main():
         audit = current_gate_audits.get(ticker)
         company['buy_gate_diagnostics'] = audit if audit else {
             'ticker':ticker, 'scan_id':scan_timestamp,
-            'gates':unavailable_gates,
+            'gates':{'investment_decision':{'status':'ND','value':None,'required':'complete Balanced evaluator trace'}},
             'blockers':['BUY zablokowany: brak kompletnego audytu tej spółki.'],
             'status':'INCOMPLETE_AUDIT'
         }
