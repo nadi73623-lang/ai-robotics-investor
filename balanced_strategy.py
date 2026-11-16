@@ -122,7 +122,7 @@ def evaluate_company(company):
     if all(x>=t for _,x,t in buy): return _finish(result,"approved",trace,["balanced_thresholds_met"],signal="BUY",buy_eligible=True)
     early=[("early_fundamental",fs,THRESHOLDS["early_fundamental"]),("early_entry",es,THRESHOLDS["early_entry"]),("early_upside_pct",up,THRESHOLDS["early_upside_pct"]),("early_reward_risk",rr,THRESHOLDS["early_reward_risk"])]
     for n,x,t in early: check("signal_thresholds",n,x,">=",t,x>=t,n+"_not_met")
-    if all(x>=t for _,x,t in early): return _finish(result,"early_setup",trace,["early_setup_requires_manual_confirmation"],signal="EARLY BUY",buy_eligible=True)
+    if all(x>=t for _,x,t in early): return _finish(result,"early_setup",trace,["early_setup_requires_manual_confirmation"],signal="EARLY BUY",buy_eligible=False)
     if fs<55: return _finish(result,"fundamental_floor",trace,["fundamental_score_below_floor"],signal="LOW PRIORITY")
     failed=[x["reason"] for x in trace if x["stage"]=="signal_thresholds" and not x["passed"]]
     return _finish(result,"signal_thresholds",trace,failed or ["balanced_thresholds_not_met"])
