@@ -1,5 +1,5 @@
 import unittest
-from unittest.mock import patch
+from datetime import date, timedelta
 import scanner
 from scanner import latest_common_end
 
@@ -37,11 +37,11 @@ class ScannerTests(unittest.TestCase):
         self.assertEqual(scanner.technical_indicators({"bars":[]})["status"], "incomplete")
         bars=[]
         for i in range(50):
-            bars.append({"date":f"2026-01-{(i%28)+1:02d}","close":100+i,"volume":1000})
+            bars.append({"date":(date(2026,1,1)+timedelta(days=i)).isoformat(),"close":100+i,"volume":1000})
         self.assertEqual(scanner.technical_indicators({"bars":bars})["status"], "ok")
 
     def test_technical_indicators_are_deterministic(self):
-        bars=[{"date":f"2026-01-{(i%28)+1:02d}","close":100+i,"volume":1000+i} for i in range(50)]
+        bars=[{"date":(date(2026,1,1)+timedelta(days=i)).isoformat(),"close":100+i,"volume":1000+i} for i in range(50)]
         result=scanner.technical_indicators({"bars":bars})
         self.assertEqual(result["sma20"], sum(130+i for i in range(20))/20)
         self.assertEqual(result["sma50"], sum(100+i for i in range(50))/50)
