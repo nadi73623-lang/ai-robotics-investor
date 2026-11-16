@@ -1,0 +1,75 @@
+name: Recover Balanced 1.3.4 archive (remote runner)
+
+on:
+  push:
+    branches:
+      - repair/balanced-1.3.4-scanner-port
+    paths:
+      - 'recovery-input/*.zip'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  verify-and-extract:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout repair branch
+        uses: actions/checkout@v4
+        with:
+          ref: repair/balanced-1.3.4-scanner-port
+          fetch-depth: 0
+
+      - name: Verify archive and extract safely
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path, PurePosixPath
+          import hashlib, shutil, stat, zipfile
+
+          expected = "49d694dc8a3b3e3402654e2ed0c205b589fdaed0383baf0a8c5155ba3a9c8a81"
+          candidates = sorted(Path("recovery-input").glob("*.zip"))
+          if len(candidates) != 1:
+              raise SystemExit(f"Expected exactly one ZIP in recovery-input/, found {len(candidates)}")
+          archive = candidates[0]
+          actual = hashlib.sha256(archive.read_bytes()).hexdigest()
+          if actual != expected:
+              raise SystemExit(f"SHA-256 mismatch: {actual}")
+          destination = Path("recovered/AI_Robotics_Investor")
+          if destination.exists():
+              shutil.rmtree(destination)
+          with zipfile.ZipFile(archive) as z:
+              bad = z.testzip()
+              if bad:
+                  raise SystemExit(f"ZIP CRC failure: {bad}")
+              members = z.infolist()
+              if not members:
+                  raise SystemExit("Archive is empty")
+              for member in members:
+                  name = member.filename.replace("\\", "/")
+                  path = PurePosixPath(name)
+                  if path.is_absolute() or ".." in path.parts:
+                      raise SystemExit(f"Unsafe archive path: {member.filename}")
+                  if member.external_attr >> 16 & 0o170000 == stat.S_IFLNK:
+                      raise SystemExit(f"Symlink not allowed: {member.filename}")
+                  if not (path.parts and path.parts[0] == "AI_Robotics_Investor"):
+                      raise SystemExit(f"Unexpected archive root: {member.filename}")
+              z.extractall("recovered")
+          if not (destination / "scanner.py").is_file():
+              raise SystemExit("Expected recovered/AI_Robotics_Investor/scanner.py not found")
+          print(f"Verified {archive.name}; extracted {len(members)} entries.")
+          print("Recovered scanner:", destination / "scanner.py")
+          PY
+
+      - name: Compile recovered Python source
+        run: python -m compileall -q recovered/AI_Robotics_Investor
+
+      - name: Commit recovered source snapshot
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add recovered/AI_Robotics_Investor
+          git diff --cached --quiet || git commit -m "Recover Balanced 1.3.4 source archive"
+          git push origin HEAD:repair/balanced-1.3.4-scanner-port
