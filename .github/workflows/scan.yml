@@ -5,7 +5,7 @@ on:
       - main
   push:
     branches:
-      - fix/decision-memory-entry-alerts
+      - repair/scan-integrity-balanced-2026-11-16
   workflow_dispatch:
   schedule:
     - cron: '17 */6 * * *'
@@ -17,18 +17,18 @@ permissions:
 jobs:
   scan:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Run scanner and decision-memory tests
+      - name: Run scanner and integration tests
         run: python -m unittest discover -v
-      - name: Scan public news
+      - name: Scan public news and compute guarded decisions
         if: github.event_name != 'pull_request'
         run: python scanner.py
-      - name: Save scan results
+      - name: Save scan results and decision memory
         if: github.event_name != 'pull_request'
         run: |
           git config user.name 'github-actions[bot]'
@@ -38,6 +38,5 @@ jobs:
           if ! git diff --cached --quiet; then
             git commit -m 'Update AI robotics scan'
           fi
-          git pull --rebase origin fix/decision-memory-entry-alerts
-          git push origin HEAD:fix/decision-memory-entry-alerts
-          
+          git pull --rebase origin repair/scan-integrity-balanced-2026-11-16
+          git push origin HEAD:repair/scan-integrity-balanced-2026-11-16
