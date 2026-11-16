@@ -7,6 +7,7 @@ bear_fair_value,base_fair_value,bull_fair_value
 from __future__ import annotations
 import csv, math
 from datetime import date
+from scenario_valuation import scenario_valuation
 
 REQUIRED={"ticker","as_of","provider","source_url","target_low","target_median","target_high",
           "price_at_consensus","downside_case_pct","upside_case_pct","prob_bear","prob_base",
@@ -37,8 +38,10 @@ def validate_consensus(row, today=None, max_age_days=45):
     fvs=[nums[k] for k in ("bear_fair_value","base_fair_value","bull_fair_value")]
     if not (0<low<=med<=high and price>0 and all(x>=0 for x in probs) and abs(sum(probs)-1)<1e-6 and all(x>0 for x in fvs)):
         return {"status":"invalid","reasons":["inconsistent_targets_probabilities_or_fair_values"]}
-    expected=sum(p*fv for p,fv in zip(probs,fvs))
-    ev_pct=(expected/price-1)*100
+    scenario=scenario_valuation(price,fvs[0],fvs[1],fvs[2],probs[0],probs[1],probs[2])
+    if scenario.get('status')!='calculated': return {'status':'invalid','reasons':['scenario_valuation_failed']}
+    expected=scenario['probability_weighted_fair_value']
+    ev_pct=scenario['probability_weighted_ev_pct']
     upside=(med/price-1)*100
     downside=(low/price-1)*100
     return {"status":"documented","ticker":row["ticker"],"as_of":asof.isoformat(),
@@ -47,7 +50,8 @@ def validate_consensus(row, today=None, max_age_days=45):
             "upside_median_pct":round(upside,2),"downside_low_pct":round(downside,2),
             "probability_weighted_ev_pct":round(ev_pct,2),"expected_fair_value":round(expected,4),
             "probabilities":{"bear":probs[0],"base":probs[1],"bull":probs[2]},
-            "scenario_fair_values":{"bear":fvs[0],"base":fvs[1],"bull":fvs[2]}}
+            "scenario_fair_values":{"bear":fvs[0],"base":fvs[1],"bull":fvs[2]},
+            "scenario_analysis":scenario}
 
 def load_consensus_csv(path, today=None):
     try:
