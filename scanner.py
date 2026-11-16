@@ -4,6 +4,7 @@ import json, re, time, os, csv, io, urllib.parse, urllib.request, xml.etree.Elem
 from datetime import datetime, timezone
 from pathlib import Path
 from decision_memory import record_scan, append_gate_audit, append_scan_snapshot
+from balanced_strategy import evaluate_company, THRESHOLDS as BALANCED_THRESHOLDS
 
 ROOT=Path(__file__).resolve().parent
 UNIVERSE=[
@@ -137,15 +138,16 @@ def add_fundamentals(companies,prior):
     stale.sort(key=lambda c:previous[c['ticker']].get('as_of',''))
     # Canary: refresh AVGO even when cached, then rotate remaining capacity.
     ordered=sorted(pending,key=lambda c:(c['ticker']!='AVGO',c['ticker']))+sorted(stale,key=lambda c:(c['ticker']!='AVGO',previous[c['ticker']].get('as_of','')))
-    attempted=0; succeeded=0
+    attempted=0; succeeded=0; refreshed=set()
     for c in ordered[:SEC_BATCH_SIZE]:
         attempted+=1
         try:
-            previous[c['ticker']]=fundamentals(c['ticker'],ciks[c['ticker']]);succeeded+=1;time.sleep(.35)
+            previous[c['ticker']]=fundamentals(c['ticker'],ciks[c['ticker']]);succeeded+=1;refreshed.add(c['ticker']);time.sleep(.35)
         except Exception as e: print('SEC facts',c['ticker'],str(e)[:110])
     print('SEC_BATCH_SUMMARY',json.dumps({'attempted':attempted,'updated':succeeded,'batch_limit':SEC_BATCH_SIZE,'registry_matches':sum(c['ticker'] in ciks for c in companies)}))
     for c in companies:
         c['fundamentals']=previous.get(c['ticker'])
+        c['fundamentals_quality']='refreshed' if c['ticker'] in refreshed else ('cached' if previous.get(c['ticker']) else 'unavailable')
         c['valuation_status']='Brak zweryfikowanej bieżącej ceny i kapitalizacji; P/E i EV/FCF niedostępne'
         c['investment_score']=None
     return sum(bool(c['fundamentals']) for c in companies)
@@ -308,10 +310,46 @@ def add_prices(companies,prior):
                 if not 0<=age<=7:q=None
             except (ValueError,KeyError,TypeError):q=None
         c['price']=q
+        c['price_quality']='refreshed' if diagnostics.get(c['ticker'],{}).get('status')=='ok' else ('cached' if q else 'unavailable')
     coverage=sum(bool(c['price']) for c in companies)
     status='ok' if success==attempted and attempted else ('partial' if success else 'unavailable')
     print('PRICE_SUMMARY',json.dumps({'attempted':attempted,'updated':success,'coverage':coverage,'status':status,'batch_limit':PRICE_BATCH_SIZE}))
     return coverage,{'status':status,'attempted':attempted,'updated':success,'coverage':coverage,'diagnostics':diagnostics}
+
+def technical_indicators(quote):
+    """Compute deterministic daily indicators from validated native-currency OHLCV bars."""
+    rows=[]
+    for b in quote.get('bars') or []:
+        try:
+            day=datetime.fromisoformat(b['date']).date()
+            close=float(b['close']); volume=float(b['volume'])
+            if close>0 and volume>=0: rows.append((day,close,volume))
+        except (KeyError,TypeError,ValueError,OverflowError): continue
+    rows.sort(key=lambda x:x[0])
+    if len(rows)<50: return {'status':'incomplete','bars':len(rows),'reason':'minimum_50_daily_bars_required'}
+    closes=[x[1] for x in rows]; volumes=[x[2] for x in rows]; day=rows[-1][0].isoformat()
+    def sma(n): return sum(closes[-n:])/n
+    changes=[closes[i]-closes[i-1] for i in range(1,len(closes))]
+    gains=[max(x,0) for x in changes[-14:]]; losses=[max(-x,0) for x in changes[-14:]]
+    avg_gain=sum(gains)/14; avg_loss=sum(losses)/14
+    rsi=100.0 if avg_loss==0 else 100-100/(1+avg_gain/avg_loss)
+    avg_vol=sum(volumes[-20:])/20
+    return {'status':'ok','bars':len(rows),'date':day,'sma20':sma(20),'sma50':sma(50),
+        'rsi_14':round(rsi,2),'volume_ratio20':round(volumes[-1]/avg_vol,3) if avg_vol>0 else None,
+        'above_sma20':closes[-1]>sma(20),'above_sma50':closes[-1]>sma(50),
+        'relative_strength_20d_pct':None,'relative_strength_benchmark':None,
+        'sma20_as_of':day,'sma50_as_of':day,'rsi_as_of':day,'volume_as_of':day,
+        'relative_strength_as_of':None,'method':'simple_14d_RSI_and_SMA20_50_from_provider_OHLCV'}
+
+def _gate_map(evaluation):
+    gates={}
+    for item in evaluation.get('decision_trace',[]):
+        key=item.get('check','unknown')
+        passed=item.get('passed') is True
+        status='PASS' if passed else ('VETO' if item.get('stage','').endswith('veto') else 'ND')
+        gates[key]={'status':status,'actual':item.get('actual'),'operator':item.get('operator'),
+                    'required':item.get('required'),'reason':item.get('reason')}
+    return gates
 
 def calculate_valuation(company, today=None):
     """Indicative trailing annual ratios, only if SEC periods and shares are defensible.
@@ -426,19 +464,24 @@ def main():
     decision_memory, zone_hits = record_scan(companies, scan_timestamp)
     # The current scanner has no investment-ranking engine. Record this as an explicit
     # N/D blocker for every issuer instead of silently omitting BUY-gate diagnostics.
-    unavailable_gates = {
-        'investment_ranking': {'status':'ND','value':None,'required':'validated Balanced 1.3 ranking'},
-        'fundamental_score': {'status':'ND','value':None,'required':'normalized financials and valuation'},
-        'entry_score': {'status':'ND','value':None,'required':'technical entry model with OHLCV'},
-        'base_upside': {'status':'ND','value':None,'required':'probability-weighted Bear/Base/Bull valuation'},
-        'risk_reward': {'status':'ND','value':None,'required':'validated entry, stop-loss and target'},
-        'data_quality': {'status':'ND','value':None,'required':'period-consistent fundamentals and fresh quotes'},
-        'analyst_consensus': {'status':'ND','value':None,'required':'timestamped analyst target history'},
-        'veto_check': {'status':'ND','value':None,'required':'complete risk and corporate-event review'}
-    }
     for company in companies:
-        append_gate_audit(company['ticker'], scan_timestamp, unavailable_gates,
-                          ['BUY zablokowany: obecny skaner nie ma aktywnego silnika rankingu inwestycyjnego; wymagane dane lub walidacje są N/D.'])
+        tech=technical_indicators(company.get('price') or {})
+        company['technical']=tech
+        q=company.get('price') or {}
+        if tech.get('status')=='ok':
+            q.update({k:tech.get(k) for k in ('sma20','sma50','rsi_14','volume_ratio20','above_sma20','above_sma50','relative_strength_20d_pct','relative_strength_benchmark','sma20_as_of','sma50_as_of','rsi_as_of','volume_as_of','relative_strength_as_of')})
+        company['analyst_targets']={'status':'unavailable','reason':'No audited point-in-time analyst target feed'}
+        company['entry_trigger']=None
+        company['investment_risk_flags']={'flags':['corporate_event_and_risk_review_not_integrated']}
+        evaluation=evaluate_company(company)
+        company['investment_decision']=evaluation
+        company['investment_score']=evaluation.get('fundamental_score')
+        company['signal']=evaluation.get('signal','WATCH')
+        company['buy_eligible']=False
+        gates=_gate_map(evaluation)
+        gates['publication_authorization']={'status':'VETO','actual':False,'required':True,'reason':'release_gate_not_passed'}
+        blockers=evaluation.get('reasons') or ['BUY publication disabled until full validation']
+        append_gate_audit(company['ticker'], scan_timestamp, gates, blockers)
     decision_memory = __import__('decision_memory').load_memory()
     # Attach the complete, explicit per-issuer gate audit and prior level history
     # to the published report; counts alone are not sufficient diagnostics.
@@ -461,7 +504,7 @@ def main():
     scan_snapshot = append_scan_snapshot(scan_timestamp, companies)
     decision_memory = __import__('decision_memory').load_memory()
     print('DECISION_MEMORY_SUMMARY',json.dumps({'levels':len(decision_memory['entry_levels']),'recommendations':len(decision_memory['recommendations']),'gate_audits':len(decision_memory['gate_audits']),'events':len(decision_memory['events']),'scan_snapshots':len(decision_memory['scan_snapshots']),'snapshot_sha256':scan_snapshot['sha256'],'new_zone_hits':len(zone_hits)}))
-    payload={'generated_at':scan_timestamp,'source':'Google News RSS','queries':QUERIES,'scan_status':'ok' if allnews else 'no_sources', 'articles_collected':len(allnews),'companies':companies,'discoveries':discoveries,'articles':allnews[:100],'version':'4.2.2','valuation_coverage':valuation_coverage,'valuation_note':'Orientacyjna kapitalizacja = cena EOD × akcje z ostatniego dostępnego raportu SEC; nie uwzględnia późniejszego rozwodnienia, zmian liczby akcji ani ADR. P/S i P/E bazują na danych rocznych, nie TTM. Nie jest to ranking inwestycyjny.','price_health':price_health,'price_coverage':price_coverage,'price_note':'Opóźnione ceny dzienne z Stooq lub Yahoo Chart (źródła mogą blokować dostęp); daty do 7 dni. Brak ceny to brak danych, nie zero. Kapitalizacja i mnożniki wyłącznie orientacyjne, gdy dane są wystarczające.','financial_coverage':covered,'financial_source':'SEC EDGAR XBRL, annual 10-K/20-F where available','financial_limitations':'Dane historyczne, możliwe opóźnienia; nie wszystkie spółki raportują do SEC. Pokrycie rośnie stopniowo; limity 16 zapytań SEC i 24 prób cen na skan.','coverage_note':'Lista startowa plus kandydaci wykryci przez dopasowanie nazw do rejestru SEC; brak pełnego globalnego pokrycia','ranking_method':'attention_score = 100*(1-exp(-mentions/4)); wskaźnik uwagi, NIE ocena inwestycyjna','investment_ranking_available':False,'global_market_coverage':'INCOMPLETE_USD_ONLY_QUOTES_SEC_CENTRIC_DISCOVERY','decision_memory':{'schema_version':decision_memory['schema_version'],'entry_levels':len(decision_memory['entry_levels']),'recommendations':len(decision_memory['recommendations']),'gate_audits':len(decision_memory['gate_audits']),'events':len(decision_memory['events']),'scan_snapshots':len(decision_memory['scan_snapshots']),'latest_snapshot_sha256':scan_snapshot['sha256'],'new_zone_hits':zone_hits,'historical_imports':decision_memory['historical_imports'],'memory_file':'data/decision_memory.json'},'disclaimer':'Wskaźnik uwagi nie oznacza atrakcyjnej wyceny, potencjału wzrostu ani rekomendacji. Rejestr SEC obejmuje głównie emitentów raportujących w USA. Dane RSS mogą być niepełne.'}
+    payload={'generated_at':scan_timestamp,'source':'Google News RSS','queries':QUERIES,'scan_status':'ok' if allnews else 'no_sources', 'articles_collected':len(allnews),'companies':companies,'discoveries':discoveries,'articles':allnews[:100],'version':'4.2.2','valuation_coverage':valuation_coverage,'valuation_note':'Orientacyjna kapitalizacja = cena EOD × akcje z ostatniego dostępnego raportu SEC; nie uwzględnia późniejszego rozwodnienia, zmian liczby akcji ani ADR. P/S i P/E bazują na danych rocznych, nie TTM. Nie jest to ranking inwestycyjny.','price_health':price_health,'price_coverage':price_coverage,'price_note':'Opóźnione ceny dzienne z Stooq lub Yahoo Chart (źródła mogą blokować dostęp); daty do 7 dni. Brak ceny to brak danych, nie zero. Kapitalizacja i mnożniki wyłącznie orientacyjne, gdy dane są wystarczające.','financial_coverage':covered,'financial_source':'SEC EDGAR XBRL, annual 10-K/20-F where available','financial_limitations':'Dane historyczne, możliwe opóźnienia; nie wszystkie spółki raportują do SEC. Pokrycie rośnie stopniowo; limity 16 zapytań SEC i 24 prób cen na skan.','coverage_note':'Lista startowa plus kandydaci wykryci przez dopasowanie nazw do rejestru SEC; brak pełnego globalnego pokrycia','ranking_method':'attention_score = 100*(1-exp(-mentions/4)); wskaźnik uwagi, NIE ocena inwestycyjna','investment_ranking_available':True,'investment_ranking_status':'RESEARCH_EVALUATOR_CONNECTED_BUY_PUBLICATION_BLOCKED','strategy_version':'balanced-1.3-audit','strategy_thresholds':BALANCED_THRESHOLDS,'global_market_coverage':'INCOMPLETE_USD_ONLY_QUOTES_SEC_CENTRIC_DISCOVERY','decision_memory':{'schema_version':decision_memory['schema_version'],'entry_levels':len(decision_memory['entry_levels']),'recommendations':len(decision_memory['recommendations']),'gate_audits':len(decision_memory['gate_audits']),'events':len(decision_memory['events']),'scan_snapshots':len(decision_memory['scan_snapshots']),'latest_snapshot_sha256':scan_snapshot['sha256'],'new_zone_hits':zone_hits,'historical_imports':decision_memory['historical_imports'],'memory_file':'data/decision_memory.json'},'disclaimer':'Wskaźnik uwagi nie oznacza atrakcyjnej wyceny, potencjału wzrostu ani rekomendacji. Rejestr SEC obejmuje głównie emitentów raportujących w USA. Dane RSS mogą być niepełne.'}
     (ROOT/'data').mkdir(exist_ok=True)
     (ROOT/'data'/'scan.json').write_text(json.dumps(payload,ensure_ascii=False,indent=2),encoding='utf-8')
     print('Scanned',len(companies),'companies,',len(allnews),'articles')
