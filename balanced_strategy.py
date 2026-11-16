@@ -9,11 +9,13 @@ from datetime import date
 
 VERSION = "balanced-1.3-audit"
 THRESHOLDS = {
-    "strong_fundamental": 88, "strong_entry": 80, "strong_upside_pct": 20,
-    "strong_reward_risk": 2.2, "buy_fundamental": 75, "buy_entry": 60,
-    "buy_upside_pct": 15, "buy_reward_risk": 1.5,
-    "early_fundamental": 68, "early_entry": 55,
-    "early_upside_pct": 12, "early_reward_risk": 1.35, "rsi_veto": 75,
+    # User-approved production gates (2026-11-16). No automatic relaxation.
+    "strong_fundamental": 88, "strong_entry": 80, "strong_upside_pct": 25,
+    "strong_reward_risk": 2.2, "buy_fundamental": 80, "buy_entry": 70,
+    "buy_upside_pct": 20, "buy_reward_risk": 1.7,
+    "stable_a_buy_upside_pct": 15,
+    "early_fundamental": 75, "early_entry": 65,
+    "early_upside_pct": 15, "early_reward_risk": 1.7, "rsi_veto": 75,
 }
 
 def _num(x):
@@ -90,6 +92,17 @@ def evaluate_company(company):
     check("analyst_consensus","median_upside_and_low_target",{"upside_median_pct":up,"downside_low_pct":low},"upside>0 and downside<0","positive upside and defined downside",valid,"invalid_analyst_upside_or_downside")
     if not valid: return _finish(result,"analyst_consensus",trace,["invalid_analyst_upside_or_downside"])
     down=abs(low); rr=up/down
+    ev=a.get("probability_weighted_ev_pct")
+    ev_ok=_num(ev) and ev>0
+    check("expected_value","probability_weighted_ev_pct",ev,">",0,ev_ok,"positive_probability_weighted_ev_missing_or_nonpositive")
+    trigger=company.get("entry_trigger")
+    trigger_ok=isinstance(trigger,dict) and bool(trigger.get("active")) and _num(trigger.get("price"))
+    check("entry_trigger","active_trigger",trigger,"==","active trigger with numeric level",trigger_ok,"active_entry_trigger_missing")
+    if not ev_ok or not trigger_ok:
+        reasons=[]
+        if not ev_ok: reasons.append("positive_probability_weighted_ev_missing_or_nonpositive")
+        if not trigger_ok: reasons.append("active_entry_trigger_missing")
+        return _finish(result,"expected_value_or_trigger",trace,reasons,base_upside_pct=up,base_downside_pct=down,reward_risk=round(rr,2))
     fs,es,missing=_score_company(company)
     if missing:
         for reason in missing: check("score_inputs",reason,None,"present","valid same-session value",False,reason)
