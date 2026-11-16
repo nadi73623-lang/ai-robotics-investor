@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-16T10:26:25.485212+00:00",
+  "generated_at": "2026-11-16T10:29:02.920568+00:00",
   "source": "Google News RSS",
   "queries": [
     "artificial intelligence robotics stocks companies contracts earnings",
@@ -52,33 +52,46 @@
         "source": "SEC EDGAR XBRL",
         "fiscal_year": "2022",
         "revenue_usd": 26914000000,
-        "net_income_usd": 120067000000,
+        "net_income_usd": null,
         "revenue_growth_pct": 61.4,
-        "net_margin_pct": 446.1,
-        "operating_cash_flow_usd": 102718000000,
-        "free_cash_flow_usd": 102579265000,
+        "net_margin_pct": null,
+        "operating_cash_flow_usd": null,
+        "free_cash_flow_usd": null,
         "cash_usd": 10605000000,
         "debt_usd": 8468000000,
-        "financial_health_score": 100,
+        "financial_health_score": null,
         "score_label": "Prosty filtr 4 warunków, nie rekomendacja",
         "shares_outstanding": 24100000000,
         "shares_as_of": "2026-08-21",
+        "revenue_period_start": "2021-02-01",
         "revenue_period_end": "2022-01-30",
-        "net_income_period_end": "2026-01-25",
-        "cash_flow_period_end": "2026-01-25",
-        "capex_period_end": "2012-01-29",
-        "as_of": "2026-11-15T06:22:12.986026+00:00",
+        "net_income_period_start": null,
+        "net_income_period_end": null,
+        "cash_flow_period_start": null,
+        "cash_flow_period_end": null,
+        "capex_period_start": null,
+        "capex_period_end": null,
+        "period_alignment": {
+          "status": "partial_or_mismatched",
+          "revenue_net_income": null,
+          "cash_flow_capex": null
+        },
+        "period_mismatch_flags": [
+          "annual_flow_periods_not_aligned"
+        ],
+        "filed": "2026-02-25",
+        "as_of": "2026-11-16T10:28:48.519612+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1045810"
       },
-      "fundamentals_quality": "cached",
+      "fundamentals_quality": "refreshed",
       "price": {
         "close_usd": 162.85,
         "date": "2026-11-13",
-        "age_days": 2,
+        "age_days": 3,
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/NVDA?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-11-15T06:22:34.427312+00:00"
+        "checked_at": "2026-11-16T10:28:53.094432+00:00"
       },
       "valuation": {
         "status": "partial",
@@ -124,15 +137,14 @@
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
-            "actual": "cached",
+            "actual": "refreshed",
             "required": "refreshed",
-            "passed": false,
-            "reason": "fundamentals_not_refreshed"
+            "passed": true,
+            "reason": null
           }
         ],
         "reasons": [
-          "price_not_refreshed",
-          "fundamentals_not_refreshed"
+          "price_not_refreshed"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -168,22 +180,38 @@
         "net_income_usd": 77670000000,
         "revenue_growth_pct": 12.4,
         "net_margin_pct": 10.8,
-        "operating_cash_flow_usd": 139514000000,
-        "free_cash_flow_usd": 132777000000,
+        "operating_cash_flow_usd": null,
+        "free_cash_flow_usd": null,
         "cash_usd": 86810000000,
         "debt_usd": 68396000000,
-        "financial_health_score": 75,
+        "financial_health_score": null,
         "score_label": "Prosty filtr 4 warunków, nie rekomendacja",
         "shares_outstanding": 10813138306,
         "shares_as_of": "2026-10-21",
+        "revenue_period_start": "2025-01-01",
         "revenue_period_end": "2025-12-31",
+        "net_income_period_start": "2025-01-01",
         "net_income_period_end": "2025-12-31",
-        "cash_flow_period_end": "2025-12-31",
-        "capex_period_end": "2016-12-31",
-        "as_of": "2026-11-14T22:19:57.438750+00:00",
+        "cash_flow_period_start": null,
+        "cash_flow_period_end": null,
+        "capex_period_start": null,
+        "capex_period_end": null,
+        "period_alignment": {
+          "status": "partial_or_mismatched",
+          "revenue_net_income": {
+            "start": "2025-01-01",
+            "end": "2025-12-31"
+          },
+          "cash_flow_capex": null
+        },
+        "period_mismatch_flags": [
+          "annual_flow_periods_not_aligned"
+        ],
+        "filed": "2026-02-06",
+        "as_of": "2026-11-16T10:28:41.609941+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1018724"
       },
-      "fundamentals_quality": "cached",
+      "fundamentals_quality": "refreshed",
       "price": {
         "close_usd": 266.66,
         "date": "2026-11-13",
@@ -198,7 +226,7 @@
         "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
         "market_cap_usd": 2883431460678,
         "ps": 4.02,
-        "pe": null,
+        "pe": 37.12,
         "fcf_yield_pct": null,
         "share_date": "2026-10-21",
         "price_date": "2026-11-13",
@@ -237,15 +265,14 @@
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
-            "actual": "cached",
+            "actual": "refreshed",
             "required": "refreshed",
-            "passed": false,
-            "reason": "fundamentals_not_refreshed"
+            "passed": true,
+            "reason": null
           }
         ],
         "reasons": [
-          "price_not_refreshed",
-          "fundamentals_not_refreshed"
+          "price_not_refreshed"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -312,7 +339,7 @@
           "annual_flow_periods_not_aligned"
         ],
         "filed": "2025-12-18",
-        "as_of": "2026-11-16T10:26:00.256102+00:00",
+        "as_of": "2026-11-16T10:28:40.066962+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1730168"
       },
       "fundamentals_quality": "refreshed",
@@ -323,7 +350,7 @@
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/AVGO?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-11-16T10:26:09.007373+00:00"
+        "checked_at": "2026-11-16T10:28:50.125580+00:00"
       },
       "valuation": {
         "status": "partial",
@@ -620,25 +647,44 @@
         "source": "SEC EDGAR XBRL",
         "fiscal_year": "2024",
         "revenue_usd": 350018000000,
-        "net_income_usd": 132170000000,
+        "net_income_usd": 100118000000,
         "revenue_growth_pct": 13.9,
-        "net_margin_pct": 37.8,
+        "net_margin_pct": 28.6,
         "operating_cash_flow_usd": 164713000000,
         "free_cash_flow_usd": 73266000000,
         "cash_usd": 30708000000,
         "debt_usd": 48543000000,
-        "financial_health_score": 75,
+        "financial_health_score": null,
         "score_label": "Prosty filtr 4 warunków, nie rekomendacja",
         "shares_outstanding": 12088000000,
         "shares_as_of": "2025-12-31",
+        "revenue_period_start": "2024-01-01",
         "revenue_period_end": "2024-12-31",
-        "net_income_period_end": "2025-12-31",
+        "net_income_period_start": "2024-01-01",
+        "net_income_period_end": "2024-12-31",
+        "cash_flow_period_start": "2025-01-01",
         "cash_flow_period_end": "2025-12-31",
+        "capex_period_start": "2025-01-01",
         "capex_period_end": "2025-12-31",
-        "as_of": "2026-11-14T22:20:00.041214+00:00",
+        "period_alignment": {
+          "status": "partial_or_mismatched",
+          "revenue_net_income": {
+            "start": "2024-01-01",
+            "end": "2024-12-31"
+          },
+          "cash_flow_capex": {
+            "start": "2025-01-01",
+            "end": "2025-12-31"
+          }
+        },
+        "period_mismatch_flags": [
+          "annual_flow_periods_not_aligned"
+        ],
+        "filed": "2026-02-05",
+        "as_of": "2026-11-16T10:28:44.928948+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1652044"
       },
-      "fundamentals_quality": "cached",
+      "fundamentals_quality": "refreshed",
       "price": {
         "close_usd": 295.77,
         "date": "2026-11-13",
@@ -654,7 +700,7 @@
         "market_cap_usd": 3575267760000,
         "ps": null,
         "pe": null,
-        "fcf_yield_pct": null,
+        "fcf_yield_pct": 2.05,
         "share_date": "2025-12-31",
         "price_date": "2026-11-13",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)",
@@ -692,15 +738,14 @@
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
-            "actual": "cached",
+            "actual": "refreshed",
             "required": "refreshed",
-            "passed": false,
-            "reason": "fundamentals_not_refreshed"
+            "passed": true,
+            "reason": null
           }
         ],
         "reasons": [
-          "price_not_refreshed",
-          "fundamentals_not_refreshed"
+          "price_not_refreshed"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -739,14 +784,31 @@
         "score_label": "Prosty filtr 4 warunków, nie rekomendacja",
         "shares_outstanding": 5315000000,
         "shares_as_of": "2026-10-23",
+        "revenue_period_start": "2024-12-29",
         "revenue_period_end": "2025-12-27",
+        "net_income_period_start": "2024-12-29",
         "net_income_period_end": "2025-12-27",
+        "cash_flow_period_start": "2024-12-29",
         "cash_flow_period_end": "2025-12-27",
+        "capex_period_start": "2024-12-29",
         "capex_period_end": "2025-12-27",
-        "as_of": "2026-11-15T06:22:10.643552+00:00",
+        "period_alignment": {
+          "status": "aligned",
+          "revenue_net_income": {
+            "start": "2024-12-29",
+            "end": "2025-12-27"
+          },
+          "cash_flow_capex": {
+            "start": "2024-12-29",
+            "end": "2025-12-27"
+          }
+        },
+        "period_mismatch_flags": [],
+        "filed": "2026-01-23",
+        "as_of": "2026-11-16T10:28:45.822178+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=50863"
       },
-      "fundamentals_quality": "cached",
+      "fundamentals_quality": "refreshed",
       "price": {
         "close_usd": 59.66,
         "date": "2026-11-13",
@@ -762,11 +824,11 @@
         "market_cap_usd": 317092900000,
         "ps": 6.0,
         "pe": null,
-        "fcf_yield_pct": null,
+        "fcf_yield_pct": -1.56,
         "share_date": "2026-10-23",
         "price_date": "2026-11-13",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)",
-        "periods_aligned": false
+        "periods_aligned": true
       },
       "technical": {
         "status": "incomplete",
@@ -800,15 +862,14 @@
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
-            "actual": "cached",
+            "actual": "refreshed",
             "required": "refreshed",
-            "passed": false,
-            "reason": "fundamentals_not_refreshed"
+            "passed": true,
+            "reason": null
           }
         ],
         "reasons": [
-          "price_not_refreshed",
-          "fundamentals_not_refreshed"
+          "price_not_refreshed"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -868,7 +929,7 @@
         },
         "period_mismatch_flags": [],
         "filed": "2026-01-29",
-        "as_of": "2026-11-16T10:25:59.024701+00:00",
+        "as_of": "2026-11-16T10:28:38.786751+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1326801"
       },
       "fundamentals_quality": "refreshed",
@@ -995,7 +1056,7 @@
         "as_of": "2026-11-16T10:26:05.603305+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=789019"
       },
-      "fundamentals_quality": "refreshed",
+      "fundamentals_quality": "cached",
       "price": {
         "close_usd": 523.88,
         "date": "2026-11-13",
@@ -1049,14 +1110,15 @@
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
-            "actual": "refreshed",
+            "actual": "cached",
             "required": "refreshed",
-            "passed": true,
-            "reason": null
+            "passed": false,
+            "reason": "fundamentals_not_refreshed"
           }
         ],
         "reasons": [
-          "price_not_refreshed"
+          "price_not_refreshed",
+          "fundamentals_not_refreshed"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -1095,14 +1157,31 @@
         "score_label": "Prosty filtr 4 warunków, nie rekomendacja",
         "shares_outstanding": 1131423212,
         "shares_as_of": "2026-10-02",
+        "revenue_period_start": "2025-08-29",
         "revenue_period_end": "2026-09-03",
+        "net_income_period_start": "2025-08-29",
         "net_income_period_end": "2026-09-03",
+        "cash_flow_period_start": "2025-08-29",
         "cash_flow_period_end": "2026-09-03",
+        "capex_period_start": "2025-08-29",
         "capex_period_end": "2026-09-03",
-        "as_of": "2026-11-15T06:22:11.819949+00:00",
+        "period_alignment": {
+          "status": "aligned",
+          "revenue_net_income": {
+            "start": "2025-08-29",
+            "end": "2026-09-03"
+          },
+          "cash_flow_capex": {
+            "start": "2025-08-29",
+            "end": "2026-09-03"
+          }
+        },
+        "period_mismatch_flags": [],
+        "filed": "2026-10-09",
+        "as_of": "2026-11-16T10:28:47.079505+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=723125"
       },
-      "fundamentals_quality": "cached",
+      "fundamentals_quality": "refreshed",
       "price": {
         "close_usd": 778.31,
         "date": "2026-11-13",
@@ -1117,12 +1196,12 @@
         "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
         "market_cap_usd": 880598000132,
         "ps": 6.61,
-        "pe": null,
-        "fcf_yield_pct": null,
+        "pe": 10.36,
+        "fcf_yield_pct": 6.7,
         "share_date": "2026-10-02",
         "price_date": "2026-11-13",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)",
-        "periods_aligned": false
+        "periods_aligned": true
       },
       "technical": {
         "status": "incomplete",
@@ -1156,15 +1235,14 @@
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
-            "actual": "cached",
+            "actual": "refreshed",
             "required": "refreshed",
-            "passed": false,
-            "reason": "fundamentals_not_refreshed"
+            "passed": true,
+            "reason": null
           }
         ],
         "reasons": [
-          "price_not_refreshed",
-          "fundamentals_not_refreshed"
+          "price_not_refreshed"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -1214,11 +1292,11 @@
       "price": {
         "close_usd": 3.09,
         "date": "2026-11-13",
-        "age_days": 2,
+        "age_days": 3,
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/PDYN?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-11-15T18:47:58.354337+00:00"
+        "checked_at": "2026-11-16T10:28:56.329950+00:00"
       },
       "valuation": {
         "status": "partial",
@@ -1322,11 +1400,11 @@
       "price": {
         "close_usd": 26.87,
         "date": "2026-11-13",
-        "age_days": 2,
+        "age_days": 3,
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/SMCI?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-11-15T18:48:04.847924+00:00"
+        "checked_at": "2026-11-16T10:29:01.196399+00:00"
       },
       "valuation": {
         "status": "partial",
@@ -1618,7 +1696,7 @@
         "as_of": "2026-11-16T10:26:06.096524+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1824502"
       },
-      "fundamentals_quality": "refreshed",
+      "fundamentals_quality": "cached",
       "price": {
         "close_usd": 4.03,
         "date": "2026-11-13",
@@ -1672,14 +1750,15 @@
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
-            "actual": "refreshed",
+            "actual": "cached",
             "required": "refreshed",
-            "passed": true,
-            "reason": null
+            "passed": false,
+            "reason": "fundamentals_not_refreshed"
           }
         ],
         "reasons": [
-          "price_not_refreshed"
+          "price_not_refreshed",
+          "fundamentals_not_refreshed"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -1736,7 +1815,7 @@
         "as_of": "2026-11-16T10:26:06.740884+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1577526"
       },
-      "fundamentals_quality": "refreshed",
+      "fundamentals_quality": "cached",
       "price": {
         "close_usd": 11.82,
         "date": "2026-11-13",
@@ -1790,14 +1869,15 @@
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
-            "actual": "refreshed",
+            "actual": "cached",
             "required": "refreshed",
-            "passed": true,
-            "reason": null
+            "passed": false,
+            "reason": "fundamentals_not_refreshed"
           }
         ],
         "reasons": [
-          "price_not_refreshed"
+          "price_not_refreshed",
+          "fundamentals_not_refreshed"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -1854,7 +1934,7 @@
         "as_of": "2026-11-16T10:26:07.216268+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1736297"
       },
-      "fundamentals_quality": "refreshed",
+      "fundamentals_quality": "cached",
       "price": {
         "close_usd": 221.83,
         "date": "2026-11-13",
@@ -1908,14 +1988,15 @@
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
-            "actual": "refreshed",
+            "actual": "cached",
             "required": "refreshed",
-            "passed": true,
-            "reason": null
+            "passed": false,
+            "reason": "fundamentals_not_refreshed"
           }
         ],
         "reasons": [
-          "price_not_refreshed"
+          "price_not_refreshed",
+          "fundamentals_not_refreshed"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -1972,7 +2053,7 @@
         "as_of": "2026-11-16T10:26:07.797590+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=6951"
       },
-      "fundamentals_quality": "refreshed",
+      "fundamentals_quality": "cached",
       "price": {
         "close_usd": 370.5,
         "date": "2026-11-13",
@@ -2026,14 +2107,15 @@
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
-            "actual": "refreshed",
+            "actual": "cached",
             "required": "refreshed",
-            "passed": true,
-            "reason": null
+            "passed": false,
+            "reason": "fundamentals_not_refreshed"
           }
         ],
         "reasons": [
-          "price_not_refreshed"
+          "price_not_refreshed",
+          "fundamentals_not_refreshed"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -2066,14 +2148,31 @@
         "score_label": "Prosty filtr 4 warunków, nie rekomendacja",
         "shares_outstanding": 1640087251,
         "shares_as_of": "2026-10-28",
+        "revenue_period_start": "2024-12-29",
         "revenue_period_end": "2025-12-27",
+        "net_income_period_start": "2024-12-29",
         "net_income_period_end": "2025-12-27",
+        "cash_flow_period_start": "2024-12-29",
         "cash_flow_period_end": "2025-12-27",
+        "capex_period_start": "2024-12-29",
         "capex_period_end": "2025-12-27",
-        "as_of": "2026-11-14T22:19:56.974772+00:00",
+        "period_alignment": {
+          "status": "aligned",
+          "revenue_net_income": {
+            "start": "2024-12-29",
+            "end": "2025-12-27"
+          },
+          "cash_flow_capex": {
+            "start": "2024-12-29",
+            "end": "2025-12-27"
+          }
+        },
+        "period_mismatch_flags": [],
+        "filed": "2026-02-04",
+        "as_of": "2026-11-16T10:28:40.659838+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=2488"
       },
-      "fundamentals_quality": "cached",
+      "fundamentals_quality": "refreshed",
       "price": {
         "close_usd": 534.06,
         "date": "2026-11-13",
@@ -2088,12 +2187,12 @@
         "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
         "market_cap_usd": 875904997269,
         "ps": 25.29,
-        "pe": null,
-        "fcf_yield_pct": null,
+        "pe": 202.05,
+        "fcf_yield_pct": 0.77,
         "share_date": "2026-10-28",
         "price_date": "2026-11-13",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)",
-        "periods_aligned": false
+        "periods_aligned": true
       },
       "technical": {
         "status": "incomplete",
@@ -2127,15 +2226,14 @@
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
-            "actual": "cached",
+            "actual": "refreshed",
             "required": "refreshed",
-            "passed": false,
-            "reason": "fundamentals_not_refreshed"
+            "passed": true,
+            "reason": null
           }
         ],
         "reasons": [
-          "price_not_refreshed",
-          "fundamentals_not_refreshed"
+          "price_not_refreshed"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -2160,22 +2258,38 @@
         "net_income_usd": 3511400000,
         "revenue_growth_pct": 28.6,
         "net_margin_pct": 39.0,
-        "operating_cash_flow_usd": 4371900000,
-        "free_cash_flow_usd": 4356149000,
+        "operating_cash_flow_usd": null,
+        "free_cash_flow_usd": null,
         "cash_usd": 1963900000,
         "debt_usd": 98793000,
-        "financial_health_score": 100,
+        "financial_health_score": null,
         "score_label": "Prosty filtr 4 warunków, nie rekomendacja",
         "shares_outstanding": 1263402335,
         "shares_as_of": "2026-10-29",
+        "revenue_period_start": "2025-01-01",
         "revenue_period_end": "2025-12-31",
+        "net_income_period_start": "2025-01-01",
         "net_income_period_end": "2025-12-31",
-        "cash_flow_period_end": "2025-12-31",
-        "capex_period_end": "2019-12-31",
-        "as_of": "2026-11-14T22:19:57.913985+00:00",
+        "cash_flow_period_start": null,
+        "cash_flow_period_end": null,
+        "capex_period_start": null,
+        "capex_period_end": null,
+        "period_alignment": {
+          "status": "partial_or_mismatched",
+          "revenue_net_income": {
+            "start": "2025-01-01",
+            "end": "2025-12-31"
+          },
+          "cash_flow_capex": null
+        },
+        "period_mismatch_flags": [
+          "annual_flow_periods_not_aligned"
+        ],
+        "filed": "2026-02-17",
+        "as_of": "2026-11-16T10:28:42.395211+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1596532"
       },
-      "fundamentals_quality": "cached",
+      "fundamentals_quality": "refreshed",
       "price": {
         "close_usd": 197.29,
         "date": "2026-11-13",
@@ -2190,7 +2304,7 @@
         "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
         "market_cap_usd": 249256646672,
         "ps": 27.68,
-        "pe": null,
+        "pe": 70.98,
         "fcf_yield_pct": null,
         "share_date": "2026-10-29",
         "price_date": "2026-11-13",
@@ -2229,15 +2343,14 @@
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
-            "actual": "cached",
+            "actual": "refreshed",
             "required": "refreshed",
-            "passed": false,
-            "reason": "fundamentals_not_refreshed"
+            "passed": true,
+            "reason": null
           }
         ],
         "reasons": [
-          "price_not_refreshed",
-          "fundamentals_not_refreshed"
+          "price_not_refreshed"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -2678,14 +2791,31 @@
         "score_label": "Prosty filtr 4 warunków, nie rekomendacja",
         "shares_outstanding": 481390957,
         "shares_as_of": "2026-10-23",
+        "revenue_period_start": "2025-01-01",
         "revenue_period_end": "2025-12-31",
+        "net_income_period_start": "2025-01-01",
         "net_income_period_end": "2025-12-31",
+        "cash_flow_period_start": "2025-01-01",
         "cash_flow_period_end": "2025-12-31",
+        "capex_period_start": "2025-01-01",
         "capex_period_end": "2025-12-31",
-        "as_of": "2026-11-14T22:19:58.392196+00:00",
+        "period_alignment": {
+          "status": "aligned",
+          "revenue_net_income": {
+            "start": "2025-01-01",
+            "end": "2025-12-31"
+          },
+          "cash_flow_capex": {
+            "start": "2025-01-01",
+            "end": "2025-12-31"
+          }
+        },
+        "period_mismatch_flags": [],
+        "filed": "2026-03-02",
+        "as_of": "2026-11-16T10:28:43.034802+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1836981"
       },
-      "fundamentals_quality": "cached",
+      "fundamentals_quality": "refreshed",
       "price": {
         "close_usd": 1.91,
         "date": "2026-11-13",
@@ -2701,11 +2831,11 @@
         "market_cap_usd": 919456728,
         "ps": 7.2,
         "pe": null,
-        "fcf_yield_pct": null,
+        "fcf_yield_pct": -4.62,
         "share_date": "2026-10-23",
         "price_date": "2026-11-13",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)",
-        "periods_aligned": false
+        "periods_aligned": true
       },
       "technical": {
         "status": "incomplete",
@@ -2739,15 +2869,14 @@
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
-            "actual": "cached",
+            "actual": "refreshed",
             "required": "refreshed",
-            "passed": false,
-            "reason": "fundamentals_not_refreshed"
+            "passed": true,
+            "reason": null
           }
         ],
         "reasons": [
-          "price_not_refreshed",
-          "fundamentals_not_refreshed"
+          "price_not_refreshed"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -2772,7 +2901,7 @@
         "net_income_usd": 832500000,
         "revenue_growth_pct": 28.5,
         "net_margin_pct": 6.7,
-        "operating_cash_flow_usd": 659500000,
+        "operating_cash_flow_usd": null,
         "free_cash_flow_usd": null,
         "cash_usd": 595600000,
         "debt_usd": 26000000,
@@ -2780,14 +2909,30 @@
         "score_label": "Prosty filtr 4 warunków, nie rekomendacja",
         "shares_outstanding": 126111808,
         "shares_as_of": "2026-10-21",
+        "revenue_period_start": "2025-01-01",
         "revenue_period_end": "2025-12-31",
+        "net_income_period_start": "2025-01-01",
         "net_income_period_end": "2025-12-31",
-        "cash_flow_period_end": "2025-12-31",
+        "cash_flow_period_start": null,
+        "cash_flow_period_end": null,
+        "capex_period_start": null,
         "capex_period_end": null,
-        "as_of": "2026-11-14T22:19:58.841573+00:00",
+        "period_alignment": {
+          "status": "partial_or_mismatched",
+          "revenue_net_income": {
+            "start": "2025-01-01",
+            "end": "2025-12-31"
+          },
+          "cash_flow_capex": null
+        },
+        "period_mismatch_flags": [
+          "annual_flow_periods_not_aligned"
+        ],
+        "filed": "2026-02-27",
+        "as_of": "2026-11-16T10:28:43.688172+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1030894"
       },
-      "fundamentals_quality": "cached",
+      "fundamentals_quality": "refreshed",
       "price": {
         "close_usd": 240.34,
         "date": "2026-11-13",
@@ -2802,7 +2947,7 @@
         "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
         "market_cap_usd": 30309711935,
         "ps": 2.45,
-        "pe": null,
+        "pe": 36.41,
         "fcf_yield_pct": null,
         "share_date": "2026-10-21",
         "price_date": "2026-11-13",
@@ -2841,15 +2986,14 @@
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
-            "actual": "cached",
+            "actual": "refreshed",
             "required": "refreshed",
-            "passed": false,
-            "reason": "fundamentals_not_refreshed"
+            "passed": true,
+            "reason": null
           }
         ],
         "reasons": [
-          "price_not_refreshed",
-          "fundamentals_not_refreshed"
+          "price_not_refreshed"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -2984,14 +3128,31 @@
         "score_label": "Prosty filtr 4 warunków, nie rekomendacja",
         "shares_outstanding": 652000000,
         "shares_as_of": "2026-01-30",
+        "revenue_period_start": "2025-02-01",
         "revenue_period_end": "2026-01-30",
+        "net_income_period_start": "2025-02-01",
         "net_income_period_end": "2026-01-30",
+        "cash_flow_period_start": "2025-02-01",
         "cash_flow_period_end": "2026-01-30",
+        "capex_period_start": "2025-02-01",
         "capex_period_end": "2026-01-30",
-        "as_of": "2026-11-14T22:19:59.588143+00:00",
+        "period_alignment": {
+          "status": "aligned",
+          "revenue_net_income": {
+            "start": "2025-02-01",
+            "end": "2026-01-30"
+          },
+          "cash_flow_capex": {
+            "start": "2025-02-01",
+            "end": "2026-01-30"
+          }
+        },
+        "period_mismatch_flags": [],
+        "filed": "2026-03-16",
+        "as_of": "2026-11-16T10:28:44.262255+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1571996"
       },
-      "fundamentals_quality": "cached",
+      "fundamentals_quality": "refreshed",
       "price": {
         "close_usd": 344.53,
         "date": "2026-11-13",
@@ -3006,12 +3167,12 @@
         "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
         "market_cap_usd": 224633560000,
         "ps": 1.98,
-        "pe": null,
-        "fcf_yield_pct": null,
+        "pe": 37.84,
+        "fcf_yield_pct": 3.81,
         "share_date": "2026-01-30",
         "price_date": "2026-11-13",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)",
-        "periods_aligned": false
+        "periods_aligned": true
       },
       "technical": {
         "status": "incomplete",
@@ -3045,15 +3206,14 @@
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
-            "actual": "cached",
+            "actual": "refreshed",
             "required": "refreshed",
-            "passed": false,
-            "reason": "fundamentals_not_refreshed"
+            "passed": true,
+            "reason": null
           }
         ],
         "reasons": [
-          "price_not_refreshed",
-          "fundamentals_not_refreshed"
+          "price_not_refreshed"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -3978,7 +4138,7 @@
         "as_of": "2026-11-16T10:26:00.949173+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=898293"
       },
-      "fundamentals_quality": "refreshed",
+      "fundamentals_quality": "cached",
       "price": {
         "close_usd": 254.25,
         "date": "2026-11-13",
@@ -4032,14 +4192,15 @@
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
-            "actual": "refreshed",
+            "actual": "cached",
             "required": "refreshed",
-            "passed": true,
-            "reason": null
+            "passed": false,
+            "reason": "fundamentals_not_refreshed"
           }
         ],
         "reasons": [
-          "price_not_refreshed"
+          "price_not_refreshed",
+          "fundamentals_not_refreshed"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -4096,7 +4257,7 @@
         "as_of": "2026-11-16T10:26:01.442855+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1819848"
       },
-      "fundamentals_quality": "refreshed",
+      "fundamentals_quality": "cached",
       "price": {
         "close_usd": 5.08,
         "date": "2026-11-13",
@@ -4150,14 +4311,15 @@
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
-            "actual": "refreshed",
+            "actual": "cached",
             "required": "refreshed",
-            "passed": true,
-            "reason": null
+            "passed": false,
+            "reason": "fundamentals_not_refreshed"
           }
         ],
         "reasons": [
-          "price_not_refreshed"
+          "price_not_refreshed",
+          "fundamentals_not_refreshed"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -4214,7 +4376,7 @@
         "as_of": "2026-11-16T10:26:02.042215+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=319201"
       },
-      "fundamentals_quality": "refreshed",
+      "fundamentals_quality": "cached",
       "price": {
         "close_usd": 152.32,
         "date": "2026-11-13",
@@ -4268,14 +4430,15 @@
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
-            "actual": "refreshed",
+            "actual": "cached",
             "required": "refreshed",
-            "passed": true,
-            "reason": null
+            "passed": false,
+            "reason": "fundamentals_not_refreshed"
           }
         ],
         "reasons": [
-          "price_not_refreshed"
+          "price_not_refreshed",
+          "fundamentals_not_refreshed"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -4331,7 +4494,7 @@
         "as_of": "2026-11-16T10:26:02.593064+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1069258"
       },
-      "fundamentals_quality": "refreshed",
+      "fundamentals_quality": "cached",
       "price": {
         "close_usd": 33.91,
         "date": "2026-11-13",
@@ -4385,14 +4548,15 @@
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
-            "actual": "refreshed",
+            "actual": "cached",
             "required": "refreshed",
-            "passed": true,
-            "reason": null
+            "passed": false,
+            "reason": "fundamentals_not_refreshed"
           }
         ],
         "reasons": [
-          "price_not_refreshed"
+          "price_not_refreshed",
+          "fundamentals_not_refreshed"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -4603,7 +4767,7 @@
         "as_of": "2026-11-16T10:26:03.155189+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1633978"
       },
-      "fundamentals_quality": "refreshed",
+      "fundamentals_quality": "cached",
       "price": {
         "close_usd": 596.62,
         "date": "2026-11-13",
@@ -4657,14 +4821,15 @@
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
-            "actual": "refreshed",
+            "actual": "cached",
             "required": "refreshed",
-            "passed": true,
-            "reason": null
+            "passed": false,
+            "reason": "fundamentals_not_refreshed"
           }
         ],
         "reasons": [
-          "price_not_refreshed"
+          "price_not_refreshed",
+          "fundamentals_not_refreshed"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -4720,7 +4885,7 @@
         "as_of": "2026-11-16T10:26:03.717807+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=707549"
       },
-      "fundamentals_quality": "refreshed",
+      "fundamentals_quality": "cached",
       "price": {
         "close_usd": 225.92,
         "date": "2026-11-13",
@@ -4774,14 +4939,15 @@
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
-            "actual": "refreshed",
+            "actual": "cached",
             "required": "refreshed",
-            "passed": true,
-            "reason": null
+            "passed": false,
+            "reason": "fundamentals_not_refreshed"
           }
         ],
         "reasons": [
-          "price_not_refreshed"
+          "price_not_refreshed",
+          "fundamentals_not_refreshed"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -4838,7 +5004,7 @@
         "as_of": "2026-11-16T10:26:04.340427+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1910139"
       },
-      "fundamentals_quality": "refreshed",
+      "fundamentals_quality": "cached",
       "price": {
         "close_usd": 5.56,
         "date": "2026-11-13",
@@ -4892,14 +5058,15 @@
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
-            "actual": "refreshed",
+            "actual": "cached",
             "required": "refreshed",
-            "passed": true,
-            "reason": null
+            "passed": false,
+            "reason": "fundamentals_not_refreshed"
           }
         ],
         "reasons": [
-          "price_not_refreshed"
+          "price_not_refreshed",
+          "fundamentals_not_refreshed"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -4956,7 +5123,7 @@
         "as_of": "2026-11-16T10:26:05.016654+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1280452"
       },
-      "fundamentals_quality": "refreshed",
+      "fundamentals_quality": "cached",
       "price": {
         "close_usd": 1390.54,
         "date": "2026-11-13",
@@ -5010,14 +5177,15 @@
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
-            "actual": "refreshed",
+            "actual": "cached",
             "required": "refreshed",
-            "passed": true,
-            "reason": null
+            "passed": false,
+            "reason": "fundamentals_not_refreshed"
           }
         ],
         "reasons": [
-          "price_not_refreshed"
+          "price_not_refreshed",
+          "fundamentals_not_refreshed"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -5050,14 +5218,31 @@
         "score_label": "Prosty filtr 4 warunków, nie rekomendacja",
         "shares_outstanding": 876900000,
         "shares_as_of": "2026-08-21",
+        "revenue_period_start": "2025-02-02",
         "revenue_period_end": "2026-01-31",
+        "net_income_period_start": "2025-02-02",
         "net_income_period_end": "2026-01-31",
+        "cash_flow_period_start": "2025-02-02",
         "cash_flow_period_end": "2026-01-31",
+        "capex_period_start": "2025-02-02",
         "capex_period_end": "2026-01-31",
-        "as_of": "2026-11-15T06:22:11.132434+00:00",
+        "period_alignment": {
+          "status": "aligned",
+          "revenue_net_income": {
+            "start": "2025-02-02",
+            "end": "2026-01-31"
+          },
+          "cash_flow_capex": {
+            "start": "2025-02-02",
+            "end": "2026-01-31"
+          }
+        },
+        "period_mismatch_flags": [],
+        "filed": "2026-03-11",
+        "as_of": "2026-11-16T10:28:46.492405+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1835632"
       },
-      "fundamentals_quality": "cached",
+      "fundamentals_quality": "refreshed",
       "price": {
         "close_usd": 156.76,
         "date": "2026-11-13",
@@ -5072,12 +5257,12 @@
         "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
         "market_cap_usd": 137462844000,
         "ps": 16.77,
-        "pe": null,
-        "fcf_yield_pct": null,
+        "pe": 51.48,
+        "fcf_yield_pct": 1.02,
         "share_date": "2026-08-21",
         "price_date": "2026-11-13",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)",
-        "periods_aligned": false
+        "periods_aligned": true
       },
       "technical": {
         "status": "incomplete",
@@ -5111,15 +5296,14 @@
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
-            "actual": "cached",
+            "actual": "refreshed",
             "required": "refreshed",
-            "passed": false,
-            "reason": "fundamentals_not_refreshed"
+            "passed": true,
+            "reason": null
           }
         ],
         "reasons": [
-          "price_not_refreshed",
-          "fundamentals_not_refreshed"
+          "price_not_refreshed"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -5152,34 +5336,51 @@
         "score_label": "Prosty filtr 4 warunków, nie rekomendacja",
         "shares_outstanding": 1038000000,
         "shares_as_of": "2026-09-30",
+        "revenue_period_start": "2025-01-01",
         "revenue_period_end": "2025-12-31",
+        "net_income_period_start": "2025-01-01",
         "net_income_period_end": "2025-12-31",
+        "cash_flow_period_start": "2025-01-01",
         "cash_flow_period_end": "2025-12-31",
+        "capex_period_start": "2025-01-01",
         "capex_period_end": "2025-12-31",
-        "as_of": "2026-11-15T06:22:12.451227+00:00",
+        "period_alignment": {
+          "status": "aligned",
+          "revenue_net_income": {
+            "start": "2025-01-01",
+            "end": "2025-12-31"
+          },
+          "cash_flow_capex": {
+            "start": "2025-01-01",
+            "end": "2025-12-31"
+          }
+        },
+        "period_mismatch_flags": [],
+        "filed": "2026-01-29",
+        "as_of": "2026-11-16T10:28:47.806569+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1373715"
       },
-      "fundamentals_quality": "cached",
+      "fundamentals_quality": "refreshed",
       "price": {
         "close_usd": 102.25,
         "date": "2026-11-13",
-        "age_days": 2,
+        "age_days": 3,
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/NOW?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-11-15T06:22:33.815143+00:00"
+        "checked_at": "2026-11-16T10:28:52.532474+00:00"
       },
       "valuation": {
         "status": "partial",
         "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
         "market_cap_usd": 106135500000,
         "ps": 7.99,
-        "pe": null,
-        "fcf_yield_pct": null,
+        "pe": 60.72,
+        "fcf_yield_pct": 4.31,
         "share_date": "2026-09-30",
         "price_date": "2026-11-13",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)",
-        "periods_aligned": false
+        "periods_aligned": true
       },
       "technical": {
         "status": "incomplete",
@@ -5213,15 +5414,14 @@
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
-            "actual": "cached",
+            "actual": "refreshed",
             "required": "refreshed",
-            "passed": false,
-            "reason": "fundamentals_not_refreshed"
+            "passed": true,
+            "reason": null
           }
         ],
         "reasons": [
-          "price_not_refreshed",
-          "fundamentals_not_refreshed"
+          "price_not_refreshed"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -5254,34 +5454,51 @@
         "score_label": "Prosty filtr 4 warunków, nie rekomendacja",
         "shares_outstanding": 161598060,
         "shares_as_of": "2026-09-30",
+        "revenue_period_start": "2025-01-01",
         "revenue_period_end": "2025-12-31",
+        "net_income_period_start": "2025-01-01",
         "net_income_period_end": "2025-12-31",
+        "cash_flow_period_start": "2025-01-01",
         "cash_flow_period_end": "2025-12-31",
+        "capex_period_start": "2025-01-01",
         "capex_period_end": "2025-12-31",
-        "as_of": "2026-11-15T06:22:13.484333+00:00",
+        "period_alignment": {
+          "status": "aligned",
+          "revenue_net_income": {
+            "start": "2025-01-01",
+            "end": "2025-12-31"
+          },
+          "cash_flow_capex": {
+            "start": "2025-01-01",
+            "end": "2025-12-31"
+          }
+        },
+        "period_mismatch_flags": [],
+        "filed": "2026-02-17",
+        "as_of": "2026-11-16T10:28:49.138978+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1720635"
       },
-      "fundamentals_quality": "cached",
+      "fundamentals_quality": "refreshed",
       "price": {
         "close_usd": 114.69,
         "date": "2026-11-13",
-        "age_days": 2,
+        "age_days": 3,
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/NVT?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-11-15T06:22:35.284974+00:00"
+        "checked_at": "2026-11-16T10:28:53.608660+00:00"
       },
       "valuation": {
         "status": "partial",
         "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
         "market_cap_usd": 18533681501,
         "ps": 4.76,
-        "pe": null,
-        "fcf_yield_pct": null,
+        "pe": 26.1,
+        "fcf_yield_pct": 2.01,
         "share_date": "2026-09-30",
         "price_date": "2026-11-13",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)",
-        "periods_aligned": false
+        "periods_aligned": true
       },
       "technical": {
         "status": "incomplete",
@@ -5315,15 +5532,14 @@
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
-            "actual": "cached",
+            "actual": "refreshed",
             "required": "refreshed",
-            "passed": false,
-            "reason": "fundamentals_not_refreshed"
+            "passed": true,
+            "reason": null
           }
         ],
         "reasons": [
-          "price_not_refreshed",
-          "fundamentals_not_refreshed"
+          "price_not_refreshed"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -5367,11 +5583,11 @@
       "price": {
         "close_usd": 5.16,
         "date": "2026-11-13",
-        "age_days": 2,
+        "age_days": 3,
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/ONDS?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-11-15T06:22:36.103859+00:00"
+        "checked_at": "2026-11-16T10:28:54.106036+00:00"
       },
       "valuation": {
         "status": "partial",
@@ -5469,11 +5685,11 @@
       "price": {
         "close_usd": 203.62,
         "date": "2026-11-13",
-        "age_days": 2,
+        "age_days": 3,
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/ONTO?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-11-15T18:47:55.947265+00:00"
+        "checked_at": "2026-11-16T10:28:54.620949+00:00"
       },
       "valuation": {
         "status": "partial",
@@ -5571,11 +5787,11 @@
       "price": {
         "close_usd": 33.48,
         "date": "2026-11-13",
-        "age_days": 2,
+        "age_days": 3,
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/OUST?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-11-15T18:47:56.818669+00:00"
+        "checked_at": "2026-11-16T10:28:55.132844+00:00"
       },
       "valuation": {
         "status": "partial",
@@ -5683,18 +5899,18 @@
         },
         "period_mismatch_flags": [],
         "filed": "2026-03-25",
-        "as_of": "2026-11-16T10:25:59.742068+00:00",
+        "as_of": "2026-11-16T10:28:39.463439+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1734722"
       },
       "fundamentals_quality": "refreshed",
       "price": {
         "close_usd": 13.27,
         "date": "2026-11-13",
-        "age_days": 2,
+        "age_days": 3,
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/PATH?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-11-15T18:47:57.736546+00:00"
+        "checked_at": "2026-11-16T10:28:55.801540+00:00"
       },
       "valuation": {
         "status": "unavailable",
@@ -5791,11 +6007,11 @@
       "price": {
         "close_usd": 167.99,
         "date": "2026-11-13",
-        "age_days": 2,
+        "age_days": 3,
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/PLTR?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-11-15T18:47:59.223148+00:00"
+        "checked_at": "2026-11-16T10:28:56.868767+00:00"
       },
       "valuation": {
         "status": "partial",
@@ -5893,11 +6109,11 @@
       "price": {
         "close_usd": 602.01,
         "date": "2026-11-13",
-        "age_days": 2,
+        "age_days": 3,
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/PWR?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-11-15T18:47:59.885895+00:00"
+        "checked_at": "2026-11-16T10:28:57.426740+00:00"
       },
       "valuation": {
         "status": "partial",
@@ -5995,11 +6211,11 @@
       "price": {
         "close_usd": 172.47,
         "date": "2026-11-13",
-        "age_days": 2,
+        "age_days": 3,
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/QCOM?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-11-15T18:48:00.584359+00:00"
+        "checked_at": "2026-11-16T10:28:58.004225+00:00"
       },
       "valuation": {
         "status": "partial",
@@ -6097,11 +6313,11 @@
       "price": {
         "close_usd": 3.8,
         "date": "2026-11-13",
-        "age_days": 2,
+        "age_days": 3,
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/RCAT?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-11-15T18:48:01.373224+00:00"
+        "checked_at": "2026-11-16T10:28:58.509180+00:00"
       },
       "valuation": {
         "status": "partial",
@@ -6199,11 +6415,11 @@
       "price": {
         "close_usd": 402.46,
         "date": "2026-11-13",
-        "age_days": 2,
+        "age_days": 3,
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/ROK?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-11-15T18:48:02.018274+00:00"
+        "checked_at": "2026-11-16T10:28:59.064742+00:00"
       },
       "valuation": {
         "status": "partial",
@@ -6301,11 +6517,11 @@
       "price": {
         "close_usd": 0.755,
         "date": "2026-11-13",
-        "age_days": 2,
+        "age_days": 3,
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/RR?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-11-15T18:48:02.642582+00:00"
+        "checked_at": "2026-11-16T10:28:59.572690+00:00"
       },
       "valuation": {
         "status": "unavailable",
@@ -6403,11 +6619,11 @@
       "price": {
         "close_usd": 2.62,
         "date": "2026-11-13",
-        "age_days": 2,
+        "age_days": 3,
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/SERV?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-11-15T18:48:03.424572+00:00"
+        "checked_at": "2026-11-16T10:29:00.126118+00:00"
       },
       "valuation": {
         "status": "partial",
@@ -6484,11 +6700,11 @@
       "price": {
         "close_usd": 154.09,
         "date": "2026-11-13",
-        "age_days": 2,
+        "age_days": 3,
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/SIEGY?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-11-15T18:48:04.221401+00:00"
+        "checked_at": "2026-11-16T10:29:00.681256+00:00"
       },
       "valuation": {
         "status": "unavailable",
@@ -6586,11 +6802,11 @@
       "price": {
         "close_usd": 291.0,
         "date": "2026-11-13",
-        "age_days": 2,
+        "age_days": 3,
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/SNOW?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-11-15T18:48:05.697398+00:00"
+        "checked_at": "2026-11-16T10:29:01.759016+00:00"
       },
       "valuation": {
         "status": "partial",
@@ -6688,11 +6904,11 @@
       "price": {
         "close_usd": 3.49,
         "date": "2026-11-13",
-        "age_days": 2,
+        "age_days": 3,
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/SOUN?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-11-15T18:48:06.315651+00:00"
+        "checked_at": "2026-11-16T10:29:02.309569+00:00"
       },
       "valuation": {
         "status": "unavailable",
@@ -6790,11 +7006,11 @@
       "price": {
         "close_usd": 34.83,
         "date": "2026-11-13",
-        "age_days": 2,
+        "age_days": 3,
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/SYM?interval=1d&range=15d",
         "is_live": false,
-        "checked_at": "2026-11-15T18:48:06.935056+00:00"
+        "checked_at": "2026-11-16T10:29:02.819512+00:00"
       },
       "valuation": {
         "status": "partial",
@@ -7163,30 +7379,8 @@
       "buy_eligible": false
     }
   ],
-  "discoveries": [
-    {
-      "ticker": "FFR",
-      "name": "FF EAI Robotics Ecosystem Inc.",
-      "mentions": 1,
-      "news": [
-        {
-          "title": "FF EAI Robotics Ecosystem Inc. (FFR) CEO YT Jia Shares Weekly Updates on Robots Delivery to Central Michigan University, Brain Blocks AI Module, and Industrial Scenario Validation - PR Newswire",
-          "url": "https://news.google.com/rss/articles/CBMizwJBVV95cUxQTmduWDU5bXVSVWVRZ3RFYWdyRVFBYjNGZ0xuR2IxZFQ3bEFxTzRvel9MYXd0cDVjelpwWnJzWl9hUExvOTNQYlRFMjduVzBCSHpHRXpua0kzSXdRdDBIRDdOeDRrNlJ3dmVLOHFCWlI5eFN2WWJlcXdUY1JZOGZFVUhac0FUd0tMRXI1VXBQX0FfcEdFNG90Z1VCWEFlWXNfN1ZSQW9hZnJYQjZoWkRvNjhZbkdDcmpjYVpFaWVXNDUwanJfQkZJcmJpWVJYVWdGOF9XTXVlRmxLaVhsRTJtZlNOTUxHMG5UbEttQ1ZXcHNXMTRGb0dnc3BWbm9VaUhsSkJESTd1OTY2UFVWeHhiaUFoMzVINlpDalVFX00xR0Q4YnRLLS1NU05YUm9ZVVptY0V0UVVuazFfSlBORVltTTZ5VEhkXzM0Z1I4Rl81RQ?oc=5",
-          "date": "Mon, 16 Nov 2026 02:22:00 GMT"
-        }
-      ],
-      "public_listing": "SEC ticker registry (US); ticker requires verification",
-      "evidence": "Exact issuer name in collected headline",
-      "attention_score": 22,
-      "investment_score": null
-    }
-  ],
+  "discoveries": [],
   "articles": [
-    {
-      "title": "Xtend AI Robotics (NYSE:XTND) - Stock Analysis - Simply Wall St",
-      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFAwMnZZUkRxZm1XbkwzZzcyclhRdnFtelhMTmFWVzd0RHcyVDd4ckM1TENUSExrUk1VbUFoU3RqV1ZDZzduWGl3c1J5ZU53aFBWQktCcGZjS1ZYTGxkMmxjRFBWUVNiZzM0VE92LXRQOS1CT245M2hZMXdfS1RLQQ?oc=5",
-      "date": "Mon, 16 Nov 2026 09:17:39 GMT"
-    },
     {
       "title": "NVIDIA Corporation | History, GPUs, & Artificial Intelligence - Britannica",
       "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1FMGstclM1R3lESkhtUUVPTDBHZktQWWMzcTFXa3VIR2FOcTJLcy1wQnlLMHo5MDRXeS10UTJudHRxNmpFX2hyWUZzX1ZTaVpBTng3VXBGT3ZGa0FrTXhHMg?oc=5",
@@ -7196,6 +7390,11 @@
       "title": "Eric Trump-backed robot soldier startup can't pay staff after founder borrowed $4.6 million from company to buy home - CNBC",
       "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFA5YW05b2ptbVhhVkdHSnNqN2wwU1RaN1pHMGh3UUU3SlpWcUl0MVNINloxLVFmbVV4N0dWaU90RDBGb3p4MktjTDVVeUtIR25PVnNjLWhQeURhdkthcUJ2cUVmMkJ2OXUzVUNFZXF5UnBoQdIBd0FVX3lxTE9DQVVfcVVUOVhwbko1ME5GeG16NmR6Q2lWVnNNdU1mTjdYS3RmVVh2WDQyY2hqZWM4UGNvcWVnX3hhdkZFby1hVjRTVHFWUmg4TjNxSE93aDFPejc4SWFIM1RGOGVzR0xhdXAxbU5kUmtiLWxoZzFF?oc=5",
       "date": "Sat, 14 Nov 2026 12:00:01 GMT"
+    },
+    {
+      "title": "Xtend AI Robotics (NYSE:XTND) - Stock Analysis - Simply Wall St",
+      "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFAwMnZZUkRxZm1XbkwzZzcyclhRdnFtelhMTmFWVzd0RHcyVDd4ckM1TENUSExrUk1VbUFoU3RqV1ZDZzduWGl3c1J5ZU53aFBWQktCcGZjS1ZYTGxkMmxjRFBWUVNiZzM0VE92LXRQOS1CT245M2hZMXdfS1RLQQ?oc=5",
+      "date": "Sun, 15 Nov 2026 15:33:58 GMT"
     },
     {
       "title": "AI in Healthcare: 8 Stocks to Buy Now | Investing - US News Money",
@@ -7211,6 +7410,11 @@
       "title": "Jungwon Ensys AI Revenue Surges 438%... Q3 Revenue Up 21% - 아시아경제",
       "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1sRFBWTDloaVpTNkYyVEN1OXhGb2U1V0RvUnAtN0E1cmJxMmtEaVBrbE5pbjUyME5VSWxUZ0JfRzdwWGxRNzdQRDBES3JMMURaU0FmRE9McG9JMFdwYTczVG80cTdNXzFYNDlSQXBuanVRcS1DNldDaVBTOA?oc=5",
       "date": "Mon, 16 Nov 2026 01:12:32 GMT"
+    },
+    {
+      "title": "3 British Growth Stocks To Watch With Up To 85% Earnings Growth - Simply Wall St",
+      "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxORlV6WlBBWHdkaHhnYktkT2ZIZHRBWUhpbkdMbFFfeFNBVXVHcHJBeGZoMG9XOW16aHh2SDluYTQtbDF2ZktSdHVkUXdnMEJMTFNUamh3T2hqQnpoNGNrWFRHMUdDQTE5alRQTDdsUWVSNmF6ZEtLNnIyVGY2SDNYWmlEbkZ6N0RYVGU5dDhseHRaVUw5VWtHMm5JOEl6Z21BWG9fN1JsWnE0bGxGV0pGa0JMRlpqOTZweUpidDdqSmR0bWJsY1FZWGpwalc4bjZIZXZDSlJSWml5eVg50gHcAUFVX3lxTE5GVXpaUEFYd2RoeGdiS2RPZkhkdEFZSGluR0xsUV94U0FVdUdwckF4Zmgwb1c5bXpoeHZIOW5hNC1sMXZmS1J0dWRRd2cwQkxMU1RqaHdPaGpCemg0Y2tYVEcxR0NBMTlqVFBMN2xRZVI2YXpkS0s2cjJUZjZIM1haaURuRno3RFhUZTl0OGx4dFpVTDlVa0cybkk4SXpnbUFYb183UmxacTRsbEZXSkZrQkxGWmo5NnB5SmJ0N2pKZHRtYmxjUVlYanBqVzhuNkhldkNKUlJaaXl5WDk?oc=5",
+      "date": "Mon, 16 Nov 2026 05:26:44 GMT"
     },
     {
       "title": "3 Growth Stocks With Earnings Growth Up To 129% - Simply Wall St",
@@ -7233,19 +7437,9 @@
       "date": "Fri, 13 Nov 2026 16:14:48 GMT"
     },
     {
-      "title": "PONY Stock Quote Price and Forecast - CNN",
-      "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1tR2JZME5MYTBDUVRSMmVjUGdvdEZpLTZXbWVPMVROaWEzemMwR2VMekNYTWZEOVh2b0tLRGJTeUt6TXY0UWdBTEpiZmJ6R2VE?oc=5",
-      "date": "Fri, 13 Nov 2026 13:14:35 GMT"
-    },
-    {
-      "title": "FF EAI Robotics Ecosystem Inc. (FFR) CEO YT Jia Shares Weekly Updates on Robots Delivery to Central Michigan University, Brain Blocks AI Module, and Industrial Scenario Validation - PR Newswire",
-      "url": "https://news.google.com/rss/articles/CBMizwJBVV95cUxQTmduWDU5bXVSVWVRZ3RFYWdyRVFBYjNGZ0xuR2IxZFQ3bEFxTzRvel9MYXd0cDVjelpwWnJzWl9hUExvOTNQYlRFMjduVzBCSHpHRXpua0kzSXdRdDBIRDdOeDRrNlJ3dmVLOHFCWlI5eFN2WWJlcXdUY1JZOGZFVUhac0FUd0tMRXI1VXBQX0FfcEdFNG90Z1VCWEFlWXNfN1ZSQW9hZnJYQjZoWkRvNjhZbkdDcmpjYVpFaWVXNDUwanJfQkZJcmJpWVJYVWdGOF9XTXVlRmxLaVhsRTJtZlNOTUxHMG5UbEttQ1ZXcHNXMTRGb0dnc3BWbm9VaUhsSkJESTd1OTY2UFVWeHhiaUFoMzVINlpDalVFX00xR0Q4YnRLLS1NU05YUm9ZVVptY0V0UVVuazFfSlBORVltTTZ5VEhkXzM0Z1I4Rl81RQ?oc=5",
-      "date": "Mon, 16 Nov 2026 02:22:00 GMT"
-    },
-    {
-      "title": "3 Top Growth Stocks To Watch With Up To 63% Earnings Growth - Simply Wall St",
-      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOdUxGZ0FNNk9HS1MzblUzY1FGMTY4MDl1WkFoODR4bFk2N0k4WmgtLWVoUUxXTFFJTG1lV2dpYnZ6cFlJMjl4NzlreDg1a1pVLU9Gb0F2NTRnZHV5T0hyT1JlSEo1T3ZXSnhIbFV4OXU0T3ZmLTR3U3RmTDJiMTVpc2lhU1ZPUlJ1d25HWVhURXBjaGY2b1VoVU1JZkdkNmcwaGZlSU9SczRhR1h6R1BTSTlZc2VJR3N0Vzh0dldxLVFzb21ybWFTcEFR0gHKAUFVX3lxTE51TEZnQU02T0dLUzNuVTNjUUYxNjgwOXVaQWg4NHhsWTY3SThaaC0tZWhRTFdMUUlMbWVXZ2lidnpwWUkyOXg3OWt4ODVrWlUtT0ZvQXY1NGdkdXlPSHJPUmVISjVPdldKeEhsVXg5dTRPdmYtNHdTdGZMMmIxNWlzaWFTVk9SUnV3bkdZWFRFcGNoZjZvVWhVTUlmR2Q2ZzBoZmVJT1JzNGFHWHpHUFNJOVlzZUlHc3RXOHR2V3EtUXNvbXJtYVNwQVE?oc=5",
-      "date": "Sat, 14 Nov 2026 09:35:21 GMT"
+      "title": "Digi Power X posts 85% revenue growth as AI business outpaces Bitcoin mining - Crypto Briefing",
+      "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE41X0UyUFM5WVA0LU45SkNWVlFDWUF2MlVSaUJ0UHRqcFJ4UXVBb0kyV3p3RnZDVkY1VWpDbHNUV3RjT25qdVZseDE2bndYVWE2UkxCc0wyLVR3emxYUGNwUDV3bnNEWTFlSWZGbEIwNUJPZw?oc=5",
+      "date": "Mon, 16 Nov 2026 10:08:55 GMT"
     },
     {
       "title": "3 Cybersecurity Stocks To Watch With Earnings Growth Up To 45% - Simply Wall St",
@@ -7258,9 +7452,9 @@
       "date": "Sun, 15 Nov 2026 01:28:13 GMT"
     },
     {
-      "title": "3 British Growth Stocks To Watch With Up To 85% Earnings Growth - Simply Wall St",
-      "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQX0lrUWJadUFGaW0xR09MNWpPZ2c5cDFrTlcyUGZ3OHJMRmJNSHhheUhrc05sOVFLM3QtbXVwNVlTUUdSUGdSM1JYSFdkNWNQODFfaE5kbTlxcUFEZnNBX05CTTBKekJWTE5MdFJla1RBMS1wc1F6Yjlzck9RZWtLY2o2bEJrcTlRaW5MUUtYRkdNS1Rnbmt3TFNUVWN2R0I4YjZKYnNleW40VzdkMU1ydWU1TVNtdnV4c3JvbzJnQnFmMDdwT2FCRGlZRGpmZmJoSW9rN3Z4VdIB3AFBVV95cUxORlV6WlBBWHdkaHhnYktkT2ZIZHRBWUhpbkdMbFFfeFNBVXVHcHJBeGZoMG9XOW16aHh2SDluYTQtbDF2ZktSdHVkUXdnMEJMTFNUamh3T2hqQnpoNGNrWFRHMUdDQTE5alRQTDdsUWVSNmF6ZEtLNnIyVGY2SDNYWmlEbkZ6N0RYVGU5dDhseHRaVUw5VWtHMm5JOEl6Z21BWG9fN1JsWnE0bGxGV0pGa0JMRlpqOTZweUpidDdqSmR0bWJsY1FZWGpwalc4bjZIZXZDSlJSWml5eVg5?oc=5",
-      "date": "Mon, 16 Nov 2026 05:26:44 GMT"
+      "title": "Vicor And 2 Other Founder Led Stocks To Watch - Simply Wall St",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOaDJfR1M5VEdhZHhhT2tCVkhNRmtwQVByTjVabDZzZy1HZ2RFMjBPbDNPSTRnN3NyZVNTOHkzb3VpQ0ZSUDFJRy1PeFdRV251Y3RWRFIzWERNZFoyOGM5aTFsdlM5c1ZxU2hmLUZCTjZ4eEMtXzh0cFNQVUlZOWdLZ0t0VW5aZF93Njd1QVhScFRXVjJ6WUF6MmgyZ0I1bGZicnFWV1hrM0F2b3VIbDZYMHRPeHlHRlZldXfSAboBQVVfeXFMTmgyX0dTOVRHYWR4YU9rQlZITUZrcEFQck41Wmw2c2ctR2dkRTIwT2wzT0k0ZzdzcmVTUzh5M291aUNGUlAxSUctT3hXUVdudWN0VkRSM1hETWRaMjhjOWkxbHZTOXNWcVNoZi1GQk42eHhDLV84dHBTUFVJWTlnS2dLdFVuWmRfdzY3dUFYUnBUV1YyellBejJoMmdCNWxmYnJxVldYazNBdm91SGw2WDB0T3h5R0ZWZXV3?oc=5",
+      "date": "Fri, 13 Nov 2026 22:28:32 GMT"
     },
     {
       "title": "Digi Power X Earnings Call Signals AI Growth Surge - TipRanks",
@@ -7283,11 +7477,6 @@
       "date": "Sun, 15 Nov 2026 04:24:47 GMT"
     },
     {
-      "title": "Amazon Earnings Call Highlights AI-Led Growth and Margins - TipRanks",
-      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOc3o2c1hQQ1Q0Rkt5UkM1Q0NkTGt1R0xzS09aR1ExVEZ6WXBRY0l2Um5tRVBVQzl2eV9HZEFwY3FNcGlPTUZiSWc2WDMxbGVPU0NBWXF6dEFfYkU3bm5ZZ0NQamdadkZkVXRoZG9GQWhTSUNxWjdadHVNMVRrRjBadk9LSGk5TUZMMEZUNnRpdGtjdmNXSjI1UnQyaC1IODB5R01RUl9NU3FzN3NYbWc?oc=5",
-      "date": "Sun, 15 Nov 2026 00:36:06 GMT"
-    },
-    {
       "title": "Oshkosh Earnings Call Exposes Execution Strains Amid Strong Demand - TipRanks",
       "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNdmh4UHlVeExnN19BNlU5eXlmRHF5NkR2Y3M1WXowbTVZSmF2WVRvWWFOWnpYOEozQ1dhQ0pldFlLMlhJZHFaSFdRbnVoQUhnYjdGTTVHSDU0SHFRZ3FhM1BwQ1dQZHVNeHhvRHJLMHQxWm5SVUtESXhaX2NSUElONG1SYk5kUnFLN0k3c0RjLUxuWjJTalc4R19Ea1psNW1HRnlKVVJsNk4tY1JxeEMtMkxzaTdoZWVybVE?oc=5",
       "date": "Sun, 15 Nov 2026 00:30:03 GMT"
@@ -7296,6 +7485,11 @@
       "title": "FF EAI Robotics Ecosystem Reports Third-Quarter Results - TipRanks",
       "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNcFVHUTdhd3ZfcWhnVkk5X2k3UWZyLV96Nlc4VWR3eWE5S0ZrTEp3T1l1V041NExHT1JsN1l0a0RIWHVXRUdnRzQxU3lzVkpyWDdKYU5vS2MtVlZPcWI1UlJ0MUdEeFl5RXg4dDVXU2h6UHJOb19Ec2ktMDA2T29RaXY0Y29HSmEzLUNfLU1hY3Bxd2p5QWU4SHlZbUFmT2NxOE1vcExXNHF2enM?oc=5",
       "date": "Fri, 13 Nov 2026 20:35:29 GMT"
+    },
+    {
+      "title": "Amazon Earnings Call Highlights AI-Led Growth and Margins - TipRanks",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOc3o2c1hQQ1Q0Rkt5UkM1Q0NkTGt1R0xzS09aR1ExVEZ6WXBRY0l2Um5tRVBVQzl2eV9HZEFwY3FNcGlPTUZiSWc2WDMxbGVPU0NBWXF6dEFfYkU3bm5ZZ0NQamdadkZkVXRoZG9GQWhTSUNxWjdadHVNMVRrRjBadk9LSGk5TUZMMEZUNnRpdGtjdmNXSjI1UnQyaC1IODB5R01RUl9NU3FzN3NYbWc?oc=5",
+      "date": "Sun, 15 Nov 2026 00:36:06 GMT"
     },
     {
       "title": "Neostellar Capital Earnings Call Highlights AI Growth and Risks - TipRanks",
@@ -7373,14 +7567,14 @@
       "date": "Sun, 15 Nov 2026 18:07:39 GMT"
     },
     {
-      "title": "3 Undervalued Stocks With At Least 23% ROE - Simply Wall St",
-      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQc0dlTzRIaDBhdG1YTW4wX0tTTGN5bGxYdUtLODd2ZHl2OWFBQ2tiMXQtTmtwYlFuanJsOWxkWlNOZ2d0bzlNSFJPbFpOazM4MmFIXzg3NzdvLW5TOFpjYmNXakN4LUpuODd6dFdsRjREeE5zdFMyMndyWkpBVUJiSGhrZUxSV1l0dVNxT29NNGRDcXNoRkRPalJVdzV5eEEyNGg2Y2QyQ2doRXQ3Ujk1cW5B0gG3AUFVX3lxTE5NN0lCb0NZV3J0MmtqcWlvMFNuQjY2MmxaQjlFaTBjdWJEMnphay15WXJhRERlc2VReWpEV1dtY05zcnZwWFNyOFI2ZHdaUFd0VkxJX2FlSnF4Z0l0NnNEZUxIQmROSDVvQkFsaHM5RjVkRXpfX3ZxNERvOXU4VFl6WDMtYlV4Vkk4N2ctZmJweHVwejNqNldFRXhuUXBUbW5UR042YVFQRW1aRjE0bEE1cmdYc1NEaw?oc=5",
-      "date": "Sun, 15 Nov 2026 01:38:24 GMT"
-    },
-    {
       "title": "Nvidia And 3 AI Infrastructure Stocks For Data Center Power And Cooling - Simply Wall St",
       "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNSElwVDl1dWc3eDhzRjFmNTd0Z2Z0cmprdURLdmRBbUVlVTk0UjBEUEVpUUQ5bDFQNHA4c2VUVXJMb0ZZdmFMcjZtV2FuVmxlekQxbVV1bzBpRVNJTkxicmFLMUlDRzN4NzBEa3BSeWRlNkxQcG96bUhGUjRhOTE2TmljOHh0TVZuQWVHeWJBUVlrRGI4VUk2T3NONWdDTjBITWRLbUtzd2h4X19OakRjQXY2cXNfeUZiQURnY1Y5U2lTYndCVDg2d0NyZ28tYlRBSjdGSXRUX2xlbFI5bVHSAeMBQVVfeXFMUFNDbVBOSWppSU54OFNJSl9pUk1oM3RpUXNVN2h5aWtLZV9TWUNqU3hnSFEzeWRvdlF1UzVpTklWc2ZhWjJaMVk3dXphNjhsM0tuZnV5Z0s5c2hqOE9qSk5zOUhnMFJTV01wZlFVc05BdUNKUnBWTG9WWXhUQkJLLTlSR0M1RjBXb1ZxWnhBVms5X3ZWZ2J1V0RKZ3pOU1lmMTllWWdmZ1RCWDdLaUlSaUdFbnhmVVI5bnBpMWJhNUJuVkJXanpaeTZBU0RIbElOZTZSZlcxMHdNcjc0eVlycUs4QmM?oc=5",
       "date": "Sat, 14 Nov 2026 11:25:02 GMT"
+    },
+    {
+      "title": "3 Undervalued Stocks With At Least 23% ROE - Simply Wall St",
+      "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxQc0dlTzRIaDBhdG1YTW4wX0tTTGN5bGxYdUtLODd2ZHl2OWFBQ2tiMXQtTmtwYlFuanJsOWxkWlNOZ2d0bzlNSFJPbFpOazM4MmFIXzg3NzdvLW5TOFpjYmNXakN4LUpuODd6dFdsRjREeE5zdFMyMndyWkpBVUJiSGhrZUxSV1l0dVNxT29NNGRDcXNoRkRPalJVdzV5eEEyNGg2Y2QyQ2doRXQ3Ujk1cW5B0gG3AUFVX3lxTE5NN0lCb0NZV3J0MmtqcWlvMFNuQjY2MmxaQjlFaTBjdWJEMnphay15WXJhRERlc2VReWpEV1dtY05zcnZwWFNyOFI2ZHdaUFd0VkxJX2FlSnF4Z0l0NnNEZUxIQmROSDVvQkFsaHM5RjVkRXpfX3ZxNERvOXU4VFl6WDMtYlV4Vkk4N2ctZmJweHVwejNqNldFRXhuUXBUbW5UR042YVFQRW1aRjE0bEE1cmdYc1NEaw?oc=5",
+      "date": "Sun, 15 Nov 2026 01:38:24 GMT"
     },
     {
       "title": "NVIDIA And 2 Top Undervalued Stocks To Watch - Simply Wall St",
@@ -7388,14 +7582,14 @@
       "date": "Sat, 14 Nov 2026 21:26:32 GMT"
     },
     {
-      "title": "3 AI Infrastructure Stocks to Watch After Nvidia’s Pullback - Simply Wall St",
-      "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxPUGtxWF8wZWxYcW5RR3BUN0d3UTUzQmtiQ3QzOW0wVUk3NTRyemI3U3N0MUt0ZzJxaHBtR3JQYno3Qlc0bzNzNEU1X0RyYzl6bG4ybllxTHFIejJ3NjZ0UjVEZDg5Z3J0Q0wyMWcxN0VmbHBWeUxyb2pRYzRUaVFiVC1vUTUxNGNmamhRZjhqeEdkaklhWHVMaFNaTmE4SHFDSXA1Xy1xZ1RGMGduYjlqVkRmZVhXVjFkaGtPUDdtcC1TQTFsNk5jQVhSZVVnWVo1N3FnRjQ2T1Bxc1BmSUZhUjh5eEjSAeQBQVVfeXFMT1BrcVhfMGVsWHFuUUdwVDdHd1E1M0JrYkN0MzltMFVJNzU0cnpiN1NzdDFLdGcycWhwbUdyUGJ6N0JXNG8zczRFNV9EcmM5emxuMm5ZcUxxSHoydzY2dFI1RGQ4OWdydENMMjFnMTdFZmxwVnlMcm9qUWM0VGlRYlQtb1E1MTRjZmpoUWY4anhHZGpJYVh1TGhTWk5hOEhxQ0lwNV8tcWdURjBnbmI5alZEZmVYV1YxZGhrT1A3bXAtU0ExbDZOY0FYUmVVZ1laNTdxZ0Y0Nk9QcXNQZklGYVI4eXhI?oc=5",
-      "date": "Sat, 14 Nov 2026 18:18:03 GMT"
-    },
-    {
       "title": "3 AI Infrastructure Stocks Retail Investors Are Watching For Data Center Growth - Simply Wall St",
       "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxPamx5N3B0SkFkSUZMekZJZ1NNTGZkbzJfYjU3WE9pRUFxbDBwZmhEb3g5eW0tZE1vZjY5VGdISks4Z0JhRDd4MFZyWmEwTHk2OHZRZWw3SER1dEF1aW9XalZpeGlhMENvM0s1bU1GRzFnNjcxTDJudVgtXzdxTEN4UjBKTmNuajhOVUVxRHBoWHJsUWNwQ3JDY3J1VWdlRGRBZEJzRkM0MmU2RjlxNDBCbFhBVGZLcUdocjh4cGtJM2t0YnJBbkY4OGlNU1BPZTZzbkZpN2RwQnlVbnNaeEHSAeMBQVVfeXFMTWN0YXBXUXZwNm1OYzdZYTZsSk4tQnYyNkthM0VNTl9sYmhMa1k2M0lLVDZFNXFfa3o1TmlzUEVfYUlueGdYS0ZOX0Fxc0l4UjhNT0d6WE9YTGdWNUg1VVhCNkRHSUp0cU4zRkZHT2dLZmdsQ1puWTBLSUNXeGpIRHc0WFlTc2ZQcXdiVllpMmNCNDNzYTg4U0RRRzBuczVoeC1rLW92dGl3VW54VUNEV1BXNVMxeXJQeGFmS3llWFluUC1RMVlWaXYzbmJBR2dFYkwtWGI4MFRtalpsVXRPX0o2dUU?oc=5",
       "date": "Sat, 14 Nov 2026 02:30:42 GMT"
+    },
+    {
+      "title": "3 AI Infrastructure Stocks to Watch After Nvidia’s Pullback - Simply Wall St",
+      "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxPUGtxWF8wZWxYcW5RR3BUN0d3UTUzQmtiQ3QzOW0wVUk3NTRyemI3U3N0MUt0ZzJxaHBtR3JQYno3Qlc0bzNzNEU1X0RyYzl6bG4ybllxTHFIejJ3NjZ0UjVEZDg5Z3J0Q0wyMWcxN0VmbHBWeUxyb2pRYzRUaVFiVC1vUTUxNGNmamhRZjhqeEdkaklhWHVMaFNaTmE4SHFDSXA1Xy1xZ1RGMGduYjlqVkRmZVhXVjFkaGtPUDdtcC1TQTFsNk5jQVhSZVVnWVo1N3FnRjQ2T1Bxc1BmSUZhUjh5eEjSAeQBQVVfeXFMT1BrcVhfMGVsWHFuUUdwVDdHd1E1M0JrYkN0MzltMFVJNzU0cnpiN1NzdDFLdGcycWhwbUdyUGJ6N0JXNG8zczRFNV9EcmM5emxuMm5ZcUxxSHoydzY2dFI1RGQ4OWdydENMMjFnMTdFZmxwVnlMcm9qUWM0VGlRYlQtb1E1MTRjZmpoUWY4anhHZGpJYVh1TGhTWk5hOEhxQ0lwNV8tcWdURjBnbmI5alZEZmVYV1YxZGhrT1A3bXAtU0ExbDZOY0FYUmVVZ1laNTdxZ0Y0Nk9QcXNQZklGYVI4eXhI?oc=5",
+      "date": "Sat, 14 Nov 2026 18:18:03 GMT"
     },
     {
       "title": "3 Top-Ranked AI Stocks Holding Up Despite the Selloff - Yahoo Finance",
@@ -7403,14 +7597,14 @@
       "date": "Fri, 13 Nov 2026 18:39:00 GMT"
     },
     {
-      "title": "November 2026 Cash Flow Stocks Like NVIDIA Stock - Yahoo Finance Singapore",
-      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNQWtFQ0x4dDJXVDFFR1VsQ0twLW11NnlwTFlWdFNxN1dpTUhNQl85Zm85bFAzd0NqODJZN29sMmQ1UEJkQTRTYXotTnFRSVotUWQ1RUNNU1dQNWtxQWhRekpTcGFDRHRhSDYwWkdDS2k0SHZnWDhfNjN5TVRaaVFCNFBtNmlXUQ?oc=5",
-      "date": "Mon, 16 Nov 2026 08:09:26 GMT"
-    },
-    {
       "title": "HPE vs. SMCI: Which AI Infrastructure Stock Has More Upside Now? - Yahoo Finance",
       "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNTEQ0ZHhfNTRocnJTSzNOa2Q3a3cxV2RXRmhzZ2NfdjAxSHJqWmhMSXplTHlUbUwyVDZVUWNZb1dacVh5UmhYU21OM0xtSFNoZmQ2Sm9kRXJNSlRLdnF3Zm1KdllsWGFzSnhnUDZHUjNlUjZaRHFyeUZkaUltZGw1ODFnajIyS2Z4bzNXbW9wbks3aWx6QmxMSQ?oc=5",
       "date": "Fri, 13 Nov 2026 13:42:00 GMT"
+    },
+    {
+      "title": "November 2026 Cash Flow Stocks Like NVIDIA Stock - Yahoo Finance Singapore",
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxNQWtFQ0x4dDJXVDFFR1VsQ0twLW11NnlwTFlWdFNxN1dpTUhNQl85Zm85bFAzd0NqODJZN29sMmQ1UEJkQTRTYXotTnFRSVotUWQ1RUNNU1dQNWtxQWhRekpTcGFDRHRhSDYwWkdDS2k0SHZnWDhfNjN5TVRaaVFCNFBtNmlXUQ?oc=5",
+      "date": "Mon, 16 Nov 2026 08:09:26 GMT"
     },
     {
       "title": "Tech Weekly: NVIDIA Shakeup Rattles Chip Stocks, Anthropic Sets IPO Terms - Investing News Network",
@@ -7434,7 +7628,7 @@
     },
     {
       "title": "MaxLinear Stock In Focus After New AI Optics Power Chip Launch - Simply Wall St",
-      "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQT2MtamxqMU56UHpveEUxQ25lTkdlckFhdUducXJ1ckNMRjZZTGdkOWd1TDdQT3VUWVN0ZThWNmZialA0d1lrSkpWTl9YZDJRVkNucE5MMTFvaGVoN25YTEE1UGJZakFwTW16czNneDhCSmI5a29tSzRFYWZKNHNPLWpMUGIxME5fNVZac2w1dlpHNEx4WGdDT21fV2ZPam9lUGFVSldNdU1nU202VG9xZ3NiNTlPREJTOVJLYU5ieC1QRUxJcUx6ZHZSMFl1d9IB0wFBVV95cUxPaGo3bkc2SXRyVFRZX3Q5RkprTWwwQ25LNXdqNHMyYWxUNnU2UUhaMXk2bEhMZ0htNEtwc3Y3UWtsNjBLc0VlN1NjTUo3WnlFcWVTVEhjTGhQZ1lfcjVoaFZqcHBmQmFoV3BDa0UtU2RiZjRoMU5feXNvejdIZEVJR2g5dG81VU8yWVVaM0U2eXZ0NU8yaEZFUHR6bVBRVHlXNzVXMnRpNjlvelB0UzF1cV91NXpsaXU3YW1Kcm5VLUVySkN3UFJiZnVXQTdscVg2N1BZ?oc=5",
+      "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPaGo3bkc2SXRyVFRZX3Q5RkprTWwwQ25LNXdqNHMyYWxUNnU2UUhaMXk2bEhMZ0htNEtwc3Y3UWtsNjBLc0VlN1NjTUo3WnlFcWVTVEhjTGhQZ1lfcjVoaFZqcHBmQmFoV3BDa0UtU2RiZjRoMU5feXNvejdIZEVJR2g5dG81VU8yWVVaM0U2eXZ0NU8yaEZFUHR6bVBRVHlXNzVXMnRpNjlvelB0UzF1cV91NXpsaXU3YW1Kcm5VLUVySkN3UFJiZnVXQTdscVg2N1BZ0gHTAUFVX3lxTE9oajduRzZJdHJUVFlfdDlGSmtNbDBDbks1d2o0czJhbFQ2dTZRSFoxeTZsSExnSG00S3BzdjdRa2w2MEtzRWU3U2NNSjdaeUVxZVNUSGNMaFBnWV9yNWhoVmpwcGZCYWhXcENrRS1TZGJmNGgxTl95c296N0hkRUlHaDl0bzVVTzJZVVozRTZ5dnQ1TzJoRkVQdHptUFFUeVc3NVcydGk2OW96UHRTMXVxX3U1emxpdTdhbUpyblUtRXJKQ3dQUmJmdVdBN2xxWDY3UFk?oc=5",
       "date": "Fri, 13 Nov 2026 22:29:37 GMT"
     },
     {
@@ -7456,11 +7650,6 @@
       "title": "Singapore-Malaysia-China: How did Nvidia's AI chips move across borders? - Firstpost",
       "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOYTdiWURwaHhldjhmZHlnZ25hbXlUOWkyTXN0cUdEeHZ6X0Vja3VOaUhvalRRSVFvaE45SHpuSVRNa05nOXNlRFI1OV9obG9kckJDcnAtN0xHVHZ4Vl9aUEI3Tzl3Z2NHMHRKeGNSVmh6QWU5bTA3NVhTbEFhb3hXNG5BQ21ZUmtCNHplekpXaVdfaXgyY3hOdEFDT1FBWko3MlJOetIBqgFBVV95cUxQMDFCeW1icW5ETjZvNEtBRExjMVI5Wl9JcW5nMGQ3cXhpbDBoVlc5OVdCZTZWeC10RC1rVkdTX2NHUWVLUEpMZnZnMmNnX1Jmb1I1dVlhN05ERWFqT3g4dzRGWDg4QWJDWmpJYVIwSVhkcllWYW0tRnlHTkNZeFhGQ1U1MXdnRHd6b2hBM0gxRWpfbC0zZzlHM0JsQlJfajdPZ1VFMzZGN1FkZw?oc=5",
       "date": "Mon, 16 Nov 2026 04:24:14 GMT"
-    },
-    {
-      "title": "MISUMI Connects Digital Manufacturing, AI and Smarter Procurement - The Worldfolio",
-      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPMllUdjlpdmVNemdBWHc2Uzdod3pHV094Wm5Fa1NCc05KNGZYdFhaNnVnNEQxOFJKN19QVTN2YURkQUpfMk5aVXBLckZVcE9KV2JUZWJVZXFNYzJjNi1GcFJPYzdCNzNCVktNUmxueXBTdTlMaUJGcV8wa29fb19vSUxoWTVDU2NtcUdBYTAtM0l1Z1ZFVXZWUVNzMVdpcXFGX3V0T3RVaHI0bkNyQ0R5dg?oc=5",
-      "date": "Mon, 16 Nov 2026 04:59:17 GMT"
     },
     {
       "title": "IL Enters Physical AI's Core 'Robotic Hand' Business... Files Trademark Application for 'ILHAND' - 아시아경제",
@@ -7493,6 +7682,11 @@
       "date": "Fri, 13 Nov 2026 15:00:01 GMT"
     },
     {
+      "title": "Fady Saad, Founder and General Partner of Cybernetix Ventures – Interview Series - Unite.AI",
+      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNYlFxSTM5SERST1R3bXJfbEVERjdvWE1oWjA0eDdzeGxrWVdUaXJmWFpZUXhXSlRzVUF2dkRhRnpOZ3NVaGRNRk5GWDY3c3lEa0VNRGtvSFJHLUZnNC1jblRtUjkweUVrUnAyRjVoMTlDYloteVlHaWlLSTRMeC1TRDFCbFZtNEFEQ1NrQ2VvLW1YWjZscmVGVVhEaFVRWi1G?oc=5",
+      "date": "Fri, 13 Nov 2026 17:37:01 GMT"
+    },
+    {
       "title": "JPMorgan Forecasts 1.5 Million US Humanoid Robots by 2035 - eWeek",
       "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE01QjF6ZlBobGl1ZG5NNFJ0M21Fb0llVzlNRFpVOFVfNERMRHp6VVBrUTJpNXNiYWl1OVlUcTBvY2NwbHJNZVhLYk1aT3ZBeWRPdWZPZ25fSm0yelZXSkNUanJkNC1xSVhnWS16dQ?oc=5",
       "date": "Fri, 13 Nov 2026 16:20:16 GMT"
@@ -7516,6 +7710,11 @@
       "title": "3 Robotics Stocks With Software Revenue Leverage in Automation - Simply Wall St",
       "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxPdl90VEEtY1pNbHFjZjVOMDVudFdrR0JKLW1vWk96eFNra25aOHZHYWhPcDd3TzZ6QWRoQXpqNEhiSExpYngzbTBlNEplbEFLSFlxd3FraXhXSU1tbVd4czZWSGZ0WVJScHozd0Q1bng4ZVQxNVJnNjYtTjc5aVN3eTlLeFYwOENWcF9DMnJWWmhaSi0wNXFjcFpBRGxTbFhnNk9iRnpRdlhKeU1MNUNwY3dqcmEzOXpVSE43dWlqUmFXYTNhS1VPSkNGcFAyRXQ3UV85WE84NlMyOVc1VHfSAd4BQVVfeXFMT3ZfdFRBLWNaTWxxY2Y1TjA1bnRXa0dCSi1tb1pPenhTa2tuWjh2R2FoT3A3d082ekFkaEF6ajRIYkhMaWJ4M20wZTRKZWxBS0hZcXdxa2l4V0lNbW1XeHM2VkhmdFlSUnB6M3dENW54OGVUMTVSZzY2LU43OWlTd3k5S3hWMDhDVnBfQzJyVlpoWkotMDVxY3BaQURsU2xYZzZPYkZ6UXZYSnlNTDVDcGN3anJhMzl6VUhON3VpalJhV2EzYUtVT0pDRnBQMkV0N1FfOVhPODZTMjlXNVR3?oc=5",
       "date": "Sat, 14 Nov 2026 18:20:30 GMT"
+    },
+    {
+      "title": "MISUMI Connects Digital Manufacturing, AI and Smarter Procurement - The Worldfolio",
+      "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPMllUdjlpdmVNemdBWHc2Uzdod3pHV094Wm5Fa1NCc05KNGZYdFhaNnVnNEQxOFJKN19QVTN2YURkQUpfMk5aVXBLckZVcE9KV2JUZWJVZXFNYzJjNi1GcFJPYzdCNzNCVktNUmxueXBTdTlMaUJGcV8wa29fb19vSUxoWTVDU2NtcUdBYTAtM0l1Z1ZFVXZWUVNzMVdpcXFGX3V0T3RVaHI0bkNyQ0R5dg?oc=5",
+      "date": "Mon, 16 Nov 2026 04:59:17 GMT"
     },
     {
       "title": "Toyota Motor (TSE:7203) Plans 400,000 Robots Across Its Global Factories - Yahoo Finance",
@@ -7638,14 +7837,14 @@
       "date": "Sun, 15 Nov 2026 13:20:32 GMT"
     },
     {
+      "title": "Gigabyte and Schneider Electric collaborate on AI factory infrastructure - ET Datacenters",
+      "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxQa21qWE9jRnZMdHlZS0dSSFdVd0VlQzJfcTNGRm5raUtMSWZLNTU1em9FZGhObzZfeXZ6NTFHWkU3Zlpna3VUbEJqMnQwU0lfN0Q1dVYtOWJxS0Z0LVNsVkc0UzZHRUxGT1dYSlBSZmFWcUp1V3RadzVaVWR3ZVo5d252cE11cDFuT0VLdmN5ZjduYTU2VUZJMFBaRWJ1MWpEdjBkQTFHdi1ucDloY1YzdWo2UnFEMVh6dENScEtwVjJNcFkxMGFtN3FnUDJKcjhwbTFfUWI4R3RqWmJTVUtCV3F4c1ZQYU1YbHhfR2hCT3lOeWI20gH4AUFVX3lxTE51OWNZc01sQ2g3SVZTcVFkZnNFZmlsLW5rNnVCZC1JeVF2MnRQUC1sNUI1OEZHdnV6VTZVWlJMclB5cWIzQzlheDVaVDEweUJyeDJZWWUzRWdCbmRKMW9RMEJmN0pOVUhreDdhd0QycTRoRHZKMS1oXzluV2JGYy12TWpORFhjZGoxUmJtbDBXNXR3bVk4QWhmMnNTVF9vWkN2Uk00UjJFN0dlRm5maThXRVBZUl90dF9JUmxfakpsdjJnd3lBWGtnRl9FM2ptRUdlcmJxYTVMMmlSNHlNdDE3V2lIVXZqZEh3eTN2ZUdjc1UybnlEVllX?oc=5",
+      "date": "Sat, 14 Nov 2026 03:44:05 GMT"
+    },
+    {
       "title": "AI data centres could triple power use of 650mn people - Daily Observer",
       "url": "https://news.google.com/rss/articles/CBMiSkFVX3lxTE90NkdyVDBtazJHaUtIc1ZsN1NpREx6ME9ndHp0V1pqNVhuTXlhSk4yeVh3d1lXNkl3SEliZUZRY1c5RWMwRVg0cG9n?oc=5",
       "date": "Mon, 16 Nov 2026 09:18:09 GMT"
-    },
-    {
-      "title": "GridAI Technologies Acquires Pronghorn Resources To Build Multi-Gigawatt AI Power Infrastructure Platform In Wyoming - Pulse 2.0",
-      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPWWQ0VFZsU2tXT1FzbTlDQTMxaFV5N01sTkFWVFJ4MTQya3FkdzljbEt0cW1KVG9mT0l0RkNJOXdmNjZIek16b2RRWTFXNFhiWTVSMThWcHVHTjZQcFNud2dfdm95ZzkxSkY5U25tTU41QjQxT2NEUjhTSEI5UElaZi1aeW5lZlZ5MkhyM2V1Mzh6QkRLNkctMklFblhXWlRCR2JnRENwaGF1bjNocVBTMElUblRQLXpuNng4a0ljLWkwM2huVlR0NjVhWTVuTlA0UVE?oc=5",
-      "date": "Mon, 16 Nov 2026 02:22:21 GMT"
     },
     {
       "title": "E.ON Eyes Ex-Nuclear Sites for Data Centres, 0 Named - shattered.io",
@@ -7658,9 +7857,9 @@
       "date": "Sat, 14 Nov 2026 23:10:11 GMT"
     },
     {
-      "title": "Gigabyte and Schneider Electric collaborate on AI factory infrastructure - ET Datacenters",
-      "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxQa21qWE9jRnZMdHlZS0dSSFdVd0VlQzJfcTNGRm5raUtMSWZLNTU1em9FZGhObzZfeXZ6NTFHWkU3Zlpna3VUbEJqMnQwU0lfN0Q1dVYtOWJxS0Z0LVNsVkc0UzZHRUxGT1dYSlBSZmFWcUp1V3RadzVaVWR3ZVo5d252cE11cDFuT0VLdmN5ZjduYTU2VUZJMFBaRWJ1MWpEdjBkQTFHdi1ucDloY1YzdWo2UnFEMVh6dENScEtwVjJNcFkxMGFtN3FnUDJKcjhwbTFfUWI4R3RqWmJTVUtCV3F4c1ZQYU1YbHhfR2hCT3lOeWI20gH4AUFVX3lxTE51OWNZc01sQ2g3SVZTcVFkZnNFZmlsLW5rNnVCZC1JeVF2MnRQUC1sNUI1OEZHdnV6VTZVWlJMclB5cWIzQzlheDVaVDEweUJyeDJZWWUzRWdCbmRKMW9RMEJmN0pOVUhreDdhd0QycTRoRHZKMS1oXzluV2JGYy12TWpORFhjZGoxUmJtbDBXNXR3bVk4QWhmMnNTVF9vWkN2Uk00UjJFN0dlRm5maThXRVBZUl90dF9JUmxfakpsdjJnd3lBWGtnRl9FM2ptRUdlcmJxYTVMMmlSNHlNdDE3V2lIVXZqZEh3eTN2ZUdjc1UybnlEVllX?oc=5",
-      "date": "Sat, 14 Nov 2026 03:44:05 GMT"
+      "title": "GridAI Technologies Acquires Pronghorn Resources To Build Multi-Gigawatt AI Power Infrastructure Platform In Wyoming - Pulse 2.0",
+      "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPWWQ0VFZsU2tXT1FzbTlDQTMxaFV5N01sTkFWVFJ4MTQya3FkdzljbEt0cW1KVG9mT0l0RkNJOXdmNjZIek16b2RRWTFXNFhiWTVSMThWcHVHTjZQcFNud2dfdm95ZzkxSkY5U25tTU41QjQxT2NEUjhTSEI5UElaZi1aeW5lZlZ5MkhyM2V1Mzh6QkRLNkctMklFblhXWlRCR2JnRENwaGF1bjNocVBTMElUblRQLXpuNng4a0ljLWkwM2huVlR0NjVhWTVuTlA0UVE?oc=5",
+      "date": "Mon, 16 Nov 2026 02:22:21 GMT"
     },
     {
       "title": "3 US Power Grid Stocks for AI Data Center Demand - Simply Wall St",
@@ -7713,102 +7912,102 @@
           "Yahoo: HTTP Error 404: Not Found"
         ]
       },
-      "FANUY": {
+      "NOW": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-13"
       },
-      "GLW": {
+      "NVDA": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-13"
       },
-      "GOOGL": {
+      "NVT": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-13"
       },
-      "HON": {
+      "ONDS": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-13"
       },
-      "HUBB": {
+      "ONTO": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-13"
       },
-      "INTC": {
+      "OUST": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-13"
       },
-      "ISRG": {
+      "PATH": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-13"
       },
-      "JOBY": {
+      "PDYN": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-13"
       },
-      "KLAC": {
+      "PLTR": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-13"
       },
-      "KTOS": {
+      "PWR": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-13"
       },
-      "LAZR": {
+      "QCOM": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-13"
       },
-      "LITE": {
+      "RCAT": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-13"
       },
-      "JBL": {
+      "ROK": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-13"
       },
-      "LRCX": {
+      "RR": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-13"
       },
-      "MBLY": {
+      "SERV": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-13"
       },
-      "META": {
+      "SIEGY": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-13"
       },
-      "MPWR": {
+      "SMCI": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-13"
       },
-      "MRVL": {
+      "SNOW": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-13"
       },
-      "MSFT": {
+      "SOUN": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-13"
       },
-      "MU": {
+      "SYM": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-13"
