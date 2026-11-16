@@ -57,8 +57,18 @@ def annual_values(facts,tags,unit='USD',instant=False):
             year=x['end'][:4]
             if year not in byyear or x['filed']>byyear[year]['filed']: byyear[year]=x
         vals=sorted(byyear.values(),key=lambda x:x['end'],reverse=True)
-        if vals:return [{'year':v['end'][:4],'end':v['end'],'value':v['val'],'filed':v['filed']} for v in vals[:3]]
+        if vals:return [{'year':v['end'][:4],'start':v.get('start'),'end':v['end'],'value':v['val'],'filed':v['filed']} for v in vals[:3]]
     return []
+def latest_common_end(metrics, *keys):
+    """Select the newest fiscal period shared by all requested flow metrics."""
+    if not keys or not all(metrics.get(k) for k in keys): return None, None
+    common={(x.get('start'),x.get('end')) for x in metrics[keys[0]]}
+    for key in keys[1:]: common &= {(x.get('start'),x.get('end')) for x in metrics[key]}
+    if not common: return None, None
+    start,end=max(common,key=lambda pair:pair[1])
+    values={key:next(x['value'] for x in metrics[key] if (x.get('start'),x.get('end'))==(start,end)) for key in keys}
+    return {'start':start,'end':end}, values
+
 def fundamentals(ticker,cik):
     data=sec_json('https://data.sec.gov/api/xbrl/companyfacts/CIK'+str(cik).zfill(10)+'.json')
     facts=data.get('facts',{}); metrics={}
@@ -75,24 +85,31 @@ def fundamentals(ticker,cik):
             if not metrics['shares'] or dei_share['end'] >= metrics['shares'][0]['end']:
                 metrics['shares']=[dei_share]
     latest=lambda key: metrics[key][0]['value'] if metrics[key] else None
-    rev=latest('revenue'); net=latest('net_income'); ocf=latest('operating_cash_flow'); capex=latest('capex')
-    margin=round(net/rev*100,1) if rev and net is not None else None
+    revenue_period,revenue_pair=latest_common_end(metrics,'revenue','net_income')
+    cashflow_period,cashflow_pair=latest_common_end(metrics,'operating_cash_flow','capex')
+    rev=latest('revenue')
+    net=revenue_pair.get('net_income') if revenue_pair else None
+    ocf=cashflow_pair.get('operating_cash_flow') if cashflow_pair else None
+    capex=cashflow_pair.get('capex') if cashflow_pair else None
+    revenue_latest=metrics['revenue'][0] if metrics['revenue'] else None
+    margin=round(net/rev*100,1) if rev and net is not None and revenue_period and revenue_latest and (revenue_period['start'],revenue_period['end'])==(revenue_latest.get('start'),revenue_latest.get('end')) else None
     fcf=ocf-abs(capex) if ocf is not None and capex is not None else None
+    periods_aligned=bool(revenue_period and cashflow_period and revenue_latest and (revenue_period['start'],revenue_period['end'])==(revenue_latest.get('start'),revenue_latest.get('end')) and revenue_period['end']==metrics['net_income'][0]['end'] and revenue_period['start']==metrics['net_income'][0].get('start') and cashflow_period['end']==metrics['operating_cash_flow'][0]['end']==metrics['capex'][0]['end'] and cashflow_period['start']==metrics['operating_cash_flow'][0].get('start')==metrics['capex'][0].get('start'))
     growth=None
     if len(metrics['revenue'])>1:
         a,b=metrics['revenue'][:2]
         if int(a['year'])-int(b['year'])==1 and b['value']>0:growth=round((a['value']/b['value']-1)*100,1)
     debt=(latest('debt_current') or 0)+(latest('debt_long') or 0) if latest('debt_current') is not None or latest('debt_long') is not None else None
     # This is a data-coverage-aware descriptive score, not a buy recommendation.
-    checks=[growth is not None,margin is not None,fcf is not None]
+    checks=[growth is not None,margin is not None,fcf is not None,ocf is not None]
     score=None
-    if all(checks):
+    if all(checks) and periods_aligned:
         score=round(100*(int(growth>15)+int(margin>10)+int(fcf>0)+int(ocf is not None and ocf>0))/4)
     return {'source':'SEC EDGAR XBRL','fiscal_year':metrics['revenue'][0]['year'] if metrics['revenue'] else None,
       'revenue_usd':rev,'net_income_usd':net,'revenue_growth_pct':growth,'net_margin_pct':margin,'operating_cash_flow_usd':ocf,
       'free_cash_flow_usd':fcf,'cash_usd':latest('cash'),'debt_usd':debt,
       'financial_health_score':score,'score_label':'Prosty filtr 4 warunków, nie rekomendacja',
-      'shares_outstanding':latest('shares'),'shares_as_of':metrics['shares'][0]['end'] if metrics['shares'] else None,'revenue_period_end':metrics['revenue'][0]['end'] if metrics['revenue'] else None,'net_income_period_end':metrics['net_income'][0]['end'] if metrics['net_income'] else None,'cash_flow_period_end':metrics['operating_cash_flow'][0]['end'] if metrics['operating_cash_flow'] else None,'capex_period_end':metrics['capex'][0]['end'] if metrics['capex'] else None,'as_of':datetime.now(timezone.utc).isoformat(),'source_url':'https://www.sec.gov/edgar/browse/?CIK='+str(cik)}
+      'shares_outstanding':latest('shares'),'shares_as_of':metrics['shares'][0]['end'] if metrics['shares'] else None,'revenue_period_start':revenue_latest.get('start') if revenue_latest else None,'revenue_period_end':revenue_latest.get('end') if revenue_latest else None,'net_income_period_start':revenue_period.get('start') if revenue_period else None,'net_income_period_end':revenue_period.get('end') if revenue_period else None,'cash_flow_period_start':cashflow_period.get('start') if cashflow_period else None,'cash_flow_period_end':cashflow_period.get('end') if cashflow_period else None,'capex_period_start':cashflow_period.get('start') if cashflow_period else None,'capex_period_end':cashflow_period.get('end') if cashflow_period else None,'period_alignment':{'revenue_net_income_common_period':revenue_period,'cash_flow_capex_common_period':cashflow_period,'status':'aligned' if periods_aligned else 'partial_or_mismatched'},'period_mismatch_flags':([] if periods_aligned else ['annual_flow_periods_not_aligned']),'as_of':datetime.now(timezone.utc).isoformat(),'source_url':'https://www.sec.gov/edgar/browse/?CIK='+str(cik)}
 SEC_BATCH_SIZE=16  # max requests per six-hour scan; staggered, no paid API
 PRICE_BATCH_SIZE=24  # complete the 68-name rotation in about three successful scans
 
@@ -244,11 +261,13 @@ def calculate_valuation(company, today=None):
         if period_ok('revenue_period_end') and isinstance(revenue,(int,float)) and revenue>0:
             result['ps']=round(cap/revenue,2)
         net=f.get('net_income_usd')
-        if period_ok('net_income_period_end') and isinstance(net,(int,float)) and net>0:
+        if (period_ok('net_income_period_end') and f.get('net_income_period_end')==f.get('revenue_period_end') and f.get('net_income_period_start') and f.get('net_income_period_start')==f.get('revenue_period_start') and isinstance(net,(int,float)) and net>0):
             result['pe']=round(cap/net,2)
         fcf=f.get('free_cash_flow_usd')
         if (period_ok('cash_flow_period_end') and period_ok('capex_period_end')
             and f.get('cash_flow_period_end')==f.get('capex_period_end')
+            and f.get('cash_flow_period_start') and f.get('capex_period_start')
+            and f.get('cash_flow_period_start')==f.get('capex_period_start')
             and isinstance(fcf,(int,float))):
             result['fcf_yield_pct']=round(100*fcf/cap,2)
         return result
