@@ -193,7 +193,8 @@ def stooq_quote(ticker):
 
 def yahoo_quote(ticker):
     # Public chart endpoint: availability and redistribution rights may change.
-    if not re.fullmatch(r'[A-Z]{1,5}',ticker): raise QuoteError('unsupported ticker')
+    try: symbol=yahoo_symbol(ticker)
+    except ValueError as exc: raise QuoteError(str(exc)) from exc
     url='https://query1.finance.yahoo.com/v8/finance/chart/'+urllib.parse.quote(symbol)+'?interval=1d&range=6mo'
     req=urllib.request.Request(url,headers={'User-Agent':'Mozilla/5.0','Accept':'application/json'})
     with urllib.request.urlopen(req,timeout=12) as response:
@@ -400,7 +401,10 @@ def main():
     event_feed=load_event_risk_csv(ROOT/'data'/'corporate_events.csv')
     # Evaluate every security; absent feeds remain explicit blockers.
     for company in companies:
-        tech=technical_indicators(company.get('price') or {},benchmark_quote)
+        # Relative strength is only comparable to SPY for USD-denominated listings.
+        quote=company.get('price') or {}
+        comparable_benchmark=benchmark_quote if quote.get('currency','USD')=='USD' else None
+        tech=technical_indicators(quote,comparable_benchmark)
         company['technical']=tech
         q=company.get('price') or {}
         if tech.get('status')=='ok':
