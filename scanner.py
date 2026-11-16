@@ -186,6 +186,8 @@ def stooq_quote(ticker):
             if close>0 and volume>=0: bars.append({'date':row['Date'],'close':close,'volume':volume})
         except (TypeError,ValueError): continue
     quote=checked_quote(rows[-1].get('Close'),rows[-1].get('Date'),'Stooq EOD',url)
+    quote['currency']='USD'
+    quote['market_symbol']=ticker
     quote['bars']=bars
     return quote
 
@@ -248,6 +250,10 @@ def add_prices(companies,prior):
                 if not 0<=age<=7:q=None
             except (ValueError,KeyError,TypeError):q=None
         c['price']=q
+        if q and q.get('currency')!='USD':
+            c['price']['native_close']=c['price'].get('close_usd')
+            c['price']['native_currency']=q.get('currency')
+            c['price']['close_usd']=None
         try:
             refreshed=(datetime.now(timezone.utc)-datetime.fromisoformat(q['checked_at'])).total_seconds()<=900 if q and q.get('checked_at') else False
         except (ValueError,TypeError): refreshed=False
@@ -302,6 +308,7 @@ def calculate_valuation(company, today=None):
             'price_date':q.get('date'),'basis':'Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)'}
     try:
         price=float(q['close_usd']); shares=float(f['shares_outstanding'])
+        if q.get('currency','USD')!='USD': raise ValueError('non-USD quote requires verified FX conversion')
         if not (0<price<1e7 and 0<shares<1e13): raise ValueError('invalid price/shares')
         share_day=datetime.fromisoformat(f['shares_as_of']).date()
         quote_day=datetime.fromisoformat(q['date']).date()
@@ -420,7 +427,7 @@ def main():
         f=c.get('fundamentals') or {}
         q=c.get('price') or {}
         reasons=[]
-        if not q.get('close_usd'): reasons.append('price')
+        if not q.get('close_usd'): reasons.append('price_or_verified_fx')
         if not f: reasons.append('SEC_facts')
         elif not f.get('shares_outstanding'): reasons.append('shares')
         elif not f.get('shares_as_of'): reasons.append('shares_date')
