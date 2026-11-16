@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-16T15:13:50.058041+00:00",
+  "generated_at": "2026-11-16T15:15:27.407623+00:00",
   "source": "Google News RSS",
   "queries": [
     "artificial intelligence robotics stocks companies contracts earnings",
@@ -16,13 +16,8 @@
       "ticker": "NVDA",
       "name": "NVIDIA",
       "sector": "AI chips",
-      "mentions": 14,
+      "mentions": 13,
       "news": [
-        {
-          "title": "NVIDIA Corporation | History, GPUs, & Artificial Intelligence - Britannica",
-          "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1FMGstclM1R3lESkhtUUVPTDBHZktQWWMzcTFXa3VIR2FOcTJLcy1wQnlLMHo5MDRXeS10UTJudHRxNmpFX2hyWUZzX1ZTaVpBTng3VXBGT3ZGa0FrTXhHMg?oc=5",
-          "date": "Sun, 15 Nov 2026 05:38:00 GMT"
-        },
         {
           "title": "Tech Megatrend ETF manager: Tech opportunities extend well beyond Nvidia and the AI giants - Proactive financial news",
           "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxOVWIwaTJ0MTJNZHRaelh4YTBETmkzTGtVbDNUZEVIVjFfMW9mNFgtc25YVENOVmNGQ29faV94VUZVM19WYXhxVlR6YXAybE1jaF9uaXN4NXprSHpzZjJCUHhwdlF4NS1RcXFhQWFFUDFwMEhHYTdIZlp4WlNsbEM5a29hYnBWa0RVVmwxUXBYQnRuUHFfbERsTW9JaXNCWGhqR01ZZ18zWkt1SXJWNHZEckZfVW91T2RkRnBNVHRoX3N6SjFpQk9abjBmZHRqQXI5RURjRDliUllKSU52eHk1a05abHdGZXM?oc=5",
@@ -42,10 +37,15 @@
           "title": "Broadcom Stock Jumps as Nvidia’s Leadership Crisis Raises a Billion-Dollar Opportunity for Its AI Chip Business - Barchart.com",
           "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxOakJ6UHRvMjNXS2RoaXRvdWdYUXJmMmdEYnM1aGZOWTJGNlpITEVmcU1SdjNVZDlONHB6eDZxazdla1VVYUNvRzQzY1M4eXM2dzBEaTNCQXRyRDNaYUdjNmo3al9PanBJRXQzN2dOWnk2cG1fUHpqT09nR3pGSGJWdWRrMm9ySWk0eWhCU1NHbm5OTzdISzJXeVVJZDVKSVR3SEQxY0E1VUx2RDBfZ3FpLXRaWU9sNGVIQ25uMjJYcDlkYmphUVdGazVTWVQ0OXI2b2kwYjluVFh6S0FMU3lfOXdudzRqTjVhbVE?oc=5",
           "date": "Sun, 15 Nov 2026 14:25:25 GMT"
+        },
+        {
+          "title": "Nvidia And 3 AI Infrastructure Stocks For Data Center Power And Cooling - Simply Wall St",
+          "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNSElwVDl1dWc3eDhzRjFmNTd0Z2Z0cmprdURLdmRBbUVlVTk0UjBEUEVpUUQ5bDFQNHA4c2VUVXJMb0ZZdmFMcjZtV2FuVmxlekQxbVV1bzBpRVNJTkxicmFLMUlDRzN4NzBEa3BSeWRlNkxQcG96bUhGUjRhOTE2TmljOHh0TVZuQWVHeWJBUVlrRGI4VUk2T3NONWdDTjBITWRLbUtzd2h4X19OakRjQXY2cXNfeUZiQURnY1Y5U2lTYndCVDg2d0NyZ28tYlRBSjdGSXRUX2xlbFI5bVHSAeMBQVVfeXFMUFNDbVBOSWppSU54OFNJSl9pUk1oM3RpUXNVN2h5aWtLZV9TWUNqU3hnSFEzeWRvdlF1UzVpTklWc2ZhWjJaMVk3dXphNjhsM0tuZnV5Z0s5c2hqOE9qSk5zOUhnMFJTV01wZlFVc05BdUNKUnBWTG9WWXhUQkJLLTlSR0M1RjBXb1ZxWnhBVms5X3ZWZ2J1V0RKZ3pOU1lmMTllWWdmZ1RCWDdLaUlSaUdFbnhmVVI5bnBpMWJhNUJuVkJXanpaeTZBU0RIbElOZTZSZlcxMHdNcjc0eVlycUs4QmM?oc=5",
+          "date": "Sat, 14 Nov 2026 11:25:02 GMT"
         }
       ],
       "status": "Do analizy",
-      "attention_score": 97,
+      "attention_score": 96,
       "valuation_status": "Orientacyjna kapitalizacja i mnożniki roczne — nie ranking zakupu",
       "investment_score": null,
       "fundamentals": {
@@ -80,10 +80,10 @@
           "annual_flow_periods_not_aligned"
         ],
         "filed": "2026-02-25",
-        "as_of": "2026-11-16T10:28:48.519612+00:00",
+        "as_of": "2026-11-16T15:15:11.453198+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1045810"
       },
-      "fundamentals_quality": "cached",
+      "fundamentals_quality": "refreshed",
       "price": {
         "close_usd": 158.995,
         "date": "2026-11-16",
@@ -735,8 +735,8 @@
         "volume_ratio20": 0.429,
         "above_sma20": false,
         "above_sma50": false,
-        "relative_strength_20d_pct": -24.68,
-        "relative_strength_benchmark": "SPY",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
         "rsi_as_of": "2026-11-16",
         "sma20_as_of": "2026-11-16",
         "sma50_as_of": "2026-11-16",
@@ -765,8 +765,8 @@
         "volume_ratio20": 0.429,
         "above_sma20": false,
         "above_sma50": false,
-        "relative_strength_20d_pct": -24.68,
-        "relative_strength_benchmark": "SPY",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
         "method": "SMA20/SMA50 and simple RSI14 from daily bars; 20-session relative performance versus SPY on common dates"
       },
       "analyst_targets": {
@@ -784,7 +784,7 @@
         "strategy_version": "balanced-1.3.4-integrity",
         "signal": "WATCH",
         "buy_eligible": false,
-        "decision_stage": "data_gate",
+        "decision_stage": "analyst_consensus",
         "decision_trace": [
           {
             "stage": "data",
@@ -797,14 +797,22 @@
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
-            "actual": "cached",
+            "actual": "refreshed",
             "required": "refreshed",
+            "passed": true,
+            "reason": null
+          },
+          {
+            "stage": "consensus",
+            "check": "analyst_targets",
+            "actual": "unavailable",
+            "required": "documented",
             "passed": false,
-            "reason": "fundamentals_not_refreshed"
+            "reason": "analyst_consensus_missing"
           }
         ],
         "reasons": [
-          "fundamentals_not_refreshed"
+          "analyst_consensus_missing"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -1534,8 +1542,8 @@
         "volume_ratio20": 0.152,
         "above_sma20": false,
         "above_sma50": false,
-        "relative_strength_20d_pct": -5.1,
-        "relative_strength_benchmark": "SPY",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
         "rsi_as_of": "2026-11-16",
         "sma20_as_of": "2026-11-16",
         "sma50_as_of": "2026-11-16",
@@ -1564,8 +1572,8 @@
         "volume_ratio20": 0.152,
         "above_sma20": false,
         "above_sma50": false,
-        "relative_strength_20d_pct": -5.1,
-        "relative_strength_benchmark": "SPY",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
         "method": "SMA20/SMA50 and simple RSI14 from daily bars; 20-session relative performance versus SPY on common dates"
       },
       "analyst_targets": {
@@ -1670,7 +1678,7 @@
         "as_of": "2026-11-16T15:13:27.177285+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1018724"
       },
-      "fundamentals_quality": "refreshed",
+      "fundamentals_quality": "cached",
       "price": {
         "close_usd": 259.8056,
         "date": "2026-11-16",
@@ -2322,8 +2330,8 @@
         "volume_ratio20": 0.209,
         "above_sma20": true,
         "above_sma50": true,
-        "relative_strength_20d_pct": 1.81,
-        "relative_strength_benchmark": "SPY",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
         "rsi_as_of": "2026-11-16",
         "sma20_as_of": "2026-11-16",
         "sma50_as_of": "2026-11-16",
@@ -2352,805 +2360,8 @@
         "volume_ratio20": 0.209,
         "above_sma20": true,
         "above_sma50": true,
-        "relative_strength_20d_pct": 1.81,
-        "relative_strength_benchmark": "SPY",
-        "method": "SMA20/SMA50 and simple RSI14 from daily bars; 20-session relative performance versus SPY on common dates"
-      },
-      "analyst_targets": {
-        "status": "unavailable",
-        "reason": "no validated point-in-time analyst_consensus.csv row"
-      },
-      "entry_trigger": null,
-      "corporate_events": [],
-      "investment_risk_flags": {
-        "flags": [
-          "event_feed_missing"
-        ]
-      },
-      "investment_decision": {
-        "strategy_version": "balanced-1.3.4-integrity",
-        "signal": "WATCH",
-        "buy_eligible": false,
-        "decision_stage": "analyst_consensus",
-        "decision_trace": [
-          {
-            "stage": "data",
-            "check": "price_refreshed",
-            "actual": "refreshed",
-            "required": "refreshed",
-            "passed": true,
-            "reason": null
-          },
-          {
-            "stage": "data",
-            "check": "fundamentals_refreshed",
-            "actual": "refreshed",
-            "required": "refreshed",
-            "passed": true,
-            "reason": null
-          },
-          {
-            "stage": "consensus",
-            "check": "analyst_targets",
-            "actual": "unavailable",
-            "required": "documented",
-            "passed": false,
-            "reason": "analyst_consensus_missing"
-          }
-        ],
-        "reasons": [
-          "analyst_consensus_missing"
-        ],
-        "fundamental_score": null,
-        "entry_score": null
-      },
-      "signal": "WATCH",
-      "buy_eligible": false
-    },
-    {
-      "ticker": "INTC",
-      "name": "Intel",
-      "sector": "Semiconductors",
-      "mentions": 2,
-      "news": [
-        {
-          "title": "Can Edge AI Replace Intel’s Shrinking PC Business? - 24/7 Wall St.",
-          "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOVHZqNFI4MFBJeHdfV21CU2ZQcUxIaHMyU1BEbVJ3ZGM3WHVJeFYyN0pjNXNBWmxla09NQVBFZ003UXdFUXlNbGNLdVh3NE1nSmlrV0w3dUFRLVFDYlY1eVVWQ0N0aGhYV09OcmMzVlhVdDA3aU53YzJGRU1hZzVPY0IyMUphWXhvSTZ6QXJwZEdvRXRjUGN2aEx2bEZ2bm0yNmhIc3pHbU9NTnJ0bFRDcVZHakJHeklFRTBzNWxDdjdMdVBneFE?oc=5",
-          "date": "Mon, 16 Nov 2026 12:54:00 GMT"
-        },
-        {
-          "title": "NVIDIA Corporation | History, GPUs, & Artificial Intelligence - Britannica",
-          "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1FMGstclM1R3lESkhtUUVPTDBHZktQWWMzcTFXa3VIR2FOcTJLcy1wQnlLMHo5MDRXeS10UTJudHRxNmpFX2hyWUZzX1ZTaVpBTng3VXBGT3ZGa0FrTXhHMg?oc=5",
-          "date": "Sun, 15 Nov 2026 05:38:00 GMT"
-        }
-      ],
-      "status": "Do analizy",
-      "attention_score": 39,
-      "valuation_status": "Orientacyjna kapitalizacja i mnożniki roczne — nie ranking zakupu",
-      "investment_score": null,
-      "fundamentals": {
-        "source": "SEC EDGAR XBRL",
-        "fiscal_year": "2025",
-        "revenue_usd": 52853000000,
-        "net_income_usd": -267000000,
-        "revenue_growth_pct": -0.5,
-        "net_margin_pct": -0.5,
-        "operating_cash_flow_usd": 9697000000,
-        "free_cash_flow_usd": -4949000000,
-        "cash_usd": 14265000000,
-        "debt_usd": 46585000000,
-        "financial_health_score": 25,
-        "score_label": "Prosty filtr 4 warunków, nie rekomendacja",
-        "shares_outstanding": 5315000000,
-        "shares_as_of": "2026-10-23",
-        "revenue_period_start": "2024-12-29",
-        "revenue_period_end": "2025-12-27",
-        "net_income_period_start": "2024-12-29",
-        "net_income_period_end": "2025-12-27",
-        "cash_flow_period_start": "2024-12-29",
-        "cash_flow_period_end": "2025-12-27",
-        "capex_period_start": "2024-12-29",
-        "capex_period_end": "2025-12-27",
-        "period_alignment": {
-          "status": "aligned",
-          "revenue_net_income": {
-            "start": "2024-12-29",
-            "end": "2025-12-27"
-          },
-          "cash_flow_capex": {
-            "start": "2024-12-29",
-            "end": "2025-12-27"
-          }
-        },
-        "period_mismatch_flags": [],
-        "filed": "2026-01-23",
-        "as_of": "2026-11-16T10:28:45.822178+00:00",
-        "source_url": "https://www.sec.gov/edgar/browse/?CIK=50863"
-      },
-      "fundamentals_quality": "cached",
-      "price": {
-        "close_usd": 56.06,
-        "date": "2026-11-16",
-        "age_days": 0,
-        "source": "Yahoo Finance chart EOD",
-        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/INTC?interval=1d&range=6mo",
-        "is_live": false,
-        "bars": [
-          {
-            "date": "2026-05-18",
-            "close": 108.16999816894531,
-            "volume": 145764000.0
-          },
-          {
-            "date": "2026-05-19",
-            "close": 110.80000305175781,
-            "volume": 150234900.0
-          },
-          {
-            "date": "2026-05-20",
-            "close": 118.95999908447266,
-            "volume": 165086900.0
-          },
-          {
-            "date": "2026-05-21",
-            "close": 118.5,
-            "volume": 102452500.0
-          },
-          {
-            "date": "2026-05-22",
-            "close": 119.83999633789062,
-            "volume": 82663000.0
-          },
-          {
-            "date": "2026-05-26",
-            "close": 123.5199966430664,
-            "volume": 108167300.0
-          },
-          {
-            "date": "2026-05-27",
-            "close": 121.7699966430664,
-            "volume": 93323300.0
-          },
-          {
-            "date": "2026-05-28",
-            "close": 120.88999938964844,
-            "volume": 97321000.0
-          },
-          {
-            "date": "2026-05-29",
-            "close": 114.68000030517578,
-            "volume": 191676100.0
-          },
-          {
-            "date": "2026-06-01",
-            "close": 109.33000183105469,
-            "volume": 134900400.0
-          },
-          {
-            "date": "2026-06-02",
-            "close": 107.93000030517578,
-            "volume": 106336200.0
-          },
-          {
-            "date": "2026-06-03",
-            "close": 112.70999908447266,
-            "volume": 118928800.0
-          },
-          {
-            "date": "2026-06-04",
-            "close": 111.77999877929688,
-            "volume": 77325800.0
-          },
-          {
-            "date": "2026-06-05",
-            "close": 99.16999816894531,
-            "volume": 145209400.0
-          },
-          {
-            "date": "2026-06-08",
-            "close": 110.2699966430664,
-            "volume": 136973900.0
-          },
-          {
-            "date": "2026-06-09",
-            "close": 107.91999816894531,
-            "volume": 149623100.0
-          },
-          {
-            "date": "2026-06-10",
-            "close": 107.04000091552734,
-            "volume": 122653500.0
-          },
-          {
-            "date": "2026-06-11",
-            "close": 116.95999908447266,
-            "volume": 188430300.0
-          },
-          {
-            "date": "2026-06-12",
-            "close": 124.56999969482422,
-            "volume": 151169400.0
-          },
-          {
-            "date": "2026-06-15",
-            "close": 127.86000061035156,
-            "volume": 134507500.0
-          },
-          {
-            "date": "2026-06-16",
-            "close": 117.05000305175781,
-            "volume": 132962600.0
-          },
-          {
-            "date": "2026-06-17",
-            "close": 121.0999984741211,
-            "volume": 115324900.0
-          },
-          {
-            "date": "2026-06-18",
-            "close": 133.99000549316406,
-            "volume": 233906600.0
-          },
-          {
-            "date": "2026-06-22",
-            "close": 140.94000244140625,
-            "volume": 127190600.0
-          },
-          {
-            "date": "2026-06-23",
-            "close": 132.27999877929688,
-            "volume": 132976700.0
-          },
-          {
-            "date": "2026-06-24",
-            "close": 131.64999389648438,
-            "volume": 104591700.0
-          },
-          {
-            "date": "2026-06-25",
-            "close": 132.8699951171875,
-            "volume": 122588800.0
-          },
-          {
-            "date": "2026-06-26",
-            "close": 128.32000732421875,
-            "volume": 99475400.0
-          },
-          {
-            "date": "2026-06-29",
-            "close": 131.72000122070312,
-            "volume": 106805300.0
-          },
-          {
-            "date": "2026-06-30",
-            "close": 139.6300048828125,
-            "volume": 116996700.0
-          },
-          {
-            "date": "2026-07-01",
-            "close": 127.0199966430664,
-            "volume": 113107200.0
-          },
-          {
-            "date": "2026-07-02",
-            "close": 120.3499984741211,
-            "volume": 124577600.0
-          },
-          {
-            "date": "2026-07-06",
-            "close": 122.19999694824219,
-            "volume": 86950200.0
-          },
-          {
-            "date": "2026-07-07",
-            "close": 110.38999938964844,
-            "volume": 140405900.0
-          },
-          {
-            "date": "2026-07-08",
-            "close": 110.23999786376953,
-            "volume": 105488100.0
-          },
-          {
-            "date": "2026-07-09",
-            "close": 112.54000091552734,
-            "volume": 99352500.0
-          },
-          {
-            "date": "2026-07-10",
-            "close": 109.83999633789062,
-            "volume": 70846600.0
-          },
-          {
-            "date": "2026-07-13",
-            "close": 103.12000274658203,
-            "volume": 100988800.0
-          },
-          {
-            "date": "2026-07-14",
-            "close": 107.76000213623047,
-            "volume": 91129000.0
-          },
-          {
-            "date": "2026-07-15",
-            "close": 102.98999786376953,
-            "volume": 120625500.0
-          },
-          {
-            "date": "2026-07-16",
-            "close": 96.9800033569336,
-            "volume": 107742900.0
-          },
-          {
-            "date": "2026-07-17",
-            "close": 95.04000091552734,
-            "volume": 126779300.0
-          },
-          {
-            "date": "2026-07-20",
-            "close": 97.05999755859375,
-            "volume": 89741400.0
-          },
-          {
-            "date": "2026-07-21",
-            "close": 105.44999694824219,
-            "volume": 105429400.0
-          },
-          {
-            "date": "2026-07-22",
-            "close": 102.62000274658203,
-            "volume": 78431000.0
-          },
-          {
-            "date": "2026-07-23",
-            "close": 100.2300033569336,
-            "volume": 140806900.0
-          },
-          {
-            "date": "2026-07-24",
-            "close": 92.31999969482422,
-            "volume": 181132900.0
-          },
-          {
-            "date": "2026-07-27",
-            "close": 91.66999816894531,
-            "volume": 133247300.0
-          },
-          {
-            "date": "2026-07-28",
-            "close": 86.30000305175781,
-            "volume": 154346700.0
-          },
-          {
-            "date": "2026-07-29",
-            "close": 81.87999725341797,
-            "volume": 152394600.0
-          },
-          {
-            "date": "2026-07-30",
-            "close": 91.12999725341797,
-            "volume": 140322600.0
-          },
-          {
-            "date": "2026-07-31",
-            "close": 90.19999694824219,
-            "volume": 109039500.0
-          },
-          {
-            "date": "2026-08-03",
-            "close": 91.0,
-            "volume": 96633600.0
-          },
-          {
-            "date": "2026-08-04",
-            "close": 100.86000061035156,
-            "volume": 124355100.0
-          },
-          {
-            "date": "2026-08-05",
-            "close": 101.05999755859375,
-            "volume": 85388400.0
-          },
-          {
-            "date": "2026-08-06",
-            "close": 99.80999755859375,
-            "volume": 78088100.0
-          },
-          {
-            "date": "2026-08-07",
-            "close": 101.6500015258789,
-            "volume": 76760600.0
-          },
-          {
-            "date": "2026-08-10",
-            "close": 97.5199966430664,
-            "volume": 101153400.0
-          },
-          {
-            "date": "2026-08-11",
-            "close": 97.70999908447266,
-            "volume": 164063600.0
-          },
-          {
-            "date": "2026-08-12",
-            "close": 100.94999694824219,
-            "volume": 162446700.0
-          },
-          {
-            "date": "2026-08-13",
-            "close": 104.55999755859375,
-            "volume": 116837600.0
-          },
-          {
-            "date": "2026-08-14",
-            "close": 102.5,
-            "volume": 95387500.0
-          },
-          {
-            "date": "2026-08-17",
-            "close": 103.48999786376953,
-            "volume": 88616800.0
-          },
-          {
-            "date": "2026-08-18",
-            "close": 96.69000244140625,
-            "volume": 121969500.0
-          },
-          {
-            "date": "2026-08-19",
-            "close": 92.80000305175781,
-            "volume": 110268600.0
-          },
-          {
-            "date": "2026-08-20",
-            "close": 92.12999725341797,
-            "volume": 85654700.0
-          },
-          {
-            "date": "2026-08-21",
-            "close": 90.06999969482422,
-            "volume": 91670100.0
-          },
-          {
-            "date": "2026-08-24",
-            "close": 87.26000213623047,
-            "volume": 96903400.0
-          },
-          {
-            "date": "2026-08-25",
-            "close": 87.4800033569336,
-            "volume": 81853800.0
-          },
-          {
-            "date": "2026-08-26",
-            "close": 88.23999786376953,
-            "volume": 75752800.0
-          },
-          {
-            "date": "2026-08-27",
-            "close": 92.08999633789062,
-            "volume": 100556800.0
-          },
-          {
-            "date": "2026-08-28",
-            "close": 89.47000122070312,
-            "volume": 86172600.0
-          },
-          {
-            "date": "2026-08-31",
-            "close": 89.51000213623047,
-            "volume": 65188200.0
-          },
-          {
-            "date": "2026-09-01",
-            "close": 88.97000122070312,
-            "volume": 73962100.0
-          },
-          {
-            "date": "2026-09-02",
-            "close": 90.05000305175781,
-            "volume": 61554500.0
-          },
-          {
-            "date": "2026-09-03",
-            "close": 91.66999816894531,
-            "volume": 79927800.0
-          },
-          {
-            "date": "2026-09-04",
-            "close": 95.80000305175781,
-            "volume": 97654300.0
-          },
-          {
-            "date": "2026-09-08",
-            "close": 104.47000122070312,
-            "volume": 140269300.0
-          },
-          {
-            "date": "2026-09-09",
-            "close": 106.23999786376953,
-            "volume": 96891400.0
-          },
-          {
-            "date": "2026-09-10",
-            "close": 100.31999969482422,
-            "volume": 96887100.0
-          },
-          {
-            "date": "2026-09-11",
-            "close": 102.94000244140625,
-            "volume": 86990400.0
-          },
-          {
-            "date": "2026-09-14",
-            "close": 97.19000244140625,
-            "volume": 96459700.0
-          },
-          {
-            "date": "2026-09-15",
-            "close": 97.13999938964844,
-            "volume": 84999300.0
-          },
-          {
-            "date": "2026-09-16",
-            "close": 101.05000305175781,
-            "volume": 119923600.0
-          },
-          {
-            "date": "2026-09-17",
-            "close": 108.80000305175781,
-            "volume": 149726000.0
-          },
-          {
-            "date": "2026-09-18",
-            "close": 108.5999984741211,
-            "volume": 174996700.0
-          },
-          {
-            "date": "2026-09-21",
-            "close": 121.77999877929688,
-            "volume": 191638400.0
-          },
-          {
-            "date": "2026-09-22",
-            "close": 123.86000061035156,
-            "volume": 108379400.0
-          },
-          {
-            "date": "2026-09-23",
-            "close": 122.5999984741211,
-            "volume": 85621100.0
-          },
-          {
-            "date": "2026-09-24",
-            "close": 127.38999938964844,
-            "volume": 119296700.0
-          },
-          {
-            "date": "2026-09-25",
-            "close": 123.0,
-            "volume": 97728400.0
-          },
-          {
-            "date": "2026-09-28",
-            "close": 116.02999877929688,
-            "volume": 112436900.0
-          },
-          {
-            "date": "2026-09-29",
-            "close": 115.93000030517578,
-            "volume": 88744500.0
-          },
-          {
-            "date": "2026-09-30",
-            "close": 120.2300033569336,
-            "volume": 94917200.0
-          },
-          {
-            "date": "2026-10-01",
-            "close": 120.0,
-            "volume": 103559800.0
-          },
-          {
-            "date": "2026-10-02",
-            "close": 119.33000183105469,
-            "volume": 95401500.0
-          },
-          {
-            "date": "2026-10-05",
-            "close": 116.19000244140625,
-            "volume": 81331800.0
-          },
-          {
-            "date": "2026-10-06",
-            "close": 112.5,
-            "volume": 101938800.0
-          },
-          {
-            "date": "2026-10-07",
-            "close": 113.12000274658203,
-            "volume": 82861900.0
-          },
-          {
-            "date": "2026-10-08",
-            "close": 107.08000183105469,
-            "volume": 120196700.0
-          },
-          {
-            "date": "2026-10-09",
-            "close": 104.69999694824219,
-            "volume": 75017800.0
-          },
-          {
-            "date": "2026-10-12",
-            "close": 101.3499984741211,
-            "volume": 74171900.0
-          },
-          {
-            "date": "2026-10-13",
-            "close": 102.80999755859375,
-            "volume": 88252000.0
-          },
-          {
-            "date": "2026-10-14",
-            "close": 98.12000274658203,
-            "volume": 104592800.0
-          },
-          {
-            "date": "2026-10-15",
-            "close": 95.37000274658203,
-            "volume": 147157700.0
-          },
-          {
-            "date": "2026-10-16",
-            "close": 89.8499984741211,
-            "volume": 123003100.0
-          },
-          {
-            "date": "2026-10-19",
-            "close": 92.02999877929688,
-            "volume": 101608800.0
-          },
-          {
-            "date": "2026-10-20",
-            "close": 91.69000244140625,
-            "volume": 84058600.0
-          },
-          {
-            "date": "2026-10-21",
-            "close": 92.95999908447266,
-            "volume": 75566800.0
-          },
-          {
-            "date": "2026-10-22",
-            "close": 85.48999786376953,
-            "volume": 134128100.0
-          },
-          {
-            "date": "2026-10-23",
-            "close": 86.95999908447266,
-            "volume": 72093700.0
-          },
-          {
-            "date": "2026-10-26",
-            "close": 90.47000122070312,
-            "volume": 98744200.0
-          },
-          {
-            "date": "2026-10-27",
-            "close": 93.73999786376953,
-            "volume": 90523300.0
-          },
-          {
-            "date": "2026-10-28",
-            "close": 95.52999877929688,
-            "volume": 82592400.0
-          },
-          {
-            "date": "2026-10-29",
-            "close": 92.06999969482422,
-            "volume": 134168700.0
-          },
-          {
-            "date": "2026-10-30",
-            "close": 65.76000213623047,
-            "volume": 455599400.0
-          },
-          {
-            "date": "2026-11-02",
-            "close": 59.970001220703125,
-            "volume": 230689500.0
-          },
-          {
-            "date": "2026-11-03",
-            "close": 60.54999923706055,
-            "volume": 149052100.0
-          },
-          {
-            "date": "2026-11-04",
-            "close": 58.27000045776367,
-            "volume": 189308900.0
-          },
-          {
-            "date": "2026-11-05",
-            "close": 52.25,
-            "volume": 270291000.0
-          },
-          {
-            "date": "2026-11-06",
-            "close": 56.279998779296875,
-            "volume": 174382300.0
-          },
-          {
-            "date": "2026-11-09",
-            "close": 59.369998931884766,
-            "volume": 147250200.0
-          },
-          {
-            "date": "2026-11-10",
-            "close": 58.130001068115234,
-            "volume": 100978200.0
-          },
-          {
-            "date": "2026-11-11",
-            "close": 62.5,
-            "volume": 133190900.0
-          },
-          {
-            "date": "2026-11-12",
-            "close": 61.20000076293945,
-            "volume": 80687500.0
-          },
-          {
-            "date": "2026-11-13",
-            "close": 59.65999984741211,
-            "volume": 102322800.0
-          },
-          {
-            "date": "2026-11-16",
-            "close": 56.060001373291016,
-            "volume": 19265139.0
-          }
-        ],
-        "checked_at": "2026-11-16T15:05:17.200101+00:00",
-        "sma20": 71.9454999923706,
-        "sma50": 94.17860023498535,
-        "rsi_14": 21.19,
-        "volume_ratio20": 0.136,
-        "above_sma20": false,
-        "above_sma50": false,
-        "rsi_as_of": "2026-11-16",
-        "sma20_as_of": "2026-11-16",
-        "sma50_as_of": "2026-11-16",
-        "volume_as_of": "2026-11-16",
-        "relative_strength_20d_pct": -37.35,
-        "relative_strength_benchmark": "SPY"
-      },
-      "price_quality": "refreshed",
-      "valuation": {
-        "status": "partial",
-        "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 297958900000,
-        "ps": 5.64,
-        "pe": null,
-        "fcf_yield_pct": -1.66,
-        "share_date": "2026-10-23",
-        "price_date": "2026-11-16",
-        "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)",
-        "periods_aligned": true
-      },
-      "technical": {
-        "status": "ok",
-        "bars": 127,
-        "date": "2026-11-16",
-        "sma20": 71.9454999923706,
-        "sma50": 94.17860023498535,
-        "rsi_14": 21.19,
-        "volume_ratio20": 0.136,
-        "above_sma20": false,
-        "above_sma50": false,
-        "relative_strength_20d_pct": -37.35,
-        "relative_strength_benchmark": "SPY",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
         "method": "SMA20/SMA50 and simple RSI14 from daily bars; 20-session relative performance versus SPY on common dates"
       },
       "analyst_targets": {
@@ -3250,7 +2461,7 @@
           "annual_flow_periods_not_aligned"
         ],
         "filed": "2025-12-18",
-        "as_of": "2026-11-16T15:13:22.099283+00:00",
+        "as_of": "2026-11-16T15:15:08.371830+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1730168"
       },
       "fundamentals_quality": "refreshed",
@@ -3905,8 +3116,8 @@
         "volume_ratio20": 0.219,
         "above_sma20": true,
         "above_sma50": false,
-        "relative_strength_20d_pct": 1.68,
-        "relative_strength_benchmark": "SPY",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
         "rsi_as_of": "2026-11-16",
         "sma20_as_of": "2026-11-16",
         "sma50_as_of": "2026-11-16",
@@ -3935,8 +3146,8 @@
         "volume_ratio20": 0.219,
         "above_sma20": true,
         "above_sma50": false,
-        "relative_strength_20d_pct": 1.68,
-        "relative_strength_benchmark": "SPY",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
         "method": "SMA20/SMA50 and simple RSI14 from daily bars; 20-session relative performance versus SPY on common dates"
       },
       "analyst_targets": {
@@ -4701,8 +3912,8 @@
         "sma20_as_of": "2026-11-16",
         "sma50_as_of": "2026-11-16",
         "volume_as_of": "2026-11-16",
-        "relative_strength_20d_pct": -9.74,
-        "relative_strength_benchmark": "SPY"
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null
       },
       "price_quality": "refreshed",
       "valuation": {
@@ -4727,8 +3938,8 @@
         "volume_ratio20": 0.087,
         "above_sma20": false,
         "above_sma50": false,
-        "relative_strength_20d_pct": -9.74,
-        "relative_strength_benchmark": "SPY",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
         "method": "SMA20/SMA50 and simple RSI14 from daily bars; 20-session relative performance versus SPY on common dates"
       },
       "analyst_targets": {
@@ -4828,10 +4039,10 @@
           "annual_flow_periods_not_aligned"
         ],
         "filed": "2026-02-05",
-        "as_of": "2026-11-16T10:28:44.928948+00:00",
+        "as_of": "2026-11-16T15:15:08.824685+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1652044"
       },
-      "fundamentals_quality": "cached",
+      "fundamentals_quality": "refreshed",
       "price": {
         "close_usd": 287.47,
         "date": "2026-11-16",
@@ -5487,8 +4698,8 @@
         "sma20_as_of": "2026-11-16",
         "sma50_as_of": "2026-11-16",
         "volume_as_of": "2026-11-16",
-        "relative_strength_20d_pct": -14.1,
-        "relative_strength_benchmark": "SPY"
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null
       },
       "price_quality": "refreshed",
       "valuation": {
@@ -5513,8 +4724,8 @@
         "volume_ratio20": 0.138,
         "above_sma20": false,
         "above_sma50": false,
-        "relative_strength_20d_pct": -14.1,
-        "relative_strength_benchmark": "SPY",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
         "method": "SMA20/SMA50 and simple RSI14 from daily bars; 20-session relative performance versus SPY on common dates"
       },
       "analyst_targets": {
@@ -5532,7 +4743,7 @@
         "strategy_version": "balanced-1.3.4-integrity",
         "signal": "WATCH",
         "buy_eligible": false,
-        "decision_stage": "data_gate",
+        "decision_stage": "analyst_consensus",
         "decision_trace": [
           {
             "stage": "data",
@@ -5545,14 +4756,814 @@
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
-            "actual": "cached",
+            "actual": "refreshed",
             "required": "refreshed",
+            "passed": true,
+            "reason": null
+          },
+          {
+            "stage": "consensus",
+            "check": "analyst_targets",
+            "actual": "unavailable",
+            "required": "documented",
             "passed": false,
-            "reason": "fundamentals_not_refreshed"
+            "reason": "analyst_consensus_missing"
           }
         ],
         "reasons": [
-          "fundamentals_not_refreshed"
+          "analyst_consensus_missing"
+        ],
+        "fundamental_score": null,
+        "entry_score": null
+      },
+      "signal": "WATCH",
+      "buy_eligible": false
+    },
+    {
+      "ticker": "INTC",
+      "name": "Intel",
+      "sector": "Semiconductors",
+      "mentions": 1,
+      "news": [
+        {
+          "title": "Can Edge AI Replace Intel’s Shrinking PC Business? - 24/7 Wall St.",
+          "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOVHZqNFI4MFBJeHdfV21CU2ZQcUxIaHMyU1BEbVJ3ZGM3WHVJeFYyN0pjNXNBWmxla09NQVBFZ003UXdFUXlNbGNLdVh3NE1nSmlrV0w3dUFRLVFDYlY1eVVWQ0N0aGhYV09OcmMzVlhVdDA3aU53YzJGRU1hZzVPY0IyMUphWXhvSTZ6QXJwZEdvRXRjUGN2aEx2bEZ2bm0yNmhIc3pHbU9NTnJ0bFRDcVZHakJHeklFRTBzNWxDdjdMdVBneFE?oc=5",
+          "date": "Mon, 16 Nov 2026 12:54:00 GMT"
+        }
+      ],
+      "status": "Do analizy",
+      "attention_score": 22,
+      "valuation_status": "Orientacyjna kapitalizacja i mnożniki roczne — nie ranking zakupu",
+      "investment_score": null,
+      "fundamentals": {
+        "source": "SEC EDGAR XBRL",
+        "fiscal_year": "2025",
+        "revenue_usd": 52853000000,
+        "net_income_usd": -267000000,
+        "revenue_growth_pct": -0.5,
+        "net_margin_pct": -0.5,
+        "operating_cash_flow_usd": 9697000000,
+        "free_cash_flow_usd": -4949000000,
+        "cash_usd": 14265000000,
+        "debt_usd": 46585000000,
+        "financial_health_score": 25,
+        "score_label": "Prosty filtr 4 warunków, nie rekomendacja",
+        "shares_outstanding": 5315000000,
+        "shares_as_of": "2026-10-23",
+        "revenue_period_start": "2024-12-29",
+        "revenue_period_end": "2025-12-27",
+        "net_income_period_start": "2024-12-29",
+        "net_income_period_end": "2025-12-27",
+        "cash_flow_period_start": "2024-12-29",
+        "cash_flow_period_end": "2025-12-27",
+        "capex_period_start": "2024-12-29",
+        "capex_period_end": "2025-12-27",
+        "period_alignment": {
+          "status": "aligned",
+          "revenue_net_income": {
+            "start": "2024-12-29",
+            "end": "2025-12-27"
+          },
+          "cash_flow_capex": {
+            "start": "2024-12-29",
+            "end": "2025-12-27"
+          }
+        },
+        "period_mismatch_flags": [],
+        "filed": "2026-01-23",
+        "as_of": "2026-11-16T15:15:09.489919+00:00",
+        "source_url": "https://www.sec.gov/edgar/browse/?CIK=50863"
+      },
+      "fundamentals_quality": "refreshed",
+      "price": {
+        "close_usd": 56.06,
+        "date": "2026-11-16",
+        "age_days": 0,
+        "source": "Yahoo Finance chart EOD",
+        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/INTC?interval=1d&range=6mo",
+        "is_live": false,
+        "bars": [
+          {
+            "date": "2026-05-18",
+            "close": 108.16999816894531,
+            "volume": 145764000.0
+          },
+          {
+            "date": "2026-05-19",
+            "close": 110.80000305175781,
+            "volume": 150234900.0
+          },
+          {
+            "date": "2026-05-20",
+            "close": 118.95999908447266,
+            "volume": 165086900.0
+          },
+          {
+            "date": "2026-05-21",
+            "close": 118.5,
+            "volume": 102452500.0
+          },
+          {
+            "date": "2026-05-22",
+            "close": 119.83999633789062,
+            "volume": 82663000.0
+          },
+          {
+            "date": "2026-05-26",
+            "close": 123.5199966430664,
+            "volume": 108167300.0
+          },
+          {
+            "date": "2026-05-27",
+            "close": 121.7699966430664,
+            "volume": 93323300.0
+          },
+          {
+            "date": "2026-05-28",
+            "close": 120.88999938964844,
+            "volume": 97321000.0
+          },
+          {
+            "date": "2026-05-29",
+            "close": 114.68000030517578,
+            "volume": 191676100.0
+          },
+          {
+            "date": "2026-06-01",
+            "close": 109.33000183105469,
+            "volume": 134900400.0
+          },
+          {
+            "date": "2026-06-02",
+            "close": 107.93000030517578,
+            "volume": 106336200.0
+          },
+          {
+            "date": "2026-06-03",
+            "close": 112.70999908447266,
+            "volume": 118928800.0
+          },
+          {
+            "date": "2026-06-04",
+            "close": 111.77999877929688,
+            "volume": 77325800.0
+          },
+          {
+            "date": "2026-06-05",
+            "close": 99.16999816894531,
+            "volume": 145209400.0
+          },
+          {
+            "date": "2026-06-08",
+            "close": 110.2699966430664,
+            "volume": 136973900.0
+          },
+          {
+            "date": "2026-06-09",
+            "close": 107.91999816894531,
+            "volume": 149623100.0
+          },
+          {
+            "date": "2026-06-10",
+            "close": 107.04000091552734,
+            "volume": 122653500.0
+          },
+          {
+            "date": "2026-06-11",
+            "close": 116.95999908447266,
+            "volume": 188430300.0
+          },
+          {
+            "date": "2026-06-12",
+            "close": 124.56999969482422,
+            "volume": 151169400.0
+          },
+          {
+            "date": "2026-06-15",
+            "close": 127.86000061035156,
+            "volume": 134507500.0
+          },
+          {
+            "date": "2026-06-16",
+            "close": 117.05000305175781,
+            "volume": 132962600.0
+          },
+          {
+            "date": "2026-06-17",
+            "close": 121.0999984741211,
+            "volume": 115324900.0
+          },
+          {
+            "date": "2026-06-18",
+            "close": 133.99000549316406,
+            "volume": 233906600.0
+          },
+          {
+            "date": "2026-06-22",
+            "close": 140.94000244140625,
+            "volume": 127190600.0
+          },
+          {
+            "date": "2026-06-23",
+            "close": 132.27999877929688,
+            "volume": 132976700.0
+          },
+          {
+            "date": "2026-06-24",
+            "close": 131.64999389648438,
+            "volume": 104591700.0
+          },
+          {
+            "date": "2026-06-25",
+            "close": 132.8699951171875,
+            "volume": 122588800.0
+          },
+          {
+            "date": "2026-06-26",
+            "close": 128.32000732421875,
+            "volume": 99475400.0
+          },
+          {
+            "date": "2026-06-29",
+            "close": 131.72000122070312,
+            "volume": 106805300.0
+          },
+          {
+            "date": "2026-06-30",
+            "close": 139.6300048828125,
+            "volume": 116996700.0
+          },
+          {
+            "date": "2026-07-01",
+            "close": 127.0199966430664,
+            "volume": 113107200.0
+          },
+          {
+            "date": "2026-07-02",
+            "close": 120.3499984741211,
+            "volume": 124577600.0
+          },
+          {
+            "date": "2026-07-06",
+            "close": 122.19999694824219,
+            "volume": 86950200.0
+          },
+          {
+            "date": "2026-07-07",
+            "close": 110.38999938964844,
+            "volume": 140405900.0
+          },
+          {
+            "date": "2026-07-08",
+            "close": 110.23999786376953,
+            "volume": 105488100.0
+          },
+          {
+            "date": "2026-07-09",
+            "close": 112.54000091552734,
+            "volume": 99352500.0
+          },
+          {
+            "date": "2026-07-10",
+            "close": 109.83999633789062,
+            "volume": 70846600.0
+          },
+          {
+            "date": "2026-07-13",
+            "close": 103.12000274658203,
+            "volume": 100988800.0
+          },
+          {
+            "date": "2026-07-14",
+            "close": 107.76000213623047,
+            "volume": 91129000.0
+          },
+          {
+            "date": "2026-07-15",
+            "close": 102.98999786376953,
+            "volume": 120625500.0
+          },
+          {
+            "date": "2026-07-16",
+            "close": 96.9800033569336,
+            "volume": 107742900.0
+          },
+          {
+            "date": "2026-07-17",
+            "close": 95.04000091552734,
+            "volume": 126779300.0
+          },
+          {
+            "date": "2026-07-20",
+            "close": 97.05999755859375,
+            "volume": 89741400.0
+          },
+          {
+            "date": "2026-07-21",
+            "close": 105.44999694824219,
+            "volume": 105429400.0
+          },
+          {
+            "date": "2026-07-22",
+            "close": 102.62000274658203,
+            "volume": 78431000.0
+          },
+          {
+            "date": "2026-07-23",
+            "close": 100.2300033569336,
+            "volume": 140806900.0
+          },
+          {
+            "date": "2026-07-24",
+            "close": 92.31999969482422,
+            "volume": 181132900.0
+          },
+          {
+            "date": "2026-07-27",
+            "close": 91.66999816894531,
+            "volume": 133247300.0
+          },
+          {
+            "date": "2026-07-28",
+            "close": 86.30000305175781,
+            "volume": 154346700.0
+          },
+          {
+            "date": "2026-07-29",
+            "close": 81.87999725341797,
+            "volume": 152394600.0
+          },
+          {
+            "date": "2026-07-30",
+            "close": 91.12999725341797,
+            "volume": 140322600.0
+          },
+          {
+            "date": "2026-07-31",
+            "close": 90.19999694824219,
+            "volume": 109039500.0
+          },
+          {
+            "date": "2026-08-03",
+            "close": 91.0,
+            "volume": 96633600.0
+          },
+          {
+            "date": "2026-08-04",
+            "close": 100.86000061035156,
+            "volume": 124355100.0
+          },
+          {
+            "date": "2026-08-05",
+            "close": 101.05999755859375,
+            "volume": 85388400.0
+          },
+          {
+            "date": "2026-08-06",
+            "close": 99.80999755859375,
+            "volume": 78088100.0
+          },
+          {
+            "date": "2026-08-07",
+            "close": 101.6500015258789,
+            "volume": 76760600.0
+          },
+          {
+            "date": "2026-08-10",
+            "close": 97.5199966430664,
+            "volume": 101153400.0
+          },
+          {
+            "date": "2026-08-11",
+            "close": 97.70999908447266,
+            "volume": 164063600.0
+          },
+          {
+            "date": "2026-08-12",
+            "close": 100.94999694824219,
+            "volume": 162446700.0
+          },
+          {
+            "date": "2026-08-13",
+            "close": 104.55999755859375,
+            "volume": 116837600.0
+          },
+          {
+            "date": "2026-08-14",
+            "close": 102.5,
+            "volume": 95387500.0
+          },
+          {
+            "date": "2026-08-17",
+            "close": 103.48999786376953,
+            "volume": 88616800.0
+          },
+          {
+            "date": "2026-08-18",
+            "close": 96.69000244140625,
+            "volume": 121969500.0
+          },
+          {
+            "date": "2026-08-19",
+            "close": 92.80000305175781,
+            "volume": 110268600.0
+          },
+          {
+            "date": "2026-08-20",
+            "close": 92.12999725341797,
+            "volume": 85654700.0
+          },
+          {
+            "date": "2026-08-21",
+            "close": 90.06999969482422,
+            "volume": 91670100.0
+          },
+          {
+            "date": "2026-08-24",
+            "close": 87.26000213623047,
+            "volume": 96903400.0
+          },
+          {
+            "date": "2026-08-25",
+            "close": 87.4800033569336,
+            "volume": 81853800.0
+          },
+          {
+            "date": "2026-08-26",
+            "close": 88.23999786376953,
+            "volume": 75752800.0
+          },
+          {
+            "date": "2026-08-27",
+            "close": 92.08999633789062,
+            "volume": 100556800.0
+          },
+          {
+            "date": "2026-08-28",
+            "close": 89.47000122070312,
+            "volume": 86172600.0
+          },
+          {
+            "date": "2026-08-31",
+            "close": 89.51000213623047,
+            "volume": 65188200.0
+          },
+          {
+            "date": "2026-09-01",
+            "close": 88.97000122070312,
+            "volume": 73962100.0
+          },
+          {
+            "date": "2026-09-02",
+            "close": 90.05000305175781,
+            "volume": 61554500.0
+          },
+          {
+            "date": "2026-09-03",
+            "close": 91.66999816894531,
+            "volume": 79927800.0
+          },
+          {
+            "date": "2026-09-04",
+            "close": 95.80000305175781,
+            "volume": 97654300.0
+          },
+          {
+            "date": "2026-09-08",
+            "close": 104.47000122070312,
+            "volume": 140269300.0
+          },
+          {
+            "date": "2026-09-09",
+            "close": 106.23999786376953,
+            "volume": 96891400.0
+          },
+          {
+            "date": "2026-09-10",
+            "close": 100.31999969482422,
+            "volume": 96887100.0
+          },
+          {
+            "date": "2026-09-11",
+            "close": 102.94000244140625,
+            "volume": 86990400.0
+          },
+          {
+            "date": "2026-09-14",
+            "close": 97.19000244140625,
+            "volume": 96459700.0
+          },
+          {
+            "date": "2026-09-15",
+            "close": 97.13999938964844,
+            "volume": 84999300.0
+          },
+          {
+            "date": "2026-09-16",
+            "close": 101.05000305175781,
+            "volume": 119923600.0
+          },
+          {
+            "date": "2026-09-17",
+            "close": 108.80000305175781,
+            "volume": 149726000.0
+          },
+          {
+            "date": "2026-09-18",
+            "close": 108.5999984741211,
+            "volume": 174996700.0
+          },
+          {
+            "date": "2026-09-21",
+            "close": 121.77999877929688,
+            "volume": 191638400.0
+          },
+          {
+            "date": "2026-09-22",
+            "close": 123.86000061035156,
+            "volume": 108379400.0
+          },
+          {
+            "date": "2026-09-23",
+            "close": 122.5999984741211,
+            "volume": 85621100.0
+          },
+          {
+            "date": "2026-09-24",
+            "close": 127.38999938964844,
+            "volume": 119296700.0
+          },
+          {
+            "date": "2026-09-25",
+            "close": 123.0,
+            "volume": 97728400.0
+          },
+          {
+            "date": "2026-09-28",
+            "close": 116.02999877929688,
+            "volume": 112436900.0
+          },
+          {
+            "date": "2026-09-29",
+            "close": 115.93000030517578,
+            "volume": 88744500.0
+          },
+          {
+            "date": "2026-09-30",
+            "close": 120.2300033569336,
+            "volume": 94917200.0
+          },
+          {
+            "date": "2026-10-01",
+            "close": 120.0,
+            "volume": 103559800.0
+          },
+          {
+            "date": "2026-10-02",
+            "close": 119.33000183105469,
+            "volume": 95401500.0
+          },
+          {
+            "date": "2026-10-05",
+            "close": 116.19000244140625,
+            "volume": 81331800.0
+          },
+          {
+            "date": "2026-10-06",
+            "close": 112.5,
+            "volume": 101938800.0
+          },
+          {
+            "date": "2026-10-07",
+            "close": 113.12000274658203,
+            "volume": 82861900.0
+          },
+          {
+            "date": "2026-10-08",
+            "close": 107.08000183105469,
+            "volume": 120196700.0
+          },
+          {
+            "date": "2026-10-09",
+            "close": 104.69999694824219,
+            "volume": 75017800.0
+          },
+          {
+            "date": "2026-10-12",
+            "close": 101.3499984741211,
+            "volume": 74171900.0
+          },
+          {
+            "date": "2026-10-13",
+            "close": 102.80999755859375,
+            "volume": 88252000.0
+          },
+          {
+            "date": "2026-10-14",
+            "close": 98.12000274658203,
+            "volume": 104592800.0
+          },
+          {
+            "date": "2026-10-15",
+            "close": 95.37000274658203,
+            "volume": 147157700.0
+          },
+          {
+            "date": "2026-10-16",
+            "close": 89.8499984741211,
+            "volume": 123003100.0
+          },
+          {
+            "date": "2026-10-19",
+            "close": 92.02999877929688,
+            "volume": 101608800.0
+          },
+          {
+            "date": "2026-10-20",
+            "close": 91.69000244140625,
+            "volume": 84058600.0
+          },
+          {
+            "date": "2026-10-21",
+            "close": 92.95999908447266,
+            "volume": 75566800.0
+          },
+          {
+            "date": "2026-10-22",
+            "close": 85.48999786376953,
+            "volume": 134128100.0
+          },
+          {
+            "date": "2026-10-23",
+            "close": 86.95999908447266,
+            "volume": 72093700.0
+          },
+          {
+            "date": "2026-10-26",
+            "close": 90.47000122070312,
+            "volume": 98744200.0
+          },
+          {
+            "date": "2026-10-27",
+            "close": 93.73999786376953,
+            "volume": 90523300.0
+          },
+          {
+            "date": "2026-10-28",
+            "close": 95.52999877929688,
+            "volume": 82592400.0
+          },
+          {
+            "date": "2026-10-29",
+            "close": 92.06999969482422,
+            "volume": 134168700.0
+          },
+          {
+            "date": "2026-10-30",
+            "close": 65.76000213623047,
+            "volume": 455599400.0
+          },
+          {
+            "date": "2026-11-02",
+            "close": 59.970001220703125,
+            "volume": 230689500.0
+          },
+          {
+            "date": "2026-11-03",
+            "close": 60.54999923706055,
+            "volume": 149052100.0
+          },
+          {
+            "date": "2026-11-04",
+            "close": 58.27000045776367,
+            "volume": 189308900.0
+          },
+          {
+            "date": "2026-11-05",
+            "close": 52.25,
+            "volume": 270291000.0
+          },
+          {
+            "date": "2026-11-06",
+            "close": 56.279998779296875,
+            "volume": 174382300.0
+          },
+          {
+            "date": "2026-11-09",
+            "close": 59.369998931884766,
+            "volume": 147250200.0
+          },
+          {
+            "date": "2026-11-10",
+            "close": 58.130001068115234,
+            "volume": 100978200.0
+          },
+          {
+            "date": "2026-11-11",
+            "close": 62.5,
+            "volume": 133190900.0
+          },
+          {
+            "date": "2026-11-12",
+            "close": 61.20000076293945,
+            "volume": 80687500.0
+          },
+          {
+            "date": "2026-11-13",
+            "close": 59.65999984741211,
+            "volume": 102322800.0
+          },
+          {
+            "date": "2026-11-16",
+            "close": 56.060001373291016,
+            "volume": 19265139.0
+          }
+        ],
+        "checked_at": "2026-11-16T15:05:17.200101+00:00",
+        "sma20": 71.9454999923706,
+        "sma50": 94.17860023498535,
+        "rsi_14": 21.19,
+        "volume_ratio20": 0.136,
+        "above_sma20": false,
+        "above_sma50": false,
+        "rsi_as_of": "2026-11-16",
+        "sma20_as_of": "2026-11-16",
+        "sma50_as_of": "2026-11-16",
+        "volume_as_of": "2026-11-16",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null
+      },
+      "price_quality": "refreshed",
+      "valuation": {
+        "status": "partial",
+        "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
+        "market_cap_usd": 297958900000,
+        "ps": 5.64,
+        "pe": null,
+        "fcf_yield_pct": -1.66,
+        "share_date": "2026-10-23",
+        "price_date": "2026-11-16",
+        "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)",
+        "periods_aligned": true
+      },
+      "technical": {
+        "status": "ok",
+        "bars": 127,
+        "date": "2026-11-16",
+        "sma20": 71.9454999923706,
+        "sma50": 94.17860023498535,
+        "rsi_14": 21.19,
+        "volume_ratio20": 0.136,
+        "above_sma20": false,
+        "above_sma50": false,
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
+        "method": "SMA20/SMA50 and simple RSI14 from daily bars; 20-session relative performance versus SPY on common dates"
+      },
+      "analyst_targets": {
+        "status": "unavailable",
+        "reason": "no validated point-in-time analyst_consensus.csv row"
+      },
+      "entry_trigger": null,
+      "corporate_events": [],
+      "investment_risk_flags": {
+        "flags": [
+          "event_feed_missing"
+        ]
+      },
+      "investment_decision": {
+        "strategy_version": "balanced-1.3.4-integrity",
+        "signal": "WATCH",
+        "buy_eligible": false,
+        "decision_stage": "analyst_consensus",
+        "decision_trace": [
+          {
+            "stage": "data",
+            "check": "price_refreshed",
+            "actual": "refreshed",
+            "required": "refreshed",
+            "passed": true,
+            "reason": null
+          },
+          {
+            "stage": "data",
+            "check": "fundamentals_refreshed",
+            "actual": "refreshed",
+            "required": "refreshed",
+            "passed": true,
+            "reason": null
+          },
+          {
+            "stage": "consensus",
+            "check": "analyst_targets",
+            "actual": "unavailable",
+            "required": "documented",
+            "passed": false,
+            "reason": "analyst_consensus_missing"
+          }
+        ],
+        "reasons": [
+          "analyst_consensus_missing"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -5612,7 +5623,7 @@
         },
         "period_mismatch_flags": [],
         "filed": "2026-01-29",
-        "as_of": "2026-11-16T15:13:21.080497+00:00",
+        "as_of": "2026-11-16T15:15:07.009734+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1326801"
       },
       "fundamentals_quality": "refreshed",
@@ -6271,8 +6282,8 @@
         "sma20_as_of": "2026-11-16",
         "sma50_as_of": "2026-11-16",
         "volume_as_of": "2026-11-16",
-        "relative_strength_20d_pct": -8.59,
-        "relative_strength_benchmark": "SPY"
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null
       },
       "price_quality": "refreshed",
       "valuation": {
@@ -6297,8 +6308,8 @@
         "volume_ratio20": 0.079,
         "above_sma20": false,
         "above_sma50": false,
-        "relative_strength_20d_pct": -8.59,
-        "relative_strength_benchmark": "SPY",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
         "method": "SMA20/SMA50 and simple RSI14 from daily bars; 20-session relative performance versus SPY on common dates"
       },
       "analyst_targets": {
@@ -6407,7 +6418,7 @@
         "as_of": "2026-11-16T15:13:23.935699+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=789019"
       },
-      "fundamentals_quality": "refreshed",
+      "fundamentals_quality": "cached",
       "price": {
         "close_usd": 520.81,
         "date": "2026-11-16",
@@ -7059,8 +7070,8 @@
         "volume_ratio20": 0.1,
         "above_sma20": false,
         "above_sma50": true,
-        "relative_strength_20d_pct": 0.39,
-        "relative_strength_benchmark": "SPY",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
         "rsi_as_of": "2026-11-16",
         "sma20_as_of": "2026-11-16",
         "sma50_as_of": "2026-11-16",
@@ -7089,8 +7100,8 @@
         "volume_ratio20": 0.1,
         "above_sma20": false,
         "above_sma50": true,
-        "relative_strength_20d_pct": 0.39,
-        "relative_strength_benchmark": "SPY",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
         "method": "SMA20/SMA50 and simple RSI14 from daily bars; 20-session relative performance versus SPY on common dates"
       },
       "analyst_targets": {
@@ -7108,7 +7119,7 @@
         "strategy_version": "balanced-1.3.4-integrity",
         "signal": "WATCH",
         "buy_eligible": false,
-        "decision_stage": "analyst_consensus",
+        "decision_stage": "data_gate",
         "decision_trace": [
           {
             "stage": "data",
@@ -7121,22 +7132,14 @@
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
-            "actual": "refreshed",
+            "actual": "cached",
             "required": "refreshed",
-            "passed": true,
-            "reason": null
-          },
-          {
-            "stage": "consensus",
-            "check": "analyst_targets",
-            "actual": "unavailable",
-            "required": "documented",
             "passed": false,
-            "reason": "analyst_consensus_missing"
+            "reason": "fundamentals_not_refreshed"
           }
         ],
         "reasons": [
-          "analyst_consensus_missing"
+          "fundamentals_not_refreshed"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -7196,10 +7199,10 @@
         },
         "period_mismatch_flags": [],
         "filed": "2026-03-05",
-        "as_of": "2026-11-16T14:43:53.366640+00:00",
+        "as_of": "2026-11-16T15:15:14.404099+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1826681"
       },
-      "fundamentals_quality": "cached",
+      "fundamentals_quality": "refreshed",
       "price": {
         "close_usd": 3.0,
         "date": "2026-11-16",
@@ -7851,8 +7854,8 @@
         "volume_ratio20": 0.128,
         "above_sma20": false,
         "above_sma50": false,
-        "relative_strength_20d_pct": -17.72,
-        "relative_strength_benchmark": "SPY",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
         "rsi_as_of": "2026-11-16",
         "sma20_as_of": "2026-11-16",
         "sma50_as_of": "2026-11-16",
@@ -7881,8 +7884,8 @@
         "volume_ratio20": 0.128,
         "above_sma20": false,
         "above_sma50": false,
-        "relative_strength_20d_pct": -17.72,
-        "relative_strength_benchmark": "SPY",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
         "method": "SMA20/SMA50 and simple RSI14 from daily bars; 20-session relative performance versus SPY on common dates"
       },
       "analyst_targets": {
@@ -7900,7 +7903,7 @@
         "strategy_version": "balanced-1.3.4-integrity",
         "signal": "WATCH",
         "buy_eligible": false,
-        "decision_stage": "data_gate",
+        "decision_stage": "analyst_consensus",
         "decision_trace": [
           {
             "stage": "data",
@@ -7913,14 +7916,22 @@
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
-            "actual": "cached",
+            "actual": "refreshed",
             "required": "refreshed",
+            "passed": true,
+            "reason": null
+          },
+          {
+            "stage": "consensus",
+            "check": "analyst_targets",
+            "actual": "unavailable",
+            "required": "documented",
             "passed": false,
-            "reason": "fundamentals_not_refreshed"
+            "reason": "analyst_consensus_missing"
           }
         ],
         "reasons": [
-          "fundamentals_not_refreshed"
+          "analyst_consensus_missing"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -8052,7 +8063,7 @@
         "as_of": "2026-11-16T15:13:24.583060+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1824502"
       },
-      "fundamentals_quality": "refreshed",
+      "fundamentals_quality": "cached",
       "price": {
         "close_usd": 3.715,
         "date": "2026-11-16",
@@ -8704,8 +8715,8 @@
         "volume_ratio20": 0.309,
         "above_sma20": false,
         "above_sma50": false,
-        "relative_strength_20d_pct": -5.43,
-        "relative_strength_benchmark": "SPY",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
         "rsi_as_of": "2026-11-16",
         "sma20_as_of": "2026-11-16",
         "sma50_as_of": "2026-11-16",
@@ -8734,8 +8745,8 @@
         "volume_ratio20": 0.309,
         "above_sma20": false,
         "above_sma50": false,
-        "relative_strength_20d_pct": -5.43,
-        "relative_strength_benchmark": "SPY",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
         "method": "SMA20/SMA50 and simple RSI14 from daily bars; 20-session relative performance versus SPY on common dates"
       },
       "analyst_targets": {
@@ -8753,7 +8764,7 @@
         "strategy_version": "balanced-1.3.4-integrity",
         "signal": "WATCH",
         "buy_eligible": false,
-        "decision_stage": "analyst_consensus",
+        "decision_stage": "data_gate",
         "decision_trace": [
           {
             "stage": "data",
@@ -8766,22 +8777,14 @@
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
-            "actual": "refreshed",
+            "actual": "cached",
             "required": "refreshed",
-            "passed": true,
-            "reason": null
-          },
-          {
-            "stage": "consensus",
-            "check": "analyst_targets",
-            "actual": "unavailable",
-            "required": "documented",
             "passed": false,
-            "reason": "analyst_consensus_missing"
+            "reason": "fundamentals_not_refreshed"
           }
         ],
         "reasons": [
-          "analyst_consensus_missing"
+          "fundamentals_not_refreshed"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -8838,7 +8841,7 @@
         "as_of": "2026-11-16T15:13:25.211307+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1577526"
       },
-      "fundamentals_quality": "refreshed",
+      "fundamentals_quality": "cached",
       "price": {
         "close_usd": 11.445,
         "date": "2026-11-16",
@@ -9490,8 +9493,8 @@
         "volume_ratio20": 0.083,
         "above_sma20": false,
         "above_sma50": true,
-        "relative_strength_20d_pct": 4.35,
-        "relative_strength_benchmark": "SPY",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
         "rsi_as_of": "2026-11-16",
         "sma20_as_of": "2026-11-16",
         "sma50_as_of": "2026-11-16",
@@ -9520,8 +9523,8 @@
         "volume_ratio20": 0.083,
         "above_sma20": false,
         "above_sma50": true,
-        "relative_strength_20d_pct": 4.35,
-        "relative_strength_benchmark": "SPY",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
         "method": "SMA20/SMA50 and simple RSI14 from daily bars; 20-session relative performance versus SPY on common dates"
       },
       "analyst_targets": {
@@ -9539,7 +9542,7 @@
         "strategy_version": "balanced-1.3.4-integrity",
         "signal": "WATCH",
         "buy_eligible": false,
-        "decision_stage": "analyst_consensus",
+        "decision_stage": "data_gate",
         "decision_trace": [
           {
             "stage": "data",
@@ -9552,22 +9555,14 @@
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
-            "actual": "refreshed",
+            "actual": "cached",
             "required": "refreshed",
-            "passed": true,
-            "reason": null
-          },
-          {
-            "stage": "consensus",
-            "check": "analyst_targets",
-            "actual": "unavailable",
-            "required": "documented",
             "passed": false,
-            "reason": "analyst_consensus_missing"
+            "reason": "fundamentals_not_refreshed"
           }
         ],
         "reasons": [
-          "analyst_consensus_missing"
+          "fundamentals_not_refreshed"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -9624,7 +9619,7 @@
         "as_of": "2026-11-16T15:13:25.635199+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1736297"
       },
-      "fundamentals_quality": "refreshed",
+      "fundamentals_quality": "cached",
       "price": {
         "close_usd": 205.995,
         "date": "2026-11-16",
@@ -10276,8 +10271,8 @@
         "volume_ratio20": 0.216,
         "above_sma20": false,
         "above_sma50": false,
-        "relative_strength_20d_pct": -26.07,
-        "relative_strength_benchmark": "SPY",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
         "rsi_as_of": "2026-11-16",
         "sma20_as_of": "2026-11-16",
         "sma50_as_of": "2026-11-16",
@@ -10306,8 +10301,8 @@
         "volume_ratio20": 0.216,
         "above_sma20": false,
         "above_sma50": false,
-        "relative_strength_20d_pct": -26.07,
-        "relative_strength_benchmark": "SPY",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
         "method": "SMA20/SMA50 and simple RSI14 from daily bars; 20-session relative performance versus SPY on common dates"
       },
       "analyst_targets": {
@@ -10325,7 +10320,7 @@
         "strategy_version": "balanced-1.3.4-integrity",
         "signal": "WATCH",
         "buy_eligible": false,
-        "decision_stage": "analyst_consensus",
+        "decision_stage": "data_gate",
         "decision_trace": [
           {
             "stage": "data",
@@ -10338,22 +10333,14 @@
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
-            "actual": "refreshed",
+            "actual": "cached",
             "required": "refreshed",
-            "passed": true,
-            "reason": null
-          },
-          {
-            "stage": "consensus",
-            "check": "analyst_targets",
-            "actual": "unavailable",
-            "required": "documented",
             "passed": false,
-            "reason": "analyst_consensus_missing"
+            "reason": "fundamentals_not_refreshed"
           }
         ],
         "reasons": [
-          "analyst_consensus_missing"
+          "fundamentals_not_refreshed"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -10410,7 +10397,7 @@
         "as_of": "2026-11-16T15:13:26.163030+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=6951"
       },
-      "fundamentals_quality": "refreshed",
+      "fundamentals_quality": "cached",
       "price": {
         "close_usd": 353.6,
         "date": "2026-11-16",
@@ -11062,8 +11049,8 @@
         "volume_ratio20": 0.152,
         "above_sma20": false,
         "above_sma50": false,
-        "relative_strength_20d_pct": -11.97,
-        "relative_strength_benchmark": "SPY",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
         "rsi_as_of": "2026-11-16",
         "sma20_as_of": "2026-11-16",
         "sma50_as_of": "2026-11-16",
@@ -11092,8 +11079,8 @@
         "volume_ratio20": 0.152,
         "above_sma20": false,
         "above_sma50": false,
-        "relative_strength_20d_pct": -11.97,
-        "relative_strength_benchmark": "SPY",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
         "method": "SMA20/SMA50 and simple RSI14 from daily bars; 20-session relative performance versus SPY on common dates"
       },
       "analyst_targets": {
@@ -11111,7 +11098,7 @@
         "strategy_version": "balanced-1.3.4-integrity",
         "signal": "WATCH",
         "buy_eligible": false,
-        "decision_stage": "analyst_consensus",
+        "decision_stage": "data_gate",
         "decision_trace": [
           {
             "stage": "data",
@@ -11124,22 +11111,14 @@
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
-            "actual": "refreshed",
+            "actual": "cached",
             "required": "refreshed",
-            "passed": true,
-            "reason": null
-          },
-          {
-            "stage": "consensus",
-            "check": "analyst_targets",
-            "actual": "unavailable",
-            "required": "documented",
             "passed": false,
-            "reason": "analyst_consensus_missing"
+            "reason": "fundamentals_not_refreshed"
           }
         ],
         "reasons": [
-          "analyst_consensus_missing"
+          "fundamentals_not_refreshed"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -11196,7 +11175,7 @@
         "as_of": "2026-11-16T15:13:26.697496+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=2488"
       },
-      "fundamentals_quality": "refreshed",
+      "fundamentals_quality": "cached",
       "price": {
         "close_usd": 510.71,
         "date": "2026-11-16",
@@ -11848,8 +11827,8 @@
         "volume_ratio20": 0.312,
         "above_sma20": false,
         "above_sma50": false,
-        "relative_strength_20d_pct": -2.38,
-        "relative_strength_benchmark": "SPY",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
         "rsi_as_of": "2026-11-16",
         "sma20_as_of": "2026-11-16",
         "sma50_as_of": "2026-11-16",
@@ -11878,8 +11857,8 @@
         "volume_ratio20": 0.312,
         "above_sma20": false,
         "above_sma50": false,
-        "relative_strength_20d_pct": -2.38,
-        "relative_strength_benchmark": "SPY",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
         "method": "SMA20/SMA50 and simple RSI14 from daily bars; 20-session relative performance versus SPY on common dates"
       },
       "analyst_targets": {
@@ -11897,7 +11876,7 @@
         "strategy_version": "balanced-1.3.4-integrity",
         "signal": "WATCH",
         "buy_eligible": false,
-        "decision_stage": "analyst_consensus",
+        "decision_stage": "data_gate",
         "decision_trace": [
           {
             "stage": "data",
@@ -11910,22 +11889,14 @@
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
-            "actual": "refreshed",
+            "actual": "cached",
             "required": "refreshed",
-            "passed": true,
-            "reason": null
-          },
-          {
-            "stage": "consensus",
-            "check": "analyst_targets",
-            "actual": "unavailable",
-            "required": "documented",
             "passed": false,
-            "reason": "analyst_consensus_missing"
+            "reason": "fundamentals_not_refreshed"
           }
         ],
         "reasons": [
-          "analyst_consensus_missing"
+          "fundamentals_not_refreshed"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -11981,7 +11952,7 @@
         "as_of": "2026-11-16T15:13:27.718353+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1596532"
       },
-      "fundamentals_quality": "refreshed",
+      "fundamentals_quality": "cached",
       "price": {
         "close_usd": 186.03,
         "date": "2026-11-16",
@@ -12633,8 +12604,8 @@
         "volume_ratio20": 0.16,
         "above_sma20": true,
         "above_sma50": false,
-        "relative_strength_20d_pct": 4.58,
-        "relative_strength_benchmark": "SPY",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
         "rsi_as_of": "2026-11-16",
         "sma20_as_of": "2026-11-16",
         "sma50_as_of": "2026-11-16",
@@ -12663,8 +12634,8 @@
         "volume_ratio20": 0.16,
         "above_sma20": true,
         "above_sma50": false,
-        "relative_strength_20d_pct": 4.58,
-        "relative_strength_benchmark": "SPY",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
         "method": "SMA20/SMA50 and simple RSI14 from daily bars; 20-session relative performance versus SPY on common dates"
       },
       "analyst_targets": {
@@ -12682,7 +12653,7 @@
         "strategy_version": "balanced-1.3.4-integrity",
         "signal": "WATCH",
         "buy_eligible": false,
-        "decision_stage": "analyst_consensus",
+        "decision_stage": "data_gate",
         "decision_trace": [
           {
             "stage": "data",
@@ -12695,22 +12666,14 @@
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
-            "actual": "refreshed",
+            "actual": "cached",
             "required": "refreshed",
-            "passed": true,
-            "reason": null
-          },
-          {
-            "stage": "consensus",
-            "check": "analyst_targets",
-            "actual": "unavailable",
-            "required": "documented",
             "passed": false,
-            "reason": "analyst_consensus_missing"
+            "reason": "fundamentals_not_refreshed"
           }
         ],
         "reasons": [
-          "analyst_consensus_missing"
+          "fundamentals_not_refreshed"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -13419,8 +13382,8 @@
         "volume_ratio20": 0.102,
         "above_sma20": false,
         "above_sma50": false,
-        "relative_strength_20d_pct": -2.68,
-        "relative_strength_benchmark": "SPY",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
         "rsi_as_of": "2026-11-16",
         "sma20_as_of": "2026-11-16",
         "sma50_as_of": "2026-11-16",
@@ -13449,8 +13412,8 @@
         "volume_ratio20": 0.102,
         "above_sma20": false,
         "above_sma50": false,
-        "relative_strength_20d_pct": -2.68,
-        "relative_strength_benchmark": "SPY",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
         "method": "SMA20/SMA50 and simple RSI14 from daily bars; 20-session relative performance versus SPY on common dates"
       },
       "analyst_targets": {
@@ -14197,8 +14160,8 @@
         "volume_ratio20": 0.202,
         "above_sma20": false,
         "above_sma50": false,
-        "relative_strength_20d_pct": -19.73,
-        "relative_strength_benchmark": "SPY",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
         "rsi_as_of": "2026-11-16",
         "sma20_as_of": "2026-11-16",
         "sma50_as_of": "2026-11-16",
@@ -14227,8 +14190,8 @@
         "volume_ratio20": 0.202,
         "above_sma20": false,
         "above_sma50": false,
-        "relative_strength_20d_pct": -19.73,
-        "relative_strength_benchmark": "SPY",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
         "method": "SMA20/SMA50 and simple RSI14 from daily bars; 20-session relative performance versus SPY on common dates"
       },
       "analyst_targets": {
@@ -14971,8 +14934,8 @@
         "volume_ratio20": 0.232,
         "above_sma20": false,
         "above_sma50": false,
-        "relative_strength_20d_pct": -10.99,
-        "relative_strength_benchmark": "SPY",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
         "rsi_as_of": "2026-11-16",
         "sma20_as_of": "2026-11-16",
         "sma50_as_of": "2026-11-16",
@@ -15001,8 +14964,8 @@
         "volume_ratio20": 0.232,
         "above_sma20": false,
         "above_sma50": false,
-        "relative_strength_20d_pct": -10.99,
-        "relative_strength_benchmark": "SPY",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
         "method": "SMA20/SMA50 and simple RSI14 from daily bars; 20-session relative performance versus SPY on common dates"
       },
       "analyst_targets": {
@@ -15749,8 +15712,8 @@
         "volume_ratio20": 0.096,
         "above_sma20": true,
         "above_sma50": true,
-        "relative_strength_20d_pct": 34.73,
-        "relative_strength_benchmark": "SPY",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
         "rsi_as_of": "2026-11-16",
         "sma20_as_of": "2026-11-16",
         "sma50_as_of": "2026-11-16",
@@ -15779,8 +15742,8 @@
         "volume_ratio20": 0.096,
         "above_sma20": true,
         "above_sma50": true,
-        "relative_strength_20d_pct": 34.73,
-        "relative_strength_benchmark": "SPY",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
         "method": "SMA20/SMA50 and simple RSI14 from daily bars; 20-session relative performance versus SPY on common dates"
       },
       "analyst_targets": {
@@ -15875,7 +15838,7 @@
         "as_of": "2026-11-16T15:13:28.658592+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1836981"
       },
-      "fundamentals_quality": "refreshed",
+      "fundamentals_quality": "cached",
       "price": {
         "close_usd": 1.8613,
         "date": "2026-11-16",
@@ -16527,8 +16490,8 @@
         "volume_ratio20": 0.148,
         "above_sma20": false,
         "above_sma50": false,
-        "relative_strength_20d_pct": -9.71,
-        "relative_strength_benchmark": "SPY",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
         "rsi_as_of": "2026-11-16",
         "sma20_as_of": "2026-11-16",
         "sma50_as_of": "2026-11-16",
@@ -16557,8 +16520,8 @@
         "volume_ratio20": 0.148,
         "above_sma20": false,
         "above_sma50": false,
-        "relative_strength_20d_pct": -9.71,
-        "relative_strength_benchmark": "SPY",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
         "method": "SMA20/SMA50 and simple RSI14 from daily bars; 20-session relative performance versus SPY on common dates"
       },
       "analyst_targets": {
@@ -16576,7 +16539,7 @@
         "strategy_version": "balanced-1.3.4-integrity",
         "signal": "WATCH",
         "buy_eligible": false,
-        "decision_stage": "analyst_consensus",
+        "decision_stage": "data_gate",
         "decision_trace": [
           {
             "stage": "data",
@@ -16589,22 +16552,14 @@
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
-            "actual": "refreshed",
+            "actual": "cached",
             "required": "refreshed",
-            "passed": true,
-            "reason": null
-          },
-          {
-            "stage": "consensus",
-            "check": "analyst_targets",
-            "actual": "unavailable",
-            "required": "documented",
             "passed": false,
-            "reason": "analyst_consensus_missing"
+            "reason": "fundamentals_not_refreshed"
           }
         ],
         "reasons": [
-          "analyst_consensus_missing"
+          "fundamentals_not_refreshed"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -16781,7 +16736,7 @@
         "as_of": "2026-11-16T15:13:29.225213+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1030894"
       },
-      "fundamentals_quality": "refreshed",
+      "fundamentals_quality": "cached",
       "price": {
         "close_usd": 238.91,
         "date": "2026-11-16",
@@ -16837,14 +16792,15 @@
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
-            "actual": "refreshed",
+            "actual": "cached",
             "required": "refreshed",
-            "passed": true,
-            "reason": null
+            "passed": false,
+            "reason": "fundamentals_not_refreshed"
           }
         ],
         "reasons": [
-          "price_not_refreshed"
+          "price_not_refreshed",
+          "fundamentals_not_refreshed"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -17143,7 +17099,7 @@
         "as_of": "2026-11-16T15:13:29.756604+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1571996"
       },
-      "fundamentals_quality": "refreshed",
+      "fundamentals_quality": "cached",
       "price": {
         "close_usd": 322.94,
         "date": "2026-11-16",
@@ -17799,8 +17755,8 @@
         "sma20_as_of": "2026-11-16",
         "sma50_as_of": "2026-11-16",
         "volume_as_of": "2026-11-16",
-        "relative_strength_20d_pct": -27.08,
-        "relative_strength_benchmark": "SPY"
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null
       },
       "price_quality": "refreshed",
       "valuation": {
@@ -17825,8 +17781,8 @@
         "volume_ratio20": 0.26,
         "above_sma20": false,
         "above_sma50": false,
-        "relative_strength_20d_pct": -27.08,
-        "relative_strength_benchmark": "SPY",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
         "method": "SMA20/SMA50 and simple RSI14 from daily bars; 20-session relative performance versus SPY on common dates"
       },
       "analyst_targets": {
@@ -17844,7 +17800,7 @@
         "strategy_version": "balanced-1.3.4-integrity",
         "signal": "WATCH",
         "buy_eligible": false,
-        "decision_stage": "analyst_consensus",
+        "decision_stage": "data_gate",
         "decision_trace": [
           {
             "stage": "data",
@@ -17857,22 +17813,14 @@
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
-            "actual": "refreshed",
+            "actual": "cached",
             "required": "refreshed",
-            "passed": true,
-            "reason": null
-          },
-          {
-            "stage": "consensus",
-            "check": "analyst_targets",
-            "actual": "unavailable",
-            "required": "documented",
             "passed": false,
-            "reason": "analyst_consensus_missing"
+            "reason": "fundamentals_not_refreshed"
           }
         ],
         "reasons": [
-          "analyst_consensus_missing"
+          "fundamentals_not_refreshed"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -18585,8 +18533,8 @@
         "sma20_as_of": "2026-11-16",
         "sma50_as_of": "2026-11-16",
         "volume_as_of": "2026-11-16",
-        "relative_strength_20d_pct": 6.26,
-        "relative_strength_benchmark": "SPY"
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null
       },
       "price_quality": "refreshed",
       "valuation": {
@@ -18611,8 +18559,8 @@
         "volume_ratio20": 0.037,
         "above_sma20": false,
         "above_sma50": true,
-        "relative_strength_20d_pct": 6.26,
-        "relative_strength_benchmark": "SPY",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
         "method": "SMA20/SMA50 and simple RSI14 from daily bars; 20-session relative performance versus SPY on common dates"
       },
       "analyst_targets": {
@@ -19363,8 +19311,8 @@
         "sma20_as_of": "2026-11-16",
         "sma50_as_of": "2026-11-16",
         "volume_as_of": "2026-11-16",
-        "relative_strength_20d_pct": 3.64,
-        "relative_strength_benchmark": "SPY"
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null
       },
       "price_quality": "refreshed",
       "valuation": {
@@ -19389,8 +19337,8 @@
         "volume_ratio20": 0.074,
         "above_sma20": false,
         "above_sma50": true,
-        "relative_strength_20d_pct": 3.64,
-        "relative_strength_benchmark": "SPY",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
         "method": "SMA20/SMA50 and simple RSI14 from daily bars; 20-session relative performance versus SPY on common dates"
       },
       "analyst_targets": {
@@ -20103,8 +20051,8 @@
         "sma20_as_of": "2026-11-16",
         "sma50_as_of": "2026-11-16",
         "volume_as_of": "2026-11-16",
-        "relative_strength_20d_pct": -7.59,
-        "relative_strength_benchmark": "SPY"
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null
       },
       "price_quality": "refreshed",
       "valuation": {
@@ -20129,8 +20077,8 @@
         "volume_ratio20": 0.003,
         "above_sma20": false,
         "above_sma50": false,
-        "relative_strength_20d_pct": -7.59,
-        "relative_strength_benchmark": "SPY",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
         "method": "SMA20/SMA50 and simple RSI14 from daily bars; 20-session relative performance versus SPY on common dates"
       },
       "analyst_targets": {
@@ -20880,8 +20828,8 @@
         "sma20_as_of": "2026-11-16",
         "sma50_as_of": "2026-11-16",
         "volume_as_of": "2026-11-16",
-        "relative_strength_20d_pct": -16.91,
-        "relative_strength_benchmark": "SPY"
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null
       },
       "price_quality": "refreshed",
       "valuation": {
@@ -20906,8 +20854,8 @@
         "volume_ratio20": 0.122,
         "above_sma20": false,
         "above_sma50": false,
-        "relative_strength_20d_pct": -16.91,
-        "relative_strength_benchmark": "SPY",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
         "method": "SMA20/SMA50 and simple RSI14 from daily bars; 20-session relative performance versus SPY on common dates"
       },
       "analyst_targets": {
@@ -21658,8 +21606,8 @@
         "sma20_as_of": "2026-11-16",
         "sma50_as_of": "2026-11-16",
         "volume_as_of": "2026-11-16",
-        "relative_strength_20d_pct": 8.44,
-        "relative_strength_benchmark": "SPY"
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null
       },
       "price_quality": "refreshed",
       "valuation": {
@@ -21684,8 +21632,8 @@
         "volume_ratio20": 0.041,
         "above_sma20": false,
         "above_sma50": true,
-        "relative_strength_20d_pct": 8.44,
-        "relative_strength_benchmark": "SPY",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
         "method": "SMA20/SMA50 and simple RSI14 from daily bars; 20-session relative performance versus SPY on common dates"
       },
       "analyst_targets": {
@@ -22435,8 +22383,8 @@
         "sma20_as_of": "2026-11-16",
         "sma50_as_of": "2026-11-16",
         "volume_as_of": "2026-11-16",
-        "relative_strength_20d_pct": -5.04,
-        "relative_strength_benchmark": "SPY"
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null
       },
       "price_quality": "refreshed",
       "valuation": {
@@ -22461,8 +22409,8 @@
         "volume_ratio20": 0.025,
         "above_sma20": false,
         "above_sma50": false,
-        "relative_strength_20d_pct": -5.04,
-        "relative_strength_benchmark": "SPY",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
         "method": "SMA20/SMA50 and simple RSI14 from daily bars; 20-session relative performance versus SPY on common dates"
       },
       "analyst_targets": {
@@ -23287,8 +23235,8 @@
         "sma20_as_of": "2026-11-16",
         "sma50_as_of": "2026-11-16",
         "volume_as_of": "2026-11-16",
-        "relative_strength_20d_pct": 4.07,
-        "relative_strength_benchmark": "SPY"
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null
       },
       "price_quality": "refreshed",
       "valuation": {
@@ -23313,8 +23261,8 @@
         "volume_ratio20": 0.104,
         "above_sma20": false,
         "above_sma50": true,
-        "relative_strength_20d_pct": 4.07,
-        "relative_strength_benchmark": "SPY",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
         "method": "SMA20/SMA50 and simple RSI14 from daily bars; 20-session relative performance versus SPY on common dates"
       },
       "analyst_targets": {
@@ -24065,8 +24013,8 @@
         "sma20_as_of": "2026-11-16",
         "sma50_as_of": "2026-11-16",
         "volume_as_of": "2026-11-16",
-        "relative_strength_20d_pct": -9.94,
-        "relative_strength_benchmark": "SPY"
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null
       },
       "price_quality": "refreshed",
       "valuation": {
@@ -24091,8 +24039,8 @@
         "volume_ratio20": 0.042,
         "above_sma20": false,
         "above_sma50": false,
-        "relative_strength_20d_pct": -9.94,
-        "relative_strength_benchmark": "SPY",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
         "method": "SMA20/SMA50 and simple RSI14 from daily bars; 20-session relative performance versus SPY on common dates"
       },
       "analyst_targets": {
@@ -24843,8 +24791,8 @@
         "sma20_as_of": "2026-11-16",
         "sma50_as_of": "2026-11-16",
         "volume_as_of": "2026-11-16",
-        "relative_strength_20d_pct": 8.19,
-        "relative_strength_benchmark": "SPY"
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null
       },
       "price_quality": "refreshed",
       "valuation": {
@@ -24869,8 +24817,8 @@
         "volume_ratio20": 0.127,
         "above_sma20": false,
         "above_sma50": false,
-        "relative_strength_20d_pct": 8.19,
-        "relative_strength_benchmark": "SPY",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
         "method": "SMA20/SMA50 and simple RSI14 from daily bars; 20-session relative performance versus SPY on common dates"
       },
       "analyst_targets": {
@@ -25621,8 +25569,8 @@
         "sma20_as_of": "2026-11-16",
         "sma50_as_of": "2026-11-16",
         "volume_as_of": "2026-11-16",
-        "relative_strength_20d_pct": -11.15,
-        "relative_strength_benchmark": "SPY"
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null
       },
       "price_quality": "refreshed",
       "valuation": {
@@ -25647,8 +25595,8 @@
         "volume_ratio20": 0.083,
         "above_sma20": false,
         "above_sma50": false,
-        "relative_strength_20d_pct": -11.15,
-        "relative_strength_benchmark": "SPY",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
         "method": "SMA20/SMA50 and simple RSI14 from daily bars; 20-session relative performance versus SPY on common dates"
       },
       "analyst_targets": {
@@ -26398,8 +26346,8 @@
         "sma20_as_of": "2026-11-16",
         "sma50_as_of": "2026-11-16",
         "volume_as_of": "2026-11-16",
-        "relative_strength_20d_pct": -12.75,
-        "relative_strength_benchmark": "SPY"
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null
       },
       "price_quality": "refreshed",
       "valuation": {
@@ -26424,8 +26372,8 @@
         "volume_ratio20": 0.081,
         "above_sma20": false,
         "above_sma50": false,
-        "relative_strength_20d_pct": -12.75,
-        "relative_strength_benchmark": "SPY",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
         "method": "SMA20/SMA50 and simple RSI14 from daily bars; 20-session relative performance versus SPY on common dates"
       },
       "analyst_targets": {
@@ -27068,8 +27016,8 @@
         "sma20_as_of": "2026-11-16",
         "sma50_as_of": "2026-11-16",
         "volume_as_of": "2026-11-16",
-        "relative_strength_20d_pct": -25.45,
-        "relative_strength_benchmark": "SPY"
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null
       },
       "price_quality": "refreshed",
       "valuation": {
@@ -27094,8 +27042,8 @@
         "volume_ratio20": 0.53,
         "above_sma20": false,
         "above_sma50": false,
-        "relative_strength_20d_pct": -25.45,
-        "relative_strength_benchmark": "SPY",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
         "method": "SMA20/SMA50 and simple RSI14 from daily bars; 20-session relative performance versus SPY on common dates"
       },
       "analyst_targets": {
@@ -27846,8 +27794,8 @@
         "sma20_as_of": "2026-11-16",
         "sma50_as_of": "2026-11-16",
         "volume_as_of": "2026-11-16",
-        "relative_strength_20d_pct": -32.95,
-        "relative_strength_benchmark": "SPY"
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null
       },
       "price_quality": "refreshed",
       "valuation": {
@@ -27872,8 +27820,8 @@
         "volume_ratio20": 0.173,
         "above_sma20": false,
         "above_sma50": false,
-        "relative_strength_20d_pct": -32.95,
-        "relative_strength_benchmark": "SPY",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
         "method": "SMA20/SMA50 and simple RSI14 from daily bars; 20-session relative performance versus SPY on common dates"
       },
       "analyst_targets": {
@@ -28623,8 +28571,8 @@
         "sma20_as_of": "2026-11-16",
         "sma50_as_of": "2026-11-16",
         "volume_as_of": "2026-11-16",
-        "relative_strength_20d_pct": -19.86,
-        "relative_strength_benchmark": "SPY"
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null
       },
       "price_quality": "refreshed",
       "valuation": {
@@ -28649,8 +28597,8 @@
         "volume_ratio20": 0.137,
         "above_sma20": false,
         "above_sma50": false,
-        "relative_strength_20d_pct": -19.86,
-        "relative_strength_benchmark": "SPY",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
         "method": "SMA20/SMA50 and simple RSI14 from daily bars; 20-session relative performance versus SPY on common dates"
       },
       "analyst_targets": {
@@ -28745,7 +28693,7 @@
         "as_of": "2026-11-16T15:13:22.769813+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1910139"
       },
-      "fundamentals_quality": "refreshed",
+      "fundamentals_quality": "cached",
       "price": {
         "close_usd": 5.3016,
         "date": "2026-11-16",
@@ -29401,8 +29349,8 @@
         "sma20_as_of": "2026-11-16",
         "sma50_as_of": "2026-11-16",
         "volume_as_of": "2026-11-16",
-        "relative_strength_20d_pct": -24.17,
-        "relative_strength_benchmark": "SPY"
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null
       },
       "price_quality": "refreshed",
       "valuation": {
@@ -29427,8 +29375,8 @@
         "volume_ratio20": 0.069,
         "above_sma20": false,
         "above_sma50": false,
-        "relative_strength_20d_pct": -24.17,
-        "relative_strength_benchmark": "SPY",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
         "method": "SMA20/SMA50 and simple RSI14 from daily bars; 20-session relative performance versus SPY on common dates"
       },
       "analyst_targets": {
@@ -29446,7 +29394,7 @@
         "strategy_version": "balanced-1.3.4-integrity",
         "signal": "WATCH",
         "buy_eligible": false,
-        "decision_stage": "analyst_consensus",
+        "decision_stage": "data_gate",
         "decision_trace": [
           {
             "stage": "data",
@@ -29459,22 +29407,14 @@
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
-            "actual": "refreshed",
+            "actual": "cached",
             "required": "refreshed",
-            "passed": true,
-            "reason": null
-          },
-          {
-            "stage": "consensus",
-            "check": "analyst_targets",
-            "actual": "unavailable",
-            "required": "documented",
             "passed": false,
-            "reason": "analyst_consensus_missing"
+            "reason": "fundamentals_not_refreshed"
           }
         ],
         "reasons": [
-          "analyst_consensus_missing"
+          "fundamentals_not_refreshed"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -29531,7 +29471,7 @@
         "as_of": "2026-11-16T15:13:23.406508+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1280452"
       },
-      "fundamentals_quality": "refreshed",
+      "fundamentals_quality": "cached",
       "price": {
         "close_usd": 1290.9399,
         "date": "2026-11-16",
@@ -30183,8 +30123,8 @@
         "volume_ratio20": 0.126,
         "above_sma20": true,
         "above_sma50": true,
-        "relative_strength_20d_pct": 5.9,
-        "relative_strength_benchmark": "SPY",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
         "rsi_as_of": "2026-11-16",
         "sma20_as_of": "2026-11-16",
         "sma50_as_of": "2026-11-16",
@@ -30213,8 +30153,8 @@
         "volume_ratio20": 0.126,
         "above_sma20": true,
         "above_sma50": true,
-        "relative_strength_20d_pct": 5.9,
-        "relative_strength_benchmark": "SPY",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
         "method": "SMA20/SMA50 and simple RSI14 from daily bars; 20-session relative performance versus SPY on common dates"
       },
       "analyst_targets": {
@@ -30232,7 +30172,7 @@
         "strategy_version": "balanced-1.3.4-integrity",
         "signal": "WATCH",
         "buy_eligible": false,
-        "decision_stage": "analyst_consensus",
+        "decision_stage": "data_gate",
         "decision_trace": [
           {
             "stage": "data",
@@ -30245,22 +30185,14 @@
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
-            "actual": "refreshed",
+            "actual": "cached",
             "required": "refreshed",
-            "passed": true,
-            "reason": null
-          },
-          {
-            "stage": "consensus",
-            "check": "analyst_targets",
-            "actual": "unavailable",
-            "required": "documented",
             "passed": false,
-            "reason": "analyst_consensus_missing"
+            "reason": "fundamentals_not_refreshed"
           }
         ],
         "reasons": [
-          "analyst_consensus_missing"
+          "fundamentals_not_refreshed"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -30314,10 +30246,10 @@
         },
         "period_mismatch_flags": [],
         "filed": "2026-03-11",
-        "as_of": "2026-11-16T10:28:46.492405+00:00",
+        "as_of": "2026-11-16T15:15:09.977840+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1835632"
       },
-      "fundamentals_quality": "cached",
+      "fundamentals_quality": "refreshed",
       "price": {
         "close_usd": 145.09,
         "date": "2026-11-16",
@@ -30969,8 +30901,8 @@
         "volume_ratio20": 0.176,
         "above_sma20": false,
         "above_sma50": false,
-        "relative_strength_20d_pct": -37.06,
-        "relative_strength_benchmark": "SPY",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
         "rsi_as_of": "2026-11-16",
         "sma20_as_of": "2026-11-16",
         "sma50_as_of": "2026-11-16",
@@ -30999,8 +30931,8 @@
         "volume_ratio20": 0.176,
         "above_sma20": false,
         "above_sma50": false,
-        "relative_strength_20d_pct": -37.06,
-        "relative_strength_benchmark": "SPY",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
         "method": "SMA20/SMA50 and simple RSI14 from daily bars; 20-session relative performance versus SPY on common dates"
       },
       "analyst_targets": {
@@ -31018,7 +30950,7 @@
         "strategy_version": "balanced-1.3.4-integrity",
         "signal": "WATCH",
         "buy_eligible": false,
-        "decision_stage": "data_gate",
+        "decision_stage": "analyst_consensus",
         "decision_trace": [
           {
             "stage": "data",
@@ -31031,14 +30963,22 @@
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
-            "actual": "cached",
+            "actual": "refreshed",
             "required": "refreshed",
+            "passed": true,
+            "reason": null
+          },
+          {
+            "stage": "consensus",
+            "check": "analyst_targets",
+            "actual": "unavailable",
+            "required": "documented",
             "passed": false,
-            "reason": "fundamentals_not_refreshed"
+            "reason": "analyst_consensus_missing"
           }
         ],
         "reasons": [
-          "fundamentals_not_refreshed"
+          "analyst_consensus_missing"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -31092,10 +31032,10 @@
         },
         "period_mismatch_flags": [],
         "filed": "2026-10-09",
-        "as_of": "2026-11-16T10:28:47.079505+00:00",
+        "as_of": "2026-11-16T15:15:10.445871+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=723125"
       },
-      "fundamentals_quality": "cached",
+      "fundamentals_quality": "refreshed",
       "price": {
         "close_usd": 720.77,
         "date": "2026-11-16",
@@ -31747,8 +31687,8 @@
         "volume_ratio20": 0.22,
         "above_sma20": false,
         "above_sma50": false,
-        "relative_strength_20d_pct": -18.08,
-        "relative_strength_benchmark": "SPY",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
         "rsi_as_of": "2026-11-16",
         "sma20_as_of": "2026-11-16",
         "sma50_as_of": "2026-11-16",
@@ -31777,8 +31717,8 @@
         "volume_ratio20": 0.22,
         "above_sma20": false,
         "above_sma50": false,
-        "relative_strength_20d_pct": -18.08,
-        "relative_strength_benchmark": "SPY",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
         "method": "SMA20/SMA50 and simple RSI14 from daily bars; 20-session relative performance versus SPY on common dates"
       },
       "analyst_targets": {
@@ -31796,7 +31736,7 @@
         "strategy_version": "balanced-1.3.4-integrity",
         "signal": "WATCH",
         "buy_eligible": false,
-        "decision_stage": "data_gate",
+        "decision_stage": "analyst_consensus",
         "decision_trace": [
           {
             "stage": "data",
@@ -31809,14 +31749,22 @@
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
-            "actual": "cached",
+            "actual": "refreshed",
             "required": "refreshed",
+            "passed": true,
+            "reason": null
+          },
+          {
+            "stage": "consensus",
+            "check": "analyst_targets",
+            "actual": "unavailable",
+            "required": "documented",
             "passed": false,
-            "reason": "fundamentals_not_refreshed"
+            "reason": "analyst_consensus_missing"
           }
         ],
         "reasons": [
-          "fundamentals_not_refreshed"
+          "analyst_consensus_missing"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -31870,10 +31818,10 @@
         },
         "period_mismatch_flags": [],
         "filed": "2026-01-29",
-        "as_of": "2026-11-16T10:28:47.806569+00:00",
+        "as_of": "2026-11-16T15:15:10.966341+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1373715"
       },
-      "fundamentals_quality": "cached",
+      "fundamentals_quality": "refreshed",
       "price": {
         "close_usd": 99.69,
         "date": "2026-11-16",
@@ -32525,8 +32473,8 @@
         "volume_ratio20": 0.098,
         "above_sma20": false,
         "above_sma50": false,
-        "relative_strength_20d_pct": -29.47,
-        "relative_strength_benchmark": "SPY",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
         "rsi_as_of": "2026-11-16",
         "sma20_as_of": "2026-11-16",
         "sma50_as_of": "2026-11-16",
@@ -32555,8 +32503,8 @@
         "volume_ratio20": 0.098,
         "above_sma20": false,
         "above_sma50": false,
-        "relative_strength_20d_pct": -29.47,
-        "relative_strength_benchmark": "SPY",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
         "method": "SMA20/SMA50 and simple RSI14 from daily bars; 20-session relative performance versus SPY on common dates"
       },
       "analyst_targets": {
@@ -32574,7 +32522,7 @@
         "strategy_version": "balanced-1.3.4-integrity",
         "signal": "WATCH",
         "buy_eligible": false,
-        "decision_stage": "data_gate",
+        "decision_stage": "analyst_consensus",
         "decision_trace": [
           {
             "stage": "data",
@@ -32587,14 +32535,22 @@
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
-            "actual": "cached",
+            "actual": "refreshed",
             "required": "refreshed",
+            "passed": true,
+            "reason": null
+          },
+          {
+            "stage": "consensus",
+            "check": "analyst_targets",
+            "actual": "unavailable",
+            "required": "documented",
             "passed": false,
-            "reason": "fundamentals_not_refreshed"
+            "reason": "analyst_consensus_missing"
           }
         ],
         "reasons": [
-          "fundamentals_not_refreshed"
+          "analyst_consensus_missing"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -32648,10 +32604,10 @@
         },
         "period_mismatch_flags": [],
         "filed": "2026-02-17",
-        "as_of": "2026-11-16T10:28:49.138978+00:00",
+        "as_of": "2026-11-16T15:15:12.078690+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1720635"
       },
-      "fundamentals_quality": "cached",
+      "fundamentals_quality": "refreshed",
       "price": {
         "close_usd": 109.34,
         "date": "2026-11-16",
@@ -33303,8 +33259,8 @@
         "volume_ratio20": 0.091,
         "above_sma20": false,
         "above_sma50": false,
-        "relative_strength_20d_pct": -20.57,
-        "relative_strength_benchmark": "SPY",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
         "rsi_as_of": "2026-11-16",
         "sma20_as_of": "2026-11-16",
         "sma50_as_of": "2026-11-16",
@@ -33333,8 +33289,8 @@
         "volume_ratio20": 0.091,
         "above_sma20": false,
         "above_sma50": false,
-        "relative_strength_20d_pct": -20.57,
-        "relative_strength_benchmark": "SPY",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
         "method": "SMA20/SMA50 and simple RSI14 from daily bars; 20-session relative performance versus SPY on common dates"
       },
       "analyst_targets": {
@@ -33352,7 +33308,7 @@
         "strategy_version": "balanced-1.3.4-integrity",
         "signal": "WATCH",
         "buy_eligible": false,
-        "decision_stage": "data_gate",
+        "decision_stage": "analyst_consensus",
         "decision_trace": [
           {
             "stage": "data",
@@ -33365,14 +33321,22 @@
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
-            "actual": "cached",
+            "actual": "refreshed",
             "required": "refreshed",
+            "passed": true,
+            "reason": null
+          },
+          {
+            "stage": "consensus",
+            "check": "analyst_targets",
+            "actual": "unavailable",
+            "required": "documented",
             "passed": false,
-            "reason": "fundamentals_not_refreshed"
+            "reason": "analyst_consensus_missing"
           }
         ],
         "reasons": [
-          "fundamentals_not_refreshed"
+          "analyst_consensus_missing"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -33426,10 +33390,10 @@
         },
         "period_mismatch_flags": [],
         "filed": "2026-03-30",
-        "as_of": "2026-11-16T14:43:51.602675+00:00",
+        "as_of": "2026-11-16T15:15:12.654120+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1646188"
       },
-      "fundamentals_quality": "cached",
+      "fundamentals_quality": "refreshed",
       "price": {
         "close_usd": 4.805,
         "date": "2026-11-16",
@@ -34081,8 +34045,8 @@
         "volume_ratio20": 0.243,
         "above_sma20": false,
         "above_sma50": false,
-        "relative_strength_20d_pct": -18.45,
-        "relative_strength_benchmark": "SPY",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
         "rsi_as_of": "2026-11-16",
         "sma20_as_of": "2026-11-16",
         "sma50_as_of": "2026-11-16",
@@ -34111,8 +34075,8 @@
         "volume_ratio20": 0.243,
         "above_sma20": false,
         "above_sma50": false,
-        "relative_strength_20d_pct": -18.45,
-        "relative_strength_benchmark": "SPY",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
         "method": "SMA20/SMA50 and simple RSI14 from daily bars; 20-session relative performance versus SPY on common dates"
       },
       "analyst_targets": {
@@ -34130,7 +34094,7 @@
         "strategy_version": "balanced-1.3.4-integrity",
         "signal": "WATCH",
         "buy_eligible": false,
-        "decision_stage": "data_gate",
+        "decision_stage": "analyst_consensus",
         "decision_trace": [
           {
             "stage": "data",
@@ -34143,14 +34107,22 @@
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
-            "actual": "cached",
+            "actual": "refreshed",
             "required": "refreshed",
+            "passed": true,
+            "reason": null
+          },
+          {
+            "stage": "consensus",
+            "check": "analyst_targets",
+            "actual": "unavailable",
+            "required": "documented",
             "passed": false,
-            "reason": "fundamentals_not_refreshed"
+            "reason": "analyst_consensus_missing"
           }
         ],
         "reasons": [
-          "fundamentals_not_refreshed"
+          "analyst_consensus_missing"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -34204,10 +34176,10 @@
         },
         "period_mismatch_flags": [],
         "filed": "2026-02-24",
-        "as_of": "2026-11-16T14:43:52.184395+00:00",
+        "as_of": "2026-11-16T15:15:13.122839+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=704532"
       },
-      "fundamentals_quality": "cached",
+      "fundamentals_quality": "refreshed",
       "price": {
         "close_usd": 190.48,
         "date": "2026-11-16",
@@ -34859,8 +34831,8 @@
         "volume_ratio20": 0.212,
         "above_sma20": false,
         "above_sma50": false,
-        "relative_strength_20d_pct": -13.43,
-        "relative_strength_benchmark": "SPY",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
         "rsi_as_of": "2026-11-16",
         "sma20_as_of": "2026-11-16",
         "sma50_as_of": "2026-11-16",
@@ -34889,8 +34861,8 @@
         "volume_ratio20": 0.212,
         "above_sma20": false,
         "above_sma50": false,
-        "relative_strength_20d_pct": -13.43,
-        "relative_strength_benchmark": "SPY",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
         "method": "SMA20/SMA50 and simple RSI14 from daily bars; 20-session relative performance versus SPY on common dates"
       },
       "analyst_targets": {
@@ -34908,7 +34880,7 @@
         "strategy_version": "balanced-1.3.4-integrity",
         "signal": "WATCH",
         "buy_eligible": false,
-        "decision_stage": "data_gate",
+        "decision_stage": "analyst_consensus",
         "decision_trace": [
           {
             "stage": "data",
@@ -34921,14 +34893,22 @@
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
-            "actual": "cached",
+            "actual": "refreshed",
             "required": "refreshed",
+            "passed": true,
+            "reason": null
+          },
+          {
+            "stage": "consensus",
+            "check": "analyst_targets",
+            "actual": "unavailable",
+            "required": "documented",
             "passed": false,
-            "reason": "fundamentals_not_refreshed"
+            "reason": "analyst_consensus_missing"
           }
         ],
         "reasons": [
-          "fundamentals_not_refreshed"
+          "analyst_consensus_missing"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -34982,10 +34962,10 @@
         },
         "period_mismatch_flags": [],
         "filed": "2026-03-02",
-        "as_of": "2026-11-16T14:43:52.814859+00:00",
+        "as_of": "2026-11-16T15:15:13.930674+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1816581"
       },
-      "fundamentals_quality": "cached",
+      "fundamentals_quality": "refreshed",
       "price": {
         "close_usd": 31.3,
         "date": "2026-11-16",
@@ -35637,8 +35617,8 @@
         "volume_ratio20": 0.103,
         "above_sma20": false,
         "above_sma50": false,
-        "relative_strength_20d_pct": 11.54,
-        "relative_strength_benchmark": "SPY",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
         "rsi_as_of": "2026-11-16",
         "sma20_as_of": "2026-11-16",
         "sma50_as_of": "2026-11-16",
@@ -35667,8 +35647,8 @@
         "volume_ratio20": 0.103,
         "above_sma20": false,
         "above_sma50": false,
-        "relative_strength_20d_pct": 11.54,
-        "relative_strength_benchmark": "SPY",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
         "method": "SMA20/SMA50 and simple RSI14 from daily bars; 20-session relative performance versus SPY on common dates"
       },
       "analyst_targets": {
@@ -35686,7 +35666,7 @@
         "strategy_version": "balanced-1.3.4-integrity",
         "signal": "WATCH",
         "buy_eligible": false,
-        "decision_stage": "data_gate",
+        "decision_stage": "analyst_consensus",
         "decision_trace": [
           {
             "stage": "data",
@@ -35699,14 +35679,22 @@
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
-            "actual": "cached",
+            "actual": "refreshed",
             "required": "refreshed",
+            "passed": true,
+            "reason": null
+          },
+          {
+            "stage": "consensus",
+            "check": "analyst_targets",
+            "actual": "unavailable",
+            "required": "documented",
             "passed": false,
-            "reason": "fundamentals_not_refreshed"
+            "reason": "analyst_consensus_missing"
           }
         ],
         "reasons": [
-          "fundamentals_not_refreshed"
+          "analyst_consensus_missing"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -35760,7 +35748,7 @@
         },
         "period_mismatch_flags": [],
         "filed": "2026-03-25",
-        "as_of": "2026-11-16T15:13:21.599472+00:00",
+        "as_of": "2026-11-16T15:15:07.603027+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1734722"
       },
       "fundamentals_quality": "refreshed",
@@ -36415,8 +36403,8 @@
         "volume_ratio20": 0.046,
         "above_sma20": false,
         "above_sma50": false,
-        "relative_strength_20d_pct": 2.81,
-        "relative_strength_benchmark": "SPY",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
         "rsi_as_of": "2026-11-16",
         "sma20_as_of": "2026-11-16",
         "sma50_as_of": "2026-11-16",
@@ -36445,8 +36433,8 @@
         "volume_ratio20": 0.046,
         "above_sma20": false,
         "above_sma50": false,
-        "relative_strength_20d_pct": 2.81,
-        "relative_strength_benchmark": "SPY",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
         "method": "SMA20/SMA50 and simple RSI14 from daily bars; 20-session relative performance versus SPY on common dates"
       },
       "analyst_targets": {
@@ -36546,10 +36534,10 @@
         },
         "period_mismatch_flags": [],
         "filed": "2026-02-17",
-        "as_of": "2026-11-16T14:43:53.902519+00:00",
+        "as_of": "2026-11-16T15:15:14.848531+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1321655"
       },
-      "fundamentals_quality": "cached",
+      "fundamentals_quality": "refreshed",
       "price": {
         "close_usd": 163.11,
         "date": "2026-11-16",
@@ -37201,8 +37189,8 @@
         "volume_ratio20": 0.119,
         "above_sma20": false,
         "above_sma50": false,
-        "relative_strength_20d_pct": -13.6,
-        "relative_strength_benchmark": "SPY",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
         "rsi_as_of": "2026-11-16",
         "sma20_as_of": "2026-11-16",
         "sma50_as_of": "2026-11-16",
@@ -37231,8 +37219,8 @@
         "volume_ratio20": 0.119,
         "above_sma20": false,
         "above_sma50": false,
-        "relative_strength_20d_pct": -13.6,
-        "relative_strength_benchmark": "SPY",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
         "method": "SMA20/SMA50 and simple RSI14 from daily bars; 20-session relative performance versus SPY on common dates"
       },
       "analyst_targets": {
@@ -37250,7 +37238,7 @@
         "strategy_version": "balanced-1.3.4-integrity",
         "signal": "WATCH",
         "buy_eligible": false,
-        "decision_stage": "data_gate",
+        "decision_stage": "analyst_consensus",
         "decision_trace": [
           {
             "stage": "data",
@@ -37263,14 +37251,22 @@
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
-            "actual": "cached",
+            "actual": "refreshed",
             "required": "refreshed",
+            "passed": true,
+            "reason": null
+          },
+          {
+            "stage": "consensus",
+            "check": "analyst_targets",
+            "actual": "unavailable",
+            "required": "documented",
             "passed": false,
-            "reason": "fundamentals_not_refreshed"
+            "reason": "analyst_consensus_missing"
           }
         ],
         "reasons": [
-          "fundamentals_not_refreshed"
+          "analyst_consensus_missing"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -37324,10 +37320,10 @@
         },
         "period_mismatch_flags": [],
         "filed": "2026-02-19",
-        "as_of": "2026-11-16T14:43:54.536458+00:00",
+        "as_of": "2026-11-16T15:15:15.418663+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1050915"
       },
-      "fundamentals_quality": "cached",
+      "fundamentals_quality": "refreshed",
       "price": {
         "close_usd": 593.725,
         "date": "2026-11-16",
@@ -37979,8 +37975,8 @@
         "volume_ratio20": 0.045,
         "above_sma20": true,
         "above_sma50": false,
-        "relative_strength_20d_pct": -1.26,
-        "relative_strength_benchmark": "SPY",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
         "rsi_as_of": "2026-11-16",
         "sma20_as_of": "2026-11-16",
         "sma50_as_of": "2026-11-16",
@@ -38009,8 +38005,8 @@
         "volume_ratio20": 0.045,
         "above_sma20": true,
         "above_sma50": false,
-        "relative_strength_20d_pct": -1.26,
-        "relative_strength_benchmark": "SPY",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
         "method": "SMA20/SMA50 and simple RSI14 from daily bars; 20-session relative performance versus SPY on common dates"
       },
       "analyst_targets": {
@@ -38028,7 +38024,7 @@
         "strategy_version": "balanced-1.3.4-integrity",
         "signal": "WATCH",
         "buy_eligible": false,
-        "decision_stage": "data_gate",
+        "decision_stage": "analyst_consensus",
         "decision_trace": [
           {
             "stage": "data",
@@ -38041,14 +38037,22 @@
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
-            "actual": "cached",
+            "actual": "refreshed",
             "required": "refreshed",
+            "passed": true,
+            "reason": null
+          },
+          {
+            "stage": "consensus",
+            "check": "analyst_targets",
+            "actual": "unavailable",
+            "required": "documented",
             "passed": false,
-            "reason": "fundamentals_not_refreshed"
+            "reason": "analyst_consensus_missing"
           }
         ],
         "reasons": [
-          "fundamentals_not_refreshed"
+          "analyst_consensus_missing"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -38756,8 +38760,8 @@
         "volume_ratio20": 0.11,
         "above_sma20": false,
         "above_sma50": false,
-        "relative_strength_20d_pct": 0.69,
-        "relative_strength_benchmark": "SPY",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
         "rsi_as_of": "2026-11-16",
         "sma20_as_of": "2026-11-16",
         "sma50_as_of": "2026-11-16",
@@ -38786,8 +38790,8 @@
         "volume_ratio20": 0.11,
         "above_sma20": false,
         "above_sma50": false,
-        "relative_strength_20d_pct": 0.69,
-        "relative_strength_benchmark": "SPY",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
         "method": "SMA20/SMA50 and simple RSI14 from daily bars; 20-session relative performance versus SPY on common dates"
       },
       "analyst_targets": {
@@ -39533,8 +39537,8 @@
         "volume_ratio20": 0.168,
         "above_sma20": false,
         "above_sma50": false,
-        "relative_strength_20d_pct": -20.78,
-        "relative_strength_benchmark": "SPY",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
         "rsi_as_of": "2026-11-16",
         "sma20_as_of": "2026-11-16",
         "sma50_as_of": "2026-11-16",
@@ -39563,8 +39567,8 @@
         "volume_ratio20": 0.168,
         "above_sma20": false,
         "above_sma50": false,
-        "relative_strength_20d_pct": -20.78,
-        "relative_strength_benchmark": "SPY",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
         "method": "SMA20/SMA50 and simple RSI14 from daily bars; 20-session relative performance versus SPY on common dates"
       },
       "analyst_targets": {
@@ -40311,8 +40315,8 @@
         "volume_ratio20": 0.114,
         "above_sma20": false,
         "above_sma50": false,
-        "relative_strength_20d_pct": -5.68,
-        "relative_strength_benchmark": "SPY",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
         "rsi_as_of": "2026-11-16",
         "sma20_as_of": "2026-11-16",
         "sma50_as_of": "2026-11-16",
@@ -40341,8 +40345,8 @@
         "volume_ratio20": 0.114,
         "above_sma20": false,
         "above_sma50": false,
-        "relative_strength_20d_pct": -5.68,
-        "relative_strength_benchmark": "SPY",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
         "method": "SMA20/SMA50 and simple RSI14 from daily bars; 20-session relative performance versus SPY on common dates"
       },
       "analyst_targets": {
@@ -41089,8 +41093,8 @@
         "volume_ratio20": 0.183,
         "above_sma20": false,
         "above_sma50": false,
-        "relative_strength_20d_pct": -40.87,
-        "relative_strength_benchmark": "SPY",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
         "rsi_as_of": "2026-11-16",
         "sma20_as_of": "2026-11-16",
         "sma50_as_of": "2026-11-16",
@@ -41119,8 +41123,8 @@
         "volume_ratio20": 0.183,
         "above_sma20": false,
         "above_sma50": false,
-        "relative_strength_20d_pct": -40.87,
-        "relative_strength_benchmark": "SPY",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
         "method": "SMA20/SMA50 and simple RSI14 from daily bars; 20-session relative performance versus SPY on common dates"
       },
       "analyst_targets": {
@@ -41867,8 +41871,8 @@
         "volume_ratio20": 0.183,
         "above_sma20": false,
         "above_sma50": false,
-        "relative_strength_20d_pct": -19.69,
-        "relative_strength_benchmark": "SPY",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
         "rsi_as_of": "2026-11-16",
         "sma20_as_of": "2026-11-16",
         "sma50_as_of": "2026-11-16",
@@ -41897,8 +41901,8 @@
         "volume_ratio20": 0.183,
         "above_sma20": false,
         "above_sma50": false,
-        "relative_strength_20d_pct": -19.69,
-        "relative_strength_benchmark": "SPY",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
         "method": "SMA20/SMA50 and simple RSI14 from daily bars; 20-session relative performance versus SPY on common dates"
       },
       "analyst_targets": {
@@ -42607,8 +42611,8 @@
         "volume_ratio20": 0.004,
         "above_sma20": true,
         "above_sma50": false,
-        "relative_strength_20d_pct": 4.75,
-        "relative_strength_benchmark": "SPY",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
         "rsi_as_of": "2026-11-16",
         "sma20_as_of": "2026-11-16",
         "sma50_as_of": "2026-11-16",
@@ -42637,8 +42641,8 @@
         "volume_ratio20": 0.004,
         "above_sma20": true,
         "above_sma50": false,
-        "relative_strength_20d_pct": 4.75,
-        "relative_strength_benchmark": "SPY",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
         "method": "SMA20/SMA50 and simple RSI14 from daily bars; 20-session relative performance versus SPY on common dates"
       },
       "analyst_targets": {
@@ -43385,8 +43389,8 @@
         "volume_ratio20": 0.204,
         "above_sma20": false,
         "above_sma50": false,
-        "relative_strength_20d_pct": -18.45,
-        "relative_strength_benchmark": "SPY",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
         "rsi_as_of": "2026-11-16",
         "sma20_as_of": "2026-11-16",
         "sma50_as_of": "2026-11-16",
@@ -43415,8 +43419,8 @@
         "volume_ratio20": 0.204,
         "above_sma20": false,
         "above_sma50": false,
-        "relative_strength_20d_pct": -18.45,
-        "relative_strength_benchmark": "SPY",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
         "method": "SMA20/SMA50 and simple RSI14 from daily bars; 20-session relative performance versus SPY on common dates"
       },
       "analyst_targets": {
@@ -44163,8 +44167,8 @@
         "volume_ratio20": 0.089,
         "above_sma20": false,
         "above_sma50": false,
-        "relative_strength_20d_pct": -7.63,
-        "relative_strength_benchmark": "SPY",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
         "rsi_as_of": "2026-11-16",
         "sma20_as_of": "2026-11-16",
         "sma50_as_of": "2026-11-16",
@@ -44193,8 +44197,8 @@
         "volume_ratio20": 0.089,
         "above_sma20": false,
         "above_sma50": false,
-        "relative_strength_20d_pct": -7.63,
-        "relative_strength_benchmark": "SPY",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
         "method": "SMA20/SMA50 and simple RSI14 from daily bars; 20-session relative performance versus SPY on common dates"
       },
       "analyst_targets": {
@@ -44940,8 +44944,8 @@
         "volume_ratio20": 0.212,
         "above_sma20": false,
         "above_sma50": false,
-        "relative_strength_20d_pct": -27.44,
-        "relative_strength_benchmark": "SPY",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
         "rsi_as_of": "2026-11-16",
         "sma20_as_of": "2026-11-16",
         "sma50_as_of": "2026-11-16",
@@ -44970,8 +44974,8 @@
         "volume_ratio20": 0.212,
         "above_sma20": false,
         "above_sma50": false,
-        "relative_strength_20d_pct": -27.44,
-        "relative_strength_benchmark": "SPY",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
         "method": "SMA20/SMA50 and simple RSI14 from daily bars; 20-session relative performance versus SPY on common dates"
       },
       "analyst_targets": {
@@ -45720,8 +45724,8 @@
         "volume_ratio20": 0.132,
         "above_sma20": false,
         "above_sma50": false,
-        "relative_strength_20d_pct": -8.64,
-        "relative_strength_benchmark": "SPY",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
         "rsi_as_of": "2026-11-16",
         "sma20_as_of": "2026-11-16",
         "sma50_as_of": "2026-11-16",
@@ -45750,8 +45754,8 @@
         "volume_ratio20": 0.132,
         "above_sma20": false,
         "above_sma50": false,
-        "relative_strength_20d_pct": -8.64,
-        "relative_strength_benchmark": "SPY",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
         "method": "SMA20/SMA50 and simple RSI14 from daily bars; 20-session relative performance versus SPY on common dates"
       },
       "analyst_targets": {
@@ -46497,8 +46501,8 @@
         "volume_ratio20": 0.099,
         "above_sma20": false,
         "above_sma50": false,
-        "relative_strength_20d_pct": -28.33,
-        "relative_strength_benchmark": "SPY",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
         "rsi_as_of": "2026-11-16",
         "sma20_as_of": "2026-11-16",
         "sma50_as_of": "2026-11-16",
@@ -46527,8 +46531,8 @@
         "volume_ratio20": 0.099,
         "above_sma20": false,
         "above_sma50": false,
-        "relative_strength_20d_pct": -28.33,
-        "relative_strength_benchmark": "SPY",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
         "method": "SMA20/SMA50 and simple RSI14 from daily bars; 20-session relative performance versus SPY on common dates"
       },
       "analyst_targets": {
@@ -47271,8 +47275,8 @@
         "volume_ratio20": 0.383,
         "above_sma20": false,
         "above_sma50": false,
-        "relative_strength_20d_pct": -7.92,
-        "relative_strength_benchmark": "SPY",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
         "rsi_as_of": "2026-11-16",
         "sma20_as_of": "2026-11-16",
         "sma50_as_of": "2026-11-16",
@@ -47301,8 +47305,8 @@
         "volume_ratio20": 0.383,
         "above_sma20": false,
         "above_sma50": false,
-        "relative_strength_20d_pct": -7.92,
-        "relative_strength_benchmark": "SPY",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
         "method": "SMA20/SMA50 and simple RSI14 from daily bars; 20-session relative performance versus SPY on common dates"
       },
       "analyst_targets": {
@@ -48049,8 +48053,8 @@
         "volume_ratio20": 0.106,
         "above_sma20": false,
         "above_sma50": false,
-        "relative_strength_20d_pct": -12.18,
-        "relative_strength_benchmark": "SPY",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
         "rsi_as_of": "2026-11-16",
         "sma20_as_of": "2026-11-16",
         "sma50_as_of": "2026-11-16",
@@ -48079,8 +48083,8 @@
         "volume_ratio20": 0.106,
         "above_sma20": false,
         "above_sma50": false,
-        "relative_strength_20d_pct": -12.18,
-        "relative_strength_benchmark": "SPY",
+        "relative_strength_20d_pct": null,
+        "relative_strength_benchmark": null,
         "method": "SMA20/SMA50 and simple RSI14 from daily bars; 20-session relative performance versus SPY on common dates"
       },
       "analyst_targets": {
@@ -48145,6 +48149,11 @@
       "date": "Mon, 16 Nov 2026 09:17:39 GMT"
     },
     {
+      "title": "XTEND AI Robotics Q3FY26 Results: Revenue jumps 281% YoY to $14.9 million - scanx.trade",
+      "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxONElSdTNGb1kwTVE5QlY5LWlNYnpVa3oxQlYzcU5xMVJocXdHNlM4dHdfbkVEREJlaHFsYXdVWE1FZjl3S080QlNsU1NQVTJzMDU0T296c1RFYUt0MVRFckE2T0x4N2RrZWJPSUJDR0wwNWpJMG1JQm1tNFJmWkVIVG80Y3lKOVVDZk1hVV9UcGJIN0hEMHVrbi14U1d1Mkc0LWZ3YkFuaFh6VEZhMlJ5bnFuZkJUd2hZUDg4?oc=5",
+      "date": "Mon, 16 Nov 2026 11:56:48 GMT"
+    },
+    {
       "title": "Eric Trump-backed robot soldier startup can't pay staff after founder borrowed $4.6 million from company to buy home - CNBC",
       "url": "https://news.google.com/rss/articles/CBMickFVX3lxTFA5YW05b2ptbVhhVkdHSnNqN2wwU1RaN1pHMGh3UUU3SlpWcUl0MVNINloxLVFmbVV4N0dWaU90RDBGb3p4MktjTDVVeUtIR25PVnNjLWhQeURhdkthcUJ2cUVmMkJ2OXUzVUNFZXF5UnBoQdIBd0FVX3lxTE9DQVVfcVVUOVhwbko1ME5GeG16NmR6Q2lWVnNNdU1mTjdYS3RmVVh2WDQyY2hqZWM4UGNvcWVnX3hhdkZFby1hVjRTVHFWUmg4TjNxSE93aDFPejc4SWFIM1RGOGVzR0xhdXAxbU5kUmtiLWxoZzFF?oc=5",
       "date": "Sat, 14 Nov 2026 12:00:01 GMT"
@@ -48153,11 +48162,6 @@
       "title": "AI in Healthcare: 8 Stocks to Buy Now | Investing - US News Money",
       "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQb3BaNFZQSC1mVmRGZWw5V1dkVmhWeW8xWTByRklsRlJKaEpjVzZ3d0YxWjJ3NFBIamtBSkVWc1ZfRF94VmdNcXdnZWhuckxpbm5aeW15VUlESFhLQnJ1ZFA3LW9uc1IzdlZraXBaMGdHU2N1Mm5VdVNsd3FYb3luSFIxbHpMRFE?oc=5",
       "date": "Fri, 13 Nov 2026 21:51:00 GMT"
-    },
-    {
-      "title": "NVIDIA Corporation | History, GPUs, & Artificial Intelligence - Britannica",
-      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1FMGstclM1R3lESkhtUUVPTDBHZktQWWMzcTFXa3VIR2FOcTJLcy1wQnlLMHo5MDRXeS10UTJudHRxNmpFX2hyWUZzX1ZTaVpBTng3VXBGT3ZGa0FrTXhHMg?oc=5",
-      "date": "Sun, 15 Nov 2026 05:38:00 GMT"
     },
     {
       "title": "ARM Stock Gains 4% Since Q2 Earnings: Is it a Buy or Hold Now? - TradingView",
@@ -48220,9 +48224,9 @@
       "date": "Sun, 15 Nov 2026 01:14:09 GMT"
     },
     {
-      "title": "FF EAI Robotics Ecosystem Reports Third-Quarter Results - TipRanks",
-      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNcFVHUTdhd3ZfcWhnVkk5X2k3UWZyLV96Nlc4VWR3eWE5S0ZrTEp3T1l1V041NExHT1JsN1l0a0RIWHVXRUdnRzQxU3lzVkpyWDdKYU5vS2MtVlZPcWI1UlJ0MUdEeFl5RXg4dDVXU2h6UHJOb19Ec2ktMDA2T29RaXY0Y29HSmEzLUNfLU1hY3Bxd2p5QWU4SHlZbUFmT2NxOE1vcExXNHF2enM?oc=5",
-      "date": "Fri, 13 Nov 2026 20:35:29 GMT"
+      "title": "Oshkosh Earnings Call Exposes Execution Strains Amid Strong Demand - TipRanks",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNdmh4UHlVeExnN19BNlU5eXlmRHF5NkR2Y3M1WXowbTVZSmF2WVRvWWFOWnpYOEozQ1dhQ0pldFlLMlhJZHFaSFdRbnVoQUhnYjdGTTVHSDU0SHFRZ3FhM1BwQ1dQZHVNeHhvRHJLMHQxWm5SVUtESXhaX2NSUElONG1SYk5kUnFLN0k3c0RjLUxuWjJTalc4R19Ea1psNW1HRnlKVVJsNk4tY1JxeEMtMkxzaTdoZWVybVE?oc=5",
+      "date": "Sun, 15 Nov 2026 00:30:03 GMT"
     },
     {
       "title": "AI disruption wipes out $206 billion in market value of 10 listed companies; which businesses are most at risk? - Livemint",
@@ -48250,9 +48254,9 @@
       "date": "Sun, 15 Nov 2026 05:39:01 GMT"
     },
     {
-      "title": "Arrow Electronics Earnings Call Signals Broad Growth Ahead - TipRanks",
-      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNdnFSVWtzaThfOVlDcTdMdWFHTlB1a0VZcVVwXzE0NTMyQ3hFdTQ2NmNjZUVJZldtVVc3b01TV2NDaGp4a0tLNVdyV3kxdHUyOVQ2MVZTYUVPamVtR1d3SHBweHNPekI2akdET2x6WXV2S0d4RDVLVl9BZVpMZVRwSzlCZHRDdGJHRWo0SHJpRDZNYmEzaVpTcVF3UUJPUlJ4VUFWX2c3VVRYOHMwaUNF?oc=5",
-      "date": "Sun, 15 Nov 2026 02:12:17 GMT"
+      "title": "FF EAI Robotics Ecosystem Reports Third-Quarter Results - TipRanks",
+      "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNcFVHUTdhd3ZfcWhnVkk5X2k3UWZyLV96Nlc4VWR3eWE5S0ZrTEp3T1l1V041NExHT1JsN1l0a0RIWHVXRUdnRzQxU3lzVkpyWDdKYU5vS2MtVlZPcWI1UlJ0MUdEeFl5RXg4dDVXU2h6UHJOb19Ec2ktMDA2T29RaXY0Y29HSmEzLUNfLU1hY3Bxd2p5QWU4SHlZbUFmT2NxOE1vcExXNHF2enM?oc=5",
+      "date": "Fri, 13 Nov 2026 20:35:29 GMT"
     },
     {
       "title": "Which Technology Stocks Are Powering AI Infrastructure Beyond GPUs? - Kalkine Media",
@@ -48435,19 +48439,19 @@
       "date": "Mon, 16 Nov 2026 06:14:00 GMT"
     },
     {
-      "title": "Fady Saad, Founder and General Partner of Cybernetix Ventures – Interview Series - Unite.AI",
-      "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNYlFxSTM5SERST1R3bXJfbEVERjdvWE1oWjA0eDdzeGxrWVdUaXJmWFpZUXhXSlRzVUF2dkRhRnpOZ3NVaGRNRk5GWDY3c3lEa0VNRGtvSFJHLUZnNC1jblRtUjkweUVrUnAyRjVoMTlDYloteVlHaWlLSTRMeC1TRDFCbFZtNEFEQ1NrQ2VvLW1YWjZscmVGVVhEaFVRWi1G?oc=5",
-      "date": "Fri, 13 Nov 2026 17:37:01 GMT"
-    },
-    {
-      "title": "Toyota Motor (TSE:7203) Plans 400,000 Robots Across Its Global Factories - Yahoo Finance",
-      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPaTIwOC12U2lBWVhtLVhuN0tXTXgzZE1iTVlBMDczZURqUllsZ28teGFCbkFtc21BVlF0V3ZZQ2U2Y216S0djT2o0UEhfS014aXV6YnVDMVBTaDh0UHNaN3NpRzRmYXh2YzRMaS02RUFlTlQwUkMzQkVHMXhFSlFjNzRMVE5ja1kzOHRLSndSVllIQQ?oc=5",
-      "date": "Sun, 15 Nov 2026 20:05:49 GMT"
+      "title": "FORT Robotics Reports Strong 2026 Momentum as Company Progresses Towards a Public Listing in Partnership with Newbury Street II Acquisition Corp - Yahoo! Finance Canada",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQdkFDRnd2X2NfUnhMbm1PY1ZpT2tmVUFVekg2OTlrX1J3OTgxNjZBcUFyNGVvS3dhZzAwai1SVFdUYXpqOFVGbEp3QWFyZHdoVmxRVTZqa0NweFVtUHlFMmludjN2YlIzUDBEQVI5VTZHWm1EbWYtOWxqSGpCTS1Vdmd3ZUM4bTk4RlE?oc=5",
+      "date": "Mon, 16 Nov 2026 13:00:00 GMT"
     },
     {
       "title": "Elite Robots Expands Global Mobile Automation Offering with CE-Compliant Mobile Manipulators - PR Newswire UK",
       "url": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxPVHpNb0dUSFlhVHI5WGxOM2Y0MFJtcmxfcFd0LU1kdU13dEtIQ3QxMUNBNHFKbUNnSjhYMU5YUEUwcE1taGZ0YTlfZkxjV0xyc1puUkcycnRUYTctb3VvVkxoUE5pUlNyQjEyTFEwNXJ4T0VfNEI0UEtkTUoxaER1Ml9ucnJUbGlVbzRSZGNYQ2lhcVI0MjdVQWMxcGJua3BXVVc4dW9tMjJ4SEpCemMyd3d0a3RIY2VVcjd3bVUzaU9OT3lzZm9JR3lrbnRYY2dYZkdETlplZEZKU01UR01nVG5LRFc?oc=5",
       "date": "Mon, 16 Nov 2026 09:00:00 GMT"
+    },
+    {
+      "title": "Toyota Motor (TSE:7203) Plans 400,000 Robots Across Its Global Factories - Yahoo Finance",
+      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxPaTIwOC12U2lBWVhtLVhuN0tXTXgzZE1iTVlBMDczZURqUllsZ28teGFCbkFtc21BVlF0V3ZZQ2U2Y216S0djT2o0UEhfS014aXV6YnVDMVBTaDh0UHNaN3NpRzRmYXh2YzRMaS02RUFlTlQwUkMzQkVHMXhFSlFjNzRMVE5ja1kzOHRLSndSVllIQQ?oc=5",
+      "date": "Sun, 15 Nov 2026 20:05:49 GMT"
     },
     {
       "title": "TE Connectivity: 3 Key Takeaways for Long-Term Investors - Yahoo Finance",
@@ -48465,14 +48469,14 @@
       "date": "Mon, 16 Nov 2026 08:23:10 GMT"
     },
     {
-      "title": "Tesla and Amazon are building the workforce a 1921 play imagined: One that never asks for a wage - inkl",
-      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxObUo1ZTRqRm9mVllDTVJzZ19UWkRRVmVVRnI5bTNoOThxcWpkQm03eE42d0lCQ05Ma0cxaWFKa3V6MURzUWJ3VXE2a3pKcGdBWUNFd0lmWTlzYXg4X2lJUHI0dHFjbnJ5dXpuMmJUc3ZzNzA4UzU5VGh5X000MHpVV29hU0JVSHR0XzFQQ2xWdXpJTFNXUl85RWpSTERVMzZXdGRYZktKNDQtRERXVGRKdE5ubHFBTWtFN2ZXUm93?oc=5",
-      "date": "Sat, 14 Nov 2026 13:26:00 GMT"
-    },
-    {
       "title": "Global robotics industry races to turn AI into physical machines - Vanguard News",
       "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNSnphaWhBSm9CS210VEVBMEI4WEFMclFPeUo2N255RmJFOXBXQVBaOXl0NmxZU2tQdTVobDV1SkFfOTBqeElMeU1La2lyd3RaNm1ZVy13Tng2aHhBTlFDU1dueGd2YUI0TDc1QWZYYTktUFROVGluMDhCb19tdU1JV0xESWY4YXZKWkV5eXI0bkxVdnFOaHc4MkdWdVJDQnZxSElz0gGoAUFVX3lxTE5IQnhFOVNtWjZrSnczSVhCRWIwZlhCR3h6bWFSR0xvRVZaTjJ4TkVLLTNxMW0zZzJZV0lud0FQMWlodEpfSnFUY2ZCN0EtS3hOczNNU2xMR0d2YTBLdUUxLW01Vm9SazRQdE5KMkUxbWxxWV9ueDNSbkpyOTdXNFNaNGNfUDE4Y0NCUUY5NDZwWENhakVNMEhiYWpmLUluTXRzVG4zZ3RYbQ?oc=5",
       "date": "Sun, 15 Nov 2026 14:08:06 GMT"
+    },
+    {
+      "title": "Tesla and Amazon are building the workforce a 1921 play imagined: One that never asks for a wage - inkl",
+      "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxObUo1ZTRqRm9mVllDTVJzZ19UWkRRVmVVRnI5bTNoOThxcWpkQm03eE42d0lCQ05Ma0cxaWFKa3V6MURzUWJ3VXE2a3pKcGdBWUNFd0lmWTlzYXg4X2lJUHI0dHFjbnJ5dXpuMmJUc3ZzNzA4UzU5VGh5X000MHpVV29hU0JVSHR0XzFQQ2xWdXpJTFNXUl85RWpSTERVMzZXdGRYZktKNDQtRERXVGRKdE5ubHFBTWtFN2ZXUm93?oc=5",
+      "date": "Sat, 14 Nov 2026 13:26:00 GMT"
     },
     {
       "title": "Top 10 Best Computer Vision Companies In India In 2027 - Inventiva",
@@ -48614,136 +48618,178 @@
   "valuation_coverage": 54,
   "valuation_note": "Orientacyjna kapitalizacja = cena EOD × akcje z ostatniego dostępnego raportu SEC; nie uwzględnia późniejszego rozwodnienia, zmian liczby akcji ani ADR. P/S i P/E bazują na danych rocznych, nie TTM. Nie jest to ranking inwestycyjny.",
   "price_health": {
-    "status": "partial",
+    "status": "unavailable",
     "attempted": 24,
-    "updated": 21,
+    "updated": 0,
     "coverage": 65,
     "diagnostics": {
       "AVGO": {
-        "status": "ok",
-        "provider": "Yahoo",
-        "date": "2026-11-16"
+        "status": "failed",
+        "errors": [
+          "Stooq: Stooq CSV missing Date/Close; header=['<!DOCTYPE html><html><head><meta charset=\"utf-8\"><meta name=\"robots\" content=\"noindex', 'nofollow\"></head><body><noscript",
+          "Yahoo: name 'symbol' is not defined"
+        ]
       },
       "ABB": {
         "status": "failed",
         "errors": [
           "Stooq: Stooq CSV missing Date/Close; header=['<!DOCTYPE html><html><head><meta charset=\"utf-8\"><meta name=\"robots\" content=\"noindex', 'nofollow\"></head><body><noscript",
-          "Yahoo: HTTP Error 404: Not Found"
+          "Yahoo: name 'symbol' is not defined"
         ]
       },
       "IRBT": {
         "status": "failed",
         "errors": [
           "Stooq: Stooq CSV missing Date/Close; header=['<!DOCTYPE html><html><head><meta charset=\"utf-8\"><meta name=\"robots\" content=\"noindex', 'nofollow\"></head><body><noscript",
-          "Yahoo: Yahoo quote currency is not USD"
+          "Yahoo: name 'symbol' is not defined"
         ]
       },
       "KUKAF": {
         "status": "failed",
         "errors": [
           "Stooq: Stooq CSV missing Date/Close; header=['<!DOCTYPE html><html><head><meta charset=\"utf-8\"><meta name=\"robots\" content=\"noindex', 'nofollow\"></head><body><noscript",
-          "Yahoo: HTTP Error 404: Not Found"
+          "Yahoo: name 'symbol' is not defined"
         ]
       },
-      "SMCI": {
-        "status": "ok",
-        "provider": "Yahoo",
-        "date": "2026-11-16"
+      "CGNX": {
+        "status": "failed",
+        "errors": [
+          "Stooq: Stooq CSV missing Date/Close; header=['<!DOCTYPE html><html><head><meta charset=\"utf-8\"><meta name=\"robots\" content=\"noindex', 'nofollow\"></head><body><noscript",
+          "Yahoo: name 'symbol' is not defined"
+        ]
       },
-      "SNOW": {
-        "status": "ok",
-        "provider": "Yahoo",
-        "date": "2026-11-16"
+      "CLS": {
+        "status": "failed",
+        "errors": [
+          "Stooq: Stooq CSV missing Date/Close; header=['<!DOCTYPE html><html><head><meta charset=\"utf-8\"><meta name=\"robots\" content=\"noindex', 'nofollow\"></head><body><noscript",
+          "Yahoo: name 'symbol' is not defined"
+        ]
       },
-      "SOUN": {
-        "status": "ok",
-        "provider": "Yahoo",
-        "date": "2026-11-16"
+      "COHR": {
+        "status": "failed",
+        "errors": [
+          "Stooq: Stooq CSV missing Date/Close; header=['<!DOCTYPE html><html><head><meta charset=\"utf-8\"><meta name=\"robots\" content=\"noindex', 'nofollow\"></head><body><noscript",
+          "Yahoo: name 'symbol' is not defined"
+        ]
       },
-      "SYM": {
-        "status": "ok",
-        "provider": "Yahoo",
-        "date": "2026-11-16"
+      "CRDO": {
+        "status": "failed",
+        "errors": [
+          "Stooq: Stooq CSV missing Date/Close; header=['<!DOCTYPE html><html><head><meta charset=\"utf-8\"><meta name=\"robots\" content=\"noindex', 'nofollow\"></head><body><noscript",
+          "Yahoo: name 'symbol' is not defined"
+        ]
       },
-      "TER": {
-        "status": "ok",
-        "provider": "Yahoo",
-        "date": "2026-11-16"
+      "DELL": {
+        "status": "failed",
+        "errors": [
+          "Stooq: Stooq CSV missing Date/Close; header=['<!DOCTYPE html><html><head><meta charset=\"utf-8\"><meta name=\"robots\" content=\"noindex', 'nofollow\"></head><body><noscript",
+          "Yahoo: name 'symbol' is not defined"
+        ]
       },
-      "TSM": {
-        "status": "ok",
-        "provider": "Yahoo",
-        "date": "2026-11-16"
+      "DHR": {
+        "status": "failed",
+        "errors": [
+          "Stooq: Stooq CSV missing Date/Close; header=['<!DOCTYPE html><html><head><meta charset=\"utf-8\"><meta name=\"robots\" content=\"noindex', 'nofollow\"></head><body><noscript",
+          "Yahoo: name 'symbol' is not defined"
+        ]
       },
-      "VRT": {
-        "status": "ok",
-        "provider": "Yahoo",
-        "date": "2026-11-16"
+      "EMR": {
+        "status": "failed",
+        "errors": [
+          "Stooq: Stooq CSV missing Date/Close; header=['<!DOCTYPE html><html><head><meta charset=\"utf-8\"><meta name=\"robots\" content=\"noindex', 'nofollow\"></head><body><noscript",
+          "Yahoo: name 'symbol' is not defined"
+        ]
       },
-      "ZBRA": {
-        "status": "ok",
-        "provider": "Yahoo",
-        "date": "2026-11-16"
+      "ETN": {
+        "status": "failed",
+        "errors": [
+          "Stooq: Stooq CSV missing Date/Close; header=['<!DOCTYPE html><html><head><meta charset=\"utf-8\"><meta name=\"robots\" content=\"noindex', 'nofollow\"></head><body><noscript",
+          "Yahoo: name 'symbol' is not defined"
+        ]
       },
-      "ACHR": {
-        "status": "ok",
-        "provider": "Yahoo",
-        "date": "2026-11-16"
+      "FANUY": {
+        "status": "failed",
+        "errors": [
+          "Stooq: Stooq CSV missing Date/Close; header=['<!DOCTYPE html><html><head><meta charset=\"utf-8\"><meta name=\"robots\" content=\"noindex', 'nofollow\"></head><body><noscript",
+          "Yahoo: name 'symbol' is not defined"
+        ]
       },
-      "AI": {
-        "status": "ok",
-        "provider": "Yahoo",
-        "date": "2026-11-16"
+      "GLW": {
+        "status": "failed",
+        "errors": [
+          "Stooq: Stooq CSV missing Date/Close; header=['<!DOCTYPE html><html><head><meta charset=\"utf-8\"><meta name=\"robots\" content=\"noindex', 'nofollow\"></head><body><noscript",
+          "Yahoo: name 'symbol' is not defined"
+        ]
       },
-      "ALAB": {
-        "status": "ok",
-        "provider": "Yahoo",
-        "date": "2026-11-16"
+      "GOOGL": {
+        "status": "failed",
+        "errors": [
+          "Stooq: Stooq CSV missing Date/Close; header=['<!DOCTYPE html><html><head><meta charset=\"utf-8\"><meta name=\"robots\" content=\"noindex', 'nofollow\"></head><body><noscript",
+          "Yahoo: name 'symbol' is not defined"
+        ]
       },
-      "AMAT": {
-        "status": "ok",
-        "provider": "Yahoo",
-        "date": "2026-11-16"
+      "HON": {
+        "status": "failed",
+        "errors": [
+          "Stooq: Stooq CSV missing Date/Close; header=['<!DOCTYPE html><html><head><meta charset=\"utf-8\"><meta name=\"robots\" content=\"noindex', 'nofollow\"></head><body><noscript",
+          "Yahoo: name 'symbol' is not defined"
+        ]
       },
-      "AMD": {
-        "status": "ok",
-        "provider": "Yahoo",
-        "date": "2026-11-16"
+      "HUBB": {
+        "status": "failed",
+        "errors": [
+          "Stooq: Stooq CSV missing Date/Close; header=['<!DOCTYPE html><html><head><meta charset=\"utf-8\"><meta name=\"robots\" content=\"noindex', 'nofollow\"></head><body><noscript",
+          "Yahoo: name 'symbol' is not defined"
+        ]
       },
-      "AMZN": {
-        "status": "ok",
-        "provider": "Yahoo",
-        "date": "2026-11-16"
+      "INTC": {
+        "status": "failed",
+        "errors": [
+          "Stooq: Stooq CSV missing Date/Close; header=['<!DOCTYPE html><html><head><meta charset=\"utf-8\"><meta name=\"robots\" content=\"noindex', 'nofollow\"></head><body><noscript",
+          "Yahoo: name 'symbol' is not defined"
+        ]
       },
-      "ANET": {
-        "status": "ok",
-        "provider": "Yahoo",
-        "date": "2026-11-16"
+      "ISRG": {
+        "status": "failed",
+        "errors": [
+          "Stooq: Stooq CSV missing Date/Close; header=['<!DOCTYPE html><html><head><meta charset=\"utf-8\"><meta name=\"robots\" content=\"noindex', 'nofollow\"></head><body><noscript",
+          "Yahoo: name 'symbol' is not defined"
+        ]
       },
-      "APH": {
-        "status": "ok",
-        "provider": "Yahoo",
-        "date": "2026-11-16"
+      "JOBY": {
+        "status": "failed",
+        "errors": [
+          "Stooq: Stooq CSV missing Date/Close; header=['<!DOCTYPE html><html><head><meta charset=\"utf-8\"><meta name=\"robots\" content=\"noindex', 'nofollow\"></head><body><noscript",
+          "Yahoo: name 'symbol' is not defined"
+        ]
       },
-      "ARM": {
-        "status": "ok",
-        "provider": "Yahoo",
-        "date": "2026-11-16"
+      "KLAC": {
+        "status": "failed",
+        "errors": [
+          "Stooq: Stooq CSV missing Date/Close; header=['<!DOCTYPE html><html><head><meta charset=\"utf-8\"><meta name=\"robots\" content=\"noindex', 'nofollow\"></head><body><noscript",
+          "Yahoo: name 'symbol' is not defined"
+        ]
       },
-      "ASML": {
-        "status": "ok",
-        "provider": "Yahoo",
-        "date": "2026-11-16"
+      "KTOS": {
+        "status": "failed",
+        "errors": [
+          "Stooq: Stooq CSV missing Date/Close; header=['<!DOCTYPE html><html><head><meta charset=\"utf-8\"><meta name=\"robots\" content=\"noindex', 'nofollow\"></head><body><noscript",
+          "Yahoo: name 'symbol' is not defined"
+        ]
       },
-      "AZTA": {
-        "status": "ok",
-        "provider": "Yahoo",
-        "date": "2026-11-16"
+      "LAZR": {
+        "status": "failed",
+        "errors": [
+          "Stooq: Stooq CSV missing Date/Close; header=['<!DOCTYPE html><html><head><meta charset=\"utf-8\"><meta name=\"robots\" content=\"noindex', 'nofollow\"></head><body><noscript",
+          "Yahoo: name 'symbol' is not defined"
+        ]
       },
-      "BBAI": {
-        "status": "ok",
-        "provider": "Yahoo",
-        "date": "2026-11-16"
+      "LITE": {
+        "status": "failed",
+        "errors": [
+          "Stooq: Stooq CSV missing Date/Close; header=['<!DOCTYPE html><html><head><meta charset=\"utf-8\"><meta name=\"robots\" content=\"noindex', 'nofollow\"></head><body><noscript",
+          "Yahoo: name 'symbol' is not defined"
+        ]
       }
     }
   },
