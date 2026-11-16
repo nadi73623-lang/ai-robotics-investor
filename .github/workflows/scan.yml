@@ -1,25 +1,39 @@
 name: AI Robotics market scan
 on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [repair/scanner-clean-main-2026-11-16]
   workflow_dispatch:
   schedule:
     - cron: '17 */6 * * *'
+concurrency:
+  group: robotics-scan-${{ github.ref }}
+  cancel-in-progress: true
 permissions:
   contents: write
 jobs:
   scan:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Scan public news
+      - name: Run tests
+        run: python -m unittest discover -v
+      - name: Execute guarded scan
+        if: github.event_name != 'pull_request'
         run: python scanner.py
-      - name: Save scan results
+      - name: Persist report
+        if: github.event_name != 'pull_request'
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add data/scan.json
-          git diff --cached --quiet || (git commit -m 'Update AI robotics scan' && git push)
-          
+          if ! git diff --cached --quiet; then
+            git commit -m 'Update AI robotics scan'
+          fi
+          git pull --rebase origin repair/scanner-clean-main-2026-11-16
+          git push origin HEAD:repair/scanner-clean-main-2026-11-16
