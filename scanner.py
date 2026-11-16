@@ -6,6 +6,7 @@ from pathlib import Path
 from balanced_strategy import evaluate_company, THRESHOLDS as BALANCED_THRESHOLDS
 from analyst_consensus import load_consensus_csv
 from event_risk import load_event_risk_csv
+from scenario_valuation import scenario_valuation
 
 ROOT=Path(__file__).resolve().parent
 UNIVERSE=[
@@ -247,7 +248,7 @@ def add_prices(companies,prior):
     print('PRICE_SUMMARY',json.dumps({'attempted':attempted,'updated':success,'coverage':coverage,'status':status,'batch_limit':PRICE_BATCH_SIZE}))
     return coverage,{'status':status,'attempted':attempted,'updated':success,'coverage':coverage,'diagnostics':diagnostics}
 
-def technical_indicators(quote):
+def technical_indicators(quote, benchmark_quote=None):
     """Compute indicators only from validated daily bars, without synthetic values."""
     rows=[]
     for bar in quote.get('bars') or []:
@@ -265,11 +266,20 @@ def technical_indicators(quote):
     ag=sum(gains)/14; al=sum(losses)/14
     rsi=100.0 if al==0 else 100-100/(1+ag/al)
     avg_volume=sum(volumes[-20:])/20
+    rs=None
+    benchmark='SPY'
+    bench_rows={}
+    for bar in (benchmark_quote or {}).get('bars') or []:
+        try: bench_rows[datetime.fromisoformat(bar['date']).date()]=float(bar['close'])
+        except (KeyError,TypeError,ValueError): continue
+    common=[(d,closes[i]) for i,(d,_,_) in enumerate(rows) if d in bench_rows and bench_rows[d]>0]
+    if len(common)>=21:
+        rs=((common[-1][1]/common[-21][1])/(bench_rows[common[-1][0]]/bench_rows[common[-21][0]])-1)*100
     return {'status':'ok','bars':len(rows),'date':day,'sma20':sma20,'sma50':sma50,
       'rsi_14':round(rsi,2),'volume_ratio20':round(volumes[-1]/avg_volume,3) if avg_volume else None,
       'above_sma20':closes[-1]>sma20,'above_sma50':closes[-1]>sma50,
-      'relative_strength_20d_pct':None,'relative_strength_benchmark':None,
-      'method':'SMA20/SMA50 and simple RSI14 from daily bars; relative strength not calculated'}
+      'relative_strength_20d_pct':round(rs,2) if rs is not None else None,'relative_strength_benchmark':benchmark if rs is not None else None,
+      'method':'SMA20/SMA50 and simple RSI14 from daily bars; 20-session relative performance versus SPY on common dates'}
 
 def calculate_valuation(company, today=None):
     """Indicative trailing annual ratios, only if SEC periods and shares are defensible.
@@ -365,16 +375,20 @@ def main():
         c['valuation']=calculate_valuation(c)
         c['valuation_status']=('Orientacyjna kapitalizacja i mnożniki roczne — nie ranking zakupu' if c['valuation']['status']=='partial' else 'Brak wystarczających danych do wyceny')
     valuation_coverage=sum(c['valuation']['status']=='partial' for c in companies)
+    # Fetch a separate broad-market benchmark; relative strength stays unavailable if it fails.
+    try: benchmark_quote=yahoo_quote('SPY')
+    except Exception as exc:
+        benchmark_quote={}; print('BENCHMARK_FAIL SPY',str(exc)[:180])
     # External analyst/event feeds are opt-in CSV inputs with strict provenance and freshness checks.
     consensus_by_ticker=load_consensus_csv(ROOT/'data'/'analyst_consensus.csv')
     event_feed=load_event_risk_csv(ROOT/'data'/'corporate_events.csv')
     # Evaluate every security; absent feeds remain explicit blockers.
     for company in companies:
-        tech=technical_indicators(company.get('price') or {})
+        tech=technical_indicators(company.get('price') or {},benchmark_quote)
         company['technical']=tech
         q=company.get('price') or {}
         if tech.get('status')=='ok':
-            q.update({k:tech.get(k) for k in ('sma20','sma50','rsi_14','volume_ratio20','above_sma20','above_sma50')})
+            q.update({k:tech.get(k) for k in ('sma20','sma50','rsi_14','volume_ratio20','above_sma20','above_sma50','relative_strength_20d_pct','relative_strength_benchmark')})
             q['rsi_as_of']=q['date']; q['sma20_as_of']=q['date']; q['sma50_as_of']=q['date']; q['volume_as_of']=q['date']
         company['analyst_targets']=consensus_by_ticker.get(company['ticker'],{'status':'unavailable','reason':'no validated point-in-time analyst_consensus.csv row'})
         company['entry_trigger']=None
