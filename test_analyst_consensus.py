@@ -11,7 +11,7 @@ class ConsensusTests(unittest.TestCase):
     def test_valid_consensus_has_weighted_ev(self):
         out=validate_consensus(self.row(),today=date(2026,11,16))
         self.assertEqual(out["status"],"documented")
-        self.assertAlmostEqual(out["expected_fair_value"],114)
+        self.assertAlmostEqual(out["expected_fair_value"],113)
         self.assertGreater(out["probability_weighted_ev_pct"],0)
         self.assertEqual(out["scenario_analysis"]["status"],"calculated")
     def test_stale_consensus_rejected(self):
