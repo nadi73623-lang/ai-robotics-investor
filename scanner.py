@@ -7,6 +7,7 @@ from balanced_strategy import evaluate_company, THRESHOLDS as BALANCED_THRESHOLD
 from analyst_consensus import load_consensus_csv
 from event_risk import load_event_risk_csv
 from scenario_valuation import scenario_valuation
+from market_symbols import yahoo_symbol, benchmark_for_currency
 
 ROOT=Path(__file__).resolve().parent
 UNIVERSE=[
@@ -165,7 +166,8 @@ def checked_quote(price, day, source, url):
             'source':source,'source_url':url,'is_live':False}
 
 def stooq_quote(ticker):
-    if not re.fullmatch(r'[A-Z]{1,5}',ticker): raise QuoteError('unsupported ticker')
+    try: symbol=yahoo_symbol(ticker)
+    except ValueError as exc: raise QuoteError(str(exc)) from exc
     today=datetime.now(timezone.utc)
     start=(today-timedelta(days=180)).strftime('%Y%m%d')
     url='https://stooq.com/q/d/l/?'+urllib.parse.urlencode({'s':ticker.lower()+'.us','i':'d','d1':start,'d2':today.strftime('%Y%m%d')})
@@ -190,7 +192,7 @@ def stooq_quote(ticker):
 def yahoo_quote(ticker):
     # Public chart endpoint: availability and redistribution rights may change.
     if not re.fullmatch(r'[A-Z]{1,5}',ticker): raise QuoteError('unsupported ticker')
-    url='https://query1.finance.yahoo.com/v8/finance/chart/'+urllib.parse.quote(ticker)+'?interval=1d&range=6mo'
+    url='https://query1.finance.yahoo.com/v8/finance/chart/'+urllib.parse.quote(symbol)+'?interval=1d&range=6mo'
     req=urllib.request.Request(url,headers={'User-Agent':'Mozilla/5.0','Accept':'application/json'})
     with urllib.request.urlopen(req,timeout=12) as response:
         obj=json.load(response)
@@ -198,7 +200,8 @@ def yahoo_quote(ticker):
     if not results: raise QuoteError('Yahoo chart has no result')
     result=results[0]
     meta=result.get('meta') or {}
-    if meta.get('currency')!='USD': raise QuoteError('Yahoo quote currency is not USD')
+    currency=(meta.get('currency') or '').upper()
+    if not re.fullmatch(r'[A-Z]{3}',currency): raise QuoteError('Yahoo quote currency missing or invalid')
     stamps=result.get('timestamp') or []
     quote_rows=((result.get('indicators') or {}).get('quote') or [{}])[0]
     closes=quote_rows.get('close') or []; volumes=quote_rows.get('volume') or []
@@ -207,18 +210,24 @@ def yahoo_quote(ticker):
     ts,price=valid[-1]
     day=datetime.fromtimestamp(ts,timezone.utc).date().isoformat()
     quote=checked_quote(price,day,'Yahoo Finance chart EOD',url)
+    quote['currency']=currency
+    quote['market_symbol']=symbol
     quote['bars']=[{'date':datetime.fromtimestamp(t,timezone.utc).date().isoformat(),'close':float(v),'volume':float(volumes[i] or 0)} for i,(t,v) in enumerate(zip(stamps,closes)) if v is not None and i<len(volumes)]
     return quote
+
+def _market_symbol_supported(ticker):
+    try: yahoo_symbol(ticker); return True
+    except ValueError: return False
 
 def add_prices(companies,prior):
     old={x.get('ticker'):x.get('price') for x in prior.get('companies',[]) if x.get('price')}
     diagnostics={};attempted=0;success=0
-    eligible=[c for c in companies if re.fullmatch(r'[A-Z]{1,5}',c['ticker'])]
+    eligible=[c for c in companies if _market_symbol_supported(c['ticker'])]
     # Always check AVGO as a canary; rotate remaining slots across scans.
     eligible.sort(key=lambda c:(c['ticker']!='AVGO',bool(old.get(c['ticker'],{}).get('close_usd')),old.get(c['ticker'],{}).get('checked_at',''),c['ticker']))
     for c in eligible[:PRICE_BATCH_SIZE]:
         ticker=c['ticker'];attempted+=1;errors=[]
-        for name,provider in [('Stooq',stooq_quote),('Yahoo',yahoo_quote)]:
+        for name,provider in ([('Stooq',stooq_quote),('Yahoo',yahoo_quote)] if re.fullmatch(r'[A-Z]{1,5}',ticker) else [('Yahoo',yahoo_quote)]):
             try:
                 quote=provider(ticker)
                 quote['checked_at']=datetime.now(timezone.utc).isoformat()
@@ -267,7 +276,7 @@ def technical_indicators(quote, benchmark_quote=None):
     rsi=100.0 if al==0 else 100-100/(1+ag/al)
     avg_volume=sum(volumes[-20:])/20
     rs=None
-    benchmark='SPY'
+    benchmark=benchmark_quote.get('market_symbol','SPY') if benchmark_quote else 'SPY'
     bench_rows={}
     for bar in (benchmark_quote or {}).get('bars') or []:
         try: bench_rows[datetime.fromisoformat(bar['date']).date()]=float(bar['close'])
