@@ -272,7 +272,7 @@ def calculate_valuation(company, today=None):
         if not 0 <= (today-share_day).days <= 540: raise ValueError('stale share count')
         if not 0 <= (today-quote_day).days <= 7: raise ValueError('stale quote')
         # SEC shares for foreign ADRs may refer to underlying ordinary shares, not US ADRs.
-        if company.get('ticker') in {'TSM','ASML','ARM','ABB','FANUY','SIEGY'}:
+        if '.' in company.get('ticker','') or company.get('ticker') in {'TSM','ASML','ARM','ABB','FANUY','SIEGY'}:
             raise ValueError('ADR/foreign share-unit ambiguity')
         cap=price*shares
         result['market_cap_usd']=round(cap)
