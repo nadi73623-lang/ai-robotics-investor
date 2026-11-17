@@ -74,3 +74,13 @@ The archive's `historical_dataset_manifest.json` remains:
 - The required archive is not present in the branch: GitHub returns 404 for `recovery-input/`. Therefore no recovery workflow run or source port has occurred yet.
 - Remaining external step: upload the exact Library ZIP `AI_Robotics_Investor_Balanced_1.3.4_Global_Equity_Master_2026-11-08_2.zip` to `recovery-input/` on this branch. Expected SHA-256: `49d694dc8a3b3e3402654e2ed0c205b589fdaed0383baf0a8c5155ba3a9c8a81`.
 - `main`, production workflow, Cloudflare Worker and BUY publication remain untouched/disabled.
+
+
+## Follow-up verification — 2026-11-17 (independent rerun)
+- Re-materialized the Library archive and verified the expected SHA-256: `49d694dc8a3b3e3402654e2ed0c205b589fdaed0383baf0a8c5155ba3a9c8a81`.
+- Extracted the archive into a clean working directory. The six critical modules (`scanner.py`, `balanced_strategy.py`, `swing_engine.py`, `global_market_universe.py`, `release_gate.py`, `publish_guard.py`) passed `compileall`.
+- Focused regression run with `PYTHONPATH=.`: `tests/test_balanced_strategy_integration.py`, `tests/test_balanced_audit_trace.py`, `tests/test_global_market_universe.py`, `tests/test_historical_data_pipeline.py`: **21 passed in 0.15s**.
+- Initial test collection without `PYTHONPATH=.` failed to import root modules; rerunning with the repository root on the module path resolved collection. This is an invocation/environment issue, not a source fix.
+- Important source audit finding: the archived scanner payload currently sets `investment_ranking_available: True`, while its `ranking_method` explicitly defines `attention_score` as a media-attention metric and its disclaimer says it is not a ranking/recommendation. This field is semantically misleading and must be reconciled before any report is exposed as an investment ranking. No change was made to the archive or published report in this pass.
+- The repair branch's `scanner.py` still has the baseline SHA `9aa7ddda22d48b200a1c0f95c38b529d6eb7cc3e`; the archived scanner has not been ported. Recovery workflow still awaits the archive being committed under `recovery-input/`.
+- No live scan, real-data backtest, production deployment, Cloudflare KV write, Android release, or BUY authorization was performed.
