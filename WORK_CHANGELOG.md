@@ -114,3 +114,10 @@
 - If ticker/listing/currency do not match, consensus becomes invalid and cannot support BUY.
 - Added regression tests for current-price rebasing, adverse price movement turning upside/EV negative, listing/currency mismatch and missing listing metadata.
 - Existing CSV rows without listing/currency are intentionally rejected until corrected; no automatic FX conversion is introduced.
+
+## 2026-11-17 — native-currency technical risk levels and quote freshness
+
+- Fixed risk-plan generation for non-USD listings: ATR and entry are both in the listing's native currency, so the module now uses `native_close` when USD-normalized price is deliberately unavailable and labels every level with its currency.
+- Added a strict quote-date freshness check (maximum 7 calendar days; future dates rejected) before emitting levels.
+- Added tests for JPY-native price/ATR consistency, currency labeling, stale-quote rejection and normal USD geometry.
+- These levels remain `scenario_only`; they do not grant BUY eligibility.
