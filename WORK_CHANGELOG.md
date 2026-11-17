@@ -71,3 +71,13 @@
 - Added regression tests for activation, overbought RSI, negative relative strength, missing inputs and NaN.
 - This does not relax Balanced BUY gates; analyst consensus, full valuation and event feed remain independent blockers.
 - Tests have been committed but no green CI result is claimed until GitHub Actions completes.
+
+## 2026-11-17 — EARLY ENTRY watch monitor
+
+- Added `early_entry.py`, a separate watch-only proximity monitor around SMA20.
+- Conditions: price within -3% to +1% of SMA20, SMA20>SMA50, RSI14 40–60, volume/20D >=0.8 and positive 20D relative strength.
+- Wired `early_entry` and boolean `early_buy_watch` into each company's report record.
+- This is explicitly not a BUY signal. Missing or non-finite inputs fail closed.
+- ATR, stop-loss and profit targets remain unavailable because current OHLCV payload stores close and volume only; daily high/low are not present. No ATR or price levels are fabricated.
+- Added regression tests for proximity, oversold distance, overheated RSI, weak relative strength and missing data.
+- No CI success claimed; GitHub Actions has not returned workflow runs for recent commits.
