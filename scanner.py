@@ -278,9 +278,14 @@ def technical_indicators(quote, benchmark_quote=None):
     closes=[x[1] for x in rows]; volumes=[x[2] for x in rows]; day=rows[-1][0].isoformat()
     sma20=sum(closes[-20:])/20; sma50=sum(closes[-50:])/50
     changes=[closes[i]-closes[i-1] for i in range(1,len(closes))]
-    gains=[max(x,0) for x in changes[-14:]]; losses=[max(-x,0) for x in changes[-14:]]
-    ag=sum(gains)/14; al=sum(losses)/14
-    rsi=100.0 if al==0 else 100-100/(1+ag/al)
+    # Wilder RSI(14): seed with the first 14 changes, then apply recursive smoothing.
+    seed=changes[:14]
+    ag=sum(max(x,0) for x in seed)/14
+    al=sum(max(-x,0) for x in seed)/14
+    for change in changes[14:]:
+        ag=(ag*13+max(change,0))/14
+        al=(al*13+max(-change,0))/14
+    rsi=100.0 if al==0 else (0.0 if ag==0 else 100-100/(1+ag/al))
     avg_volume=sum(volumes[-20:])/20
     rs=None
     benchmark=benchmark_quote.get('market_symbol','SPY') if benchmark_quote else 'SPY'
