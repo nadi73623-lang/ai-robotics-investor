@@ -508,6 +508,9 @@ def main():
         company['early_buy_watch']=bool(company['early_entry'].get('near_entry'))
         company['risk_plan']=build_risk_plan(company)
         event_flags=list(event_feed.get('flags') or [])
+        covered_tickers=set(event_feed.get('covered_tickers') or [])
+        if company['ticker'] not in covered_tickers:
+            event_flags.append('event_feed_ticker_uncovered')
         matching_events=[e for e in event_feed.get('events',[]) if e.get('ticker','').upper()==company['ticker']]
         if matching_events: event_flags.append('critical_event_within_horizon')
         company['corporate_events']=matching_events
