@@ -6,6 +6,7 @@ from pathlib import Path
 from balanced_strategy import evaluate_company, THRESHOLDS as BALANCED_THRESHOLDS
 from entry_trigger import build_entry_trigger
 from early_entry import build_early_entry
+from risk_plan import build_risk_plan
 from analyst_consensus import load_consensus_csv
 from event_risk import load_event_risk_csv
 from scenario_valuation import scenario_valuation
@@ -460,6 +461,7 @@ def main():
         company['entry_trigger']=build_entry_trigger(company)
         company['early_entry']=build_early_entry(company)
         company['early_buy_watch']=bool(company['early_entry'].get('near_entry'))
+        company['risk_plan']=build_risk_plan(company)
         event_flags=list(event_feed.get('flags') or [])
         matching_events=[e for e in event_feed.get('events',[]) if e.get('ticker','').upper()==company['ticker']]
         if matching_events: event_flags.append('critical_event_within_horizon')
