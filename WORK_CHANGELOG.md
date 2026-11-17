@@ -42,3 +42,17 @@
 - Changes pushed only to `repair/scanner-clean-main-2026-11-16`; `main` remains unchanged.
 - GitHub Actions must complete the post-push test and scan workflow before this repair is considered verified.
 - No paid data services enabled; no BUY authorization changed.
+
+## 2026-11-17 — symbol validation and RSI integrity
+
+### Zapisane zmiany
+- Corrected the exchange-symbol suffix regex in `market_symbols.py`; dot separators are now literal. Added malformed-symbol rejection cases.
+- Replaced the non-standard last-14-change RSI calculation in `scanner.py` with Wilder's recursive smoothing for RSI(14).
+- Added `test_technical_indicators.py` covering monotonic rises/falls and insufficient OHLCV history.
+
+### Verification status
+- Commits: `a8d49f4` (symbol regex), `d02c9ea` (symbol tests), `adffc8f` (Wilder RSI), `7f0e1dd` (technical tests).
+- Commits were made only on `repair/scanner-clean-main-2026-11-16`; `main` was not changed.
+- GitHub Actions status must be checked after workflow completion; no green CI result is claimed here.
+- No live analyst-consensus or corporate-event data was fabricated; BUY remains fail-closed.
+- No paid services, backend deployment, APK build, or production publication performed.
