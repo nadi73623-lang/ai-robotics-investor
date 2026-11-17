@@ -86,3 +86,11 @@ The archive's `historical_dataset_manifest.json` remains:
 - No live scan, real-data backtest, production deployment, Cloudflare KV write, Android release, or BUY authorization was performed.
 
 - Additional focused regression run with `PYTHONPATH=.`: analyst consensus/targets, release gate, extended publication integrity, SWING pipeline/watchlist, global market data and historical provider adapters: **38 passed in 0.18s**. Combined with the prior independent run, 59 focused tests passed (two separate runs; not a full-suite result).
+
+
+## Corrective work — 2026-11-17 (local archive, not yet ported)
+- Patched the recovered archive's `scanner.py`: `investment_ranking_available` changed from `True` to `False`; `ranking_method` now explicitly labels `attention_score` as media attention and not an investment ranking. This prevents a misleading capability flag from being emitted by that archive scanner.
+- Added local regression test `tests/test_scanner_ranking_metadata.py`; result: **1 passed**.
+- Re-ran focused suites for Balanced integration/audit, global universe/data, historical pipeline/providers, analyst import/targets, release gate, publication integrity and SWING pipeline: **53 passed**. Critical module `compileall` also passed.
+- Patched local archive scanner SHA-256: `78d67b6ea77d252b8c3b55e2a82f518a6d3ea63c5ce046314edf803f8530feab`.
+- This correction currently exists in the recovered working copy only. The GitHub repair branch still contains its older baseline scanner, and the archive recovery workflow has not run. No live scan or deployment was performed.
