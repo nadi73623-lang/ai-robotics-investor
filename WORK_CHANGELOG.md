@@ -121,3 +121,10 @@
 - Added a strict quote-date freshness check (maximum 7 calendar days; future dates rejected) before emitting levels.
 - Added tests for JPY-native price/ATR consistency, currency labeling, stale-quote rejection and normal USD geometry.
 - These levels remain `scenario_only`; they do not grant BUY eligibility.
+
+## 2026-11-17 — relative-strength benchmark currency integrity
+
+- Corrected the benchmark map: currency-specific USD-listed ETFs (EWJ/EWY/EWT/FXI/EWC/VGK/EWU) were not valid local-currency benchmarks for unconverted local share prices. Replaced them with local index symbols: ^N225, ^KS11, ^TWII, ^HSI, ^GSPTSE, ^STOXX50E and ^FTSE; USD remains SPY.
+- Scanner now verifies the benchmark quote's provider-reported currency equals the listing quote currency before computing relative strength. A mismatch leaves RS unavailable and blocks the strategy technical gate.
+- Added mapping tests for all supported local-currency indices and Yahoo symbol acceptance.
+- This prevents a cross-currency return comparison from silently creating a false relative-strength signal. Actual index availability/currency remains provider-validated at runtime.
