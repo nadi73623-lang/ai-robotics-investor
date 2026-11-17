@@ -7,7 +7,7 @@ from balanced_strategy import evaluate_company, THRESHOLDS as BALANCED_THRESHOLD
 from entry_trigger import build_entry_trigger
 from early_entry import build_early_entry
 from risk_plan import build_risk_plan
-from analyst_consensus import load_consensus_csv
+from analyst_consensus import load_consensus_csv, rebase_consensus_to_current_price
 from event_risk import load_event_risk_csv
 from scenario_valuation import scenario_valuation
 from market_symbols import yahoo_symbol, benchmark_for_currency
@@ -467,7 +467,10 @@ def main():
         if tech.get('status')=='ok':
             q.update({k:tech.get(k) for k in ('sma20','sma50','rsi_14','volume_ratio20','above_sma20','above_sma50','relative_strength_20d_pct','relative_strength_benchmark')})
             q['rsi_as_of']=q['date']; q['sma20_as_of']=q['date']; q['sma50_as_of']=q['date']; q['volume_as_of']=q['date']
-        company['analyst_targets']=consensus_by_ticker.get(company['ticker'],{'status':'unavailable','reason':'no validated point-in-time analyst_consensus.csv row'})
+        raw_consensus=consensus_by_ticker.get(company['ticker'],{'status':'unavailable','reason':'no validated point-in-time analyst_consensus.csv row'})
+        current_price=(quote.get('close_usd') if quote.get('currency','USD')=='USD' else quote.get('native_close'))
+        company['analyst_targets']=rebase_consensus_to_current_price(raw_consensus,company['ticker'],current_price,
+            quote.get('currency',''),quote.get('market_symbol',''))
         company['entry_trigger']=build_entry_trigger(company)
         company['early_entry']=build_early_entry(company)
         company['early_buy_watch']=bool(company['early_entry'].get('near_entry'))
