@@ -139,3 +139,14 @@ The archive's `historical_dataset_manifest.json` remains:
 - Targeted regression run: **34 tests passed** across Balanced integration/audit trace, release and publication gates, global market universe, historical pipeline, analyst consensus import, SWING pipeline, and scanner ranking metadata.
 - A broader `unittest discover` run began successfully but exceeded the execution time limit after initial Android/release checks and 49 dots; it is not recorded as a pass. No complete-suite result is claimed.
 - The archive is verified locally, but its binary is still not present in GitHub `recovery-input/`; recovery workflow cannot run until the archive is uploaded there. No live market scan, audited point-in-time backtest, production deployment, KV publication, physical Android test, or BUY authorization was performed. `main` remains unchanged.
+
+
+## Revalidation from Library source — 2026-11-17 (continued)
+- Re-listed the project Library and selected the exact corrected v2 archive `AI_Robotics_Investor_Balanced_1.3.4_Corrected_2026-11-17_v2.zip` (1,994,202 bytes), not the older 1.3.4 master archive.
+- Materialized the v2 archive and independently verified SHA-256 `a128ecc73cc7ff62b96104c1ecb41d19f9c060601b59dea001c8be288fdd8f5f`; ZIP integrity test passed.
+- Full archive `compileall` passed.
+- Re-ran focused integration/guard regression tests with the archive root on PYTHONPATH: **29 passed** (Balanced strategy integration/audit trace, global universe, historical provider adapters, analyst consensus import, SWING bundle priority, and publication integrity).
+- An expanded run including scanner/full-scan tests reached 75% before the execution time limit; no pass is claimed for that expanded run. The first invocation without PYTHONPATH failed test collection due to import-path setup, then the corrected focused invocation passed.
+- Source inspection confirms scanner output explicitly sets `investment_ranking_available: False`, labels `attention_score` as media attention rather than investment rating, and retains `buy_signals_authorized: false`. These are safeguards, not a functioning BUY publication path.
+- Recovery workflow was re-read: it requires exactly one ZIP in `recovery-input/` with the v2 SHA-256, validates ZIP paths/symlinks/CRC, extracts under `recovered/AI_Robotics_Investor`, compiles, and commits to the repair branch. GitHub repository still does not contain the ZIP, so the workflow remains untriggered.
+- No live market scan, real-data backtest, complete suite pass, deployment, KV write, production publication, or Android device test was performed. `main` remains unchanged.
