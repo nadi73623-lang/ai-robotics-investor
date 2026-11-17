@@ -141,3 +141,10 @@
 - Event feed now requires explicit, dated, source-linked `coverage_complete` marker rows (`status=coverage`) for each ticker whose calendar has been checked. Missing ticker coverage sets `event_feed_ticker_uncovered` and blocks BUY.
 - Added tests for missing/empty feed, fresh coverage markers, absent markers, stale data, unverifiable source and unconfirmed events.
 - CSV coverage marker contract: ticker, event_type=coverage_complete, event_date=as_of, source_url=https URL of that issuer's event calendar, as_of=current date, status=coverage. A marker must only be added after checking the issuer/exchange calendar.
+
+## 2026-11-17 — corporate-event veto scoped to the issuer
+
+- Fixed a critical overblocking bug: a confirmed event for one ticker was being placed in a global event-feed flag and therefore vetoed BUY for every company in the universe.
+- Event feed validation now returns feed-integrity flags globally, while `event_flags_for_ticker` applies `critical_event_within_horizon` only to the matching ticker. Uncovered tickers remain blocked individually; invalid/missing feed still blocks all.
+- Added regression tests proving XYZ's earnings do not veto ABC, while ABC remains blocked if its calendar lacks a coverage marker.
+- Corrected the JPY benchmark strategy test from obsolete EWJ to the new local-index symbol ^N225.
