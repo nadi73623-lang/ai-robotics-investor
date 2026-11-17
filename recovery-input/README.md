@@ -2,11 +2,11 @@
 
 Place exactly one file in this directory:
 
-`AI_Robotics_Investor_Balanced_1.3.4_Corrected_2026-11-17.zip`
+`AI_Robotics_Investor_Balanced_1.3.4_Corrected_2026-11-17_v2.zip`
 
 Expected SHA-256:
 
-`d55e0aac82a10f9e1567395d70cf2d4a354ee3100301c02d01096c5db5781401`
+`a128ecc73cc7ff62b96104c1ecb41d19f9c060601b59dea001c8be288fdd8f5f`
 
 After the ZIP is committed to this branch, GitHub Actions workflow
 `.github/workflows/recover-balanced-archive.yml` should run automatically.
