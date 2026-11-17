@@ -56,3 +56,9 @@
 - GitHub Actions status must be checked after workflow completion; no green CI result is claimed here.
 - No live analyst-consensus or corporate-event data was fabricated; BUY remains fail-closed.
 - No paid services, backend deployment, APK build, or production publication performed.
+
+## 2026-11-17 — corporate event risk regression tests
+
+- Expanded `test_event_risk.py` for missing feed, fresh confirmed critical event, stale feed, unverifiable source and unconfirmed event handling.
+- Tests validate the fail-closed event gate; they do not supply a live corporate-event provider.
+- Validation remains pending GitHub Actions pull-request run.
