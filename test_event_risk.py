@@ -1,6 +1,6 @@
 import unittest
 from datetime import date
-from event_risk import validate_event_rows
+from event_risk import validate_event_rows, event_flags_for_ticker
 
 class EventRiskTests(unittest.TestCase):
     def row(self, **updates):
@@ -17,7 +17,7 @@ class EventRiskTests(unittest.TestCase):
         self.assertIn("event_feed_empty",out["flags"])
     def test_critical_event_is_flagged(self):
         out=validate_event_rows([self.row()],today=date(2026,11,17))
-        self.assertIn("critical_event_within_horizon",out["flags"])
+        self.assertEqual(out["flags"],[])
     def test_fresh_coverage_marker_is_recorded(self):
         marker=self.row(event_type="coverage_complete",event_date="2026-11-17",status="coverage")
         out=validate_event_rows([marker],today=date(2026,11,17))
@@ -35,6 +35,14 @@ class EventRiskTests(unittest.TestCase):
         marker=self.row(event_type="coverage_complete",event_date="2026-11-17",status="coverage",source_url="http://bad")
         out=validate_event_rows([marker],today=date(2026,11,17))
         self.assertEqual(out["status"],"invalid")
+    def test_event_flag_applies_only_to_matching_ticker(self):
+        marker=self.row(event_type="coverage_complete",event_date="2026-11-17",status="coverage")
+        out=validate_event_rows([marker,self.row()],today=date(2026,11,17))
+        self.assertEqual(event_flags_for_ticker(out,"XYZ"),["critical_event_within_horizon"])
+        self.assertEqual(event_flags_for_ticker(out,"ABC"),["event_feed_ticker_uncovered"])
+    def test_invalid_global_feed_blocks_all_tickers(self):
+        out=validate_event_rows(None,today=date(2026,11,17))
+        self.assertIn("event_feed_missing",event_flags_for_ticker(out,"XYZ"))
     def test_unconfirmed_event_not_promoted(self):
         marker=self.row(event_type="coverage_complete",event_date="2026-11-17",status="coverage")
         tentative=self.row(status="rumor")
