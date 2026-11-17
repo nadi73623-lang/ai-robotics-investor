@@ -10,6 +10,8 @@ def validate_event_rows(rows, today=None, max_age_days=2, horizon_days=14):
     today=today or date.today()
     if rows is None:
         return {"status":"unavailable","flags":["event_feed_missing"],"events":[]}
+    if not rows:
+        return {"status":"unavailable","flags":["event_feed_empty"],"events":[]}
     events=[]
     for row in rows:
         if not REQUIRED.issubset(row):
