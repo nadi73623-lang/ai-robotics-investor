@@ -123,3 +123,11 @@ The archive's `historical_dataset_manifest.json` remains:
 - Recovery workflow and README now pin this v2 checksum (workflow commit `f5cc75fe4e38eea971e9bd4821e8f75c93970aa3`; README commit `b997f10582813f1adcc205c233314590f4e3245a`).
 - Pull request #5 is open as DRAFT against `main`; mergeable flag true, merged=false. It has 8 changed files and does not yet include the recovered full scanner source. CI statuses were empty at the time of verification.
 - Archive transfer to `recovery-input/` and the GitHub recovery workflow run remain outstanding. No live data scan, point-in-time backtest, deployment, KV publication, Android device test, or BUY authorization.
+
+
+## CI verification follow-up — 2026-11-17
+- Re-ran the latest PR-triggered isolated validation associated with commit `8a0aa9ea66d7ee1785a0d27f6f15514a690d61df`.
+- GitHub Actions run **44082705529** completed with conclusion **success**. Both job steps "Verify baseline and Balanced 1.3 decision gates" and "Verify scanner ranking metadata semantics" passed.
+- A separate retry of the older failing run (head SHA `6b086ca1cd71787f600d600d11cfd2ee6d317de9`) still failed because that run tested an earlier revision of the SHA assertion. It is not the validation result for commit `8a0aa9ea`.
+- Current successful CI validates only the isolated guard tests; it does not validate the recovered full scanner archive or live data pipeline.
+- PR #5 remains DRAFT and unmerged. The archive ZIP is still absent from `recovery-input/`; the recovery workflow has not run. Full source integration, real-data scan, point-in-time backtest, production deployment, KV publication, Android device test, and BUY authorization remain outstanding. `main` remains unchanged.
