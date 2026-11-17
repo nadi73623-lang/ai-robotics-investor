@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-17T11:44:29.226201+00:00",
+  "generated_at": "2026-11-17T11:52:06.055008+00:00",
   "source": "Google News RSS",
   "queries": [
     "artificial intelligence robotics stocks companies contracts earnings",
@@ -10,13 +10,13 @@
     "AI infrastructure cooling energy grid power public company"
   ],
   "scan_status": "ok",
-  "articles_collected": 97,
+  "articles_collected": 99,
   "companies": [
     {
       "ticker": "NVDA",
       "name": "NVIDIA",
       "sector": "AI chips",
-      "mentions": 9,
+      "mentions": 8,
       "news": [
         {
           "title": "Stocks Fall Before Nvidia Earnings, Anthropic IPO: Markets Wrap - Bloomberg.com",
@@ -24,9 +24,9 @@
           "date": "Sun, 15 Nov 2026 22:11:32 GMT"
         },
         {
-          "title": "NVIDIA Corporation | History, GPUs, & Artificial Intelligence - Britannica",
-          "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1FMGstclM1R3lESkhtUUVPTDBHZktQWWMzcTFXa3VIR2FOcTJLcy1wQnlLMHo5MDRXeS10UTJudHRxNmpFX2hyWUZzX1ZTaVpBTng3VXBGT3ZGa0FrTXhHMg?oc=5",
-          "date": "Tue, 17 Nov 2026 10:47:26 GMT"
+          "title": "Arm and Marvell Sink 8% as AI Chip Selloff Deepens Ahead of NVIDIA Earnings; Applied Materials Drops 5% - 24/7 Wall St.",
+          "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxQNi00YzEwYTlPWjg4TnVZMTVnQW8wbmh0UVplcWFmY1pWenBNQ1MtUDJWNGVsdlBWZ3pZcXhRTnNnWmdZdUlyZnpTNlB2NldfR3RNdHp2eEVsRnNPSy0tZVRnVkVLdjZUQ3VzZ3EzZ3lUX0UxYXVmQ2pXeEI4RHpMQUpGa2RMR0x1WkJlcHY3X2tYaFVmNWpRVk1PM3NuRld6ajVtdWp2Y3dmNld0Xy05cGVPQ2stSEpNZjBEV2VWaV9ZSWFNaF9HN2VWb3lEQmZ0UmM4OTlNMVlWaUpS?oc=5",
+          "date": "Mon, 16 Nov 2026 16:02:00 GMT"
         },
         {
           "title": "NVIDIA And 2 Other AI Infrastructure Stocks - Simply Wall St",
@@ -45,7 +45,7 @@
         }
       ],
       "status": "Do analizy",
-      "attention_score": 89,
+      "attention_score": 86,
       "valuation_status": "Orientacyjna kapitalizacja i mnożniki roczne — nie ranking zakupu",
       "investment_score": null,
       "fundamentals": {
@@ -1531,7 +1531,7 @@
             "volume": 7216600.0
           }
         ],
-        "checked_at": "2026-11-17T11:30:35.633411+00:00",
+        "checked_at": "2026-11-17T11:52:02.107568+00:00",
         "sma20": 208.1125,
         "sma50": 229.47219970703125,
         "rsi_14": 41.0,
@@ -1674,7 +1674,7 @@
           "annual_flow_periods_not_aligned"
         ],
         "filed": "2025-12-18",
-        "as_of": "2026-11-17T11:44:02.439537+00:00",
+        "as_of": "2026-11-17T11:51:39.590614+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1730168"
       },
       "fundamentals_quality": "refreshed",
@@ -2324,7 +2324,7 @@
             "volume": 26056800.0
           }
         ],
-        "checked_at": "2026-11-17T11:44:16.381404+00:00",
+        "checked_at": "2026-11-17T11:51:49.043287+00:00",
         "sma20": 330.8994995117188,
         "sma50": 344.89260009765627,
         "rsi_14": 48.82,
@@ -2417,797 +2417,6 @@
       "buy_eligible": false
     },
     {
-      "ticker": "INTC",
-      "name": "Intel",
-      "sector": "Semiconductors",
-      "mentions": 2,
-      "news": [
-        {
-          "title": "Can Edge AI Replace Intel’s Shrinking PC Business? - 24/7 Wall St.",
-          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNTGU4YUUyX25idGZ1SHBRSk9BUWJ5bUZrRDdjSEZNQWFWeVNKdGdFcFQxMUViUGxsdVNiWjUyYkd1LUJEQWFBM3BVR1RmaGw3eUdqbzZRZENLY3l5N0ZjOEVlTVpzc25ubnFBRmpuTzhHV3RwUmNfY2o0R2VyMnVDVndMVTd6YjhNSjdGeVhLWlZLUEFZWHF3?oc=5",
-          "date": "Mon, 16 Nov 2026 12:54:00 GMT"
-        },
-        {
-          "title": "NVIDIA Corporation | History, GPUs, & Artificial Intelligence - Britannica",
-          "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1FMGstclM1R3lESkhtUUVPTDBHZktQWWMzcTFXa3VIR2FOcTJLcy1wQnlLMHo5MDRXeS10UTJudHRxNmpFX2hyWUZzX1ZTaVpBTng3VXBGT3ZGa0FrTXhHMg?oc=5",
-          "date": "Tue, 17 Nov 2026 10:47:26 GMT"
-        }
-      ],
-      "status": "Do analizy",
-      "attention_score": 39,
-      "valuation_status": "Orientacyjna kapitalizacja i mnożniki roczne — nie ranking zakupu",
-      "investment_score": null,
-      "fundamentals": {
-        "source": "SEC EDGAR XBRL",
-        "fiscal_year": "2025",
-        "revenue_usd": 52853000000,
-        "net_income_usd": -267000000,
-        "revenue_growth_pct": -0.5,
-        "net_margin_pct": -0.5,
-        "operating_cash_flow_usd": 9697000000,
-        "free_cash_flow_usd": -4949000000,
-        "cash_usd": 14265000000,
-        "debt_usd": 46585000000,
-        "financial_health_score": 25,
-        "score_label": "Prosty filtr 4 warunków, nie rekomendacja",
-        "shares_outstanding": 5315000000,
-        "shares_as_of": "2026-10-23",
-        "revenue_period_start": "2024-12-29",
-        "revenue_period_end": "2025-12-27",
-        "net_income_period_start": "2024-12-29",
-        "net_income_period_end": "2025-12-27",
-        "cash_flow_period_start": "2024-12-29",
-        "cash_flow_period_end": "2025-12-27",
-        "capex_period_start": "2024-12-29",
-        "capex_period_end": "2025-12-27",
-        "period_alignment": {
-          "status": "aligned",
-          "revenue_net_income": {
-            "start": "2024-12-29",
-            "end": "2025-12-27"
-          },
-          "cash_flow_capex": {
-            "start": "2024-12-29",
-            "end": "2025-12-27"
-          }
-        },
-        "period_mismatch_flags": [],
-        "filed": "2026-01-23",
-        "as_of": "2026-11-17T11:27:50.985278+00:00",
-        "source_url": "https://www.sec.gov/edgar/browse/?CIK=50863"
-      },
-      "fundamentals_quality": "cached",
-      "price": {
-        "close_usd": 55.47,
-        "date": "2026-11-16",
-        "age_days": 1,
-        "source": "Yahoo Finance chart EOD",
-        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/INTC?interval=1d&range=6mo",
-        "is_live": false,
-        "currency": "USD",
-        "market_symbol": "INTC",
-        "bars": [
-          {
-            "date": "2026-05-18",
-            "close": 108.16999816894531,
-            "volume": 145764000.0
-          },
-          {
-            "date": "2026-05-19",
-            "close": 110.80000305175781,
-            "volume": 150234900.0
-          },
-          {
-            "date": "2026-05-20",
-            "close": 118.95999908447266,
-            "volume": 165086900.0
-          },
-          {
-            "date": "2026-05-21",
-            "close": 118.5,
-            "volume": 102452500.0
-          },
-          {
-            "date": "2026-05-22",
-            "close": 119.83999633789062,
-            "volume": 82663000.0
-          },
-          {
-            "date": "2026-05-26",
-            "close": 123.5199966430664,
-            "volume": 108167300.0
-          },
-          {
-            "date": "2026-05-27",
-            "close": 121.7699966430664,
-            "volume": 93323300.0
-          },
-          {
-            "date": "2026-05-28",
-            "close": 120.88999938964844,
-            "volume": 97321000.0
-          },
-          {
-            "date": "2026-05-29",
-            "close": 114.68000030517578,
-            "volume": 191676100.0
-          },
-          {
-            "date": "2026-06-01",
-            "close": 109.33000183105469,
-            "volume": 134900400.0
-          },
-          {
-            "date": "2026-06-02",
-            "close": 107.93000030517578,
-            "volume": 106336200.0
-          },
-          {
-            "date": "2026-06-03",
-            "close": 112.70999908447266,
-            "volume": 118928800.0
-          },
-          {
-            "date": "2026-06-04",
-            "close": 111.77999877929688,
-            "volume": 77325800.0
-          },
-          {
-            "date": "2026-06-05",
-            "close": 99.16999816894531,
-            "volume": 145209400.0
-          },
-          {
-            "date": "2026-06-08",
-            "close": 110.2699966430664,
-            "volume": 136973900.0
-          },
-          {
-            "date": "2026-06-09",
-            "close": 107.91999816894531,
-            "volume": 149623100.0
-          },
-          {
-            "date": "2026-06-10",
-            "close": 107.04000091552734,
-            "volume": 122653500.0
-          },
-          {
-            "date": "2026-06-11",
-            "close": 116.95999908447266,
-            "volume": 188430300.0
-          },
-          {
-            "date": "2026-06-12",
-            "close": 124.56999969482422,
-            "volume": 151169400.0
-          },
-          {
-            "date": "2026-06-15",
-            "close": 127.86000061035156,
-            "volume": 134507500.0
-          },
-          {
-            "date": "2026-06-16",
-            "close": 117.05000305175781,
-            "volume": 132962600.0
-          },
-          {
-            "date": "2026-06-17",
-            "close": 121.0999984741211,
-            "volume": 115324900.0
-          },
-          {
-            "date": "2026-06-18",
-            "close": 133.99000549316406,
-            "volume": 233906600.0
-          },
-          {
-            "date": "2026-06-22",
-            "close": 140.94000244140625,
-            "volume": 127190600.0
-          },
-          {
-            "date": "2026-06-23",
-            "close": 132.27999877929688,
-            "volume": 132976700.0
-          },
-          {
-            "date": "2026-06-24",
-            "close": 131.64999389648438,
-            "volume": 104591700.0
-          },
-          {
-            "date": "2026-06-25",
-            "close": 132.8699951171875,
-            "volume": 122588800.0
-          },
-          {
-            "date": "2026-06-26",
-            "close": 128.32000732421875,
-            "volume": 99475400.0
-          },
-          {
-            "date": "2026-06-29",
-            "close": 131.72000122070312,
-            "volume": 106805300.0
-          },
-          {
-            "date": "2026-06-30",
-            "close": 139.6300048828125,
-            "volume": 116996700.0
-          },
-          {
-            "date": "2026-07-01",
-            "close": 127.0199966430664,
-            "volume": 113107200.0
-          },
-          {
-            "date": "2026-07-02",
-            "close": 120.3499984741211,
-            "volume": 124577600.0
-          },
-          {
-            "date": "2026-07-06",
-            "close": 122.19999694824219,
-            "volume": 86950200.0
-          },
-          {
-            "date": "2026-07-07",
-            "close": 110.38999938964844,
-            "volume": 140405900.0
-          },
-          {
-            "date": "2026-07-08",
-            "close": 110.23999786376953,
-            "volume": 105488100.0
-          },
-          {
-            "date": "2026-07-09",
-            "close": 112.54000091552734,
-            "volume": 99352500.0
-          },
-          {
-            "date": "2026-07-10",
-            "close": 109.83999633789062,
-            "volume": 70846600.0
-          },
-          {
-            "date": "2026-07-13",
-            "close": 103.12000274658203,
-            "volume": 100988800.0
-          },
-          {
-            "date": "2026-07-14",
-            "close": 107.76000213623047,
-            "volume": 91129000.0
-          },
-          {
-            "date": "2026-07-15",
-            "close": 102.98999786376953,
-            "volume": 120625500.0
-          },
-          {
-            "date": "2026-07-16",
-            "close": 96.9800033569336,
-            "volume": 107742900.0
-          },
-          {
-            "date": "2026-07-17",
-            "close": 95.04000091552734,
-            "volume": 126779300.0
-          },
-          {
-            "date": "2026-07-20",
-            "close": 97.05999755859375,
-            "volume": 89741400.0
-          },
-          {
-            "date": "2026-07-21",
-            "close": 105.44999694824219,
-            "volume": 105429400.0
-          },
-          {
-            "date": "2026-07-22",
-            "close": 102.62000274658203,
-            "volume": 78431000.0
-          },
-          {
-            "date": "2026-07-23",
-            "close": 100.2300033569336,
-            "volume": 140806900.0
-          },
-          {
-            "date": "2026-07-24",
-            "close": 92.31999969482422,
-            "volume": 181132900.0
-          },
-          {
-            "date": "2026-07-27",
-            "close": 91.66999816894531,
-            "volume": 133247300.0
-          },
-          {
-            "date": "2026-07-28",
-            "close": 86.30000305175781,
-            "volume": 154346700.0
-          },
-          {
-            "date": "2026-07-29",
-            "close": 81.87999725341797,
-            "volume": 152394600.0
-          },
-          {
-            "date": "2026-07-30",
-            "close": 91.12999725341797,
-            "volume": 140322600.0
-          },
-          {
-            "date": "2026-07-31",
-            "close": 90.19999694824219,
-            "volume": 109039500.0
-          },
-          {
-            "date": "2026-08-03",
-            "close": 91.0,
-            "volume": 96633600.0
-          },
-          {
-            "date": "2026-08-04",
-            "close": 100.86000061035156,
-            "volume": 124355100.0
-          },
-          {
-            "date": "2026-08-05",
-            "close": 101.05999755859375,
-            "volume": 85388400.0
-          },
-          {
-            "date": "2026-08-06",
-            "close": 99.80999755859375,
-            "volume": 78088100.0
-          },
-          {
-            "date": "2026-08-07",
-            "close": 101.6500015258789,
-            "volume": 76760600.0
-          },
-          {
-            "date": "2026-08-10",
-            "close": 97.5199966430664,
-            "volume": 101153400.0
-          },
-          {
-            "date": "2026-08-11",
-            "close": 97.70999908447266,
-            "volume": 164063600.0
-          },
-          {
-            "date": "2026-08-12",
-            "close": 100.94999694824219,
-            "volume": 162446700.0
-          },
-          {
-            "date": "2026-08-13",
-            "close": 104.55999755859375,
-            "volume": 116837600.0
-          },
-          {
-            "date": "2026-08-14",
-            "close": 102.5,
-            "volume": 95387500.0
-          },
-          {
-            "date": "2026-08-17",
-            "close": 103.48999786376953,
-            "volume": 88616800.0
-          },
-          {
-            "date": "2026-08-18",
-            "close": 96.69000244140625,
-            "volume": 121969500.0
-          },
-          {
-            "date": "2026-08-19",
-            "close": 92.80000305175781,
-            "volume": 110268600.0
-          },
-          {
-            "date": "2026-08-20",
-            "close": 92.12999725341797,
-            "volume": 85654700.0
-          },
-          {
-            "date": "2026-08-21",
-            "close": 90.06999969482422,
-            "volume": 91670100.0
-          },
-          {
-            "date": "2026-08-24",
-            "close": 87.26000213623047,
-            "volume": 96903400.0
-          },
-          {
-            "date": "2026-08-25",
-            "close": 87.4800033569336,
-            "volume": 81853800.0
-          },
-          {
-            "date": "2026-08-26",
-            "close": 88.23999786376953,
-            "volume": 75752800.0
-          },
-          {
-            "date": "2026-08-27",
-            "close": 92.08999633789062,
-            "volume": 100556800.0
-          },
-          {
-            "date": "2026-08-28",
-            "close": 89.47000122070312,
-            "volume": 86172600.0
-          },
-          {
-            "date": "2026-08-31",
-            "close": 89.51000213623047,
-            "volume": 65188200.0
-          },
-          {
-            "date": "2026-09-01",
-            "close": 88.97000122070312,
-            "volume": 73962100.0
-          },
-          {
-            "date": "2026-09-02",
-            "close": 90.05000305175781,
-            "volume": 61554500.0
-          },
-          {
-            "date": "2026-09-03",
-            "close": 91.66999816894531,
-            "volume": 79927800.0
-          },
-          {
-            "date": "2026-09-04",
-            "close": 95.80000305175781,
-            "volume": 97654300.0
-          },
-          {
-            "date": "2026-09-08",
-            "close": 104.47000122070312,
-            "volume": 140269300.0
-          },
-          {
-            "date": "2026-09-09",
-            "close": 106.23999786376953,
-            "volume": 96891400.0
-          },
-          {
-            "date": "2026-09-10",
-            "close": 100.31999969482422,
-            "volume": 96887100.0
-          },
-          {
-            "date": "2026-09-11",
-            "close": 102.94000244140625,
-            "volume": 86990400.0
-          },
-          {
-            "date": "2026-09-14",
-            "close": 97.19000244140625,
-            "volume": 96459700.0
-          },
-          {
-            "date": "2026-09-15",
-            "close": 97.13999938964844,
-            "volume": 84999300.0
-          },
-          {
-            "date": "2026-09-16",
-            "close": 101.05000305175781,
-            "volume": 119923600.0
-          },
-          {
-            "date": "2026-09-17",
-            "close": 108.80000305175781,
-            "volume": 149726000.0
-          },
-          {
-            "date": "2026-09-18",
-            "close": 108.5999984741211,
-            "volume": 174996700.0
-          },
-          {
-            "date": "2026-09-21",
-            "close": 121.77999877929688,
-            "volume": 191638400.0
-          },
-          {
-            "date": "2026-09-22",
-            "close": 123.86000061035156,
-            "volume": 108379400.0
-          },
-          {
-            "date": "2026-09-23",
-            "close": 122.5999984741211,
-            "volume": 85621100.0
-          },
-          {
-            "date": "2026-09-24",
-            "close": 127.38999938964844,
-            "volume": 119296700.0
-          },
-          {
-            "date": "2026-09-25",
-            "close": 123.0,
-            "volume": 97728400.0
-          },
-          {
-            "date": "2026-09-28",
-            "close": 116.02999877929688,
-            "volume": 112436900.0
-          },
-          {
-            "date": "2026-09-29",
-            "close": 115.93000030517578,
-            "volume": 88744500.0
-          },
-          {
-            "date": "2026-09-30",
-            "close": 120.2300033569336,
-            "volume": 94917200.0
-          },
-          {
-            "date": "2026-10-01",
-            "close": 120.0,
-            "volume": 103559800.0
-          },
-          {
-            "date": "2026-10-02",
-            "close": 119.33000183105469,
-            "volume": 95401500.0
-          },
-          {
-            "date": "2026-10-05",
-            "close": 116.19000244140625,
-            "volume": 81331800.0
-          },
-          {
-            "date": "2026-10-06",
-            "close": 112.5,
-            "volume": 101938800.0
-          },
-          {
-            "date": "2026-10-07",
-            "close": 113.12000274658203,
-            "volume": 82861900.0
-          },
-          {
-            "date": "2026-10-08",
-            "close": 107.08000183105469,
-            "volume": 120196700.0
-          },
-          {
-            "date": "2026-10-09",
-            "close": 104.69999694824219,
-            "volume": 75017800.0
-          },
-          {
-            "date": "2026-10-12",
-            "close": 101.3499984741211,
-            "volume": 74171900.0
-          },
-          {
-            "date": "2026-10-13",
-            "close": 102.80999755859375,
-            "volume": 88252000.0
-          },
-          {
-            "date": "2026-10-14",
-            "close": 98.12000274658203,
-            "volume": 104592800.0
-          },
-          {
-            "date": "2026-10-15",
-            "close": 95.37000274658203,
-            "volume": 147157700.0
-          },
-          {
-            "date": "2026-10-16",
-            "close": 89.8499984741211,
-            "volume": 123003100.0
-          },
-          {
-            "date": "2026-10-19",
-            "close": 92.02999877929688,
-            "volume": 101608800.0
-          },
-          {
-            "date": "2026-10-20",
-            "close": 91.69000244140625,
-            "volume": 84058600.0
-          },
-          {
-            "date": "2026-10-21",
-            "close": 92.95999908447266,
-            "volume": 75566800.0
-          },
-          {
-            "date": "2026-10-22",
-            "close": 85.48999786376953,
-            "volume": 134128100.0
-          },
-          {
-            "date": "2026-10-23",
-            "close": 86.95999908447266,
-            "volume": 72093700.0
-          },
-          {
-            "date": "2026-10-26",
-            "close": 90.47000122070312,
-            "volume": 98744200.0
-          },
-          {
-            "date": "2026-10-27",
-            "close": 93.73999786376953,
-            "volume": 90523300.0
-          },
-          {
-            "date": "2026-10-28",
-            "close": 95.52999877929688,
-            "volume": 82592400.0
-          },
-          {
-            "date": "2026-10-29",
-            "close": 92.06999969482422,
-            "volume": 134168700.0
-          },
-          {
-            "date": "2026-10-30",
-            "close": 65.76000213623047,
-            "volume": 455599400.0
-          },
-          {
-            "date": "2026-11-02",
-            "close": 59.970001220703125,
-            "volume": 230689500.0
-          },
-          {
-            "date": "2026-11-03",
-            "close": 60.54999923706055,
-            "volume": 149052100.0
-          },
-          {
-            "date": "2026-11-04",
-            "close": 58.27000045776367,
-            "volume": 189308900.0
-          },
-          {
-            "date": "2026-11-05",
-            "close": 52.25,
-            "volume": 270291000.0
-          },
-          {
-            "date": "2026-11-06",
-            "close": 56.279998779296875,
-            "volume": 174382300.0
-          },
-          {
-            "date": "2026-11-09",
-            "close": 59.369998931884766,
-            "volume": 147250200.0
-          },
-          {
-            "date": "2026-11-10",
-            "close": 58.130001068115234,
-            "volume": 100978200.0
-          },
-          {
-            "date": "2026-11-11",
-            "close": 62.5,
-            "volume": 133190900.0
-          },
-          {
-            "date": "2026-11-12",
-            "close": 61.20000076293945,
-            "volume": 80687500.0
-          },
-          {
-            "date": "2026-11-13",
-            "close": 59.65999984741211,
-            "volume": 102574300.0
-          },
-          {
-            "date": "2026-11-16",
-            "close": 55.470001220703125,
-            "volume": 103100900.0
-          }
-        ],
-        "checked_at": "2026-11-17T11:43:13.622957+00:00",
-        "sma20": 71.9159999847412,
-        "sma50": 94.16680023193359,
-        "rsi_14": 29.87,
-        "volume_ratio20": 0.709,
-        "above_sma20": false,
-        "above_sma50": false,
-        "relative_strength_20d_pct": -37.57,
-        "relative_strength_benchmark": "SPY",
-        "rsi_as_of": "2026-11-16",
-        "sma20_as_of": "2026-11-16",
-        "sma50_as_of": "2026-11-16",
-        "volume_as_of": "2026-11-16"
-      },
-      "price_quality": "refreshed",
-      "valuation": {
-        "status": "partial",
-        "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 294823050000,
-        "ps": 5.58,
-        "pe": null,
-        "fcf_yield_pct": -1.68,
-        "share_date": "2026-10-23",
-        "price_date": "2026-11-16",
-        "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)",
-        "periods_aligned": true
-      },
-      "technical": {
-        "status": "ok",
-        "bars": 127,
-        "date": "2026-11-16",
-        "sma20": 71.9159999847412,
-        "sma50": 94.16680023193359,
-        "rsi_14": 29.87,
-        "volume_ratio20": 0.709,
-        "above_sma20": false,
-        "above_sma50": false,
-        "relative_strength_20d_pct": -37.57,
-        "relative_strength_benchmark": "SPY",
-        "method": "SMA20/SMA50 and simple RSI14 from daily bars; 20-session relative performance versus SPY on common dates"
-      },
-      "analyst_targets": {
-        "status": "unavailable",
-        "reason": "no validated point-in-time analyst_consensus.csv row"
-      },
-      "entry_trigger": null,
-      "corporate_events": [],
-      "investment_risk_flags": {
-        "flags": [
-          "event_feed_missing"
-        ]
-      },
-      "investment_decision": {
-        "strategy_version": "balanced-1.3.4-integrity",
-        "signal": "WATCH",
-        "buy_eligible": false,
-        "decision_stage": "data_gate",
-        "decision_trace": [
-          {
-            "stage": "data",
-            "check": "price_refreshed",
-            "actual": "refreshed",
-            "required": "refreshed",
-            "passed": true,
-            "reason": null
-          },
-          {
-            "stage": "data",
-            "check": "fundamentals_refreshed",
-            "actual": "cached",
-            "required": "refreshed",
-            "passed": false,
-            "reason": "fundamentals_not_refreshed"
-          }
-        ],
-        "reasons": [
-          "fundamentals_not_refreshed"
-        ],
-        "fundamental_score": null,
-        "entry_score": null
-      },
-      "signal": "WATCH",
-      "buy_eligible": false
-    },
-    {
       "ticker": "AMAT",
       "name": "Applied Materials",
       "sector": "Semiconductor equipment",
@@ -3259,10 +2468,10 @@
         },
         "period_mismatch_flags": [],
         "filed": "2025-12-12",
-        "as_of": "2026-11-17T11:27:45.394015+00:00",
+        "as_of": "2026-11-17T11:51:44.631906+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=6951"
       },
-      "fundamentals_quality": "cached",
+      "fundamentals_quality": "refreshed",
       "price": {
         "close_usd": 350.25,
         "date": "2026-11-16",
@@ -3909,7 +3118,7 @@
             "volume": 7105000.0
           }
         ],
-        "checked_at": "2026-11-17T11:30:38.455695+00:00",
+        "checked_at": "2026-11-17T11:52:05.710316+00:00",
         "sma20": 379.7844985961914,
         "sma50": 435.81980102539063,
         "rsi_14": 38.78,
@@ -3965,7 +3174,7 @@
         "strategy_version": "balanced-1.3.4-integrity",
         "signal": "WATCH",
         "buy_eligible": false,
-        "decision_stage": "data_gate",
+        "decision_stage": "analyst_consensus",
         "decision_trace": [
           {
             "stage": "data",
@@ -3978,14 +3187,22 @@
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
-            "actual": "cached",
+            "actual": "refreshed",
             "required": "refreshed",
+            "passed": true,
+            "reason": null
+          },
+          {
+            "stage": "consensus",
+            "check": "analyst_targets",
+            "actual": "unavailable",
+            "required": "documented",
             "passed": false,
-            "reason": "fundamentals_not_refreshed"
+            "reason": "analyst_consensus_missing"
           }
         ],
         "reasons": [
-          "fundamentals_not_refreshed"
+          "analyst_consensus_missing"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -4044,10 +3261,10 @@
           "annual_flow_periods_not_aligned"
         ],
         "filed": "2026-02-17",
-        "as_of": "2026-11-17T11:27:47.263419+00:00",
+        "as_of": "2026-11-17T11:51:46.662741+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1596532"
       },
-      "fundamentals_quality": "cached",
+      "fundamentals_quality": "refreshed",
       "price": {
         "close_usd": 187.02,
         "date": "2026-11-16",
@@ -4708,7 +3925,7 @@
         "sma50_as_of": "2026-11-16",
         "volume_as_of": "2026-11-16"
       },
-      "price_quality": "refreshed",
+      "price_quality": "cached",
       "valuation": {
         "status": "partial",
         "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
@@ -4755,22 +3972,22 @@
           {
             "stage": "data",
             "check": "price_refreshed",
-            "actual": "refreshed",
+            "actual": "cached",
             "required": "refreshed",
-            "passed": true,
-            "reason": null
+            "passed": false,
+            "reason": "price_not_refreshed"
           },
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
-            "actual": "cached",
+            "actual": "refreshed",
             "required": "refreshed",
-            "passed": false,
-            "reason": "fundamentals_not_refreshed"
+            "passed": true,
+            "reason": null
           }
         ],
         "reasons": [
-          "fundamentals_not_refreshed"
+          "price_not_refreshed"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -4833,7 +4050,7 @@
         "as_of": "2026-11-17T11:44:05.988244+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1551182"
       },
-      "fundamentals_quality": "refreshed",
+      "fundamentals_quality": "cached",
       "price": {
         "close_usd": 336.88,
         "date": "2026-11-16",
@@ -5536,7 +4753,7 @@
         "strategy_version": "balanced-1.3.4-integrity",
         "signal": "WATCH",
         "buy_eligible": false,
-        "decision_stage": "analyst_consensus",
+        "decision_stage": "data_gate",
         "decision_trace": [
           {
             "stage": "data",
@@ -5549,22 +4766,14 @@
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
-            "actual": "refreshed",
+            "actual": "cached",
             "required": "refreshed",
-            "passed": true,
-            "reason": null
-          },
-          {
-            "stage": "consensus",
-            "check": "analyst_targets",
-            "actual": "unavailable",
-            "required": "documented",
             "passed": false,
-            "reason": "analyst_consensus_missing"
+            "reason": "fundamentals_not_refreshed"
           }
         ],
         "reasons": [
-          "analyst_consensus_missing"
+          "fundamentals_not_refreshed"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -6415,7 +5624,7 @@
         "as_of": "2026-11-17T11:44:06.937547+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=773840"
       },
-      "fundamentals_quality": "refreshed",
+      "fundamentals_quality": "cached",
       "price": {
         "close_usd": 217.95,
         "date": "2026-11-16",
@@ -7118,7 +6327,7 @@
         "strategy_version": "balanced-1.3.4-integrity",
         "signal": "WATCH",
         "buy_eligible": false,
-        "decision_stage": "analyst_consensus",
+        "decision_stage": "data_gate",
         "decision_trace": [
           {
             "stage": "data",
@@ -7131,22 +6340,800 @@
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
+            "actual": "cached",
+            "required": "refreshed",
+            "passed": false,
+            "reason": "fundamentals_not_refreshed"
+          }
+        ],
+        "reasons": [
+          "fundamentals_not_refreshed"
+        ],
+        "fundamental_score": null,
+        "entry_score": null
+      },
+      "signal": "WATCH",
+      "buy_eligible": false
+    },
+    {
+      "ticker": "INTC",
+      "name": "Intel",
+      "sector": "Semiconductors",
+      "mentions": 1,
+      "news": [
+        {
+          "title": "Can Edge AI Replace Intel’s Shrinking PC Business? - 24/7 Wall St.",
+          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNTGU4YUUyX25idGZ1SHBRSk9BUWJ5bUZrRDdjSEZNQWFWeVNKdGdFcFQxMUViUGxsdVNiWjUyYkd1LUJEQWFBM3BVR1RmaGw3eUdqbzZRZENLY3l5N0ZjOEVlTVpzc25ubnFBRmpuTzhHV3RwUmNfY2o0R2VyMnVDVndMVTd6YjhNSjdGeVhLWlZLUEFZWHF3?oc=5",
+          "date": "Mon, 16 Nov 2026 12:54:00 GMT"
+        }
+      ],
+      "status": "Do analizy",
+      "attention_score": 22,
+      "valuation_status": "Orientacyjna kapitalizacja i mnożniki roczne — nie ranking zakupu",
+      "investment_score": null,
+      "fundamentals": {
+        "source": "SEC EDGAR XBRL",
+        "fiscal_year": "2025",
+        "revenue_usd": 52853000000,
+        "net_income_usd": -267000000,
+        "revenue_growth_pct": -0.5,
+        "net_margin_pct": -0.5,
+        "operating_cash_flow_usd": 9697000000,
+        "free_cash_flow_usd": -4949000000,
+        "cash_usd": 14265000000,
+        "debt_usd": 46585000000,
+        "financial_health_score": 25,
+        "score_label": "Prosty filtr 4 warunków, nie rekomendacja",
+        "shares_outstanding": 5315000000,
+        "shares_as_of": "2026-10-23",
+        "revenue_period_start": "2024-12-29",
+        "revenue_period_end": "2025-12-27",
+        "net_income_period_start": "2024-12-29",
+        "net_income_period_end": "2025-12-27",
+        "cash_flow_period_start": "2024-12-29",
+        "cash_flow_period_end": "2025-12-27",
+        "capex_period_start": "2024-12-29",
+        "capex_period_end": "2025-12-27",
+        "period_alignment": {
+          "status": "aligned",
+          "revenue_net_income": {
+            "start": "2024-12-29",
+            "end": "2025-12-27"
+          },
+          "cash_flow_capex": {
+            "start": "2024-12-29",
+            "end": "2025-12-27"
+          }
+        },
+        "period_mismatch_flags": [],
+        "filed": "2026-01-23",
+        "as_of": "2026-11-17T11:27:50.985278+00:00",
+        "source_url": "https://www.sec.gov/edgar/browse/?CIK=50863"
+      },
+      "fundamentals_quality": "cached",
+      "price": {
+        "close_usd": 55.47,
+        "date": "2026-11-16",
+        "age_days": 1,
+        "source": "Yahoo Finance chart EOD",
+        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/INTC?interval=1d&range=6mo",
+        "is_live": false,
+        "currency": "USD",
+        "market_symbol": "INTC",
+        "bars": [
+          {
+            "date": "2026-05-18",
+            "close": 108.16999816894531,
+            "volume": 145764000.0
+          },
+          {
+            "date": "2026-05-19",
+            "close": 110.80000305175781,
+            "volume": 150234900.0
+          },
+          {
+            "date": "2026-05-20",
+            "close": 118.95999908447266,
+            "volume": 165086900.0
+          },
+          {
+            "date": "2026-05-21",
+            "close": 118.5,
+            "volume": 102452500.0
+          },
+          {
+            "date": "2026-05-22",
+            "close": 119.83999633789062,
+            "volume": 82663000.0
+          },
+          {
+            "date": "2026-05-26",
+            "close": 123.5199966430664,
+            "volume": 108167300.0
+          },
+          {
+            "date": "2026-05-27",
+            "close": 121.7699966430664,
+            "volume": 93323300.0
+          },
+          {
+            "date": "2026-05-28",
+            "close": 120.88999938964844,
+            "volume": 97321000.0
+          },
+          {
+            "date": "2026-05-29",
+            "close": 114.68000030517578,
+            "volume": 191676100.0
+          },
+          {
+            "date": "2026-06-01",
+            "close": 109.33000183105469,
+            "volume": 134900400.0
+          },
+          {
+            "date": "2026-06-02",
+            "close": 107.93000030517578,
+            "volume": 106336200.0
+          },
+          {
+            "date": "2026-06-03",
+            "close": 112.70999908447266,
+            "volume": 118928800.0
+          },
+          {
+            "date": "2026-06-04",
+            "close": 111.77999877929688,
+            "volume": 77325800.0
+          },
+          {
+            "date": "2026-06-05",
+            "close": 99.16999816894531,
+            "volume": 145209400.0
+          },
+          {
+            "date": "2026-06-08",
+            "close": 110.2699966430664,
+            "volume": 136973900.0
+          },
+          {
+            "date": "2026-06-09",
+            "close": 107.91999816894531,
+            "volume": 149623100.0
+          },
+          {
+            "date": "2026-06-10",
+            "close": 107.04000091552734,
+            "volume": 122653500.0
+          },
+          {
+            "date": "2026-06-11",
+            "close": 116.95999908447266,
+            "volume": 188430300.0
+          },
+          {
+            "date": "2026-06-12",
+            "close": 124.56999969482422,
+            "volume": 151169400.0
+          },
+          {
+            "date": "2026-06-15",
+            "close": 127.86000061035156,
+            "volume": 134507500.0
+          },
+          {
+            "date": "2026-06-16",
+            "close": 117.05000305175781,
+            "volume": 132962600.0
+          },
+          {
+            "date": "2026-06-17",
+            "close": 121.0999984741211,
+            "volume": 115324900.0
+          },
+          {
+            "date": "2026-06-18",
+            "close": 133.99000549316406,
+            "volume": 233906600.0
+          },
+          {
+            "date": "2026-06-22",
+            "close": 140.94000244140625,
+            "volume": 127190600.0
+          },
+          {
+            "date": "2026-06-23",
+            "close": 132.27999877929688,
+            "volume": 132976700.0
+          },
+          {
+            "date": "2026-06-24",
+            "close": 131.64999389648438,
+            "volume": 104591700.0
+          },
+          {
+            "date": "2026-06-25",
+            "close": 132.8699951171875,
+            "volume": 122588800.0
+          },
+          {
+            "date": "2026-06-26",
+            "close": 128.32000732421875,
+            "volume": 99475400.0
+          },
+          {
+            "date": "2026-06-29",
+            "close": 131.72000122070312,
+            "volume": 106805300.0
+          },
+          {
+            "date": "2026-06-30",
+            "close": 139.6300048828125,
+            "volume": 116996700.0
+          },
+          {
+            "date": "2026-07-01",
+            "close": 127.0199966430664,
+            "volume": 113107200.0
+          },
+          {
+            "date": "2026-07-02",
+            "close": 120.3499984741211,
+            "volume": 124577600.0
+          },
+          {
+            "date": "2026-07-06",
+            "close": 122.19999694824219,
+            "volume": 86950200.0
+          },
+          {
+            "date": "2026-07-07",
+            "close": 110.38999938964844,
+            "volume": 140405900.0
+          },
+          {
+            "date": "2026-07-08",
+            "close": 110.23999786376953,
+            "volume": 105488100.0
+          },
+          {
+            "date": "2026-07-09",
+            "close": 112.54000091552734,
+            "volume": 99352500.0
+          },
+          {
+            "date": "2026-07-10",
+            "close": 109.83999633789062,
+            "volume": 70846600.0
+          },
+          {
+            "date": "2026-07-13",
+            "close": 103.12000274658203,
+            "volume": 100988800.0
+          },
+          {
+            "date": "2026-07-14",
+            "close": 107.76000213623047,
+            "volume": 91129000.0
+          },
+          {
+            "date": "2026-07-15",
+            "close": 102.98999786376953,
+            "volume": 120625500.0
+          },
+          {
+            "date": "2026-07-16",
+            "close": 96.9800033569336,
+            "volume": 107742900.0
+          },
+          {
+            "date": "2026-07-17",
+            "close": 95.04000091552734,
+            "volume": 126779300.0
+          },
+          {
+            "date": "2026-07-20",
+            "close": 97.05999755859375,
+            "volume": 89741400.0
+          },
+          {
+            "date": "2026-07-21",
+            "close": 105.44999694824219,
+            "volume": 105429400.0
+          },
+          {
+            "date": "2026-07-22",
+            "close": 102.62000274658203,
+            "volume": 78431000.0
+          },
+          {
+            "date": "2026-07-23",
+            "close": 100.2300033569336,
+            "volume": 140806900.0
+          },
+          {
+            "date": "2026-07-24",
+            "close": 92.31999969482422,
+            "volume": 181132900.0
+          },
+          {
+            "date": "2026-07-27",
+            "close": 91.66999816894531,
+            "volume": 133247300.0
+          },
+          {
+            "date": "2026-07-28",
+            "close": 86.30000305175781,
+            "volume": 154346700.0
+          },
+          {
+            "date": "2026-07-29",
+            "close": 81.87999725341797,
+            "volume": 152394600.0
+          },
+          {
+            "date": "2026-07-30",
+            "close": 91.12999725341797,
+            "volume": 140322600.0
+          },
+          {
+            "date": "2026-07-31",
+            "close": 90.19999694824219,
+            "volume": 109039500.0
+          },
+          {
+            "date": "2026-08-03",
+            "close": 91.0,
+            "volume": 96633600.0
+          },
+          {
+            "date": "2026-08-04",
+            "close": 100.86000061035156,
+            "volume": 124355100.0
+          },
+          {
+            "date": "2026-08-05",
+            "close": 101.05999755859375,
+            "volume": 85388400.0
+          },
+          {
+            "date": "2026-08-06",
+            "close": 99.80999755859375,
+            "volume": 78088100.0
+          },
+          {
+            "date": "2026-08-07",
+            "close": 101.6500015258789,
+            "volume": 76760600.0
+          },
+          {
+            "date": "2026-08-10",
+            "close": 97.5199966430664,
+            "volume": 101153400.0
+          },
+          {
+            "date": "2026-08-11",
+            "close": 97.70999908447266,
+            "volume": 164063600.0
+          },
+          {
+            "date": "2026-08-12",
+            "close": 100.94999694824219,
+            "volume": 162446700.0
+          },
+          {
+            "date": "2026-08-13",
+            "close": 104.55999755859375,
+            "volume": 116837600.0
+          },
+          {
+            "date": "2026-08-14",
+            "close": 102.5,
+            "volume": 95387500.0
+          },
+          {
+            "date": "2026-08-17",
+            "close": 103.48999786376953,
+            "volume": 88616800.0
+          },
+          {
+            "date": "2026-08-18",
+            "close": 96.69000244140625,
+            "volume": 121969500.0
+          },
+          {
+            "date": "2026-08-19",
+            "close": 92.80000305175781,
+            "volume": 110268600.0
+          },
+          {
+            "date": "2026-08-20",
+            "close": 92.12999725341797,
+            "volume": 85654700.0
+          },
+          {
+            "date": "2026-08-21",
+            "close": 90.06999969482422,
+            "volume": 91670100.0
+          },
+          {
+            "date": "2026-08-24",
+            "close": 87.26000213623047,
+            "volume": 96903400.0
+          },
+          {
+            "date": "2026-08-25",
+            "close": 87.4800033569336,
+            "volume": 81853800.0
+          },
+          {
+            "date": "2026-08-26",
+            "close": 88.23999786376953,
+            "volume": 75752800.0
+          },
+          {
+            "date": "2026-08-27",
+            "close": 92.08999633789062,
+            "volume": 100556800.0
+          },
+          {
+            "date": "2026-08-28",
+            "close": 89.47000122070312,
+            "volume": 86172600.0
+          },
+          {
+            "date": "2026-08-31",
+            "close": 89.51000213623047,
+            "volume": 65188200.0
+          },
+          {
+            "date": "2026-09-01",
+            "close": 88.97000122070312,
+            "volume": 73962100.0
+          },
+          {
+            "date": "2026-09-02",
+            "close": 90.05000305175781,
+            "volume": 61554500.0
+          },
+          {
+            "date": "2026-09-03",
+            "close": 91.66999816894531,
+            "volume": 79927800.0
+          },
+          {
+            "date": "2026-09-04",
+            "close": 95.80000305175781,
+            "volume": 97654300.0
+          },
+          {
+            "date": "2026-09-08",
+            "close": 104.47000122070312,
+            "volume": 140269300.0
+          },
+          {
+            "date": "2026-09-09",
+            "close": 106.23999786376953,
+            "volume": 96891400.0
+          },
+          {
+            "date": "2026-09-10",
+            "close": 100.31999969482422,
+            "volume": 96887100.0
+          },
+          {
+            "date": "2026-09-11",
+            "close": 102.94000244140625,
+            "volume": 86990400.0
+          },
+          {
+            "date": "2026-09-14",
+            "close": 97.19000244140625,
+            "volume": 96459700.0
+          },
+          {
+            "date": "2026-09-15",
+            "close": 97.13999938964844,
+            "volume": 84999300.0
+          },
+          {
+            "date": "2026-09-16",
+            "close": 101.05000305175781,
+            "volume": 119923600.0
+          },
+          {
+            "date": "2026-09-17",
+            "close": 108.80000305175781,
+            "volume": 149726000.0
+          },
+          {
+            "date": "2026-09-18",
+            "close": 108.5999984741211,
+            "volume": 174996700.0
+          },
+          {
+            "date": "2026-09-21",
+            "close": 121.77999877929688,
+            "volume": 191638400.0
+          },
+          {
+            "date": "2026-09-22",
+            "close": 123.86000061035156,
+            "volume": 108379400.0
+          },
+          {
+            "date": "2026-09-23",
+            "close": 122.5999984741211,
+            "volume": 85621100.0
+          },
+          {
+            "date": "2026-09-24",
+            "close": 127.38999938964844,
+            "volume": 119296700.0
+          },
+          {
+            "date": "2026-09-25",
+            "close": 123.0,
+            "volume": 97728400.0
+          },
+          {
+            "date": "2026-09-28",
+            "close": 116.02999877929688,
+            "volume": 112436900.0
+          },
+          {
+            "date": "2026-09-29",
+            "close": 115.93000030517578,
+            "volume": 88744500.0
+          },
+          {
+            "date": "2026-09-30",
+            "close": 120.2300033569336,
+            "volume": 94917200.0
+          },
+          {
+            "date": "2026-10-01",
+            "close": 120.0,
+            "volume": 103559800.0
+          },
+          {
+            "date": "2026-10-02",
+            "close": 119.33000183105469,
+            "volume": 95401500.0
+          },
+          {
+            "date": "2026-10-05",
+            "close": 116.19000244140625,
+            "volume": 81331800.0
+          },
+          {
+            "date": "2026-10-06",
+            "close": 112.5,
+            "volume": 101938800.0
+          },
+          {
+            "date": "2026-10-07",
+            "close": 113.12000274658203,
+            "volume": 82861900.0
+          },
+          {
+            "date": "2026-10-08",
+            "close": 107.08000183105469,
+            "volume": 120196700.0
+          },
+          {
+            "date": "2026-10-09",
+            "close": 104.69999694824219,
+            "volume": 75017800.0
+          },
+          {
+            "date": "2026-10-12",
+            "close": 101.3499984741211,
+            "volume": 74171900.0
+          },
+          {
+            "date": "2026-10-13",
+            "close": 102.80999755859375,
+            "volume": 88252000.0
+          },
+          {
+            "date": "2026-10-14",
+            "close": 98.12000274658203,
+            "volume": 104592800.0
+          },
+          {
+            "date": "2026-10-15",
+            "close": 95.37000274658203,
+            "volume": 147157700.0
+          },
+          {
+            "date": "2026-10-16",
+            "close": 89.8499984741211,
+            "volume": 123003100.0
+          },
+          {
+            "date": "2026-10-19",
+            "close": 92.02999877929688,
+            "volume": 101608800.0
+          },
+          {
+            "date": "2026-10-20",
+            "close": 91.69000244140625,
+            "volume": 84058600.0
+          },
+          {
+            "date": "2026-10-21",
+            "close": 92.95999908447266,
+            "volume": 75566800.0
+          },
+          {
+            "date": "2026-10-22",
+            "close": 85.48999786376953,
+            "volume": 134128100.0
+          },
+          {
+            "date": "2026-10-23",
+            "close": 86.95999908447266,
+            "volume": 72093700.0
+          },
+          {
+            "date": "2026-10-26",
+            "close": 90.47000122070312,
+            "volume": 98744200.0
+          },
+          {
+            "date": "2026-10-27",
+            "close": 93.73999786376953,
+            "volume": 90523300.0
+          },
+          {
+            "date": "2026-10-28",
+            "close": 95.52999877929688,
+            "volume": 82592400.0
+          },
+          {
+            "date": "2026-10-29",
+            "close": 92.06999969482422,
+            "volume": 134168700.0
+          },
+          {
+            "date": "2026-10-30",
+            "close": 65.76000213623047,
+            "volume": 455599400.0
+          },
+          {
+            "date": "2026-11-02",
+            "close": 59.970001220703125,
+            "volume": 230689500.0
+          },
+          {
+            "date": "2026-11-03",
+            "close": 60.54999923706055,
+            "volume": 149052100.0
+          },
+          {
+            "date": "2026-11-04",
+            "close": 58.27000045776367,
+            "volume": 189308900.0
+          },
+          {
+            "date": "2026-11-05",
+            "close": 52.25,
+            "volume": 270291000.0
+          },
+          {
+            "date": "2026-11-06",
+            "close": 56.279998779296875,
+            "volume": 174382300.0
+          },
+          {
+            "date": "2026-11-09",
+            "close": 59.369998931884766,
+            "volume": 147250200.0
+          },
+          {
+            "date": "2026-11-10",
+            "close": 58.130001068115234,
+            "volume": 100978200.0
+          },
+          {
+            "date": "2026-11-11",
+            "close": 62.5,
+            "volume": 133190900.0
+          },
+          {
+            "date": "2026-11-12",
+            "close": 61.20000076293945,
+            "volume": 80687500.0
+          },
+          {
+            "date": "2026-11-13",
+            "close": 59.65999984741211,
+            "volume": 102574300.0
+          },
+          {
+            "date": "2026-11-16",
+            "close": 55.470001220703125,
+            "volume": 103100900.0
+          }
+        ],
+        "checked_at": "2026-11-17T11:43:13.622957+00:00",
+        "sma20": 71.9159999847412,
+        "sma50": 94.16680023193359,
+        "rsi_14": 29.87,
+        "volume_ratio20": 0.709,
+        "above_sma20": false,
+        "above_sma50": false,
+        "relative_strength_20d_pct": -37.57,
+        "relative_strength_benchmark": "SPY",
+        "rsi_as_of": "2026-11-16",
+        "sma20_as_of": "2026-11-16",
+        "sma50_as_of": "2026-11-16",
+        "volume_as_of": "2026-11-16"
+      },
+      "price_quality": "refreshed",
+      "valuation": {
+        "status": "partial",
+        "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
+        "market_cap_usd": 294823050000,
+        "ps": 5.58,
+        "pe": null,
+        "fcf_yield_pct": -1.68,
+        "share_date": "2026-10-23",
+        "price_date": "2026-11-16",
+        "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)",
+        "periods_aligned": true
+      },
+      "technical": {
+        "status": "ok",
+        "bars": 127,
+        "date": "2026-11-16",
+        "sma20": 71.9159999847412,
+        "sma50": 94.16680023193359,
+        "rsi_14": 29.87,
+        "volume_ratio20": 0.709,
+        "above_sma20": false,
+        "above_sma50": false,
+        "relative_strength_20d_pct": -37.57,
+        "relative_strength_benchmark": "SPY",
+        "method": "SMA20/SMA50 and simple RSI14 from daily bars; 20-session relative performance versus SPY on common dates"
+      },
+      "analyst_targets": {
+        "status": "unavailable",
+        "reason": "no validated point-in-time analyst_consensus.csv row"
+      },
+      "entry_trigger": null,
+      "corporate_events": [],
+      "investment_risk_flags": {
+        "flags": [
+          "event_feed_missing"
+        ]
+      },
+      "investment_decision": {
+        "strategy_version": "balanced-1.3.4-integrity",
+        "signal": "WATCH",
+        "buy_eligible": false,
+        "decision_stage": "data_gate",
+        "decision_trace": [
+          {
+            "stage": "data",
+            "check": "price_refreshed",
             "actual": "refreshed",
             "required": "refreshed",
             "passed": true,
             "reason": null
           },
           {
-            "stage": "consensus",
-            "check": "analyst_targets",
-            "actual": "unavailable",
-            "required": "documented",
+            "stage": "data",
+            "check": "fundamentals_refreshed",
+            "actual": "cached",
+            "required": "refreshed",
             "passed": false,
-            "reason": "analyst_consensus_missing"
+            "reason": "fundamentals_not_refreshed"
           }
         ],
         "reasons": [
-          "analyst_consensus_missing"
+          "fundamentals_not_refreshed"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -7206,7 +7193,7 @@
         },
         "period_mismatch_flags": [],
         "filed": "2026-01-29",
-        "as_of": "2026-11-17T11:44:01.187674+00:00",
+        "as_of": "2026-11-17T11:51:38.492713+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1326801"
       },
       "fundamentals_quality": "refreshed",
@@ -8786,10 +8773,10 @@
         },
         "period_mismatch_flags": [],
         "filed": "2026-07-29",
-        "as_of": "2026-11-16T15:24:25.405792+00:00",
+        "as_of": "2026-11-17T11:51:41.836078+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=789019"
       },
-      "fundamentals_quality": "cached",
+      "fundamentals_quality": "refreshed",
       "price": {
         "close_usd": 517.99,
         "date": "2026-11-16",
@@ -9492,7 +9479,7 @@
         "strategy_version": "balanced-1.3.4-integrity",
         "signal": "WATCH",
         "buy_eligible": false,
-        "decision_stage": "data_gate",
+        "decision_stage": "analyst_consensus",
         "decision_trace": [
           {
             "stage": "data",
@@ -9505,14 +9492,22 @@
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
-            "actual": "cached",
+            "actual": "refreshed",
             "required": "refreshed",
+            "passed": true,
+            "reason": null
+          },
+          {
+            "stage": "consensus",
+            "check": "analyst_targets",
+            "actual": "unavailable",
+            "required": "documented",
             "passed": false,
-            "reason": "fundamentals_not_refreshed"
+            "reason": "analyst_consensus_missing"
           }
         ],
         "reasons": [
-          "fundamentals_not_refreshed"
+          "analyst_consensus_missing"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -11793,7 +11788,7 @@
             "volume": 3249700.0
           }
         ],
-        "checked_at": "2026-11-17T11:30:34.572786+00:00",
+        "checked_at": "2026-11-17T11:52:00.726130+00:00",
         "sma20": 276.54449996948244,
         "sma50": 340.1042013549805,
         "rsi_14": 33.93,
@@ -11998,10 +11993,10 @@
         },
         "period_mismatch_flags": [],
         "filed": "2026-03-02",
-        "as_of": "2026-11-16T15:24:26.012285+00:00",
+        "as_of": "2026-11-17T11:51:42.618132+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1824502"
       },
-      "fundamentals_quality": "cached",
+      "fundamentals_quality": "refreshed",
       "price": {
         "close_usd": 3.74,
         "date": "2026-11-16",
@@ -12648,7 +12643,7 @@
             "volume": 34289000.0
           }
         ],
-        "checked_at": "2026-11-17T11:30:36.906649+00:00",
+        "checked_at": "2026-11-17T11:52:03.466494+00:00",
         "sma20": 4.193000018596649,
         "sma50": 4.713600001335144,
         "rsi_14": 38.12,
@@ -12704,7 +12699,7 @@
         "strategy_version": "balanced-1.3.4-integrity",
         "signal": "WATCH",
         "buy_eligible": false,
-        "decision_stage": "data_gate",
+        "decision_stage": "analyst_consensus",
         "decision_trace": [
           {
             "stage": "data",
@@ -12717,14 +12712,22 @@
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
-            "actual": "cached",
+            "actual": "refreshed",
             "required": "refreshed",
+            "passed": true,
+            "reason": null
+          },
+          {
+            "stage": "consensus",
+            "check": "analyst_targets",
+            "actual": "unavailable",
+            "required": "documented",
             "passed": false,
-            "reason": "fundamentals_not_refreshed"
+            "reason": "analyst_consensus_missing"
           }
         ],
         "reasons": [
-          "fundamentals_not_refreshed"
+          "analyst_consensus_missing"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -12778,10 +12781,10 @@
         },
         "period_mismatch_flags": [],
         "filed": "2026-06-24",
-        "as_of": "2026-11-16T15:24:26.854797+00:00",
+        "as_of": "2026-11-17T11:51:43.205877+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1577526"
       },
-      "fundamentals_quality": "cached",
+      "fundamentals_quality": "refreshed",
       "price": {
         "close_usd": 10.68,
         "date": "2026-11-16",
@@ -13428,7 +13431,7 @@
             "volume": 3968700.0
           }
         ],
-        "checked_at": "2026-11-17T11:30:37.491307+00:00",
+        "checked_at": "2026-11-17T11:52:04.159666+00:00",
         "sma20": 11.905999946594239,
         "sma50": 11.361999950408936,
         "rsi_14": 38.65,
@@ -13484,7 +13487,7 @@
         "strategy_version": "balanced-1.3.4-integrity",
         "signal": "WATCH",
         "buy_eligible": false,
-        "decision_stage": "data_gate",
+        "decision_stage": "analyst_consensus",
         "decision_trace": [
           {
             "stage": "data",
@@ -13497,14 +13500,22 @@
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
-            "actual": "cached",
+            "actual": "refreshed",
             "required": "refreshed",
+            "passed": true,
+            "reason": null
+          },
+          {
+            "stage": "consensus",
+            "check": "analyst_targets",
+            "actual": "unavailable",
+            "required": "documented",
             "passed": false,
-            "reason": "fundamentals_not_refreshed"
+            "reason": "analyst_consensus_missing"
           }
         ],
         "reasons": [
-          "fundamentals_not_refreshed"
+          "analyst_consensus_missing"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -13558,10 +13569,10 @@
         },
         "period_mismatch_flags": [],
         "filed": "2026-02-20",
-        "as_of": "2026-11-16T15:24:27.312952+00:00",
+        "as_of": "2026-11-17T11:51:43.789339+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1736297"
       },
-      "fundamentals_quality": "cached",
+      "fundamentals_quality": "refreshed",
       "price": {
         "close_usd": 202.34,
         "date": "2026-11-16",
@@ -14208,7 +14219,7 @@
             "volume": 4610000.0
           }
         ],
-        "checked_at": "2026-11-17T11:30:37.983212+00:00",
+        "checked_at": "2026-11-17T11:52:05.002960+00:00",
         "sma20": 242.7515007019043,
         "sma50": 292.10459899902344,
         "rsi_14": 35.81,
@@ -14264,7 +14275,7 @@
         "strategy_version": "balanced-1.3.4-integrity",
         "signal": "WATCH",
         "buy_eligible": false,
-        "decision_stage": "data_gate",
+        "decision_stage": "analyst_consensus",
         "decision_trace": [
           {
             "stage": "data",
@@ -14277,14 +14288,22 @@
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
-            "actual": "cached",
+            "actual": "refreshed",
             "required": "refreshed",
+            "passed": true,
+            "reason": null
+          },
+          {
+            "stage": "consensus",
+            "check": "analyst_targets",
+            "actual": "unavailable",
+            "required": "documented",
             "passed": false,
-            "reason": "fundamentals_not_refreshed"
+            "reason": "analyst_consensus_missing"
           }
         ],
         "reasons": [
-          "fundamentals_not_refreshed"
+          "analyst_consensus_missing"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -14338,10 +14357,10 @@
         },
         "period_mismatch_flags": [],
         "filed": "2026-02-04",
-        "as_of": "2026-11-17T11:27:45.952893+00:00",
+        "as_of": "2026-11-17T11:51:45.210151+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=2488"
       },
-      "fundamentals_quality": "cached",
+      "fundamentals_quality": "refreshed",
       "price": {
         "close_usd": 504.28,
         "date": "2026-11-16",
@@ -15002,7 +15021,7 @@
         "sma50_as_of": "2026-11-16",
         "volume_as_of": "2026-11-16"
       },
-      "price_quality": "refreshed",
+      "price_quality": "cached",
       "valuation": {
         "status": "partial",
         "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
@@ -15049,22 +15068,22 @@
           {
             "stage": "data",
             "check": "price_refreshed",
-            "actual": "refreshed",
+            "actual": "cached",
             "required": "refreshed",
-            "passed": true,
-            "reason": null
+            "passed": false,
+            "reason": "price_not_refreshed"
           },
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
-            "actual": "cached",
+            "actual": "refreshed",
             "required": "refreshed",
-            "passed": false,
-            "reason": "fundamentals_not_refreshed"
+            "passed": true,
+            "reason": null
           }
         ],
         "reasons": [
-          "fundamentals_not_refreshed"
+          "price_not_refreshed"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -15117,10 +15136,10 @@
           "annual_flow_periods_not_aligned"
         ],
         "filed": "2026-02-06",
-        "as_of": "2026-11-17T11:27:46.562435+00:00",
+        "as_of": "2026-11-17T11:51:45.828030+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1018724"
       },
-      "fundamentals_quality": "cached",
+      "fundamentals_quality": "refreshed",
       "price": {
         "close_usd": 257.75,
         "date": "2026-11-16",
@@ -15781,7 +15800,7 @@
         "sma50_as_of": "2026-11-16",
         "volume_as_of": "2026-11-16"
       },
-      "price_quality": "refreshed",
+      "price_quality": "cached",
       "valuation": {
         "status": "partial",
         "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
@@ -15828,22 +15847,22 @@
           {
             "stage": "data",
             "check": "price_refreshed",
-            "actual": "refreshed",
+            "actual": "cached",
             "required": "refreshed",
-            "passed": true,
-            "reason": null
+            "passed": false,
+            "reason": "price_not_refreshed"
           },
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
-            "actual": "cached",
+            "actual": "refreshed",
             "required": "refreshed",
-            "passed": false,
-            "reason": "fundamentals_not_refreshed"
+            "passed": true,
+            "reason": null
           }
         ],
         "reasons": [
-          "fundamentals_not_refreshed"
+          "price_not_refreshed"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -16561,7 +16580,7 @@
         "sma50_as_of": "2026-11-16",
         "volume_as_of": "2026-11-16"
       },
-      "price_quality": "refreshed",
+      "price_quality": "cached",
       "valuation": {
         "status": "partial",
         "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
@@ -16608,10 +16627,10 @@
           {
             "stage": "data",
             "check": "price_refreshed",
-            "actual": "refreshed",
+            "actual": "cached",
             "required": "refreshed",
-            "passed": true,
-            "reason": null
+            "passed": false,
+            "reason": "price_not_refreshed"
           },
           {
             "stage": "data",
@@ -16623,6 +16642,7 @@
           }
         ],
         "reasons": [
+          "price_not_refreshed",
           "fundamentals_not_refreshed"
         ],
         "fundamental_score": null,
@@ -19013,10 +19033,10 @@
         },
         "period_mismatch_flags": [],
         "filed": "2026-03-02",
-        "as_of": "2026-11-17T11:27:47.940753+00:00",
+        "as_of": "2026-11-17T11:51:47.277604+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1836981"
       },
-      "fundamentals_quality": "cached",
+      "fundamentals_quality": "refreshed",
       "price": {
         "close_usd": 1.82,
         "date": "2026-11-16",
@@ -19719,7 +19739,7 @@
         "strategy_version": "balanced-1.3.4-integrity",
         "signal": "WATCH",
         "buy_eligible": false,
-        "decision_stage": "data_gate",
+        "decision_stage": "analyst_consensus",
         "decision_trace": [
           {
             "stage": "data",
@@ -19732,14 +19752,22 @@
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
-            "actual": "cached",
+            "actual": "refreshed",
             "required": "refreshed",
+            "passed": true,
+            "reason": null
+          },
+          {
+            "stage": "consensus",
+            "check": "analyst_targets",
+            "actual": "unavailable",
+            "required": "documented",
             "passed": false,
-            "reason": "fundamentals_not_refreshed"
+            "reason": "analyst_consensus_missing"
           }
         ],
         "reasons": [
-          "fundamentals_not_refreshed"
+          "analyst_consensus_missing"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -20572,10 +20600,10 @@
           "annual_flow_periods_not_aligned"
         ],
         "filed": "2026-02-27",
-        "as_of": "2026-11-17T11:27:48.746659+00:00",
+        "as_of": "2026-11-17T11:51:47.919882+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1030894"
       },
-      "fundamentals_quality": "cached",
+      "fundamentals_quality": "refreshed",
       "price": {
         "close_usd": 238.48,
         "date": "2026-11-16",
@@ -21278,7 +21306,7 @@
         "strategy_version": "balanced-1.3.4-integrity",
         "signal": "WATCH",
         "buy_eligible": false,
-        "decision_stage": "data_gate",
+        "decision_stage": "analyst_consensus",
         "decision_trace": [
           {
             "stage": "data",
@@ -21291,14 +21319,22 @@
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
-            "actual": "cached",
+            "actual": "refreshed",
             "required": "refreshed",
+            "passed": true,
+            "reason": null
+          },
+          {
+            "stage": "consensus",
+            "check": "analyst_targets",
+            "actual": "unavailable",
+            "required": "documented",
             "passed": false,
-            "reason": "fundamentals_not_refreshed"
+            "reason": "analyst_consensus_missing"
           }
         ],
         "reasons": [
-          "fundamentals_not_refreshed"
+          "analyst_consensus_missing"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -22135,7 +22171,7 @@
         "as_of": "2026-11-17T11:44:03.303313+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1807794"
       },
-      "fundamentals_quality": "refreshed",
+      "fundamentals_quality": "cached",
       "price": {
         "close_usd": 120.71,
         "date": "2026-11-16",
@@ -22838,7 +22874,7 @@
         "strategy_version": "balanced-1.3.4-integrity",
         "signal": "WATCH",
         "buy_eligible": false,
-        "decision_stage": "analyst_consensus",
+        "decision_stage": "data_gate",
         "decision_trace": [
           {
             "stage": "data",
@@ -22851,22 +22887,14 @@
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
-            "actual": "refreshed",
+            "actual": "cached",
             "required": "refreshed",
-            "passed": true,
-            "reason": null
-          },
-          {
-            "stage": "consensus",
-            "check": "analyst_targets",
-            "actual": "unavailable",
-            "required": "documented",
             "passed": false,
-            "reason": "analyst_consensus_missing"
+            "reason": "fundamentals_not_refreshed"
           }
         ],
         "reasons": [
-          "analyst_consensus_missing"
+          "fundamentals_not_refreshed"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -23703,7 +23731,7 @@
         "as_of": "2026-11-17T11:44:03.788291+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=313616"
       },
-      "fundamentals_quality": "refreshed",
+      "fundamentals_quality": "cached",
       "price": {
         "close_usd": 229.91,
         "date": "2026-11-16",
@@ -24406,7 +24434,7 @@
         "strategy_version": "balanced-1.3.4-integrity",
         "signal": "WATCH",
         "buy_eligible": false,
-        "decision_stage": "analyst_consensus",
+        "decision_stage": "data_gate",
         "decision_trace": [
           {
             "stage": "data",
@@ -24419,22 +24447,14 @@
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
-            "actual": "refreshed",
+            "actual": "cached",
             "required": "refreshed",
-            "passed": true,
-            "reason": null
-          },
-          {
-            "stage": "consensus",
-            "check": "analyst_targets",
-            "actual": "unavailable",
-            "required": "documented",
             "passed": false,
-            "reason": "analyst_consensus_missing"
+            "reason": "fundamentals_not_refreshed"
           }
         ],
         "reasons": [
-          "analyst_consensus_missing"
+          "fundamentals_not_refreshed"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -24491,7 +24511,7 @@
         "as_of": "2026-11-17T11:44:05.442202+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=32604"
       },
-      "fundamentals_quality": "refreshed",
+      "fundamentals_quality": "cached",
       "price": {
         "close_usd": 160.65,
         "date": "2026-11-16",
@@ -25194,7 +25214,7 @@
         "strategy_version": "balanced-1.3.4-integrity",
         "signal": "WATCH",
         "buy_eligible": false,
-        "decision_stage": "analyst_consensus",
+        "decision_stage": "data_gate",
         "decision_trace": [
           {
             "stage": "data",
@@ -25207,22 +25227,14 @@
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
-            "actual": "refreshed",
+            "actual": "cached",
             "required": "refreshed",
-            "passed": true,
-            "reason": null
-          },
-          {
-            "stage": "consensus",
-            "check": "analyst_targets",
-            "actual": "unavailable",
-            "required": "documented",
             "passed": false,
-            "reason": "analyst_consensus_missing"
+            "reason": "fundamentals_not_refreshed"
           }
         ],
         "reasons": [
-          "analyst_consensus_missing"
+          "fundamentals_not_refreshed"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -26020,7 +26032,7 @@
         "as_of": "2026-11-17T11:44:06.477679+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=24741"
       },
-      "fundamentals_quality": "refreshed",
+      "fundamentals_quality": "cached",
       "price": {
         "close_usd": 106.17,
         "date": "2026-11-16",
@@ -26723,7 +26735,7 @@
         "strategy_version": "balanced-1.3.4-integrity",
         "signal": "WATCH",
         "buy_eligible": false,
-        "decision_stage": "analyst_consensus",
+        "decision_stage": "data_gate",
         "decision_trace": [
           {
             "stage": "data",
@@ -26736,22 +26748,14 @@
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
-            "actual": "refreshed",
+            "actual": "cached",
             "required": "refreshed",
-            "passed": true,
-            "reason": null
-          },
-          {
-            "stage": "consensus",
-            "check": "analyst_targets",
-            "actual": "unavailable",
-            "required": "documented",
             "passed": false,
-            "reason": "analyst_consensus_missing"
+            "reason": "fundamentals_not_refreshed"
           }
         ],
         "reasons": [
-          "analyst_consensus_missing"
+          "fundamentals_not_refreshed"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -26807,7 +26811,7 @@
         "as_of": "2026-11-17T11:44:08.424867+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=48898"
       },
-      "fundamentals_quality": "refreshed",
+      "fundamentals_quality": "cached",
       "price": {
         "close_usd": 424.43,
         "date": "2026-11-16",
@@ -27510,7 +27514,7 @@
         "strategy_version": "balanced-1.3.4-integrity",
         "signal": "WATCH",
         "buy_eligible": false,
-        "decision_stage": "analyst_consensus",
+        "decision_stage": "data_gate",
         "decision_trace": [
           {
             "stage": "data",
@@ -27523,22 +27527,14 @@
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
-            "actual": "refreshed",
+            "actual": "cached",
             "required": "refreshed",
-            "passed": true,
-            "reason": null
-          },
-          {
-            "stage": "consensus",
-            "check": "analyst_targets",
-            "actual": "unavailable",
-            "required": "documented",
             "passed": false,
-            "reason": "analyst_consensus_missing"
+            "reason": "fundamentals_not_refreshed"
           }
         ],
         "reasons": [
-          "analyst_consensus_missing"
+          "fundamentals_not_refreshed"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -27669,7 +27665,7 @@
         "as_of": "2026-11-17T11:44:09.302934+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1035267"
       },
-      "fundamentals_quality": "refreshed",
+      "fundamentals_quality": "cached",
       "price": {
         "close_usd": 437.75,
         "date": "2026-11-16",
@@ -28372,7 +28368,7 @@
         "strategy_version": "balanced-1.3.4-integrity",
         "signal": "WATCH",
         "buy_eligible": false,
-        "decision_stage": "analyst_consensus",
+        "decision_stage": "data_gate",
         "decision_trace": [
           {
             "stage": "data",
@@ -28385,22 +28381,14 @@
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
-            "actual": "refreshed",
+            "actual": "cached",
             "required": "refreshed",
-            "passed": true,
-            "reason": null
-          },
-          {
-            "stage": "consensus",
-            "check": "analyst_targets",
-            "actual": "unavailable",
-            "required": "documented",
             "passed": false,
-            "reason": "analyst_consensus_missing"
+            "reason": "fundamentals_not_refreshed"
           }
         ],
         "reasons": [
-          "analyst_consensus_missing"
+          "fundamentals_not_refreshed"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -28457,7 +28445,7 @@
         "as_of": "2026-11-17T11:44:09.789469+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=898293"
       },
-      "fundamentals_quality": "refreshed",
+      "fundamentals_quality": "cached",
       "price": {
         "close_usd": 246.76,
         "date": "2026-11-16",
@@ -29160,7 +29148,7 @@
         "strategy_version": "balanced-1.3.4-integrity",
         "signal": "WATCH",
         "buy_eligible": false,
-        "decision_stage": "analyst_consensus",
+        "decision_stage": "data_gate",
         "decision_trace": [
           {
             "stage": "data",
@@ -29173,22 +29161,14 @@
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
-            "actual": "refreshed",
+            "actual": "cached",
             "required": "refreshed",
-            "passed": true,
-            "reason": null
-          },
-          {
-            "stage": "consensus",
-            "check": "analyst_targets",
-            "actual": "unavailable",
-            "required": "documented",
             "passed": false,
-            "reason": "analyst_consensus_missing"
+            "reason": "fundamentals_not_refreshed"
           }
         ],
         "reasons": [
-          "analyst_consensus_missing"
+          "fundamentals_not_refreshed"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -29245,7 +29225,7 @@
         "as_of": "2026-11-17T11:44:12.021093+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1819848"
       },
-      "fundamentals_quality": "refreshed",
+      "fundamentals_quality": "cached",
       "price": {
         "close_usd": 4.72,
         "date": "2026-11-16",
@@ -29948,7 +29928,7 @@
         "strategy_version": "balanced-1.3.4-integrity",
         "signal": "WATCH",
         "buy_eligible": false,
-        "decision_stage": "analyst_consensus",
+        "decision_stage": "data_gate",
         "decision_trace": [
           {
             "stage": "data",
@@ -29961,22 +29941,14 @@
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
-            "actual": "refreshed",
+            "actual": "cached",
             "required": "refreshed",
-            "passed": true,
-            "reason": null
-          },
-          {
-            "stage": "consensus",
-            "check": "analyst_targets",
-            "actual": "unavailable",
-            "required": "documented",
             "passed": false,
-            "reason": "analyst_consensus_missing"
+            "reason": "fundamentals_not_refreshed"
           }
         ],
         "reasons": [
-          "analyst_consensus_missing"
+          "fundamentals_not_refreshed"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -30033,7 +30005,7 @@
         "as_of": "2026-11-17T11:44:13.065577+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=319201"
       },
-      "fundamentals_quality": "refreshed",
+      "fundamentals_quality": "cached",
       "price": {
         "close_usd": 143.96,
         "date": "2026-11-16",
@@ -30736,7 +30708,7 @@
         "strategy_version": "balanced-1.3.4-integrity",
         "signal": "WATCH",
         "buy_eligible": false,
-        "decision_stage": "analyst_consensus",
+        "decision_stage": "data_gate",
         "decision_trace": [
           {
             "stage": "data",
@@ -30749,22 +30721,14 @@
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
-            "actual": "refreshed",
+            "actual": "cached",
             "required": "refreshed",
-            "passed": true,
-            "reason": null
-          },
-          {
-            "stage": "consensus",
-            "check": "analyst_targets",
-            "actual": "unavailable",
-            "required": "documented",
             "passed": false,
-            "reason": "analyst_consensus_missing"
+            "reason": "fundamentals_not_refreshed"
           }
         ],
         "reasons": [
-          "analyst_consensus_missing"
+          "fundamentals_not_refreshed"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -30820,7 +30784,7 @@
         "as_of": "2026-11-17T11:44:14.269776+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1069258"
       },
-      "fundamentals_quality": "refreshed",
+      "fundamentals_quality": "cached",
       "price": {
         "close_usd": 31.66,
         "date": "2026-11-16",
@@ -31523,7 +31487,7 @@
         "strategy_version": "balanced-1.3.4-integrity",
         "signal": "WATCH",
         "buy_eligible": false,
-        "decision_stage": "analyst_consensus",
+        "decision_stage": "data_gate",
         "decision_trace": [
           {
             "stage": "data",
@@ -31536,22 +31500,14 @@
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
-            "actual": "refreshed",
+            "actual": "cached",
             "required": "refreshed",
-            "passed": true,
-            "reason": null
-          },
-          {
-            "stage": "consensus",
-            "check": "analyst_targets",
-            "actual": "unavailable",
-            "required": "documented",
             "passed": false,
-            "reason": "analyst_consensus_missing"
+            "reason": "fundamentals_not_refreshed"
           }
         ],
         "reasons": [
-          "analyst_consensus_missing"
+          "fundamentals_not_refreshed"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -32280,7 +32236,7 @@
         "as_of": "2026-11-17T11:44:15.477388+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1633978"
       },
-      "fundamentals_quality": "refreshed",
+      "fundamentals_quality": "cached",
       "price": {
         "close_usd": 546.0,
         "date": "2026-11-16",
@@ -32983,7 +32939,7 @@
         "strategy_version": "balanced-1.3.4-integrity",
         "signal": "WATCH",
         "buy_eligible": false,
-        "decision_stage": "analyst_consensus",
+        "decision_stage": "data_gate",
         "decision_trace": [
           {
             "stage": "data",
@@ -32996,22 +32952,14 @@
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
-            "actual": "refreshed",
+            "actual": "cached",
             "required": "refreshed",
-            "passed": true,
-            "reason": null
-          },
-          {
-            "stage": "consensus",
-            "check": "analyst_targets",
-            "actual": "unavailable",
-            "required": "documented",
             "passed": false,
-            "reason": "analyst_consensus_missing"
+            "reason": "fundamentals_not_refreshed"
           }
         ],
         "reasons": [
-          "analyst_consensus_missing"
+          "fundamentals_not_refreshed"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -33064,10 +33012,10 @@
           "annual_flow_periods_not_aligned"
         ],
         "filed": "2026-08-07",
-        "as_of": "2026-11-16T15:24:23.631563+00:00",
+        "as_of": "2026-11-17T11:51:40.120213+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=707549"
       },
-      "fundamentals_quality": "cached",
+      "fundamentals_quality": "refreshed",
       "price": {
         "close_usd": 210.83,
         "date": "2026-11-16",
@@ -33770,7 +33718,7 @@
         "strategy_version": "balanced-1.3.4-integrity",
         "signal": "WATCH",
         "buy_eligible": false,
-        "decision_stage": "data_gate",
+        "decision_stage": "analyst_consensus",
         "decision_trace": [
           {
             "stage": "data",
@@ -33783,14 +33731,22 @@
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
-            "actual": "cached",
+            "actual": "refreshed",
             "required": "refreshed",
+            "passed": true,
+            "reason": null
+          },
+          {
+            "stage": "consensus",
+            "check": "analyst_targets",
+            "actual": "unavailable",
+            "required": "documented",
             "passed": false,
-            "reason": "fundamentals_not_refreshed"
+            "reason": "analyst_consensus_missing"
           }
         ],
         "reasons": [
-          "fundamentals_not_refreshed"
+          "analyst_consensus_missing"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -33844,10 +33800,10 @@
         },
         "period_mismatch_flags": [],
         "filed": "2026-02-12",
-        "as_of": "2026-11-16T15:24:24.246090+00:00",
+        "as_of": "2026-11-17T11:51:40.687826+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1910139"
       },
-      "fundamentals_quality": "cached",
+      "fundamentals_quality": "refreshed",
       "price": {
         "close_usd": 5.26,
         "date": "2026-11-16",
@@ -34550,7 +34506,7 @@
         "strategy_version": "balanced-1.3.4-integrity",
         "signal": "WATCH",
         "buy_eligible": false,
-        "decision_stage": "data_gate",
+        "decision_stage": "analyst_consensus",
         "decision_trace": [
           {
             "stage": "data",
@@ -34563,14 +34519,22 @@
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
-            "actual": "cached",
+            "actual": "refreshed",
             "required": "refreshed",
+            "passed": true,
+            "reason": null
+          },
+          {
+            "stage": "consensus",
+            "check": "analyst_targets",
+            "actual": "unavailable",
+            "required": "documented",
             "passed": false,
-            "reason": "fundamentals_not_refreshed"
+            "reason": "analyst_consensus_missing"
           }
         ],
         "reasons": [
-          "fundamentals_not_refreshed"
+          "analyst_consensus_missing"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -34624,10 +34588,10 @@
         },
         "period_mismatch_flags": [],
         "filed": "2026-02-27",
-        "as_of": "2026-11-16T15:24:24.821898+00:00",
+        "as_of": "2026-11-17T11:51:41.220749+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1280452"
       },
-      "fundamentals_quality": "cached",
+      "fundamentals_quality": "refreshed",
       "price": {
         "close_usd": 1314.0,
         "date": "2026-11-16",
@@ -35330,7 +35294,7 @@
         "strategy_version": "balanced-1.3.4-integrity",
         "signal": "WATCH",
         "buy_eligible": false,
-        "decision_stage": "data_gate",
+        "decision_stage": "analyst_consensus",
         "decision_trace": [
           {
             "stage": "data",
@@ -35343,14 +35307,22 @@
           {
             "stage": "data",
             "check": "fundamentals_refreshed",
-            "actual": "cached",
+            "actual": "refreshed",
             "required": "refreshed",
+            "passed": true,
+            "reason": null
+          },
+          {
+            "stage": "consensus",
+            "check": "analyst_targets",
+            "actual": "unavailable",
+            "required": "documented",
             "passed": false,
-            "reason": "fundamentals_not_refreshed"
+            "reason": "analyst_consensus_missing"
           }
         ],
         "reasons": [
-          "fundamentals_not_refreshed"
+          "analyst_consensus_missing"
         ],
         "fundamental_score": null,
         "entry_score": null
@@ -38524,7 +38496,7 @@
         },
         "period_mismatch_flags": [],
         "filed": "2026-03-25",
-        "as_of": "2026-11-17T11:44:01.999515+00:00",
+        "as_of": "2026-11-17T11:51:39.042334+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1734722"
       },
       "fundamentals_quality": "refreshed",
@@ -40742,7 +40714,7 @@
             "volume": 17615600.0
           }
         ],
-        "checked_at": "2026-11-17T11:28:06.098408+00:00",
+        "checked_at": "2026-11-17T11:51:51.898076+00:00",
         "sma20": 180.6680000305176,
         "sma50": 184.51059936523438,
         "rsi_14": 34.89,
@@ -40756,7 +40728,7 @@
         "sma50_as_of": "2026-11-16",
         "volume_as_of": "2026-11-16"
       },
-      "price_quality": "cached",
+      "price_quality": "refreshed",
       "valuation": {
         "status": "partial",
         "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
@@ -40803,10 +40775,10 @@
           {
             "stage": "data",
             "check": "price_refreshed",
-            "actual": "cached",
+            "actual": "refreshed",
             "required": "refreshed",
-            "passed": false,
-            "reason": "price_not_refreshed"
+            "passed": true,
+            "reason": null
           },
           {
             "stage": "data",
@@ -40818,7 +40790,6 @@
           }
         ],
         "reasons": [
-          "price_not_refreshed",
           "fundamentals_not_refreshed"
         ],
         "fundamental_score": null,
@@ -41523,7 +41494,7 @@
             "volume": 1317100.0
           }
         ],
-        "checked_at": "2026-11-17T11:28:06.622310+00:00",
+        "checked_at": "2026-11-17T11:51:52.568694+00:00",
         "sma20": 589.3390014648437,
         "sma50": 627.0521997070313,
         "rsi_14": 46.64,
@@ -41537,7 +41508,7 @@
         "sma50_as_of": "2026-11-16",
         "volume_as_of": "2026-11-16"
       },
-      "price_quality": "cached",
+      "price_quality": "refreshed",
       "valuation": {
         "status": "partial",
         "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
@@ -41584,10 +41555,10 @@
           {
             "stage": "data",
             "check": "price_refreshed",
-            "actual": "cached",
+            "actual": "refreshed",
             "required": "refreshed",
-            "passed": false,
-            "reason": "price_not_refreshed"
+            "passed": true,
+            "reason": null
           },
           {
             "stage": "data",
@@ -41599,7 +41570,6 @@
           }
         ],
         "reasons": [
-          "price_not_refreshed",
           "fundamentals_not_refreshed"
         ],
         "fundamental_score": null,
@@ -42303,7 +42273,7 @@
             "volume": 11831200.0
           }
         ],
-        "checked_at": "2026-11-17T11:28:07.136990+00:00",
+        "checked_at": "2026-11-17T11:51:53.265748+00:00",
         "sma20": 173.04550170898438,
         "sma50": 178.72839965820313,
         "rsi_14": 45.97,
@@ -42317,7 +42287,7 @@
         "sma50_as_of": "2026-11-16",
         "volume_as_of": "2026-11-16"
       },
-      "price_quality": "cached",
+      "price_quality": "refreshed",
       "valuation": {
         "status": "partial",
         "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
@@ -42364,10 +42334,10 @@
           {
             "stage": "data",
             "check": "price_refreshed",
-            "actual": "cached",
+            "actual": "refreshed",
             "required": "refreshed",
-            "passed": false,
-            "reason": "price_not_refreshed"
+            "passed": true,
+            "reason": null
           },
           {
             "stage": "data",
@@ -42379,7 +42349,6 @@
           }
         ],
         "reasons": [
-          "price_not_refreshed",
           "fundamentals_not_refreshed"
         ],
         "fundamental_score": null,
@@ -43083,7 +43052,7 @@
             "volume": 9535700.0
           }
         ],
-        "checked_at": "2026-11-17T11:28:07.635905+00:00",
+        "checked_at": "2026-11-17T11:51:54.101423+00:00",
         "sma20": 4.318999969959259,
         "sma50": 5.6429999685287475,
         "rsi_14": 33.14,
@@ -43097,7 +43066,7 @@
         "sma50_as_of": "2026-11-16",
         "volume_as_of": "2026-11-16"
       },
-      "price_quality": "cached",
+      "price_quality": "refreshed",
       "valuation": {
         "status": "partial",
         "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
@@ -43144,10 +43113,10 @@
           {
             "stage": "data",
             "check": "price_refreshed",
-            "actual": "cached",
+            "actual": "refreshed",
             "required": "refreshed",
-            "passed": false,
-            "reason": "price_not_refreshed"
+            "passed": true,
+            "reason": null
           },
           {
             "stage": "data",
@@ -43159,7 +43128,6 @@
           }
         ],
         "reasons": [
-          "price_not_refreshed",
           "fundamentals_not_refreshed"
         ],
         "fundamental_score": null,
@@ -43864,7 +43832,7 @@
             "volume": 1075700.0
           }
         ],
-        "checked_at": "2026-11-17T11:30:30.065872+00:00",
+        "checked_at": "2026-11-17T11:51:54.966766+00:00",
         "sma20": 419.4179992675781,
         "sma50": 425.8732006835937,
         "rsi_14": 36.53,
@@ -44644,7 +44612,7 @@
             "volume": 4869600.0
           }
         ],
-        "checked_at": "2026-11-17T11:30:30.611334+00:00",
+        "checked_at": "2026-11-17T11:51:55.653362+00:00",
         "sma20": 0.9766999959945679,
         "sma50": 1.3544799971580506,
         "rsi_14": 26.81,
@@ -45424,7 +45392,7 @@
             "volume": 4678200.0
           }
         ],
-        "checked_at": "2026-11-17T11:30:31.103207+00:00",
+        "checked_at": "2026-11-17T11:51:56.330646+00:00",
         "sma20": 2.840749990940094,
         "sma50": 3.728299994468689,
         "rsi_14": 37.82,
@@ -46166,7 +46134,7 @@
             "volume": 95700.0
           }
         ],
-        "checked_at": "2026-11-17T11:30:31.714936+00:00",
+        "checked_at": "2026-11-17T11:51:57.074576+00:00",
         "sma20": 149.97150115966798,
         "sma50": 152.26580047607422,
         "rsi_14": 45.82,
@@ -46946,7 +46914,7 @@
             "volume": 34108300.0
           }
         ],
-        "checked_at": "2026-11-17T11:30:32.194043+00:00",
+        "checked_at": "2026-11-17T11:51:57.755270+00:00",
         "sma20": 30.932500267028807,
         "sma50": 36.24579975128174,
         "rsi_14": 33.09,
@@ -47726,7 +47694,7 @@
             "volume": 2500600.0
           }
         ],
-        "checked_at": "2026-11-17T11:30:32.807397+00:00",
+        "checked_at": "2026-11-17T11:51:58.512555+00:00",
         "sma20": 305.5230026245117,
         "sma50": 323.71240173339845,
         "rsi_14": 38.15,
@@ -48505,7 +48473,7 @@
             "volume": 19800600.0
           }
         ],
-        "checked_at": "2026-11-17T11:30:33.375996+00:00",
+        "checked_at": "2026-11-17T11:51:59.418590+00:00",
         "sma20": 4.146000003814697,
         "sma50": 5.1160000133514405,
         "rsi_14": 19.56,
@@ -49287,7 +49255,7 @@
             "volume": 1716600.0
           }
         ],
-        "checked_at": "2026-11-17T11:30:34.003130+00:00",
+        "checked_at": "2026-11-17T11:52:00.073117+00:00",
         "sma20": 37.671500015258786,
         "sma50": 40.4189998626709,
         "rsi_14": 34.92,
@@ -50063,7 +50031,7 @@
             "volume": 19483600.0
           }
         ],
-        "checked_at": "2026-11-17T11:30:35.164699+00:00",
+        "checked_at": "2026-11-17T11:52:01.428461+00:00",
         "sma20": 406.51800231933595,
         "sma50": 429.00020080566406,
         "rsi_14": 38.69,
@@ -50843,7 +50811,7 @@
             "volume": 778400.0
           }
         ],
-        "checked_at": "2026-11-17T11:30:36.264169+00:00",
+        "checked_at": "2026-11-17T11:52:02.787041+00:00",
         "sma20": 351.95350189208983,
         "sma50": 360.8544006347656,
         "rsi_14": 33.14,
@@ -51089,11 +51057,6 @@
       "date": "Sun, 15 Nov 2026 03:24:27 GMT"
     },
     {
-      "title": "NVIDIA Corporation | History, GPUs, & Artificial Intelligence - Britannica",
-      "url": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1FMGstclM1R3lESkhtUUVPTDBHZktQWWMzcTFXa3VIR2FOcTJLcy1wQnlLMHo5MDRXeS10UTJudHRxNmpFX2hyWUZzX1ZTaVpBTng3VXBGT3ZGa0FrTXhHMg?oc=5",
-      "date": "Tue, 17 Nov 2026 10:47:26 GMT"
-    },
-    {
       "title": "Should AI Data Center Demand Require Action From Williams Companies Stock Investors? - Simply Wall St",
       "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNb3VuODNsR2M0MHZPSHdBb2syUV9ETmhWNEJ5Z1pvZk11U0djQ18tb0FYNHhkVlhWUWdWYmVDS0RsOGRGYm9pVzNUZktTMFRoTXdMQTdwMmV2WTFrcEJtTVNtZTduemVENXdWVEk2aUdodXJudGwxRWJFb0Y2T0NnR3Q2d0FQVG9UMzJhU3RVZWZzQ1A1bml4dFFEOWtjQm5XdzVpU0IzZ1R0V1JTNUtIRndRTmlVOVFXTmJfTzRSMjhka3ZIOEEyWUpJeDHSAdIBQVVfeXFMT3cxSmM5eTdCRDkwLXFZQVhGbHViT0FkWmRtYXpTNHB5OGlZUmhhM0IybkZ2VzdpMl9SVkhsdWlwZUpXZVRmSEFyU001QVpxWmhJbGNkX3BXQlRrUmcxTU9sV1VyV3puMGFyRWNrYWQ0WDdVcWlKdVkteEVoekxzeVNHVGduTm9CZ1B6Z2Y4ZjMteFJZbUpmbVVnNWlvUm9fcGQxM1hKeEZZMlc0TmNfVGVpMm91U2dCZ3o0X25sUkxOcVZ6Yk1Pd2pNR1pZM0ltaWVB?oc=5",
       "date": "Tue, 17 Nov 2026 05:13:35 GMT"
@@ -51122,6 +51085,11 @@
       "title": "ChronoScale Holdings, Cipher Digital, SharonAI Holdings, TeraWulf, and Everpure stocks trade down, what you need to know - StockStory",
       "url": "https://news.google.com/rss/articles/CBMiiAJBVV95cUxOelFWN2NjR1RkZUdDbDFzS3dxRlR2aVpyY3EwTld4d1B1LWpfVVhnX056VVhlbjVmZ0wxeDlpRzhrQ0NiajdzZEljaGNHLVZSUnJLMW1qTkVmSG44OWRod05wdHliZ1lJNUxlT3JRSC1vMVVGV2M2VU5QcUdkM0ZUTGlLMTV1SnZldVFBVXJvU2xYRGdPamVZbzZVLWNYckU4SjVfT1VDVlBmeUVRRldBQm8wTURFbzVScEhCWERiMjdwNzJGZkhhbFZyMzYwYmJ1REtRX3h2a1p6QVJRTXZnaUJ0cWN1MVhfWUZWLTViNC1xbWlkVzdxbEx5TmRIWHl3UHdfZjBGVVc?oc=5",
       "date": "Mon, 16 Nov 2026 16:36:27 GMT"
+    },
+    {
+      "title": "Arm and Marvell Sink 8% as AI Chip Selloff Deepens Ahead of NVIDIA Earnings; Applied Materials Drops 5% - 24/7 Wall St.",
+      "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxQNi00YzEwYTlPWjg4TnVZMTVnQW8wbmh0UVplcWFmY1pWenBNQ1MtUDJWNGVsdlBWZ3pZcXhRTnNnWmdZdUlyZnpTNlB2NldfR3RNdHp2eEVsRnNPSy0tZVRnVkVLdjZUQ3VzZ3EzZ3lUX0UxYXVmQ2pXeEI4RHpMQUpGa2RMR0x1WkJlcHY3X2tYaFVmNWpRVk1PM3NuRld6ajVtdWp2Y3dmNld0Xy05cGVPQ2stSEpNZjBEV2VWaV9ZSWFNaF9HN2VWb3lEQmZ0UmM4OTlNMVlWaUpS?oc=5",
+      "date": "Mon, 16 Nov 2026 16:02:00 GMT"
     },
     {
       "title": "Broadcom (NASDAQ:AVGO) Rides Custom AI Chip Demand. What’s Next? - Kalkine Media",
@@ -51159,6 +51127,11 @@
       "date": "Sun, 15 Nov 2026 09:48:00 GMT"
     },
     {
+      "title": "US Tightens AI Chip Export Rules as FBI Warns of Autonomous AI Hacking Tools - AI Insider",
+      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNU3hCSnVtQkFNVWRpOWxxNUhCMEJyajVCNkFUcnRrOVZOTHNNWXlMZHptUzdRZS1WQ2JYTm5ZNUZuMWNDZlBOUlhqc09QTEh0cHU4VGFpejV4TjgxYWU4Z0MxSGhUSm5hOEtoU004RDZkLVdLXzE1cGNSX29OUThtaDRKcW1rN3ZlRDBvVFcxTGdpbHVXbGtVanpJYmRYaUhqYzZiRWJtdm5PRTJDOVBET2JpMms?oc=5",
+      "date": "Tue, 17 Nov 2026 08:47:19 GMT"
+    },
+    {
       "title": "NVIDIA And 2 Other AI Infrastructure Stocks - Simply Wall St",
       "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPYml6Z3JsZzQzWUIxTXhEczRLYkYwVDRuSUFKRXFwYTEzek5KTmlmZ05vSzR5cExEdXMzWHptRnJ4Q3VVNlcxaG0zZlZTOWZnUFdhcnRLX0c1UHozUGNKWnB1Nkl5NkpTeWt3VGtIY1Jtd0FCblFhMkt6enFHQ1oyejNLMmM2dWY3WVpham9uOVRPMnFRTktVOU9HdjI5NTRfWTRPY0RrT283eVMzaDEyOGFuTTHSAboBQVVfeXFMT1FqTjlaeFVOSVJ4Z0lLNUFTNTdqUi1udXJieFA1VnR1QmV5N1pZSDNvMUtNTjFBT0RYNmR5VjJEbE1fYU1RcWY1MHAyZ0gzU3FZOVBkenRUeFdCWXVDN0tyNC1QQUpSZ0dwVXg4eUFyVE5mS0RBS3JGSU9Ucm9uM2JZRjZCcFg3bUtmcDRVbDN5Qm9DN0NKQk5Tdk5ISnVCUGJtWWNxTXRfdEpRSnlRZkZrWGJGQ3lMRWpn?oc=5",
       "date": "Sun, 15 Nov 2026 05:27:46 GMT"
@@ -51169,19 +51142,19 @@
       "date": "Sun, 15 Nov 2026 03:26:51 GMT"
     },
     {
-      "title": "US Tightens AI Chip Export Rules as FBI Warns of Autonomous AI Hacking Tools - AI Insider",
-      "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNU3hCSnVtQkFNVWRpOWxxNUhCMEJyajVCNkFUcnRrOVZOTHNNWXlMZHptUzdRZS1WQ2JYTm5ZNUZuMWNDZlBOUlhqc09QTEh0cHU4VGFpejV4TjgxYWU4Z0MxSGhUSm5hOEtoU004RDZkLVdLXzE1cGNSX29OUThtaDRKcW1rN3ZlRDBvVFcxTGdpbHVXbGtVanpJYmRYaUhqYzZiRWJtdm5PRTJDOVBET2JpMms?oc=5",
-      "date": "Tue, 17 Nov 2026 08:47:19 GMT"
-    },
-    {
       "title": "Broadcom Stock Jumps as Nvidia’s Leadership Crisis Raises a Billion-Dollar Opportunity for Its AI Chip Business - Yahoo Finance",
       "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNeUJVX1BlLVlJSUpFY3FqazRzRHJxNlU1S2tsZ0xaWXhxZWRFYjNqY0g1REIyWTdmaUo1MWllRkFNN2FVTWpPeGxDVjBaYWZVSXdhMUlvS2FwQVBVWEJfODVFZWhBT1ZsSmxIbmtMU3NubVhoSmRvVEJRWm1OMGY1R3BLQW9mX1pKaDZvdnBoQ1ZneDF4bjRibW8xWWhfZ3cta0Q1SzlB?oc=5",
       "date": "Sun, 15 Nov 2026 14:25:25 GMT"
     },
     {
-      "title": "Arm and Marvell Sink 8% as AI Chip Selloff Deepens Ahead of NVIDIA Earnings; Applied Materials Drops 5% - 24/7 Wall St.",
-      "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxQNi00YzEwYTlPWjg4TnVZMTVnQW8wbmh0UVplcWFmY1pWenBNQ1MtUDJWNGVsdlBWZ3pZcXhRTnNnWmdZdUlyZnpTNlB2NldfR3RNdHp2eEVsRnNPSy0tZVRnVkVLdjZUQ3VzZ3EzZ3lUX0UxYXVmQ2pXeEI4RHpMQUpGa2RMR0x1WkJlcHY3X2tYaFVmNWpRVk1PM3NuRld6ajVtdWp2Y3dmNld0Xy05cGVPQ2stSEpNZjBEV2VWaV9ZSWFNaF9HN2VWb3lEQmZ0UmM4OTlNMVlWaUpS?oc=5",
-      "date": "Mon, 16 Nov 2026 16:02:00 GMT"
+      "title": "US tightens AI chip export controls to deter Chinese companies from accessing compute remotely - TechCrunch",
+      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQMk1pUmhmX2dnNlhFZjFvM1NYbmpacVJULVNxWlgzcWpKLVNjTk8yWjREOWg5RFNqNEd0RGRfQTRJd3BNblpXNndTZVFlNzk0UnVZYkxUcjdMU0ZDVm1hWXVxR1JNcm5fUUkzN0luc3BmMzg1cU4xOEc1QXpuaDNxdnNaYU0yVzRmcXlzbU9mc1lxQ01Yd1ZkdklSeXI0NTJTTTNuOExSRlVlcU9HVUpQWVJrRk5qQXkwNVlRem04NUMtcHVPOVpwYw?oc=5",
+      "date": "Mon, 16 Nov 2026 15:02:34 GMT"
+    },
+    {
+      "title": "Selling AI Hardware: The Unanimous Consensus Among Global Investors - eu.36kr.com",
+      "url": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5KeEhrc3FjWlRXMHppaWpOMWp5eExtb3J1aGVnbmM0VzZ0YklMSGJJT0xkNTZsVmYyMGJhbHhlZW5NdG91RDVhRWxMQTZQdXZYT1F3?oc=5",
+      "date": "Tue, 17 Nov 2026 01:51:07 GMT"
     },
     {
       "title": "US tightens chip export rules to deter diversion via Southeast Asia, Brazil - ET Datacenters",
@@ -51229,6 +51202,11 @@
       "date": "Tue, 17 Nov 2026 07:00:00 GMT"
     },
     {
+      "title": "Agility Robotics (AGLT) registers about 8% of its stock for resale, with no proceeds for the company. - Stock Titan",
+      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNS0ZyeXBCbEVUUmNrOFRfbUNCWlZDS1Qza0E2cHEwZW9Zd1VQaTkyRG5IVGhLbnA3cm9rMngxSHVsWkZyZVhfQTVOVkhhS3hJakx5RkxxeDdQcHlsUHJjM2pmUGVGU01XSktmcFFaeUVjM2laUV9lUEkzeHphTTlRRVZKSnozU0pmcy1qNVk1aUZ0OHJXTzd2TnNLaFZfSWtFbWptRS1DLXYwMXotZHA3T20yaEJDMlZWeE56dnNkWQ?oc=5",
+      "date": "Mon, 16 Nov 2026 22:22:01 GMT"
+    },
+    {
       "title": "WATCH: Humanoid robots serve coffee and ice cream at the International Media Center of the APEC Economic Leaders' Meeting in Shenzhen, China. | via Jervis Manahan, ABS-CBN News - Facebook",
       "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxNV00zUkQtekVmR2dxejJWMVU0TkJwR1ZWS0ExdlZHUXBCdG9PSkM2T00xZ1lwNWl1U0FpNENUellzc2JKZGpoZE1nV2ZjQW9qLUdoY0FZNEVQQkRFQjgwV0tvdW1xM1lacnRBU3c3T29jVy1PVnJmbm9YazE0NTg5WnFmYTE5eHlBSmdMOVJ3WnlYOTRkRTQ5X1A0NHdObHJUNnoxLWpxM2FCNHpaNXk0RVR1TE9xbkpJZHBxTE1uTlF2Q0hjMXloN2drUVB6VTBXQjFFZVFGYmY?oc=5",
       "date": "Tue, 17 Nov 2026 07:23:24 GMT"
@@ -51239,19 +51217,14 @@
       "date": "Mon, 16 Nov 2026 04:59:17 GMT"
     },
     {
-      "title": "This 13ft robot can lift a cow. Here’s how it works - Startups Magazine",
-      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQdHBsNmktLW1PTXNnYm9jNHN4VWVQNDRBcGFTdTh1bzZHeEtmVWxNVnpNdThfWHJEUVA1VHBYdk5mbFpIR2RQeVExQndGRERkMnNjb0xnU241UE8zX2JOc1YwSGxuV1JmZnlBcnN0SUNPOG1qWWp6OFVxS1ZkUFEzYndPMkg0cGM?oc=5",
-      "date": "Mon, 16 Nov 2026 16:30:27 GMT"
-    },
-    {
       "title": "Physical AI Leader Agile Robots Raises $500 Million Series F at $8.5 Billion Valuation to Accelerate Global Growth - PR Newswire",
       "url": "https://news.google.com/rss/articles/CBMigwJBVV95cUxNdnFCZUUxTFVMelJVZmhaZEVMOVBZMk9uOUVPSjNxRVY4Uno1aWhfZ2sxQ1k3RkhMazV3OUVvbjVDOWZkUTJFeUl1ZkpyZUVMSEI1UmRhbFNQVW1DZHlwMnUwTXh2anRxYzNnYXluZHZrb0RlRXAzd1lpM1RvWU9sWlpOLURoY2pXVVhXRmFpdU05RllZemhoMmMzUW1XOC1ZeDZHRXl6YjFMMHZYbF9oT0JaOFZJLURDNmE1WW5IS3JqeENYNThkRXRLZ3ZCOWR1VlBJSVI0ZTh1c2xrSEp3ZTRyWklSQjN5eGhoSUp2RmRfdmN4YzJjZ0JnNXdMbF9EMEVN?oc=5",
       "date": "Tue, 17 Nov 2026 03:28:37 GMT"
     },
     {
-      "title": "Agility Robotics (AGLT) registers about 8% of its stock for resale, with no proceeds for the company. - Stock Titan",
-      "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNS0ZyeXBCbEVUUmNrOFRfbUNCWlZDS1Qza0E2cHEwZW9Zd1VQaTkyRG5IVGhLbnA3cm9rMngxSHVsWkZyZVhfQTVOVkhhS3hJakx5RkxxeDdQcHlsUHJjM2pmUGVGU01XSktmcFFaeUVjM2laUV9lUEkzeHphTTlRRVZKSnozU0pmcy1qNVk1aUZ0OHJXTzd2TnNLaFZfSWtFbWptRS1DLXYwMXotZHA3T20yaEJDMlZWeE56dnNkWQ?oc=5",
-      "date": "Mon, 16 Nov 2026 22:22:01 GMT"
+      "title": "This 13ft robot can lift a cow. Here’s how it works - Startups Magazine",
+      "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQdHBsNmktLW1PTXNnYm9jNHN4VWVQNDRBcGFTdTh1bzZHeEtmVWxNVnpNdThfWHJEUVA1VHBYdk5mbFpIR2RQeVExQndGRERkMnNjb0xnU241UE8zX2JOc1YwSGxuV1JmZnlBcnN0SUNPOG1qWWp6OFVxS1ZkUFEzYndPMkg0cGM?oc=5",
+      "date": "Mon, 16 Nov 2026 16:30:27 GMT"
     },
     {
       "title": "Tesla Stock Price Prediction 2026, 2027, 2030–2040: How Much Further Can TSLA Climb? - Coinpedia",
@@ -51264,11 +51237,6 @@
       "date": "Mon, 16 Nov 2026 06:36:22 GMT"
     },
     {
-      "title": "GigaDevice presents GD32H7 MCU family targeting industrial automation, robotics and HMI applications - New Electronics",
-      "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxPVl9JVEdJeEh4eU9qNWRKMnRGd2RnQmJIMkN1eVJiT1VGcDZ4SjNGOUlNY2h4eXJiM2RyNnRYV3hta3p1dGpFbXJ1OVkxdFNfcmNoSkY2WmVINm50UzN2eDVIWEppVG93bFRNSHhkVklrOU9zWlg3NUU3VXE3UjFvSnJ3enI4cGlpR2pDSkRSNGdEU08tOENnUXB2Tkd4NW5fWHBQRFJocUV6RUlKOWJ1eG5RUVZoMEFIbXF2R0ZnOFRFQjA4aEROX2s4MmdtTnNaNFpRUmQzTklTZmdMSWpnSEJreFRBMlJIdGlhR0Nn?oc=5",
-      "date": "Sun, 15 Nov 2026 21:58:50 GMT"
-    },
-    {
       "title": "CJ Logistics unveils 'TESIV' AI logistics technology brand, bringing together four core capabilities - 머니투데이",
       "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE5QaXoxTFZvSDNSeTdtSjJMRGFHaHNYcHo2VUtvZlZOMkxNeWtad083VEwwT0VhTTNuZUJPRENyVnZ4WnZlbTlhczVyUWRSWHRISEwzQ3VOREhlcnlPOVJnQVc5bko0Tlk4MEdKTGlpSmM?oc=5",
       "date": "Tue, 17 Nov 2026 00:13:31 GMT"
@@ -51277,6 +51245,11 @@
       "title": "3 China Robotics Stocks With Real Revenue Growth - Simply Wall St",
       "url": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNNDVydy1XX0w4RUZRbmUzUnczZHZ5eDRPanZZcUR1anBVNVZXRXR0ZC1NMlF5Y1gyaDRIYjg1M1p5RENyT2RWb0Y1bHZjX3JnclZnZUo2eXRreldKeHJkODVqZ19lVmo0T3FwWG1WQnRRY052alEwUVJXS0RMZHBGRnZKR29KR3daMnpvRWNYUTl4M2Q3UklLVzhGdTVEeEhoSXo3VGtzUWhzRUIzN2JrRlctbEZXV1Ztd3dDbk4tODgtR3dOejJoQnphTUc3VUpZd2tRcdIB1AFBVV95cUxNNDVydy1XX0w4RUZRbmUzUnczZHZ5eDRPanZZcUR1anBVNVZXRXR0ZC1NMlF5Y1gyaDRIYjg1M1p5RENyT2RWb0Y1bHZjX3JnclZnZUo2eXRreldKeHJkODVqZ19lVmo0T3FwWG1WQnRRY052alEwUVJXS0RMZHBGRnZKR29KR3daMnpvRWNYUTl4M2Q3UklLVzhGdTVEeEhoSXo3VGtzUWhzRUIzN2JrRlctbEZXV1Ztd3dDbk4tODgtR3dOejJoQnphTUc3VUpZd2tRcQ?oc=5",
       "date": "Mon, 16 Nov 2026 05:29:20 GMT"
+    },
+    {
+      "title": "GigaDevice presents GD32H7 MCU family targeting industrial automation, robotics and HMI applications - New Electronics",
+      "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxPVl9JVEdJeEh4eU9qNWRKMnRGd2RnQmJIMkN1eVJiT1VGcDZ4SjNGOUlNY2h4eXJiM2RyNnRYV3hta3p1dGpFbXJ1OVkxdFNfcmNoSkY2WmVINm50UzN2eDVIWEppVG93bFRNSHhkVklrOU9zWlg3NUU3VXE3UjFvSnJ3enI4cGlpR2pDSkRSNGdEU08tOENnUXB2Tkd4NW5fWHBQRFJocUV6RUlKOWJ1eG5RUVZoMEFIbXF2R0ZnOFRFQjA4aEROX2s4MmdtTnNaNFpRUmQzTklTZmdMSWpnSEJreFRBMlJIdGlhR0Nn?oc=5",
+      "date": "Sun, 15 Nov 2026 21:58:50 GMT"
     },
     {
       "title": "RoboStrategy (BOT) puts net asset value at $11.80 per share, with 30.1% in Standard Bots. - Stock Titan",
@@ -51334,6 +51307,11 @@
       "date": "Tue, 17 Nov 2026 11:04:58 GMT"
     },
     {
+      "title": "US Stocks to Watch in the AI Data Center Sector for NASDAQ:STRL by Swissquote - TradingView",
+      "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNSVR5SkUtZUs0eS1PdDdzZ05PQUEwaVpDSFB2TENYNFViZmZrS2dkR1M0NmtpVkNTY2FRQnVWdl94ckNyY2F3SldORDFGLXp0bzlGSGNXQ2pyQnh5cm1icFVHalJzVy1MSUhfRGVfeS1yQkxhcWxWRW84M2FZMFRFXzVlTlFqcWpiWmd2OTJyOFFraWVOdzNzOXZxWlk?oc=5",
+      "date": "Tue, 17 Nov 2026 05:42:04 GMT"
+    },
+    {
       "title": "Grid utilisation crucial for meeting AI electricity demand - ET Datacenters",
       "url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxQTjRRbXpqSWdGaWI2blpvSUVfc1Z6djFOeFVLV0gyN0VfT0xTQTlXdHh6eDQzbEl3NTg4ZGpQbGNqRnNyM0NURkVVYWxZQVFWRGw4dTBCS3o4dTQ3YmdGQ1VUckNxeUc1TG1ycmVELXN5MUFUZUhtdF96RlVFbjNCQ2FVUmQtejF5bkZEejlpd0R2MVRQX2NXUGJHVVdFVDdDclRlbTg0Qm5pUHJTY1Z6ZnNscXBaMzBKV3VUcWtqaGc0WmlGTlFBSEdybkliVER3bjhZbndYVDBrWllpOHdacU1iSWNtaEnSAesBQVVfeXFMUGc0UER2blZodkx4eVZaTlM5eTZDTFE3YzVDUGJvQ09fc3pOcmhQWkdjQnkzRXZPd1l2TEMyQTY1VExkRXljX1NPdUNENXJRajZaaXRZbmlyTmItZk9UNXhLUEM4T2czQmVRd2ljSFRSaWEwQTZDSGFJd05CZzc2RGJmSzZERzNGTUVJWHhnOWN0UWY2aDltUE51Z3RTX2N5WjkyWXlPejJWdzhHRmhFWlYwQzh3X1JHNEhLc2x2Z2JXQzk1YlAxRFFKZlZ1T0NDZS1weDBlSzFsWHhNS2ZrX2ZSaWl3UUdRZ2xUQQ?oc=5",
       "date": "Tue, 17 Nov 2026 07:37:40 GMT"
@@ -51357,11 +51335,6 @@
       "title": "115-Year-Old Eaton Becomes Critical Power Infrastructure for AI Data Centers - KuCoin",
       "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNeXRJQ2FSVkVkSTNqSllraENHb3d1U09GWGtXZ2pSdVpuMmxUbS1RUWpvd3BFc3JNQ0FoV00tTkpFNnhtVi1CcVRCRG90Q1FlNWNNNDhzYkV0dWIyeHJMeFJ6UkFiaVRQM1dRYzhpM09FZHRKOGRTQ294UTg4QnoxZVVGRXRoZF8xekhnVTFrX19OSzJuREJybE5WSXBPWjczazFFV0pOQ29wV2dsZEpN?oc=5",
       "date": "Mon, 16 Nov 2026 12:33:29 GMT"
-    },
-    {
-      "title": "Solar-plus-storage accelerates to meet data center demand - ET Datacenters",
-      "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxPbWxycGVBbEpZSFFtMDNXODNpWFdPVDRkeDZDdnpXTTFsdTJlQ1JvLUZ4TFhGY0dyeFJfanY2UlBWMTBxWG1WR2JBcE5jUEFSdEdfbFpZRVZEQV9ZU0liY0kwYS1icW90bUk3NFJqSjRLQm1SbFZELWs2bGU3aEh5U1pDQUVILTdlczJWTHRrSExPMUFEMzJxMU1lSWE0UE1qZG5WSzFvdnpGOHhNQjdSM3NJUkpCa0pxOVktUmFUU1VpamZXTEJlWW00ZHR0ZkJtOGtkS21velhrVEFDLVdTbHFISWpJQdIB6gFBVV95cUxQajBvXzFpak5wckdWdnlzZC04NHExMDNMZDJ3V1E0MFFWR0tHd1hBdTBOZnZ2VkhXeGVnSnhCR3dHVjFwZ1AwMWhiSldvUENCMFBFM1RiTW5NNlhmSTN1WDdyNW5kOEZuelF1WHFPOTZtcGtWODhoRXlwQ0RHd2FKZUY0cjdZekxiMEE2UjFTdUUyOFlxOVpNLVBFRHZkNmo3UEVpRUlURGlCUndlSXlreWY5RVNCaXhvU2diR1dpSHpGbjlWV0p6TmYteFh5cEhXeVlRSGNCZW5qSDh6dmgzTk1FVFVpXzE1RXc?oc=5",
-      "date": "Tue, 17 Nov 2026 04:12:36 GMT"
     },
     {
       "title": "Powering the next phase of Malaysia's digital infrastructure - KLSE Screener",
@@ -51424,6 +51397,11 @@
       "date": "Mon, 16 Nov 2026 23:25:00 GMT"
     },
     {
+      "title": "Solar-plus-storage accelerates to meet data center demand - ET Datacenters",
+      "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxPbWxycGVBbEpZSFFtMDNXODNpWFdPVDRkeDZDdnpXTTFsdTJlQ1JvLUZ4TFhGY0dyeFJfanY2UlBWMTBxWG1WR2JBcE5jUEFSdEdfbFpZRVZEQV9ZU0liY0kwYS1icW90bUk3NFJqSjRLQm1SbFZELWs2bGU3aEh5U1pDQUVILTdlczJWTHRrSExPMUFEMzJxMU1lSWE0UE1qZG5WSzFvdnpGOHhNQjdSM3NJUkpCa0pxOVktUmFUU1VpamZXTEJlWW00ZHR0ZkJtOGtkS21velhrVEFDLVdTbHFISWpJQdIB6gFBVV95cUxQajBvXzFpak5wckdWdnlzZC04NHExMDNMZDJ3V1E0MFFWR0tHd1hBdTBOZnZ2VkhXeGVnSnhCR3dHVjFwZ1AwMWhiSldvUENCMFBFM1RiTW5NNlhmSTN1WDdyNW5kOEZuelF1WHFPOTZtcGtWODhoRXlwQ0RHd2FKZUY0cjdZekxiMEE2UjFTdUUyOFlxOVpNLVBFRHZkNmo3UEVpRUlURGlCUndlSXlreWY5RVNCaXhvU2diR1dpSHpGbjlWV0p6TmYteFh5cEhXeVlRSGNCZW5qSDh6dmgzTk1FVFVpXzE1RXc?oc=5",
+      "date": "Tue, 17 Nov 2026 04:12:36 GMT"
+    },
+    {
       "title": "nVent Electric plc (NVT) stock price, news, quote and history - Yahoo Finance UK",
       "url": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBqRG5IeUlhS2s0cGFPVGl1N3VsVERtVUlUMnNfTERBQ2ZCWjhRNDhYNnBhd0J3Q3RhQVhRQmwxamVHU3JfNTNDZVc4RGN3eHlJ?oc=5",
       "date": "Tue, 17 Nov 2026 03:42:33 GMT"
@@ -51484,102 +51462,102 @@
           "Yahoo: HTTP Error 404: Not Found"
         ]
       },
-      "KLAC": {
+      "PLTR": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-16"
       },
-      "KTOS": {
+      "PWR": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-16"
       },
-      "LAZR": {
+      "QCOM": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-16"
       },
-      "LITE": {
+      "RCAT": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-16"
       },
-      "JBL": {
+      "ROK": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-16"
       },
-      "LRCX": {
+      "RR": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-16"
       },
-      "MBLY": {
+      "SERV": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-16"
       },
-      "META": {
+      "SIEGY": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-16"
       },
-      "MPWR": {
+      "SMCI": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-16"
       },
-      "MRVL": {
+      "SNOW": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-16"
       },
-      "MSFT": {
+      "SOUN": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-16"
       },
-      "MU": {
+      "SYM": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-16"
       },
-      "NOW": {
+      "TER": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-16"
       },
-      "NVDA": {
+      "TSM": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-16"
       },
-      "NVT": {
+      "VRT": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-16"
       },
-      "ONDS": {
+      "ZBRA": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-16"
       },
-      "ONTO": {
+      "ACHR": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-16"
       },
-      "OUST": {
+      "AI": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-16"
       },
-      "PATH": {
+      "ALAB": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-16"
       },
-      "PDYN": {
+      "AMAT": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-16"
