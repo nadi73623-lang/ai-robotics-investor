@@ -40,8 +40,7 @@ def validate_event_rows(rows, today=None, max_age_days=2, horizon_days=14):
             events.append({**row,"ticker":ticker,"days_to_event":days})
     if not covered:
         return {"status":"unavailable","flags":["event_feed_has_no_coverage_markers"],"events":events,"covered_tickers":[]}
-    return {"status":"ok","flags":(["critical_event_within_horizon"] if events else []),
-            "events":events,"covered_tickers":sorted(covered)}
+    return {"status":"ok","flags":[],"events":events,"covered_tickers":sorted(covered)}
 
 def load_event_risk_csv(path, today=None):
     try:
@@ -50,3 +49,17 @@ def load_event_risk_csv(path, today=None):
     except FileNotFoundError:
         return {"status":"unavailable","flags":["event_feed_missing"],"events":[],"covered_tickers":[]}
     return validate_event_rows(rows,today=today)
+
+def event_flags_for_ticker(feed, ticker):
+    """Return only this issuer's event flags; never spread another issuer's event to all."""
+    feed=feed or {"status":"unavailable","flags":["event_feed_missing"],"events":[],"covered_tickers":[]}
+    ticker=str(ticker or "").strip().upper()
+    flags=list(feed.get("flags") or [])
+    if feed.get("status")!="ok":
+        if not flags: flags.append("event_feed_unavailable")
+        return sorted(set(flags))
+    if ticker not in set(feed.get("covered_tickers") or []):
+        flags.append("event_feed_ticker_uncovered")
+    if any(str(x.get("ticker","")).upper()==ticker for x in feed.get("events",[])):
+        flags.append("critical_event_within_horizon")
+    return sorted(set(flags))
