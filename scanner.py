@@ -458,7 +458,11 @@ def main():
             print('BENCHMARK_UNMAPPED',currency)
             continue
         try:
-            benchmark_quotes[currency]=yahoo_quote(benchmark_symbol)
+            candidate_benchmark=yahoo_quote(benchmark_symbol)
+            if candidate_benchmark.get('currency')!=currency:
+                print('BENCHMARK_CURRENCY_MISMATCH',currency,benchmark_symbol,candidate_benchmark.get('currency'))
+                continue
+            benchmark_quotes[currency]=candidate_benchmark
         except Exception as exc:
             print('BENCHMARK_FAIL',currency,benchmark_symbol,str(exc)[:160])
     # External analyst/event feeds are opt-in CSV inputs with strict provenance and freshness checks.
