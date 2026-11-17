@@ -91,3 +91,5 @@
 - Added tests for ATR availability, support/resistance, 2R/3R calculations and missing/invalid ATR.
 - Note: Stooq may not return High/Low for all tickers; no ATR is fabricated when missing.
 - No CI success claimed; tests require GitHub Actions execution.
+
+- Follow-up: ATR test fixtures use valid calendar dates via `timedelta`; the test data no longer constructs invalid January day numbers.
