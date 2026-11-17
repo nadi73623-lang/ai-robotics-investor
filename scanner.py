@@ -4,6 +4,7 @@ import json, re, time, os, csv, io, urllib.parse, urllib.request, xml.etree.Elem
 from datetime import datetime, timezone
 from pathlib import Path
 from balanced_strategy import evaluate_company, THRESHOLDS as BALANCED_THRESHOLDS
+from entry_trigger import build_entry_trigger
 from analyst_consensus import load_consensus_csv
 from event_risk import load_event_risk_csv
 from scenario_valuation import scenario_valuation
@@ -416,7 +417,7 @@ def main():
             q.update({k:tech.get(k) for k in ('sma20','sma50','rsi_14','volume_ratio20','above_sma20','above_sma50','relative_strength_20d_pct','relative_strength_benchmark')})
             q['rsi_as_of']=q['date']; q['sma20_as_of']=q['date']; q['sma50_as_of']=q['date']; q['volume_as_of']=q['date']
         company['analyst_targets']=consensus_by_ticker.get(company['ticker'],{'status':'unavailable','reason':'no validated point-in-time analyst_consensus.csv row'})
-        company['entry_trigger']=None
+        company['entry_trigger']=build_entry_trigger(company)
         event_flags=list(event_feed.get('flags') or [])
         matching_events=[e for e in event_feed.get('events',[]) if e.get('ticker','').upper()==company['ticker']]
         if matching_events: event_flags.append('critical_event_within_horizon')
