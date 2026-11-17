@@ -128,3 +128,9 @@
 - Scanner now verifies the benchmark quote's provider-reported currency equals the listing quote currency before computing relative strength. A mismatch leaves RS unavailable and blocks the strategy technical gate.
 - Added mapping tests for all supported local-currency indices and Yahoo symbol acceptance.
 - This prevents a cross-currency return comparison from silently creating a false relative-strength signal. Actual index availability/currency remains provider-validated at runtime.
+
+## 2026-11-17 — report coverage and decision blocker diagnostics
+
+- Added a machine-readable `coverage_summary` to every scan report: quote/fundamental freshness, technical coverage, valuation availability, analyst-consensus status, decision-stage counts, corporate-event feed status and currency-matched benchmark availability.
+- Added tests for complete count reconciliation and empty-universe behavior.
+- This makes missing data visible per pipeline stage; it does not imply global market coverage or make incomplete securities BUY-eligible.
