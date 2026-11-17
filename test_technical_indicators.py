@@ -1,9 +1,11 @@
 import unittest
+from datetime import date, timedelta
 from scanner import technical_indicators
 
 class TechnicalIndicatorTests(unittest.TestCase):
     def quote(self, closes):
-        return {"bars":[{"date":f"2026-01-{i+1:02d}","close":v,"volume":1000} for i,v in enumerate(closes)]}
+        start=date(2026,1,1)
+        return {"bars":[{"date":(start+timedelta(days=i)).isoformat(),"close":v,"volume":1000} for i,v in enumerate(closes)]}
 
     def test_rsi_is_100_for_monotonic_rise(self):
         out=technical_indicators(self.quote([100+i for i in range(60)]))
