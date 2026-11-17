@@ -64,3 +64,13 @@ The archive's `historical_dataset_manifest.json` remains:
 - Recovered archive `historical_dataset_manifest.json` still reports `blocked_waiting_for_free_provider_key_and_point_in_time_target_access_test`. It explicitly states that historical target access, delisted-universe history and full point-in-time dataset are not verified.
 - The recovered archive's cached scan and coverage artifacts are historical snapshots, not current market data. No live market scan or walk-forward performance test was run.
 - Current repair branch remains an evaluator repair branch; no production scan, Worker, Android app, `main`, or BUY authorization was changed.
+
+
+## Recovery automation — 2026-11-17
+- Added workflow: `.github/workflows/recover-balanced-archive.yml` on branch `repair/balanced-1.3.4-scanner-port`.
+- Trigger: push of a ZIP under `recovery-input/*.zip` (also supports manual dispatch).
+- Runner checks the expected SHA-256, ZIP CRC, safe member paths/symlinks and expected project root; extracts the source, runs `compileall`, then commits the recovered tree to this repair branch.
+- Workflow file was fetched back from GitHub and its content verified. This verifies the workflow definition exists, not that a run succeeded.
+- The required archive is not present in the branch: GitHub returns 404 for `recovery-input/`. Therefore no recovery workflow run or source port has occurred yet.
+- Remaining external step: upload the exact Library ZIP `AI_Robotics_Investor_Balanced_1.3.4_Global_Equity_Master_2026-11-08_2.zip` to `recovery-input/` on this branch. Expected SHA-256: `49d694dc8a3b3e3402654e2ed0c205b589fdaed0383baf0a8c5155ba3a9c8a81`.
+- `main`, production workflow, Cloudflare Worker and BUY publication remain untouched/disabled.
