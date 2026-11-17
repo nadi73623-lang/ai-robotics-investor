@@ -13,7 +13,14 @@ class MarketSymbolTests(unittest.TestCase):
             with self.subTest(symbol=symbol):
                 with self.assertRaises(ValueError): yahoo_symbol(symbol)
     def test_currency_benchmarks(self):
-        self.assertEqual(benchmark_for_currency("JPY"),"EWJ")
+        self.assertEqual(benchmark_for_currency("JPY"),"^N225")
+        self.assertEqual(benchmark_for_currency("KRW"),"^KS11")
+        self.assertEqual(benchmark_for_currency("TWD"),"^TWII")
+        self.assertEqual(benchmark_for_currency("HKD"),"^HSI")
+        self.assertEqual(benchmark_for_currency("CAD"),"^GSPTSE")
+        self.assertEqual(benchmark_for_currency("EUR"),"^STOXX50E")
+        self.assertEqual(benchmark_for_currency("GBP"),"^FTSE")
+        self.assertEqual(yahoo_symbol("^N225"),"^N225")
         self.assertIsNone(benchmark_for_currency("XYZ"))
 
 if __name__=="__main__": unittest.main()
