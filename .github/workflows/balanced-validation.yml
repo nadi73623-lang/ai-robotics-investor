@@ -1,11 +1,19 @@
 name: Balanced 1.3 isolated validation
 on:
+  push:
+    branches: [repair/balanced-1.3.4-scanner-port]
+    paths:
+      - 'scanner.py'
+      - 'tests/test_scanner_ranking_metadata.py'
+      - '.github/workflows/balanced-validation.yml'
   pull_request:
     branches: [main]
     paths:
       - 'balanced_strategy.py'
       - 'test_balanced_strategy_repair.py'
       - 'baseline/**'
+      - 'tests/test_scanner_ranking_metadata.py'
+      - 'scanner.py'
       - '.github/workflows/balanced-validation.yml'
   workflow_dispatch:
 permissions:
@@ -20,3 +28,5 @@ jobs:
           python-version: '3.12'
       - name: Verify baseline and Balanced 1.3 decision gates
         run: python -m unittest -v test_balanced_strategy_repair.py
+      - name: Verify scanner ranking metadata semantics
+        run: python tests/test_scanner_ranking_metadata.py
