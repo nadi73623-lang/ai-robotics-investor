@@ -391,6 +391,16 @@ def calculate_valuation(company, today=None):
         result['reason']=str(exc) if str(exc) else 'Brak ceny lub liczby akcji'
         return result
 
+def summarize_signals(companies):
+    """Counts decision states without changing or promoting any signal."""
+    return {
+        'buy':sum(1 for c in companies if c.get('investment_decision',{}).get('signal')=='BUY' and c.get('buy_eligible') is True),
+        'early_entry_watch':sum(1 for c in companies if c.get('early_buy_watch') is True),
+        'active_technical_trigger':sum(1 for c in companies if c.get('entry_trigger',{}).get('active') is True),
+        'watch':sum(1 for c in companies if c.get('signal','WATCH')=='WATCH'),
+        'blocked':sum(1 for c in companies if c.get('investment_decision',{}).get('buy_eligible') is not True),
+    }
+
 def main():
     allnews=[]; seen=set()
     for q in QUERIES:
@@ -474,7 +484,7 @@ def main():
         company['investment_decision']=decision
         company['signal']=decision.get('signal','WATCH')
         company['investment_score']=decision.get('fundamental_score')
-        company['buy_eligible']=False
+        company['buy_eligible']=bool(decision.get('buy_eligible'))
     missing={}
     for c in companies:
         if c['valuation']['status']=='partial': continue
@@ -489,7 +499,8 @@ def main():
         for r in reasons:missing[r]=missing.get(r,0)+1
         if c['ticker']=='AVGO': print('VALUATION_AVGO',json.dumps({'price':bool(q.get('close_usd')),'shares':bool(f.get('shares_outstanding')),'share_date':f.get('shares_as_of'),'reason':c['valuation']['reason'],'status':c['valuation']['status']}))
     print('VALUATION_SUMMARY',json.dumps({'covered':valuation_coverage,'total':len(companies),'missing':missing}))
-    payload={'generated_at':datetime.now(timezone.utc).isoformat(),'source':'Google News RSS','queries':QUERIES,'scan_status':'ok' if allnews else 'no_sources', 'articles_collected':len(allnews),'companies':companies,'discoveries':discoveries,'articles':allnews[:100],'version':'4.2.2','valuation_coverage':valuation_coverage,'valuation_note':'Orientacyjna kapitalizacja = cena EOD × akcje z ostatniego dostępnego raportu SEC; nie uwzględnia późniejszego rozwodnienia, zmian liczby akcji ani ADR. P/S i P/E bazują na danych rocznych, nie TTM. Nie jest to ranking inwestycyjny.','price_health':price_health,'price_coverage':price_coverage,'price_note':'Opóźnione ceny dzienne z Stooq lub Yahoo Chart (źródła mogą blokować dostęp); daty do 7 dni. Brak ceny to brak danych, nie zero. Kapitalizacja i mnożniki wyłącznie orientacyjne, gdy dane są wystarczające.','financial_coverage':covered,'financial_source':'SEC EDGAR XBRL, annual 10-K/20-F where available','financial_limitations':'Dane historyczne, możliwe opóźnienia; nie wszystkie spółki raportują do SEC. Pokrycie rośnie stopniowo; limity 16 zapytań SEC i 24 prób cen na skan.','coverage_note':'Lista startowa plus kandydaci wykryci przez dopasowanie nazw do rejestru SEC; brak pełnego globalnego pokrycia','ranking_method':'attention_score = 100*(1-exp(-mentions/4)); wskaźnik uwagi, NIE ocena inwestycyjna','investment_ranking_available':False,'investment_ranking_status':'BLOCKED_INCOMPLETE_DATA_AND_NO_VALIDATED_BACKTEST','strategy_version':BALANCED_THRESHOLDS,'disclaimer':'Wskaźnik uwagi nie oznacza atrakcyjnej wyceny, potencjału wzrostu ani rekomendacji. Rejestr SEC obejmuje głównie emitentów raportujących w USA. Dane RSS mogą być niepełne.'}
+    signal_summary=summarize_signals(companies)
+    payload={'signal_summary':signal_summary,'generated_at':datetime.now(timezone.utc).isoformat(),'source':'Google News RSS','queries':QUERIES,'scan_status':'ok' if allnews else 'no_sources', 'articles_collected':len(allnews),'companies':companies,'discoveries':discoveries,'articles':allnews[:100],'version':'4.2.2','valuation_coverage':valuation_coverage,'valuation_note':'Orientacyjna kapitalizacja = cena EOD × akcje z ostatniego dostępnego raportu SEC; nie uwzględnia późniejszego rozwodnienia, zmian liczby akcji ani ADR. P/S i P/E bazują na danych rocznych, nie TTM. Nie jest to ranking inwestycyjny.','price_health':price_health,'price_coverage':price_coverage,'price_note':'Opóźnione ceny dzienne z Stooq lub Yahoo Chart (źródła mogą blokować dostęp); daty do 7 dni. Brak ceny to brak danych, nie zero. Kapitalizacja i mnożniki wyłącznie orientacyjne, gdy dane są wystarczające.','financial_coverage':covered,'financial_source':'SEC EDGAR XBRL, annual 10-K/20-F where available','financial_limitations':'Dane historyczne, możliwe opóźnienia; nie wszystkie spółki raportują do SEC. Pokrycie rośnie stopniowo; limity 16 zapytań SEC i 24 prób cen na skan.','coverage_note':'Lista startowa plus kandydaci wykryci przez dopasowanie nazw do rejestru SEC; brak pełnego globalnego pokrycia','ranking_method':'attention_score = 100*(1-exp(-mentions/4)); wskaźnik uwagi, NIE ocena inwestycyjna','investment_ranking_available':False,'investment_ranking_status':'BLOCKED_INCOMPLETE_DATA_AND_NO_VALIDATED_BACKTEST','strategy_version':BALANCED_THRESHOLDS,'disclaimer':'Wskaźnik uwagi nie oznacza atrakcyjnej wyceny, potencjału wzrostu ani rekomendacji. Rejestr SEC obejmuje głównie emitentów raportujących w USA. Dane RSS mogą być niepełne.'}
     (ROOT/'data').mkdir(exist_ok=True)
     (ROOT/'data'/'scan.json').write_text(json.dumps(payload,ensure_ascii=False,indent=2),encoding='utf-8')
     print('Scanned',len(companies),'companies,',len(allnews),'articles')
