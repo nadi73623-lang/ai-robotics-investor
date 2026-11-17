@@ -16,13 +16,13 @@ YAHOO_SYMBOLS = {
     "2330.TW":"2330.TW", "2454.TW":"2454.TW",
     "0700.HK":"0700.HK", "9988.HK":"9988.HK",
     "300124.SZ":"300124.SZ", "002050.SZ":"002050.SZ",
-    "ABB":"ABB", "SPY":"SPY", "EWJ":"EWJ", "EWY":"EWY",
-    "EWT":"EWT", "FXI":"FXI", "EWC":"EWC", "VGK":"VGK", "EWU":"EWU",
+    "ABB":"ABB", "SPY":"SPY", "^N225":"^N225", "^KS11":"^KS11", "^TWII":"^TWII",
+    "^HSI":"^HSI", "^GSPTSE":"^GSPTSE", "^STOXX50E":"^STOXX50E", "^FTSE":"^FTSE",
 }
 
 BENCHMARKS = {
-    "USD":"SPY", "JPY":"EWJ", "KRW":"EWY", "TWD":"EWT",
-    "HKD":"FXI", "CAD":"EWC", "EUR":"VGK", "GBP":"EWU",
+    "USD":"SPY", "JPY":"^N225", "KRW":"^KS11", "TWD":"^TWII",
+    "HKD":"^HSI", "CAD":"^GSPTSE", "EUR":"^STOXX50E", "GBP":"^FTSE",
 }
 
 def yahoo_symbol(ticker: str) -> str:
@@ -31,6 +31,10 @@ def yahoo_symbol(ticker: str) -> str:
         return YAHOO_SYMBOLS[value]
     # Explicit exchange suffixes are accepted only for syntactically valid symbols.
     import re
+    if value in YAHOO_SYMBOLS:
+        return YAHOO_SYMBOLS[value]
+    if re.fullmatch(r"\^[A-Z0-9]{2,12}", value):
+        return value
     if re.fullmatch(r"[A-Z0-9]{1,12}(?:\.[A-Z]{1,4})?", value):
         return value
     raise ValueError("unmapped_or_invalid_market_symbol")
