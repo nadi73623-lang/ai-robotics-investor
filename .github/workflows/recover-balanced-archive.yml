@@ -29,7 +29,7 @@ jobs:
           from pathlib import Path, PurePosixPath
           import hashlib, shutil, stat, zipfile
 
-          expected = "d55e0aac82a10f9e1567395d70cf2d4a354ee3100301c02d01096c5db5781401"
+          expected = "a128ecc73cc7ff62b96104c1ecb41d19f9c060601b59dea001c8be288fdd8f5f"
           candidates = sorted(Path("recovery-input").glob("*.zip"))
           if len(candidates) != 1:
               raise SystemExit(f"Expected exactly one ZIP in recovery-input/, found {len(candidates)}")
