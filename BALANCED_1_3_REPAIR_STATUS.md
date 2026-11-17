@@ -168,3 +168,13 @@ The archive's `historical_dataset_manifest.json` remains:
 - Re-ran `tests.test_full_scan_integration`: SEC-outage case passes. SEC-success case does not finish within the execution limit, including with a reduced local test budget. Inspection shows `scanner.main()` also invokes global-universe loading and other stages not covered by the current mocks. This test is therefore NOT fully passing and requires deterministic isolation of external providers / bounded fixtures before it can be accepted.
 - Recovery workflow still cannot execute: `recovery-input/` has README only; archive bytes are not committed to GitHub. No binary-upload action is available in the connected GitHub toolset. The workflow has not been dispatched because it would fail its exactly-one-archive precondition.
 - No full production scanner integration, live-data scan, real-data backtest, deployment, KV publication, physical Android test, or BUY authorization. `main` remains unchanged.
+
+
+## Deterministic full-scan fixture and v4 package — 2026-11-17
+- Repaired `tests/test_full_scan_integration.py` in the local recovered v3 tree: mocked `load_global_market_universe` and `load_analyst_targets` in addition to RSS, SEC, quote and sleep dependencies. This removes nondeterministic global directory/network work from the SEC success/outage fixture while preserving coverage assertions.
+- Full-scan SEC success and SEC outage integration tests: **2/2 PASS (0.42s)**.
+- Focused combined regression suite: **35 passed (0.94s)** covering full scan, Balanced strategy integration, release gate, global market universe, historical pipeline, analyst consensus, SWING pipeline and Balanced audit trace.
+- Created clean v4 archive excluding Python cache/bytecode: 606 files, ZIP CRC clean, size 808,908 bytes, SHA-256 `783e2029896a381e82ccf814c1fc8b4793e2c5f3588612a96ed84eeb4051eeca`. Stored in project Library as `AI_Robotics_Investor_Balanced_1.3.4_Corrected_2026-11-17_v4.zip`.
+- Updated recovery workflow expected checksum and README to v4. Workflow commit `510adda3b8edbbf0ac7d3e3f4a59d0e67250d5a8`; README commit `b5a065d1e6d44b11688921a9d0718afd8f6f4087`.
+- Important limitation: local recovered source changes are packaged in v4 but have NOT yet been committed to the GitHub repair branch because archive bytes are still absent from `recovery-input/`. GitHub recovery workflow has not run. The connected GitHub toolset has no repository binary-upload action.
+- No complete repository test suite pass, live market scan, point-in-time backtest, deployment, KV publication, physical Android test, or BUY authorization. `main` unchanged.
