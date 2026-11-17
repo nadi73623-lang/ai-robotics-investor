@@ -106,3 +106,11 @@
 - Fixed a safety gap: an empty corporate-events CSV previously passed validation as an apparently healthy feed. Empty rows now return `unavailable` with `event_feed_empty`, preserving BUY veto.
 - Added a regression test for the empty-feed case.
 - Corrected the expected WATCH count in `test_signal_summary.py` (only records whose signal is WATCH are counted).
+
+## 2026-11-17 — analyst consensus listing/currency and current-price rebasing
+
+- Tightened consensus CSV contract: every record must specify exact exchange listing and 3-letter quote currency; this prevents ADR/local-line and currency mixing.
+- Analyst upside/downside and probability-weighted scenario EV are recalculated against the latest quote for the same listing and currency, not the historical `price_at_consensus` snapshot.
+- If ticker/listing/currency do not match, consensus becomes invalid and cannot support BUY.
+- Added regression tests for current-price rebasing, adverse price movement turning upside/EV negative, listing/currency mismatch and missing listing metadata.
+- Existing CSV rows without listing/currency are intentionally rejected until corrected; no automatic FX conversion is introduced.
