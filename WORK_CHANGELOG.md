@@ -48,7 +48,7 @@
 ### Zapisane zmiany
 - Corrected the exchange-symbol suffix regex in `market_symbols.py`; dot separators are now literal. Added malformed-symbol rejection cases.
 - Replaced the non-standard last-14-change RSI calculation in `scanner.py` with Wilder's recursive smoothing for RSI(14).
-- Added `test_technical_indicators.py` covering monotonic rises/falls and insufficient OHLCV history.
+- Added `test_technical_indicators.py` covering monotonic rises/falls and insufficient OHLCV history; test dates use real calendar arithmetic.
 
 ### Verification status
 - Commits: `a8d49f4` (symbol regex), `d02c9ea` (symbol tests), `adffc8f` (Wilder RSI), `7f0e1dd` (technical tests).
