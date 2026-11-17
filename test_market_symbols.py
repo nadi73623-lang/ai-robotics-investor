@@ -9,7 +9,9 @@ class MarketSymbolTests(unittest.TestCase):
     def test_taiwan_symbol(self):
         self.assertEqual(yahoo_symbol("2330.TW"),"2330.TW")
     def test_invalid_symbol_rejected(self):
-        with self.assertRaises(ValueError): yahoo_symbol("bad symbol")
+        for symbol in ("bad symbol", "7203..T", "7203.TW.extra", "ABC/DEF"):
+            with self.subTest(symbol=symbol):
+                with self.assertRaises(ValueError): yahoo_symbol(symbol)
     def test_currency_benchmarks(self):
         self.assertEqual(benchmark_for_currency("JPY"),"EWJ")
         self.assertIsNone(benchmark_for_currency("XYZ"))
