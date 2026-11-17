@@ -6,6 +6,7 @@ separate from publication; the scan pipeline records every blocker.
 from __future__ import annotations
 import math
 from datetime import date
+from market_symbols import benchmark_for_currency
 
 VERSION = "balanced-1.3.4-integrity"
 THRESHOLDS = {
@@ -19,7 +20,8 @@ THRESHOLDS = {
 def _number(value):
     return type(value) in (int, float) and math.isfinite(value)
 
-def evaluate_company(company):
+def evaluate_company(company, today=None):
+    today=today or date.today()
     result = {"strategy_version": VERSION, "signal": "WATCH", "buy_eligible": False,
               "decision_stage": "data_gate", "decision_trace": [], "reasons": [],
               "fundamental_score": None, "entry_score": None}
@@ -32,21 +34,23 @@ def evaluate_company(company):
     f = company.get("fundamentals") or {}
     v = company.get("valuation") or {}
     a = company.get("analyst_targets") or {}
-    check("data", "price_refreshed", company.get("price_quality"), "refreshed",
-          company.get("price_quality") == "refreshed", "price_not_refreshed")
-    check("data", "fundamentals_refreshed", company.get("fundamentals_quality"), "refreshed",
-          company.get("fundamentals_quality") == "refreshed", "fundamentals_not_refreshed")
-    if any(not x["passed"] for x in checks):
-        result["reasons"] = [x["reason"] for x in checks if not x["passed"]]
-        return result
     try:
         quote_day = date.fromisoformat(q["date"])
         filed_day = date.fromisoformat(f["filed"])
-        if filed_day > quote_day: raise ValueError()
+        quote_age = (today - quote_day).days
+        filing_age = (quote_day - filed_day).days
+        price_current = 0 <= quote_age <= 4
+        filing_current = 0 <= filing_age <= 540 and f.get("source") == "SEC EDGAR XBRL"
     except (KeyError, TypeError, ValueError):
-        check("data", "filing_and_quote_dates", {"quote": q.get("date"), "filed": f.get("filed")},
-              "valid filing not after quote", False, "invalid_or_future_filing_date")
-        result["reasons"] = ["invalid_or_future_filing_date"]
+        quote_day = filed_day = None
+        quote_age = filing_age = None
+        price_current = filing_current = False
+    check("data", "quote_current", {"date": q.get("date"), "age_days": quote_age},
+          "EOD quote no older than 4 calendar days", price_current, "price_stale_or_future")
+    check("data", "filing_current", {"filed": f.get("filed"), "age_days_at_quote": filing_age},
+          "SEC EDGAR filing no older than 540 days at quote date", filing_current, "fundamentals_missing_or_stale")
+    if any(not x["passed"] for x in checks):
+        result["reasons"] = [x["reason"] for x in checks if not x["passed"]]
         return result
     check("consensus", "analyst_targets", a.get("status"), "documented",
           a.get("status") == "documented", "analyst_consensus_missing")
@@ -81,7 +85,8 @@ def evaluate_company(company):
         return result
     technical = (q.get("rsi_14"), q.get("sma20"), q.get("sma50"),
                  q.get("volume_ratio20"), q.get("relative_strength_20d_pct"))
-    if not all(_number(x) for x in technical) or q.get("relative_strength_benchmark") != "SPY":
+    expected_benchmark=benchmark_for_currency(q.get("currency", "USD"))
+    if not all(_number(x) for x in technical) or not expected_benchmark or q.get("relative_strength_benchmark") != expected_benchmark:
         result["decision_stage"] = "technical_inputs"
         result["reasons"] = ["technical_inputs_or_benchmark_missing"]
         return result
