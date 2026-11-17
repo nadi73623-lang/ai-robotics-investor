@@ -134,3 +134,10 @@
 - Added a machine-readable `coverage_summary` to every scan report: quote/fundamental freshness, technical coverage, valuation availability, analyst-consensus status, decision-stage counts, corporate-event feed status and currency-matched benchmark availability.
 - Added tests for complete count reconciliation and empty-universe behavior.
 - This makes missing data visible per pipeline stage; it does not imply global market coverage or make incomplete securities BUY-eligible.
+
+## 2026-11-17 — per-ticker corporate-event feed coverage gate
+
+- Closed a false-clear path: a non-empty event CSV or a critical event for one company did not prove that the event calendar had been checked for every other ticker.
+- Event feed now requires explicit, dated, source-linked `coverage_complete` marker rows (`status=coverage`) for each ticker whose calendar has been checked. Missing ticker coverage sets `event_feed_ticker_uncovered` and blocks BUY.
+- Added tests for missing/empty feed, fresh coverage markers, absent markers, stale data, unverifiable source and unconfirmed events.
+- CSV coverage marker contract: ticker, event_type=coverage_complete, event_date=as_of, source_url=https URL of that issuer's event calendar, as_of=current date, status=coverage. A marker must only be added after checking the issuer/exchange calendar.
