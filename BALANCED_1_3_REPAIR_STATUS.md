@@ -178,3 +178,14 @@ The archive's `historical_dataset_manifest.json` remains:
 - Updated recovery workflow expected checksum and README to v4. Workflow commit `510adda3b8edbbf0ac7d3e3f4a59d0e67250d5a8`; README commit `b5a065d1e6d44b11688921a9d0718afd8f6f4087`.
 - Important limitation: local recovered source changes are packaged in v4 but have NOT yet been committed to the GitHub repair branch because archive bytes are still absent from `recovery-input/`. GitHub recovery workflow has not run. The connected GitHub toolset has no repository binary-upload action.
 - No complete repository test suite pass, live market scan, point-in-time backtest, deployment, KV publication, physical Android test, or BUY authorization. `main` unchanged.
+
+
+## Independent v4 revalidation — 2026-11-17 (continued session)
+- Re-listed the project Library and materialized the exact v4 archive `AI_Robotics_Investor_Balanced_1.3.4_Corrected_2026-11-17_v4.zip` (808,908 bytes) into a clean runtime.
+- Independently verified SHA-256 `783e2029896a381e82ccf814c1fc8b4793e2c5f3588612a96ed84eeb4051eeca`; ZIP contains 606 entries, `testzip()` returned no corrupt member, and the only archive root is `AI_Robotics_Investor/`.
+- Full archive Python bytecode compilation: `python -m compileall -q .` completed successfully.
+- Targeted regression command with `PYTHONPATH=.` covering full-scan integration (SEC success and outage), Balanced strategy integration, Balanced backtest, historical pipeline, global market universe, analyst targets, and operational delivery gate: **35 passed in 0.35s**.
+- Initial pytest invocation without `PYTHONPATH=.` failed collection because root modules were not on `sys.path`; corrected invocation passed. This is an environment invocation detail, not a code failure.
+- Re-read recovery workflow from GitHub: it expects the exact v4 SHA above, validates one ZIP, CRC, safe paths and root, compiles the extracted tree, then commits it to `repair/balanced-1.3.4-scanner-port`. GitHub `recovery-input/` currently contains only `README.md`; workflow has not run.
+- PR #5 remains open, Draft, unmerged; its description confirms the recovered scanner archive is not yet ported. `main` remains untouched.
+- No full repository test-suite pass, live market scan, audited point-in-time backtest, Cloudflare deployment/KV publication, Android device test, or BUY authorization. Keep `investment_ranking_available=false` and `buy_signals_authorized=false` until the separate acceptance gates are met.
