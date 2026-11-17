@@ -93,3 +93,10 @@
 - No CI success claimed; tests require GitHub Actions execution.
 
 - Follow-up: ATR test fixtures use valid calendar dates via `timedelta`; the test data no longer constructs invalid January day numbers.
+
+## 2026-11-17 — signal authorization and report summary fix
+
+- Fixed a pipeline defect: `buy_eligible` was unconditionally overwritten to `False` immediately after `evaluate_company`. It now preserves the strategy decision's boolean authorization.
+- Added `summarize_signals()` and report-level counts for authorized BUY, EARLY ENTRY watch, active technical triggers, WATCH and blocked decisions.
+- Added `test_signal_summary.py` to ensure a textual BUY without `buy_eligible=True` is not counted as an authorized BUY.
+- Global investment ranking remains blocked until complete valuation, live event/consensus coverage and validated walk-forward backtest exist.
