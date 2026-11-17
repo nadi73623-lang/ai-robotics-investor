@@ -33,7 +33,7 @@ class BalancedStrategyFreshnessTests(unittest.TestCase):
         self.assertIn("fundamentals_missing_or_stale",out["reasons"])
         self.assertFalse(out["buy_eligible"])
     def test_jpy_listing_requires_jpy_benchmark(self):
-        c=self.candidate("JPY","EWJ")
+        c=self.candidate("JPY","^N225")
         out=evaluate_company(c,today=date(2026,11,17))
         self.assertTrue(out["buy_eligible"])
     def test_wrong_currency_benchmark_is_blocked(self):
