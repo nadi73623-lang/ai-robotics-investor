@@ -113,3 +113,13 @@ The archive's `historical_dataset_manifest.json` remains:
 - Updated recovery workflow's expected checksum and recovery README for this corrected archive (workflow commit `3e8d66d9839ef09937d6ef2e93cc6f9503bac177`; README commit `114c9896bf714f5a074b59d26107a7e97128241d`). These files were fetched back and verified.
 - Archive bytes have not yet been committed to `recovery-input/`; GitHub Actions recovery has not run, and recovered source has not been ported to the branch. This still requires the ZIP to be uploaded to that branch.
 - No live scan, point-in-time backtest, production deployment, Cloudflare KV publication, Android release or physical-device test. BUY authorization remains false; `main` remains untouched.
+
+
+## Latest local verification and archive v2 — 2026-11-17
+- Re-ran the focused validation matrix after correcting the global equity master cache test fixture to use a timestamp relative to current UTC time (the old hard-coded 2026-11-08 timestamp became stale as the calendar advanced). No production cache policy was changed.
+- Focused validation matrix: **88 passed in 0.34s** across Balanced strategy/audit, global universe/master, historical providers, analyst consensus/targets, release/publication gates, SWING pipeline/watchlist, Android import safety, and related regression tests.
+- Critical Python modules compile successfully. ZIP CRC/integrity check passed.
+- Refreshed archive v2 is stored in Library at `/AI INVESTOR ECOSYSTEM/AI_Robotics_Investor_Balanced_1.3.4_Corrected_2026-11-17_v2.zip`; SHA-256 `a128ecc73cc7ff62b96104c1ecb41d19f9c060601b59dea001c8be288fdd8f5f`.
+- Recovery workflow and README now pin this v2 checksum (workflow commit `f5cc75fe4e38eea971e9bd4821e8f75c93970aa3`; README commit `b997f10582813f1adcc205c233314590f4e3245a`).
+- Pull request #5 is open as DRAFT against `main`; mergeable flag true, merged=false. It has 8 changed files and does not yet include the recovered full scanner source. CI statuses were empty at the time of verification.
+- Archive transfer to `recovery-input/` and the GitHub recovery workflow run remain outstanding. No live data scan, point-in-time backtest, deployment, KV publication, Android device test, or BUY authorization.
