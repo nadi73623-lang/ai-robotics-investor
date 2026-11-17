@@ -62,3 +62,12 @@
 - Expanded `test_event_risk.py` for missing feed, fresh confirmed critical event, stale feed, unverifiable source and unconfirmed event handling.
 - Tests validate the fail-closed event gate; they do not supply a live corporate-event provider.
 - Validation remains pending GitHub Actions pull-request run.
+
+## 2026-11-17 — technical entry trigger engine
+
+- Added `entry_trigger.py`: deterministic EOD trend/pullback confirmation using validated close, SMA20/SMA50, Wilder RSI14, 20D volume ratio and 20D relative strength.
+- Wired the trigger into `scanner.py`; it replaces the unconditional `entry_trigger=None`.
+- Trigger fails closed when any input is missing, non-finite or invalid. It does not fabricate ATR, stop-loss, target price or expected return.
+- Added regression tests for activation, overbought RSI, negative relative strength, missing inputs and NaN.
+- This does not relax Balanced BUY gates; analyst consensus, full valuation and event feed remain independent blockers.
+- Tests have been committed but no green CI result is claimed until GitHub Actions completes.
