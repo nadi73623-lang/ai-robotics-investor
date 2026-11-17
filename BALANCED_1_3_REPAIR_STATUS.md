@@ -94,3 +94,11 @@ The archive's `historical_dataset_manifest.json` remains:
 - Re-ran focused suites for Balanced integration/audit, global universe/data, historical pipeline/providers, analyst import/targets, release gate, publication integrity and SWING pipeline: **53 passed**. Critical module `compileall` also passed.
 - Patched local archive scanner SHA-256: `78d67b6ea77d252b8c3b55e2a82f518a6d3ea63c5ce046314edf803f8530feab`.
 - This correction currently exists in the recovered working copy only. The GitHub repair branch still contains its older baseline scanner, and the archive recovery workflow has not run. No live scan or deployment was performed.
+
+
+## CI guard added — 2026-11-17
+- Converted the ranking-metadata guard to standard-library `unittest` so it can run without pytest.
+- Updated `.github/workflows/balanced-validation.yml` to run the guard on pushes to this repair branch when scanner/test/workflow files change. Workflow commit: `5ab67d3e7421574d72ed61cfab8c2a398bb5ef97`.
+- Test file commit: `908d98fe251d5ae246632fa1da035e60863eb3a7`.
+- Verified both files by fetching them back from GitHub. A workflow run has not yet been confirmed; do not treat the CI result as passed.
+- The workflow's existing legacy test command `python -m unittest -v test_balanced_strategy_repair.py` remains in place and is a separate pre-existing gate; its availability on this branch must be checked when reviewing the run.
