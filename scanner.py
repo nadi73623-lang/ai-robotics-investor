@@ -185,7 +185,12 @@ def stooq_quote(ticker):
     for row in rows:
         try:
             close=float(row['Close']); volume=float(row['Volume'])
-            if close>0 and volume>=0: bars.append({'date':row['Date'],'close':close,'volume':volume})
+            bar={'date':row['Date'],'close':close,'volume':volume}
+            try:
+                high=float(row['High']); low=float(row['Low'])
+                if high>=low>0: bar.update(high=high,low=low)
+            except (KeyError,TypeError,ValueError): pass
+            if close>0 and volume>=0: bars.append(bar)
         except (TypeError,ValueError): continue
     quote=checked_quote(rows[-1].get('Close'),rows[-1].get('Date'),'Stooq EOD',url)
     quote['currency']='USD'
@@ -210,6 +215,7 @@ def yahoo_quote(ticker):
     stamps=result.get('timestamp') or []
     quote_rows=((result.get('indicators') or {}).get('quote') or [{}])[0]
     closes=quote_rows.get('close') or []; volumes=quote_rows.get('volume') or []
+    highs=quote_rows.get('high') or []; lows=quote_rows.get('low') or []
     valid=[(ts,close) for ts,close in zip(stamps,closes) if close is not None]
     if not valid: raise QuoteError('Yahoo chart has no daily closes')
     ts,price=valid[-1]
@@ -217,7 +223,16 @@ def yahoo_quote(ticker):
     quote=checked_quote(price,day,'Yahoo Finance chart EOD',url)
     quote['currency']=currency
     quote['market_symbol']=symbol
-    quote['bars']=[{'date':datetime.fromtimestamp(t,timezone.utc).date().isoformat(),'close':float(v),'volume':float(volumes[i] or 0)} for i,(t,v) in enumerate(zip(stamps,closes)) if v is not None and i<len(volumes)]
+    quote['bars']=[]
+    for i,(t,v) in enumerate(zip(stamps,closes)):
+        if v is None: continue
+        bar={'date':datetime.fromtimestamp(t,timezone.utc).date().isoformat(),'close':float(v),'volume':float(volumes[i] or 0) if i<len(volumes) else 0.0}
+        if i<len(highs) and i<len(lows) and highs[i] is not None and lows[i] is not None:
+            try:
+                high=float(highs[i]); low=float(lows[i])
+                if high>=low>0: bar.update(high=high,low=low)
+            except (TypeError,ValueError): pass
+        quote['bars'].append(bar)
     return quote
 
 def _market_symbol_supported(ticker):
@@ -289,6 +304,28 @@ def technical_indicators(quote, benchmark_quote=None):
         al=(al*13+max(-change,0))/14
     rsi=100.0 if al==0 else (0.0 if ag==0 else 100-100/(1+ag/al))
     avg_volume=sum(volumes[-20:])/20
+    # Wilder ATR(14) requires genuine daily high/low/previous-close observations.
+    atr=None; support20=None; resistance20=None
+    if len(rows)>=21 and all('high' in b and 'low' in b for b in (quote.get('bars') or [])[-21:]):
+        raw={}
+        for b in quote.get('bars') or []:
+            try: raw[datetime.fromisoformat(b['date']).date()]=(float(b['high']),float(b['low']))
+            except (KeyError,TypeError,ValueError): continue
+        aligned=[(d,raw[d][0],raw[d][1],closes[i]) for i,(d,_,_) in enumerate(rows) if d in raw]
+        if len(aligned)>=15:
+            tr=[]
+            for i,(d,high,low,close) in enumerate(aligned):
+                if i==0: continue
+                prev=aligned[i-1][3]
+                tr.append(max(high-low,abs(high-prev),abs(low-prev)))
+            if len(tr)>=14:
+                atr=sum(tr[:14])/14
+                for value in tr[14:]: atr=(atr*13+value)/14
+                atr=round(atr,6)
+            last20=aligned[-20:]
+            if len(last20)==20:
+                support20=round(min(x[2] for x in last20),6)
+                resistance20=round(max(x[1] for x in last20),6)
     rs=None
     benchmark=benchmark_quote.get('market_symbol','SPY') if benchmark_quote else 'SPY'
     bench_rows={}
@@ -302,7 +339,9 @@ def technical_indicators(quote, benchmark_quote=None):
       'rsi_14':round(rsi,2),'volume_ratio20':round(volumes[-1]/avg_volume,3) if avg_volume else None,
       'above_sma20':closes[-1]>sma20,'above_sma50':closes[-1]>sma50,
       'relative_strength_20d_pct':round(rs,2) if rs is not None else None,'relative_strength_benchmark':benchmark if rs is not None else None,
-      'method':'SMA20/SMA50 and simple RSI14 from daily bars; 20-session relative performance versus SPY on common dates'}
+      'atr_14':atr,'support_20d':support20,'resistance_20d':resistance20,
+      'atr_status':'ok' if atr is not None else 'unavailable_high_low_missing',
+      'method':'SMA20/SMA50, Wilder RSI14, Wilder ATR14 from genuine high/low bars; 20-session relative performance versus SPY on common dates'}
 
 def calculate_valuation(company, today=None):
     """Indicative trailing annual ratios, only if SEC periods and shares are defensible.
