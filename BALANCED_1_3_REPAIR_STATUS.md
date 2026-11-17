@@ -159,3 +159,12 @@ The archive's `historical_dataset_manifest.json` remains:
 - Combined invocation exceeded the runtime limit; no full-suite pass is claimed.
 - Created corrected archive v3 in the project Library: `AI_Robotics_Investor_Balanced_1.3.4_Corrected_2026-11-17_v3.zip`, SHA-256 `25b70bf831667bbb90e8cb6562d96f080dc27fdeca563b707ee1e30a76f56610`, 1,038 files, ZIP CRC passed. This v3 checksum is not yet configured in the GitHub recovery workflow; the current workflow still expects v2. The v3 archive is not in GitHub `recovery-input/`.
 - No live market scan, real-data backtest, deployment, KV publication, Android device test, or BUY authorization. `main` unchanged.
+
+
+## v3 recovery preparation and integration-test investigation — 2026-11-17
+- Updated `.github/workflows/recover-balanced-archive.yml` expected SHA-256 from v2 to v3: `25b70bf831667bbb90e8cb6562d96f080dc27fdeca563b707ee1e30a76f56610`. Commit: `db44b1acdb267b869beaa3a1f6d371e1e88af9a3`.
+- Updated `recovery-input/README.md` to identify the exact v3 archive and checksum. Commit: `cd68b2b03edda67cb18cfcd518afaef60e6a21d1`.
+- Locally reverified v3 ZIP: 1,038 entries, CRC clean, SHA-256 matches workflow. The archive does not include the recovery workflow itself; workflow remains maintained in the GitHub repair branch.
+- Re-ran `tests.test_full_scan_integration`: SEC-outage case passes. SEC-success case does not finish within the execution limit, including with a reduced local test budget. Inspection shows `scanner.main()` also invokes global-universe loading and other stages not covered by the current mocks. This test is therefore NOT fully passing and requires deterministic isolation of external providers / bounded fixtures before it can be accepted.
+- Recovery workflow still cannot execute: `recovery-input/` has README only; archive bytes are not committed to GitHub. No binary-upload action is available in the connected GitHub toolset. The workflow has not been dispatched because it would fail its exactly-one-archive precondition.
+- No full production scanner integration, live-data scan, real-data backtest, deployment, KV publication, physical Android test, or BUY authorization. `main` remains unchanged.
