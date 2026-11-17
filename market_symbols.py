@@ -31,8 +31,6 @@ def yahoo_symbol(ticker: str) -> str:
         return YAHOO_SYMBOLS[value]
     # Explicit exchange suffixes are accepted only for syntactically valid symbols.
     import re
-    if value in YAHOO_SYMBOLS:
-        return YAHOO_SYMBOLS[value]
     if re.fullmatch(r"\^[A-Z0-9]{2,12}", value):
         return value
     if re.fullmatch(r"[A-Z0-9]{1,12}(?:\.[A-Z]{1,4})?", value):
