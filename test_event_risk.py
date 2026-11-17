@@ -14,6 +14,11 @@ class EventRiskTests(unittest.TestCase):
         self.assertEqual(out["status"],"unavailable")
         self.assertIn("event_feed_missing",out["flags"])
 
+    def test_empty_feed_blocks(self):
+        out=validate_event_rows([],today=date(2026,11,17))
+        self.assertEqual(out["status"],"unavailable")
+        self.assertIn("event_feed_empty",out["flags"])
+
     def test_fresh_critical_event_is_flagged(self):
         out=validate_event_rows([self.row()],today=date(2026,11,17))
         self.assertEqual(out["status"],"ok")
