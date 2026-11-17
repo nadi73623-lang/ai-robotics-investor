@@ -102,3 +102,14 @@ The archive's `historical_dataset_manifest.json` remains:
 - Test file commit: `908d98fe251d5ae246632fa1da035e60863eb3a7`.
 - Verified both files by fetching them back from GitHub. A workflow run has not yet been confirmed; do not treat the CI result as passed.
 - The workflow's existing legacy test command `python -m unittest -v test_balanced_strategy_repair.py` remains in place and is a separate pre-existing gate; its availability on this branch must be checked when reviewing the run.
+
+
+## Corrected recovery package — 2026-11-17
+- Re-extracted the Library source archive into a clean workspace and corrected the recovered `scanner.py` metadata: `investment_ranking_available=false` because `attention_score` is media attention, not an investment ranking.
+- Added `tests/test_scanner_ranking_metadata.py` and updated stale `tests/test_android_import_safety_source.py` to assert the current asynchronous, bounded import validation implementation.
+- Critical Python modules compile successfully. Focused regression suite: **54 passed**; Android import + ranking metadata tests: **3 passed**.
+- Full pytest suite is NOT green/complete: an unrestricted run exposed multiple failures and timed out; `pytest -x` stopped after the first stale Android source assertion (now corrected locally) and a subsequent run stalled in the scan/network-heavy audit test. No full-suite pass is claimed.
+- Corrected archive uploaded to the user's Library at `/AI INVESTOR ECOSYSTEM/AI_Robotics_Investor_Balanced_1.3.4_Corrected_2026-11-17.zip`. SHA-256: `d55e0aac82a10f9e1567395d70cf2d4a354ee3100301c02d01096c5db5781401`.
+- Updated recovery workflow's expected checksum and recovery README for this corrected archive (workflow commit `3e8d66d9839ef09937d6ef2e93cc6f9503bac177`; README commit `114c9896bf714f5a074b59d26107a7e97128241d`). These files were fetched back and verified.
+- Archive bytes have not yet been committed to `recovery-input/`; GitHub Actions recovery has not run, and recovered source has not been ported to the branch. This still requires the ZIP to be uploaded to that branch.
+- No live scan, point-in-time backtest, production deployment, Cloudflare KV publication, Android release or physical-device test. BUY authorization remains false; `main` remains untouched.
