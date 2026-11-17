@@ -31,3 +31,14 @@
 - No paid data services were enabled.
 - No APK was built or published.
 - Investment BUY publication remains disabled.
+
+## 2026-11-17 — global market symbol validation repair
+
+### Zapisane zmiany
+- Fixed the exchange-suffix regular expression in `market_symbols.py`; valid symbols such as `7203.T` and `2330.TW` are accepted without treating the dot as a wildcard or requiring a literal backslash.
+- Expanded negative tests for malformed suffixes and invalid separators.
+
+### Verification
+- Changes pushed only to `repair/scanner-clean-main-2026-11-16`; `main` remains unchanged.
+- GitHub Actions must complete the post-push test and scan workflow before this repair is considered verified.
+- No paid data services enabled; no BUY authorization changed.
