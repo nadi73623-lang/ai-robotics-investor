@@ -1,12 +1,13 @@
 import unittest
+from datetime import date, timedelta
 from scanner import technical_indicators
 
 class AtrTests(unittest.TestCase):
     def quote(self, include_range=True):
-        bars=[]
+        bars=[]; start=date(2026,1,1)
         for i in range(60):
             close=100+i*0.2
-            bar={"date":f"2026-01-{i+1:02d}","close":close,"volume":1000}
+            bar={"date":(start+timedelta(days=i)).isoformat(),"close":close,"volume":1000}
             if include_range:
                 bar.update(high=close+1,low=close-1)
             bars.append(bar)
