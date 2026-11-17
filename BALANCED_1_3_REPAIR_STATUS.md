@@ -150,3 +150,12 @@ The archive's `historical_dataset_manifest.json` remains:
 - Source inspection confirms scanner output explicitly sets `investment_ranking_available: False`, labels `attention_score` as media attention rather than investment rating, and retains `buy_signals_authorized: false`. These are safeguards, not a functioning BUY publication path.
 - Recovery workflow was re-read: it requires exactly one ZIP in `recovery-input/` with the v2 SHA-256, validates ZIP paths/symlinks/CRC, extracts under `recovered/AI_Robotics_Investor`, compiles, and commits to the repair branch. GitHub repository still does not contain the ZIP, so the workflow remains untriggered.
 - No live market scan, real-data backtest, complete suite pass, deployment, KV write, production publication, or Android device test was performed. `main` remains unchanged.
+
+
+## Full-scan fixture maintenance — 2026-11-17 (Cycle 291)
+- Found a stale integration-test assumption: `tests/test_full_scan_integration.py` asserted exactly 68 companies although the recovered scanner's current `UNIVERSE` contains 92.
+- Replaced hard-coded expected counts with `len(scanner.UNIVERSE)`; strict equality checks remain for company count, quote coverage, SEC refresh and shares coverage.
+- Both integration scenarios passed independently: SEC fixtures available **1/1 PASS**; simulated SEC outage **1/1 PASS**. The outage test retains its assertion that release readiness is false and the capitalization blocker is present.
+- Combined invocation exceeded the runtime limit; no full-suite pass is claimed.
+- Created corrected archive v3 in the project Library: `AI_Robotics_Investor_Balanced_1.3.4_Corrected_2026-11-17_v3.zip`, SHA-256 `25b70bf831667bbb90e8cb6562d96f080dc27fdeca563b707ee1e30a76f56610`, 1,038 files, ZIP CRC passed. This v3 checksum is not yet configured in the GitHub recovery workflow; the current workflow still expects v2. The v3 archive is not in GitHub `recovery-input/`.
+- No live market scan, real-data backtest, deployment, KV publication, Android device test, or BUY authorization. `main` unchanged.
