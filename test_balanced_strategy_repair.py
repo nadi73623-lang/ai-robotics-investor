@@ -37,8 +37,9 @@ class RepairBranchTests(unittest.TestCase):
     def test_preserved_main_scanner_baseline_hash(self):
         p=Path("baseline/main-2026-11-09/scanner.py")
         self.assertTrue(p.is_file())
+        # SHA-256 of the preserved file bytes (not its Git object/commit SHA).
         self.assertEqual(hashlib.sha256(p.read_bytes()).hexdigest(),
-                         "9aa7ddda22d48b200a1c0f95c38b529d6eb7cc3e")
+                         "3fd6013f08463b22d92a1fef7dcba651f9e49d1039c657096ce8f1da62cc5261")
 
 if __name__=="__main__":
     unittest.main()
