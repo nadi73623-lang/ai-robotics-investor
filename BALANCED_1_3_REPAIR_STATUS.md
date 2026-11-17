@@ -131,3 +131,11 @@ The archive's `historical_dataset_manifest.json` remains:
 - A separate retry of the older failing run (head SHA `6b086ca1cd71787f600d600d11cfd2ee6d317de9`) still failed because that run tested an earlier revision of the SHA assertion. It is not the validation result for commit `8a0aa9ea`.
 - Current successful CI validates only the isolated guard tests; it does not validate the recovered full scanner archive or live data pipeline.
 - PR #5 remains DRAFT and unmerged. The archive ZIP is still absent from `recovery-input/`; the recovery workflow has not run. Full source integration, real-data scan, point-in-time backtest, production deployment, KV publication, Android device test, and BUY authorization remain outstanding. `main` remains unchanged.
+
+
+## Local archive revalidation — 2026-11-17 (continued)
+- Re-materialized the corrected v2 archive from the project Library into the active runtime. SHA-256 verified as `a128ecc73cc7ff62b96104c1ecb41d19f9c060601b59dea001c8be288fdd8f5f`; ZIP CRC check passed; archive contains 1,069 members.
+- Extracted source compiles for critical modules: `scanner.py`, `balanced_strategy.py`, `swing_engine.py`, `release_gate.py`, `publish_guard.py`, `global_market_universe.py`, and `historical_data_pipeline.py`.
+- Targeted regression run: **34 tests passed** across Balanced integration/audit trace, release and publication gates, global market universe, historical pipeline, analyst consensus import, SWING pipeline, and scanner ranking metadata.
+- A broader `unittest discover` run began successfully but exceeded the execution time limit after initial Android/release checks and 49 dots; it is not recorded as a pass. No complete-suite result is claimed.
+- The archive is verified locally, but its binary is still not present in GitHub `recovery-input/`; recovery workflow cannot run until the archive is uploaded there. No live market scan, audited point-in-time backtest, production deployment, KV publication, physical Android test, or BUY authorization was performed. `main` remains unchanged.
