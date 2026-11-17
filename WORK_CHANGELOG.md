@@ -100,3 +100,9 @@
 - Added `summarize_signals()` and report-level counts for authorized BUY, EARLY ENTRY watch, active technical triggers, WATCH and blocked decisions.
 - Added `test_signal_summary.py` to ensure a textual BUY without `buy_eligible=True` is not counted as an authorized BUY.
 - Global investment ranking remains blocked until complete valuation, live event/consensus coverage and validated walk-forward backtest exist.
+
+## 2026-11-17 — event-feed empty-state fail-closed and test correction
+
+- Fixed a safety gap: an empty corporate-events CSV previously passed validation as an apparently healthy feed. Empty rows now return `unavailable` with `event_feed_empty`, preserving BUY veto.
+- Added a regression test for the empty-feed case.
+- Corrected the expected WATCH count in `test_signal_summary.py` (only records whose signal is WATCH are counted).
