@@ -81,3 +81,13 @@
 - ATR, stop-loss and profit targets remain unavailable because current OHLCV payload stores close and volume only; daily high/low are not present. No ATR or price levels are fabricated.
 - Added regression tests for proximity, oversold distance, overheated RSI, weak relative strength and missing data.
 - No CI success claimed; GitHub Actions has not returned workflow runs for recent commits.
+
+## 2026-11-17 — OHLC ATR, support/resistance and risk geometry
+
+- Extended Stooq and Yahoo daily bars to retain genuine High/Low where supplied.
+- Added Wilder ATR(14) and 20-session support/resistance only when real High/Low data are present; otherwise ATR remains unavailable.
+- Added `risk_plan.py`: reference close, 1.5×ATR stop and 2R/3R scenario targets; explicit `scenario_only` status, not a forecast or BUY signal.
+- Wired `risk_plan` into each company report record.
+- Added tests for ATR availability, support/resistance, 2R/3R calculations and missing/invalid ATR.
+- Note: Stooq may not return High/Low for all tickers; no ATR is fabricated when missing.
+- No CI success claimed; tests require GitHub Actions execution.
