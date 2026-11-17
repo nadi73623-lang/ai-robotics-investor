@@ -449,10 +449,18 @@ def main():
         c['valuation']=calculate_valuation(c)
         c['valuation_status']=('Orientacyjna kapitalizacja i mnożniki roczne — nie ranking zakupu' if c['valuation']['status']=='partial' else 'Brak wystarczających danych do wyceny')
     valuation_coverage=sum(c['valuation']['status']=='partial' for c in companies)
-    # Fetch a separate broad-market benchmark; relative strength stays unavailable if it fails.
-    try: benchmark_quote=yahoo_quote('SPY')
-    except Exception as exc:
-        benchmark_quote={}; print('BENCHMARK_FAIL SPY',str(exc)[:180])
+    # Fetch a currency-matched ETF benchmark for each listing currency in the quote cache.
+    benchmark_quotes={}
+    currencies=sorted({(c.get('price') or {}).get('currency','USD') for c in companies if c.get('price')})
+    for currency in currencies:
+        benchmark_symbol=benchmark_for_currency(currency)
+        if not benchmark_symbol:
+            print('BENCHMARK_UNMAPPED',currency)
+            continue
+        try:
+            benchmark_quotes[currency]=yahoo_quote(benchmark_symbol)
+        except Exception as exc:
+            print('BENCHMARK_FAIL',currency,benchmark_symbol,str(exc)[:160])
     # External analyst/event feeds are opt-in CSV inputs with strict provenance and freshness checks.
     consensus_by_ticker=load_consensus_csv(ROOT/'data'/'analyst_consensus.csv')
     event_feed=load_event_risk_csv(ROOT/'data'/'corporate_events.csv')
@@ -460,7 +468,7 @@ def main():
     for company in companies:
         # Relative strength is only comparable to SPY for USD-denominated listings.
         quote=company.get('price') or {}
-        comparable_benchmark=benchmark_quote if quote.get('currency','USD')=='USD' else None
+        comparable_benchmark=benchmark_quotes.get(quote.get('currency','USD'))
         tech=technical_indicators(quote,comparable_benchmark)
         company['technical']=tech
         q=company.get('price') or {}
