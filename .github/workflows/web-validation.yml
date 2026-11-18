@@ -46,8 +46,12 @@ jobs:
           from pathlib import Path
           html = Path("index.html").read_text(encoding="utf-8")
           for token in ('manifest.webmanifest', 'data/scan.json', 'sw.js',
-                        'Ranking inwestycyjny / sygnały BUY: WYŁĄCZONE'):
+                        'Ranking inwestycyjny / sygnały BUY: WYŁĄCZONE',
+                        'function validateBackendReport', 'release_ready!==true',
+                        "balanced-1.3-audit", 'function testBackend',
+                        "method:'GET'", "backendUrl"):
               assert token in html, f"missing UI requirement: {token}"
+          assert 'localStorage.setItem(backendUrl' not in html
           for path in ('manifest.webmanifest', 'sw.js', 'assets/icon.svg'):
               assert Path(path).is_file(), f"missing PWA asset: {path}"
           print("PWA entrypoint and safety disclosure valid")
