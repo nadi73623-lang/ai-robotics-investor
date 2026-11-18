@@ -216,3 +216,12 @@ The archive's `historical_dataset_manifest.json` remains:
 - Data contract explicitly says `investment_ranking_available=false`; ranking method is media attention (`attention_score`), not investment quality. No company has `investment_score`. Statuses: 12 `Do analizy`, 56 `Obserwacja`. This is a news/coverage scan, not an actionable BUY scanner.
 - Quote health is partial (21 updated out of 24 attempts); ABB, IRBT and KUKAF quote retrieval failed. Latest price observations in this scan are EOD dated 2026-11-17.
 - Conclusion: do not publish this scan as an investment report or feed it to the Android report endpoint as a release-ready report. Preserve BUY disabled until recovered Balanced engine, validated OHLCV/point-in-time analyst history and end-to-end release gates pass.
+
+
+## Web PWA implementation and CI — 2026-11-18
+- Reused existing static PWA shell in `index.html` (no new mobile app framework or paid service). Refreshed branch `data/scan.json` from the latest main scan (source blob `2f0ad3a37aac2beda3730693cf182c0be7e4cbf2`, generated `2026-11-18T07:21:56.535227+00:00`, 68 companies). This data remains explicitly non-actionable: `investment_ranking_available=false`.
+- Updated the web UI disclosure so the unavailable investment ranking and BUY signals are explicitly marked disabled; no inferred BUY signals were added.
+- Added `.github/workflows/web-validation.yml`; run `44272569957` completed with conclusion `success`. It validated JSON, required safety flag, PWA entrypoint, manifest, service worker and icon.
+- Existing `web-deploy.yml` validation job passed on run `44272503876`, but deploy job failed before a runner started (job has zero steps and runner_id 0). Deployment is therefore NOT confirmed. Repository Pages configuration/permissions need owner-side verification; do not claim a live web URL until a successful deploy run reports its page_url.
+- The PWA is a read-only static view of the current news/coverage scan, not a full Balanced investment engine and not connected to private Cloudflare Worker. Browser localStorage stores only local watchlist/notes. It is not yet live-deployed or verified on the Motorola device.
+- The v4 source archive still has not been integrated into the branch. Full recovered-code regression suite, historical OHLCV/analyst consensus validation, walk-forward backtest and Android/Worker integration remain blocked. `main` unchanged; no production report publication or BUY authorization.
