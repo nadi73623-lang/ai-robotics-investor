@@ -1,16 +1,8 @@
 name: AI Robotics market scan
 on:
-  push:
-    branches: [repair/balanced-1.3.4-scanner-port]
-    paths:
-      - 'scanner.py'
-      - 'balanced_strategy.py'
-      - '.github/workflows/scan.yml'
   workflow_dispatch:
-  schedule:
-    - cron: '17 */6 * * *'
 permissions:
-  contents: write
+  contents: read
 jobs:
   scan:
     runs-on: ubuntu-latest
@@ -22,10 +14,3 @@ jobs:
           python-version: '3.12'
       - name: Scan public news
         run: python scanner.py
-      - name: Save scan results
-        run: |
-          git config user.name 'github-actions[bot]'
-          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add data/scan.json data/signal_rejections.json
-          git diff --cached --quiet || (git commit -m 'Update AI robotics scan' && git push)
-          
