@@ -1,0 +1,64 @@
+name: AI Robotics web app — validate and deploy
+on:
+  push:
+    branches: [repair/balanced-1.3.4-scanner-port]
+    paths:
+      - 'index.html'
+      - 'manifest.webmanifest'
+      - 'sw.js'
+      - 'assets/**'
+      - 'data/scan.json'
+      - '.github/workflows/web-deploy.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: true
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate web app and report safety contract
+        run: |
+          python - <<'PY'
+          import json, pathlib
+          root=pathlib.Path('.')
+          html=(root/'index.html').read_text()
+          data=json.loads((root/'data/scan.json').read_text())
+          manifest=json.loads((root/'manifest.webmanifest').read_text())
+          assert '<html lang="pl">' in html
+          assert 'investment_ranking_available' not in html or 'WYŁĄCZONE' in html
+          assert data.get('scan_status') == 'ok'
+          assert data.get('investment_ranking_available') is False
+          assert isinstance(data.get('companies'), list) and data['companies']
+          assert manifest.get('start_url') == './'
+          for asset in ['sw.js','assets/icon.svg']:
+              assert (root/asset).is_file(), asset
+          print('Web shell, PWA assets and non-actionable report contract: PASS')
+          print('Generated:',data.get('generated_at'),'companies:',len(data['companies']))
+          PY
+      - name: Prepare static site
+        run: |
+          mkdir -p _site
+          cp index.html manifest.webmanifest sw.js _site/
+          cp -R assets data _site/
+          touch _site/.nojekyll
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: validate
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
