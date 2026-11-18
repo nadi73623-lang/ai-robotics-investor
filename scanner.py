@@ -159,25 +159,88 @@ def stooq_quote(ticker):
     if not rows: raise QuoteError('Stooq CSV has no rows')
     return checked_quote(rows[-1].get('Close'),rows[-1].get('Date'),'Stooq EOD',url)
 
-def yahoo_quote(ticker):
-    # Public chart endpoint: availability and redistribution rights may change.
+def yahoo_chart_history(ticker):
+    """Fetch daily OHLCV history; return only validated, date-aligned rows."""
     if not re.fullmatch(r'[A-Z]{1,5}',ticker): raise QuoteError('unsupported ticker')
-    url='https://query1.finance.yahoo.com/v8/finance/chart/'+urllib.parse.quote(ticker)+'?interval=1d&range=15d'
+    url='https://query1.finance.yahoo.com/v8/finance/chart/'+urllib.parse.quote(ticker)+'?interval=1d&range=3mo'
     req=urllib.request.Request(url,headers={'User-Agent':'Mozilla/5.0','Accept':'application/json'})
     with urllib.request.urlopen(req,timeout=12) as response:
         obj=json.load(response)
     results=(obj.get('chart') or {}).get('result') or []
     if not results: raise QuoteError('Yahoo chart has no result')
-    result=results[0]
-    meta=result.get('meta') or {}
-    if meta.get('currency')!='USD': raise QuoteError('Yahoo quote currency is not USD')
+    result=results[0]; meta=result.get('meta') or {}
+    if meta.get('currency')!='USD' or meta.get('symbol')!=ticker:
+        raise QuoteError('Yahoo chart symbol/currency mismatch')
     stamps=result.get('timestamp') or []
-    closes=(((result.get('indicators') or {}).get('quote') or [{}])[0].get('close') or [])
-    valid=[(ts,close) for ts,close in zip(stamps,closes) if close is not None]
-    if not valid: raise QuoteError('Yahoo chart has no daily closes')
-    ts,price=valid[-1]
-    day=datetime.fromtimestamp(ts,timezone.utc).date().isoformat()
-    return checked_quote(price,day,'Yahoo Finance chart EOD',url)
+    quote=((result.get('indicators') or {}).get('quote') or [{}])[0]
+    closes=quote.get('close') or []; volumes=quote.get('volume') or []
+    adjusted=(((result.get('indicators') or {}).get('adjclose') or [{}])[0].get('adjclose') or [])
+    rows=[]
+    for i,ts in enumerate(stamps):
+        if i>=len(closes) or i>=len(volumes): continue
+        close=closes[i]; volume=volumes[i]
+        if type(close) not in (int,float) or not math.isfinite(close) or close<=0: continue
+        if type(volume) not in (int,float) or not math.isfinite(volume) or volume<0: continue
+        adj=adjusted[i] if i<len(adjusted) else None
+        if type(adj) not in (int,float) or not math.isfinite(adj) or adj<=0: adj=close
+        day=datetime.fromtimestamp(ts,timezone.utc).date().isoformat()
+        rows.append((day,float(close),float(adj),float(volume)))
+    if len(rows)<50: raise QuoteError('Yahoo chart has fewer than 50 valid daily OHLCV rows')
+    if [r[0] for r in rows] != sorted(set(r[0] for r in rows)):
+        raise QuoteError('Yahoo chart dates are duplicated or unordered')
+    return url,rows
+
+def technical_indicators(closes,volumes,dates,benchmark_closes=None,benchmark_dates=None):
+    """Compute dated RSI, moving averages, volume ratio and excess return vs SPY."""
+    if len(closes)<50 or len(volumes)!=len(closes) or len(dates)!=len(closes): return {}
+    if any(type(x) not in (int,float) or not math.isfinite(x) or x<=0 for x in closes[-50:]): return {}
+    if any(type(x) not in (int,float) or not math.isfinite(x) or x<0 for x in volumes[-20:]): return {}
+    day=dates[-1]; sma20=sum(closes[-20:])/20; sma50=sum(closes[-50:])/50
+    out={'sma20':round(sma20,4),'sma50':round(sma50,4),
+         'sma20_as_of':day,'sma50_as_of':day,
+         'above_sma20':closes[-1]>sma20,'above_sma50':closes[-1]>sma50}
+    avg=sum(volumes[-20:])/20
+    if avg>0:
+        out.update(volume=volumes[-1],volume_avg20=round(avg,2),
+                   volume_ratio20=round(volumes[-1]/avg,3),volume_as_of=day)
+    if benchmark_closes and benchmark_dates and len(benchmark_closes)==len(benchmark_dates):
+        bm={d:v for d,v in zip(benchmark_dates,benchmark_closes)
+            if type(v) in (int,float) and math.isfinite(v) and v>0}
+        start=dates[-21] if len(dates)>=21 else None
+        if start in bm and day in bm and closes[-21]>0:
+            excess=((closes[-1]/closes[-21]-1)-(bm[day]/bm[start]-1))*100
+            out.update(relative_strength_20d_pct=round(excess,3),
+                       relative_strength_benchmark='SPY',relative_strength_as_of=day)
+    return out
+
+def rsi_wilder(closes,period=14):
+    if len(closes)<period+1 or any(type(x) not in (int,float) or not math.isfinite(x) or x<=0 for x in closes):
+        return None
+    deltas=[b-a for a,b in zip(closes,closes[1:])]
+    gains=[max(d,0) for d in deltas]; losses=[max(-d,0) for d in deltas]
+    avg_gain=sum(gains[:period])/period; avg_loss=sum(losses[:period])/period
+    for gain,loss in zip(gains[period:],losses[period:]):
+        avg_gain=(avg_gain*(period-1)+gain)/period
+        avg_loss=(avg_loss*(period-1)+loss)/period
+    if avg_loss==0: return 100.0 if avg_gain>0 else 50.0
+    return round(100-100/(1+avg_gain/avg_loss),2)
+
+def yahoo_quote(ticker,benchmark=None):
+    # Free public EOD source; no redistribution entitlement is implied.
+    url,rows=yahoo_chart_history(ticker)
+    dates=[r[0] for r in rows]; raw=[r[1] for r in rows]
+    adjusted=[r[2] for r in rows]; volumes=[r[3] for r in rows]
+    ts_day,price=dates[-1],raw[-1]
+    benchmark_closes=benchmark_dates=None
+    if benchmark:
+        benchmark_dates,benchmark_closes=benchmark
+    indicators=technical_indicators(adjusted,volumes,dates,benchmark_closes,benchmark_dates)
+    rsi=rsi_wilder(adjusted)
+    result=checked_quote(price,ts_day,'Yahoo Finance chart EOD',url)
+    if rsi is not None:
+        result.update(rsi_14=rsi,rsi_as_of=ts_day,rsi_price_basis='adjusted_close')
+    result.update(indicators)
+    return result
 
 def add_prices(companies,prior):
     old={x.get('ticker'):x.get('price') for x in prior.get('companies',[]) if x.get('price')}
@@ -185,9 +248,15 @@ def add_prices(companies,prior):
     eligible=[c for c in companies if re.fullmatch(r'[A-Z]{1,5}',c['ticker'])]
     # Always check AVGO as a canary; rotate remaining slots across scans.
     eligible.sort(key=lambda c:(c['ticker']!='AVGO',bool(old.get(c['ticker'],{}).get('close_usd')),old.get(c['ticker'],{}).get('checked_at',''),c['ticker']))
+    benchmark=None
+    try:
+        _,benchmark_rows=yahoo_chart_history('SPY')
+        benchmark=([r[0] for r in benchmark_rows],[r[2] for r in benchmark_rows])
+    except Exception as exc:
+        print('BENCHMARK_UNAVAILABLE',str(exc)[:160])
     for c in eligible[:PRICE_BATCH_SIZE]:
         ticker=c['ticker'];attempted+=1;errors=[]
-        for name,provider in [('Stooq',stooq_quote),('Yahoo',yahoo_quote)]:
+        for name,provider in [('Stooq',stooq_quote),('Yahoo',lambda symbol:yahoo_quote(symbol,benchmark))]:
             try:
                 quote=provider(ticker)
                 quote['checked_at']=datetime.now(timezone.utc).isoformat()
