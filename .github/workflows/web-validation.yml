@@ -1,0 +1,54 @@
+name: Web PWA validation
+on:
+  push:
+    branches: [repair/balanced-1.3.4-scanner-port]
+    paths:
+      - 'index.html'
+      - 'data/scan.json'
+      - 'manifest.webmanifest'
+      - 'sw.js'
+      - 'assets/**'
+      - '.github/workflows/web-validation.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'index.html'
+      - 'data/scan.json'
+      - 'manifest.webmanifest'
+      - 'sw.js'
+      - 'assets/**'
+      - '.github/workflows/web-validation.yml'
+permissions:
+  contents: read
+jobs:
+  validate-web-pwa:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate scan JSON and non-actionable safety state
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          d = json.loads(Path("data/scan.json").read_text(encoding="utf-8"))
+          assert d.get("scan_status") == "ok"
+          assert isinstance(d.get("companies"), list) and d["companies"]
+          assert d.get("investment_ranking_available") is False
+          assert all(c.get("ticker") for c in d["companies"])
+          print("scan JSON valid:", len(d["companies"]), "companies")
+          PY
+      - name: Validate PWA entrypoint and safety disclosure
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          html = Path("index.html").read_text(encoding="utf-8")
+          for token in ('manifest.webmanifest', 'data/scan.json', 'sw.js',
+                        'Ranking inwestycyjny / sygnały BUY: WYŁĄCZONE'):
+              assert token in html, f"missing UI requirement: {token}"
+          for path in ('manifest.webmanifest', 'sw.js', 'assets/icon.svg'):
+              assert Path(path).is_file(), f"missing PWA asset: {path}"
+          print("PWA entrypoint and safety disclosure valid")
+          PY
