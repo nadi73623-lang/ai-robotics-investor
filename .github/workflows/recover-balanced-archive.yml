@@ -63,8 +63,38 @@ jobs:
           print("Recovered scanner:", destination / "scanner.py")
           PY
 
+      - name: Set up Python and install test runner
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+
       - name: Compile recovered Python source
         run: python -m compileall -q recovered/AI_Robotics_Investor
+
+      - name: Run focused regression matrix
+        working-directory: recovered/AI_Robotics_Investor
+        env:
+          PYTHONPATH: .
+        run: |
+          python -m pip install --disable-pip-version-check pytest
+          python -m pytest -q \
+            tests/test_full_scan_integration.py \
+            tests/test_balanced_strategy_integration.py \
+            tests/test_balanced_backtest.py \
+            tests/test_historical_data_pipeline.py \
+            tests/test_analyst_targets.py \
+            tests/test_global_market_universe.py \
+            tests/test_release_gate.py \
+            tests/test_release_integrity.py \
+            tests/test_private_release_pipeline.py \
+            tests/test_financial_alignment_and_quote_integrity.py \
+            tests/test_price_provenance.py \
+            tests/test_fundamentals_provenance.py \
+            tests/test_cross_scan_integrity.py \
+            tests/test_valuation_integrity_cycle07.py \
+            tests/test_numeric_integrity_batch55.py \
+            tests/test_publish_integrity_extended.py \
+            tests/test_provider_cap_fallback.py
 
       - name: Commit recovered source snapshot
         run: |
