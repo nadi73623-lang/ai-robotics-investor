@@ -189,3 +189,14 @@ The archive's `historical_dataset_manifest.json` remains:
 - Re-read recovery workflow from GitHub: it expects the exact v4 SHA above, validates one ZIP, CRC, safe paths and root, compiles the extracted tree, then commits it to `repair/balanced-1.3.4-scanner-port`. GitHub `recovery-input/` currently contains only `README.md`; workflow has not run.
 - PR #5 remains open, Draft, unmerged; its description confirms the recovered scanner archive is not yet ported. `main` remains untouched.
 - No full repository test-suite pass, live market scan, audited point-in-time backtest, Cloudflare deployment/KV publication, Android device test, or BUY authorization. Keep `investment_ranking_available=false` and `buy_signals_authorized=false` until the separate acceptance gates are met.
+
+
+## Independent follow-up — 2026-11-18 (local v4 extraction)
+- Revalidated the Library v4 archive in a clean extracted working copy; its SHA-256 remains `783e2029896a381e82ccf814c1fc8b4793e2c5f3588612a96ed84eeb4051eeca`.
+- Full `python -m compileall -q .` completed successfully.
+- Focused regression matrix across 19 modules: **88 passed, 4 subtests passed in 6.06s**.
+- Two stale test fixtures were corrected locally in `tests/test_evidence_freshness.py` and `tests/test_research_priority_and_atomic.py`; validators and production strategy logic were not weakened or changed.
+- Full `pytest -q` did not complete within the execution window; it timed out after partial progress. No full-suite pass is claimed.
+- These two fixture corrections are in the local extracted working copy only; they are not in the v4 ZIP or GitHub branch. A refreshed archive v5 was not created.
+- Current GitHub CI for head `1f804d67ac15d1991928280cbebe3cd5647b6137`: run `44097392838` completed successfully. Both isolated job steps passed: baseline/Balanced decision gates and scanner ranking metadata semantics. This does not test the recovered full scanner archive.
+- PR #5 remains open as Draft and unmerged. The v4 ZIP is still absent from `recovery-input/`; the recovery workflow has not run. Full source port, real-data walk-forward backtest, live scan, Cloudflare deployment/KV publication, Android device test and BUY authorization remain outstanding. `main` remains unchanged.
