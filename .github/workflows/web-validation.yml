@@ -38,7 +38,14 @@ jobs:
           assert isinstance(d.get("companies"), list) and d["companies"]
           assert d.get("investment_ranking_available") is False
           assert all(c.get("ticker") for c in d["companies"])
-          print("scan JSON valid:", len(d["companies"]), "companies")
+          assert all(isinstance(c.get("investment_signal"), dict) for c in d["companies"]), "missing per-company Balanced decisions"
+          assert d.get("buy_signals_authorized") is False, "BUY publication must remain fail-closed"
+          ledger=json.loads(Path("data/signal_rejections.json").read_text(encoding="utf-8"))
+          assert ledger.get("buy_signals_authorized") is False
+          assert ledger.get("total") == len(d["companies"]), "decision ledger/report company count mismatch"
+          assert ledger.get("strategy_version") == "balanced-1.3-audit"
+          assert sum(d.get("investment_signal_counts", {}).values()) == len(d["companies"])
+          print("scan JSON and Balanced decision ledger valid:", len(d["companies"]), "companies")
           PY
       - name: Parse embedded application JavaScript
         run: |
