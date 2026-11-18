@@ -208,3 +208,11 @@ The archive's `historical_dataset_manifest.json` remains:
 - PR-triggered isolated CI for this commit: run `44271656218`, job `isolated-tests`, conclusion `success`. This is not execution of the recovery workflow or the new archive regression matrix.
 - The exact v4 archive remains absent from `recovery-input/`; the recovery workflow has not run and the full scanner is still not ported. The upload path is still the only immediate blocker to that operation.
 - No live scan, point-in-time backtest, production deployment, KV publication, Android device test, or BUY authorization. `main` remains unchanged.
+
+
+## Main-branch scan audit — 2026-11-18
+- Re-fetched `scanner.py` on `main` (SHA `9aa7ddda22d48b200a1c0f95c38b529d6eb7cc3e`) and `.github/workflows/scan.yml` (SHA `a4b22131841baf455dd875e7ef2b6687a2ba3fab`). Scheduled workflow runs every 6 hours and writes only `data/scan.json`; it does not publish to Cloudflare KV.
+- Latest `data/scan.json` generated at `2026-11-18T07:21:56.535227+00:00`: 68 companies, 111 collected news articles, 65/68 price coverage, 62/68 financial coverage, 54/68 valuation coverage.
+- Data contract explicitly says `investment_ranking_available=false`; ranking method is media attention (`attention_score`), not investment quality. No company has `investment_score`. Statuses: 12 `Do analizy`, 56 `Obserwacja`. This is a news/coverage scan, not an actionable BUY scanner.
+- Quote health is partial (21 updated out of 24 attempts); ABB, IRBT and KUKAF quote retrieval failed. Latest price observations in this scan are EOD dated 2026-11-17.
+- Conclusion: do not publish this scan as an investment report or feed it to the Android report endpoint as a release-ready report. Preserve BUY disabled until recovered Balanced engine, validated OHLCV/point-in-time analyst history and end-to-end release gates pass.
