@@ -234,3 +234,14 @@ The archive's `historical_dataset_manifest.json` remains:
 - Fetched current PR metadata after the writes and confirmed the branch head advanced to the service-worker commit. No workflow run is yet associated with that head; deployment remains unverified.
 - The archive v4 remains absent from `recovery-input/` (prior GitHub 404); full Balanced source recovery and its remote regression matrix have not run.
 - No audited point-in-time OHLCV/analyst-consensus dataset, real-data walk-forward result, backend integration, Pages live URL, or phone test is confirmed. BUY authorization remains false; no production report publication; `main` unchanged.
+
+## Web app build continuation — 2026-11-18
+- Extended the existing mobile PWA `index.html` with a Settings tab for configuring a read-only HTTPS report endpoint.
+- Added browser GET-only backend retrieval and strict acceptance checks: `release_ready=true`, `strategy_version` or `strategy` exactly `balanced-1.3-audit`, `generated_at` present/not future/not older than 36h, and `companies` array. Rejected responses leave the existing local/static report in place.
+- No write method, API key, or publication token is stored in browser localStorage. The endpoint must support browser CORS; authenticated private endpoints are not yet integrated.
+- Added CI source guards for backend validation and read-only behavior in `.github/workflows/web-validation.yml`.
+- Commits: `386d8fb4149b151185417bce0068ac5b7336494f` (PWA backend settings/integration), `ed60fca98c615b4a43a7a1901558bee965121e7c` (CI validation).
+- Workflow runs for the latest commit were not yet visible at verification time. No runtime test against a real backend was performed.
+- PR #5 remains Draft/unmerged. GitHub currently reports `mergeable=false`; do not merge or modify `main` until conflicts and base status are examined.
+- Balanced 1.3.4 archive is still not in `recovery-input/`; full strategy recovery, full tests, historical OHLCV/analyst-consensus audit, walk-forward backtest and live backend deployment remain blocked.
+- GitHub Pages live deployment and physical mobile-browser test are not confirmed. BUY remains disabled; no production report is published.
