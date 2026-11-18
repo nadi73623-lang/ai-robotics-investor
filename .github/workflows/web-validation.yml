@@ -62,6 +62,10 @@ jobs:
           assert "u.username||u.password" in html
           assert "u.search||u.hash" in html
           assert "if(backendUrl)testBackend()" in html
+          assert "function signalCard(c)" in html
+          assert "c.investment_signal" in html
+          assert "${signalCard(c)}" in html
+          assert "decision_stage" in html
           assert "${safeUrl(p.source_url)}" in html
           assert "${safeUrl(f.source_url)}" in html
           assert "${safeUrl(n.url)}" in html
