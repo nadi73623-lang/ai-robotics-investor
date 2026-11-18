@@ -1,0 +1,2588 @@
+{
+  "generated_at": "2026-11-18T19:08:17.455174+00:00",
+  "strategy_version": "balanced-1.3-audit",
+  "buy_signals_authorized": false,
+  "total": 68,
+  "stage_counts": {
+    "data_gate": 66,
+    "date_integrity": 2
+  },
+  "reason_counts": {
+    "sec_not_refreshed_this_run": 52,
+    "quote_not_refreshed_this_run": 47,
+    "missing_sec_filing_date": 2
+  },
+  "companies": [
+    {
+      "ticker": "NVDA",
+      "name": "NVIDIA",
+      "signal": "WATCH",
+      "buy_eligible": false,
+      "decision_stage": "data_gate",
+      "fundamental_score": null,
+      "entry_score": null,
+      "reward_risk": null,
+      "reasons": [
+        "sec_not_refreshed_this_run"
+      ],
+      "decision_trace": [
+        {
+          "stage": "data_gate",
+          "check": "price_quality",
+          "actual": "refreshed",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": true,
+          "reason": null
+        },
+        {
+          "stage": "data_gate",
+          "check": "fundamentals_quality",
+          "actual": "cached",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": false,
+          "reason": "sec_not_refreshed_this_run"
+        }
+      ],
+      "price_date": "2026-11-18",
+      "price_quality": "refreshed",
+      "fundamentals_quality": "cached",
+      "analyst_consensus_status": "unavailable"
+    },
+    {
+      "ticker": "VRT",
+      "name": "Vertiv",
+      "signal": "WATCH",
+      "buy_eligible": false,
+      "decision_stage": "data_gate",
+      "fundamental_score": null,
+      "entry_score": null,
+      "reward_risk": null,
+      "reasons": [
+        "quote_not_refreshed_this_run",
+        "sec_not_refreshed_this_run"
+      ],
+      "decision_trace": [
+        {
+          "stage": "data_gate",
+          "check": "price_quality",
+          "actual": "cached_recent",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": false,
+          "reason": "quote_not_refreshed_this_run"
+        },
+        {
+          "stage": "data_gate",
+          "check": "fundamentals_quality",
+          "actual": "cached",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": false,
+          "reason": "sec_not_refreshed_this_run"
+        }
+      ],
+      "price_date": "2026-11-17",
+      "price_quality": "cached_recent",
+      "fundamentals_quality": "cached",
+      "analyst_consensus_status": "unavailable"
+    },
+    {
+      "ticker": "AVGO",
+      "name": "Broadcom",
+      "signal": "WATCH",
+      "buy_eligible": false,
+      "decision_stage": "date_integrity",
+      "fundamental_score": null,
+      "entry_score": null,
+      "reward_risk": null,
+      "reasons": [
+        "missing_sec_filing_date"
+      ],
+      "decision_trace": [
+        {
+          "stage": "data_gate",
+          "check": "price_quality",
+          "actual": "refreshed",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": true,
+          "reason": null
+        },
+        {
+          "stage": "data_gate",
+          "check": "fundamentals_quality",
+          "actual": "refreshed",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": true,
+          "reason": null
+        },
+        {
+          "stage": "date_integrity",
+          "check": "quote_and_fundamental_dates",
+          "actual": [
+            "missing_sec_filing_date"
+          ],
+          "operator": "==",
+          "required": [],
+          "passed": false,
+          "reason": "evidence_date_mismatch_or_future_period"
+        }
+      ],
+      "price_date": "2026-11-18",
+      "price_quality": "refreshed",
+      "fundamentals_quality": "refreshed",
+      "analyst_consensus_status": "unavailable"
+    },
+    {
+      "ticker": "HON",
+      "name": "Honeywell",
+      "signal": "WATCH",
+      "buy_eligible": false,
+      "decision_stage": "data_gate",
+      "fundamental_score": null,
+      "entry_score": null,
+      "reward_risk": null,
+      "reasons": [
+        "quote_not_refreshed_this_run"
+      ],
+      "decision_trace": [
+        {
+          "stage": "data_gate",
+          "check": "price_quality",
+          "actual": "cached_recent",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": false,
+          "reason": "quote_not_refreshed_this_run"
+        },
+        {
+          "stage": "data_gate",
+          "check": "fundamentals_quality",
+          "actual": "refreshed",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": true,
+          "reason": null
+        }
+      ],
+      "price_date": "2026-11-17",
+      "price_quality": "cached_recent",
+      "fundamentals_quality": "refreshed",
+      "analyst_consensus_status": "unavailable"
+    },
+    {
+      "ticker": "MRVL",
+      "name": "Marvell Technology",
+      "signal": "WATCH",
+      "buy_eligible": false,
+      "decision_stage": "data_gate",
+      "fundamental_score": null,
+      "entry_score": null,
+      "reward_risk": null,
+      "reasons": [
+        "sec_not_refreshed_this_run"
+      ],
+      "decision_trace": [
+        {
+          "stage": "data_gate",
+          "check": "price_quality",
+          "actual": "refreshed",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": true,
+          "reason": null
+        },
+        {
+          "stage": "data_gate",
+          "check": "fundamentals_quality",
+          "actual": "cached",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": false,
+          "reason": "sec_not_refreshed_this_run"
+        }
+      ],
+      "price_date": "2026-11-18",
+      "price_quality": "refreshed",
+      "fundamentals_quality": "cached",
+      "analyst_consensus_status": "unavailable"
+    },
+    {
+      "ticker": "AMZN",
+      "name": "Amazon",
+      "signal": "WATCH",
+      "buy_eligible": false,
+      "decision_stage": "data_gate",
+      "fundamental_score": null,
+      "entry_score": null,
+      "reward_risk": null,
+      "reasons": [
+        "quote_not_refreshed_this_run",
+        "sec_not_refreshed_this_run"
+      ],
+      "decision_trace": [
+        {
+          "stage": "data_gate",
+          "check": "price_quality",
+          "actual": "cached_recent",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": false,
+          "reason": "quote_not_refreshed_this_run"
+        },
+        {
+          "stage": "data_gate",
+          "check": "fundamentals_quality",
+          "actual": "cached",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": false,
+          "reason": "sec_not_refreshed_this_run"
+        }
+      ],
+      "price_date": "2026-11-17",
+      "price_quality": "cached_recent",
+      "fundamentals_quality": "cached",
+      "analyst_consensus_status": "unavailable"
+    },
+    {
+      "ticker": "ANET",
+      "name": "Arista Networks",
+      "signal": "WATCH",
+      "buy_eligible": false,
+      "decision_stage": "data_gate",
+      "fundamental_score": null,
+      "entry_score": null,
+      "reward_risk": null,
+      "reasons": [
+        "quote_not_refreshed_this_run",
+        "sec_not_refreshed_this_run"
+      ],
+      "decision_trace": [
+        {
+          "stage": "data_gate",
+          "check": "price_quality",
+          "actual": "cached_recent",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": false,
+          "reason": "quote_not_refreshed_this_run"
+        },
+        {
+          "stage": "data_gate",
+          "check": "fundamentals_quality",
+          "actual": "cached",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": false,
+          "reason": "sec_not_refreshed_this_run"
+        }
+      ],
+      "price_date": "2026-11-17",
+      "price_quality": "cached_recent",
+      "fundamentals_quality": "cached",
+      "analyst_consensus_status": "unavailable"
+    },
+    {
+      "ticker": "DELL",
+      "name": "Dell Technologies",
+      "signal": "WATCH",
+      "buy_eligible": false,
+      "decision_stage": "data_gate",
+      "fundamental_score": null,
+      "entry_score": null,
+      "reward_risk": null,
+      "reasons": [
+        "quote_not_refreshed_this_run",
+        "sec_not_refreshed_this_run"
+      ],
+      "decision_trace": [
+        {
+          "stage": "data_gate",
+          "check": "price_quality",
+          "actual": "cached_recent",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": false,
+          "reason": "quote_not_refreshed_this_run"
+        },
+        {
+          "stage": "data_gate",
+          "check": "fundamentals_quality",
+          "actual": "cached",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": false,
+          "reason": "sec_not_refreshed_this_run"
+        }
+      ],
+      "price_date": "2026-11-17",
+      "price_quality": "cached_recent",
+      "fundamentals_quality": "cached",
+      "analyst_consensus_status": "unavailable"
+    },
+    {
+      "ticker": "ETN",
+      "name": "Eaton",
+      "signal": "WATCH",
+      "buy_eligible": false,
+      "decision_stage": "data_gate",
+      "fundamental_score": null,
+      "entry_score": null,
+      "reward_risk": null,
+      "reasons": [
+        "quote_not_refreshed_this_run"
+      ],
+      "decision_trace": [
+        {
+          "stage": "data_gate",
+          "check": "price_quality",
+          "actual": "cached_recent",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": false,
+          "reason": "quote_not_refreshed_this_run"
+        },
+        {
+          "stage": "data_gate",
+          "check": "fundamentals_quality",
+          "actual": "refreshed",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": true,
+          "reason": null
+        }
+      ],
+      "price_date": "2026-11-17",
+      "price_quality": "cached_recent",
+      "fundamentals_quality": "refreshed",
+      "analyst_consensus_status": "unavailable"
+    },
+    {
+      "ticker": "FANUY",
+      "name": "FANUC",
+      "signal": "WATCH",
+      "buy_eligible": false,
+      "decision_stage": "data_gate",
+      "fundamental_score": null,
+      "entry_score": null,
+      "reward_risk": null,
+      "reasons": [
+        "quote_not_refreshed_this_run",
+        "sec_not_refreshed_this_run"
+      ],
+      "decision_trace": [
+        {
+          "stage": "data_gate",
+          "check": "price_quality",
+          "actual": "cached_recent",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": false,
+          "reason": "quote_not_refreshed_this_run"
+        },
+        {
+          "stage": "data_gate",
+          "check": "fundamentals_quality",
+          "actual": "missing",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": false,
+          "reason": "sec_not_refreshed_this_run"
+        }
+      ],
+      "price_date": "2026-11-17",
+      "price_quality": "cached_recent",
+      "fundamentals_quality": "missing",
+      "analyst_consensus_status": "unavailable"
+    },
+    {
+      "ticker": "INTC",
+      "name": "Intel",
+      "signal": "WATCH",
+      "buy_eligible": false,
+      "decision_stage": "data_gate",
+      "fundamental_score": null,
+      "entry_score": null,
+      "reward_risk": null,
+      "reasons": [
+        "quote_not_refreshed_this_run",
+        "sec_not_refreshed_this_run"
+      ],
+      "decision_trace": [
+        {
+          "stage": "data_gate",
+          "check": "price_quality",
+          "actual": "cached_recent",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": false,
+          "reason": "quote_not_refreshed_this_run"
+        },
+        {
+          "stage": "data_gate",
+          "check": "fundamentals_quality",
+          "actual": "cached",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": false,
+          "reason": "sec_not_refreshed_this_run"
+        }
+      ],
+      "price_date": "2026-11-17",
+      "price_quality": "cached_recent",
+      "fundamentals_quality": "cached",
+      "analyst_consensus_status": "unavailable"
+    },
+    {
+      "ticker": "MU",
+      "name": "Micron Technology",
+      "signal": "WATCH",
+      "buy_eligible": false,
+      "decision_stage": "data_gate",
+      "fundamental_score": null,
+      "entry_score": null,
+      "reward_risk": null,
+      "reasons": [
+        "sec_not_refreshed_this_run"
+      ],
+      "decision_trace": [
+        {
+          "stage": "data_gate",
+          "check": "price_quality",
+          "actual": "refreshed",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": true,
+          "reason": null
+        },
+        {
+          "stage": "data_gate",
+          "check": "fundamentals_quality",
+          "actual": "cached",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": false,
+          "reason": "sec_not_refreshed_this_run"
+        }
+      ],
+      "price_date": "2026-11-18",
+      "price_quality": "refreshed",
+      "fundamentals_quality": "cached",
+      "analyst_consensus_status": "unavailable"
+    },
+    {
+      "ticker": "PATH",
+      "name": "UiPath",
+      "signal": "WATCH",
+      "buy_eligible": false,
+      "decision_stage": "date_integrity",
+      "fundamental_score": null,
+      "entry_score": null,
+      "reward_risk": null,
+      "reasons": [
+        "missing_sec_filing_date"
+      ],
+      "decision_trace": [
+        {
+          "stage": "data_gate",
+          "check": "price_quality",
+          "actual": "refreshed",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": true,
+          "reason": null
+        },
+        {
+          "stage": "data_gate",
+          "check": "fundamentals_quality",
+          "actual": "refreshed",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": true,
+          "reason": null
+        },
+        {
+          "stage": "date_integrity",
+          "check": "quote_and_fundamental_dates",
+          "actual": [
+            "missing_sec_filing_date"
+          ],
+          "operator": "==",
+          "required": [],
+          "passed": false,
+          "reason": "evidence_date_mismatch_or_future_period"
+        }
+      ],
+      "price_date": "2026-11-18",
+      "price_quality": "refreshed",
+      "fundamentals_quality": "refreshed",
+      "analyst_consensus_status": "unavailable"
+    },
+    {
+      "ticker": "TER",
+      "name": "Teradyne",
+      "signal": "WATCH",
+      "buy_eligible": false,
+      "decision_stage": "data_gate",
+      "fundamental_score": null,
+      "entry_score": null,
+      "reward_risk": null,
+      "reasons": [
+        "quote_not_refreshed_this_run",
+        "sec_not_refreshed_this_run"
+      ],
+      "decision_trace": [
+        {
+          "stage": "data_gate",
+          "check": "price_quality",
+          "actual": "cached_recent",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": false,
+          "reason": "quote_not_refreshed_this_run"
+        },
+        {
+          "stage": "data_gate",
+          "check": "fundamentals_quality",
+          "actual": "cached",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": false,
+          "reason": "sec_not_refreshed_this_run"
+        }
+      ],
+      "price_date": "2026-11-17",
+      "price_quality": "cached_recent",
+      "fundamentals_quality": "cached",
+      "analyst_consensus_status": "unavailable"
+    },
+    {
+      "ticker": "ABB",
+      "name": "ABB Ltd",
+      "signal": "WATCH",
+      "buy_eligible": false,
+      "decision_stage": "data_gate",
+      "fundamental_score": null,
+      "entry_score": null,
+      "reward_risk": null,
+      "reasons": [
+        "quote_not_refreshed_this_run",
+        "sec_not_refreshed_this_run"
+      ],
+      "decision_trace": [
+        {
+          "stage": "data_gate",
+          "check": "price_quality",
+          "actual": "missing",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": false,
+          "reason": "quote_not_refreshed_this_run"
+        },
+        {
+          "stage": "data_gate",
+          "check": "fundamentals_quality",
+          "actual": "missing",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": false,
+          "reason": "sec_not_refreshed_this_run"
+        }
+      ],
+      "price_date": null,
+      "price_quality": "missing",
+      "fundamentals_quality": "missing",
+      "analyst_consensus_status": "unavailable"
+    },
+    {
+      "ticker": "ACHR",
+      "name": "Archer Aviation",
+      "signal": "WATCH",
+      "buy_eligible": false,
+      "decision_stage": "data_gate",
+      "fundamental_score": null,
+      "entry_score": null,
+      "reward_risk": null,
+      "reasons": [
+        "quote_not_refreshed_this_run",
+        "sec_not_refreshed_this_run"
+      ],
+      "decision_trace": [
+        {
+          "stage": "data_gate",
+          "check": "price_quality",
+          "actual": "cached_recent",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": false,
+          "reason": "quote_not_refreshed_this_run"
+        },
+        {
+          "stage": "data_gate",
+          "check": "fundamentals_quality",
+          "actual": "cached",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": false,
+          "reason": "sec_not_refreshed_this_run"
+        }
+      ],
+      "price_date": "2026-11-17",
+      "price_quality": "cached_recent",
+      "fundamentals_quality": "cached",
+      "analyst_consensus_status": "unavailable"
+    },
+    {
+      "ticker": "AI",
+      "name": "C3.ai",
+      "signal": "WATCH",
+      "buy_eligible": false,
+      "decision_stage": "data_gate",
+      "fundamental_score": null,
+      "entry_score": null,
+      "reward_risk": null,
+      "reasons": [
+        "quote_not_refreshed_this_run",
+        "sec_not_refreshed_this_run"
+      ],
+      "decision_trace": [
+        {
+          "stage": "data_gate",
+          "check": "price_quality",
+          "actual": "cached_recent",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": false,
+          "reason": "quote_not_refreshed_this_run"
+        },
+        {
+          "stage": "data_gate",
+          "check": "fundamentals_quality",
+          "actual": "cached",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": false,
+          "reason": "sec_not_refreshed_this_run"
+        }
+      ],
+      "price_date": "2026-11-17",
+      "price_quality": "cached_recent",
+      "fundamentals_quality": "cached",
+      "analyst_consensus_status": "unavailable"
+    },
+    {
+      "ticker": "ALAB",
+      "name": "Astera Labs",
+      "signal": "WATCH",
+      "buy_eligible": false,
+      "decision_stage": "data_gate",
+      "fundamental_score": null,
+      "entry_score": null,
+      "reward_risk": null,
+      "reasons": [
+        "quote_not_refreshed_this_run",
+        "sec_not_refreshed_this_run"
+      ],
+      "decision_trace": [
+        {
+          "stage": "data_gate",
+          "check": "price_quality",
+          "actual": "cached_recent",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": false,
+          "reason": "quote_not_refreshed_this_run"
+        },
+        {
+          "stage": "data_gate",
+          "check": "fundamentals_quality",
+          "actual": "cached",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": false,
+          "reason": "sec_not_refreshed_this_run"
+        }
+      ],
+      "price_date": "2026-11-17",
+      "price_quality": "cached_recent",
+      "fundamentals_quality": "cached",
+      "analyst_consensus_status": "unavailable"
+    },
+    {
+      "ticker": "AMAT",
+      "name": "Applied Materials",
+      "signal": "WATCH",
+      "buy_eligible": false,
+      "decision_stage": "data_gate",
+      "fundamental_score": null,
+      "entry_score": null,
+      "reward_risk": null,
+      "reasons": [
+        "quote_not_refreshed_this_run",
+        "sec_not_refreshed_this_run"
+      ],
+      "decision_trace": [
+        {
+          "stage": "data_gate",
+          "check": "price_quality",
+          "actual": "cached_recent",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": false,
+          "reason": "quote_not_refreshed_this_run"
+        },
+        {
+          "stage": "data_gate",
+          "check": "fundamentals_quality",
+          "actual": "cached",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": false,
+          "reason": "sec_not_refreshed_this_run"
+        }
+      ],
+      "price_date": "2026-11-17",
+      "price_quality": "cached_recent",
+      "fundamentals_quality": "cached",
+      "analyst_consensus_status": "unavailable"
+    },
+    {
+      "ticker": "AMD",
+      "name": "Advanced Micro Devices",
+      "signal": "WATCH",
+      "buy_eligible": false,
+      "decision_stage": "data_gate",
+      "fundamental_score": null,
+      "entry_score": null,
+      "reward_risk": null,
+      "reasons": [
+        "quote_not_refreshed_this_run",
+        "sec_not_refreshed_this_run"
+      ],
+      "decision_trace": [
+        {
+          "stage": "data_gate",
+          "check": "price_quality",
+          "actual": "cached_recent",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": false,
+          "reason": "quote_not_refreshed_this_run"
+        },
+        {
+          "stage": "data_gate",
+          "check": "fundamentals_quality",
+          "actual": "cached",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": false,
+          "reason": "sec_not_refreshed_this_run"
+        }
+      ],
+      "price_date": "2026-11-17",
+      "price_quality": "cached_recent",
+      "fundamentals_quality": "cached",
+      "analyst_consensus_status": "unavailable"
+    },
+    {
+      "ticker": "APH",
+      "name": "Amphenol",
+      "signal": "WATCH",
+      "buy_eligible": false,
+      "decision_stage": "data_gate",
+      "fundamental_score": null,
+      "entry_score": null,
+      "reward_risk": null,
+      "reasons": [
+        "quote_not_refreshed_this_run",
+        "sec_not_refreshed_this_run"
+      ],
+      "decision_trace": [
+        {
+          "stage": "data_gate",
+          "check": "price_quality",
+          "actual": "cached_recent",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": false,
+          "reason": "quote_not_refreshed_this_run"
+        },
+        {
+          "stage": "data_gate",
+          "check": "fundamentals_quality",
+          "actual": "cached",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": false,
+          "reason": "sec_not_refreshed_this_run"
+        }
+      ],
+      "price_date": "2026-11-17",
+      "price_quality": "cached_recent",
+      "fundamentals_quality": "cached",
+      "analyst_consensus_status": "unavailable"
+    },
+    {
+      "ticker": "ARM",
+      "name": "Arm Holdings",
+      "signal": "WATCH",
+      "buy_eligible": false,
+      "decision_stage": "data_gate",
+      "fundamental_score": null,
+      "entry_score": null,
+      "reward_risk": null,
+      "reasons": [
+        "quote_not_refreshed_this_run",
+        "sec_not_refreshed_this_run"
+      ],
+      "decision_trace": [
+        {
+          "stage": "data_gate",
+          "check": "price_quality",
+          "actual": "cached_recent",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": false,
+          "reason": "quote_not_refreshed_this_run"
+        },
+        {
+          "stage": "data_gate",
+          "check": "fundamentals_quality",
+          "actual": "cached",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": false,
+          "reason": "sec_not_refreshed_this_run"
+        }
+      ],
+      "price_date": "2026-11-17",
+      "price_quality": "cached_recent",
+      "fundamentals_quality": "cached",
+      "analyst_consensus_status": "unavailable"
+    },
+    {
+      "ticker": "ASML",
+      "name": "ASML",
+      "signal": "WATCH",
+      "buy_eligible": false,
+      "decision_stage": "data_gate",
+      "fundamental_score": null,
+      "entry_score": null,
+      "reward_risk": null,
+      "reasons": [
+        "quote_not_refreshed_this_run",
+        "sec_not_refreshed_this_run"
+      ],
+      "decision_trace": [
+        {
+          "stage": "data_gate",
+          "check": "price_quality",
+          "actual": "cached_recent",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": false,
+          "reason": "quote_not_refreshed_this_run"
+        },
+        {
+          "stage": "data_gate",
+          "check": "fundamentals_quality",
+          "actual": "cached",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": false,
+          "reason": "sec_not_refreshed_this_run"
+        }
+      ],
+      "price_date": "2026-11-17",
+      "price_quality": "cached_recent",
+      "fundamentals_quality": "cached",
+      "analyst_consensus_status": "unavailable"
+    },
+    {
+      "ticker": "AZTA",
+      "name": "Azenta",
+      "signal": "WATCH",
+      "buy_eligible": false,
+      "decision_stage": "data_gate",
+      "fundamental_score": null,
+      "entry_score": null,
+      "reward_risk": null,
+      "reasons": [
+        "quote_not_refreshed_this_run",
+        "sec_not_refreshed_this_run"
+      ],
+      "decision_trace": [
+        {
+          "stage": "data_gate",
+          "check": "price_quality",
+          "actual": "cached_recent",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": false,
+          "reason": "quote_not_refreshed_this_run"
+        },
+        {
+          "stage": "data_gate",
+          "check": "fundamentals_quality",
+          "actual": "cached",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": false,
+          "reason": "sec_not_refreshed_this_run"
+        }
+      ],
+      "price_date": "2026-11-17",
+      "price_quality": "cached_recent",
+      "fundamentals_quality": "cached",
+      "analyst_consensus_status": "unavailable"
+    },
+    {
+      "ticker": "BBAI",
+      "name": "BigBear.ai",
+      "signal": "WATCH",
+      "buy_eligible": false,
+      "decision_stage": "data_gate",
+      "fundamental_score": null,
+      "entry_score": null,
+      "reward_risk": null,
+      "reasons": [
+        "quote_not_refreshed_this_run",
+        "sec_not_refreshed_this_run"
+      ],
+      "decision_trace": [
+        {
+          "stage": "data_gate",
+          "check": "price_quality",
+          "actual": "cached_recent",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": false,
+          "reason": "quote_not_refreshed_this_run"
+        },
+        {
+          "stage": "data_gate",
+          "check": "fundamentals_quality",
+          "actual": "cached",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": false,
+          "reason": "sec_not_refreshed_this_run"
+        }
+      ],
+      "price_date": "2026-11-17",
+      "price_quality": "cached_recent",
+      "fundamentals_quality": "cached",
+      "analyst_consensus_status": "unavailable"
+    },
+    {
+      "ticker": "CGNX",
+      "name": "Cognex",
+      "signal": "WATCH",
+      "buy_eligible": false,
+      "decision_stage": "data_gate",
+      "fundamental_score": null,
+      "entry_score": null,
+      "reward_risk": null,
+      "reasons": [
+        "quote_not_refreshed_this_run",
+        "sec_not_refreshed_this_run"
+      ],
+      "decision_trace": [
+        {
+          "stage": "data_gate",
+          "check": "price_quality",
+          "actual": "cached_recent",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": false,
+          "reason": "quote_not_refreshed_this_run"
+        },
+        {
+          "stage": "data_gate",
+          "check": "fundamentals_quality",
+          "actual": "cached",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": false,
+          "reason": "sec_not_refreshed_this_run"
+        }
+      ],
+      "price_date": "2026-11-17",
+      "price_quality": "cached_recent",
+      "fundamentals_quality": "cached",
+      "analyst_consensus_status": "unavailable"
+    },
+    {
+      "ticker": "CLS",
+      "name": "Celestica",
+      "signal": "WATCH",
+      "buy_eligible": false,
+      "decision_stage": "data_gate",
+      "fundamental_score": null,
+      "entry_score": null,
+      "reward_risk": null,
+      "reasons": [
+        "quote_not_refreshed_this_run",
+        "sec_not_refreshed_this_run"
+      ],
+      "decision_trace": [
+        {
+          "stage": "data_gate",
+          "check": "price_quality",
+          "actual": "cached_recent",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": false,
+          "reason": "quote_not_refreshed_this_run"
+        },
+        {
+          "stage": "data_gate",
+          "check": "fundamentals_quality",
+          "actual": "cached",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": false,
+          "reason": "sec_not_refreshed_this_run"
+        }
+      ],
+      "price_date": "2026-11-17",
+      "price_quality": "cached_recent",
+      "fundamentals_quality": "cached",
+      "analyst_consensus_status": "unavailable"
+    },
+    {
+      "ticker": "COHR",
+      "name": "Coherent",
+      "signal": "WATCH",
+      "buy_eligible": false,
+      "decision_stage": "data_gate",
+      "fundamental_score": null,
+      "entry_score": null,
+      "reward_risk": null,
+      "reasons": [
+        "quote_not_refreshed_this_run",
+        "sec_not_refreshed_this_run"
+      ],
+      "decision_trace": [
+        {
+          "stage": "data_gate",
+          "check": "price_quality",
+          "actual": "cached_recent",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": false,
+          "reason": "quote_not_refreshed_this_run"
+        },
+        {
+          "stage": "data_gate",
+          "check": "fundamentals_quality",
+          "actual": "cached",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": false,
+          "reason": "sec_not_refreshed_this_run"
+        }
+      ],
+      "price_date": "2026-11-17",
+      "price_quality": "cached_recent",
+      "fundamentals_quality": "cached",
+      "analyst_consensus_status": "unavailable"
+    },
+    {
+      "ticker": "CRDO",
+      "name": "Credo Technology",
+      "signal": "WATCH",
+      "buy_eligible": false,
+      "decision_stage": "data_gate",
+      "fundamental_score": null,
+      "entry_score": null,
+      "reward_risk": null,
+      "reasons": [
+        "quote_not_refreshed_this_run",
+        "sec_not_refreshed_this_run"
+      ],
+      "decision_trace": [
+        {
+          "stage": "data_gate",
+          "check": "price_quality",
+          "actual": "cached_recent",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": false,
+          "reason": "quote_not_refreshed_this_run"
+        },
+        {
+          "stage": "data_gate",
+          "check": "fundamentals_quality",
+          "actual": "cached",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": false,
+          "reason": "sec_not_refreshed_this_run"
+        }
+      ],
+      "price_date": "2026-11-17",
+      "price_quality": "cached_recent",
+      "fundamentals_quality": "cached",
+      "analyst_consensus_status": "unavailable"
+    },
+    {
+      "ticker": "DHR",
+      "name": "Danaher",
+      "signal": "WATCH",
+      "buy_eligible": false,
+      "decision_stage": "data_gate",
+      "fundamental_score": null,
+      "entry_score": null,
+      "reward_risk": null,
+      "reasons": [
+        "quote_not_refreshed_this_run"
+      ],
+      "decision_trace": [
+        {
+          "stage": "data_gate",
+          "check": "price_quality",
+          "actual": "cached_recent",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": false,
+          "reason": "quote_not_refreshed_this_run"
+        },
+        {
+          "stage": "data_gate",
+          "check": "fundamentals_quality",
+          "actual": "refreshed",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": true,
+          "reason": null
+        }
+      ],
+      "price_date": "2026-11-17",
+      "price_quality": "cached_recent",
+      "fundamentals_quality": "refreshed",
+      "analyst_consensus_status": "unavailable"
+    },
+    {
+      "ticker": "EMR",
+      "name": "Emerson Electric",
+      "signal": "WATCH",
+      "buy_eligible": false,
+      "decision_stage": "data_gate",
+      "fundamental_score": null,
+      "entry_score": null,
+      "reward_risk": null,
+      "reasons": [
+        "quote_not_refreshed_this_run"
+      ],
+      "decision_trace": [
+        {
+          "stage": "data_gate",
+          "check": "price_quality",
+          "actual": "cached_recent",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": false,
+          "reason": "quote_not_refreshed_this_run"
+        },
+        {
+          "stage": "data_gate",
+          "check": "fundamentals_quality",
+          "actual": "refreshed",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": true,
+          "reason": null
+        }
+      ],
+      "price_date": "2026-11-17",
+      "price_quality": "cached_recent",
+      "fundamentals_quality": "refreshed",
+      "analyst_consensus_status": "unavailable"
+    },
+    {
+      "ticker": "GLW",
+      "name": "Corning",
+      "signal": "WATCH",
+      "buy_eligible": false,
+      "decision_stage": "data_gate",
+      "fundamental_score": null,
+      "entry_score": null,
+      "reward_risk": null,
+      "reasons": [
+        "quote_not_refreshed_this_run"
+      ],
+      "decision_trace": [
+        {
+          "stage": "data_gate",
+          "check": "price_quality",
+          "actual": "cached_recent",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": false,
+          "reason": "quote_not_refreshed_this_run"
+        },
+        {
+          "stage": "data_gate",
+          "check": "fundamentals_quality",
+          "actual": "refreshed",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": true,
+          "reason": null
+        }
+      ],
+      "price_date": "2026-11-17",
+      "price_quality": "cached_recent",
+      "fundamentals_quality": "refreshed",
+      "analyst_consensus_status": "unavailable"
+    },
+    {
+      "ticker": "GOOGL",
+      "name": "Alphabet",
+      "signal": "WATCH",
+      "buy_eligible": false,
+      "decision_stage": "data_gate",
+      "fundamental_score": null,
+      "entry_score": null,
+      "reward_risk": null,
+      "reasons": [
+        "quote_not_refreshed_this_run",
+        "sec_not_refreshed_this_run"
+      ],
+      "decision_trace": [
+        {
+          "stage": "data_gate",
+          "check": "price_quality",
+          "actual": "cached_recent",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": false,
+          "reason": "quote_not_refreshed_this_run"
+        },
+        {
+          "stage": "data_gate",
+          "check": "fundamentals_quality",
+          "actual": "cached",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": false,
+          "reason": "sec_not_refreshed_this_run"
+        }
+      ],
+      "price_date": "2026-11-17",
+      "price_quality": "cached_recent",
+      "fundamentals_quality": "cached",
+      "analyst_consensus_status": "unavailable"
+    },
+    {
+      "ticker": "HUBB",
+      "name": "Hubbell",
+      "signal": "WATCH",
+      "buy_eligible": false,
+      "decision_stage": "data_gate",
+      "fundamental_score": null,
+      "entry_score": null,
+      "reward_risk": null,
+      "reasons": [
+        "quote_not_refreshed_this_run"
+      ],
+      "decision_trace": [
+        {
+          "stage": "data_gate",
+          "check": "price_quality",
+          "actual": "cached_recent",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": false,
+          "reason": "quote_not_refreshed_this_run"
+        },
+        {
+          "stage": "data_gate",
+          "check": "fundamentals_quality",
+          "actual": "refreshed",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": true,
+          "reason": null
+        }
+      ],
+      "price_date": "2026-11-17",
+      "price_quality": "cached_recent",
+      "fundamentals_quality": "refreshed",
+      "analyst_consensus_status": "unavailable"
+    },
+    {
+      "ticker": "IRBT",
+      "name": "iRobot",
+      "signal": "WATCH",
+      "buy_eligible": false,
+      "decision_stage": "data_gate",
+      "fundamental_score": null,
+      "entry_score": null,
+      "reward_risk": null,
+      "reasons": [
+        "quote_not_refreshed_this_run",
+        "sec_not_refreshed_this_run"
+      ],
+      "decision_trace": [
+        {
+          "stage": "data_gate",
+          "check": "price_quality",
+          "actual": "missing",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": false,
+          "reason": "quote_not_refreshed_this_run"
+        },
+        {
+          "stage": "data_gate",
+          "check": "fundamentals_quality",
+          "actual": "missing",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": false,
+          "reason": "sec_not_refreshed_this_run"
+        }
+      ],
+      "price_date": null,
+      "price_quality": "missing",
+      "fundamentals_quality": "missing",
+      "analyst_consensus_status": "unavailable"
+    },
+    {
+      "ticker": "ISRG",
+      "name": "Intuitive Surgical",
+      "signal": "WATCH",
+      "buy_eligible": false,
+      "decision_stage": "data_gate",
+      "fundamental_score": null,
+      "entry_score": null,
+      "reward_risk": null,
+      "reasons": [
+        "quote_not_refreshed_this_run"
+      ],
+      "decision_trace": [
+        {
+          "stage": "data_gate",
+          "check": "price_quality",
+          "actual": "cached_recent",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": false,
+          "reason": "quote_not_refreshed_this_run"
+        },
+        {
+          "stage": "data_gate",
+          "check": "fundamentals_quality",
+          "actual": "refreshed",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": true,
+          "reason": null
+        }
+      ],
+      "price_date": "2026-11-17",
+      "price_quality": "cached_recent",
+      "fundamentals_quality": "refreshed",
+      "analyst_consensus_status": "unavailable"
+    },
+    {
+      "ticker": "JBL",
+      "name": "Jabil",
+      "signal": "WATCH",
+      "buy_eligible": false,
+      "decision_stage": "data_gate",
+      "fundamental_score": null,
+      "entry_score": null,
+      "reward_risk": null,
+      "reasons": [
+        "quote_not_refreshed_this_run"
+      ],
+      "decision_trace": [
+        {
+          "stage": "data_gate",
+          "check": "price_quality",
+          "actual": "cached_recent",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": false,
+          "reason": "quote_not_refreshed_this_run"
+        },
+        {
+          "stage": "data_gate",
+          "check": "fundamentals_quality",
+          "actual": "refreshed",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": true,
+          "reason": null
+        }
+      ],
+      "price_date": "2026-11-17",
+      "price_quality": "cached_recent",
+      "fundamentals_quality": "refreshed",
+      "analyst_consensus_status": "unavailable"
+    },
+    {
+      "ticker": "JOBY",
+      "name": "Joby Aviation",
+      "signal": "WATCH",
+      "buy_eligible": false,
+      "decision_stage": "data_gate",
+      "fundamental_score": null,
+      "entry_score": null,
+      "reward_risk": null,
+      "reasons": [
+        "quote_not_refreshed_this_run"
+      ],
+      "decision_trace": [
+        {
+          "stage": "data_gate",
+          "check": "price_quality",
+          "actual": "cached_recent",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": false,
+          "reason": "quote_not_refreshed_this_run"
+        },
+        {
+          "stage": "data_gate",
+          "check": "fundamentals_quality",
+          "actual": "refreshed",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": true,
+          "reason": null
+        }
+      ],
+      "price_date": "2026-11-17",
+      "price_quality": "cached_recent",
+      "fundamentals_quality": "refreshed",
+      "analyst_consensus_status": "unavailable"
+    },
+    {
+      "ticker": "KLAC",
+      "name": "KLA Corporation",
+      "signal": "WATCH",
+      "buy_eligible": false,
+      "decision_stage": "data_gate",
+      "fundamental_score": null,
+      "entry_score": null,
+      "reward_risk": null,
+      "reasons": [
+        "quote_not_refreshed_this_run"
+      ],
+      "decision_trace": [
+        {
+          "stage": "data_gate",
+          "check": "price_quality",
+          "actual": "cached_recent",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": false,
+          "reason": "quote_not_refreshed_this_run"
+        },
+        {
+          "stage": "data_gate",
+          "check": "fundamentals_quality",
+          "actual": "refreshed",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": true,
+          "reason": null
+        }
+      ],
+      "price_date": "2026-11-17",
+      "price_quality": "cached_recent",
+      "fundamentals_quality": "refreshed",
+      "analyst_consensus_status": "unavailable"
+    },
+    {
+      "ticker": "KTOS",
+      "name": "Kratos Defense",
+      "signal": "WATCH",
+      "buy_eligible": false,
+      "decision_stage": "data_gate",
+      "fundamental_score": null,
+      "entry_score": null,
+      "reward_risk": null,
+      "reasons": [
+        "quote_not_refreshed_this_run"
+      ],
+      "decision_trace": [
+        {
+          "stage": "data_gate",
+          "check": "price_quality",
+          "actual": "cached_recent",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": false,
+          "reason": "quote_not_refreshed_this_run"
+        },
+        {
+          "stage": "data_gate",
+          "check": "fundamentals_quality",
+          "actual": "refreshed",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": true,
+          "reason": null
+        }
+      ],
+      "price_date": "2026-11-17",
+      "price_quality": "cached_recent",
+      "fundamentals_quality": "refreshed",
+      "analyst_consensus_status": "unavailable"
+    },
+    {
+      "ticker": "KUKAF",
+      "name": "KUKA",
+      "signal": "WATCH",
+      "buy_eligible": false,
+      "decision_stage": "data_gate",
+      "fundamental_score": null,
+      "entry_score": null,
+      "reward_risk": null,
+      "reasons": [
+        "quote_not_refreshed_this_run",
+        "sec_not_refreshed_this_run"
+      ],
+      "decision_trace": [
+        {
+          "stage": "data_gate",
+          "check": "price_quality",
+          "actual": "missing",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": false,
+          "reason": "quote_not_refreshed_this_run"
+        },
+        {
+          "stage": "data_gate",
+          "check": "fundamentals_quality",
+          "actual": "missing",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": false,
+          "reason": "sec_not_refreshed_this_run"
+        }
+      ],
+      "price_date": null,
+      "price_quality": "missing",
+      "fundamentals_quality": "missing",
+      "analyst_consensus_status": "unavailable"
+    },
+    {
+      "ticker": "LAZR",
+      "name": "Luminar Technologies",
+      "signal": "WATCH",
+      "buy_eligible": false,
+      "decision_stage": "data_gate",
+      "fundamental_score": null,
+      "entry_score": null,
+      "reward_risk": null,
+      "reasons": [
+        "quote_not_refreshed_this_run",
+        "sec_not_refreshed_this_run"
+      ],
+      "decision_trace": [
+        {
+          "stage": "data_gate",
+          "check": "price_quality",
+          "actual": "cached_recent",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": false,
+          "reason": "quote_not_refreshed_this_run"
+        },
+        {
+          "stage": "data_gate",
+          "check": "fundamentals_quality",
+          "actual": "missing",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": false,
+          "reason": "sec_not_refreshed_this_run"
+        }
+      ],
+      "price_date": "2026-11-17",
+      "price_quality": "cached_recent",
+      "fundamentals_quality": "missing",
+      "analyst_consensus_status": "unavailable"
+    },
+    {
+      "ticker": "LITE",
+      "name": "Lumentum",
+      "signal": "WATCH",
+      "buy_eligible": false,
+      "decision_stage": "data_gate",
+      "fundamental_score": null,
+      "entry_score": null,
+      "reward_risk": null,
+      "reasons": [
+        "quote_not_refreshed_this_run"
+      ],
+      "decision_trace": [
+        {
+          "stage": "data_gate",
+          "check": "price_quality",
+          "actual": "cached_recent",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": false,
+          "reason": "quote_not_refreshed_this_run"
+        },
+        {
+          "stage": "data_gate",
+          "check": "fundamentals_quality",
+          "actual": "refreshed",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": true,
+          "reason": null
+        }
+      ],
+      "price_date": "2026-11-17",
+      "price_quality": "cached_recent",
+      "fundamentals_quality": "refreshed",
+      "analyst_consensus_status": "unavailable"
+    },
+    {
+      "ticker": "LRCX",
+      "name": "Lam Research",
+      "signal": "WATCH",
+      "buy_eligible": false,
+      "decision_stage": "data_gate",
+      "fundamental_score": null,
+      "entry_score": null,
+      "reward_risk": null,
+      "reasons": [
+        "quote_not_refreshed_this_run"
+      ],
+      "decision_trace": [
+        {
+          "stage": "data_gate",
+          "check": "price_quality",
+          "actual": "cached_recent",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": false,
+          "reason": "quote_not_refreshed_this_run"
+        },
+        {
+          "stage": "data_gate",
+          "check": "fundamentals_quality",
+          "actual": "refreshed",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": true,
+          "reason": null
+        }
+      ],
+      "price_date": "2026-11-17",
+      "price_quality": "cached_recent",
+      "fundamentals_quality": "refreshed",
+      "analyst_consensus_status": "unavailable"
+    },
+    {
+      "ticker": "MBLY",
+      "name": "Mobileye",
+      "signal": "WATCH",
+      "buy_eligible": false,
+      "decision_stage": "data_gate",
+      "fundamental_score": null,
+      "entry_score": null,
+      "reward_risk": null,
+      "reasons": [
+        "quote_not_refreshed_this_run",
+        "sec_not_refreshed_this_run"
+      ],
+      "decision_trace": [
+        {
+          "stage": "data_gate",
+          "check": "price_quality",
+          "actual": "cached_recent",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": false,
+          "reason": "quote_not_refreshed_this_run"
+        },
+        {
+          "stage": "data_gate",
+          "check": "fundamentals_quality",
+          "actual": "cached",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": false,
+          "reason": "sec_not_refreshed_this_run"
+        }
+      ],
+      "price_date": "2026-11-17",
+      "price_quality": "cached_recent",
+      "fundamentals_quality": "cached",
+      "analyst_consensus_status": "unavailable"
+    },
+    {
+      "ticker": "META",
+      "name": "Meta Platforms",
+      "signal": "WATCH",
+      "buy_eligible": false,
+      "decision_stage": "data_gate",
+      "fundamental_score": null,
+      "entry_score": null,
+      "reward_risk": null,
+      "reasons": [
+        "quote_not_refreshed_this_run"
+      ],
+      "decision_trace": [
+        {
+          "stage": "data_gate",
+          "check": "price_quality",
+          "actual": "cached_recent",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": false,
+          "reason": "quote_not_refreshed_this_run"
+        },
+        {
+          "stage": "data_gate",
+          "check": "fundamentals_quality",
+          "actual": "refreshed",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": true,
+          "reason": null
+        }
+      ],
+      "price_date": "2026-11-17",
+      "price_quality": "cached_recent",
+      "fundamentals_quality": "refreshed",
+      "analyst_consensus_status": "unavailable"
+    },
+    {
+      "ticker": "MPWR",
+      "name": "Monolithic Power Systems",
+      "signal": "WATCH",
+      "buy_eligible": false,
+      "decision_stage": "data_gate",
+      "fundamental_score": null,
+      "entry_score": null,
+      "reward_risk": null,
+      "reasons": [
+        "sec_not_refreshed_this_run"
+      ],
+      "decision_trace": [
+        {
+          "stage": "data_gate",
+          "check": "price_quality",
+          "actual": "refreshed",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": true,
+          "reason": null
+        },
+        {
+          "stage": "data_gate",
+          "check": "fundamentals_quality",
+          "actual": "cached",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": false,
+          "reason": "sec_not_refreshed_this_run"
+        }
+      ],
+      "price_date": "2026-11-18",
+      "price_quality": "refreshed",
+      "fundamentals_quality": "cached",
+      "analyst_consensus_status": "unavailable"
+    },
+    {
+      "ticker": "MSFT",
+      "name": "Microsoft",
+      "signal": "WATCH",
+      "buy_eligible": false,
+      "decision_stage": "data_gate",
+      "fundamental_score": null,
+      "entry_score": null,
+      "reward_risk": null,
+      "reasons": [
+        "sec_not_refreshed_this_run"
+      ],
+      "decision_trace": [
+        {
+          "stage": "data_gate",
+          "check": "price_quality",
+          "actual": "refreshed",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": true,
+          "reason": null
+        },
+        {
+          "stage": "data_gate",
+          "check": "fundamentals_quality",
+          "actual": "cached",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": false,
+          "reason": "sec_not_refreshed_this_run"
+        }
+      ],
+      "price_date": "2026-11-18",
+      "price_quality": "refreshed",
+      "fundamentals_quality": "cached",
+      "analyst_consensus_status": "unavailable"
+    },
+    {
+      "ticker": "NOW",
+      "name": "ServiceNow",
+      "signal": "WATCH",
+      "buy_eligible": false,
+      "decision_stage": "data_gate",
+      "fundamental_score": null,
+      "entry_score": null,
+      "reward_risk": null,
+      "reasons": [
+        "sec_not_refreshed_this_run"
+      ],
+      "decision_trace": [
+        {
+          "stage": "data_gate",
+          "check": "price_quality",
+          "actual": "refreshed",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": true,
+          "reason": null
+        },
+        {
+          "stage": "data_gate",
+          "check": "fundamentals_quality",
+          "actual": "cached",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": false,
+          "reason": "sec_not_refreshed_this_run"
+        }
+      ],
+      "price_date": "2026-11-18",
+      "price_quality": "refreshed",
+      "fundamentals_quality": "cached",
+      "analyst_consensus_status": "unavailable"
+    },
+    {
+      "ticker": "NVT",
+      "name": "nVent Electric",
+      "signal": "WATCH",
+      "buy_eligible": false,
+      "decision_stage": "data_gate",
+      "fundamental_score": null,
+      "entry_score": null,
+      "reward_risk": null,
+      "reasons": [
+        "sec_not_refreshed_this_run"
+      ],
+      "decision_trace": [
+        {
+          "stage": "data_gate",
+          "check": "price_quality",
+          "actual": "refreshed",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": true,
+          "reason": null
+        },
+        {
+          "stage": "data_gate",
+          "check": "fundamentals_quality",
+          "actual": "cached",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": false,
+          "reason": "sec_not_refreshed_this_run"
+        }
+      ],
+      "price_date": "2026-11-18",
+      "price_quality": "refreshed",
+      "fundamentals_quality": "cached",
+      "analyst_consensus_status": "unavailable"
+    },
+    {
+      "ticker": "ONDS",
+      "name": "Ondas Holdings",
+      "signal": "WATCH",
+      "buy_eligible": false,
+      "decision_stage": "data_gate",
+      "fundamental_score": null,
+      "entry_score": null,
+      "reward_risk": null,
+      "reasons": [
+        "sec_not_refreshed_this_run"
+      ],
+      "decision_trace": [
+        {
+          "stage": "data_gate",
+          "check": "price_quality",
+          "actual": "refreshed",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": true,
+          "reason": null
+        },
+        {
+          "stage": "data_gate",
+          "check": "fundamentals_quality",
+          "actual": "cached",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": false,
+          "reason": "sec_not_refreshed_this_run"
+        }
+      ],
+      "price_date": "2026-11-18",
+      "price_quality": "refreshed",
+      "fundamentals_quality": "cached",
+      "analyst_consensus_status": "unavailable"
+    },
+    {
+      "ticker": "ONTO",
+      "name": "Onto Innovation",
+      "signal": "WATCH",
+      "buy_eligible": false,
+      "decision_stage": "data_gate",
+      "fundamental_score": null,
+      "entry_score": null,
+      "reward_risk": null,
+      "reasons": [
+        "sec_not_refreshed_this_run"
+      ],
+      "decision_trace": [
+        {
+          "stage": "data_gate",
+          "check": "price_quality",
+          "actual": "refreshed",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": true,
+          "reason": null
+        },
+        {
+          "stage": "data_gate",
+          "check": "fundamentals_quality",
+          "actual": "cached",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": false,
+          "reason": "sec_not_refreshed_this_run"
+        }
+      ],
+      "price_date": "2026-11-18",
+      "price_quality": "refreshed",
+      "fundamentals_quality": "cached",
+      "analyst_consensus_status": "unavailable"
+    },
+    {
+      "ticker": "OUST",
+      "name": "Ouster",
+      "signal": "WATCH",
+      "buy_eligible": false,
+      "decision_stage": "data_gate",
+      "fundamental_score": null,
+      "entry_score": null,
+      "reward_risk": null,
+      "reasons": [
+        "sec_not_refreshed_this_run"
+      ],
+      "decision_trace": [
+        {
+          "stage": "data_gate",
+          "check": "price_quality",
+          "actual": "refreshed",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": true,
+          "reason": null
+        },
+        {
+          "stage": "data_gate",
+          "check": "fundamentals_quality",
+          "actual": "cached",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": false,
+          "reason": "sec_not_refreshed_this_run"
+        }
+      ],
+      "price_date": "2026-11-18",
+      "price_quality": "refreshed",
+      "fundamentals_quality": "cached",
+      "analyst_consensus_status": "unavailable"
+    },
+    {
+      "ticker": "PDYN",
+      "name": "Palladyne AI",
+      "signal": "WATCH",
+      "buy_eligible": false,
+      "decision_stage": "data_gate",
+      "fundamental_score": null,
+      "entry_score": null,
+      "reward_risk": null,
+      "reasons": [
+        "sec_not_refreshed_this_run"
+      ],
+      "decision_trace": [
+        {
+          "stage": "data_gate",
+          "check": "price_quality",
+          "actual": "refreshed",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": true,
+          "reason": null
+        },
+        {
+          "stage": "data_gate",
+          "check": "fundamentals_quality",
+          "actual": "cached",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": false,
+          "reason": "sec_not_refreshed_this_run"
+        }
+      ],
+      "price_date": "2026-11-18",
+      "price_quality": "refreshed",
+      "fundamentals_quality": "cached",
+      "analyst_consensus_status": "unavailable"
+    },
+    {
+      "ticker": "PLTR",
+      "name": "Palantir",
+      "signal": "WATCH",
+      "buy_eligible": false,
+      "decision_stage": "data_gate",
+      "fundamental_score": null,
+      "entry_score": null,
+      "reward_risk": null,
+      "reasons": [
+        "sec_not_refreshed_this_run"
+      ],
+      "decision_trace": [
+        {
+          "stage": "data_gate",
+          "check": "price_quality",
+          "actual": "refreshed",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": true,
+          "reason": null
+        },
+        {
+          "stage": "data_gate",
+          "check": "fundamentals_quality",
+          "actual": "cached",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": false,
+          "reason": "sec_not_refreshed_this_run"
+        }
+      ],
+      "price_date": "2026-11-18",
+      "price_quality": "refreshed",
+      "fundamentals_quality": "cached",
+      "analyst_consensus_status": "unavailable"
+    },
+    {
+      "ticker": "PWR",
+      "name": "Quanta Services",
+      "signal": "WATCH",
+      "buy_eligible": false,
+      "decision_stage": "data_gate",
+      "fundamental_score": null,
+      "entry_score": null,
+      "reward_risk": null,
+      "reasons": [
+        "sec_not_refreshed_this_run"
+      ],
+      "decision_trace": [
+        {
+          "stage": "data_gate",
+          "check": "price_quality",
+          "actual": "refreshed",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": true,
+          "reason": null
+        },
+        {
+          "stage": "data_gate",
+          "check": "fundamentals_quality",
+          "actual": "cached",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": false,
+          "reason": "sec_not_refreshed_this_run"
+        }
+      ],
+      "price_date": "2026-11-18",
+      "price_quality": "refreshed",
+      "fundamentals_quality": "cached",
+      "analyst_consensus_status": "unavailable"
+    },
+    {
+      "ticker": "QCOM",
+      "name": "Qualcomm",
+      "signal": "WATCH",
+      "buy_eligible": false,
+      "decision_stage": "data_gate",
+      "fundamental_score": null,
+      "entry_score": null,
+      "reward_risk": null,
+      "reasons": [
+        "sec_not_refreshed_this_run"
+      ],
+      "decision_trace": [
+        {
+          "stage": "data_gate",
+          "check": "price_quality",
+          "actual": "refreshed",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": true,
+          "reason": null
+        },
+        {
+          "stage": "data_gate",
+          "check": "fundamentals_quality",
+          "actual": "cached",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": false,
+          "reason": "sec_not_refreshed_this_run"
+        }
+      ],
+      "price_date": "2026-11-18",
+      "price_quality": "refreshed",
+      "fundamentals_quality": "cached",
+      "analyst_consensus_status": "unavailable"
+    },
+    {
+      "ticker": "RCAT",
+      "name": "Red Cat Holdings",
+      "signal": "WATCH",
+      "buy_eligible": false,
+      "decision_stage": "data_gate",
+      "fundamental_score": null,
+      "entry_score": null,
+      "reward_risk": null,
+      "reasons": [
+        "sec_not_refreshed_this_run"
+      ],
+      "decision_trace": [
+        {
+          "stage": "data_gate",
+          "check": "price_quality",
+          "actual": "refreshed",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": true,
+          "reason": null
+        },
+        {
+          "stage": "data_gate",
+          "check": "fundamentals_quality",
+          "actual": "cached",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": false,
+          "reason": "sec_not_refreshed_this_run"
+        }
+      ],
+      "price_date": "2026-11-18",
+      "price_quality": "refreshed",
+      "fundamentals_quality": "cached",
+      "analyst_consensus_status": "unavailable"
+    },
+    {
+      "ticker": "ROK",
+      "name": "Rockwell Automation",
+      "signal": "WATCH",
+      "buy_eligible": false,
+      "decision_stage": "data_gate",
+      "fundamental_score": null,
+      "entry_score": null,
+      "reward_risk": null,
+      "reasons": [
+        "sec_not_refreshed_this_run"
+      ],
+      "decision_trace": [
+        {
+          "stage": "data_gate",
+          "check": "price_quality",
+          "actual": "refreshed",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": true,
+          "reason": null
+        },
+        {
+          "stage": "data_gate",
+          "check": "fundamentals_quality",
+          "actual": "cached",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": false,
+          "reason": "sec_not_refreshed_this_run"
+        }
+      ],
+      "price_date": "2026-11-18",
+      "price_quality": "refreshed",
+      "fundamentals_quality": "cached",
+      "analyst_consensus_status": "unavailable"
+    },
+    {
+      "ticker": "RR",
+      "name": "Richtech Robotics",
+      "signal": "WATCH",
+      "buy_eligible": false,
+      "decision_stage": "data_gate",
+      "fundamental_score": null,
+      "entry_score": null,
+      "reward_risk": null,
+      "reasons": [
+        "sec_not_refreshed_this_run"
+      ],
+      "decision_trace": [
+        {
+          "stage": "data_gate",
+          "check": "price_quality",
+          "actual": "refreshed",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": true,
+          "reason": null
+        },
+        {
+          "stage": "data_gate",
+          "check": "fundamentals_quality",
+          "actual": "cached",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": false,
+          "reason": "sec_not_refreshed_this_run"
+        }
+      ],
+      "price_date": "2026-11-18",
+      "price_quality": "refreshed",
+      "fundamentals_quality": "cached",
+      "analyst_consensus_status": "unavailable"
+    },
+    {
+      "ticker": "SERV",
+      "name": "Serve Robotics",
+      "signal": "WATCH",
+      "buy_eligible": false,
+      "decision_stage": "data_gate",
+      "fundamental_score": null,
+      "entry_score": null,
+      "reward_risk": null,
+      "reasons": [
+        "sec_not_refreshed_this_run"
+      ],
+      "decision_trace": [
+        {
+          "stage": "data_gate",
+          "check": "price_quality",
+          "actual": "refreshed",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": true,
+          "reason": null
+        },
+        {
+          "stage": "data_gate",
+          "check": "fundamentals_quality",
+          "actual": "cached",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": false,
+          "reason": "sec_not_refreshed_this_run"
+        }
+      ],
+      "price_date": "2026-11-18",
+      "price_quality": "refreshed",
+      "fundamentals_quality": "cached",
+      "analyst_consensus_status": "unavailable"
+    },
+    {
+      "ticker": "SIEGY",
+      "name": "Siemens",
+      "signal": "WATCH",
+      "buy_eligible": false,
+      "decision_stage": "data_gate",
+      "fundamental_score": null,
+      "entry_score": null,
+      "reward_risk": null,
+      "reasons": [
+        "sec_not_refreshed_this_run"
+      ],
+      "decision_trace": [
+        {
+          "stage": "data_gate",
+          "check": "price_quality",
+          "actual": "refreshed",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": true,
+          "reason": null
+        },
+        {
+          "stage": "data_gate",
+          "check": "fundamentals_quality",
+          "actual": "missing",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": false,
+          "reason": "sec_not_refreshed_this_run"
+        }
+      ],
+      "price_date": "2026-11-18",
+      "price_quality": "refreshed",
+      "fundamentals_quality": "missing",
+      "analyst_consensus_status": "unavailable"
+    },
+    {
+      "ticker": "SMCI",
+      "name": "Super Micro Computer",
+      "signal": "WATCH",
+      "buy_eligible": false,
+      "decision_stage": "data_gate",
+      "fundamental_score": null,
+      "entry_score": null,
+      "reward_risk": null,
+      "reasons": [
+        "quote_not_refreshed_this_run",
+        "sec_not_refreshed_this_run"
+      ],
+      "decision_trace": [
+        {
+          "stage": "data_gate",
+          "check": "price_quality",
+          "actual": "cached_recent",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": false,
+          "reason": "quote_not_refreshed_this_run"
+        },
+        {
+          "stage": "data_gate",
+          "check": "fundamentals_quality",
+          "actual": "cached",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": false,
+          "reason": "sec_not_refreshed_this_run"
+        }
+      ],
+      "price_date": "2026-11-16",
+      "price_quality": "cached_recent",
+      "fundamentals_quality": "cached",
+      "analyst_consensus_status": "unavailable"
+    },
+    {
+      "ticker": "SNOW",
+      "name": "Snowflake",
+      "signal": "WATCH",
+      "buy_eligible": false,
+      "decision_stage": "data_gate",
+      "fundamental_score": null,
+      "entry_score": null,
+      "reward_risk": null,
+      "reasons": [
+        "quote_not_refreshed_this_run",
+        "sec_not_refreshed_this_run"
+      ],
+      "decision_trace": [
+        {
+          "stage": "data_gate",
+          "check": "price_quality",
+          "actual": "cached_recent",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": false,
+          "reason": "quote_not_refreshed_this_run"
+        },
+        {
+          "stage": "data_gate",
+          "check": "fundamentals_quality",
+          "actual": "cached",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": false,
+          "reason": "sec_not_refreshed_this_run"
+        }
+      ],
+      "price_date": "2026-11-16",
+      "price_quality": "cached_recent",
+      "fundamentals_quality": "cached",
+      "analyst_consensus_status": "unavailable"
+    },
+    {
+      "ticker": "SOUN",
+      "name": "SoundHound AI",
+      "signal": "WATCH",
+      "buy_eligible": false,
+      "decision_stage": "data_gate",
+      "fundamental_score": null,
+      "entry_score": null,
+      "reward_risk": null,
+      "reasons": [
+        "quote_not_refreshed_this_run",
+        "sec_not_refreshed_this_run"
+      ],
+      "decision_trace": [
+        {
+          "stage": "data_gate",
+          "check": "price_quality",
+          "actual": "cached_recent",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": false,
+          "reason": "quote_not_refreshed_this_run"
+        },
+        {
+          "stage": "data_gate",
+          "check": "fundamentals_quality",
+          "actual": "cached",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": false,
+          "reason": "sec_not_refreshed_this_run"
+        }
+      ],
+      "price_date": "2026-11-16",
+      "price_quality": "cached_recent",
+      "fundamentals_quality": "cached",
+      "analyst_consensus_status": "unavailable"
+    },
+    {
+      "ticker": "SYM",
+      "name": "Symbotic",
+      "signal": "WATCH",
+      "buy_eligible": false,
+      "decision_stage": "data_gate",
+      "fundamental_score": null,
+      "entry_score": null,
+      "reward_risk": null,
+      "reasons": [
+        "quote_not_refreshed_this_run",
+        "sec_not_refreshed_this_run"
+      ],
+      "decision_trace": [
+        {
+          "stage": "data_gate",
+          "check": "price_quality",
+          "actual": "cached_recent",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": false,
+          "reason": "quote_not_refreshed_this_run"
+        },
+        {
+          "stage": "data_gate",
+          "check": "fundamentals_quality",
+          "actual": "cached",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": false,
+          "reason": "sec_not_refreshed_this_run"
+        }
+      ],
+      "price_date": "2026-11-16",
+      "price_quality": "cached_recent",
+      "fundamentals_quality": "cached",
+      "analyst_consensus_status": "unavailable"
+    },
+    {
+      "ticker": "TSM",
+      "name": "Taiwan Semiconductor",
+      "signal": "WATCH",
+      "buy_eligible": false,
+      "decision_stage": "data_gate",
+      "fundamental_score": null,
+      "entry_score": null,
+      "reward_risk": null,
+      "reasons": [
+        "quote_not_refreshed_this_run",
+        "sec_not_refreshed_this_run"
+      ],
+      "decision_trace": [
+        {
+          "stage": "data_gate",
+          "check": "price_quality",
+          "actual": "cached_recent",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": false,
+          "reason": "quote_not_refreshed_this_run"
+        },
+        {
+          "stage": "data_gate",
+          "check": "fundamentals_quality",
+          "actual": "cached",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": false,
+          "reason": "sec_not_refreshed_this_run"
+        }
+      ],
+      "price_date": "2026-11-17",
+      "price_quality": "cached_recent",
+      "fundamentals_quality": "cached",
+      "analyst_consensus_status": "unavailable"
+    },
+    {
+      "ticker": "ZBRA",
+      "name": "Zebra Technologies",
+      "signal": "WATCH",
+      "buy_eligible": false,
+      "decision_stage": "data_gate",
+      "fundamental_score": null,
+      "entry_score": null,
+      "reward_risk": null,
+      "reasons": [
+        "quote_not_refreshed_this_run",
+        "sec_not_refreshed_this_run"
+      ],
+      "decision_trace": [
+        {
+          "stage": "data_gate",
+          "check": "price_quality",
+          "actual": "cached_recent",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": false,
+          "reason": "quote_not_refreshed_this_run"
+        },
+        {
+          "stage": "data_gate",
+          "check": "fundamentals_quality",
+          "actual": "cached",
+          "operator": "==",
+          "required": "refreshed",
+          "passed": false,
+          "reason": "sec_not_refreshed_this_run"
+        }
+      ],
+      "price_date": "2026-11-17",
+      "price_quality": "cached_recent",
+      "fundamentals_quality": "cached",
+      "analyst_consensus_status": "unavailable"
+    }
+  ]
+}
