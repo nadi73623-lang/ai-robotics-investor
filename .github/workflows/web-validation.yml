@@ -40,6 +40,18 @@ jobs:
           assert all(c.get("ticker") for c in d["companies"])
           print("scan JSON valid:", len(d["companies"]), "companies")
           PY
+      - name: Parse embedded application JavaScript
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          html = Path("index.html").read_text(encoding="utf-8")
+          scripts = html.split("<script>", 1)
+          assert len(scripts) == 2, "expected one inline application script"
+          js = scripts[1].split("</script>", 1)[0]
+          assert "</script>" in scripts[1], "unterminated application script"
+          Path("/tmp/robotics-app.js").write_text(js, encoding="utf-8")
+          PY
+          node --check /tmp/robotics-app.js
       - name: Validate PWA entrypoint and safety disclosure
         run: |
           python - <<'PY'
