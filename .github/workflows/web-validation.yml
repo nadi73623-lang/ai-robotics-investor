@@ -1,0 +1,90 @@
+name: Web PWA validation
+on:
+  push:
+    branches: [repair/balanced-1.3.4-scanner-port]
+    paths:
+      - 'index.html'
+      - 'data/scan.json'
+      - 'manifest.webmanifest'
+      - 'sw.js'
+      - 'assets/**'
+      - '.github/workflows/web-validation.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'index.html'
+      - 'data/scan.json'
+      - 'manifest.webmanifest'
+      - 'sw.js'
+      - 'assets/**'
+      - '.github/workflows/web-validation.yml'
+permissions:
+  contents: read
+jobs:
+  validate-web-pwa:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate scan JSON and non-actionable safety state
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          d = json.loads(Path("data/scan.json").read_text(encoding="utf-8"))
+          assert d.get("scan_status") == "ok"
+          assert isinstance(d.get("companies"), list) and d["companies"]
+          assert d.get("investment_ranking_available") is False
+          assert all(c.get("ticker") for c in d["companies"])
+          print("scan JSON valid:", len(d["companies"]), "companies")
+          PY
+      - name: Parse embedded application JavaScript
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          html = Path("index.html").read_text(encoding="utf-8")
+          scripts = html.split("<script>", 1)
+          assert len(scripts) == 2, "expected one inline application script"
+          js = scripts[1].split("</script>", 1)[0]
+          assert "</script>" in scripts[1], "unterminated application script"
+          Path("/tmp/robotics-app.js").write_text(js, encoding="utf-8")
+          PY
+          node --check /tmp/robotics-app.js
+      - name: Check URL sanitization and backend URL policy
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          html = Path("index.html").read_text(encoding="utf-8")
+          assert "const safeUrl=value=>" in html
+          assert "u.protocol==='https:'" in html
+          assert "u.username||u.password" in html
+          assert "u.search||u.hash" in html
+          assert "if(backendUrl)testBackend()" in html
+          assert "function signalCard(c)" in html
+          assert "c.investment_signal" in html
+          assert "${signalCard(c)}" in html
+          assert "decision_stage" in html
+          assert "${safeUrl(p.source_url)}" in html
+          assert "${safeUrl(f.source_url)}" in html
+          assert "${safeUrl(n.url)}" in html
+          assert "${esc(n.url)}" not in html
+          print("External URL sanitization and backend URL policy: PASS")
+          PY
+      - name: Validate PWA entrypoint and safety disclosure
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          html = Path("index.html").read_text(encoding="utf-8")
+          for token in ('manifest.webmanifest', 'data/scan.json', 'sw.js',
+                        'Ranking inwestycyjny / sygnały BUY: WYŁĄCZONE',
+                        'function validateBackendReport', 'release_ready!==true',
+                        "balanced-1.3-audit", 'function testBackend',
+                        "method:'GET'", "backendUrl"):
+              assert token in html, f"missing UI requirement: {token}"
+          assert 'localStorage.setItem(backendUrl' not in html
+          for path in ('manifest.webmanifest', 'sw.js', 'assets/icon.svg'):
+              assert Path(path).is_file(), f"missing PWA asset: {path}"
+          print("PWA entrypoint and safety disclosure valid")
+          PY
