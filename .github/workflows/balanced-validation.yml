@@ -30,3 +30,7 @@ jobs:
         run: python -m unittest -v test_balanced_strategy_repair.py
       - name: Verify scanner ranking metadata semantics
         run: python tests/test_scanner_ranking_metadata.py
+      - name: Verify Balanced scan pipeline and technical indicators
+        env:
+          PYTHONPATH: .
+        run: python -m unittest -v tests/test_balanced_scanner_integration.py
