@@ -225,3 +225,12 @@ The archive's `historical_dataset_manifest.json` remains:
 - Existing `web-deploy.yml` validation job passed on run `44272503876`, but deploy job failed before a runner started (job has zero steps and runner_id 0). Deployment is therefore NOT confirmed. Repository Pages configuration/permissions need owner-side verification; do not claim a live web URL until a successful deploy run reports its page_url.
 - The PWA is a read-only static view of the current news/coverage scan, not a full Balanced investment engine and not connected to private Cloudflare Worker. Browser localStorage stores only local watchlist/notes. It is not yet live-deployed or verified on the Motorola device.
 - The v4 source archive still has not been integrated into the branch. Full recovered-code regression suite, historical OHLCV/analyst consensus validation, walk-forward backtest and Android/Worker integration remain blocked. `main` unchanged; no production report publication or BUY authorization.
+
+## Kontynuacja — 2026-11-18 (Pages deployment diagnosis)
+- Rechecked PR #5: open, Draft, unmerged; head `9d51f437873fb9968074741e24bd5dd9f3559011`; `main` unchanged.
+- Inspected prior Pages run `44272503876`: validation and `upload-pages-artifact` succeeded; deploy job failed before reporting any steps. A subsequent attempt to retrieve job logs returned 404, so the exact failure reason is not confirmed.
+- Updated `.github/workflows/web-deploy.yml` to run `actions/configure-pages@v5` before validation/build and Pages artifact upload. Commit: `a290a8b054243baf92948ad27f6117f016b56f13`.
+- Updated service worker cache key from `robotics-v422-20261011` to `robotics-v422-20261118`. Commit: `9d51f437873fb9968074741e24bd5dd9f3559011`.
+- Fetched current PR metadata after the writes and confirmed the branch head advanced to the service-worker commit. No workflow run is yet associated with that head; deployment remains unverified.
+- The archive v4 remains absent from `recovery-input/` (prior GitHub 404); full Balanced source recovery and its remote regression matrix have not run.
+- No audited point-in-time OHLCV/analyst-consensus dataset, real-data walk-forward result, backend integration, Pages live URL, or phone test is confirmed. BUY authorization remains false; no production report publication; `main` unchanged.
