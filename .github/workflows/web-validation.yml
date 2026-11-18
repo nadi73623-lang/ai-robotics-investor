@@ -61,6 +61,7 @@ jobs:
           assert "u.protocol==='https:'" in html
           assert "u.username||u.password" in html
           assert "u.search||u.hash" in html
+          assert "if(backendUrl)testBackend()" in html
           assert "${safeUrl(p.source_url)}" in html
           assert "${safeUrl(f.source_url)}" in html
           assert "${safeUrl(n.url)}" in html
