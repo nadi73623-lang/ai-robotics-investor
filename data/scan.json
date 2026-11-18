@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-18T19:08:17.456380+00:00",
+  "generated_at": "2026-11-18T19:17:21.161488+00:00",
   "source": "Google News RSS",
   "queries": [
     "artificial intelligence robotics stocks companies contracts earnings",
@@ -10,18 +10,31 @@
     "AI infrastructure cooling energy grid power public company"
   ],
   "scan_status": "ok",
-  "articles_collected": 105,
+  "release_ready": true,
+  "strategy_version": "balanced-1.3-audit",
+  "release_checks": {
+    "news_sources_available": true,
+    "company_decisions_complete": true,
+    "investment_ranking_available": false,
+    "buy_signals_authorized": false
+  },
+  "articles_collected": 107,
   "companies": [
     {
       "ticker": "NVDA",
       "name": "NVIDIA",
       "sector": "AI chips",
-      "mentions": 15,
+      "mentions": 16,
       "news": [
         {
           "title": "Wall Street after another AI selloff ahead of Nvidia earnings - Barchart.com",
           "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOVzk0akx2RGw4bElOMUZaZ2hpb1o0cWZ1Z2RmOUpwamFxaEl0aklRUDFNY3FDdTVqYlhhdGY4czhnNV9ieTdRVzh5MmlzbDYxblBLQlJxaXhpU1BPNnU3dENpZHJoMWlLelBvRWItclVubk5mZGlSeFpKLVZDSXVJTUUwbW9Fd3haS1RDb0g3SkVyTFQwVVZVVGE1QVdmZjNaUlNtQl9MZGk?oc=5",
           "date": "Tue, 17 Nov 2026 13:11:07 GMT"
+        },
+        {
+          "title": "Nvidia’s Earnings Call Is a High-Stakes Moment - The New York Times",
+          "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPMUVyanpxMDNKa0NNX3BKVTltTzN1UW5FdUdBTnpDc1dZV1YwVHoxUGNGd01rdF9HSGRHYTNHYVZGWmFOSGQzdmh6LW8wQ0xuNjFJQVBIR1h4OURaTUo0OTNqaHJvajhHSllYbXBrZ19IS1pUUVUtRTRaQkd4MEtEbmlmWDBoSXNYV0E?oc=5",
+          "date": "Tue, 17 Nov 2026 13:02:17 GMT"
         },
         {
           "title": "Nvidia Earnings and Forecasts Beat Expectations - The New York Times",
@@ -37,11 +50,6 @@
           "title": "Nvidia Stock News Puts Palo Alto Networks In Focus For AI Growth Investors - Simply Wall St",
           "url": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNbzFoYmhfeEpBOTNNTGlFaG5ndHRFM0VOQUtkYnhnMjNEU3NsVkkycnJ3cTVBTTM5V01YUkd0cEhpbFdYS1FjTHNSdDJNa0g4MXV0b2lyd09wTjZ2VzVCckZEeGdKQ29UR3NMM3JLYjBLMkZzcEVDa0lMa2RMQmN2XzhKYnd0aGwxQ3E4UjVFUHJnVVIyeWpYdGFwa1hRUjg3ZFM5WFVYZnAtU0xva0JXNUp2OE9HVjF2RktzZHZsdlo5RDMzVjk5RkNRMjNTb3lOcTFz?oc=5",
           "date": "Wed, 18 Nov 2026 02:13:08 GMT"
-        },
-        {
-          "title": "How Is a Higher Growth Target at NVDA (NASDAQ:NVDA) Calming AI Fears After Its CEO Exit? - Kalkine Media",
-          "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNT2FYaU9UVmtSb2dGU3RtRFI0NnV1VnBMY1VON1Q0SFNMVnlFQVJOdG1nR19ucTJUT3dfMHgzanBrekM5T09GVE5FSS1SdmNNVktMcXBRT2ZFMGNuVjV4Y1FuRF9HNGNZNllid1J6blY4OVFwaFVWR1FkdHJqOXJkMlF3Z2oyMUxFdVNPeF9TcEphaTJyeUFrU2laWTZHVi1IWUJObUxsa3pjclNRUUpDbWl4aVh2VzA3Ymp0eGREalJ6SEhZZmw2clpSNHRwVjhWbXVCLWZGNlpjclk?oc=5",
-          "date": "Wed, 18 Nov 2026 13:28:00 GMT"
         }
       ],
       "status": "Do analizy",
@@ -96,7 +104,7 @@
         "relative_strength_as_of": "2026-11-18",
         "checked_at": "2026-11-18T19:08:09.558568+00:00"
       },
-      "price_quality": "refreshed",
+      "price_quality": "cached_recent",
       "valuation": {
         "status": "partial",
         "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
@@ -126,11 +134,11 @@
           {
             "stage": "data_gate",
             "check": "price_quality",
-            "actual": "refreshed",
+            "actual": "cached_recent",
             "operator": "==",
             "required": "refreshed",
-            "passed": true,
-            "reason": null
+            "passed": false,
+            "reason": "quote_not_refreshed_this_run"
           },
           {
             "stage": "data_gate",
@@ -143,6 +151,7 @@
           }
         ],
         "reasons": [
+          "quote_not_refreshed_this_run",
           "sec_not_refreshed_this_run"
         ]
       }
@@ -197,24 +206,40 @@
       },
       "fundamentals_quality": "cached",
       "price": {
-        "close_usd": 188.145,
-        "date": "2026-11-17",
+        "close_usd": 193.365,
+        "date": "2026-11-18",
         "age_days": 0,
         "source": "Yahoo Finance chart EOD",
-        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/VRT?interval=1d&range=15d",
+        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/VRT?interval=1d&range=3mo",
         "is_live": false,
-        "checked_at": "2026-11-17T20:51:41.117140+00:00"
+        "rsi_14": 43.0,
+        "rsi_as_of": "2026-11-18",
+        "rsi_price_basis": "adjusted_close",
+        "sma20": 206.5138,
+        "sma50": 226.07,
+        "sma20_as_of": "2026-11-18",
+        "sma50_as_of": "2026-11-18",
+        "above_sma20": false,
+        "above_sma50": false,
+        "volume": 2667150.0,
+        "volume_avg20": 8404152.5,
+        "volume_ratio20": 0.317,
+        "volume_as_of": "2026-11-18",
+        "relative_strength_20d_pct": -3.383,
+        "relative_strength_benchmark": "SPY",
+        "relative_strength_as_of": "2026-11-18",
+        "checked_at": "2026-11-18T19:17:11.642939+00:00"
       },
-      "price_quality": "cached_recent",
+      "price_quality": "refreshed",
       "valuation": {
         "status": "partial",
         "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 72447192909,
-        "ps": 7.08,
-        "pe": 54.36,
-        "fcf_yield_pct": 2.61,
+        "market_cap_usd": 74457208307,
+        "ps": 7.28,
+        "pe": 55.87,
+        "fcf_yield_pct": 2.54,
         "share_date": "2026-10-26",
-        "price_date": "2026-11-17",
+        "price_date": "2026-11-18",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
       },
       "analyst_targets": {
@@ -235,11 +260,11 @@
           {
             "stage": "data_gate",
             "check": "price_quality",
-            "actual": "cached_recent",
+            "actual": "refreshed",
             "operator": "==",
             "required": "refreshed",
-            "passed": false,
-            "reason": "quote_not_refreshed_this_run"
+            "passed": true,
+            "reason": null
           },
           {
             "stage": "data_gate",
@@ -252,7 +277,6 @@
           }
         ],
         "reasons": [
-          "quote_not_refreshed_this_run",
           "sec_not_refreshed_this_run"
         ]
       }
@@ -297,41 +321,41 @@
         "net_income_period_end": "2024-11-03",
         "cash_flow_period_end": "2025-11-02",
         "capex_period_end": "2025-11-02",
-        "as_of": "2026-11-18T19:07:55.824403+00:00",
+        "as_of": "2026-11-18T19:16:53.729601+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1730168"
       },
       "fundamentals_quality": "refreshed",
       "price": {
-        "close_usd": 353.55,
+        "close_usd": 354.615,
         "date": "2026-11-18",
         "age_days": 0,
         "source": "Yahoo Finance chart EOD",
         "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/AVGO?interval=1d&range=3mo",
         "is_live": false,
-        "rsi_14": 54.98,
+        "rsi_14": 55.27,
         "rsi_as_of": "2026-11-18",
         "rsi_price_basis": "adjusted_close",
-        "sma20": 332.0485,
-        "sma50": 344.0477,
+        "sma20": 332.1018,
+        "sma50": 344.069,
         "sma20_as_of": "2026-11-18",
         "sma50_as_of": "2026-11-18",
         "above_sma20": true,
         "above_sma50": true,
-        "volume": 14616659.0,
-        "volume_avg20": 27709662.95,
-        "volume_ratio20": 0.527,
+        "volume": 14899350.0,
+        "volume_avg20": 27723797.5,
+        "volume_ratio20": 0.537,
         "volume_as_of": "2026-11-18",
-        "relative_strength_20d_pct": 10.19,
+        "relative_strength_20d_pct": 10.449,
         "relative_strength_benchmark": "SPY",
         "relative_strength_as_of": "2026-11-18",
-        "checked_at": "2026-11-18T19:08:03.609785+00:00"
+        "checked_at": "2026-11-18T19:17:03.634807+00:00"
       },
       "price_quality": "refreshed",
       "valuation": {
         "status": "partial",
         "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 1687716838771,
-        "ps": 26.42,
+        "market_cap_usd": 1692800754577,
+        "ps": 26.5,
         "pe": null,
         "fcf_yield_pct": 1.59,
         "share_date": "2026-08-28",
@@ -431,7 +455,7 @@
         "as_of": "2026-11-18T19:07:58.279657+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=773840"
       },
-      "fundamentals_quality": "refreshed",
+      "fundamentals_quality": "cached",
       "price": {
         "close_usd": 218.96,
         "date": "2026-11-17",
@@ -480,15 +504,16 @@
           {
             "stage": "data_gate",
             "check": "fundamentals_quality",
-            "actual": "refreshed",
+            "actual": "cached",
             "operator": "==",
             "required": "refreshed",
-            "passed": true,
-            "reason": null
+            "passed": false,
+            "reason": "sec_not_refreshed_this_run"
           }
         ],
         "reasons": [
-          "quote_not_refreshed_this_run"
+          "quote_not_refreshed_this_run",
+          "sec_not_refreshed_this_run"
         ]
       }
     },
@@ -561,7 +586,7 @@
         "relative_strength_as_of": "2026-11-18",
         "checked_at": "2026-11-18T19:08:06.845844+00:00"
       },
-      "price_quality": "refreshed",
+      "price_quality": "cached_recent",
       "valuation": {
         "status": "partial",
         "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
@@ -591,11 +616,11 @@
           {
             "stage": "data_gate",
             "check": "price_quality",
-            "actual": "refreshed",
+            "actual": "cached_recent",
             "operator": "==",
             "required": "refreshed",
-            "passed": true,
-            "reason": null
+            "passed": false,
+            "reason": "quote_not_refreshed_this_run"
           },
           {
             "stage": "data_gate",
@@ -608,6 +633,7 @@
           }
         ],
         "reasons": [
+          "quote_not_refreshed_this_run",
           "sec_not_refreshed_this_run"
         ]
       }
@@ -647,29 +673,45 @@
         "net_income_period_end": "2025-12-31",
         "cash_flow_period_end": "2025-12-31",
         "capex_period_end": "2016-12-31",
-        "as_of": "2026-11-17T07:50:45.677309+00:00",
+        "as_of": "2026-11-18T19:16:59.797641+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1018724"
       },
-      "fundamentals_quality": "cached",
+      "fundamentals_quality": "refreshed",
       "price": {
-        "close_usd": 256.6599,
-        "date": "2026-11-17",
+        "close_usd": 267.455,
+        "date": "2026-11-18",
         "age_days": 0,
         "source": "Yahoo Finance chart EOD",
-        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/AMZN?interval=1d&range=15d",
+        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/AMZN?interval=1d&range=3mo",
         "is_live": false,
-        "checked_at": "2026-11-17T20:51:46.774684+00:00"
+        "rsi_14": 57.0,
+        "rsi_as_of": "2026-11-18",
+        "rsi_price_basis": "adjusted_close",
+        "sma20": 257.1168,
+        "sma50": 255.1159,
+        "sma20_as_of": "2026-11-18",
+        "sma50_as_of": "2026-11-18",
+        "above_sma20": true,
+        "above_sma50": true,
+        "volume": 23671981.0,
+        "volume_avg20": 49432224.05,
+        "volume_ratio20": 0.479,
+        "volume_as_of": "2026-11-18",
+        "relative_strength_20d_pct": 7.41,
+        "relative_strength_benchmark": "SPY",
+        "relative_strength_as_of": "2026-11-18",
+        "checked_at": "2026-11-18T19:17:16.642771+00:00"
       },
-      "price_quality": "cached_recent",
+      "price_quality": "refreshed",
       "valuation": {
         "status": "partial",
         "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 2775298996304,
-        "ps": 3.87,
-        "pe": 35.73,
+        "market_cap_usd": 2892027905631,
+        "ps": 4.03,
+        "pe": 37.23,
         "fcf_yield_pct": null,
         "share_date": "2026-10-21",
-        "price_date": "2026-11-17",
+        "price_date": "2026-11-18",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
       },
       "analyst_targets": {
@@ -685,30 +727,40 @@
         "base_upside_pct": null,
         "base_downside_pct": null,
         "reward_risk": null,
-        "decision_stage": "data_gate",
+        "decision_stage": "date_integrity",
         "decision_trace": [
           {
             "stage": "data_gate",
             "check": "price_quality",
-            "actual": "cached_recent",
+            "actual": "refreshed",
             "operator": "==",
             "required": "refreshed",
-            "passed": false,
-            "reason": "quote_not_refreshed_this_run"
+            "passed": true,
+            "reason": null
           },
           {
             "stage": "data_gate",
             "check": "fundamentals_quality",
-            "actual": "cached",
+            "actual": "refreshed",
             "operator": "==",
             "required": "refreshed",
+            "passed": true,
+            "reason": null
+          },
+          {
+            "stage": "date_integrity",
+            "check": "quote_and_fundamental_dates",
+            "actual": [
+              "missing_sec_filing_date"
+            ],
+            "operator": "==",
+            "required": [],
             "passed": false,
-            "reason": "sec_not_refreshed_this_run"
+            "reason": "evidence_date_mismatch_or_future_period"
           }
         ],
         "reasons": [
-          "quote_not_refreshed_this_run",
-          "sec_not_refreshed_this_run"
+          "missing_sec_filing_date"
         ]
       }
     },
@@ -747,29 +799,45 @@
         "net_income_period_end": "2025-12-31",
         "cash_flow_period_end": "2025-12-31",
         "capex_period_end": "2019-12-31",
-        "as_of": "2026-11-17T07:50:46.185922+00:00",
+        "as_of": "2026-11-18T19:17:00.411672+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1596532"
       },
-      "fundamentals_quality": "cached",
+      "fundamentals_quality": "refreshed",
       "price": {
-        "close_usd": 185.22,
-        "date": "2026-11-17",
+        "close_usd": 191.165,
+        "date": "2026-11-18",
         "age_days": 0,
         "source": "Yahoo Finance chart EOD",
-        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/ANET?interval=1d&range=15d",
+        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/ANET?interval=1d&range=3mo",
         "is_live": false,
-        "checked_at": "2026-11-17T20:51:47.679454+00:00"
+        "rsi_14": 52.18,
+        "rsi_as_of": "2026-11-18",
+        "rsi_price_basis": "adjusted_close",
+        "sma20": 181.3183,
+        "sma50": 192.5849,
+        "sma20_as_of": "2026-11-18",
+        "sma50_as_of": "2026-11-18",
+        "above_sma20": true,
+        "above_sma50": false,
+        "volume": 3300815.0,
+        "volume_avg20": 8559850.75,
+        "volume_ratio20": 0.386,
+        "volume_as_of": "2026-11-18",
+        "relative_strength_20d_pct": 9.18,
+        "relative_strength_benchmark": "SPY",
+        "relative_strength_as_of": "2026-11-18",
+        "checked_at": "2026-11-18T19:17:17.539286+00:00"
       },
-      "price_quality": "cached_recent",
+      "price_quality": "refreshed",
       "valuation": {
         "status": "partial",
         "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 234007380489,
-        "ps": 25.98,
-        "pe": 66.64,
+        "market_cap_usd": 241518307370,
+        "ps": 26.82,
+        "pe": 68.78,
         "fcf_yield_pct": null,
         "share_date": "2026-10-29",
-        "price_date": "2026-11-17",
+        "price_date": "2026-11-18",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
       },
       "analyst_targets": {
@@ -785,30 +853,40 @@
         "base_upside_pct": null,
         "base_downside_pct": null,
         "reward_risk": null,
-        "decision_stage": "data_gate",
+        "decision_stage": "date_integrity",
         "decision_trace": [
           {
             "stage": "data_gate",
             "check": "price_quality",
-            "actual": "cached_recent",
+            "actual": "refreshed",
             "operator": "==",
             "required": "refreshed",
-            "passed": false,
-            "reason": "quote_not_refreshed_this_run"
+            "passed": true,
+            "reason": null
           },
           {
             "stage": "data_gate",
             "check": "fundamentals_quality",
-            "actual": "cached",
+            "actual": "refreshed",
             "operator": "==",
             "required": "refreshed",
+            "passed": true,
+            "reason": null
+          },
+          {
+            "stage": "date_integrity",
+            "check": "quote_and_fundamental_dates",
+            "actual": [
+              "missing_sec_filing_date"
+            ],
+            "operator": "==",
+            "required": [],
             "passed": false,
-            "reason": "sec_not_refreshed_this_run"
+            "reason": "evidence_date_mismatch_or_future_period"
           }
         ],
         "reasons": [
-          "quote_not_refreshed_this_run",
-          "sec_not_refreshed_this_run"
+          "missing_sec_filing_date"
         ]
       }
     },
@@ -847,10 +925,10 @@
         "net_income_period_end": "2026-01-30",
         "cash_flow_period_end": "2026-01-30",
         "capex_period_end": "2026-01-30",
-        "as_of": "2026-11-17T07:50:48.113150+00:00",
+        "as_of": "2026-11-18T19:17:02.223174+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1571996"
       },
-      "fundamentals_quality": "cached",
+      "fundamentals_quality": "refreshed",
       "price": {
         "close_usd": 322.79,
         "date": "2026-11-17",
@@ -899,16 +977,15 @@
           {
             "stage": "data_gate",
             "check": "fundamentals_quality",
-            "actual": "cached",
+            "actual": "refreshed",
             "operator": "==",
             "required": "refreshed",
-            "passed": false,
-            "reason": "sec_not_refreshed_this_run"
+            "passed": true,
+            "reason": null
           }
         ],
         "reasons": [
-          "quote_not_refreshed_this_run",
-          "sec_not_refreshed_this_run"
+          "quote_not_refreshed_this_run"
         ]
       }
     },
@@ -950,7 +1027,7 @@
         "as_of": "2026-11-18T19:07:57.351500+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1551182"
       },
-      "fundamentals_quality": "refreshed",
+      "fundamentals_quality": "cached",
       "price": {
         "close_usd": 337.11,
         "date": "2026-11-17",
@@ -999,15 +1076,16 @@
           {
             "stage": "data_gate",
             "check": "fundamentals_quality",
-            "actual": "refreshed",
+            "actual": "cached",
             "operator": "==",
             "required": "refreshed",
-            "passed": true,
-            "reason": null
+            "passed": false,
+            "reason": "sec_not_refreshed_this_run"
           }
         ],
         "reasons": [
-          "quote_not_refreshed_this_run"
+          "quote_not_refreshed_this_run",
+          "sec_not_refreshed_this_run"
         ]
       }
     },
@@ -1254,7 +1332,7 @@
         "relative_strength_as_of": "2026-11-18",
         "checked_at": "2026-11-18T19:08:08.331438+00:00"
       },
-      "price_quality": "refreshed",
+      "price_quality": "cached_recent",
       "valuation": {
         "status": "partial",
         "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
@@ -1284,11 +1362,11 @@
           {
             "stage": "data_gate",
             "check": "price_quality",
-            "actual": "refreshed",
+            "actual": "cached_recent",
             "operator": "==",
             "required": "refreshed",
-            "passed": true,
-            "reason": null
+            "passed": false,
+            "reason": "quote_not_refreshed_this_run"
           },
           {
             "stage": "data_gate",
@@ -1301,6 +1379,7 @@
           }
         ],
         "reasons": [
+          "quote_not_refreshed_this_run",
           "sec_not_refreshed_this_run"
         ]
       }
@@ -1340,7 +1419,7 @@
         "net_income_period_end": "2026-01-31",
         "cash_flow_period_end": "2026-01-31",
         "capex_period_end": "2026-01-31",
-        "as_of": "2026-11-18T19:07:55.083801+00:00",
+        "as_of": "2026-11-18T19:16:52.959203+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1734722"
       },
       "fundamentals_quality": "refreshed",
@@ -1369,7 +1448,7 @@
         "relative_strength_as_of": "2026-11-18",
         "checked_at": "2026-11-18T19:08:12.288049+00:00"
       },
-      "price_quality": "refreshed",
+      "price_quality": "cached_recent",
       "valuation": {
         "status": "unavailable",
         "reason": "float() argument must be a string or a real number, not 'NoneType'",
@@ -1394,16 +1473,16 @@
         "base_upside_pct": null,
         "base_downside_pct": null,
         "reward_risk": null,
-        "decision_stage": "date_integrity",
+        "decision_stage": "data_gate",
         "decision_trace": [
           {
             "stage": "data_gate",
             "check": "price_quality",
-            "actual": "refreshed",
+            "actual": "cached_recent",
             "operator": "==",
             "required": "refreshed",
-            "passed": true,
-            "reason": null
+            "passed": false,
+            "reason": "quote_not_refreshed_this_run"
           },
           {
             "stage": "data_gate",
@@ -1413,21 +1492,10 @@
             "required": "refreshed",
             "passed": true,
             "reason": null
-          },
-          {
-            "stage": "date_integrity",
-            "check": "quote_and_fundamental_dates",
-            "actual": [
-              "missing_sec_filing_date"
-            ],
-            "operator": "==",
-            "required": [],
-            "passed": false,
-            "reason": "evidence_date_mismatch_or_future_period"
           }
         ],
         "reasons": [
-          "missing_sec_filing_date"
+          "quote_not_refreshed_this_run"
         ]
       }
     },
@@ -1471,24 +1539,40 @@
       },
       "fundamentals_quality": "cached",
       "price": {
-        "close_usd": 231.66,
-        "date": "2026-11-17",
+        "close_usd": 230.01,
+        "date": "2026-11-18",
         "age_days": 0,
         "source": "Yahoo Finance chart EOD",
-        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/TER?interval=1d&range=15d",
+        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/TER?interval=1d&range=3mo",
         "is_live": false,
-        "checked_at": "2026-11-17T20:51:39.524760+00:00"
+        "rsi_14": 33.59,
+        "rsi_as_of": "2026-11-18",
+        "rsi_price_basis": "adjusted_close",
+        "sma20": 265.65,
+        "sma50": 334.273,
+        "sma20_as_of": "2026-11-18",
+        "sma50_as_of": "2026-11-18",
+        "above_sma20": false,
+        "above_sma50": false,
+        "volume": 949312.0,
+        "volume_avg20": 4425610.6,
+        "volume_ratio20": 0.215,
+        "volume_as_of": "2026-11-18",
+        "relative_strength_20d_pct": -27.953,
+        "relative_strength_benchmark": "SPY",
+        "relative_strength_as_of": "2026-11-18",
+        "checked_at": "2026-11-18T19:17:10.152235+00:00"
       },
-      "price_quality": "cached_recent",
+      "price_quality": "refreshed",
       "valuation": {
         "status": "partial",
         "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 36167859817,
+        "market_cap_usd": 35910253978,
         "ps": null,
-        "pe": 65.28,
+        "pe": 64.81,
         "fcf_yield_pct": 1.25,
         "share_date": "2026-10-26",
-        "price_date": "2026-11-17",
+        "price_date": "2026-11-18",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
       },
       "analyst_targets": {
@@ -1509,11 +1593,11 @@
           {
             "stage": "data_gate",
             "check": "price_quality",
-            "actual": "cached_recent",
+            "actual": "refreshed",
             "operator": "==",
             "required": "refreshed",
-            "passed": false,
-            "reason": "quote_not_refreshed_this_run"
+            "passed": true,
+            "reason": null
           },
           {
             "stage": "data_gate",
@@ -1526,7 +1610,6 @@
           }
         ],
         "reasons": [
-          "quote_not_refreshed_this_run",
           "sec_not_refreshed_this_run"
         ]
       }
@@ -1625,29 +1708,45 @@
         "net_income_period_end": "2025-12-31",
         "cash_flow_period_end": "2025-12-31",
         "capex_period_end": "2025-12-31",
-        "as_of": "2026-11-16T21:58:03.609476+00:00",
+        "as_of": "2026-11-18T19:16:56.558040+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1824502"
       },
-      "fundamentals_quality": "cached",
+      "fundamentals_quality": "refreshed",
       "price": {
-        "close_usd": 3.5117,
-        "date": "2026-11-17",
+        "close_usd": 3.285,
+        "date": "2026-11-18",
         "age_days": 0,
         "source": "Yahoo Finance chart EOD",
-        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/ACHR?interval=1d&range=15d",
+        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/ACHR?interval=1d&range=3mo",
         "is_live": false,
-        "checked_at": "2026-11-17T20:51:42.706146+00:00"
+        "rsi_14": 32.12,
+        "rsi_as_of": "2026-11-18",
+        "rsi_price_basis": "adjusted_close",
+        "sma20": 4.1408,
+        "sma50": 4.6231,
+        "sma20_as_of": "2026-11-18",
+        "sma50_as_of": "2026-11-18",
+        "above_sma20": false,
+        "above_sma50": false,
+        "volume": 22886131.0,
+        "volume_avg20": 24983506.55,
+        "volume_ratio20": 0.916,
+        "volume_as_of": "2026-11-18",
+        "relative_strength_20d_pct": -9.645,
+        "relative_strength_benchmark": "SPY",
+        "relative_strength_as_of": "2026-11-18",
+        "checked_at": "2026-11-18T19:17:12.976046+00:00"
       },
-      "price_quality": "cached_recent",
+      "price_quality": "refreshed",
       "valuation": {
         "status": "partial",
         "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 2748105821,
-        "ps": 9160.35,
+        "market_cap_usd": 2570700123,
+        "ps": 8569.0,
         "pe": null,
-        "fcf_yield_pct": -18.62,
+        "fcf_yield_pct": -19.91,
         "share_date": "2026-11-04",
-        "price_date": "2026-11-17",
+        "price_date": "2026-11-18",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
       },
       "analyst_targets": {
@@ -1663,30 +1762,40 @@
         "base_upside_pct": null,
         "base_downside_pct": null,
         "reward_risk": null,
-        "decision_stage": "data_gate",
+        "decision_stage": "date_integrity",
         "decision_trace": [
           {
             "stage": "data_gate",
             "check": "price_quality",
-            "actual": "cached_recent",
+            "actual": "refreshed",
             "operator": "==",
             "required": "refreshed",
-            "passed": false,
-            "reason": "quote_not_refreshed_this_run"
+            "passed": true,
+            "reason": null
           },
           {
             "stage": "data_gate",
             "check": "fundamentals_quality",
-            "actual": "cached",
+            "actual": "refreshed",
             "operator": "==",
             "required": "refreshed",
+            "passed": true,
+            "reason": null
+          },
+          {
+            "stage": "date_integrity",
+            "check": "quote_and_fundamental_dates",
+            "actual": [
+              "missing_sec_filing_date"
+            ],
+            "operator": "==",
+            "required": [],
             "passed": false,
-            "reason": "sec_not_refreshed_this_run"
+            "reason": "evidence_date_mismatch_or_future_period"
           }
         ],
         "reasons": [
-          "quote_not_refreshed_this_run",
-          "sec_not_refreshed_this_run"
+          "missing_sec_filing_date"
         ]
       }
     },
@@ -1719,20 +1828,36 @@
         "net_income_period_end": "2026-04-30",
         "cash_flow_period_end": "2026-04-30",
         "capex_period_end": "2026-04-30",
-        "as_of": "2026-11-16T21:58:04.275858+00:00",
+        "as_of": "2026-11-18T19:16:57.245378+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1577526"
       },
-      "fundamentals_quality": "cached",
+      "fundamentals_quality": "refreshed",
       "price": {
-        "close_usd": 9.955,
-        "date": "2026-11-17",
+        "close_usd": 10.055,
+        "date": "2026-11-18",
         "age_days": 0,
         "source": "Yahoo Finance chart EOD",
-        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/AI?interval=1d&range=15d",
+        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/AI?interval=1d&range=3mo",
         "is_live": false,
-        "checked_at": "2026-11-17T20:51:43.664619+00:00"
+        "rsi_14": 34.6,
+        "rsi_as_of": "2026-11-18",
+        "rsi_price_basis": "adjusted_close",
+        "sma20": 11.7322,
+        "sma50": 11.3443,
+        "sma20_as_of": "2026-11-18",
+        "sma50_as_of": "2026-11-18",
+        "above_sma20": false,
+        "above_sma50": false,
+        "volume": 1687926.0,
+        "volume_avg20": 4078066.3,
+        "volume_ratio20": 0.414,
+        "volume_as_of": "2026-11-18",
+        "relative_strength_20d_pct": -9.244,
+        "relative_strength_benchmark": "SPY",
+        "relative_strength_as_of": "2026-11-18",
+        "checked_at": "2026-11-18T19:17:13.831999+00:00"
       },
-      "price_quality": "cached_recent",
+      "price_quality": "refreshed",
       "valuation": {
         "status": "unavailable",
         "reason": "stale share count",
@@ -1741,7 +1866,7 @@
         "pe": null,
         "fcf_yield_pct": null,
         "share_date": "2021-04-30",
-        "price_date": "2026-11-17",
+        "price_date": "2026-11-18",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
       },
       "analyst_targets": {
@@ -1757,30 +1882,40 @@
         "base_upside_pct": null,
         "base_downside_pct": null,
         "reward_risk": null,
-        "decision_stage": "data_gate",
+        "decision_stage": "date_integrity",
         "decision_trace": [
           {
             "stage": "data_gate",
             "check": "price_quality",
-            "actual": "cached_recent",
+            "actual": "refreshed",
             "operator": "==",
             "required": "refreshed",
-            "passed": false,
-            "reason": "quote_not_refreshed_this_run"
+            "passed": true,
+            "reason": null
           },
           {
             "stage": "data_gate",
             "check": "fundamentals_quality",
-            "actual": "cached",
+            "actual": "refreshed",
             "operator": "==",
             "required": "refreshed",
+            "passed": true,
+            "reason": null
+          },
+          {
+            "stage": "date_integrity",
+            "check": "quote_and_fundamental_dates",
+            "actual": [
+              "missing_sec_filing_date"
+            ],
+            "operator": "==",
+            "required": [],
             "passed": false,
-            "reason": "sec_not_refreshed_this_run"
+            "reason": "evidence_date_mismatch_or_future_period"
           }
         ],
         "reasons": [
-          "quote_not_refreshed_this_run",
-          "sec_not_refreshed_this_run"
+          "missing_sec_filing_date"
         ]
       }
     },
@@ -1813,29 +1948,45 @@
         "net_income_period_end": "2025-12-31",
         "cash_flow_period_end": "2025-12-31",
         "capex_period_end": "2025-12-31",
-        "as_of": "2026-11-16T21:58:04.754215+00:00",
+        "as_of": "2026-11-18T19:16:57.820752+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1736297"
       },
-      "fundamentals_quality": "cached",
+      "fundamentals_quality": "refreshed",
       "price": {
-        "close_usd": 206.745,
-        "date": "2026-11-17",
+        "close_usd": 213.94,
+        "date": "2026-11-18",
         "age_days": 0,
         "source": "Yahoo Finance chart EOD",
-        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/ALAB?interval=1d&range=15d",
+        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/ALAB?interval=1d&range=3mo",
         "is_live": false,
-        "checked_at": "2026-11-17T20:51:44.299830+00:00"
+        "rsi_14": 39.71,
+        "rsi_as_of": "2026-11-18",
+        "rsi_price_basis": "adjusted_close",
+        "sma20": 235.2855,
+        "sma50": 288.8276,
+        "sma20_as_of": "2026-11-18",
+        "sma50_as_of": "2026-11-18",
+        "above_sma20": false,
+        "above_sma50": false,
+        "volume": 2953231.0,
+        "volume_avg20": 5203931.55,
+        "volume_ratio20": 0.567,
+        "volume_as_of": "2026-11-18",
+        "relative_strength_20d_pct": -20.771,
+        "relative_strength_benchmark": "SPY",
+        "relative_strength_as_of": "2026-11-18",
+        "checked_at": "2026-11-18T19:17:14.497380+00:00"
       },
-      "price_quality": "cached_recent",
+      "price_quality": "refreshed",
       "valuation": {
         "status": "partial",
         "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 36135320096,
-        "ps": 42.39,
-        "pe": 164.9,
-        "fcf_yield_pct": 0.78,
+        "market_cap_usd": 37392877126,
+        "ps": 43.86,
+        "pe": 170.64,
+        "fcf_yield_pct": 0.75,
         "share_date": "2026-10-31",
-        "price_date": "2026-11-17",
+        "price_date": "2026-11-18",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
       },
       "analyst_targets": {
@@ -1851,30 +2002,40 @@
         "base_upside_pct": null,
         "base_downside_pct": null,
         "reward_risk": null,
-        "decision_stage": "data_gate",
+        "decision_stage": "date_integrity",
         "decision_trace": [
           {
             "stage": "data_gate",
             "check": "price_quality",
-            "actual": "cached_recent",
+            "actual": "refreshed",
             "operator": "==",
             "required": "refreshed",
-            "passed": false,
-            "reason": "quote_not_refreshed_this_run"
+            "passed": true,
+            "reason": null
           },
           {
             "stage": "data_gate",
             "check": "fundamentals_quality",
-            "actual": "cached",
+            "actual": "refreshed",
             "operator": "==",
             "required": "refreshed",
+            "passed": true,
+            "reason": null
+          },
+          {
+            "stage": "date_integrity",
+            "check": "quote_and_fundamental_dates",
+            "actual": [
+              "missing_sec_filing_date"
+            ],
+            "operator": "==",
+            "required": [],
             "passed": false,
-            "reason": "sec_not_refreshed_this_run"
+            "reason": "evidence_date_mismatch_or_future_period"
           }
         ],
         "reasons": [
-          "quote_not_refreshed_this_run",
-          "sec_not_refreshed_this_run"
+          "missing_sec_filing_date"
         ]
       }
     },
@@ -1907,29 +2068,45 @@
         "net_income_period_end": "2025-10-26",
         "cash_flow_period_end": "2025-10-26",
         "capex_period_end": "2025-10-26",
-        "as_of": "2026-11-16T21:58:05.373025+00:00",
+        "as_of": "2026-11-18T19:16:58.534425+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=6951"
       },
-      "fundamentals_quality": "cached",
+      "fundamentals_quality": "refreshed",
       "price": {
-        "close_usd": 343.34,
-        "date": "2026-11-17",
+        "close_usd": 347.97,
+        "date": "2026-11-18",
         "age_days": 0,
         "source": "Yahoo Finance chart EOD",
-        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/AMAT?interval=1d&range=15d",
+        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/AMAT?interval=1d&range=3mo",
         "is_live": false,
-        "checked_at": "2026-11-17T20:51:45.212423+00:00"
+        "rsi_14": 38.12,
+        "rsi_as_of": "2026-11-18",
+        "rsi_price_basis": "adjusted_close",
+        "sma20": 373.9485,
+        "sma50": 430.931,
+        "sma20_as_of": "2026-11-18",
+        "sma50_as_of": "2026-11-18",
+        "above_sma20": false,
+        "above_sma50": false,
+        "volume": 2286977.0,
+        "volume_avg20": 8324488.85,
+        "volume_ratio20": 0.275,
+        "volume_as_of": "2026-11-18",
+        "relative_strength_20d_pct": -9.438,
+        "relative_strength_benchmark": "SPY",
+        "relative_strength_as_of": "2026-11-18",
+        "checked_at": "2026-11-18T19:17:15.177276+00:00"
       },
-      "price_quality": "cached_recent",
+      "price_quality": "refreshed",
       "valuation": {
         "status": "partial",
         "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 272473746080,
-        "ps": 9.6,
-        "pe": 38.94,
-        "fcf_yield_pct": 2.09,
+        "market_cap_usd": 276148102241,
+        "ps": 9.73,
+        "pe": 39.46,
+        "fcf_yield_pct": 2.06,
         "share_date": "2026-07-26",
-        "price_date": "2026-11-17",
+        "price_date": "2026-11-18",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
       },
       "analyst_targets": {
@@ -1945,30 +2122,40 @@
         "base_upside_pct": null,
         "base_downside_pct": null,
         "reward_risk": null,
-        "decision_stage": "data_gate",
+        "decision_stage": "date_integrity",
         "decision_trace": [
           {
             "stage": "data_gate",
             "check": "price_quality",
-            "actual": "cached_recent",
+            "actual": "refreshed",
             "operator": "==",
             "required": "refreshed",
-            "passed": false,
-            "reason": "quote_not_refreshed_this_run"
+            "passed": true,
+            "reason": null
           },
           {
             "stage": "data_gate",
             "check": "fundamentals_quality",
-            "actual": "cached",
+            "actual": "refreshed",
             "operator": "==",
             "required": "refreshed",
+            "passed": true,
+            "reason": null
+          },
+          {
+            "stage": "date_integrity",
+            "check": "quote_and_fundamental_dates",
+            "actual": [
+              "missing_sec_filing_date"
+            ],
+            "operator": "==",
+            "required": [],
             "passed": false,
-            "reason": "sec_not_refreshed_this_run"
+            "reason": "evidence_date_mismatch_or_future_period"
           }
         ],
         "reasons": [
-          "quote_not_refreshed_this_run",
-          "sec_not_refreshed_this_run"
+          "missing_sec_filing_date"
         ]
       }
     },
@@ -2001,29 +2188,45 @@
         "net_income_period_end": "2025-12-27",
         "cash_flow_period_end": "2025-12-27",
         "capex_period_end": "2025-12-27",
-        "as_of": "2026-11-17T07:50:45.164765+00:00",
+        "as_of": "2026-11-18T19:16:59.167267+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=2488"
       },
-      "fundamentals_quality": "cached",
+      "fundamentals_quality": "refreshed",
       "price": {
-        "close_usd": 491.05,
-        "date": "2026-11-17",
+        "close_usd": 519.055,
+        "date": "2026-11-18",
         "age_days": 0,
         "source": "Yahoo Finance chart EOD",
-        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/AMD?interval=1d&range=15d",
+        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/AMD?interval=1d&range=3mo",
         "is_live": false,
-        "checked_at": "2026-11-17T20:51:45.832259+00:00"
+        "rsi_14": 48.84,
+        "rsi_as_of": "2026-11-18",
+        "rsi_price_basis": "adjusted_close",
+        "sma20": 514.0837,
+        "sma50": 554.9989,
+        "sma20_as_of": "2026-11-18",
+        "sma50_as_of": "2026-11-18",
+        "above_sma20": true,
+        "above_sma50": false,
+        "volume": 22911857.0,
+        "volume_avg20": 36815237.85,
+        "volume_ratio20": 0.622,
+        "volume_as_of": "2026-11-18",
+        "relative_strength_20d_pct": -0.619,
+        "relative_strength_benchmark": "SPY",
+        "relative_strength_as_of": "2026-11-18",
+        "checked_at": "2026-11-18T19:17:15.829537+00:00"
       },
-      "price_quality": "cached_recent",
+      "price_quality": "refreshed",
       "valuation": {
         "status": "partial",
         "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 805364844604,
-        "ps": 23.25,
-        "pe": 185.78,
-        "fcf_yield_pct": 0.84,
+        "market_cap_usd": 851295488068,
+        "ps": 24.58,
+        "pe": 196.38,
+        "fcf_yield_pct": 0.79,
         "share_date": "2026-10-28",
-        "price_date": "2026-11-17",
+        "price_date": "2026-11-18",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
       },
       "analyst_targets": {
@@ -2039,30 +2242,40 @@
         "base_upside_pct": null,
         "base_downside_pct": null,
         "reward_risk": null,
-        "decision_stage": "data_gate",
+        "decision_stage": "date_integrity",
         "decision_trace": [
           {
             "stage": "data_gate",
             "check": "price_quality",
-            "actual": "cached_recent",
+            "actual": "refreshed",
             "operator": "==",
             "required": "refreshed",
-            "passed": false,
-            "reason": "quote_not_refreshed_this_run"
+            "passed": true,
+            "reason": null
           },
           {
             "stage": "data_gate",
             "check": "fundamentals_quality",
-            "actual": "cached",
+            "actual": "refreshed",
             "operator": "==",
             "required": "refreshed",
+            "passed": true,
+            "reason": null
+          },
+          {
+            "stage": "date_integrity",
+            "check": "quote_and_fundamental_dates",
+            "actual": [
+              "missing_sec_filing_date"
+            ],
+            "operator": "==",
+            "required": [],
             "passed": false,
-            "reason": "sec_not_refreshed_this_run"
+            "reason": "evidence_date_mismatch_or_future_period"
           }
         ],
         "reasons": [
-          "quote_not_refreshed_this_run",
-          "sec_not_refreshed_this_run"
+          "missing_sec_filing_date"
         ]
       }
     },
@@ -2100,24 +2313,40 @@
       },
       "fundamentals_quality": "cached",
       "price": {
-        "close_usd": 75.67,
-        "date": "2026-11-17",
+        "close_usd": 76.7,
+        "date": "2026-11-18",
         "age_days": 0,
         "source": "Yahoo Finance chart EOD",
-        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/APH?interval=1d&range=15d",
+        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/APH?interval=1d&range=3mo",
         "is_live": false,
-        "checked_at": "2026-11-17T20:51:48.578990+00:00"
+        "rsi_14": 45.79,
+        "rsi_as_of": "2026-11-18",
+        "rsi_price_basis": "adjusted_close",
+        "sma20": 77.928,
+        "sma50": 80.807,
+        "sma20_as_of": "2026-11-18",
+        "sma50_as_of": "2026-11-18",
+        "above_sma20": false,
+        "above_sma50": false,
+        "volume": 5350302.0,
+        "volume_avg20": 15596260.1,
+        "volume_ratio20": 0.343,
+        "volume_as_of": "2026-11-18",
+        "relative_strength_20d_pct": 2.315,
+        "relative_strength_benchmark": "SPY",
+        "relative_strength_as_of": "2026-11-18",
+        "checked_at": "2026-11-18T19:17:18.201881+00:00"
       },
-      "price_quality": "cached_recent",
+      "price_quality": "refreshed",
       "valuation": {
         "status": "partial",
         "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 186848994096,
-        "ps": 8.09,
-        "pe": 43.76,
-        "fcf_yield_pct": 2.34,
+        "market_cap_usd": 189392333120,
+        "ps": 8.2,
+        "pe": 44.35,
+        "fcf_yield_pct": 2.31,
         "share_date": "2026-10-27",
-        "price_date": "2026-11-17",
+        "price_date": "2026-11-18",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
       },
       "analyst_targets": {
@@ -2138,11 +2367,11 @@
           {
             "stage": "data_gate",
             "check": "price_quality",
-            "actual": "cached_recent",
+            "actual": "refreshed",
             "operator": "==",
             "required": "refreshed",
-            "passed": false,
-            "reason": "quote_not_refreshed_this_run"
+            "passed": true,
+            "reason": null
           },
           {
             "stage": "data_gate",
@@ -2155,7 +2384,6 @@
           }
         ],
         "reasons": [
-          "quote_not_refreshed_this_run",
           "sec_not_refreshed_this_run"
         ]
       }
@@ -2194,15 +2422,31 @@
       },
       "fundamentals_quality": "cached",
       "price": {
-        "close_usd": 181.6,
-        "date": "2026-11-17",
+        "close_usd": 182.0625,
+        "date": "2026-11-18",
         "age_days": 0,
         "source": "Yahoo Finance chart EOD",
-        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/ARM?interval=1d&range=15d",
+        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/ARM?interval=1d&range=3mo",
         "is_live": false,
-        "checked_at": "2026-11-17T20:51:49.201164+00:00"
+        "rsi_14": 39.59,
+        "rsi_as_of": "2026-11-18",
+        "rsi_price_basis": "adjusted_close",
+        "sma20": 198.7701,
+        "sma50": 243.3968,
+        "sma20_as_of": "2026-11-18",
+        "sma50_as_of": "2026-11-18",
+        "above_sma20": false,
+        "above_sma50": false,
+        "volume": 3004997.0,
+        "volume_avg20": 5873304.85,
+        "volume_ratio20": 0.512,
+        "volume_as_of": "2026-11-18",
+        "relative_strength_20d_pct": -14.18,
+        "relative_strength_benchmark": "SPY",
+        "relative_strength_as_of": "2026-11-18",
+        "checked_at": "2026-11-18T19:17:18.858905+00:00"
       },
-      "price_quality": "cached_recent",
+      "price_quality": "refreshed",
       "valuation": {
         "status": "unavailable",
         "reason": "ADR/foreign share-unit ambiguity",
@@ -2211,7 +2455,7 @@
         "pe": null,
         "fcf_yield_pct": null,
         "share_date": "2026-03-31",
-        "price_date": "2026-11-17",
+        "price_date": "2026-11-18",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
       },
       "analyst_targets": {
@@ -2232,11 +2476,11 @@
           {
             "stage": "data_gate",
             "check": "price_quality",
-            "actual": "cached_recent",
+            "actual": "refreshed",
             "operator": "==",
             "required": "refreshed",
-            "passed": false,
-            "reason": "quote_not_refreshed_this_run"
+            "passed": true,
+            "reason": null
           },
           {
             "stage": "data_gate",
@@ -2249,7 +2493,6 @@
           }
         ],
         "reasons": [
-          "quote_not_refreshed_this_run",
           "sec_not_refreshed_this_run"
         ]
       }
@@ -2288,15 +2531,31 @@
       },
       "fundamentals_quality": "cached",
       "price": {
-        "close_usd": 1366.21,
-        "date": "2026-11-17",
+        "close_usd": 1384.99,
+        "date": "2026-11-18",
         "age_days": 0,
         "source": "Yahoo Finance chart EOD",
-        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/ASML?interval=1d&range=15d",
+        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/ASML?interval=1d&range=3mo",
         "is_live": false,
-        "checked_at": "2026-11-17T20:51:50.180091+00:00"
+        "rsi_14": 34.88,
+        "rsi_as_of": "2026-11-18",
+        "rsi_price_basis": "adjusted_close",
+        "sma20": 1516.7854,
+        "sma50": 1638.3206,
+        "sma20_as_of": "2026-11-18",
+        "sma50_as_of": "2026-11-18",
+        "above_sma20": false,
+        "above_sma50": false,
+        "volume": 972494.0,
+        "volume_avg20": 1755629.7,
+        "volume_ratio20": 0.554,
+        "volume_as_of": "2026-11-18",
+        "relative_strength_20d_pct": -11.817,
+        "relative_strength_benchmark": "SPY",
+        "relative_strength_as_of": "2026-11-18",
+        "checked_at": "2026-11-18T19:17:19.530611+00:00"
       },
-      "price_quality": "cached_recent",
+      "price_quality": "refreshed",
       "valuation": {
         "status": "unavailable",
         "reason": "ADR/foreign share-unit ambiguity",
@@ -2305,7 +2564,7 @@
         "pe": null,
         "fcf_yield_pct": null,
         "share_date": "2025-12-31",
-        "price_date": "2026-11-17",
+        "price_date": "2026-11-18",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
       },
       "analyst_targets": {
@@ -2326,11 +2585,11 @@
           {
             "stage": "data_gate",
             "check": "price_quality",
-            "actual": "cached_recent",
+            "actual": "refreshed",
             "operator": "==",
             "required": "refreshed",
-            "passed": false,
-            "reason": "quote_not_refreshed_this_run"
+            "passed": true,
+            "reason": null
           },
           {
             "stage": "data_gate",
@@ -2343,7 +2602,6 @@
           }
         ],
         "reasons": [
-          "quote_not_refreshed_this_run",
           "sec_not_refreshed_this_run"
         ]
       }
@@ -2382,24 +2640,40 @@
       },
       "fundamentals_quality": "cached",
       "price": {
-        "close_usd": 45.46,
-        "date": "2026-11-17",
+        "close_usd": 48.625,
+        "date": "2026-11-18",
         "age_days": 0,
         "source": "Yahoo Finance chart EOD",
-        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/AZTA?interval=1d&range=15d",
+        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/AZTA?interval=1d&range=3mo",
         "is_live": false,
-        "checked_at": "2026-11-17T20:51:50.811566+00:00"
+        "rsi_14": 64.3,
+        "rsi_as_of": "2026-11-18",
+        "rsi_price_basis": "adjusted_close",
+        "sma20": 40.9793,
+        "sma50": 37.5041,
+        "sma20_as_of": "2026-11-18",
+        "sma50_as_of": "2026-11-18",
+        "above_sma20": true,
+        "above_sma50": true,
+        "volume": 304861.0,
+        "volume_avg20": 998898.05,
+        "volume_ratio20": 0.305,
+        "volume_as_of": "2026-11-18",
+        "relative_strength_20d_pct": 37.748,
+        "relative_strength_benchmark": "SPY",
+        "relative_strength_as_of": "2026-11-18",
+        "checked_at": "2026-11-18T19:17:20.405966+00:00"
       },
-      "price_quality": "cached_recent",
+      "price_quality": "refreshed",
       "valuation": {
         "status": "partial",
         "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 1991529546,
-        "ps": 3.35,
+        "market_cap_usd": 2130183110,
+        "ps": 3.59,
         "pe": null,
-        "fcf_yield_pct": 1.92,
+        "fcf_yield_pct": 1.8,
         "share_date": "2026-08-03",
-        "price_date": "2026-11-17",
+        "price_date": "2026-11-18",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
       },
       "analyst_targets": {
@@ -2420,11 +2694,11 @@
           {
             "stage": "data_gate",
             "check": "price_quality",
-            "actual": "cached_recent",
+            "actual": "refreshed",
             "operator": "==",
             "required": "refreshed",
-            "passed": false,
-            "reason": "quote_not_refreshed_this_run"
+            "passed": true,
+            "reason": null
           },
           {
             "stage": "data_gate",
@@ -2437,7 +2711,6 @@
           }
         ],
         "reasons": [
-          "quote_not_refreshed_this_run",
           "sec_not_refreshed_this_run"
         ]
       }
@@ -2471,29 +2744,45 @@
         "net_income_period_end": "2025-12-31",
         "cash_flow_period_end": "2025-12-31",
         "capex_period_end": "2025-12-31",
-        "as_of": "2026-11-17T07:50:46.807877+00:00",
+        "as_of": "2026-11-18T19:17:00.979142+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1836981"
       },
-      "fundamentals_quality": "cached",
+      "fundamentals_quality": "refreshed",
       "price": {
-        "close_usd": 1.79,
-        "date": "2026-11-17",
+        "close_usd": 1.7815,
+        "date": "2026-11-18",
         "age_days": 0,
         "source": "Yahoo Finance chart EOD",
-        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/BBAI?interval=1d&range=15d",
+        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/BBAI?interval=1d&range=3mo",
         "is_live": false,
-        "checked_at": "2026-11-17T20:51:51.779096+00:00"
+        "rsi_14": 31.11,
+        "rsi_as_of": "2026-11-18",
+        "rsi_price_basis": "adjusted_close",
+        "sma20": 2.2516,
+        "sma50": 2.4544,
+        "sma20_as_of": "2026-11-18",
+        "sma50_as_of": "2026-11-18",
+        "above_sma20": false,
+        "above_sma50": false,
+        "volume": 10683284.0,
+        "volume_avg20": 21848984.2,
+        "volume_ratio20": 0.489,
+        "volume_as_of": "2026-11-18",
+        "relative_strength_20d_pct": -13.181,
+        "relative_strength_benchmark": "SPY",
+        "relative_strength_as_of": "2026-11-18",
+        "checked_at": "2026-11-18T19:17:21.053899+00:00"
       },
-      "price_quality": "cached_recent",
+      "price_quality": "refreshed",
       "valuation": {
         "status": "partial",
         "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 861689813,
-        "ps": 6.75,
+        "market_cap_usd": 857597990,
+        "ps": 6.72,
         "pe": null,
-        "fcf_yield_pct": -4.93,
+        "fcf_yield_pct": -4.95,
         "share_date": "2026-10-23",
-        "price_date": "2026-11-17",
+        "price_date": "2026-11-18",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
       },
       "analyst_targets": {
@@ -2509,30 +2798,40 @@
         "base_upside_pct": null,
         "base_downside_pct": null,
         "reward_risk": null,
-        "decision_stage": "data_gate",
+        "decision_stage": "date_integrity",
         "decision_trace": [
           {
             "stage": "data_gate",
             "check": "price_quality",
-            "actual": "cached_recent",
+            "actual": "refreshed",
             "operator": "==",
             "required": "refreshed",
-            "passed": false,
-            "reason": "quote_not_refreshed_this_run"
+            "passed": true,
+            "reason": null
           },
           {
             "stage": "data_gate",
             "check": "fundamentals_quality",
-            "actual": "cached",
+            "actual": "refreshed",
             "operator": "==",
             "required": "refreshed",
+            "passed": true,
+            "reason": null
+          },
+          {
+            "stage": "date_integrity",
+            "check": "quote_and_fundamental_dates",
+            "actual": [
+              "missing_sec_filing_date"
+            ],
+            "operator": "==",
+            "required": [],
             "passed": false,
-            "reason": "sec_not_refreshed_this_run"
+            "reason": "evidence_date_mismatch_or_future_period"
           }
         ],
         "reasons": [
-          "quote_not_refreshed_this_run",
-          "sec_not_refreshed_this_run"
+          "missing_sec_filing_date"
         ]
       }
     },
@@ -2659,10 +2958,10 @@
         "net_income_period_end": "2025-12-31",
         "cash_flow_period_end": "2025-12-31",
         "capex_period_end": null,
-        "as_of": "2026-11-17T07:50:47.416989+00:00",
+        "as_of": "2026-11-18T19:17:01.541252+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1030894"
       },
-      "fundamentals_quality": "cached",
+      "fundamentals_quality": "refreshed",
       "price": {
         "close_usd": 235.39,
         "date": "2026-11-17",
@@ -2711,16 +3010,15 @@
           {
             "stage": "data_gate",
             "check": "fundamentals_quality",
-            "actual": "cached",
+            "actual": "refreshed",
             "operator": "==",
             "required": "refreshed",
-            "passed": false,
-            "reason": "sec_not_refreshed_this_run"
+            "passed": true,
+            "reason": null
           }
         ],
         "reasons": [
-          "quote_not_refreshed_this_run",
-          "sec_not_refreshed_this_run"
+          "quote_not_refreshed_this_run"
         ]
       }
     },
@@ -2944,7 +3242,7 @@
         "as_of": "2026-11-18T19:07:56.257770+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=313616"
       },
-      "fundamentals_quality": "refreshed",
+      "fundamentals_quality": "cached",
       "price": {
         "close_usd": 225.77,
         "date": "2026-11-17",
@@ -2993,15 +3291,16 @@
           {
             "stage": "data_gate",
             "check": "fundamentals_quality",
-            "actual": "refreshed",
+            "actual": "cached",
             "operator": "==",
             "required": "refreshed",
-            "passed": true,
-            "reason": null
+            "passed": false,
+            "reason": "sec_not_refreshed_this_run"
           }
         ],
         "reasons": [
-          "quote_not_refreshed_this_run"
+          "quote_not_refreshed_this_run",
+          "sec_not_refreshed_this_run"
         ]
       }
     },
@@ -3037,7 +3336,7 @@
         "as_of": "2026-11-18T19:07:56.901930+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=32604"
       },
-      "fundamentals_quality": "refreshed",
+      "fundamentals_quality": "cached",
       "price": {
         "close_usd": 159.15,
         "date": "2026-11-17",
@@ -3086,15 +3385,16 @@
           {
             "stage": "data_gate",
             "check": "fundamentals_quality",
-            "actual": "refreshed",
+            "actual": "cached",
             "operator": "==",
             "required": "refreshed",
-            "passed": true,
-            "reason": null
+            "passed": false,
+            "reason": "sec_not_refreshed_this_run"
           }
         ],
         "reasons": [
-          "quote_not_refreshed_this_run"
+          "quote_not_refreshed_this_run",
+          "sec_not_refreshed_this_run"
         ]
       }
     },
@@ -3130,7 +3430,7 @@
         "as_of": "2026-11-18T19:07:57.792845+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=24741"
       },
-      "fundamentals_quality": "refreshed",
+      "fundamentals_quality": "cached",
       "price": {
         "close_usd": 108.49,
         "date": "2026-11-17",
@@ -3179,15 +3479,16 @@
           {
             "stage": "data_gate",
             "check": "fundamentals_quality",
-            "actual": "refreshed",
+            "actual": "cached",
             "operator": "==",
             "required": "refreshed",
-            "passed": true,
-            "reason": null
+            "passed": false,
+            "reason": "sec_not_refreshed_this_run"
           }
         ],
         "reasons": [
-          "quote_not_refreshed_this_run"
+          "quote_not_refreshed_this_run",
+          "sec_not_refreshed_this_run"
         ]
       }
     },
@@ -3317,7 +3618,7 @@
         "as_of": "2026-11-18T19:07:59.143683+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=48898"
       },
-      "fundamentals_quality": "refreshed",
+      "fundamentals_quality": "cached",
       "price": {
         "close_usd": 424.82,
         "date": "2026-11-17",
@@ -3366,15 +3667,16 @@
           {
             "stage": "data_gate",
             "check": "fundamentals_quality",
-            "actual": "refreshed",
+            "actual": "cached",
             "operator": "==",
             "required": "refreshed",
-            "passed": true,
-            "reason": null
+            "passed": false,
+            "reason": "sec_not_refreshed_this_run"
           }
         ],
         "reasons": [
-          "quote_not_refreshed_this_run"
+          "quote_not_refreshed_this_run",
+          "sec_not_refreshed_this_run"
         ]
       }
     },
@@ -3475,7 +3777,7 @@
         "as_of": "2026-11-18T19:07:59.842684+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1035267"
       },
-      "fundamentals_quality": "refreshed",
+      "fundamentals_quality": "cached",
       "price": {
         "close_usd": 430.53,
         "date": "2026-11-17",
@@ -3524,15 +3826,16 @@
           {
             "stage": "data_gate",
             "check": "fundamentals_quality",
-            "actual": "refreshed",
+            "actual": "cached",
             "operator": "==",
             "required": "refreshed",
-            "passed": true,
-            "reason": null
+            "passed": false,
+            "reason": "sec_not_refreshed_this_run"
           }
         ],
         "reasons": [
-          "quote_not_refreshed_this_run"
+          "quote_not_refreshed_this_run",
+          "sec_not_refreshed_this_run"
         ]
       }
     },
@@ -3568,7 +3871,7 @@
         "as_of": "2026-11-18T19:08:00.270934+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=898293"
       },
-      "fundamentals_quality": "refreshed",
+      "fundamentals_quality": "cached",
       "price": {
         "close_usd": 243.61,
         "date": "2026-11-17",
@@ -3617,15 +3920,16 @@
           {
             "stage": "data_gate",
             "check": "fundamentals_quality",
-            "actual": "refreshed",
+            "actual": "cached",
             "operator": "==",
             "required": "refreshed",
-            "passed": true,
-            "reason": null
+            "passed": false,
+            "reason": "sec_not_refreshed_this_run"
           }
         ],
         "reasons": [
-          "quote_not_refreshed_this_run"
+          "quote_not_refreshed_this_run",
+          "sec_not_refreshed_this_run"
         ]
       }
     },
@@ -3661,7 +3965,7 @@
         "as_of": "2026-11-18T19:08:00.780568+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1819848"
       },
-      "fundamentals_quality": "refreshed",
+      "fundamentals_quality": "cached",
       "price": {
         "close_usd": 4.38,
         "date": "2026-11-17",
@@ -3710,15 +4014,16 @@
           {
             "stage": "data_gate",
             "check": "fundamentals_quality",
-            "actual": "refreshed",
+            "actual": "cached",
             "operator": "==",
             "required": "refreshed",
-            "passed": true,
-            "reason": null
+            "passed": false,
+            "reason": "sec_not_refreshed_this_run"
           }
         ],
         "reasons": [
-          "quote_not_refreshed_this_run"
+          "quote_not_refreshed_this_run",
+          "sec_not_refreshed_this_run"
         ]
       }
     },
@@ -3754,7 +4059,7 @@
         "as_of": "2026-11-18T19:08:01.210217+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=319201"
       },
-      "fundamentals_quality": "refreshed",
+      "fundamentals_quality": "cached",
       "price": {
         "close_usd": 144.56,
         "date": "2026-11-17",
@@ -3803,15 +4108,16 @@
           {
             "stage": "data_gate",
             "check": "fundamentals_quality",
-            "actual": "refreshed",
+            "actual": "cached",
             "operator": "==",
             "required": "refreshed",
-            "passed": true,
-            "reason": null
+            "passed": false,
+            "reason": "sec_not_refreshed_this_run"
           }
         ],
         "reasons": [
-          "quote_not_refreshed_this_run"
+          "quote_not_refreshed_this_run",
+          "sec_not_refreshed_this_run"
         ]
       }
     },
@@ -3847,7 +4153,7 @@
         "as_of": "2026-11-18T19:08:01.667867+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1069258"
       },
-      "fundamentals_quality": "refreshed",
+      "fundamentals_quality": "cached",
       "price": {
         "close_usd": 31.06,
         "date": "2026-11-17",
@@ -3896,15 +4202,16 @@
           {
             "stage": "data_gate",
             "check": "fundamentals_quality",
-            "actual": "refreshed",
+            "actual": "cached",
             "operator": "==",
             "required": "refreshed",
-            "passed": true,
-            "reason": null
+            "passed": false,
+            "reason": "sec_not_refreshed_this_run"
           }
         ],
         "reasons": [
-          "quote_not_refreshed_this_run"
+          "quote_not_refreshed_this_run",
+          "sec_not_refreshed_this_run"
         ]
       }
     },
@@ -4078,7 +4385,7 @@
         "as_of": "2026-11-18T19:08:02.087831+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1633978"
       },
-      "fundamentals_quality": "refreshed",
+      "fundamentals_quality": "cached",
       "price": {
         "close_usd": 559.97,
         "date": "2026-11-17",
@@ -4127,15 +4434,16 @@
           {
             "stage": "data_gate",
             "check": "fundamentals_quality",
-            "actual": "refreshed",
+            "actual": "cached",
             "operator": "==",
             "required": "refreshed",
-            "passed": true,
-            "reason": null
+            "passed": false,
+            "reason": "sec_not_refreshed_this_run"
           }
         ],
         "reasons": [
-          "quote_not_refreshed_this_run"
+          "quote_not_refreshed_this_run",
+          "sec_not_refreshed_this_run"
         ]
       }
     },
@@ -4171,7 +4479,7 @@
         "as_of": "2026-11-18T19:08:02.517628+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=707549"
       },
-      "fundamentals_quality": "refreshed",
+      "fundamentals_quality": "cached",
       "price": {
         "close_usd": 210.69,
         "date": "2026-11-17",
@@ -4220,15 +4528,16 @@
           {
             "stage": "data_gate",
             "check": "fundamentals_quality",
-            "actual": "refreshed",
+            "actual": "cached",
             "operator": "==",
             "required": "refreshed",
-            "passed": true,
-            "reason": null
+            "passed": false,
+            "reason": "sec_not_refreshed_this_run"
           }
         ],
         "reasons": [
-          "quote_not_refreshed_this_run"
+          "quote_not_refreshed_this_run",
+          "sec_not_refreshed_this_run"
         ]
       }
     },
@@ -4261,10 +4570,10 @@
         "net_income_period_end": "2025-12-27",
         "cash_flow_period_end": "2025-12-27",
         "capex_period_end": "2025-12-27",
-        "as_of": "2026-11-16T21:58:01.725670+00:00",
+        "as_of": "2026-11-18T19:16:54.518311+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1910139"
       },
-      "fundamentals_quality": "cached",
+      "fundamentals_quality": "refreshed",
       "price": {
         "close_usd": 5.19,
         "date": "2026-11-17",
@@ -4313,16 +4622,15 @@
           {
             "stage": "data_gate",
             "check": "fundamentals_quality",
-            "actual": "cached",
+            "actual": "refreshed",
             "operator": "==",
             "required": "refreshed",
-            "passed": false,
-            "reason": "sec_not_refreshed_this_run"
+            "passed": true,
+            "reason": null
           }
         ],
         "reasons": [
-          "quote_not_refreshed_this_run",
-          "sec_not_refreshed_this_run"
+          "quote_not_refreshed_this_run"
         ]
       }
     },
@@ -4355,7 +4663,7 @@
         "net_income_period_end": "2025-12-31",
         "cash_flow_period_end": "2025-12-31",
         "capex_period_end": "2025-12-31",
-        "as_of": "2026-11-18T19:07:54.613573+00:00",
+        "as_of": "2026-11-18T19:16:52.313968+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1326801"
       },
       "fundamentals_quality": "refreshed",
@@ -4448,10 +4756,10 @@
         "net_income_period_end": "2025-12-31",
         "cash_flow_period_end": "2025-12-31",
         "capex_period_end": "2025-12-31",
-        "as_of": "2026-11-16T21:58:02.472541+00:00",
+        "as_of": "2026-11-18T19:16:55.203250+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=1280452"
       },
-      "fundamentals_quality": "cached",
+      "fundamentals_quality": "refreshed",
       "price": {
         "close_usd": 1298.78,
         "date": "2026-11-18",
@@ -4477,7 +4785,7 @@
         "relative_strength_as_of": "2026-11-18",
         "checked_at": "2026-11-18T19:08:06.202184+00:00"
       },
-      "price_quality": "refreshed",
+      "price_quality": "cached_recent",
       "valuation": {
         "status": "partial",
         "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
@@ -4507,24 +4815,24 @@
           {
             "stage": "data_gate",
             "check": "price_quality",
+            "actual": "cached_recent",
+            "operator": "==",
+            "required": "refreshed",
+            "passed": false,
+            "reason": "quote_not_refreshed_this_run"
+          },
+          {
+            "stage": "data_gate",
+            "check": "fundamentals_quality",
             "actual": "refreshed",
             "operator": "==",
             "required": "refreshed",
             "passed": true,
             "reason": null
-          },
-          {
-            "stage": "data_gate",
-            "check": "fundamentals_quality",
-            "actual": "cached",
-            "operator": "==",
-            "required": "refreshed",
-            "passed": false,
-            "reason": "sec_not_refreshed_this_run"
           }
         ],
         "reasons": [
-          "sec_not_refreshed_this_run"
+          "quote_not_refreshed_this_run"
         ]
       }
     },
@@ -4557,10 +4865,10 @@
         "net_income_period_end": "2026-06-30",
         "cash_flow_period_end": "2026-06-30",
         "capex_period_end": "2026-06-30",
-        "as_of": "2026-11-16T21:58:03.046015+00:00",
+        "as_of": "2026-11-18T19:16:55.867708+00:00",
         "source_url": "https://www.sec.gov/edgar/browse/?CIK=789019"
       },
-      "fundamentals_quality": "cached",
+      "fundamentals_quality": "refreshed",
       "price": {
         "close_usd": 508.785,
         "date": "2026-11-18",
@@ -4586,7 +4894,7 @@
         "relative_strength_as_of": "2026-11-18",
         "checked_at": "2026-11-18T19:08:07.611532+00:00"
       },
-      "price_quality": "refreshed",
+      "price_quality": "cached_recent",
       "valuation": {
         "status": "partial",
         "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
@@ -4616,24 +4924,24 @@
           {
             "stage": "data_gate",
             "check": "price_quality",
+            "actual": "cached_recent",
+            "operator": "==",
+            "required": "refreshed",
+            "passed": false,
+            "reason": "quote_not_refreshed_this_run"
+          },
+          {
+            "stage": "data_gate",
+            "check": "fundamentals_quality",
             "actual": "refreshed",
             "operator": "==",
             "required": "refreshed",
             "passed": true,
             "reason": null
-          },
-          {
-            "stage": "data_gate",
-            "check": "fundamentals_quality",
-            "actual": "cached",
-            "operator": "==",
-            "required": "refreshed",
-            "passed": false,
-            "reason": "sec_not_refreshed_this_run"
           }
         ],
         "reasons": [
-          "sec_not_refreshed_this_run"
+          "quote_not_refreshed_this_run"
         ]
       }
     },
@@ -4695,7 +5003,7 @@
         "relative_strength_as_of": "2026-11-18",
         "checked_at": "2026-11-18T19:08:08.871526+00:00"
       },
-      "price_quality": "refreshed",
+      "price_quality": "cached_recent",
       "valuation": {
         "status": "partial",
         "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
@@ -4725,11 +5033,11 @@
           {
             "stage": "data_gate",
             "check": "price_quality",
-            "actual": "refreshed",
+            "actual": "cached_recent",
             "operator": "==",
             "required": "refreshed",
-            "passed": true,
-            "reason": null
+            "passed": false,
+            "reason": "quote_not_refreshed_this_run"
           },
           {
             "stage": "data_gate",
@@ -4742,6 +5050,7 @@
           }
         ],
         "reasons": [
+          "quote_not_refreshed_this_run",
           "sec_not_refreshed_this_run"
         ]
       }
@@ -4804,7 +5113,7 @@
         "relative_strength_as_of": "2026-11-18",
         "checked_at": "2026-11-18T19:08:10.087814+00:00"
       },
-      "price_quality": "refreshed",
+      "price_quality": "cached_recent",
       "valuation": {
         "status": "partial",
         "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
@@ -4834,11 +5143,11 @@
           {
             "stage": "data_gate",
             "check": "price_quality",
-            "actual": "refreshed",
+            "actual": "cached_recent",
             "operator": "==",
             "required": "refreshed",
-            "passed": true,
-            "reason": null
+            "passed": false,
+            "reason": "quote_not_refreshed_this_run"
           },
           {
             "stage": "data_gate",
@@ -4851,6 +5160,7 @@
           }
         ],
         "reasons": [
+          "quote_not_refreshed_this_run",
           "sec_not_refreshed_this_run"
         ]
       }
@@ -4913,7 +5223,7 @@
         "relative_strength_as_of": "2026-11-18",
         "checked_at": "2026-11-18T19:08:10.619996+00:00"
       },
-      "price_quality": "refreshed",
+      "price_quality": "cached_recent",
       "valuation": {
         "status": "partial",
         "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
@@ -4943,11 +5253,11 @@
           {
             "stage": "data_gate",
             "check": "price_quality",
-            "actual": "refreshed",
+            "actual": "cached_recent",
             "operator": "==",
             "required": "refreshed",
-            "passed": true,
-            "reason": null
+            "passed": false,
+            "reason": "quote_not_refreshed_this_run"
           },
           {
             "stage": "data_gate",
@@ -4960,6 +5270,7 @@
           }
         ],
         "reasons": [
+          "quote_not_refreshed_this_run",
           "sec_not_refreshed_this_run"
         ]
       }
@@ -5022,7 +5333,7 @@
         "relative_strength_as_of": "2026-11-18",
         "checked_at": "2026-11-18T19:08:11.120320+00:00"
       },
-      "price_quality": "refreshed",
+      "price_quality": "cached_recent",
       "valuation": {
         "status": "partial",
         "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
@@ -5052,11 +5363,11 @@
           {
             "stage": "data_gate",
             "check": "price_quality",
-            "actual": "refreshed",
+            "actual": "cached_recent",
             "operator": "==",
             "required": "refreshed",
-            "passed": true,
-            "reason": null
+            "passed": false,
+            "reason": "quote_not_refreshed_this_run"
           },
           {
             "stage": "data_gate",
@@ -5069,6 +5380,7 @@
           }
         ],
         "reasons": [
+          "quote_not_refreshed_this_run",
           "sec_not_refreshed_this_run"
         ]
       }
@@ -5131,7 +5443,7 @@
         "relative_strength_as_of": "2026-11-18",
         "checked_at": "2026-11-18T19:08:11.646226+00:00"
       },
-      "price_quality": "refreshed",
+      "price_quality": "cached_recent",
       "valuation": {
         "status": "partial",
         "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
@@ -5161,11 +5473,11 @@
           {
             "stage": "data_gate",
             "check": "price_quality",
-            "actual": "refreshed",
+            "actual": "cached_recent",
             "operator": "==",
             "required": "refreshed",
-            "passed": true,
-            "reason": null
+            "passed": false,
+            "reason": "quote_not_refreshed_this_run"
           },
           {
             "stage": "data_gate",
@@ -5178,6 +5490,7 @@
           }
         ],
         "reasons": [
+          "quote_not_refreshed_this_run",
           "sec_not_refreshed_this_run"
         ]
       }
@@ -5240,7 +5553,7 @@
         "relative_strength_as_of": "2026-11-18",
         "checked_at": "2026-11-18T19:08:13.014357+00:00"
       },
-      "price_quality": "refreshed",
+      "price_quality": "cached_recent",
       "valuation": {
         "status": "partial",
         "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
@@ -5270,11 +5583,11 @@
           {
             "stage": "data_gate",
             "check": "price_quality",
-            "actual": "refreshed",
+            "actual": "cached_recent",
             "operator": "==",
             "required": "refreshed",
-            "passed": true,
-            "reason": null
+            "passed": false,
+            "reason": "quote_not_refreshed_this_run"
           },
           {
             "stage": "data_gate",
@@ -5287,6 +5600,7 @@
           }
         ],
         "reasons": [
+          "quote_not_refreshed_this_run",
           "sec_not_refreshed_this_run"
         ]
       }
@@ -5349,7 +5663,7 @@
         "relative_strength_as_of": "2026-11-18",
         "checked_at": "2026-11-18T19:08:13.526218+00:00"
       },
-      "price_quality": "refreshed",
+      "price_quality": "cached_recent",
       "valuation": {
         "status": "partial",
         "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
@@ -5379,11 +5693,11 @@
           {
             "stage": "data_gate",
             "check": "price_quality",
-            "actual": "refreshed",
+            "actual": "cached_recent",
             "operator": "==",
             "required": "refreshed",
-            "passed": true,
-            "reason": null
+            "passed": false,
+            "reason": "quote_not_refreshed_this_run"
           },
           {
             "stage": "data_gate",
@@ -5396,6 +5710,7 @@
           }
         ],
         "reasons": [
+          "quote_not_refreshed_this_run",
           "sec_not_refreshed_this_run"
         ]
       }
@@ -5458,7 +5773,7 @@
         "relative_strength_as_of": "2026-11-18",
         "checked_at": "2026-11-18T19:08:14.053244+00:00"
       },
-      "price_quality": "refreshed",
+      "price_quality": "cached_recent",
       "valuation": {
         "status": "partial",
         "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
@@ -5488,11 +5803,11 @@
           {
             "stage": "data_gate",
             "check": "price_quality",
-            "actual": "refreshed",
+            "actual": "cached_recent",
             "operator": "==",
             "required": "refreshed",
-            "passed": true,
-            "reason": null
+            "passed": false,
+            "reason": "quote_not_refreshed_this_run"
           },
           {
             "stage": "data_gate",
@@ -5505,6 +5820,7 @@
           }
         ],
         "reasons": [
+          "quote_not_refreshed_this_run",
           "sec_not_refreshed_this_run"
         ]
       }
@@ -5567,7 +5883,7 @@
         "relative_strength_as_of": "2026-11-18",
         "checked_at": "2026-11-18T19:08:14.568753+00:00"
       },
-      "price_quality": "refreshed",
+      "price_quality": "cached_recent",
       "valuation": {
         "status": "partial",
         "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
@@ -5597,11 +5913,11 @@
           {
             "stage": "data_gate",
             "check": "price_quality",
-            "actual": "refreshed",
+            "actual": "cached_recent",
             "operator": "==",
             "required": "refreshed",
-            "passed": true,
-            "reason": null
+            "passed": false,
+            "reason": "quote_not_refreshed_this_run"
           },
           {
             "stage": "data_gate",
@@ -5614,6 +5930,7 @@
           }
         ],
         "reasons": [
+          "quote_not_refreshed_this_run",
           "sec_not_refreshed_this_run"
         ]
       }
@@ -5676,7 +5993,7 @@
         "relative_strength_as_of": "2026-11-18",
         "checked_at": "2026-11-18T19:08:15.083954+00:00"
       },
-      "price_quality": "refreshed",
+      "price_quality": "cached_recent",
       "valuation": {
         "status": "partial",
         "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
@@ -5706,11 +6023,11 @@
           {
             "stage": "data_gate",
             "check": "price_quality",
-            "actual": "refreshed",
+            "actual": "cached_recent",
             "operator": "==",
             "required": "refreshed",
-            "passed": true,
-            "reason": null
+            "passed": false,
+            "reason": "quote_not_refreshed_this_run"
           },
           {
             "stage": "data_gate",
@@ -5723,6 +6040,7 @@
           }
         ],
         "reasons": [
+          "quote_not_refreshed_this_run",
           "sec_not_refreshed_this_run"
         ]
       }
@@ -5785,7 +6103,7 @@
         "relative_strength_as_of": "2026-11-18",
         "checked_at": "2026-11-18T19:08:15.620808+00:00"
       },
-      "price_quality": "refreshed",
+      "price_quality": "cached_recent",
       "valuation": {
         "status": "partial",
         "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
@@ -5815,11 +6133,11 @@
           {
             "stage": "data_gate",
             "check": "price_quality",
-            "actual": "refreshed",
+            "actual": "cached_recent",
             "operator": "==",
             "required": "refreshed",
-            "passed": true,
-            "reason": null
+            "passed": false,
+            "reason": "quote_not_refreshed_this_run"
           },
           {
             "stage": "data_gate",
@@ -5832,6 +6150,7 @@
           }
         ],
         "reasons": [
+          "quote_not_refreshed_this_run",
           "sec_not_refreshed_this_run"
         ]
       }
@@ -5894,7 +6213,7 @@
         "relative_strength_as_of": "2026-11-18",
         "checked_at": "2026-11-18T19:08:16.134483+00:00"
       },
-      "price_quality": "refreshed",
+      "price_quality": "cached_recent",
       "valuation": {
         "status": "unavailable",
         "reason": "stale share count",
@@ -5924,11 +6243,11 @@
           {
             "stage": "data_gate",
             "check": "price_quality",
-            "actual": "refreshed",
+            "actual": "cached_recent",
             "operator": "==",
             "required": "refreshed",
-            "passed": true,
-            "reason": null
+            "passed": false,
+            "reason": "quote_not_refreshed_this_run"
           },
           {
             "stage": "data_gate",
@@ -5941,6 +6260,7 @@
           }
         ],
         "reasons": [
+          "quote_not_refreshed_this_run",
           "sec_not_refreshed_this_run"
         ]
       }
@@ -6003,7 +6323,7 @@
         "relative_strength_as_of": "2026-11-18",
         "checked_at": "2026-11-18T19:08:16.815465+00:00"
       },
-      "price_quality": "refreshed",
+      "price_quality": "cached_recent",
       "valuation": {
         "status": "partial",
         "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
@@ -6033,11 +6353,11 @@
           {
             "stage": "data_gate",
             "check": "price_quality",
-            "actual": "refreshed",
+            "actual": "cached_recent",
             "operator": "==",
             "required": "refreshed",
-            "passed": true,
-            "reason": null
+            "passed": false,
+            "reason": "quote_not_refreshed_this_run"
           },
           {
             "stage": "data_gate",
@@ -6050,6 +6370,7 @@
           }
         ],
         "reasons": [
+          "quote_not_refreshed_this_run",
           "sec_not_refreshed_this_run"
         ]
       }
@@ -6091,7 +6412,7 @@
         "relative_strength_as_of": "2026-11-18",
         "checked_at": "2026-11-18T19:08:17.344754+00:00"
       },
-      "price_quality": "refreshed",
+      "price_quality": "cached_recent",
       "valuation": {
         "status": "unavailable",
         "reason": "'shares_outstanding'",
@@ -6121,11 +6442,11 @@
           {
             "stage": "data_gate",
             "check": "price_quality",
-            "actual": "refreshed",
+            "actual": "cached_recent",
             "operator": "==",
             "required": "refreshed",
-            "passed": true,
-            "reason": null
+            "passed": false,
+            "reason": "quote_not_refreshed_this_run"
           },
           {
             "stage": "data_gate",
@@ -6138,6 +6459,7 @@
           }
         ],
         "reasons": [
+          "quote_not_refreshed_this_run",
           "sec_not_refreshed_this_run"
         ]
       }
@@ -6176,24 +6498,40 @@
       },
       "fundamentals_quality": "cached",
       "price": {
-        "close_usd": 25.03,
-        "date": "2026-11-16",
-        "age_days": 1,
+        "close_usd": 24.5363,
+        "date": "2026-11-18",
+        "age_days": 0,
         "source": "Yahoo Finance chart EOD",
-        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/SMCI?interval=1d&range=15d",
+        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/SMCI?interval=1d&range=3mo",
         "is_live": false,
-        "checked_at": "2026-11-17T07:51:08.451887+00:00"
+        "rsi_14": 32.9,
+        "rsi_as_of": "2026-11-18",
+        "rsi_price_basis": "adjusted_close",
+        "sma20": 29.9643,
+        "sma50": 35.6355,
+        "sma20_as_of": "2026-11-18",
+        "sma50_as_of": "2026-11-18",
+        "above_sma20": false,
+        "above_sma50": false,
+        "volume": 19504192.0,
+        "volume_avg20": 45553209.6,
+        "volume_ratio20": 0.428,
+        "volume_as_of": "2026-11-18",
+        "relative_strength_20d_pct": -25.548,
+        "relative_strength_benchmark": "SPY",
+        "relative_strength_as_of": "2026-11-18",
+        "checked_at": "2026-11-18T19:17:07.102538+00:00"
       },
-      "price_quality": "cached_recent",
+      "price_quality": "refreshed",
       "valuation": {
         "status": "partial",
         "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 16500460996,
-        "ps": 0.42,
-        "pe": 7.4,
-        "fcf_yield_pct": -42.25,
+        "market_cap_usd": 16175000445,
+        "ps": 0.41,
+        "pe": 7.25,
+        "fcf_yield_pct": -43.1,
         "share_date": "2026-10-31",
-        "price_date": "2026-11-16",
+        "price_date": "2026-11-18",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
       },
       "analyst_targets": {
@@ -6214,11 +6552,11 @@
           {
             "stage": "data_gate",
             "check": "price_quality",
-            "actual": "cached_recent",
+            "actual": "refreshed",
             "operator": "==",
             "required": "refreshed",
-            "passed": false,
-            "reason": "quote_not_refreshed_this_run"
+            "passed": true,
+            "reason": null
           },
           {
             "stage": "data_gate",
@@ -6231,7 +6569,6 @@
           }
         ],
         "reasons": [
-          "quote_not_refreshed_this_run",
           "sec_not_refreshed_this_run"
         ]
       }
@@ -6270,24 +6607,40 @@
       },
       "fundamentals_quality": "cached",
       "price": {
-        "close_usd": 280.54,
-        "date": "2026-11-16",
-        "age_days": 1,
+        "close_usd": 278.76,
+        "date": "2026-11-18",
+        "age_days": 0,
         "source": "Yahoo Finance chart EOD",
-        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/SNOW?interval=1d&range=15d",
+        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/SNOW?interval=1d&range=3mo",
         "is_live": false,
-        "checked_at": "2026-11-17T07:51:09.062908+00:00"
+        "rsi_14": 38.87,
+        "rsi_as_of": "2026-11-18",
+        "rsi_price_basis": "adjusted_close",
+        "sma20": 300.991,
+        "sma50": 321.4068,
+        "sma20_as_of": "2026-11-18",
+        "sma50_as_of": "2026-11-18",
+        "above_sma20": false,
+        "above_sma50": false,
+        "volume": 1795031.0,
+        "volume_avg20": 4114491.55,
+        "volume_ratio20": 0.436,
+        "volume_as_of": "2026-11-18",
+        "relative_strength_20d_pct": -8.153,
+        "relative_strength_benchmark": "SPY",
+        "relative_strength_as_of": "2026-11-18",
+        "checked_at": "2026-11-18T19:17:07.766604+00:00"
       },
-      "price_quality": "cached_recent",
+      "price_quality": "refreshed",
       "valuation": {
         "status": "partial",
         "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 98974512000,
-        "ps": 21.13,
+        "market_cap_usd": 98346528000,
+        "ps": 21.0,
         "pe": null,
-        "fcf_yield_pct": 1.13,
+        "fcf_yield_pct": 1.14,
         "share_date": "2026-08-21",
-        "price_date": "2026-11-16",
+        "price_date": "2026-11-18",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
       },
       "analyst_targets": {
@@ -6308,11 +6661,11 @@
           {
             "stage": "data_gate",
             "check": "price_quality",
-            "actual": "cached_recent",
+            "actual": "refreshed",
             "operator": "==",
             "required": "refreshed",
-            "passed": false,
-            "reason": "quote_not_refreshed_this_run"
+            "passed": true,
+            "reason": null
           },
           {
             "stage": "data_gate",
@@ -6325,7 +6678,6 @@
           }
         ],
         "reasons": [
-          "quote_not_refreshed_this_run",
           "sec_not_refreshed_this_run"
         ]
       }
@@ -6364,15 +6716,31 @@
       },
       "fundamentals_quality": "cached",
       "price": {
-        "close_usd": 3.23,
-        "date": "2026-11-16",
-        "age_days": 1,
+        "close_usd": 3.02,
+        "date": "2026-11-18",
+        "age_days": 0,
         "source": "Yahoo Finance chart EOD",
-        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/SOUN?interval=1d&range=15d",
+        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/SOUN?interval=1d&range=3mo",
         "is_live": false,
-        "checked_at": "2026-11-17T07:51:09.680186+00:00"
+        "rsi_14": 17.41,
+        "rsi_as_of": "2026-11-18",
+        "rsi_price_basis": "adjusted_close",
+        "sma20": 3.9845,
+        "sma50": 4.9766,
+        "sma20_as_of": "2026-11-18",
+        "sma50_as_of": "2026-11-18",
+        "above_sma20": false,
+        "above_sma50": false,
+        "volume": 11314563.0,
+        "volume_avg20": 18309393.15,
+        "volume_ratio20": 0.618,
+        "volume_as_of": "2026-11-18",
+        "relative_strength_20d_pct": -29.019,
+        "relative_strength_benchmark": "SPY",
+        "relative_strength_as_of": "2026-11-18",
+        "checked_at": "2026-11-18T19:17:08.585032+00:00"
       },
-      "price_quality": "cached_recent",
+      "price_quality": "refreshed",
       "valuation": {
         "status": "unavailable",
         "reason": "stale share count",
@@ -6381,7 +6749,7 @@
         "pe": null,
         "fcf_yield_pct": null,
         "share_date": "2022-04-26",
-        "price_date": "2026-11-16",
+        "price_date": "2026-11-18",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
       },
       "analyst_targets": {
@@ -6402,11 +6770,11 @@
           {
             "stage": "data_gate",
             "check": "price_quality",
-            "actual": "cached_recent",
+            "actual": "refreshed",
             "operator": "==",
             "required": "refreshed",
-            "passed": false,
-            "reason": "quote_not_refreshed_this_run"
+            "passed": true,
+            "reason": null
           },
           {
             "stage": "data_gate",
@@ -6419,7 +6787,6 @@
           }
         ],
         "reasons": [
-          "quote_not_refreshed_this_run",
           "sec_not_refreshed_this_run"
         ]
       }
@@ -6458,24 +6825,40 @@
       },
       "fundamentals_quality": "cached",
       "price": {
-        "close_usd": 34.28,
-        "date": "2026-11-16",
-        "age_days": 1,
+        "close_usd": 34.0525,
+        "date": "2026-11-18",
+        "age_days": 0,
         "source": "Yahoo Finance chart EOD",
-        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/SYM?interval=1d&range=15d",
+        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/SYM?interval=1d&range=3mo",
         "is_live": false,
-        "checked_at": "2026-11-17T07:51:10.303636+00:00"
+        "rsi_14": 36.77,
+        "rsi_as_of": "2026-11-18",
+        "rsi_price_basis": "adjusted_close",
+        "sma20": 36.9561,
+        "sma50": 40.0428,
+        "sma20_as_of": "2026-11-18",
+        "sma50_as_of": "2026-11-18",
+        "above_sma20": false,
+        "above_sma50": false,
+        "volume": 612109.0,
+        "volume_avg20": 1614025.45,
+        "volume_ratio20": 0.379,
+        "volume_as_of": "2026-11-18",
+        "relative_strength_20d_pct": -12.926,
+        "relative_strength_benchmark": "SPY",
+        "relative_strength_as_of": "2026-11-18",
+        "checked_at": "2026-11-18T19:17:09.249897+00:00"
       },
-      "price_quality": "cached_recent",
+      "price_quality": "refreshed",
       "valuation": {
         "status": "partial",
         "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 20255655689,
-        "ps": 9.01,
+        "market_cap_usd": 20121228569,
+        "ps": 8.96,
         "pe": null,
         "fcf_yield_pct": null,
         "share_date": "2025-09-27",
-        "price_date": "2026-11-16",
+        "price_date": "2026-11-18",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
       },
       "analyst_targets": {
@@ -6496,11 +6879,11 @@
           {
             "stage": "data_gate",
             "check": "price_quality",
-            "actual": "cached_recent",
+            "actual": "refreshed",
             "operator": "==",
             "required": "refreshed",
-            "passed": false,
-            "reason": "quote_not_refreshed_this_run"
+            "passed": true,
+            "reason": null
           },
           {
             "stage": "data_gate",
@@ -6513,7 +6896,6 @@
           }
         ],
         "reasons": [
-          "quote_not_refreshed_this_run",
           "sec_not_refreshed_this_run"
         ]
       }
@@ -6552,15 +6934,31 @@
       },
       "fundamentals_quality": "cached",
       "price": {
-        "close_usd": 358.69,
-        "date": "2026-11-17",
+        "close_usd": 359.095,
+        "date": "2026-11-18",
         "age_days": 0,
         "source": "Yahoo Finance chart EOD",
-        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/TSM?interval=1d&range=15d",
+        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/TSM?interval=1d&range=3mo",
         "is_live": false,
-        "checked_at": "2026-11-17T20:51:40.181834+00:00"
+        "rsi_14": 35.54,
+        "rsi_as_of": "2026-11-18",
+        "rsi_price_basis": "adjusted_close",
+        "sma20": 399.6088,
+        "sma50": 425.7981,
+        "sma20_as_of": "2026-11-18",
+        "sma50_as_of": "2026-11-18",
+        "above_sma20": false,
+        "above_sma50": false,
+        "volume": 8839026.0,
+        "volume_avg20": 15366111.3,
+        "volume_ratio20": 0.575,
+        "volume_as_of": "2026-11-18",
+        "relative_strength_20d_pct": -11.383,
+        "relative_strength_benchmark": "SPY",
+        "relative_strength_as_of": "2026-11-18",
+        "checked_at": "2026-11-18T19:17:10.983862+00:00"
       },
-      "price_quality": "cached_recent",
+      "price_quality": "refreshed",
       "valuation": {
         "status": "unavailable",
         "reason": "ADR/foreign share-unit ambiguity",
@@ -6569,7 +6967,7 @@
         "pe": null,
         "fcf_yield_pct": null,
         "share_date": "2025-12-31",
-        "price_date": "2026-11-17",
+        "price_date": "2026-11-18",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
       },
       "analyst_targets": {
@@ -6590,11 +6988,11 @@
           {
             "stage": "data_gate",
             "check": "price_quality",
-            "actual": "cached_recent",
+            "actual": "refreshed",
             "operator": "==",
             "required": "refreshed",
-            "passed": false,
-            "reason": "quote_not_refreshed_this_run"
+            "passed": true,
+            "reason": null
           },
           {
             "stage": "data_gate",
@@ -6607,7 +7005,6 @@
           }
         ],
         "reasons": [
-          "quote_not_refreshed_this_run",
           "sec_not_refreshed_this_run"
         ]
       }
@@ -6646,24 +7043,40 @@
       },
       "fundamentals_quality": "cached",
       "price": {
-        "close_usd": 311.8724,
-        "date": "2026-11-17",
+        "close_usd": 317.105,
+        "date": "2026-11-18",
         "age_days": 0,
         "source": "Yahoo Finance chart EOD",
-        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/ZBRA?interval=1d&range=15d",
+        "source_url": "https://query1.finance.yahoo.com/v8/finance/chart/ZBRA?interval=1d&range=3mo",
         "is_live": false,
-        "checked_at": "2026-11-17T20:51:41.742986+00:00"
+        "rsi_14": 33.78,
+        "rsi_as_of": "2026-11-18",
+        "rsi_price_basis": "adjusted_close",
+        "sma20": 344.6653,
+        "sma50": 359.4933,
+        "sma20_as_of": "2026-11-18",
+        "sma50_as_of": "2026-11-18",
+        "above_sma20": false,
+        "above_sma50": false,
+        "volume": 240064.0,
+        "volume_avg20": 773313.2,
+        "volume_ratio20": 0.31,
+        "volume_as_of": "2026-11-18",
+        "relative_strength_20d_pct": -13.427,
+        "relative_strength_benchmark": "SPY",
+        "relative_strength_as_of": "2026-11-18",
+        "checked_at": "2026-11-18T19:17:12.303515+00:00"
       },
-      "price_quality": "cached_recent",
+      "price_quality": "refreshed",
       "valuation": {
         "status": "partial",
         "reason": "Kapitalizacja orientacyjna; liczba akcji z historycznego raportu SEC",
-        "market_cap_usd": 14685277289,
-        "ps": 2.72,
-        "pe": 35.05,
-        "fcf_yield_pct": 5.66,
+        "market_cap_usd": 14931667101,
+        "ps": 2.77,
+        "pe": 35.64,
+        "fcf_yield_pct": 5.57,
         "share_date": "2026-10-27",
-        "price_date": "2026-11-17",
+        "price_date": "2026-11-18",
         "basis": "Roczne raporty SEC + ostatnia cena zamknięcia (przybliżenie)"
       },
       "analyst_targets": {
@@ -6684,11 +7097,11 @@
           {
             "stage": "data_gate",
             "check": "price_quality",
-            "actual": "cached_recent",
+            "actual": "refreshed",
             "operator": "==",
             "required": "refreshed",
-            "passed": false,
-            "reason": "quote_not_refreshed_this_run"
+            "passed": true,
+            "reason": null
           },
           {
             "stage": "data_gate",
@@ -6701,7 +7114,6 @@
           }
         ],
         "reasons": [
-          "quote_not_refreshed_this_run",
           "sec_not_refreshed_this_run"
         ]
       }
@@ -6780,9 +7192,9 @@
       "date": "Tue, 17 Nov 2026 01:15:34 GMT"
     },
     {
-      "title": "Nvidia Earnings and Forecasts Beat Expectations - The New York Times",
-      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNdFFIYV9qR0U3Q3Q5bFNVM2VscDYtYU01YkxpSDFVRUkxNkYyX0l1NlNDYmRDU25NaHhJR0JvV0tnMDQxRHBvYkx5Y21WaDVwVDA5MjdaNndERWNmZlp2dzVIdm8ySG40RzJRWGVfY1RCdTNkd2NmVlN2Q3JURVpfNWptNDk?oc=5",
-      "date": "Wed, 18 Nov 2026 16:40:00 GMT"
+      "title": "Nvidia’s Earnings Call Is a High-Stakes Moment - The New York Times",
+      "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxPMUVyanpxMDNKa0NNX3BKVTltTzN1UW5FdUdBTnpDc1dZV1YwVHoxUGNGd01rdF9HSGRHYTNHYVZGWmFOSGQzdmh6LW8wQ0xuNjFJQVBIR1h4OURaTUo0OTNqaHJvajhHSllYbXBrZ19IS1pUUVUtRTRaQkd4MEtEbmlmWDBoSXNYV0E?oc=5",
+      "date": "Tue, 17 Nov 2026 13:02:17 GMT"
     },
     {
       "title": "Humyn Labs Secures $47M Series A for Real-World Robotics Data - Unite.AI",
@@ -6793,6 +7205,11 @@
       "title": "Should You Buy Micron Stock Before Dec. 9? - The Motley Fool",
       "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOZVo2amQwbHVRWElNdnBaN0xZNHRDNHdhbVpOQ053ejZsbkR3OGN4ZG05dWpLcU9FNURjRXh3RHR1QXZDRV9HWVZBOWItQU83Q0lrYTlDVXdxZE1Da21tZWhXWGRzampoU0ZacXlQRGhHRmxSUlFnUWlFWEF3N1NQSm9OX0l6R1dPb0Vj?oc=5",
       "date": "Tue, 17 Nov 2026 14:00:02 GMT"
+    },
+    {
+      "title": "Nvidia Earnings and Forecasts Beat Expectations - The New York Times",
+      "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNdFFIYV9qR0U3Q3Q5bFNVM2VscDYtYU01YkxpSDFVRUkxNkYyX0l1NlNDYmRDU25NaHhJR0JvV0tnMDQxRHBvYkx5Y21WaDVwVDA5MjdaNndERWNmZlp2dzVIdm8ySG40RzJRWGVfY1RCdTNkd2NmVlN2Q3JURVpfNWptNDk?oc=5",
+      "date": "Wed, 18 Nov 2026 16:40:00 GMT"
     },
     {
       "title": "Ainos Reports 29,567% Revenue Increase to $642,889 in Q3 as Net Loss Narrows 36% - Yahoo Finance",
@@ -6985,6 +7402,11 @@
       "date": "Wed, 18 Nov 2026 12:09:21 GMT"
     },
     {
+      "title": "The humanoid robots factories are actually buying have wheels, says Taiwan’s Nexcom - Digital News Asia",
+      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQNUs5WU1meF85Nm1KelRZZ0h5UDVpRm9xUFRTcHh6YVRvQWk4dUZiUUoxQ2wzbzdEVG0wQ3RZV2tEd185YVdXazZrX29WRHdWdDBXeFdXZklqcnExV2VFU1dNQzlhc3o1OWt5YmxUWU5yd1VVMkNnRV9YdXpLaDNYWFB5bTZkLU9aSGtQTEhKNWFGTjYyRExXS2VFQkN6SU5jQTJheDVWZW0wTEZ0dWU0WEhYNDhSRXprRUE?oc=5",
+      "date": "Wed, 18 Nov 2026 07:45:55 GMT"
+    },
+    {
       "title": "[PRNewswire] Agile Robots Raises $500M at $8.5B Valuation - Yonhap News Agency",
       "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBtVlVQNTJkN00wMVAxMXFSVDRvN0tlakpPbVItdHpQREUwc05obDhZaHRLUGwwYXJHUzlhQ083elJRRE9xMWxmVTViMjNfRi1lLWtiOFhQdW4zQVZBODllU29ha0FyMDdldHpUVldUb3c0UVAyLVA1aUNFUS04VW8?oc=5",
       "date": "Tue, 17 Nov 2026 06:08:55 GMT"
@@ -7010,14 +7432,14 @@
       "date": "Mon, 16 Nov 2026 09:00:00 GMT"
     },
     {
-      "title": "French Robotics Startup Genesis Raises $500 Million in Series A, Valuation Soars to $3.5 Billion with Nvidia Participating - BigGo Finance",
-      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE42WHh3TnFfUnNNWlFkdklpbnZ3WjZ0Z1NCZ0FVVjRETDIzcy1sMEpEdVF4aHhEU3B3NWo4VnluZnU4VXNBblh6VEtaMTJENkVxTms3OExhZEd5RmI4Q3A2MG5VREJwZUdoc2M0VlBvX1JISzBvUUE?oc=5",
-      "date": "Wed, 18 Nov 2026 04:25:00 GMT"
-    },
-    {
       "title": "Honeywell CEO says AI isn’t about replacing workers but 'We all have to reskill ourselves’ - Fortune",
       "url": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxQVUZfTEdhdi1OVVJFWGo2UUt5d3FYNHlDX1RBMGxwbGZTa1A3TkxzX1NRUUNIT1ZuY3RYMVlNWXZGMWhnYjZ3QmhSbjdGeklDaU9QZVczdjBlbTdHemhNWXFRd1RsZ3RydjZsUUhNeVlJMExmQjl3R242TlZKVjAzMjZ6OHhsc19icmZFa3pJbWxCV2luWFAxcVZ0MEc3Nk9yY0NiT1E1dVBZcW1teFE2VVpFLXdVUjA4clJXczgxZFZ0Qk1TVGFMN1B5R1lPbkxRRHJ4bU5oRDd1emRMTWtUZDdUOWxjZw?oc=5",
       "date": "Tue, 17 Nov 2026 07:00:00 GMT"
+    },
+    {
+      "title": "French Robotics Startup Genesis Raises $500 Million in Series A, Valuation Soars to $3.5 Billion with Nvidia Participating - BigGo Finance",
+      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE42WHh3TnFfUnNNWlFkdklpbnZ3WjZ0Z1NCZ0FVVjRETDIzcy1sMEpEdVF4aHhEU3B3NWo4VnluZnU4VXNBblh6VEtaMTJENkVxTms3OExhZEd5RmI4Q3A2MG5VREJwZUdoc2M0VlBvX1JISzBvUUE?oc=5",
+      "date": "Wed, 18 Nov 2026 04:25:00 GMT"
     },
     {
       "title": "MISUMI Advances Smarter Manufacturing Through AI, Digital Procurement and Automation - The Worldfolio",
@@ -7028,11 +7450,6 @@
       "title": "Promise Robotics Raises $28 Million to Bring Factory Automation to Homebuilding - A3 Association for Advancing Automation",
       "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOZnJTLVhZdmI3Wkh4UGFTNDBvNFlFY1ExazVmaTNFa2F6dVYtLTR0ajlLdXRYelFKV2VjbDF6LVdpb0kzZzhjNk1TLW5QQzZ6eVNaeTNpYWR5NDlkVXNGYUNkT3VGY2F1UTZ3V1FpZnZEbTZLbV9zRVpSUnhxV3RnNnNyQ1l2ZE5FUjllaFY5M2o2Q3pqUE1YaWJaUlVmQzJhSV90WkVtT3hXSGhQUVlxaUIwdTVzbW5XUTJERE5UaERwTHBvUWZmRGhn?oc=5",
       "date": "Tue, 17 Nov 2026 15:59:58 GMT"
-    },
-    {
-      "title": "The humanoid robots factories are actually buying have wheels, says Taiwan’s Nexcom - Digital News Asia",
-      "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQNUs5WU1meF85Nm1KelRZZ0h5UDVpRm9xUFRTcHh6YVRvQWk4dUZiUUoxQ2wzbzdEVG0wQ3RZV2tEd185YVdXazZrX29WRHdWdDBXeFdXZklqcnExV2VFU1dNQzlhc3o1OWt5YmxUWU5yd1VVMkNnRV9YdXpLaDNYWFB5bTZkLU9aSGtQTEhKNWFGTjYyRExXS2VFQkN6SU5jQTJheDVWZW0wTEZ0dWU0WEhYNDhSRXprRUE?oc=5",
-      "date": "Wed, 18 Nov 2026 07:45:55 GMT"
     },
     {
       "title": "Fanuc Corporation (FANUY) Stock Price, News, Quote & History - Yahoo! Finance Canada",
@@ -7048,6 +7465,11 @@
       "title": "Honeywell at RBC Global Industrials Conference 2026: automation push By Investing.com - Investing.com UK",
       "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPdEpveThHeVVyVzJlUzJ6TVducTJGenp1dDc0eS1BNTU5RkRCS2ltTnhJWl9KT0Y4czZyTElUeVZDTnBwcy1nWXRHTTRaY0s0ZEpUY1l6UXdaTHZhRXNDaHlJSVh6b2c5dTkydHBEUkpQaUJ0ZHJhd1k1RXZmQWhMWDBJVGpyNVFmZDZRNzAxT1JxMVdsZWNTT1NldWR1NWlCUUszMmIzVDhVaE1WeDNZcVM5N3ZROXhQQnYyZTNoVjJ6Uk5iSXZB?oc=5",
       "date": "Tue, 17 Nov 2026 13:58:00 GMT"
+    },
+    {
+      "title": "Tesla Stock Price Prediction 2026, 2027, 2030–2040: How Much Further Can TSLA Climb? - Coinpedia",
+      "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQVk5UTVZjU3FhRnozU09VOTk5SHdISVJsNDljR0RCcDhsV3FMOUZSVENsRE1VVjUtUm12OUNKMmtVRjFZSmNsYllINUVHaWRUYzI4RFNVanl3M2dQUjdzQV9zdjBYNjc2WWk2NHlqZE1jRk9sVGQyUER3VDJib0c4R2xuM2NVUdIBiwFBVV95cUxOZXVkQjFrcHVsaWVmeVlhNlNRTlNvZ0l6eGdqdzNRRF93TW9abzkxeGRJYzRwWHVIbWo1OFM2S2xIQ1lIc2R0R0dQSkJCbWdrRFh1QnV2QkgzU25DM1JjdUhkWjVqVmFBNWhkZlB6OXdZcnRvenhmaFdTaThRNGM1WGM0TS0xak42SHBv?oc=5",
+      "date": "Mon, 16 Nov 2026 11:29:10 GMT"
     },
     {
       "title": "Vietnam's industrial robot market surges as factories relocate from China - Báo VietNamNet",
@@ -7198,16 +7620,6 @@
       "title": "SpaceX’s Next Frontier: Why Solar Manufacturing Is Becoming Strategic to Space-Based AI - semivision",
       "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxOdlVJbFR5STBwVWlDVHR3S1VpVUZ1U1RJbUx4bklkM0hfLXRZYjlwTzlROWZWTmxMT1lJSUpyME5kNERTR3gzQ2tHWWxlZlJjQkpoOXhEeXhUM0gwRGVBX0hydE42OV9UYlFqYjdtSEZ5TG9pS0VfV3pzWVlKa0QzdWpUaERlVV90YnQ1TVZyaw?oc=5",
       "date": "Wed, 18 Nov 2026 01:26:44 GMT"
-    },
-    {
-      "title": "Acbel to Showcase Liquid-Cooled Power Solutions for AI and HPC at Supercomputing 2026 - Yahoo Finance",
-      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPa3hrUmt5SW83aEZUV3ZrbDlpdUNvaldOUWRybHRpSEFwV1ZwbHA4NnNBSXVtb1hDc1d5djQzaGxTeDVjT3FreVJKQ2FDMHhkbmRmZTJ5WFRjWmhfSzNIM1liVnBsbGpoLXZqb3haWGdNakMzeTJLWFVlM25haVZfQVQ1RFdyOU51OTk4V1ZKSGQ1eUZHWkRGaEYwdU5oU1E?oc=5",
-      "date": "Mon, 16 Nov 2026 16:00:00 GMT"
-    },
-    {
-      "title": "Giga Energy $1B Lease: 60MW Texas AI Data Center - shattered.io",
-      "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxQTGFnMnE2a2plSy0ybjQ1SGxYUnVOdXUtUTRXaklKbVdmWC1lczVqWjAwTzdDVEZyaldMaV9DUzJJaG5OcVY2bzFiQjZadG1DdEhjZ3otUGRyZjNyeWhjYXZ3bVYxNU81NHBWVGlYbk4wRExTcFJHcGhZQXhSTThyOEFDRl9wUjEzOEpic1UydG5tZw?oc=5",
-      "date": "Tue, 17 Nov 2026 18:31:44 GMT"
     }
   ],
   "version": "4.2.2",
@@ -7245,102 +7657,102 @@
           "Yahoo: HTTP Error 404: Not Found"
         ]
       },
-      "MPWR": {
+      "SMCI": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-18"
       },
-      "MRVL": {
+      "SNOW": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-18"
       },
-      "MSFT": {
+      "SOUN": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-18"
       },
-      "MU": {
+      "SYM": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-18"
       },
-      "NOW": {
+      "TER": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-18"
       },
-      "NVDA": {
+      "TSM": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-18"
       },
-      "NVT": {
+      "VRT": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-18"
       },
-      "ONDS": {
+      "ZBRA": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-18"
       },
-      "ONTO": {
+      "ACHR": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-18"
       },
-      "OUST": {
+      "AI": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-18"
       },
-      "PATH": {
+      "ALAB": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-18"
       },
-      "PDYN": {
+      "AMAT": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-18"
       },
-      "PLTR": {
+      "AMD": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-18"
       },
-      "PWR": {
+      "AMZN": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-18"
       },
-      "QCOM": {
+      "ANET": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-18"
       },
-      "RCAT": {
+      "APH": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-18"
       },
-      "ROK": {
+      "ARM": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-18"
       },
-      "RR": {
+      "ASML": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-18"
       },
-      "SERV": {
+      "AZTA": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-18"
       },
-      "SIEGY": {
+      "BBAI": {
         "status": "ok",
         "provider": "Yahoo",
         "date": "2026-11-18"
