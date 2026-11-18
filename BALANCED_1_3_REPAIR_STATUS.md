@@ -252,3 +252,12 @@ The archive's `historical_dataset_manifest.json` remains:
 - PR #5 currently reports open, Draft, unmerged, mergeable=true; latest checked head before the JavaScript CI workflow update was `2d5357c2...`. Do not merge until latest workflow result and full integration gates are checked.
 - Backend remains a user-configurable GET endpoint. No real endpoint URL or runtime response was supplied, so no backend connection test is claimed. The endpoint requires CORS and a public read-only release-ready response.
 - Archive v4 still absent from `recovery-input/`; recovered source integration, full tests, point-in-time OHLCV/analyst consensus audit and real-data walk-forward remain unexecuted remotely. GitHub Pages deployment and phone test remain unconfirmed. `main` untouched; BUY and production publication disabled.
+## Current continuation checkpoint — 2026-11-18
+- Re-verified current PR #5: open, Draft, unmerged, mergeable=true; head `d54ff7162612e77bf3c6eb6f9635204ce307522a`; base `main` unchanged.
+- Latest PR CI runs associated with that head: Web PWA validation `44275767327` SUCCESS (including embedded JavaScript syntax parse); Balanced isolated validation `44275767397` SUCCESS. These are guard tests, not full recovered-scanner tests.
+- Confirmed `main:data/scan.json` is a monitoring/news dataset (111 RSS articles; `investment_ranking_available=false`; ranking_method explicitly defines `attention_score` as media attention, not investment merit). Not suitable for investment ranking or BUY decisions.
+- Rechecked recovery README and archive path: v4 ZIP remains absent from `recovery-input/`; recovery workflow cannot run until the archive is committed.
+- PWA includes scanner, company cards, price/fundamental/valuation provenance labels, discovery/news, local watchlist/notes, export, and read-only HTTPS backend configuration with release gate. Backend endpoint/CORS not supplied, so runtime backend integration is unverified.
+- GitHub Pages deploy workflow contains configure-pages and artifact/deploy jobs, but a successful deploy run and live page could not be confirmed. No physical phone test.
+- No verified point-in-time OHLCV + historical analyst consensus dataset was found in the current report. No honest walk-forward backtest can be produced from this news/current-snapshot dataset.
+- No production report published; BUY remains disabled; no secrets or paid services added; `main` untouched.
