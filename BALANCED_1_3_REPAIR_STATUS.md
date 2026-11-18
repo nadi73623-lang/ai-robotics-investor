@@ -200,3 +200,11 @@ The archive's `historical_dataset_manifest.json` remains:
 - These two fixture corrections are in the local extracted working copy only; they are not in the v4 ZIP or GitHub branch. A refreshed archive v5 was not created.
 - Current GitHub CI for head `1f804d67ac15d1991928280cbebe3cd5647b6137`: run `44097392838` completed successfully. Both isolated job steps passed: baseline/Balanced decision gates and scanner ranking metadata semantics. This does not test the recovered full scanner archive.
 - PR #5 remains open as Draft and unmerged. The v4 ZIP is still absent from `recovery-input/`; the recovery workflow has not run. Full source port, real-data walk-forward backtest, live scan, Cloudflare deployment/KV publication, Android device test and BUY authorization remain outstanding. `main` remains unchanged.
+
+
+## Recovery workflow hardening — 2026-11-18
+- Updated `.github/workflows/recover-balanced-archive.yml` to set up Python 3.13 and run a focused 17-module pytest regression matrix after checksum/ZIP safety checks and bytecode compilation, before committing recovered source.
+- Workflow commit: `a5b77cf9a7c635171fa4b10a2496e3898f8be192`; fetched the workflow back from GitHub and verified the regression step and all 17 test paths are present.
+- PR-triggered isolated CI for this commit: run `44271656218`, job `isolated-tests`, conclusion `success`. This is not execution of the recovery workflow or the new archive regression matrix.
+- The exact v4 archive remains absent from `recovery-input/`; the recovery workflow has not run and the full scanner is still not ported. The upload path is still the only immediate blocker to that operation.
+- No live scan, point-in-time backtest, production deployment, KV publication, Android device test, or BUY authorization. `main` remains unchanged.
