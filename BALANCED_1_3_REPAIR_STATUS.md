@@ -245,3 +245,10 @@ The archive's `historical_dataset_manifest.json` remains:
 - PR #5 remains Draft/unmerged. GitHub currently reports `mergeable=false`; do not merge or modify `main` until conflicts and base status are examined.
 - Balanced 1.3.4 archive is still not in `recovery-input/`; full strategy recovery, full tests, historical OHLCV/analyst-consensus audit, walk-forward backtest and live backend deployment remain blocked.
 - GitHub Pages live deployment and physical mobile-browser test are not confirmed. BUY remains disabled; no production report is published.
+## PWA backend integration syntax correction — 2026-11-18
+- Latest observed PR CI for commit `2d5357c2cbd61594fdb8487104135d1606f245e2`: Web PWA validation run `44275123460` SUCCESS; isolated Balanced guard run `44275123461` SUCCESS. The former did not yet parse inline JavaScript, so it did not detect a literal escaped-newline syntax defect introduced in the backend functions.
+- Inspected the committed `index.html` and found three literal `\\n` separators between JavaScript function declarations. Corrected them to actual line breaks in commit `b5bc186e6b8bd86086dad7a12eabeacc35b04bbb`.
+- Added a `node --check` step for the inline application JavaScript to `.github/workflows/web-validation.yml`, commit `ccb85cd77d8a428ad3352b049c38a4eb72716cef`. This is intended to prevent recurrence; its CI result is pending.
+- PR #5 currently reports open, Draft, unmerged, mergeable=true; latest checked head before the JavaScript CI workflow update was `2d5357c2...`. Do not merge until latest workflow result and full integration gates are checked.
+- Backend remains a user-configurable GET endpoint. No real endpoint URL or runtime response was supplied, so no backend connection test is claimed. The endpoint requires CORS and a public read-only release-ready response.
+- Archive v4 still absent from `recovery-input/`; recovered source integration, full tests, point-in-time OHLCV/analyst consensus audit and real-data walk-forward remain unexecuted remotely. GitHub Pages deployment and phone test remain unconfirmed. `main` untouched; BUY and production publication disabled.
