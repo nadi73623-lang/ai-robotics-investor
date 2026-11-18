@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Public news scanner; no credentials or paid API required."""
-import json, re, time, os, csv, io, urllib.parse, urllib.request, xml.etree.ElementTree as ET
+import json, re, time, os, csv, io, math, urllib.parse, urllib.request, xml.etree.ElementTree as ET
 from datetime import datetime, timezone
 from pathlib import Path
 
