@@ -110,15 +110,16 @@ def add_fundamentals(companies,prior):
     stale.sort(key=lambda c:previous[c['ticker']].get('as_of',''))
     # Canary: refresh AVGO even when cached, then rotate remaining capacity.
     ordered=sorted(pending,key=lambda c:(c['ticker']!='AVGO',c['ticker']))+sorted(stale,key=lambda c:(c['ticker']!='AVGO',previous[c['ticker']].get('as_of','')))
-    attempted=0; succeeded=0
+    attempted=0; succeeded=0; refreshed=set()
     for c in ordered[:SEC_BATCH_SIZE]:
         attempted+=1
         try:
-            previous[c['ticker']]=fundamentals(c['ticker'],ciks[c['ticker']]);succeeded+=1;time.sleep(.35)
+            previous[c['ticker']]=fundamentals(c['ticker'],ciks[c['ticker']]);succeeded+=1;refreshed.add(c['ticker']);time.sleep(.35)
         except Exception as e: print('SEC facts',c['ticker'],str(e)[:110])
     print('SEC_BATCH_SUMMARY',json.dumps({'attempted':attempted,'updated':succeeded,'batch_limit':SEC_BATCH_SIZE,'registry_matches':sum(c['ticker'] in ciks for c in companies)}))
     for c in companies:
         c['fundamentals']=previous.get(c['ticker'])
+        c['fundamentals_quality']='refreshed' if c['ticker'] in refreshed else ('cached' if c['fundamentals'] else 'missing')
         c['valuation_status']='Brak zweryfikowanej bieżącej ceny i kapitalizacji; P/E i EV/FCF niedostępne'
         c['investment_score']=None
     return sum(bool(c['fundamentals']) for c in companies)
@@ -180,7 +181,7 @@ def yahoo_quote(ticker):
 
 def add_prices(companies,prior):
     old={x.get('ticker'):x.get('price') for x in prior.get('companies',[]) if x.get('price')}
-    diagnostics={};attempted=0;success=0
+    diagnostics={};attempted=0;success=0;refreshed=set()
     eligible=[c for c in companies if re.fullmatch(r'[A-Z]{1,5}',c['ticker'])]
     # Always check AVGO as a canary; rotate remaining slots across scans.
     eligible.sort(key=lambda c:(c['ticker']!='AVGO',bool(old.get(c['ticker'],{}).get('close_usd')),old.get(c['ticker'],{}).get('checked_at',''),c['ticker']))
@@ -190,7 +191,7 @@ def add_prices(companies,prior):
             try:
                 quote=provider(ticker)
                 quote['checked_at']=datetime.now(timezone.utc).isoformat()
-                old[ticker]=quote;success+=1
+                old[ticker]=quote;success+=1;refreshed.add(ticker)
                 diagnostics[ticker]={'status':'ok','provider':name,'date':quote['date']}
                 break
             except Exception as exc:
@@ -207,6 +208,7 @@ def add_prices(companies,prior):
                 if not 0<=age<=7:q=None
             except (ValueError,KeyError,TypeError):q=None
         c['price']=q
+        c['price_quality']='refreshed' if q and c['ticker'] in refreshed else ('cached_recent' if q else 'missing')
     coverage=sum(bool(c['price']) for c in companies)
     status='ok' if success==attempted and attempted else ('partial' if success else 'unavailable')
     print('PRICE_SUMMARY',json.dumps({'attempted':attempted,'updated':success,'coverage':coverage,'status':status,'batch_limit':PRICE_BATCH_SIZE}))
@@ -256,6 +258,48 @@ def calculate_valuation(company, today=None):
         result['reason']=str(exc) if str(exc) else 'Brak ceny lub liczby akcji'
         return result
 
+
+def evaluate_balanced_signals(companies):
+    """Attach auditable Balanced 1.3 decisions; never promote incomplete evidence."""
+    from balanced_strategy import evaluate_company
+    rows=[]
+    for company in companies:
+        company['analyst_targets']={'status':'unavailable','reason':'No validated point-in-time analyst consensus loaded'}
+        try:
+            signal=evaluate_company(company)
+        except Exception as exc:
+            signal={'strategy_version':'balanced-1.3-audit','signal':'WATCH','buy_eligible':False,
+                    'decision_stage':'strategy_error','decision_trace':[],
+                    'reasons':['strategy_error:'+type(exc).__name__]}
+        company['investment_signal']=signal
+        rows.append({
+            'ticker':company.get('ticker'),'name':company.get('name'),
+            'signal':signal.get('signal','WATCH'),'buy_eligible':bool(signal.get('buy_eligible')),
+            'decision_stage':signal.get('decision_stage','unknown'),
+            'fundamental_score':signal.get('fundamental_score'),'entry_score':signal.get('entry_score'),
+            'reward_risk':signal.get('reward_risk'),'reasons':signal.get('reasons') or [],
+            'decision_trace':signal.get('decision_trace') or [],
+            'price_date':(company.get('price') or {}).get('date'),
+            'price_quality':company.get('price_quality'),
+            'fundamentals_quality':company.get('fundamentals_quality'),
+            'analyst_consensus_status':'unavailable'
+        })
+    counts={label:sum((c.get('investment_signal') or {}).get('signal')==label for c in companies)
+            for label in ('STRONG BUY','BUY','EARLY BUY','WATCH','LOW PRIORITY')}
+    ledger={'generated_at':datetime.now(timezone.utc).isoformat(),
+            'strategy_version':'balanced-1.3-audit','buy_signals_authorized':False,
+            'total':len(rows),'stage_counts':{},'reason_counts':{},'companies':rows}
+    for row in rows:
+        stage=row['decision_stage'];ledger['stage_counts'][stage]=ledger['stage_counts'].get(stage,0)+1
+        for reason in row['reasons']:
+            ledger['reason_counts'][reason]=ledger['reason_counts'].get(reason,0)+1
+    target=ROOT/'data'/'signal_rejections.json'
+    target.parent.mkdir(parents=True,exist_ok=True)
+    temp=target.with_suffix('.json.tmp')
+    temp.write_text(json.dumps(ledger,ensure_ascii=False,indent=2),encoding='utf-8')
+    temp.replace(target)
+    return counts
+
 def main():
     allnews=[]; seen=set()
     for q in QUERIES:
@@ -304,6 +348,7 @@ def main():
         c['valuation']=calculate_valuation(c)
         c['valuation_status']=('Orientacyjna kapitalizacja i mnożniki roczne — nie ranking zakupu' if c['valuation']['status']=='partial' else 'Brak wystarczających danych do wyceny')
     valuation_coverage=sum(c['valuation']['status']=='partial' for c in companies)
+    investment_signal_counts=evaluate_balanced_signals(companies)
     missing={}
     for c in companies:
         if c['valuation']['status']=='partial': continue
@@ -318,7 +363,7 @@ def main():
         for r in reasons:missing[r]=missing.get(r,0)+1
         if c['ticker']=='AVGO': print('VALUATION_AVGO',json.dumps({'price':bool(q.get('close_usd')),'shares':bool(f.get('shares_outstanding')),'share_date':f.get('shares_as_of'),'reason':c['valuation']['reason'],'status':c['valuation']['status']}))
     print('VALUATION_SUMMARY',json.dumps({'covered':valuation_coverage,'total':len(companies),'missing':missing}))
-    payload={'generated_at':datetime.now(timezone.utc).isoformat(),'source':'Google News RSS','queries':QUERIES,'scan_status':'ok' if allnews else 'no_sources', 'articles_collected':len(allnews),'companies':companies,'discoveries':discoveries,'articles':allnews[:100],'version':'4.2.2','valuation_coverage':valuation_coverage,'valuation_note':'Orientacyjna kapitalizacja = cena EOD × akcje z ostatniego dostępnego raportu SEC; nie uwzględnia późniejszego rozwodnienia, zmian liczby akcji ani ADR. P/S i P/E bazują na danych rocznych, nie TTM. Nie jest to ranking inwestycyjny.','price_health':price_health,'price_coverage':price_coverage,'price_note':'Opóźnione ceny dzienne z Stooq lub Yahoo Chart (źródła mogą blokować dostęp); daty do 7 dni. Brak ceny to brak danych, nie zero. Kapitalizacja i mnożniki wyłącznie orientacyjne, gdy dane są wystarczające.','financial_coverage':covered,'financial_source':'SEC EDGAR XBRL, annual 10-K/20-F where available','financial_limitations':'Dane historyczne, możliwe opóźnienia; nie wszystkie spółki raportują do SEC. Pokrycie rośnie stopniowo; limity 16 zapytań SEC i 24 prób cen na skan.','coverage_note':'Lista startowa plus kandydaci wykryci przez dopasowanie nazw do rejestru SEC; brak pełnego globalnego pokrycia','ranking_method':'attention_score = 100*(1-exp(-mentions/4)); wskaźnik uwagi, NIE ocena inwestycyjna','investment_ranking_available':False,'disclaimer':'Wskaźnik uwagi nie oznacza atrakcyjnej wyceny, potencjału wzrostu ani rekomendacji. Rejestr SEC obejmuje głównie emitentów raportujących w USA. Dane RSS mogą być niepełne.'}
+    payload={'generated_at':datetime.now(timezone.utc).isoformat(),'source':'Google News RSS','queries':QUERIES,'scan_status':'ok' if allnews else 'no_sources', 'articles_collected':len(allnews),'companies':companies,'discoveries':discoveries,'articles':allnews[:100],'version':'4.2.2','valuation_coverage':valuation_coverage,'valuation_note':'Orientacyjna kapitalizacja = cena EOD × akcje z ostatniego dostępnego raportu SEC; nie uwzględnia późniejszego rozwodnienia, zmian liczby akcji ani ADR. P/S i P/E bazują na danych rocznych, nie TTM. Nie jest to ranking inwestycyjny.','price_health':price_health,'price_coverage':price_coverage,'price_note':'Opóźnione ceny dzienne z Stooq lub Yahoo Chart (źródła mogą blokować dostęp); daty do 7 dni. Brak ceny to brak danych, nie zero. Kapitalizacja i mnożniki wyłącznie orientacyjne, gdy dane są wystarczające.','financial_coverage':covered,'financial_source':'SEC EDGAR XBRL, annual 10-K/20-F where available','financial_limitations':'Dane historyczne, możliwe opóźnienia; nie wszystkie spółki raportują do SEC. Pokrycie rośnie stopniowo; limity 16 zapytań SEC i 24 prób cen na skan.','coverage_note':'Lista startowa plus kandydaci wykryci przez dopasowanie nazw do rejestru SEC; brak pełnego globalnego pokrycia','ranking_method':'attention_score = 100*(1-exp(-mentions/4)); wskaźnik uwagi, NIE ocena inwestycyjna','investment_ranking_available':False,'investment_strategy':'balanced-1.3-audit','investment_signal_counts':investment_signal_counts,'signal_rejections_file':'data/signal_rejections.json','buy_signals_authorized':False,'ranking_note':'Balanced 1.3 decision traces are attached, but investment ranking and BUY publication remain disabled until point-in-time analyst consensus and technical data are validated.','disclaimer':'Wskaźnik uwagi nie oznacza atrakcyjnej wyceny, potencjału wzrostu ani rekomendacji. Rejestr SEC obejmuje głównie emitentów raportujących w USA. Dane RSS mogą być niepełne.'}
     (ROOT/'data').mkdir(exist_ok=True)
     (ROOT/'data'/'scan.json').write_text(json.dumps(payload,ensure_ascii=False,indent=2),encoding='utf-8')
     print('Scanned',len(companies),'companies,',len(allnews),'articles')
