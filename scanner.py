@@ -3,7 +3,7 @@
 import json, re, time, os, csv, io, urllib.parse, urllib.request, xml.etree.ElementTree as ET
 from datetime import datetime, timezone
 from pathlib import Path
-from decision_memory import record_scan, append_gate_audit, append_scan_snapshot
+from decision_memory import record_scan, append_gate_audit, append_scan_snapshot, canonical_ticker
 
 ROOT=Path(__file__).resolve().parent
 UNIVERSE=[
@@ -453,13 +453,13 @@ def main():
             'status':'INCOMPLETE_AUDIT'
         }
         company['entry_zone_history'] = {
-            'levels':[x for x in decision_memory['entry_levels'] if x['ticker']==ticker],
-            'events':[x for x in decision_memory['events'] if x['ticker']==ticker],
-            'historical_imports':[x for x in decision_memory['historical_imports'] if x['ticker']==ticker]
+            'levels':[x for x in decision_memory['entry_levels'] if canonical_ticker(x['ticker'])==canonical_ticker(ticker)],
+            'events':[x for x in decision_memory['events'] if canonical_ticker(x['ticker'])==canonical_ticker(ticker)],
+            'historical_imports':[x for x in decision_memory['historical_imports'] if canonical_ticker(x['ticker'])==canonical_ticker(ticker)]
         }
         # Chronological quote trail from prior reports and completed scans.
         company['price_history'] = sorted(
-            [x for x in decision_memory['price_observations'] if x.get('ticker')==ticker],
+            [x for x in decision_memory['price_observations'] if canonical_ticker(x.get('ticker'))==canonical_ticker(ticker)],
             key=lambda x:(x.get('date') or '',x.get('observed_at') or '')
         )
     # Freeze this scan's inputs, calculations and gate decisions before publishing.
