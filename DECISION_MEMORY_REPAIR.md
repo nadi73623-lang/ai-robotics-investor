@@ -76,3 +76,16 @@ Prevent the scanner from losing its own historical recommendations, entry zones,
 3. Implement the Balanced 1.3 investment ranking and explicit blocker values only after required data is present; do not downgrade N/D into a pass.
 4. Add historical consensus/targets and full valuation model; then build walk-forward tests on real, timestamped data.
 5. Reconcile all historical three-tier price plans from prior project artifacts. Only the five issuers listed in this ledger currently have exact recovered levels; do not invent missing levels.
+
+
+## Follow-up — recovered conversation history import (2026-11-19)
+
+- Expanded the append-only ledger bootstrap with dated price snapshots recovered from earlier reports in this ChatGPT conversation (23 Oct, 24 Oct, 7 Nov, 18 Nov and 19 Nov 2026).
+- Added subsequent historical levels: PWR, AVGO, NVDA, BESI, model-entry points for AVGO/MU/ANET/COHR/VRT/OUST/PDYN, MinebeaMitsumi accumulation range, and 18 Nov technical observation areas for AVGO/NVDA/VRT/FANUC.
+- Imported prices retain report date, quote date, native currency, provenance and an explicit warning that they were recovered from prior assistant publications and not independently exchange-verified.
+- Kept ambiguous currency/date items out of the structured import rather than guessing.
+- Entry-zone monitoring now prefers native-currency prices and OHLC, avoiding comparisons of JPY/EUR/TWD listing levels against USD-converted prices.
+- Empty/zero-byte ledger files bootstrap from the immutable history rather than failing JSON parsing.
+- Added regression tests for history import, empty-ledger bootstrap and native-currency zone touch detection.
+- Historical price snapshots are not treated as BUY signals; all BUY gates remain independently required.
+- CI for the latest follow-up commit has not yet been observed. This PR remains draft and must not be merged until Actions pass and the scanner integration is reviewed.
