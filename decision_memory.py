@@ -163,8 +163,14 @@ def load_memory(path=MEMORY_PATH):
     if data.get("schema_version") != 1:
         raise ValueError("Unsupported decision memory schema")
     # Backward-compatible schema-v1 migration: preserve all existing records.
+    data.setdefault("entry_levels", [])
+    data.setdefault("recommendations", [])
     data.setdefault("scan_snapshots", [])
     data.setdefault("historical_reports", [])
+    data.setdefault("gate_audits", [])
+    data.setdefault("events", [])
+    data.setdefault("price_observations", [])
+    data.setdefault("historical_imports", [])
     # Idempotently backfill older, already-populated ledgers once. Never replace
     # existing observations or levels; append only missing historical IDs/keys.
     if not data["historical_reports"]:
@@ -209,7 +215,7 @@ def append_scan_snapshot(scan_id, companies, path=MEMORY_PATH):
         return existing
     fields = ("ticker", "name", "sector", "price", "fundamentals", "valuation",
               "valuation_status", "attention_score", "investment_score",
-              "buy_gate_diagnostics", "entry_zone_history", "status")
+              "buy_gate_diagnostics", "entry_zone_history", "price_history", "status")
     rows = [{k: company.get(k) for k in fields if k in company} for company in companies]
     payload = {"scan_id": scan_id, "companies": rows}
     canonical = json.dumps(payload, ensure_ascii=False, sort_keys=True, separators=(",", ":"), allow_nan=False)
