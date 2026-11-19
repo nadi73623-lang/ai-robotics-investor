@@ -1,6 +1,6 @@
 import json, tempfile, unittest
 from pathlib import Path
-from decision_memory import initial_memory, load_memory, record_scan, append_recommendation, append_gate_audit, append_scan_snapshot
+from decision_memory import initial_memory, load_memory, record_scan, append_recommendation, append_gate_audit, append_scan_snapshot, canonical_ticker
 
 class DecisionMemoryTests(unittest.TestCase):
     def setUp(self):
@@ -97,6 +97,16 @@ class DecisionMemoryTests(unittest.TestCase):
             "low_native":5180,"high_native":5250,"date":"2026-11-20","source":"test"}}]
         updated,hits=record_scan(companies,"2026-11-20T08:00:00Z",self.path)
         self.assertTrue(any(x["ticker"]=="FANUC" and x["basis"]=="intraday_range" for x in hits))
+
+    def test_primary_listing_aliases_match_recovered_historical_levels(self):
+        self.assertEqual(canonical_ticker("6954.T"),"FANUC")
+        self.assertEqual(canonical_ticker("6479.T"),"MinebeaMitsumi")
+        m=initial_memory()
+        self.path.write_text(json.dumps(m),encoding="utf-8")
+        companies=[{"ticker":"6954.T","price":{"close_native":5200,"currency":"JPY",
+            "low_native":5180,"high_native":5250,"date":"2026-11-20","source":"test"}}]
+        updated,hits=record_scan(companies,"2026-11-20T08:00:00Z",self.path)
+        self.assertTrue(any(x["ticker"]=="FANUC" for x in hits))
 
     def test_usd_converted_fallback_never_triggers_jpy_zone(self):
         m=initial_memory()
