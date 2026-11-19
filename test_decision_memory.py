@@ -9,8 +9,10 @@ class DecisionMemoryTests(unittest.TestCase):
     def tearDown(self): self.tmp.cleanup()
     def test_legacy_levels_preserved(self):
         m=initial_memory()
-        self.assertEqual(len(m["entry_levels"]),15)
-        self.assertEqual({x["ticker"] for x in m["entry_levels"]},{"MU","ADBE","OUST","XPEV","MP"})
+        legacy=[x for x in m["entry_levels"] if x["id"].startswith("legacy-20260911-")]
+        self.assertEqual(len(legacy),15)
+        self.assertEqual({x["ticker"] for x in legacy},{"MU","ADBE","OUST","XPEV","MP"})
+        self.assertGreater(len(m["entry_levels"]),15)
         self.assertTrue(all(x["immutable"] for x in m["entry_levels"]))
         self.assertEqual(len(m["events"]),8)
         self.assertEqual(sum(x["basis"]=="intraday_range" for x in m["events"]),3)
