@@ -1,6 +1,6 @@
 import json, tempfile, unittest
 from pathlib import Path
-from decision_memory import initial_memory, record_scan, append_recommendation, append_gate_audit, append_scan_snapshot
+from decision_memory import initial_memory, load_memory, record_scan, append_recommendation, append_gate_audit, append_scan_snapshot
 
 class DecisionMemoryTests(unittest.TestCase):
     def setUp(self):
@@ -47,6 +47,31 @@ class DecisionMemoryTests(unittest.TestCase):
     def test_snapshot_rejects_nonfinite_calculations(self):
         with self.assertRaises(ValueError):
             append_scan_snapshot("scan-nan",[{"ticker":"MU","valuation":{"pe":float("nan")}}],self.path)
+
+
+    def test_historical_report_snapshots_and_levels_are_imported(self):
+        m=initial_memory()
+        self.assertGreaterEqual(len(m["historical_reports"]),5)
+        self.assertGreaterEqual(len(m["price_observations"]),60)
+        tickers={x["ticker"] for x in m["price_observations"]}
+        self.assertTrue({"AVGO","MU","OUST","MP","FANUC","MinebeaMitsumi"}.issubset(tickers))
+        levels={(x["ticker"],x.get("kind",x["zone"])) for x in m["entry_levels"]}
+        self.assertIn(("FANUC","technical_observation"),levels)
+        self.assertIn(("MinebeaMitsumi","historical_accumulation_zone"),levels)
+
+    def test_empty_memory_file_bootstraps_without_json_error(self):
+        self.path.write_text("",encoding="utf-8")
+        m=load_memory(self.path)
+        self.assertGreaterEqual(len(m["price_observations"]),60)
+        self.assertTrue(json.loads(self.path.read_text(encoding="utf-8"))["historical_reports"])
+
+    def test_native_currency_zone_touch_is_detected(self):
+        m=initial_memory()
+        self.path.write_text(json.dumps(m),encoding="utf-8")
+        companies=[{"ticker":"FANUC","price":{"close_native":5200,"currency":"JPY",
+            "low_native":5180,"high_native":5250,"date":"2026-11-20","source":"test"}}]
+        updated,hits=record_scan(companies,"2026-11-20T08:00:00Z",self.path)
+        self.assertTrue(any(x["ticker"]=="FANUC" and x["basis"]=="intraday_range" for x in hits))
 
     def test_gate_audit_requires_explicit_states(self):
         with self.assertRaises(ValueError):
