@@ -31,6 +31,15 @@ HISTORICAL_HITS = [
     {"ticker":"MP","date":"2026-11-05","low":31.90,"close":33.74,"zone":"very_good","basis":"intraday_low_and_close","source":"historical quote audit 2026-11-12"},
 ]
 
+# Canonical issuer keys connect historical report names to primary listing symbols.
+TICKER_ALIASES = {
+    "6954.T": "FANUC", "FANUY": "FANUC",
+    "6479.T": "MinebeaMitsumi",
+}
+
+def canonical_ticker(ticker):
+    return TICKER_ALIASES.get(ticker, ticker)
+
 def _now():
     return datetime.now(timezone.utc).isoformat()
 
@@ -238,7 +247,7 @@ def record_scan(companies, generated_at=None, path=MEMORY_PATH):
     gate_by_ticker = {x.get("ticker"): x for x in memory["gate_audits"] if x.get("scan_id") == generated_at}
     hits = []
     for company in companies:
-        ticker = company.get("ticker")
+        ticker = canonical_ticker(company.get("ticker"))
         quote = company.get("price") or {}
         # Entry levels are denominated in native listing currency. Never
         # compare a USD-converted fallback with a non-USD native level.
@@ -265,7 +274,7 @@ def record_scan(companies, generated_at=None, path=MEMORY_PATH):
             })
             observations.add(obs_key)
         for level in memory["entry_levels"]:
-            if level["ticker"] != ticker or level.get("status") == "cancelled":
+            if canonical_ticker(level["ticker"]) != ticker or level.get("status") == "cancelled":
                 continue
             if level.get("currency") != currency:
                 continue
