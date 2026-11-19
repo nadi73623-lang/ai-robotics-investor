@@ -165,6 +165,16 @@ def load_memory(path=MEMORY_PATH):
     # Backward-compatible schema-v1 migration: preserve all existing records.
     data.setdefault("scan_snapshots", [])
     data.setdefault("historical_reports", [])
+    # Idempotently backfill older, already-populated ledgers once. Never replace
+    # existing observations or levels; append only missing historical IDs/keys.
+    if not data["historical_reports"]:
+        bootstrap = initial_memory()
+        existing_levels = {x.get("id") for x in data["entry_levels"]}
+        data["entry_levels"].extend(x for x in bootstrap["entry_levels"] if x.get("id") not in existing_levels)
+        existing_obs = {(x.get("ticker"),x.get("date"),x.get("close"),x.get("currency")) for x in data["price_observations"]}
+        data["price_observations"].extend(x for x in bootstrap["price_observations"]
+            if (x.get("ticker"),x.get("date"),x.get("close"),x.get("currency")) not in existing_obs)
+        data["historical_reports"].extend(bootstrap["historical_reports"])
     for key in ("entry_levels", "recommendations", "scan_snapshots", "historical_reports", "gate_audits", "events", "price_observations", "historical_imports"):
         if not isinstance(data.get(key), list):
             raise ValueError(f"Invalid decision memory field: {key}")
