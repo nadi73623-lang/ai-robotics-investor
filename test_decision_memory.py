@@ -98,6 +98,15 @@ class DecisionMemoryTests(unittest.TestCase):
         updated,hits=record_scan(companies,"2026-11-20T08:00:00Z",self.path)
         self.assertTrue(any(x["ticker"]=="FANUC" and x["basis"]=="intraday_range" for x in hits))
 
+    def test_usd_converted_fallback_never_triggers_jpy_zone(self):
+        m=initial_memory()
+        self.path.write_text(json.dumps(m),encoding="utf-8")
+        companies=[{"ticker":"FANUC","price":{"close_usd":34.5,"currency":"JPY",
+            "low_usd":34.0,"high_usd":35.0,"date":"2026-11-20","source":"test"}}]
+        updated,hits=record_scan(companies,"2026-11-20T08:00:00Z",self.path)
+        self.assertEqual(hits,[])
+        self.assertFalse(any(x["ticker"]=="FANUC" for x in updated["price_observations"]))
+
     def test_gate_audit_requires_explicit_states(self):
         with self.assertRaises(ValueError):
             append_gate_audit("MU","scan",{"R/R":{"status":"MAYBE"}},[],self.path)
