@@ -101,3 +101,17 @@ Prevent the scanner from losing its own historical recommendations, entry zones,
 - Added regression tests for currency fallback rejection, exchange-symbol aliases, partial migrations and snapshot history.
 - Latest observed Actions run for commit `5395e3ff566ecba4893e62482b70c4a006e742c7`: unit-test step passed; the live market scan and artifact-save steps were still running at last check.
 - Pull request #1 is still Draft. Branch has diverged from main (80 commits ahead, 16 behind) and GitHub reports it is not mergeable. Do not merge until it is reconciled with main and a full successful scan run is verified.
+
+
+## Verified end-to-end scan — 2026-11-19 08:44 UTC
+
+- GitHub Actions run `44490114862` completed with conclusion `success`: unit tests, public-news scan and save-results/push steps all succeeded.
+- Published scan timestamp: `2026-11-19T08:44:43.279380+00:00`.
+- Scan processed 101 companies and collected 101 news articles. Current valid quote coverage was 43/101; the quote updater is rotating/batched, so this is not complete price coverage.
+- Persistent ledger now contains 31 historical levels, 220 price observations, 6 dated report records, 16 events, 7 immutable scan snapshots and 746 gate audits.
+- Latest immutable snapshot contains all 101 companies and includes a price-history array for all 101; snapshot SHA-256: `91d4621edc01d8e6ceb98b4179c2b53789398e4fef97a8c2e69375bab7dab8ec`.
+- Verified examples: AVGO has 7 price observations and 3 historical levels attached; OUST has 8 observations and 4 levels; FANUC primary listing `6954.T` resolves to the recovered FANUC history and a new 19 Nov technical-zone touch; MinebeaMitsumi `6479.T` resolves to its historical JPY accumulation range.
+- New zone-touch events were recorded for FANUC and OUST. Both are explicitly marked for fresh review, not BUY.
+- The latest report retains explicit N/D investment gate states; this work implements memory/history, not the missing Balanced ranking engine.
+- PR #1 remains Draft and GitHub reports it is not mergeable; its branch is 80 commits ahead and 16 behind main at the last compare. Main has not been changed.
+- Android/web UI consumption and public production deployment remain outstanding.
