@@ -44,6 +44,29 @@ class DecisionMemoryTests(unittest.TestCase):
         self.assertEqual(first["company_count"],1)
         self.assertEqual(len(json.loads(self.path.read_text())["scan_snapshots"]),1)
 
+    def test_snapshot_preserves_price_history(self):
+        companies=[{"ticker":"MU","price":{"close_native":705.27,"currency":"USD","date":"2026-11-18"},
+            "price_history":[{"date":"2026-11-06","close":690.0,"currency":"USD"},
+                             {"date":"2026-11-18","close":705.27,"currency":"USD"}],
+            "entry_zone_history":{"levels":[{"lower":700,"upper":800}]}}]
+        snap=append_scan_snapshot("history-scan",companies,self.path)
+        row=snap["companies"][0]
+        self.assertEqual(len(row["price_history"]),2)
+        self.assertEqual(row["entry_zone_history"]["levels"][0]["lower"],700)
+
+    def test_existing_ledger_backfills_history_once_without_duplicates(self):
+        seed=initial_memory()
+        seed["historical_reports"]=[]
+        seed["price_observations"]=[]
+        seed["entry_levels"]=[]
+        self.path.write_text(json.dumps(seed),encoding="utf-8")
+        first=load_memory(self.path)
+        count=len(first["price_observations"])
+        second=load_memory(self.path)
+        self.assertGreaterEqual(count,50)
+        self.assertEqual(len(second["price_observations"]),count)
+        self.assertGreaterEqual(len(second["historical_reports"]),5)
+
     def test_snapshot_rejects_nonfinite_calculations(self):
         with self.assertRaises(ValueError):
             append_scan_snapshot("scan-nan",[{"ticker":"MU","valuation":{"pe":float("nan")}}],self.path)
