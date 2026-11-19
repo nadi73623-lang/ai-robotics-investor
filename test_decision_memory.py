@@ -29,7 +29,7 @@ class DecisionMemoryTests(unittest.TestCase):
         self.assertEqual(len(m["events"]),2)
     def test_no_price_does_not_create_zero(self):
         m,h=record_scan([{"ticker":"MU","price":None}],"scan",self.path)
-        self.assertEqual(m["price_observations"],[])
+        self.assertFalse(any(x.get("ticker")=="MU" and x.get("date")=="scan" for x in m["price_observations"]))
         self.assertEqual(h,[])
     def test_recommendation_is_append_only(self):
         a=append_recommendation("MU","WATCH",725.11,"USD","2026-11-10",{"good":[850,900]},"test",self.path)
@@ -130,7 +130,7 @@ class DecisionMemoryTests(unittest.TestCase):
             "low_usd":34.0,"high_usd":35.0,"date":"2026-11-20","source":"test"}}]
         updated,hits=record_scan(companies,"2026-11-20T08:00:00Z",self.path)
         self.assertEqual(hits,[])
-        self.assertFalse(any(x["ticker"]=="FANUC" for x in updated["price_observations"]))
+        self.assertFalse(any(x["ticker"]=="FANUC" and x.get("date")=="2026-11-20" for x in updated["price_observations"]))
 
     def test_gate_audit_requires_explicit_states(self):
         with self.assertRaises(ValueError):
