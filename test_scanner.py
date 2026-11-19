@@ -23,8 +23,6 @@ class Tests(unittest.TestCase):
   self.assertIsNone(values)
  def test_universe(self):
   self.assertEqual(len(set(x[0] for x in scanner.UNIVERSE)),len(scanner.UNIVERSE))
-if __name__=='__main__': unittest.main()
-
  def test_global_exchange_symbols_are_explicit(self):
   self.assertEqual(scanner.YAHOO_SYMBOLS['6479.T'],'6479.T')
   self.assertEqual(scanner.YAHOO_SYMBOLS['2498.HK'],'2498.HK')
@@ -32,3 +30,5 @@ if __name__=='__main__': unittest.main()
  def test_fx_mappings_are_explicit(self):
   self.assertEqual(scanner.FX_SYMBOLS['JPY'],('JPY=X','inverse'))
   self.assertEqual(scanner.FX_SYMBOLS['EUR'],('EURUSD=X','direct'))
+
+if __name__=='__main__': unittest.main()
