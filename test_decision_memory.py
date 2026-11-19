@@ -79,7 +79,7 @@ class DecisionMemoryTests(unittest.TestCase):
         count=len(first["price_observations"])
         self.assertGreaterEqual(count,50)
         self.assertGreater(len(first["entry_levels"]),15)
-        self.assertEqual(len(first["historical_reports"]),5)
+        self.assertEqual(len(first["historical_reports"]),6)
         second=load_memory(self.path)
         self.assertEqual(len(second["price_observations"]),count)
         self.assertEqual(len(second["entry_levels"]),len(first["entry_levels"]))
