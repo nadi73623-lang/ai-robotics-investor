@@ -89,3 +89,15 @@ Prevent the scanner from losing its own historical recommendations, entry zones,
 - Added regression tests for history import, empty-ledger bootstrap and native-currency zone touch detection.
 - Historical price snapshots are not treated as BUY signals; all BUY gates remain independently required.
 - CI for the latest follow-up commit has not yet been observed. This PR remains draft and must not be merged until Actions pass and the scanner integration is reviewed.
+
+
+## Follow-up — CI corrections and issuer aliasing (2026-11-19)
+
+- Fixed the scanner test module indentation error that prevented unittest discovery.
+- Adjusted legacy no-price assertions to account for the immutable imported historical snapshots; tests now assert that no new observation is invented for the no-price scan.
+- Corrected native-currency handling: if a non-USD quote has no native close, no USD-converted close is recorded as a native observation or compared with local-currency levels. USD OHLC fallback is permitted only for USD quotes.
+- Added explicit canonical issuer aliases from scanner primary symbols `6954.T` and `FANUY` to FANUC, and `6479.T` to MinebeaMitsumi. Per-company report history and zone monitoring now resolve through those aliases.
+- Made migration backfill independent per collection (levels, quote observations, report metadata), so a partially populated ledger cannot suppress missing quote rows or levels.
+- Added regression tests for currency fallback rejection, exchange-symbol aliases, partial migrations and snapshot history.
+- Latest observed Actions run for commit `5395e3ff566ecba4893e62482b70c4a006e742c7`: unit-test step passed; the live market scan and artifact-save steps were still running at last check.
+- Pull request #1 is still Draft. Branch has diverged from main (80 commits ahead, 16 behind) and GitHub reports it is not mergeable. Do not merge until it is reconciled with main and a full successful scan run is verified.
