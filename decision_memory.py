@@ -252,7 +252,11 @@ def record_scan(companies, generated_at=None, path=MEMORY_PATH):
         quote = company.get("price") or {}
         # Entry levels are denominated in native listing currency. Never
         # compare a USD-converted fallback with a non-USD native level.
-        currency = quote.get("currency") or "USD"
+        currency = quote.get("currency")
+        if not currency:
+            if quote.get("close_native") is not None:
+                continue
+            currency = "USD"  # legacy USD-only provider payload
         close = quote.get("close_native")
         if close is None and currency == "USD":
             close = quote.get("close_usd")
@@ -267,8 +271,8 @@ def record_scan(companies, generated_at=None, path=MEMORY_PATH):
             memory["price_observations"].append({
                 "ticker": ticker, "date": date, "close": close, "close_native": close,
                 "close_usd": quote.get("close_usd"),
-                "low": quote.get("low_native", quote.get("low_usd")),
-                "high": quote.get("high_native", quote.get("high_usd")),
+                "low": quote.get("low_native") if currency != "USD" else (quote.get("low_native") if quote.get("low_native") is not None else quote.get("low_usd")),
+                "high": quote.get("high_native") if currency != "USD" else (quote.get("high_native") if quote.get("high_native") is not None else quote.get("high_usd")),
                 "currency": currency, "source": quote.get("source"),
                 "source_url": quote.get("source_url"),
                 "observed_at": generated_at, "price_type": "EOD_close"
