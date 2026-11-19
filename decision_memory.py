@@ -240,13 +240,13 @@ def record_scan(companies, generated_at=None, path=MEMORY_PATH):
     for company in companies:
         ticker = company.get("ticker")
         quote = company.get("price") or {}
-        # Entry levels are denominated in native listing currency. Prefer native
-        # OHLC; use USD fields only for legacy USD-only providers.
+        # Entry levels are denominated in native listing currency. Never
+        # compare a USD-converted fallback with a non-USD native level.
+        currency = quote.get("currency") or "USD"
         close = quote.get("close_native")
-        if close is None:
+        if close is None and currency == "USD":
             close = quote.get("close_usd")
         date = quote.get("date")
-        currency = quote.get("currency") or "USD"
         if not ticker or close is None or not date:
             continue
         close = float(close)
@@ -270,8 +270,11 @@ def record_scan(companies, generated_at=None, path=MEMORY_PATH):
             if level.get("currency") != currency:
                 continue
             lower, upper = float(level["lower"]), float(level["upper"])
-            low = quote.get("low_native", quote.get("low_usd"))
-            high = quote.get("high_native", quote.get("high_usd"))
+            low = quote.get("low_native")
+            high = quote.get("high_native")
+            if currency == "USD":
+                if low is None: low = quote.get("low_usd")
+                if high is None: high = quote.get("high_usd")
             touched_intraday = low is not None and high is not None and float(low) <= upper and float(high) >= lower
             touched_close = _in_zone(close, lower, upper)
             for basis, touched, observed_price in (
