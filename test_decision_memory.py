@@ -69,6 +69,21 @@ class DecisionMemoryTests(unittest.TestCase):
         self.assertEqual(len(second["price_observations"]),count)
         self.assertGreaterEqual(len(second["historical_reports"]),5)
 
+    def test_partial_history_metadata_does_not_skip_missing_quote_backfill(self):
+        seed=initial_memory()
+        seed["historical_reports"]=[{"report_date":"2026-10-23","quote_date":"2026-10-21"}]
+        seed["price_observations"]=[]
+        seed["entry_levels"]=[]
+        self.path.write_text(json.dumps(seed),encoding="utf-8")
+        first=load_memory(self.path)
+        count=len(first["price_observations"])
+        self.assertGreaterEqual(count,50)
+        self.assertGreater(len(first["entry_levels"]),15)
+        self.assertEqual(len(first["historical_reports"]),5)
+        second=load_memory(self.path)
+        self.assertEqual(len(second["price_observations"]),count)
+        self.assertEqual(len(second["entry_levels"]),len(first["entry_levels"]))
+
     def test_snapshot_rejects_nonfinite_calculations(self):
         with self.assertRaises(ValueError):
             append_scan_snapshot("scan-nan",[{"ticker":"MU","valuation":{"pe":float("nan")}}],self.path)
