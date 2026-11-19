@@ -34,6 +34,41 @@ HISTORICAL_HITS = [
 def _now():
     return datetime.now(timezone.utc).isoformat()
 
+# Prices recovered from earlier reports in this conversation. These are report
+# records, not independently re-downloaded exchange data. Ambiguous currency/date
+# attributions are intentionally excluded rather than guessed.
+HISTORICAL_PRICE_REPORTS = [
+    {"report_date":"2026-10-23","quote_date":"2026-10-21","prices":[
+        ("AVGO",337.80,"USD"),("NVDA",221.97,"USD"),("MU",911.22,"USD"),
+        ("ANET",184.33,"USD"),("ONDS",6.27,"USD")]},
+    {"report_date":"2026-10-23","quote_date":"2026-10-22","prices":[
+        ("BESI",157.25,"EUR"),("PWR",557.12,"USD"),("OUST",27.97,"USD"),("PDYN",3.64,"USD")]},
+    {"report_date":"2026-10-24","quote_date":"2026-10-23","prices":[
+        ("AVGO",321.68,"USD"),("NVDA",210.96,"USD"),("TSM",418.51,"USD"),
+        ("MU",877.55,"USD"),("ANET",172.37,"USD"),("BESI",145.10,"EUR"),
+        ("NOKIA",7.370,"EUR"),("VRT",194.32,"USD"),("ADBE",263.82,"USD"),
+        ("OUST",29.69,"USD"),("PDYN",3.70,"USD"),("MP",38.30,"USD"),("XPEV",9.21,"USD")]},
+    {"report_date":"2026-11-07","quote_date":"2026-11-06","prices":[
+        ("AVGO",293.69,"USD"),("NVDA",186.64,"USD"),("MU",690.00,"USD"),
+        ("ANET",170.80,"USD"),("OUST",34.75,"USD"),("MP",35.41,"USD"),
+        ("PDYN",3.02,"USD"),("SNPS",450.46,"USD"),("RoboSense",15.00,"HKD")]},
+    {"report_date":"2026-11-18","quote_date":"2026-11-17","prices":[
+        ("AVGO",341.60,"USD"),("NVDA",155.46,"USD"),("AMD",503.41,"USD"),
+        ("TSM",359.69,"USD"),("ASML",1236.80,"EUR"),("MRVL",148.74,"USD"),
+        ("ANET",186.42,"USD"),("MU",712.42,"USD"),("SNPS",435.51,"USD"),
+        ("OUST",30.48,"USD"),("MP",34.86,"USD"),("PDYN",2.87,"USD"),
+        ("ONDS",4.39,"USD"),("ADBE",235.55,"USD"),("FANUC",5232.0,"JPY"),
+        ("HSAI",12.59,"USD")]},
+    {"report_date":"2026-11-19","quote_date":"2026-11-18","prices":[
+        ("AVGO",354.05,"USD"),("NVDA",150.96,"USD"),("AMD",530.14,"USD"),
+        ("TSM",362.62,"USD"),("ARM",182.76,"USD"),("MRVL",145.54,"USD"),
+        ("ANET",193.94,"USD"),("MU",705.27,"USD"),("SNPS",434.01,"USD"),
+        ("CDNS",305.82,"USD"),("Nabtesco",3356.0,"JPY"),("MinebeaMitsumi",2852.0,"JPY"),
+        ("PDYN",2.86,"USD"),("ONDS",4.42,"USD"),("OUST",29.30,"USD"),
+        ("XPEV",9.74,"USD"),("ADBE",226.20,"USD"),("UMAC",9.61,"USD"),
+        ("Delta Electronics",1000.0,"TWD"),("nVent",110.35,"USD"),("VRT",194.48,"USD")]}
+]
+
 def initial_memory():
     levels = []
     for ticker, zones in INITIAL_LEVELS.items():
@@ -48,6 +83,43 @@ def initial_memory():
                 "immutable": True,
                 "provenance": "Recovered from prior project analysis dated 2026-09-11; not a current recommendation."
             })
+    # Keep accumulation zones, model-entry prices and technical observation
+    # areas distinct. None of these historical records is a current BUY signal.
+    extra_levels = [
+        ("PWR","historical_reanalysis",500,520,"USD","2026-10-23","historical_reanalysis_zone"),
+        ("AVGO","historical_watch",260,270,"USD","2026-10-24","historical_watch_zone"),
+        ("NVDA","historical_watch",180,190,"USD","2026-10-24","historical_watch_zone"),
+        ("BESI","historical_watch",125,135,"EUR","2026-10-24","historical_watch_zone"),
+        ("AVGO","model_entry_20261108",246.60,246.60,"USD","2026-11-08","model_entry"),
+        ("MU","model_entry_20261108",568,568,"USD","2026-11-08","model_entry"),
+        ("ANET","model_entry_20261108",140.40,140.40,"USD","2026-11-08","model_entry"),
+        ("COHR","model_entry_20261108",187.50,187.50,"USD","2026-11-08","model_entry"),
+        ("VRT","model_entry_20261108",144.30,144.30,"USD","2026-11-08","model_entry"),
+        ("OUST","model_entry_20261108",28.30,28.30,"USD","2026-11-08","model_entry"),
+        ("PDYN","model_entry_20261108",2.46,2.46,"USD","2026-11-08","model_entry"),
+        ("MinebeaMitsumi","historical_entry_20261112",2850,2900,"JPY","2026-11-12","historical_accumulation_zone"),
+        ("AVGO","technical_observation_20261118",327.80,330.13,"USD","2026-11-18","technical_observation"),
+        ("NVDA","technical_observation_20261118",148.80,150.33,"USD","2026-11-18","technical_observation"),
+        ("VRT","technical_observation_20261118",183.94,188.67,"USD","2026-11-18","technical_observation"),
+        ("FANUC","technical_observation_20261118",5185,5343,"JPY","2026-11-18","technical_observation"),
+    ]
+    for ticker, zone, lower, upper, currency, created, kind in extra_levels:
+        levels.append({"id":f"history-{created}-{ticker}-{zone}","ticker":ticker,"zone":zone,
+            "lower":lower,"upper":upper,"currency":currency,"unit":"per_share",
+            "created_at":created,"status":"historical_plan","kind":kind,"immutable":True,
+            "provenance":"Recovered from prior report in this conversation; not independently re-downloaded and not a current recommendation."})
+    observations = []
+    report_index = []
+    for report in HISTORICAL_PRICE_REPORTS:
+        report_index.append({"report_date":report["report_date"],"quote_date":report["quote_date"],
+            "price_count":len(report["prices"]),"source":"prior ChatGPT report in this conversation",
+            "verification":"historical report recovery; not independently exchange-verified"})
+        for ticker, close, currency in report["prices"]:
+            observations.append({"ticker":ticker,"date":report["quote_date"],"close":close,
+                "close_native":close,"currency":currency,"source":"prior ChatGPT report in this conversation",
+                "source_url":None,"observed_at":report["report_date"]+"T00:00:00Z",
+                "price_type":"reported_price_snapshot","immutable":True,
+                "verification":"historical report recovery; not independently exchange-verified"})
     return {
         "schema_version": 1,
         "created_at": _now(),
@@ -62,6 +134,7 @@ def initial_memory():
         "entry_levels": levels,
         "recommendations": [],
         "scan_snapshots": [],
+        "historical_reports": report_index,
         "gate_audits": [],
         "events": [
             {"type":"HISTORICAL_ENTRY_ZONE_HIT", "level_id":"legacy-20260911-"+h["ticker"]+"-"+h["zone"],
@@ -72,7 +145,7 @@ def initial_memory():
             for h in HISTORICAL_HITS
             for basis in (["intraday_range","close"] if h["basis"]=="intraday_low_and_close" else [h["basis"]])
         ],
-        "price_observations": [],
+        "price_observations": observations,
         "historical_imports": HISTORICAL_HITS,
         "last_scan": None
     }
@@ -80,12 +153,19 @@ def initial_memory():
 def load_memory(path=MEMORY_PATH):
     if not path.exists():
         return initial_memory()
-    data = json.loads(path.read_text(encoding="utf-8"))
+    raw = path.read_text(encoding="utf-8").strip()
+    if not raw:
+        data = initial_memory()
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(json.dumps(data, ensure_ascii=False, indent=2), encoding="utf-8")
+        return data
+    data = json.loads(raw)
     if data.get("schema_version") != 1:
         raise ValueError("Unsupported decision memory schema")
     # Backward-compatible schema-v1 migration: preserve all existing records.
     data.setdefault("scan_snapshots", [])
-    for key in ("entry_levels", "recommendations", "scan_snapshots", "gate_audits", "events", "price_observations", "historical_imports"):
+    data.setdefault("historical_reports", [])
+    for key in ("entry_levels", "recommendations", "scan_snapshots", "historical_reports", "gate_audits", "events", "price_observations", "historical_imports"):
         if not isinstance(data.get(key), list):
             raise ValueError(f"Invalid decision memory field: {key}")
     # Idempotent migration for ledgers created by earlier repair commits:
@@ -144,7 +224,11 @@ def record_scan(companies, generated_at=None, path=MEMORY_PATH):
     for company in companies:
         ticker = company.get("ticker")
         quote = company.get("price") or {}
-        close = quote.get("close_usd")
+        # Entry levels are denominated in native listing currency. Prefer native
+        # OHLC; use USD fields only for legacy USD-only providers.
+        close = quote.get("close_native")
+        if close is None:
+            close = quote.get("close_usd")
         date = quote.get("date")
         currency = quote.get("currency") or "USD"
         if not ticker or close is None or not date:
@@ -155,8 +239,10 @@ def record_scan(companies, generated_at=None, path=MEMORY_PATH):
         obs_key = (ticker, date, close)
         if obs_key not in observations:
             memory["price_observations"].append({
-                "ticker": ticker, "date": date, "close": close,
-                "low": quote.get("low_usd"), "high": quote.get("high_usd"),
+                "ticker": ticker, "date": date, "close": close, "close_native": close,
+                "close_usd": quote.get("close_usd"),
+                "low": quote.get("low_native", quote.get("low_usd")),
+                "high": quote.get("high_native", quote.get("high_usd")),
                 "currency": currency, "source": quote.get("source"),
                 "source_url": quote.get("source_url"),
                 "observed_at": generated_at, "price_type": "EOD_close"
@@ -168,7 +254,8 @@ def record_scan(companies, generated_at=None, path=MEMORY_PATH):
             if level.get("currency") != currency:
                 continue
             lower, upper = float(level["lower"]), float(level["upper"])
-            low, high = quote.get("low_usd"), quote.get("high_usd")
+            low = quote.get("low_native", quote.get("low_usd"))
+            high = quote.get("high_native", quote.get("high_usd"))
             touched_intraday = low is not None and high is not None and float(low) <= upper and float(high) >= lower
             touched_close = _in_zone(close, lower, upper)
             for basis, touched, observed_price in (
@@ -189,7 +276,7 @@ def record_scan(companies, generated_at=None, path=MEMORY_PATH):
                         memory["events"].append(event); hits.append(event); events.add(key)
         # Never infer a BUY from price alone. A separate complete gate audit is required.
     memory["last_scan"] = {"generated_at": generated_at, "companies_seen": len(companies),
-                           "quotes_seen": sum(1 for c in companies if (c.get("price") or {}).get("close_usd") is not None),
+                           "quotes_seen": sum(1 for c in companies if (c.get("price") or {}).get("close_native", (c.get("price") or {}).get("close_usd")) is not None),
                            "zone_hits": len(hits)}
     memory["updated_at"] = generated_at
     path.parent.mkdir(parents=True, exist_ok=True)
