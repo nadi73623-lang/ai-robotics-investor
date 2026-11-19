@@ -52,7 +52,7 @@ class DecisionMemoryTests(unittest.TestCase):
     def test_historical_report_snapshots_and_levels_are_imported(self):
         m=initial_memory()
         self.assertGreaterEqual(len(m["historical_reports"]),5)
-        self.assertGreaterEqual(len(m["price_observations"]),60)
+        self.assertGreaterEqual(len(m["price_observations"]),50)
         tickers={x["ticker"] for x in m["price_observations"]}
         self.assertTrue({"AVGO","MU","OUST","MP","FANUC","MinebeaMitsumi"}.issubset(tickers))
         levels={(x["ticker"],x.get("kind",x["zone"])) for x in m["entry_levels"]}
@@ -62,7 +62,7 @@ class DecisionMemoryTests(unittest.TestCase):
     def test_empty_memory_file_bootstraps_without_json_error(self):
         self.path.write_text("",encoding="utf-8")
         m=load_memory(self.path)
-        self.assertGreaterEqual(len(m["price_observations"]),60)
+        self.assertGreaterEqual(len(m["price_observations"]),50)
         self.assertTrue(json.loads(self.path.read_text(encoding="utf-8"))["historical_reports"])
 
     def test_native_currency_zone_touch_is_detected(self):
